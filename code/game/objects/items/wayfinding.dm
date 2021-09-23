@@ -183,7 +183,7 @@
 
 		if(!refundiscredits)
 			qdel(WP)
-			var/costume = pick(subtypesof(/obj/effect/spawner/bundle/costume))
+			var/costume = pick(subtypesof(/obj/effect/spawner/costume))
 			new costume(user.loc)
 
 		set_expression("veryhappy", 2 SECONDS)

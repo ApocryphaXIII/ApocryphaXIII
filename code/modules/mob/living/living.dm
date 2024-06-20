@@ -495,7 +495,7 @@
 /mob/living/proc/get_bank_account()
 	RETURN_TYPE(/datum/bank_account)
 	var/datum/bank_account/account
-	var/obj/item/card/id/I = get_idcard()
+	var/obj/item/vamp/creditcard/I = get_bankcard()
 
 	if(I?.registered_account)
 		account = I.registered_account

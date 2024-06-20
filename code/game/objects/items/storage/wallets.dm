@@ -118,6 +118,11 @@
 	else
 		return ..()
 
+/obj/item/storage/wallet/GetBankCard()
+	for(var/obj/item/card/I in contents)
+		if(istype(I, /obj/item/vamp/creditcard))
+			return I
+
 /obj/item/storage/wallet/random
 	icon_state = "random_wallet"
 

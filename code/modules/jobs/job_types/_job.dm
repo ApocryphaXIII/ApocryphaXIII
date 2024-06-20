@@ -331,9 +331,11 @@
 	var/jobtype = null
 
 	uniform = /obj/item/clothing/under/color/grey
+	wallet = /obj/item/storage/wallet
 	id = /obj/item/card/id
 //	ears = /obj/item/radio/headset
 //	belt = /obj/item/pda
+	bank_card = /obj/item/vamp/creditcard
 	back = /obj/item/storage/backpack
 	shoes = /obj/item/clothing/shoes/sneakers/black
 //	box = /obj/item/storage/box/survival
@@ -379,7 +381,7 @@
 	if(!J)
 		J = SSjob.GetJob(H.job)
 
-	var/obj/item/card/id/C = H.wear_id
+	var/obj/item/card/id/C = H.get_idcard(TRUE)
 	if(istype(C))
 		if(C)
 			C.access = J.get_access()
@@ -394,11 +396,20 @@
 			if(H.age)
 				C.registered_age = H.age
 			C.update_label()
+			/*
 			var/datum/bank_account/B = SSeconomy.bank_accounts_by_id["[H.account_id]"]
 			if(B && B.account_id == H.account_id)
 				C.registered_account = B
 				B.bank_cards += C
+			*/
 			H.sec_hud_set_ID()
+
+	var/obj/item/vamp/creditcard/bank_card = H.get_bankcard()
+	if(istype(bank_card))
+		var/datum/bank_account/bank_account = SSeconomy.bank_accounts_by_id["[H.account_id]"]
+		if(bank_account.account_id == H.account_id)
+			bank_card.registered_account = bank_account
+			bank_account.bank_cards += bank_card
 
 	var/obj/item/pda/PDA = H.get_item_by_slot(pda_slot)
 	if(istype(PDA))

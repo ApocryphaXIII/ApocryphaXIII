@@ -6,14 +6,14 @@
 	density = TRUE
 	anchored = TRUE
 	var/locked = FALSE
-	var/obj/item/card/id/my_card
+	var/obj/item/vamp/creditcard/my_card
 	var/obj/item/assembly/signaler/signaler //attached signaler, let people attach signalers that get activated if the user's transaction limit is achieved.
 	var/signaler_threshold = 0 //signaler threshold amount
 	var/amount_deposited = 0 //keep track of the amount deposited over time so you can pay multiple times to reach the signaler threshold
 	var/force_fee = 0 //replaces the "pay whatever" functionality with a set amount when non-zero.
 
 /obj/machinery/paystand/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/card/id))
+	if(istype(W, /obj/item/vamp/creditcard))
 		if(W == my_card)
 			if(user.a_intent == INTENT_DISARM)
 				var/rename_msg = stripped_input(user, "Rename the Paystand:", "Paystand Naming", name)
@@ -31,7 +31,7 @@
 			to_chat(user, "<span class='notice'>You [src.locked ? "lock" : "unlock"] the paystand, protecting the bolts from [anchored ? "loosening" : "tightening"].</span>")
 			return
 		if(!my_card)
-			var/obj/item/card/id/new_card = W
+			var/obj/item/vamp/creditcard/new_card = W
 			if(!new_card.registered_account)
 				return
 			var/msg = stripped_input(user, "Name of pay stand:", "Paystand Naming", "Paystand (owned by [new_card.registered_account.account_holder])")
@@ -42,7 +42,7 @@
 			my_card = new_card
 			to_chat(user, "You link the stand to your account.")
 			return
-		var/obj/item/card/id/pay_card = W
+		var/obj/item/vamp/creditcard/pay_card = W
 		if(pay_card.registered_account)
 			var/credit_amount = 0
 			if(!force_fee)

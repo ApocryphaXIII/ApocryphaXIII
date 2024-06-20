@@ -39,8 +39,8 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 
-	var/owner = ""
-	var/datum/bank_account/account
+	var/registered_name
+	var/datum/bank_account/registered_account
 	var/has_checked = FALSE
 	var/min_starting_wealth = 600
 	var/max_starting_wealth = 1000
@@ -76,25 +76,25 @@
 
 /obj/item/vamp/creditcard/Initialize(mapload)
 	. = ..()
-	if(!account)
-		account = new /datum/bank_account()
+	if(!registered_account)
+		registered_account = new /datum/bank_account()
 	var/mob/living/carbon/human/user = null
 	if(ishuman(loc)) // In pockets
 		user = loc
 	else if(ishuman(loc?.loc)) // In backpack
 		user = loc
 	if(!isnull(user))
-		owner = user.real_name
+		registered_name = user.real_name
 		if(user.clane?.name == CLAN_VENTRUE)
 			min_starting_wealth = max(min_starting_wealth, 1000)
 			max_starting_wealth = clamp(max_starting_wealth * 1.5, 4000, 20000)
-	account.account_balance = rand(min_starting_wealth, max_starting_wealth)
+	registered_account.account_balance = rand(min_starting_wealth, max_starting_wealth)
 
 
 /obj/item/vamp/creditcard/examine(mob/user)
 	. = ..()
-	if(owner)
-		. += span_notice("The card bears a name: [owner].")
+	if(registered_name)
+		. += span_notice("The card bears a name: [registered_name].")
 
 
 /obj/machinery/vamp/atm/attackby(obj/item/P, mob/user, params)
@@ -146,10 +146,10 @@
 	data["atm_balance"] = atm_balance
 	data["bank_account_list"] = json_encode(accounts)
 	if(current_card)
-		data["balance"] = current_card.account.account_balance
-		data["account_holder"] = current_card.account.account_holder
-		data["account_id"] = current_card.account.account_id
-		data["code"] = current_card.account.bank_pin
+		data["balance"] = current_card.registered_account.account_balance
+		data["account_holder"] = current_card.registered_account.account_holder
+		data["account_id"] = current_card.registered_account.account_id
+		data["code"] = current_card.registered_account.bank_pin
 	else
 		data["balance"] = 0
 		data["account_holder"] = ""
@@ -164,7 +164,7 @@
 		return
 	switch(action)
 		if("login")
-			if(current_card?.account && params["code"] == current_card.account.bank_pin)
+			if(current_card?.registered_account && params["code"] == current_card.registered_account.bank_pin)
 				logged_in = TRUE
 				return TRUE
 			else
@@ -178,7 +178,7 @@
 			var/amount = text2num(params["withdraw_amount"])
 			if(amount != round(amount))
 				to_chat(usr, "<span class='notice'>Withdraw amount must be a round number.")
-			else if(current_card.account.account_balance < amount)
+			else if(current_card.registered_account.account_balance < amount)
 				to_chat(usr, "<span class='notice'>Insufficient funds.</span>")
 			else
 				while(amount > 0)
@@ -188,7 +188,7 @@
 					to_chat(usr, "<span class='notice'>You have withdrawn [drop_amount] dollars.</span>")
 					try_put_in_hand(cash, usr)
 					amount -= drop_amount
-					current_card.account.account_balance -= drop_amount
+					current_card.registered_account.account_balance -= drop_amount
 			return TRUE
 		if("transfer")
 			var/amount = text2num(params["transfer_amount"])
@@ -210,23 +210,23 @@
 			if(!target_account)
 				to_chat(usr, "<span class='notice'>Invalid target account.</span>")
 				return FALSE
-			if(current_card.account.account_balance < amount)
+			if(current_card.registered_account.account_balance < amount)
 				to_chat(usr, "<span class='notice'>Insufficient funds.</span>")
 				return FALSE
 
-			current_card.account.account_balance -= amount
+			current_card.registered_account.account_balance -= amount
 			target_account.account_balance += amount
 			to_chat(usr, "<span class='notice'>You have transferred [amount] dollars to account [target_account.account_holder].</span>")
 			return TRUE
 
 		if("change_pin")
 			var/new_pin = params["new_pin"]
-			current_card.account.bank_pin = new_pin
+			current_card.registered_account.bank_pin = new_pin
 			return TRUE
 		if("deposit")
 			if(atm_balance > 0)
-				current_card.account.account_balance += atm_balance
-				to_chat(usr, "<span class='notice'>You have deposited [atm_balance] dollars into your card. Your new balance is [current_card.account.account_balance] dollars.</span>")
+				current_card.registered_account.account_balance += atm_balance
+				to_chat(usr, "<span class='notice'>You have deposited [atm_balance] dollars into your card. Your new balance is [current_card.registered_account.account_balance] dollars.</span>")
 				atm_balance = 0
 				return TRUE
 

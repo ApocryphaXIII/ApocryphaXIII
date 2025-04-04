@@ -37,6 +37,7 @@ fi
 if ! [ -x "$has_cargo" ]; then
 	echo "Installing rust..."
 	curl https://sh.rustup.rs -sSf | sh -s -- -y
+	rustup update
 	. ~/.profile
 fi
 

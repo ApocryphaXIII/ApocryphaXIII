@@ -1,5 +1,5 @@
 # base = ubuntu + full apt update
-FROM ubuntu:xenial AS base
+FROM ubuntu AS base
 
 RUN dpkg --add-architecture i386 \
     && apt-get update \
@@ -17,7 +17,7 @@ RUN apt-get install -y --no-install-recommends \
         unzip \
         make \
         libstdc++6:i386
-
++-
 COPY dependencies.sh .
 
 RUN . ./dependencies.sh \

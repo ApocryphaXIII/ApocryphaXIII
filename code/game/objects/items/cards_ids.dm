@@ -62,8 +62,8 @@
  */
 
 /obj/item/card/id
-	name = "identification card"
-	desc = "A card used to provide ID and determine access across the station."
+	name = "access card"
+	desc = "A card used to provide access to places."
 	icon_state = "id"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
@@ -87,7 +87,7 @@
 	var/obj/machinery/paystand/my_store
 	var/uses_overlays = TRUE
 	var/icon/cached_flat_icon
-	var/registered_age = 13 // default age for ss13 players
+	var/registered_age = 21 // default age for ss13 players
 
 /obj/item/card/id/Initialize(mapload)
 	. = ..()
@@ -107,7 +107,7 @@
 		var/minor
 		if(registered_name && registered_age && registered_age < AGE_MINOR)
 			minor = " <b>(MINOR)</b>"
-		user.visible_message("<span class='notice'>[user] shows you: [icon2html(src, viewers(user))] [src.name][minor].</span>", "<span class='notice'>You show \the [src.name][minor].</span>")
+		user.visible_message("<span class='notice'>[user] shows you: [icon2html(src, viewers(user))] \the [initial(name)] [(!registered_name) ? "(" : "([registered_name]"][(!assignment) ? ")" : ", [assignment])"].</span>", "<span class='notice'>You show \the [initial(name)] [(!registered_name) ? "(" : "([registered_name],"] [(!assignment) ? ")" : "[assignment])"].</span>")
 	add_fingerprint(user)
 
 /obj/item/card/id/vv_edit_var(var_name, var_value)
@@ -256,12 +256,13 @@
 /obj/item/card/id/examine(mob/user)
 	. = ..()
 	if(registered_account)
-		. += "The account linked to the ID belongs to '[registered_account.account_holder]' and reports a balance of [registered_account.account_balance] cr."
+		. += "The account linked to the card belongs to '[registered_account.account_holder]' and reports a balance of [registered_account.account_balance] cr."
 	. += "<span class='notice'><i>There's more information below, you can look again to take a closer look...</i></span>"
 
 /obj/item/card/id/examine_more(mob/user)
 	var/list/msg = list("<span class='notice'><i>You examine [src] closer, and note the following...</i></span>")
-
+	if(registered_name)
+		msg += "This access card is assigned to <B>[registered_name]</B>."
 	if(registered_age)
 		msg += "The card indicates that the holder is [registered_age] years old. [(registered_age < AGE_MINOR) ? "There's a holographic stripe that reads <b><span class='danger'>'MINOR: DO NOT SERVE ALCOHOL OR TOBACCO'</span></b> along the bottom of the card." : ""]"
 	if(mining_points)
@@ -329,16 +330,14 @@
 /*
 Usage:
 update_label()
-	Sets the id name to whatever registered_name and assignment is
+	Sets the id name to whatever the assignment is
 */
 
 /obj/item/card/id/proc/update_label()
-	var/blank = !registered_name
-	name = "[blank ? id_type_name : "[registered_name]'s"] [initial(name)]"
+	name = "[(istype(src, /obj/item/card/id/syndicate)) ? "[initial(name)]" : "access card"][(!assignment) ? "" : " ([assignment])"]"
 	update_appearance()
 
 /obj/item/card/id/silver
-	name = "silver identification card"
 	id_type_name = "silver identification card"
 	desc = "A silver card which shows honour and dedication."
 	icon_state = "silver"
@@ -353,7 +352,6 @@ update_label()
 	registered_name = "Thirteen"
 
 /obj/item/card/id/gold
-	name = "gold identification card"
 	id_type_name = "gold identification card"
 	desc = "A golden card which shows power and might."
 	icon_state = "gold"
@@ -459,11 +457,8 @@ update_label()
 	sticky_access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 
 /obj/item/card/id/syndicate_command
-	name = "syndicate ID card"
 	id_type_name = "syndicate ID card"
 	desc = "An ID straight from the Syndicate."
-	registered_name = "Syndicate"
-	assignment = "Syndicate Overlord"
 	icon_state = "syndie"
 	access = list(ACCESS_SYNDICATE)
 	sticky_access = list(ACCESS_SYNDICATE)
@@ -471,37 +466,28 @@ update_label()
 	registered_age = null
 
 /obj/item/card/id/syndicate_command/crew_id
-	name = "syndicate ID card"
 	id_type_name = "syndicate ID card"
 	desc = "An ID straight from the Syndicate."
-	registered_name = "Syndicate"
-	assignment = "Syndicate Operative"
 	icon_state = "syndie"
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 	sticky_access = list(ACCESS_SYNDICATE)
 	uses_overlays = FALSE
 
 /obj/item/card/id/syndicate_command/captain_id
-	name = "syndicate captain ID card"
 	id_type_name = "syndicate captain ID card"
 	desc = "An ID straight from the Syndicate."
-	registered_name = "Syndicate"
-	assignment = "Syndicate Ship Captain"
 	icon_state = "syndie"
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 	sticky_access = list(ACCESS_SYNDICATE)
 	uses_overlays = FALSE
 
 /obj/item/card/id/captains_spare
-	name = "captain's spare ID"
 	id_type_name = "captain's spare ID"
 	desc = "The spare ID of the High Lord himself."
 	icon_state = "gold"
 	inhand_icon_state = "gold_id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	registered_name = "Captain"
-	assignment = "Captain"
 	registered_age = null
 
 /obj/item/card/id/captains_spare/Initialize()
@@ -522,8 +508,6 @@ update_label()
 	id_type_name = "\improper CentCom ID"
 	desc = "An ID straight from Central Command."
 	icon_state = "centcom"
-	registered_name = "Central Command"
-	assignment = "Central Command"
 	uses_overlays = FALSE
 	registered_age = null
 
@@ -536,8 +520,6 @@ update_label()
 	id_type_name = "\improper CentCom ID"
 	desc = "An ERT ID card."
 	icon_state = "ert_commander"
-	registered_name = "Emergency Response Team Commander"
-	assignment = "Emergency Response Team Commander"
 	uses_overlays = FALSE
 	registered_age = null
 
@@ -546,8 +528,6 @@ update_label()
 	. = ..()
 
 /obj/item/card/id/ert/security
-	registered_name = "Security Response Officer"
-	assignment = "Security Response Officer"
 	icon_state = "ert_security"
 
 /obj/item/card/id/ert/security/Initialize()
@@ -555,8 +535,6 @@ update_label()
 	. = ..()
 
 /obj/item/card/id/ert/engineer
-	registered_name = "Engineering Response Officer"
-	assignment = "Engineering Response Officer"
 	icon_state = "ert_engineer"
 
 /obj/item/card/id/ert/engineer/Initialize()
@@ -564,8 +542,6 @@ update_label()
 	. = ..()
 
 /obj/item/card/id/ert/medical
-	registered_name = "Medical Response Officer"
-	assignment = "Medical Response Officer"
 	icon_state = "ert_medic"
 
 /obj/item/card/id/ert/medical/Initialize()
@@ -573,8 +549,6 @@ update_label()
 	. = ..()
 
 /obj/item/card/id/ert/chaplain
-	registered_name = "Religious Response Officer"
-	assignment = "Religious Response Officer"
 	icon_state = "ert_chaplain"
 
 /obj/item/card/id/ert/chaplain/Initialize()
@@ -582,8 +556,6 @@ update_label()
 	. = ..()
 
 /obj/item/card/id/ert/janitor
-	registered_name = "Janitorial Response Officer"
-	assignment = "Janitorial Response Officer"
 	icon_state = "ert_janitor"
 
 /obj/item/card/id/ert/janitor/Initialize()
@@ -591,8 +563,6 @@ update_label()
 	. = ..()
 
 /obj/item/card/id/ert/clown
-	registered_name = "Entertainment Response Officer"
-	assignment = "Entertainment Response Officer"
 	icon_state = "ert_clown"
 
 /obj/item/card/id/ert/clown/Initialize()
@@ -600,12 +570,9 @@ update_label()
 	. = ..()
 
 /obj/item/card/id/ert/deathsquad
-	name = "\improper Death Squad ID"
 	id_type_name = "\improper Death Squad ID"
 	desc = "A Death Squad ID card."
 	icon_state = "deathsquad" //NO NO SIR DEATH SQUADS ARENT A PART OF NANOTRASEN AT ALL
-	registered_name = "Death Commando"
-	assignment = "Death Commando"
 	uses_overlays = FALSE
 
 /obj/item/card/id/debug

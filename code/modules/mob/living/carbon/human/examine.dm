@@ -13,42 +13,24 @@
 		var/mob/living/L = user
 		if(HAS_TRAIT(L, TRAIT_PROSOPAGNOSIA))
 			obscure_name = TRUE
-	// TFN EDIT REFACTOR START: gender expansion
-	var/body_shape = "average"
-	var/gender_title = ""
 
-	switch(gender)
-		if(MALE)
-			gender_title = "male"
-			switch(age)
-				if(1 to 16)
-					gender_title = "boy"
-				if(16 to 24)
-					gender_title = "guy"
-				if(24 to INFINITY)
-					gender_title = "man"
-		if(FEMALE)
-			gender_title = "female"
-			switch(age)
-				if(1 to 16)
-					gender_title = "girl"
-				if(16 to 24)
-					gender_title = "lady"
-				if(24 to INFINITY)
-					gender_title = "woman"
-		if(PLURAL)
-			gender_title = "person"
+	if(user != src)
+		if(!obscure_name && !skipface)
+			var/face_name = get_face_name("")
+			if(face_name)
+				//if we have no guestbook, we just KNOW okay?
+				var/known_name = user.mind?.guestbook ? user.mind.guestbook.get_known_name(user, src, face_name) : face_name
+				if(known_name)
+					. += "You know them as <EM>[known_name]</EM>."
+				else
+					. += "You don't recognize [t_him]. You can <B>Ctrl-Shift click</b> [t_him] to memorize their face."
+			else
+				. += "You can't see [t_his] face very well."
 		else
-			gender_title = "person"
+			. += "You can't see [t_his] face very well."
+	else
+		. += "It's you, <EM>[real_name]</EM>."
 
-	switch(body_shape)
-		if("s")
-			body_shape = "slim"
-		if("f")
-			body_shape = "fat"
-
-	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>, [age2agedescription(age)] [body_shape] [gender_title]!")
-	// TFN EDIT REFACTOR END
 	var/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 

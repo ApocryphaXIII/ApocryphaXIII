@@ -277,8 +277,8 @@
 		observer.client.init_verbs()
 	observer.update_appearance()
 	observer.stop_sound_channel(CHANNEL_LOBBYMUSIC)
-	deadchat_broadcast(" has observed.", "<b>[observer.real_name]</b>", follow_target = observer, turf_target = get_turf(observer), message_type = DEADCHAT_DEATHRATTLE)
 	QDEL_NULL(mind)
+	deadchat_broadcast(" has observed.", "<b>[observer.real_name]</b>", follow_target = observer, turf_target = get_turf(observer), message_type = DEADCHAT_DEATHRATTLE)
 	qdel(src)
 	return TRUE
 
@@ -405,6 +405,7 @@
 
 	if(humanc)	//These procs all expect humans
 		GLOB.data_core.manifest_inject(humanc)
+		faction.add_mob_to_crew_guestbook(humanc)
 		if(SSshuttle.arrivals)
 			SSshuttle.arrivals.QueueAnnounce(humanc, rank)
 		else

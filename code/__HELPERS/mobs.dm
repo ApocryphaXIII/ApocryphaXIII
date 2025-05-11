@@ -154,6 +154,9 @@ GLOBAL_LIST_INIT(skin_tones, sort_list(list(
 	"african2"
 	)))
 
+/proc/pick_species_adjective(mob/living/carbon/human/H)
+	return pick(GLOB.preference_adjectives)
+
 GLOBAL_LIST_EMPTY(species_list)
 
 /proc/age2agedescription(age)

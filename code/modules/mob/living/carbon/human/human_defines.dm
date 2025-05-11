@@ -58,6 +58,9 @@
 
 	var/special_voice = "" // For changing our voice. Used by a symptom.
 
+	/// Adjective used in get_generic_name(), if any
+	var/generic_adjective
+
 	var/name_override //For temporary visible name changes
 
 	var/datum/physiology/physiology

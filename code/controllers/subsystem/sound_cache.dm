@@ -16,11 +16,9 @@ SUBSYSTEM_DEF(sound_cache)
 		to_chat(world, span_boldnotice("Sound Cache: No rust_g detected."))
 		return ..()
 
-	/*
 	// Precache ambience sounds
 	for(var/key in GLOB.ambience_assoc)
 		sounds_to_precache |= GLOB.ambience_assoc[key]
-	*/
 
 	PrecacheSounds()
 

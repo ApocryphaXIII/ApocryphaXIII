@@ -58,7 +58,13 @@
 	var/parallax_movedir = 0
 
 	var/ambience_index = AMBIENCE_GENERIC
+	///A list of sounds to pick from every so often to play to clients.
 	var/list/ambientsounds
+	///Used to decide what the minimum time between ambience is
+	var/min_ambience_cooldown = 30 SECONDS
+	///Used to decide what the maximum time between ambience is
+	var/max_ambience_cooldown = 60 SECONDS
+
 	flags_1 = CAN_BE_DIRTY_1 | CULT_PERMITTED_1
 
 	var/list/firedoors
@@ -84,11 +90,6 @@
 
 	///Used to decide what kind of reverb the area makes sound have
 	var/sound_environment = SOUND_ENVIRONMENT_NONE
-
-	///Used to decide what the minimum time between ambience is
-	var/min_ambience_cooldown = 30 SECONDS
-	///Used to decide what the maximum time between ambience is
-	var/max_ambience_cooldown = 90 SECONDS
 
 /**
  * A list of teleport locations

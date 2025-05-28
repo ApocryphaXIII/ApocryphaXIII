@@ -268,7 +268,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "glock21"
-	ammo_type = /obj/item/ammo_casing/vampire/c9mm
+	ammo_type = /obj/item/ammo_casing/vampire/c45acp
 	caliber = CALIBER_45
 	max_ammo = 12
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
@@ -330,7 +330,7 @@
 	icon_state = "beretta_toreador"
 	inhand_icon_state = "beretta_toreador"
 	worn_icon_state = "beretta"
-	projectile_damage_multiplier = 2.5
+	projectile_damage_multiplier = 2
 	fire_sound_volume = 110
 	cost = 666
 
@@ -605,7 +605,7 @@
 	zoom_amt = 10 //Long range, enough to see in front of you, but no tiles behind you.
 	zoom_out_amt = 5
 	slot_flags = ITEM_SLOT_BACK
-	projectile_damage_multiplier = 2 //140 damage. Nice.
+	projectile_damage_multiplier = 2.2 //154 damage. Nice.
 	actions_types = list()
 	masquerade_violating = TRUE
 	cost = 250

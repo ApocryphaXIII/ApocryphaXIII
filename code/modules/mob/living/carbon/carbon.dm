@@ -383,8 +383,10 @@
 		buckled.user_unbuckle_mob(src,src)
 
 /mob/living/carbon/resist_fire()
+	if(IsKnockdown())
+		return
 	adjust_fire_stacks(-5)
-	Paralyze(60, ignore_canstun = TRUE)
+	Knockdown(60, ignore_canstun = TRUE) //You are rolling on the floor
 	spin(32,2)
 	visible_message("<span class='danger'>[src] rolls on the floor, trying to put [p_them()]self out!</span>", \
 		"<span class='notice'>You stop, drop, and roll!</span>")
@@ -1004,6 +1006,9 @@
 
 	if (HAS_TRAIT(src, TRAIT_HUSK))
 		return DEFIB_FAIL_HUSK
+
+	if(mind.damned)
+		return DEFIB_FAIL_SUICIDE
 
 	if ((getBruteLoss() >= MAX_REVIVE_BRUTE_DAMAGE) || (getFireLoss() >= MAX_REVIVE_FIRE_DAMAGE))
 		return DEFIB_FAIL_TISSUE_DAMAGE

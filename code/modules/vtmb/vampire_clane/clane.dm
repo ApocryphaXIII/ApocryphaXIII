@@ -9,6 +9,7 @@ And it also helps for the character set panel
 	var/desc = "The clanless. The rabble. Of no importance."
 	var/list/clane_disciplines = list() //discipline datums
 	var/list/restricted_disciplines = list()
+	var/list/common_disciplines = list() //Discs that you don't start with but are easier to purchase like catiff instead of non clan discs
 	var/datum/outfit/clane_outfit
 	var/curse = "None."
 	var/list/allowed_jobs = list()
@@ -64,6 +65,7 @@ And it also helps for the character set panel
 		H.put_in_hands(new clan_keys(H))
 
 	H.AddComponent(/datum/component/morality)
+	H.mind.damned = 1
 
 /mob/living/carbon
 	var/datum/relationship/Myself

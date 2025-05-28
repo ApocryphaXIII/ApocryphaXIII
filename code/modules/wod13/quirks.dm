@@ -61,16 +61,17 @@ Dancer
 	name = "Bloody Lover"
 	desc = "Your bites feel more like a kiss."
 	mob_trait = TRAIT_BLOODY_LOVER
-	value = 2
+	value = 4
 	gain_text = "<span class='notice'>You feel more experienced in love.</span>"
 	lose_text = "<span class='warning'>You feel more clueless in love.</span>"
 	allowed_species = list("Vampire", "Kuei-Jin")
+	excluded_clans = list("Nagaraja")
 
 /datum/quirk/tough_flesh
 	name = "Tough Flesh"
 	desc = "Your flesh is much sturdier than normal. You are much better in resisting stuns, bumps and hits."
 	mob_trait = TRAIT_TOUGH_FLESH
-	value = 3
+	value = 4
 	gain_text = "<span class='notice'>You feel tough.</span>"
 	lose_text = "<span class='warning'>You feel fragile again.</span>"
 
@@ -96,6 +97,7 @@ Dancer
 	gain_text = "<span class='warning'>You feel anxious about the way you feed.</span>"
 	lose_text = "<span class='warning'>You can feed normal again.</span>"
 	allowed_species = list("Vampire", "Kuei-Jin")
+	excluded_clans = list("Nagaraja")
 
 /datum/quirk/lazy
 	name = "Lazy"
@@ -126,12 +128,11 @@ Dancer
 
 /datum/quirk/non_int
 	name = "Non Intellectual"
-	desc = "You are far more special than other beings from your kind, so you gain experience slower."
+	desc = "You feel more than you think about the world; you gain experience slower."
 	mob_trait = TRAIT_NON_INT
-	value = -5
+	value = -2
 	gain_text = "<span class='warning'>You feel dumb.</span>"
 	lose_text = "<span class='notice'>You don't feel dumb anymore.</span>"
-	allowed_species = list("Vampire", "Human", "Ghoul", "Kuei-Jin")
 
 /datum/quirk/cold_aura
 	name = "Deathly Aura"
@@ -149,7 +150,7 @@ Dancer
 	value = 3
 	gain_text = "<span class='warning'>You feel your heart beat, for a moment.</span>"
 	lose_text = "<span class='notice'>You feel a subtle chill.</span>"
-	allowed_species = list("Kuei-jin", "Vampire")
+	allowed_species = list("Kuei-Jin", "Vampire")
 
 /datum/quirk/blush_of_health
 	name = "Blush of Health"
@@ -159,6 +160,14 @@ Dancer
 	gain_text = "<span class='warning'>You feel your heart beat, thumping irregularly in your chest.</span>"
 	lose_text = "<span class='notice'>You feel your pulse slow to a crawl, stilling.</span>"
 	allowed_species = list("Vampire")
+
+/datum/quirk/unbondable
+	name = "Unbondable"
+	desc = "The vitae of Caine might be addictive, but you don't find any such tie to the origin."
+	mob_trait = TRAIT_UNBONDABLE
+	value = 4
+	gain_text = "<span class='warning'>You feel free of fetters.</span>"
+	lose_text = "<span class='notice'>You feel echoes of misbegotten emotion.</span>"
 
 /datum/quirk/coffin_therapy
 	name = "Coffin Therapy"
@@ -195,6 +204,20 @@ Dancer
 	gain_text = "<span class='warning'>You feel poorer.</span>"
 	lose_text = "<span class='notice'>You feel hope for your future finances.</span>"
 
+/datum/quirk/debtor/add()
+	. = ..()
+	if(!ishuman(quirk_holder))
+		return
+	var/mob/living/carbon/human/debtor = quirk_holder
+	for(var/datum/vtm_bank_account/account as anything in GLOB.bank_account_list)
+		if(debtor.bank_id != account.bank_id)
+			continue
+		if(debtor.clane?.name == CLAN_VENTRUE)
+			account.balance = 5 // Extra loss of dignitas.
+		else
+			account.balance = floor(account.balance * 0.5)
+		break
+
 /datum/quirk/messy_eater
 	name = "Messy Eater"
 	desc = "Blood doesn't make it in around your fangs correctly. Create bloodstains when you feed, and reduce your blood intake."
@@ -202,7 +225,8 @@ Dancer
 	value = -2
 	gain_text = "<span class='warning'>Your fangs feel awkward in your mouth.</span>"
 	lose_text = "<span class='notice'>You fangs feel comfortable in your mouth.</span>"
-	allowed_species = list("Vampire","Kuei-jin")
+	allowed_species = list("Vampire","Kuei-Jin")
+	excluded_clans = list("Nagaraja")
 
 /datum/quirk/animal_repulsion
 	name = "Animal Repulsion"
@@ -211,7 +235,17 @@ Dancer
 	value = -2
 	gain_text = "<span class='warning'>You can feel hostile eyes watching you.</span>"
 	lose_text = "<span class='notice'>Cats walk by you unphased.</span>"
-	allowed_species = list("Vampire","Ghoul","Human","Kuei-jin")
+	allowed_species = list("Vampire","Ghoul","Human","Kuei-Jin")
+
+/datum/quirk/wyrm_tainted
+	name = "Wyrm Tainted"
+	desc = "The touch of the wyrm has perverted you. Other werewolves can sense this taint, and your crinos form is changed."
+	mob_trait = TRAIT_WYRMTAINTED
+	value = -1
+	gain_text = "<span class='warning'>You feel wrongness crawling beneath your skin.</span>"
+	lose_text = "<span class='notice'>You feel relief and warmth.</span>"
+	allowed_species = list("Werewolf")
+	allowed_tribes = list("Galestalkers","Ronin", "Glass Walkers", "Ghost Council", "Hart Wardens", "Children of Gaia", "Bone Gnawers", "Get of Fenris", "Black Furies", "Silver Fangs", "Silent Striders", "Shadow Lords", "Red Talons", "Stargazers", "Corax")
 
 /datum/quirk/illegal_identity
 	name = "Illegal Identity"
@@ -220,6 +254,21 @@ Dancer
 	value = 0
 	gain_text = "<span class='warning'>You feel legally unprepared.</span>"
 	lose_text = "<span class='notice'>You feel bureaucratically legitimate.</span>"
+
+/datum/quirk/illegal_identity/add()
+	. = ..()
+	if(!ishuman(quirk_holder))
+		return
+	var/mob/living/carbon/human/debtor = quirk_holder
+	var/obj/item/passport/passport = locate() in debtor // In pockets
+	if(!passport && debtor.back)
+		passport = locate() in debtor.back // In backpack
+	if(passport && passport.owner == debtor.real_name)
+		passport.fake = TRUE
+		if(debtor.dna?.species)
+			passport.owner = debtor.dna.species.random_name(debtor.gender, unique = TRUE)
+		else
+			passport.owner = random_unique_name(debtor.gender)
 
 /datum/quirk/potent_blood
 	name = "Potent Blood"
@@ -242,6 +291,7 @@ Dancer
 	gain_text = "<span class='warning'>You have a craving for liver.</span>"
 	lose_text = "<span class='notice'>Your craving subsides...</span>"
 	allowed_species = list("Vampire")
+	excluded_clans = list("Nagaraja")
 
 /datum/action/fly_upper
 	name = "Fly Up"
@@ -316,8 +366,8 @@ Dancer
 
 ///Very similar to squish, but for dwarves and shorties
 /datum/element/dwarfism
-	element_flags = ELEMENT_DETACH|ELEMENT_BESPOKE
-	id_arg_index = 2
+	element_flags = ELEMENT_DETACH_ON_HOST_DESTROY|ELEMENT_BESPOKE
+	argument_hash_start_idx = 2
 	var/comsig
 	var/list/attached_targets = list()
 
@@ -360,8 +410,8 @@ Dancer
 
 
 /datum/element/children
-	element_flags = ELEMENT_DETACH|ELEMENT_BESPOKE
-	id_arg_index = 2
+	element_flags = ELEMENT_DETACH_ON_HOST_DESTROY|ELEMENT_BESPOKE
+	argument_hash_start_idx = 2
 	var/comsig
 	var/list/attached_targets = list()
 
@@ -569,6 +619,7 @@ Dancer
 	gain_text = "<span class='notice'>You feel necroresistant.</span>"
 	lose_text = "<span class='notice'>You don't want necrophilia anymore.</span>"
 	allowed_species = list("Vampire")
+	excluded_clans = list("Nagaraja")
 
 /datum/quirk/charmer
 	name = "Abnormal Charmer"
@@ -611,8 +662,8 @@ Dancer
 
 ///Very similar to squish, but for dwarves and shorties
 /datum/element/giantism
-	element_flags = ELEMENT_DETACH|ELEMENT_BESPOKE
-	id_arg_index = 2
+	element_flags = ELEMENT_DETACH_ON_HOST_DESTROY|ELEMENT_BESPOKE
+	argument_hash_start_idx = 2
 	var/comsig
 	var/list/attached_targets = list()
 

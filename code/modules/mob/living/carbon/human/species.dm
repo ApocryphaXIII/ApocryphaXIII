@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 	///This is the fluff name. They are displayed on health analyzers and in the character setup menu. Leave them generic for other servers to customize.
 	var/name
 	// Default color. If mutant colors are disabled, this is the color that will be used by that race.
-	var/default_color = "#FFF"
+	var/default_color = "#FFFFFF"
 
 	///Whether or not the race has sexual characteristics (biological genders). At the moment this is only FALSE for skeletons and shadows
 	var/sexes = TRUE
@@ -560,13 +560,13 @@ GLOBAL_LIST_EMPTY(selectable_races)
 			if(!forced_colour)
 				if(hair_color)
 					if(hair_color == "mutcolor")
-						facial_overlay.color = "#" + H.dna.features["mcolor"]
+						facial_overlay.color = H.dna.features["mcolor"]
 					else if(hair_color == "fixedmutcolor")
-						facial_overlay.color = "#[fixed_mut_color]"
+						facial_overlay.color = fixed_mut_color
 					else
-						facial_overlay.color = "#" + hair_color
+						facial_overlay.color = hair_color
 				else
-					facial_overlay.color = "#" + H.facial_hair_color
+					facial_overlay.color = H.facial_hair_color
 			else
 				facial_overlay.color = forced_colour
 
@@ -626,13 +626,13 @@ GLOBAL_LIST_EMPTY(selectable_races)
 				if(!forced_colour)
 					if(hair_color)
 						if(hair_color == "mutcolor")
-							hair_overlay.color = "#" + H.dna.features["mcolor"]
+							hair_overlay.color = H.dna.features["mcolor"]
 						else if(hair_color == "fixedmutcolor")
-							hair_overlay.color = "#[fixed_mut_color]"
+							hair_overlay.color = fixed_mut_color
 						else
-							hair_overlay.color = "#" + hair_color
+							hair_overlay.color = hair_color
 					else
-						hair_overlay.color = "#" + H.hair_color
+						hair_overlay.color = H.hair_color
 	//Gradients
 					grad_style = H.grad_style
 					grad_color = H.grad_color
@@ -642,7 +642,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 						var/icon/temp_hair = icon(hair_file, hair_state)
 						temp.Blend(temp_hair, ICON_ADD)
 						gradient_overlay.icon = temp
-						gradient_overlay.color = "#" + grad_color
+						gradient_overlay.color = grad_color
 				else
 					hair_overlay.color = forced_colour
 				hair_overlay.alpha = hair_alpha
@@ -696,7 +696,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 				if(H.base_body_mod == "s")
 					eye_overlay = mutable_appearance('icons/mob/human_face_f.dmi', E.eye_icon_state, -BODY_LAYER)
 			if((EYECOLOR in species_traits) && E)
-				eye_overlay.color = "#" + H.eye_color
+				eye_overlay.color = H.eye_color
 			if(OFFSET_FACE in H.dna.species.offset_features)
 				eye_overlay.pixel_x += H.dna.species.offset_features[OFFSET_FACE][1]
 				eye_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FACE][2]
@@ -738,7 +738,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 
 	//Underwear, Undershirts & Socks
 	if(!(NO_UNDERWEAR in species_traits))
-		if(H.underwear)
+		if(H.underwear && !(H.underwear_visibility & UNDERWEAR_HIDE_UNDIES))
 			var/datum/sprite_accessory/underwear/underwear = GLOB.underwear_list[H.underwear]
 			var/mutable_appearance/underwear_overlay
 			if(underwear)
@@ -751,10 +751,10 @@ GLOBAL_LIST_EMPTY(selectable_races)
 				if(H.base_body_mod == "f")
 					underwear_overlay = mutable_appearance('icons/mob/clothing/underwear_f.dmi', underwear.icon_state, -BODY_LAYER)
 				if(!underwear.use_static)
-					underwear_overlay.color = "#" + H.underwear_color
+					underwear_overlay.color = H.underwear_color
 				standing += underwear_overlay
 
-		if(H.undershirt)
+		if(H.undershirt && !(H.underwear_visibility & UNDERWEAR_HIDE_SHIRT))
 			var/datum/sprite_accessory/undershirt/undershirt = GLOB.undershirt_list[H.undershirt]
 			var/mutable_appearance/undershirt_overlay
 			if(undershirt)
@@ -768,7 +768,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 					undershirt_overlay = mutable_appearance('icons/mob/clothing/underwear_f.dmi', undershirt.icon_state, -BODY_LAYER)
 				standing += undershirt_overlay
 
-		if(H.socks && H.num_legs >= 2 && !(DIGITIGRADE in species_traits))
+		if(H.socks && H.num_legs >= 2 && !(DIGITIGRADE in species_traits) && !(H.underwear_visibility & UNDERWEAR_HIDE_SOCKS))
 			var/datum/sprite_accessory/socks/socks = GLOB.socks_list[H.socks]
 			var/mutable_appearance/socks_overlay
 			if(socks)
@@ -971,20 +971,20 @@ GLOBAL_LIST_EMPTY(selectable_races)
 					switch(S.color_src)
 						if(MUTCOLORS)
 							if(fixed_mut_color)
-								accessory_overlay.color = "#[fixed_mut_color]"
+								accessory_overlay.color = fixed_mut_color
 							else
-								accessory_overlay.color = "#[H.dna.features["mcolor"]]"
+								accessory_overlay.color = H.dna.features["mcolor"]
 						if(HAIR)
 							if(hair_color == "mutcolor")
-								accessory_overlay.color = "#[H.dna.features["mcolor"]]"
+								accessory_overlay.color = H.dna.features["mcolor"]
 							else if(hair_color == "fixedmutcolor")
-								accessory_overlay.color = "#[fixed_mut_color]"
+								accessory_overlay.color = fixed_mut_color
 							else
-								accessory_overlay.color = "#[H.hair_color]"
+								accessory_overlay.color = H.hair_color
 						if(FACEHAIR)
-							accessory_overlay.color = "#[H.facial_hair_color]"
+							accessory_overlay.color = H.facial_hair_color
 						if(EYECOLOR)
-							accessory_overlay.color = "#[H.eye_color]"
+							accessory_overlay.color = H.eye_color
 				else
 					accessory_overlay.color = forced_colour
 			standing += accessory_overlay
@@ -2299,23 +2299,49 @@ GLOBAL_LIST_EMPTY(selectable_races)
 
 /datum/species/proc/get_laugh_sound(mob/living/carbon/human/human)
 	if(human.body_type == FEMALE)
-		return 'sound/mobs/humanoids/human/laugh/womanlaugh.ogg'
+		return pick('sound/mobs/humanoids/human/laugh/female_laugh_1.ogg',
+		'sound/mobs/humanoids/human/laugh/female_laugh_2.ogg',
+		)
 	return pick(
-		'sound/mobs/humanoids/human/laugh/manlaugh1.ogg',
-		'sound/mobs/humanoids/human/laugh/manlaugh2.ogg',
+		'sound/mobs/humanoids/human/laugh/male_laugh_1.ogg',
+		'sound/mobs/humanoids/human/laugh/male_laugh_2.ogg',
+	)
+
+/datum/species/proc/get_chuckle_sound(mob/living/carbon/human/human)
+	if(human.body_type == FEMALE)
+		return pick(
+		'sound/mobs/humanoids/human/laugh/chuckle/female_chuckle_1.ogg',
+		'sound/mobs/humanoids/human/laugh/chuckle/female_chuckle_2.ogg',
+		'sound/mobs/humanoids/human/laugh/chuckle/female_chuckle_3.ogg',
+		)
+	return pick(
+		'sound/mobs/humanoids/human/laugh/chuckle/male_chuckle_1.ogg',
+	)
+
+/datum/species/proc/get_crazylaugh_sound(mob/living/carbon/human/human)
+	if(human.body_type == FEMALE)
+		return pick(
+		'sound/mobs/humanoids/human/laugh/crazy/female_crazylaugh_1.ogg',
+		'sound/mobs/humanoids/human/laugh/crazy/female_crazylaugh_2.ogg',
+		)
+	return pick(
+		'sound/mobs/humanoids/human/laugh/crazy/male_crazylaugh_1.ogg',
+		'sound/mobs/humanoids/human/laugh/crazy/male_crazylaugh_2.ogg',
+		'sound/mobs/humanoids/human/laugh/crazy/male_crazylaugh_3.ogg',
+		'sound/mobs/humanoids/human/laugh/crazy/male_crazylaugh_4.ogg',
 	)
 
 /datum/species/proc/get_sigh_sound(mob/living/carbon/human/human)
 	if(human.body_type == FEMALE)
 		return pick(
-				'sound/mobs/humanoids/human/sigh/female_sigh1.ogg',
-				'sound/mobs/humanoids/human/sigh/female_sigh2.ogg',
-				'sound/mobs/humanoids/human/sigh/female_sigh3.ogg',
+				'sound/mobs/humanoids/human/sigh/female_sigh_1.ogg',
+				'sound/mobs/humanoids/human/sigh/female_sigh_2.ogg',
+				'sound/mobs/humanoids/human/sigh/female_sigh_3.ogg',
 			)
 	return pick(
-				'sound/mobs/humanoids/human/sigh/male_sigh1.ogg',
-				'sound/mobs/humanoids/human/sigh/male_sigh2.ogg',
-				'sound/mobs/humanoids/human/sigh/male_sigh3.ogg',
+				'sound/mobs/humanoids/human/sigh/male_sigh_1.ogg',
+				'sound/mobs/humanoids/human/sigh/male_sigh_2.ogg',
+				'sound/mobs/humanoids/human/sigh/male_sigh_3.ogg',
 			)
 
 /datum/species/proc/get_sniff_sound(mob/living/carbon/human/human)
@@ -2336,6 +2362,8 @@ GLOBAL_LIST_EMPTY(selectable_races)
 		return pick(
 				'sound/mobs/humanoids/human/giggle/female_giggle_1.ogg',
 				'sound/mobs/humanoids/human/giggle/female_giggle_2.ogg',
+				'sound/mobs/humanoids/human/giggle/female_giggle_3.ogg',
+				'sound/mobs/humanoids/human/giggle/female_giggle_4.ogg',
 			)
 	return pick(
 				'sound/mobs/humanoids/human/giggle/male_giggle_1.ogg',

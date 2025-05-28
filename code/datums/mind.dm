@@ -50,7 +50,7 @@
 	var/list/antag_datums
 	var/antag_hud_icon_state = null //this mind's ANTAG_HUD should have this icon_state
 	var/datum/atom_hud/antag/antag_hud = null //this mind's antag HUD
-	var/damnation_type = 0
+	var/damned = 0
 	var/holy_role = NONE //is this person a chaplain or admin role allowed to use bibles, Any rank besides 'NONE' allows for this.
 
 	var/mob/living/enslaved_to //If this mind's master is another mob (i.e. adamantine golems)
@@ -216,12 +216,12 @@
 	if(!length(shown_skills))
 		to_chat(user, "<span class='notice'>You don't seem to have any particularly outstanding skills.</span>")
 		return
-	var/msg = "<span class='info'>*---------*\n<EM>Your skills</EM></span>\n<span class='notice'>"
+	var/msg = "[span_info("<EM>Your skills</EM>")]\n<span class='notice'>"
 	for(var/i in shown_skills)
 		var/datum/skill/the_skill = i
 		msg += "[initial(the_skill.name)] - [get_skill_level_name(the_skill)]\n"
 	msg += "</span>"
-	to_chat(user, msg)
+	to_chat(user, boxed_message(msg))
 
 /datum/mind/proc/set_death_time()
 	SIGNAL_HANDLER

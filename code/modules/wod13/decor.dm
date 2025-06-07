@@ -981,10 +981,51 @@
 	layer = CAR_LAYER
 	anchored = TRUE
 	density = TRUE
+	var/solid_left = 7
+	var/stripped_left = 7
+	var/black_sunk = FALSE
 
 /obj/structure/billiard_table/Initialize()
 	. = ..()
 	icon_state = "billiard[rand(1, 3)]"
+
+/obj/structure/billiard_table/examine(mob/user)
+	. = ..()
+	. += "There are [solid_left] solid and [stripped_left] stripped balls left."
+	if(black_sunk)
+		. += "The 8-Ball has been sunk."
+
+/obj/structure/billiard_table/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/pool_cue))
+		var/cue_options = list(
+			"Stripped Ball" = image(icon = icon, icon_state = "billiard1"),
+			"Solid Ball" = image(icon = icon, icon_state = "billiard2"),
+		)
+		var/choice = show_radial_menu(user, src, cue_options, require_near = TRUE)
+		if(!choice)
+			return FALSE
+		user.visible_message("[user] begins lining up a shot to hit a [lowertext(choice)].", "You begin lining up a shot to hit a [lowertext(choice)].")
+		if(!do_after(user, 3 SECONDS, src))
+			return
+		switch(choice)
+			if("Stripped Ball")
+				stripped_left--
+			if("Solid Ball")
+				solid_left--
+		playsound(src, 'sound/items/poolball_strike.ogg', 75)
+	else
+		return ..()
+
+/obj/structure/billiard_table/AltClick(mob/user)
+	. = ..()
+	to_chat(user, "You begin reseting the table to play another game of 8-Ball.")
+	if(do_after(user, 8 SECONDS, src))
+		reset_table()
+
+/obj/structure/billiard_table/proc/reset_table()
+	solid_left = 7
+	stripped_left = 7
+	black_sunk = FALSE
 
 /obj/police_department
 	name = "San Francisco Police Department"

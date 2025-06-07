@@ -3512,6 +3512,7 @@
 #include "code\modules\wod13\items\drinkable_bloodpack.dm"
 #include "code\modules\wod13\items\masquerade_contract.dm"
 #include "code\modules\wod13\items\phone_book.dm"
+#include "code\modules\wod13\items\pool_cue.dm"
 #include "code\modules\wod13\items\quran.dm"
 #include "code\modules\wod13\items\ravnos.dm"
 #include "code\modules\wod13\items\wire_cutters.dm"

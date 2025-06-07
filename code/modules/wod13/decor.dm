@@ -1080,6 +1080,10 @@
 		EIGHT_BALL = 1
 	)
 
+#undef SOLID_BALL
+#undef STRIPED_BALL
+#undef EIGHT_BALL
+
 /obj/police_department
 	name = "San Francisco Police Department"
 	desc = "Stop right there you criminal scum! Nobody can break the law on my watch!!"

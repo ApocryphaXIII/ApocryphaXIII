@@ -284,16 +284,16 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 
 /**
  * The user shuffles the order of the deck, then closes any visability into the deck's storage to prevent cheesing.
- * *User: The person doing the shuffling, used in visable message and closing UI.
- * *Visible: Will anyone need to hear the visable message about the shuffling?
+ * *User: The person doing the shuffling, used in visible message and closing UI.
+ * *Visible: Will anyone need to hear the visible message about the shuffling?
  */
-/obj/item/tcgcard_deck/proc/shuffle_deck(mob/user, visable = TRUE)
+/obj/item/tcgcard_deck/proc/shuffle_deck(mob/user, visible = TRUE)
 	if(!contents)
 		return
 	contents = shuffle(contents)
 	if(user.active_storage)
 		user.active_storage.close(user)
-	if(visable)
+	if(visible)
 		user.visible_message("<span class='notice'>[user] shuffles \the [src]!</span>", \
 						"<span class='notice'>You shuffle \the [src]!</span>")
 

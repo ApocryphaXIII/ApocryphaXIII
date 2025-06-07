@@ -471,7 +471,7 @@
 	if(ishuman(src))
 		if(ishuman(A) || isitem(A))
 			var/mob/living/carbon/human/ueban = src
-			if(!do_mob(src, src, max(1, 15-ueban.mentality*3)))
+			if(!do_mob(src, A, max(1, 15-ueban.mentality*3), timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE)))
 				return
 
 	if(isturf(A) && !(sight & SEE_TURFS) && !(A in view(client ? client.view : world.view, src)))

@@ -972,6 +972,11 @@
 			mob_occupant.ghostize(TRUE)
 	QDEL_NULL(mob_occupant)
 
+#define SOLID_BALL "Solid Ball"
+#define STRIPED_BALL "Striped Ball"
+//Cant have the number as the first character in a define
+#define EIGHT_BALL "8-Ball"
+
 /obj/structure/billiard_table
 	name = "billiard table"
 	desc = "Come here, play some BALLS. I know you want it so much..."
@@ -981,10 +986,99 @@
 	layer = CAR_LAYER
 	anchored = TRUE
 	density = TRUE
+	var/list/balls_left = list(
+		SOLID_BALL = 7,
+		STRIPED_BALL = 7,
+		EIGHT_BALL = 1
+	)
+
 
 /obj/structure/billiard_table/Initialize()
 	. = ..()
 	icon_state = "billiard[rand(1, 3)]"
+
+/obj/structure/billiard_table/examine(mob/user)
+	. = ..()
+	. += "There are [balls_left[SOLID_BALL]] solid and [balls_left[STRIPED_BALL]] striped balls left."
+	if(!balls_left[EIGHT_BALL])
+		. += "The 8-Ball has been sunk."
+
+/obj/structure/billiard_table/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/pool_cue))
+		var/cue_options = list(
+			SOLID_BALL = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "solid_ball"),
+			STRIPED_BALL = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "striped_ball"),
+		)
+		var/choice = show_radial_menu(user, src, cue_options, require_near = TRUE)
+		if(!choice)
+			return FALSE
+		if(balls_left[choice] <= 0)
+			to_chat(user, span_warning("You cant aim for a [lowertext(choice)] because they are all sunk!"))
+		user.visible_message(span_notice("[user] begins lining up a shot to hit a [lowertext(choice)]."), span_notice("You begin lining up a shot to hit a [lowertext(choice)]."))
+		if(!do_after(user, 5 SECONDS, src))
+			return
+		user.visible_message(span_notice("[user] strikes a [lowertext(choice)]!"), span_notice("You strike your target!"))
+		playsound(src, 'sound/items/poolball_strike.ogg', 75)
+
+		var/attempts = 0
+		//21 is mostly a magic number to prevent a infinite loop if i wrote bad code
+		while(total_balls() && (attempts <= 21))
+			attempts++
+			sink_ball(user, choice)
+			if(prob(80))
+				break
+	else
+		return ..()
+
+/obj/structure/billiard_table/AltClick(mob/user)
+	. = ..()
+	to_chat(user, "You begin reseting the table to play another game of 8-Ball.")
+	if(do_after(user, 8 SECONDS, src))
+		reset_table()
+		user.visible_message(span_notice("[user] resets the table for another game of 8-Ball"), span_notice("You finish reseting the table. Ready for another game?"))
+		#warn refactor icon_state stuff into a proc
+		icon_state = "billiard2"
+
+/obj/structure/billiard_table/proc/sink_ball(mob/living/user, target_ball, sunk_ball)
+	if(!sunk_ball)
+		sunk_ball = random_ball(target_ball)
+
+	if(!balls_left[sunk_ball] || balls_left[sunk_ball] <= 0)
+		user.visible_message(span_warning("[user] MISSED"), span_warning("You missed"))
+		return
+	if(sunk_ball == EIGHT_BALL)
+		user.visible_message(span_warning("[user] sunk the 8-Ball.. Damn.."), span_warning("Shit.. You sunk the 8-Ball"))
+	else
+		user.visible_message(span_notice("[user] sinks a [lowertext(sunk_ball)]. [balls_left[sunk_ball]] left."), span_notice("You sink a [sunk_ball]!"))
+	balls_left[sunk_ball] = max(0, --balls_left[sunk_ball])
+	#warn refactor icon_state stuff into a proc
+	icon_state = "billiard3"
+
+#warn tie this into stats for flavor
+/obj/structure/billiard_table/proc/random_ball(desired_ball)
+	var/list/ball_chances = balls_left.Copy()
+	if(balls_left[desired_ball] > 0)
+		//Higher chance to sink the ball type your aiming for.
+		ball_chances[desired_ball] = ball_chances[desired_ball] * 2
+	return pickweight(ball_chances)
+
+/obj/structure/billiard_table/proc/total_balls()
+	var/total_balls = 0
+	for(var/ball_type in balls_left)
+		total_balls += balls_left[ball_type]
+
+	#warn refactor icon_state stuff into a proc
+	if(total_balls <= 0)
+		icon_state = "billiard1"
+
+	return total_balls
+
+/obj/structure/billiard_table/proc/reset_table()
+	balls_left = list(
+		SOLID_BALL = 7,
+		STRIPED_BALL = 7,
+		EIGHT_BALL = 1
+	)
 
 /obj/police_department
 	name = "San Francisco Police Department"

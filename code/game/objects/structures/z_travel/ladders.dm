@@ -14,9 +14,13 @@
 	/// Ladders crafted midround can only link to other ladders crafted midround
 	var/crafted = FALSE
 	/// travel time for ladder in deciseconds
-	var/travel_time = 1 SECONDS
+	var/travel_time = 2.5 SECONDS
+	/// played after the do_after is finished
+	var/travel_sound
 	// Requires a sister ladder to link up with us else we runtime
 	var/requires_friend = FALSE
+	/// If we DONT update our icon state based off our linked ladders, used for manholes.
+	var/static_apperance = FALSE
 
 /obj/structure/ladder/Initialize(mapload, obj/structure/ladder/up, obj/structure/ladder/down)
 	..()
@@ -109,12 +113,16 @@
 			CRASH("[src] failed to find another ladder to link up with.")
 
 /obj/structure/ladder/update_icon_state()
-	icon_state = "[base_icon_state][!!up][!!down]"
+	if(!static_apperance)
+		icon_state = "[base_icon_state][!!up][!!down]"
 	return ..()
 
-/obj/structure/ladder/proc/travel(going_up, mob/user, is_ghost, obj/structure/ladder/ladder)
+/obj/structure/ladder/proc/travel(mob/user, going_up = TRUE, is_ghost = FALSE)
+	var/obj/structure/ladder/ladder = going_up ? up : down
 	if(!is_ghost)
 		show_fluff_message(user, ladder, going_up)
+		if(travel_sound)
+			playsound(src, travel_sound, 50, TRUE)
 		ladder.add_fingerprint(user)
 
 	var/turf/T = get_turf(ladder)
@@ -126,24 +134,37 @@
 	if(AM)
 		user.start_pulling(AM)
 
-	//reopening ladder radial menu ahead
-	T = get_turf(user)
-	var/obj/structure/ladder/ladder_structure = locate() in T
-	if (ladder_structure)
-		ladder_structure.use(user)
+	// to avoid having players hunt for the pixels of a ladder that goes through several stories and is
+	// partially covered by the sprites of their mobs, a radial menu will be displayed over them.
+	// this way players can keep climbing up or down with ease until they reach an end.
+	if(ladder.up && ladder.down)
+		ladder.show_options(user, is_ghost)
 
 /obj/structure/ladder/proc/use(mob/user, is_ghost=FALSE)
 	if(!in_range(src, user) || DOING_INTERACTION(user, DOAFTER_SOURCE_CLIMBING_LADDER))
 		return
 
-	show_options(is_ghost)
+	show_options(user, is_ghost)
 
 	if(!is_ghost)
 		add_fingerprint(user)
 
 /obj/structure/ladder/proc/start_travelling(mob/user, going_up)
-	if(do_after(user, travel_time, target = src, interaction_key = DOAFTER_SOURCE_CLIMBING_LADDER))
-		travel(user, going_up, grant_exp = TRUE)
+	// Our climbers athletics ability
+	var/fitness_level = 0 //user.get_total_athletics()
+
+	// Misc bonuses to the climb speed.
+	var/misc_multiplier = 1
+
+	// Not a massive fan of this, better then what it used to be
+	if(iswerewolf(user))
+		misc_multiplier *= 0.5
+
+	// ! Not sure I can use fitness_level like this.
+	var/final_travel_time = (travel_time - fitness_level) * misc_multiplier
+
+	if(do_after(user, final_travel_time, target = src, interaction_key = DOAFTER_SOURCE_CLIMBING_LADDER))
+		travel(user, going_up)
 
 /// Shows a radial menu that players can use to climb up and down a stair.
 /obj/structure/ladder/proc/show_options(mob/user, is_ghost = FALSE)
@@ -196,8 +217,20 @@
 
 //ATTACK GHOST IGNORING PARENT RETURN VALUE
 /obj/structure/ladder/attack_ghost(mob/dead/observer/user)
-	use(user, TRUE)
+	ghost_use(user)
 	return ..()
+
+///Ghosts use the byond default popup menu function on right click, so this is going to work a little differently for them.
+/obj/structure/ladder/proc/ghost_use(mob/user)
+	if (!up && !down)
+		balloon_alert(user, "doesn't lead anywhere!")
+		return
+	if(!up) //only goes down
+		travel(user, going_up = FALSE, is_ghost = TRUE)
+	else if(!down) //only goes up
+		travel(user, going_up = TRUE, is_ghost = TRUE)
+	else //goes both ways
+		show_options(user, is_ghost = TRUE)
 
 /obj/structure/ladder/proc/show_fluff_message(mob/user, obj/structure/ladder/destination, going_up)
 	if(going_up)
@@ -221,27 +254,26 @@
 /obj/structure/ladder/unbreakable/LateInitialize()
 	// Override the parent to find ladders based on being height-linked
 	if (!id || (up && down))
-		update_icon()
+		update_appearance()
 		return
 
-	for (var/O in GLOB.ladders)
-		var/obj/structure/ladder/unbreakable/L = O
-		if (L.id != id)
+	for(var/obj/structure/ladder/unbreakable/unbreakable_ladder in GLOB.ladders)
+		if (unbreakable_ladder.id != id)
 			continue  // not one of our pals
-		if (!down && L.height == height - 1)
-			down = L
-			L.up = src
-			L.update_icon()
+		if (!down && unbreakable_ladder.height == height - 1)
+			down = unbreakable_ladder
+			unbreakable_ladder.up = src
+			unbreakable_ladder.update_appearance()
 			if (up)
 				break  // break if both our connections are filled
-		else if (!up && L.height == height + 1)
-			up = L
-			L.down = src
-			L.update_icon()
+		else if (!up && unbreakable_ladder.height == height + 1)
+			up = unbreakable_ladder
+			unbreakable_ladder.down = src
+			unbreakable_ladder.update_appearance()
 			if (down)
 				break  // break if both our connections are filled
 
-	update_icon()
+	update_appearance()
 
 /obj/structure/ladder/crafted
 	crafted = TRUE

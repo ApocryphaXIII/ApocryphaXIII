@@ -138,7 +138,7 @@
 /obj/structure/vampipe{
 	icon_state = "piping32"
 	},
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/sewer)
 "ack" = (
@@ -2259,7 +2259,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility)
 "aEO" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "aEU" = (
@@ -5286,7 +5286,7 @@
 /turf/open/floor/carpet/red,
 /area/vtm/interior/theatre)
 "bva" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /obj/machinery/light/small{
 	dir = 8;
 	pixel_x = 16
@@ -5591,7 +5591,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/chinatown)
 "bAa" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/lower)
 "bAg" = (
@@ -5950,7 +5950,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/strip/elysium)
 "bEv" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/machinery/light/small{
 	pixel_y = 32
 	},
@@ -7145,7 +7145,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/gnawer)
 "bWG" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/laundromat)
@@ -7477,7 +7477,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
 "cdc" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto/old)
 "cdd" = (
@@ -9712,7 +9712,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "cGI" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "cGJ" = (
@@ -10672,7 +10672,7 @@
 /turf/open/floor/carpet/green,
 /area/vtm/interior/wyrm_corrupted)
 "cTr" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/structure/vampipe{
 	pixel_y = 32
 	},
@@ -11835,7 +11835,7 @@
 	dir = 4;
 	pixel_x = -16
 	},
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior)
 "djt" = (
@@ -15290,7 +15290,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm)
 "ejG" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/structure/vampipe{
 	icon_state = "piping31"
 	},
@@ -17575,7 +17575,7 @@
 /turf/open/floor/carpet/black,
 /area/vtm/interior/millennium_tower/f4)
 "eTa" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/carpet/lone,
 /area/vtm/interior/chantry)
 "eTj" = (
@@ -18099,7 +18099,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "fbN" = (
@@ -19683,7 +19683,7 @@
 /turf/open/openspace,
 /area/vtm/interior/police/morgue)
 "fwh" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/machinery/light/small{
 	dir = 8;
 	pixel_x = 16
@@ -20133,7 +20133,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "fBI" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/roofwalk,
 /area/vtm)
 "fBJ" = (
@@ -20156,7 +20156,7 @@
 /turf/closed/wall/vampwall/rock,
 /area/vtm/graveyard)
 "fBV" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
 /area/vtm/church)
 "fBX" = (
@@ -20358,7 +20358,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/museum)
 "fFf" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior)
 "fFg" = (
@@ -20474,7 +20474,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf)
 "fGM" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/graveyard)
 "fGN" = (
@@ -20519,7 +20519,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip/elysium)
 "fHJ" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/effect/decal/trash,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
@@ -24086,7 +24086,7 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/millennium_tower/f4)
 "gEx" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
 "gEy" = (
@@ -24374,7 +24374,7 @@
 /turf/open/floor/bronze,
 /area/vtm/interior/giovanni)
 "gIz" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_x = -16
@@ -25393,7 +25393,7 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/park)
 "gXs" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/laundromat)
 "gXu" = (
@@ -26908,7 +26908,7 @@
 /obj/effect/decal/bordur{
 	dir = 8
 	},
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/northbeach)
@@ -29775,7 +29775,7 @@
 /turf/open/floor/plating/circled,
 /area/vtm/interior/wyrm_corrupted)
 "ilm" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior)
 "iln" = (
@@ -31486,7 +31486,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/trujah)
 "iKD" = (
-/obj/manholedown{
+/obj/structure/ladder/manhole/down{
 	icon_state = "ladder"
 	},
 /turf/open/floor/plating,
@@ -33959,7 +33959,7 @@
 /turf/open/floor/carpet/lone,
 /area/vtm/interior/strip/elysium)
 "jve" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/financialdistrict/library)
 "jvo" = (
@@ -34187,7 +34187,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/strip)
 "jzb" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/machinery/light/small{
 	dir = 8;
 	pixel_x = 16
@@ -35747,7 +35747,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict/construction)
 "jVY" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights/community)
 "jWb" = (
@@ -36618,7 +36618,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "kje" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "kjg" = (
@@ -36968,7 +36968,7 @@
 /turf/open/floor/carpet/red,
 /area/vtm/interior/baali)
 "kou" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating,
 /area/vtm/interior)
 "koz" = (
@@ -38112,7 +38112,7 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/sewer)
 "kEX" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
 "kEZ" = (
@@ -39772,7 +39772,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
 "lcn" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/machinery/light/small{
 	pixel_y = 32
 	},
@@ -40880,7 +40880,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/mansion)
 "lua" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "lug" = (
@@ -41057,7 +41057,7 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/interior/strip)
 "lwp" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "lwC" = (
@@ -43621,7 +43621,7 @@
 /turf/open/openspace,
 /area/vtm/interior/strip/toreador)
 "mhP" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict/construction)
 "mhU" = (
@@ -45051,7 +45051,7 @@
 /turf/open/floor/plating/circled,
 /area/vtm/interior/setite/basement)
 "mDw" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/carpet,
 /area/vtm/interior/shop)
 "mDx" = (
@@ -48726,7 +48726,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
 "nBC" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -50586,7 +50586,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
 "oaR" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "oaS" = (
@@ -51964,7 +51964,7 @@
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/trujah)
 "ovT" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating,
 /area/vtm/interior)
 "ovU" = (
@@ -52737,7 +52737,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_town)
 "oFv" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "oFz" = (
@@ -53273,7 +53273,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "oNe" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /obj/machinery/light/small{
 	pixel_y = 32
 	},
@@ -55911,7 +55911,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/church)
 "pyM" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "pyO" = (
@@ -57414,7 +57414,7 @@
 /obj/effect/decal/bordur{
 	dir = 8
 	},
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict/construction)
 "pRV" = (
@@ -57506,7 +57506,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
 "pTE" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/machinery/light/small{
 	pixel_y = 32
 	},
@@ -58057,7 +58057,7 @@
 /area/vtm/interior/shop)
 "qbY" = (
 /obj/structure/coclock,
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
 "qcm" = (
@@ -58500,7 +58500,7 @@
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/museum)
 "qhS" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/vampcanal,
 /area/vtm/sewer)
 "qhX" = (
@@ -59249,7 +59249,7 @@
 /turf/open/floor/carpet/black,
 /area/vtm/cabaret)
 "qtr" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/structure/curtain/cloth/fancy,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/rough,
@@ -59458,7 +59458,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/strip/toreador)
 "qvM" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
 "qvU" = (
@@ -60789,7 +60789,7 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/millennium_tower/f4)
 "qNO" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
 "qOh" = (
@@ -61363,7 +61363,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/old)
 "qUy" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/structure/vampipe{
 	pixel_y = 32
 	},
@@ -62011,7 +62011,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/techshop)
 "rdm" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/fishermanswharf/lower)
 "rdG" = (
@@ -63742,7 +63742,7 @@
 /obj/machinery/light/small{
 	pixel_y = 32
 	},
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
 "rAA" = (
@@ -67248,7 +67248,7 @@
 /obj/structure/vampipe{
 	icon_state = "piping32"
 	},
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/vampcanal,
 /area/vtm/sewer)
 "swn" = (
@@ -67755,7 +67755,7 @@
 /turf/open/floor/carpet,
 /area/vtm/interior/oldchurch)
 "sDX" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/financialdistrict/construction)
 "sDY" = (
@@ -68848,7 +68848,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/millennium_tower/f4)
 "sWI" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/sewer)
 "sWP" = (
@@ -69613,7 +69613,7 @@
 /turf/closed/wall/vampwall/rich/low/window/reinforced,
 /area/vtm/interior/giovanni/outside)
 "thA" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /obj/structure/vampipe{
 	icon_state = "piping43"
 	},
@@ -69769,7 +69769,7 @@
 	dir = 8;
 	pixel_x = 16
 	},
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/strip)
 "tkh" = (
@@ -70079,7 +70079,7 @@
 /obj/machinery/light/small{
 	pixel_y = 32
 	},
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "toL" = (
@@ -71419,7 +71419,7 @@
 /turf/open/floor/carpet,
 /area/vtm/anarch/basement)
 "tIt" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
 /area/vtm/chinatown)
 "tIB" = (
@@ -77694,7 +77694,7 @@
 /turf/open/floor/plating/bacotell,
 /area/vtm/clinic/haven)
 "vxi" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior)
 "vxm" = (
@@ -77703,7 +77703,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "vxo" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
 "vxt" = (
@@ -78119,7 +78119,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
 "vEm" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer)
 "vEn" = (
@@ -79350,7 +79350,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/old)
 "vWl" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
 "vWm" = (
@@ -80318,7 +80318,7 @@
 /area/vtm/interior/cog/caern)
 "wjS" = (
 /obj/structure/trashcan,
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "wkc" = (
@@ -81211,7 +81211,7 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/tzimisce_manor)
 "wya" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/light/small{
 	pixel_y = 32
@@ -81795,7 +81795,7 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/millennium_tower/ventrue)
 "wGs" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/old)
 "wGu" = (
@@ -81867,7 +81867,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "wHj" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
 /area/vtm/ghetto)
 "wHu" = (
@@ -82327,7 +82327,7 @@
 /turf/open/floor/plasteel/dark,
 /area/vtm/forest)
 "wNS" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "wNZ" = (
@@ -83353,7 +83353,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
 "xdc" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/chinatown)
 "xdr" = (
@@ -84257,7 +84257,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
 "xqD" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/hotel)
 "xqF" = (
@@ -87461,7 +87461,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/pacificheights/community)
 "yjt" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/carpet/lone,
 /area/vtm/interior/chantry/basement)
 "yjF" = (

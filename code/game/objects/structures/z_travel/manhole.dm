@@ -1,57 +1,29 @@
-/obj/manholeup
+/obj/structure/ladder/manhole
 	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "ladder"
+	plane = GAME_PLANE
+	layer = ABOVE_NORMAL_TURF_LAYER
+	anchored = TRUE
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
+	travel_time = 5 SECONDS
+	travel_sound = 'code/modules/wod13/sounds/manhole.ogg'
+	requires_friend = TRUE
+	static_apperance = TRUE
+
+/obj/structure/ladder/manhole/up
 	name = "ladder"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-	anchored = TRUE
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-	var/climbing = FALSE
+	icon_state = "ladder"
+	base_icon_state = "ladder"
 
-/obj/manholeup/attack_hand(mob/user)
-	if(!climbing)
-		climbing = TRUE
-		if(do_after(user, 50, src))
-			climbing = FALSE
-			var/turf/destination = get_step_multiz(src, UP)
-			var/mob/living/L = user
-			if(L.pulling)
-				L.pulling.forceMove(destination)
-			user.forceMove(destination)
-			playsound(src, 'code/modules/wod13/sounds/manhole.ogg', 50, TRUE)
-		else
-			climbing = FALSE
-	..()
+/obj/structure/ladder/manhole/down
 
-/obj/manholedown
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "manhole"
 	name = "manhole"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-	anchored = TRUE
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-	var/climbing = FALSE
+	icon_state = "manhole"
+	base_icon_state = "manhole"
 
-/obj/manholedown/Initialize()
+/obj/structure/ladder/manhole/down/Initialize()
 	. = ..()
 	if(GLOB.winter)
 		if(istype(get_area(src), /area/vtm))
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
-/obj/manholedown/attack_hand(mob/user)
-	if(!climbing)
-		climbing = TRUE
-		if(do_after(user, 50, src))
-			climbing = FALSE
-			var/turf/destination = get_step_multiz(src, DOWN)
-			var/mob/living/L = user
-			if(L.pulling)
-				L.pulling.forceMove(destination)
-			user.forceMove(destination)
-			playsound(src, 'code/modules/wod13/sounds/manhole.ogg', 50, TRUE)
-		else
-			climbing = FALSE
-	..()
+				icon_state = "[base_icon_state]-snow"

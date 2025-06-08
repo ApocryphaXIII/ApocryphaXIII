@@ -13,11 +13,13 @@
 	name = "ladder"
 	icon_state = "ladder"
 	base_icon_state = "ladder"
+	connect_down = FALSE
 
 /obj/structure/ladder/manhole/down
 	name = "manhole"
 	icon_state = "manhole"
 	base_icon_state = "manhole"
+	connect_up = FALSE
 
 /obj/structure/ladder/manhole/down/Initialize()
 	. = ..()

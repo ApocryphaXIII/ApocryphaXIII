@@ -21,6 +21,11 @@
 	var/requires_friend = FALSE
 	/// If we DONT update our icon state based off our linked ladders, used for manholes.
 	var/static_apperance = FALSE
+	//Both of these only matter for the sake of late init to save on time searching
+	/// Determines if it will try and locate its up during late init, useful if you know there wont ever be one (Manholes)
+	var/connect_up = TRUE
+	/// Determines if it will try and locate its down during late init, useful if you know there wont ever be one (Manholes)
+	var/connect_down = TRUE
 
 /obj/structure/ladder/Initialize(mapload, obj/structure/ladder/up, obj/structure/ladder/down)
 	..()
@@ -94,13 +99,13 @@
 	// By default, discover ladders above and below us vertically
 	var/turf/base = get_turf(src)
 
-	if(isnull(down))
+	if(isnull(down) && connect_down)
 		// ! Swap to GET_TURF_BELOW(base)
 		var/obj/structure/ladder/new_down = locate() in SSmapping.get_turf_below(base)
 		if (new_down && crafted == new_down.crafted)
 			link_down(new_down)
 
-	if(isnull(up))
+	if(isnull(up) && connect_up)
 		// ! Swap to GET_TURF_ABOVE(base)
 		var/obj/structure/ladder/new_up = locate() in SSmapping.get_turf_above(base)
 		if (new_up && crafted == new_up.crafted)

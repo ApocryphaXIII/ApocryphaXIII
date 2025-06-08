@@ -377,6 +377,8 @@
 	design_ids = list("arcade_battle", "arcade_orion")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
 
+// ! Yells about having a bad id but this system is persumably toast already so I wont be fixing it
+/*
 /datum/techweb_node/comp_recordkeeping
 	id = "comp_recordkeeping"
 	display_name = "Computerized Recordkeeping"
@@ -384,6 +386,7 @@
 	prereq_ids = list("comptech")
 	design_ids = list("secdata", "med_data", "prisonmanage", "vendor", "automated_announcement", "accounting")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
+*/
 
 /datum/techweb_node/telecomms
 	id = "telecomms"
@@ -398,7 +401,9 @@
 	id = "integrated_HUDs"
 	display_name = "Integrated HUDs"
 	description = "The usefulness of computerized records, projected straight onto your eyepiece!"
-	prereq_ids = list("comp_recordkeeping", "emp_basic")
+	//See the old type defintion for comp_recordkeeping
+	//prereq_ids = list("comp_recordkeeping", "emp_basic")
+	prereq_ids = list("emp_basic")
 	design_ids = list("health_hud", "security_hud", "diagnostic_hud", "scigoggles")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1500)
 

@@ -25,12 +25,6 @@
 			connected_shutter = S
 			break
 
-/obj/machinery/door/poddoor/shutters/armory
-	id = 10
-
-/obj/machinery/door/poddoor/shutters/bankvault
-	id = 11
-
 /proc/find_keypad(keypad_type)
 	// Evil in world but luckiely this is not ran super often.
 	for(var/obj/keypad/K in world)

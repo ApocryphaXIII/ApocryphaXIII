@@ -15,72 +15,106 @@
 	var/crafted = FALSE
 	/// travel time for ladder in deciseconds
 	var/travel_time = 1 SECONDS
-
+	// Requires a sister ladder to link up with us else we runtime
+	var/requires_friend = FALSE
 
 /obj/structure/ladder/Initialize(mapload, obj/structure/ladder/up, obj/structure/ladder/down)
 	..()
 	GLOB.ladders += src
-	if (up)
-		src.up = up
-		up.down = src
-		up.update_icon()
-	if (down)
-		src.down = down
-		down.up = src
-		down.update_icon()
+	if(up)
+		link_up(up)
+	if(down)
+		link_down(down)
+
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/structure/ladder/Destroy(force)
+	// ! This feels useless, this behavoir SHOULD already exist on obj or structure
 	if ((resistance_flags & INDESTRUCTIBLE) && !force)
 		return QDEL_HINT_LETMELIVE
+
+	GLOB.ladders -= src
 	disconnect()
 	return ..()
 
+/// Links this ladder to passed ladder (which should generally be below it)
+/obj/structure/ladder/proc/link_down(obj/structure/ladder/down_ladder)
+	if(down)
+		return
+
+	down = down_ladder
+	down_ladder.up = src
+	down_ladder.update_appearance(UPDATE_ICON_STATE)
+	update_appearance(UPDATE_ICON_STATE)
+	//make_base_transparent()
+
+/// Unlinks this ladder from the ladder below it.
+/obj/structure/ladder/proc/unlink_down()
+	if(!down)
+		return
+
+	down.up = null
+	down.update_appearance(UPDATE_ICON_STATE)
+	down = null
+	update_appearance(UPDATE_ICON_STATE)
+	//clear_base_transparency()
+
+/// Links this ladder to passed ladder (which should generally be above it)
+/obj/structure/ladder/proc/link_up(obj/structure/ladder/up_ladder)
+	if(up)
+		return
+
+	up = up_ladder
+	up_ladder.down = src
+	//p_ladder.make_base_transparent()
+	up_ladder.update_appearance(UPDATE_ICON_STATE)
+	update_appearance(UPDATE_ICON_STATE)
+
+/// Unlinks this ladder from the ladder above it.
+/obj/structure/ladder/proc/unlink_up()
+	if(!up)
+		return
+
+	up.down = null
+	//up.clear_base_transparency()
+	up.update_appearance(UPDATE_ICON_STATE)
+	up = null
+	update_appearance(UPDATE_ICON_STATE)
+
+/// Helper to unlink everything
+/obj/structure/ladder/proc/disconnect()
+	unlink_down()
+	unlink_up()
+
 /obj/structure/ladder/LateInitialize()
 	// By default, discover ladders above and below us vertically
-	var/turf/T = get_turf(src)
-	var/obj/structure/ladder/L
+	var/turf/base = get_turf(src)
 
-	if (!down)
-		L = locate() in SSmapping.get_turf_below(T)
-		if (L)
-			if(crafted == L.crafted)
-				down = L
-				L.up = src  // Don't waste effort looping the other way
-				L.update_icon()
-	if (!up)
-		L = locate() in SSmapping.get_turf_above(T)
-		if (L)
-			if(crafted == L.crafted)
-				up = L
-				L.down = src  // Don't waste effort looping the other way
-				L.update_icon()
+	if(isnull(down))
+		// ! Swap to GET_TURF_BELOW(base)
+		var/obj/structure/ladder/new_down = locate() in SSmapping.get_turf_below(base)
+		if (new_down && crafted == new_down.crafted)
+			link_down(new_down)
 
-	update_icon()
+	if(isnull(up))
+		// ! Swap to GET_TURF_ABOVE(base)
+		var/obj/structure/ladder/new_up = locate() in SSmapping.get_turf_above(base)
+		if (new_up && crafted == new_up.crafted)
+			link_up(new_up)
 
-/obj/structure/ladder/proc/disconnect()
-	if(up && up.down == src)
-		up.down = null
-		up.update_icon()
-	if(down && down.up == src)
-		down.up = null
-		down.update_icon()
-	up = down = null
+	// Linking updates our icon, so if we failed both links we need a manual update
+	if(isnull(down) && isnull(up))
+		update_appearance(UPDATE_ICON_STATE)
+		if(requires_friend)
+			CRASH("[src] failed to find another ladder to link up with.")
 
 /obj/structure/ladder/update_icon_state()
-	. = ..()
-	if(up && down)
-		icon_state = "ladder11"
-	else if(up)
-		icon_state = "ladder10"
-	else if(down)
-		icon_state = "ladder01"
-	else	//wtf make your ladders properly assholes
-		icon_state = "ladder00"
+	icon_state = "[base_icon_state][!!up][!!down]"
+	return ..()
 
 /obj/structure/ladder/proc/travel(going_up, mob/user, is_ghost, obj/structure/ladder/ladder)
 	if(!is_ghost)
-		show_fluff_message(going_up, user)
+		show_fluff_message(user, ladder, going_up)
 		ladder.add_fingerprint(user)
 
 	var/turf/T = get_turf(ladder)
@@ -99,34 +133,45 @@
 		ladder_structure.use(user)
 
 /obj/structure/ladder/proc/use(mob/user, is_ghost=FALSE)
-	if (!is_ghost && !in_range(src, user))
+	if(!in_range(src, user) || DOING_INTERACTION(user, DOAFTER_SOURCE_CLIMBING_LADDER))
 		return
 
-	var/list/tool_list = list()
-	if (up)
-		tool_list["Up"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH)
-	if (down)
-		tool_list["Down"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH)
-	if (!length(tool_list))
-		to_chat(user, "<span class='warning'>[src] doesn't seem to lead anywhere!</span>")
-		return
-
-	var/result = show_radial_menu(user, src, tool_list, custom_check = CALLBACK(src, PROC_REF(check_menu), user, is_ghost), require_near = !is_ghost, tooltips = TRUE)
-	if (!is_ghost && !in_range(src, user))
-		return  // nice try
-	switch(result)
-		if("Up")
-			travel(TRUE, user, is_ghost, up)
-		if("Down")
-			travel(FALSE, user, is_ghost, down)
-		if("Cancel")
-			return
+	show_options(is_ghost)
 
 	if(!is_ghost)
 		add_fingerprint(user)
 
+/obj/structure/ladder/proc/start_travelling(mob/user, going_up)
+	if(do_after(user, travel_time, target = src, interaction_key = DOAFTER_SOURCE_CLIMBING_LADDER))
+		travel(user, going_up, grant_exp = TRUE)
+
+/// Shows a radial menu that players can use to climb up and down a stair.
+/obj/structure/ladder/proc/show_options(mob/user, is_ghost = FALSE)
+	var/list/tool_list = list()
+	tool_list["Up"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH)
+	tool_list["Down"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH)
+
+	var/datum/callback/check_menu
+	if(!is_ghost)
+		check_menu = CALLBACK(src, PROC_REF(check_menu), user)
+	var/result = show_radial_menu(user, src, tool_list, custom_check = check_menu, require_near = !is_ghost, tooltips = TRUE)
+
+	var/going_up
+	switch(result)
+		if("Up")
+			going_up = TRUE
+		if("Down")
+			going_up = FALSE
+		else
+			return
+
+	if(is_ghost || !travel_time)
+		travel(user, going_up, is_ghost)
+	else
+		INVOKE_ASYNC(src, PROC_REF(start_travelling), user, going_up)
+
 /obj/structure/ladder/proc/check_menu(mob/user, is_ghost)
-	if(user.incapacitated() || (!user.Adjacent(src) && !is_ghost))
+	if(user.incapacitated() || (!user.Adjacent(src)))
 		return FALSE
 	return TRUE
 
@@ -154,7 +199,7 @@
 	use(user, TRUE)
 	return ..()
 
-/obj/structure/ladder/proc/show_fluff_message(going_up, mob/user)
+/obj/structure/ladder/proc/show_fluff_message(mob/user, obj/structure/ladder/destination, going_up)
 	if(going_up)
 		user.visible_message("<span class='notice'>[user] climbs up [src].</span>", "<span class='notice'>You climb up [src].</span>")
 	else

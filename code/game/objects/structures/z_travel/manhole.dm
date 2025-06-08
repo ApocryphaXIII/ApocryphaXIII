@@ -15,7 +15,6 @@
 	base_icon_state = "ladder"
 
 /obj/structure/ladder/manhole/down
-
 	name = "manhole"
 	icon_state = "manhole"
 	base_icon_state = "manhole"

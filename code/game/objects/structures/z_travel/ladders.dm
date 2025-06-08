@@ -4,14 +4,22 @@
 	desc = "A sturdy metal ladder."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "ladder11"
+	base_icon_state = "ladder"
 	anchored = TRUE
-	var/obj/structure/ladder/down   //the ladder below this one
-	var/obj/structure/ladder/up     //the ladder above this one
-	var/crafted = FALSE
 	obj_flags = CAN_BE_HIT | BLOCK_Z_OUT_DOWN
+	///the ladder below this one
+	VAR_FINAL/obj/structure/ladder/down
+	///the ladder above this one
+	VAR_FINAL/obj/structure/ladder/up
+	/// Ladders crafted midround can only link to other ladders crafted midround
+	var/crafted = FALSE
+	/// travel time for ladder in deciseconds
+	var/travel_time = 1 SECONDS
+
 
 /obj/structure/ladder/Initialize(mapload, obj/structure/ladder/up, obj/structure/ladder/down)
 	..()
+	GLOB.ladders += src
 	if (up)
 		src.up = up
 		up.down = src
@@ -152,7 +160,6 @@
 	else
 		user.visible_message("<span class='notice'>[user] climbs down [src].</span>", "<span class='notice'>You climb down [src].</span>")
 
-
 // Indestructible away mission ladders which link based on a mapped ID and height value rather than X/Y/Z.
 /obj/structure/ladder/unbreakable
 	name = "sturdy ladder"
@@ -160,10 +167,6 @@
 	resistance_flags = INDESTRUCTIBLE
 	var/id
 	var/height = 0  // higher numbers are considered physically higher
-
-/obj/structure/ladder/unbreakable/Initialize()
-	GLOB.ladders += src
-	return ..()
 
 /obj/structure/ladder/unbreakable/Destroy()
 	. = ..()

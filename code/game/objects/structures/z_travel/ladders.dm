@@ -119,8 +119,11 @@
 
 /obj/structure/ladder/proc/travel(mob/user, going_up = TRUE, is_ghost = FALSE)
 	var/obj/structure/ladder/ladder = going_up ? up : down
+	if(!ladder)
+		balloon_alert(user, "there's nothing that way!")
+		return
 	if(!is_ghost)
-		show_fluff_message(user, ladder, going_up)
+		show_final_fluff_message(user, ladder, going_up)
 		if(travel_sound)
 			playsound(src, travel_sound, 50, TRUE)
 		ladder.add_fingerprint(user)
@@ -144,12 +147,26 @@
 	if(!in_range(src, user) || DOING_INTERACTION(user, DOAFTER_SOURCE_CLIMBING_LADDER))
 		return
 
-	show_options(user, is_ghost)
+	if(!up && !down)
+		balloon_alert(user, "doesn't lead anywhere!")
+		return
+	if(user.buckled && user.buckled.anchored)
+		balloon_alert(user, "buckled to something anchored!")
+		return
+
+	if (up && !down)
+		try_travel(user, TRUE, is_ghost)
+	else if (down && !up)
+		try_travel(user, FALSE, is_ghost)
+	else
+		show_options(user, is_ghost)
 
 	if(!is_ghost)
 		add_fingerprint(user)
 
 /obj/structure/ladder/proc/start_travelling(mob/user, going_up)
+	show_initial_fluff_message(user, going_up)
+
 	// Our climbers athletics ability
 	var/fitness_level = 0 //user.get_total_athletics()
 
@@ -186,6 +203,9 @@
 		else
 			return
 
+	try_travel(user, going_up, is_ghost)
+
+/obj/structure/ladder/proc/try_travel(mob/user, going_up = TRUE, is_ghost = FALSE)
 	if(is_ghost || !travel_time)
 		travel(user, going_up, is_ghost)
 	else
@@ -232,11 +252,25 @@
 	else //goes both ways
 		show_options(user, is_ghost = TRUE)
 
-/obj/structure/ladder/proc/show_fluff_message(mob/user, obj/structure/ladder/destination, going_up)
-	if(going_up)
-		user.visible_message("<span class='notice'>[user] climbs up [src].</span>", "<span class='notice'>You climb up [src].</span>")
-	else
-		user.visible_message("<span class='notice'>[user] climbs down [src].</span>", "<span class='notice'>You climb down [src].</span>")
+/// The message shown when the player starts climbing the ladder
+/obj/structure/ladder/proc/show_initial_fluff_message(mob/user, going_up)
+	var/up_down = going_up ? "up" : "down"
+
+	user.visible_message(span_notice("[user] begins climbing [up_down] [src]."), span_notice("You begin climbing [up_down] [src]"))
+	//user.balloon_alert_to_viewers("climbing [up_down]...")
+
+/obj/structure/ladder/proc/show_final_fluff_message(mob/user, obj/structure/ladder/destination, going_up)
+	var/up_down = going_up ? "up" : "down"
+
+	//POV of players around the source
+	user.visible_message(span_notice("[user] climbs [up_down] [src]."), span_notice("You climb [up_down] [src]"))
+
+	/* If we wanna use balloon alerts
+	//POV of players around the source
+	visible_message(span_notice("[user] climbs [up_down] [src]."))
+	//POV of players around the destination
+	user.balloon_alert_to_viewers("climbed [up_down]")
+	*/
 
 // Indestructible away mission ladders which link based on a mapped ID and height value rather than X/Y/Z.
 /obj/structure/ladder/unbreakable

@@ -1131,7 +1131,6 @@
 "aqr" = (
 /obj/machinery/door/poddoor/shutters{
 	damage_deflection = 60;
-	id = 1;
 	max_integrity = 300;
 	name = "Parking Shutter"
 	},
@@ -20474,9 +20473,12 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf)
 "fGM" = (
+/obj/structure/vampfence/corner{
+	dir = 4
+	},
 /obj/structure/ladder/manhole/down,
-/turf/open/floor/plating/vampgrass,
-/area/vtm/graveyard)
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/ghetto/old)
 "fGN" = (
 /obj/effect/decal/litter,
 /obj/effect/landmark/npcbeacon,
@@ -31485,12 +31487,6 @@
 /obj/item/flashlight/lamp/green,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/trujah)
-"iKD" = (
-/obj/structure/ladder/manhole/down{
-	icon_state = "ladder"
-	},
-/turf/open/floor/plating,
-/area/vtm/interior)
 "iLl" = (
 /obj/structure/table,
 /obj/machinery/button/door{
@@ -138244,8 +138240,8 @@ dhc
 dhc
 dhc
 dhc
-nYS
-nYS
+dhc
+dhc
 "}
 (198,1,1) = {"
 nYS
@@ -152460,7 +152456,7 @@ fpX
 kGY
 fpX
 fpX
-fGM
+fpX
 fpX
 pLn
 tFp
@@ -152480,7 +152476,7 @@ tCd
 fpX
 vuo
 fpX
-fGM
+fpX
 fpX
 pLn
 tFp
@@ -193239,7 +193235,7 @@ rvW
 ajv
 sVi
 pUw
-iKD
+ovT
 lWd
 gHa
 gHa
@@ -213411,7 +213407,7 @@ tzw
 tzw
 tzw
 ruf
-inP
+fGM
 tXk
 tXk
 tXk
@@ -264171,7 +264167,7 @@ ntq
 ntq
 ntq
 qGw
-lWd
+kou
 lWd
 qGw
 kno
@@ -277143,8 +277139,8 @@ kno
 kno
 kno
 kno
-kno
 gEx
+kno
 hjS
 ntq
 ntq
@@ -279396,7 +279392,7 @@ lTQ
 lTQ
 lTQ
 lTQ
-fBI
+lTQ
 ctC
 ntq
 ntq

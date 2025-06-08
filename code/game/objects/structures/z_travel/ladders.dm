@@ -115,7 +115,7 @@
 	if(isnull(down) && isnull(up))
 		update_appearance(UPDATE_ICON_STATE)
 		if(requires_friend)
-			CRASH("[src] failed to find another ladder to link up with.")
+			CRASH("[src] failed to find another ladder to link up with at: [x],[y],[z]")
 
 /obj/structure/ladder/update_icon_state()
 	if(!static_apperance)

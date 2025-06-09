@@ -1138,49 +1138,6 @@
 
 	return buckle_mob(target, TRUE, TRUE, RIDER_NEEDS_ARMS)
 
-/mob/living/carbon/human/proc/climb_wall(turf/above_turf)
-	if(body_position != STANDING_UP)
-		return
-	if(above_turf && istype(above_turf, /turf/open/openspace))
-		var/total_dexterity = get_total_dexterity()
-		var/total_athletics = get_total_athletics()
-		to_chat(src, "<span class='notice'>You start climbing up...</span>")
-
-		var/result = do_after(src, 50 - (total_dexterity + total_athletics * 5), src)
-		if(!result || HAS_TRAIT(src, TRAIT_LEANING))
-			to_chat(src, "<span class='warning'>You were interrupted and failed to climb up.</span>")
-			return
-
-		var/initial_x = x
-		var/initial_y = y
-		var/initial_z = z
-
-		// Adjust pixel_x and pixel_y based on the direction
-		// spawn(20)
-		if(x != initial_x || y != initial_y || z != initial_z)
-			to_chat(src, "<span class='warning'>You moved and failed to climb up.</span>")
-			// Reset pixel offsets
-			return
-
-		//(< 5, slip and take damage), (5-14, fail to climb), (>= 15, climb up successfully)
-		var/roll = rand(1, 20)
-		// var/physique = physique
-		if((roll + total_dexterity + (total_athletics * 2)) >= 15)
-			loc = above_turf
-			var/turf/forward_turf = get_step(loc, dir)
-			if(forward_turf && !forward_turf.density)
-				forceMove(forward_turf)
-				to_chat(src, "<span class='notice'>You climb up successfully.</span>")
-				// Reset pixel offsets after climbing up
-		else if((roll + total_dexterity + (total_athletics * 2)) < 5)
-			ZImpactDamage(loc, 1)
-			to_chat(src, "<span class='warning'>You slip while climbing!</span>")
-			// Reset pixel offsets if failed
-		else
-			to_chat(src, "<span class='warning'>You fail to climb up.</span>")
-
-	return
-
 /mob/living/carbon/human/proc/climb_down(turf/open/openspace/target_turf)
 	if(body_position != STANDING_UP)
 		return
@@ -1261,6 +1218,39 @@
 
 /mob/living/carbon/human/monkeybrain
 	ai_controller = /datum/ai_controller/monkey
+
+
+/mob/living/carbon/human/verb/toggle_undies()
+	set category = "IC"
+	set name = "Toggle underwear visibility"
+	set desc = "Allows you to toggle which underwear should show or be hidden."
+
+	if(stat != CONSCIOUS)
+		to_chat(usr, span_warning("You can't toggle underwear visibility right now..."))
+		return
+
+	var/underwear_button = underwear_visibility & UNDERWEAR_HIDE_UNDIES ? "Show underwear" : "Hide underwear"
+	var/undershirt_button = underwear_visibility & UNDERWEAR_HIDE_SHIRT ? "Show shirt" : "Hide shirt"
+	var/socks_button = underwear_visibility & UNDERWEAR_HIDE_SOCKS ? "Show socks" : "Hide socks"
+	var/list/choice_list = list("[underwear_button]" = "underwear", "[undershirt_button]" = "shirt", "[socks_button]" = "socks","Show all" = "show", "Hide all" = "hide")
+	var/picked_visibility = tgui_input_list(src, "Choose visibility setting", "Show/Hide underwear", choice_list)
+	if(picked_visibility)
+		var/picked_choice = choice_list[picked_visibility]
+		switch(picked_choice)
+			if("underwear")
+				underwear_visibility ^= UNDERWEAR_HIDE_UNDIES
+			if("shirt")
+				underwear_visibility ^= UNDERWEAR_HIDE_SHIRT
+			if("socks")
+				underwear_visibility ^= UNDERWEAR_HIDE_SOCKS
+			if("show")
+				underwear_visibility = NONE
+			if("hide")
+				underwear_visibility = UNDERWEAR_HIDE_UNDIES | UNDERWEAR_HIDE_SHIRT | UNDERWEAR_HIDE_SOCKS
+		update_body()
+	return
+
+
 
 /mob/living/carbon/human/species
 	var/race = null

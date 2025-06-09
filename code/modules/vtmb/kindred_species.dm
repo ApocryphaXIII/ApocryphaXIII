@@ -94,7 +94,7 @@
 				masquerade_level = " almost ruined the Masquerade."
 			if(0)
 				masquerade_level = "'m danger to the Masquerade and my own kind."
-		dat += "Camarilla thinks I[masquerade_level]<BR>"
+		dat += "The Camarilla thinks I[masquerade_level]<BR>"
 		var/humanity = "I'm out of my mind."
 
 		if(!host.clane.is_enlightened)
@@ -129,34 +129,10 @@
 
 		dat += "[humanity]<BR>"
 
-		if(host.clane.name == "Malkavian")
-			if(GLOB.malkavianname != "")
-				if(host.real_name != GLOB.malkavianname)
-					dat += " My primogen is:  [GLOB.malkavianname].<BR>"
-		if(host.clane.name == "Nosferatu")
-			if(GLOB.nosferatuname != "")
-				if(host.real_name != GLOB.nosferatuname)
-					dat += " My primogen is:  [GLOB.nosferatuname].<BR>"
-		if(host.clane.name == "Toreador")
-			if(GLOB.toreadorname != "")
-				if(host.real_name != GLOB.toreadorname)
-					dat += " My primogen is:  [GLOB.toreadorname].<BR>"
-		if(host.clane.name == "Ventrue")
-			if(GLOB.ventruename != "")
-				if(host.real_name != GLOB.ventruename)
-					dat += " My primogen is:  [GLOB.ventruename].<BR>"
-		if(host.clane.name == "Lasombra")
-			if(GLOB.lasombraname != "")
-				if(host.real_name != GLOB.lasombraname)
-					dat += " My primogen is:  [GLOB.lasombraname].<BR>"
-		if(host.clane.name == "Banu Haqim")
-			if(GLOB.banuname != "")
-				if(host.real_name != GLOB.banuname)
-					dat += " My primogen is:  [GLOB.banuname].<BR>"
-		if(host.clane.name == "Tzimisce")
-			if(GLOB.voivodename != "")
-				if(host.real_name != GLOB.voivodename)
-					dat += " The Voivode of the Manor is:  [GLOB.voivodename].<BR>"
+		var/datum/phonecontact/clane_leader_contact = GLOB.important_contacts[host.clane.name]
+		if (!isnull(clane_leader_contact) && host.real_name != clane_leader_contact.name)
+			var/clane_leader_number = isnull(clane_leader_contact.number) ? "unknown" : clane_leader_contact.number
+			dat += " My clane leader is [clane_leader_contact.name]. Their phone number is [clane_leader_number].<BR>"
 
 		dat += "<b>Physique</b>: [host.physique] + [host.additional_physique]<BR>"
 		dat += "<b>Dexterity</b>: [host.dexterity] + [host.additional_dexterity]<BR>"
@@ -206,7 +182,7 @@
 			else
 				dat += "<b>Unfortunately you don't know the vault code.</b><BR>"
 
-		if(length(host.knowscontacts) > 0)
+		if(LAZYLEN(host.knowscontacts) > 0)
 			dat += "<b>I know some other of my kind in this city. Need to check my phone, there definetely should be:</b><BR>"
 			for(var/i in host.knowscontacts)
 				dat += "-[i] contact<BR>"
@@ -502,7 +478,10 @@
 					to_chat(thrall, "<span class='userlove'>You feel good when you drink this <b>BLOOD</b>...</span>")
 
 					message_admins("[ADMIN_LOOKUPFLW(regnant)] has bloodbonded [ADMIN_LOOKUPFLW(thrall)].")
-					log_game("[key_name(regnant)] has bloodbonded [key_name(thrall)].")
+					if(HAS_TRAIT(thrall,TRAIT_UNBONDABLE))
+						log_game("[key_name(regnant)] has bloodbonded [key_name(thrall)].")
+					else
+						log_game("[key_name(regnant)] has attempted to bloodbond [key_name(thrall)] (UNBONDABLE).")
 
 					if(length(regnant.reagents?.reagent_list))
 						regnant.reagents.trans_to(thrall, min(10, regnant.reagents.total_volume), transfered_by = regnant, methods = VAMPIRE)
@@ -525,10 +504,12 @@
 							new_master = TRUE
 							NPC.roundstart_vampire = FALSE
 					if(thrall.mind)
-						if(thrall.mind.enslaved_to != owner)
+						if(thrall.mind.enslaved_to != owner && !HAS_TRAIT(thrall,TRAIT_UNBONDABLE))
 							thrall.mind.enslave_mind_to_creator(owner)
 							to_chat(thrall, "<span class='userdanger'><b>AS PRECIOUS VITAE ENTER YOUR MOUTH, YOU NOW ARE IN THE BLOODBOND OF [regnant]. SERVE YOUR REGNANT CORRECTLY, OR YOUR ACTIONS WILL NOT BE TOLERATED.</b></span>")
 							new_master = TRUE
+						if(HAS_TRAIT(thrall,TRAIT_UNBONDABLE))
+							to_chat(thrall, "<span class='danger'><i>Precious vitae enters your mouth, an addictive drug. But for you, you feel no loyalty to the source; only the substance.</i></span>")
 					if(isghoul(thrall))
 						var/datum/species/ghoul/ghoul = thrall.dna.species
 						ghoul.master = owner
@@ -749,6 +730,11 @@
 		to_chat(teacher, span_warning("You need to have fed your student your blood to teach them Disciplines!"))
 		return
 
+	if(length(student_prefs.discipline_types) >= 5 && !SSwhitelists.is_whitelisted(student.ckey, TRUSTED_PLAYER))
+		to_chat(teacher, span_warning("Your student must be whitelisted to learn more than five disciplines!"))
+		to_chat(student, span_warning("You must be whitelisted to learn more than five disciplines!"))
+		return
+
 	var/possible_disciplines = teacher_prefs.discipline_types - student_prefs.discipline_types
 	var/teaching_discipline = input(teacher, "What Discipline do you want to teach [student.name]?", "Discipline Selection") as null|anything in possible_disciplines
 
@@ -860,7 +846,7 @@
 
 		//skip this if they can't access it due to whitelists
 		if (clan_checking.whitelisted)
-			if (!SSwhitelists.is_whitelisted(checked_ckey = vampire_checking.ckey, checked_whitelist = clan_checking.name))
+			if (!SSwhitelists.is_whitelisted(checked_ckey = vampire_checking.ckey, checked_whitelist = TRUSTED_PLAYER))
 				qdel(clan_checking)
 				continue
 

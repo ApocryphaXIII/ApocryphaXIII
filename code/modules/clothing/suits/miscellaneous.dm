@@ -457,8 +457,8 @@
 	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/jacket/letterman_syndie
-	name = "blood-red letterman jacket"
-	desc = "Oddly, this jacket seems to have a large S on the back..."
+	name = "red letterman jacket"
+	desc = "Whoa, it even has a cool S on its back!"
 	icon_state = "letterman_s"
 	inhand_icon_state = "letterman_s"
 	species_exception = list(/datum/species/golem)
@@ -760,13 +760,13 @@
 	name = "blue suspenders"
 	desc = "The symbol of hard labor and dirty jobs."
 	icon = 'icons/obj/clothing/belts.dmi'
-	icon_state = "suspenders_blue"
+	greyscale_colors = "#0000ff"
 
 /obj/item/clothing/suit/toggle/suspenders/gray
 	name = "gray suspenders"
 	desc = "The symbol of hard labor and dirty jobs."
 	icon = 'icons/obj/clothing/belts.dmi'
-	icon_state = "suspenders_gray"
+	greyscale_colors = "#888888"
 
 /obj/item/clothing/suit/hooded/mysticrobe
 	name = "mystic's robe"

@@ -4,7 +4,8 @@
 	var/datum/weakref/human_form
 	var/datum/weakref/crinos_form
 	var/datum/weakref/lupus_form
-
+	var/datum/weakref/corax_form // the corax's crinos form.
+	var/datum/weakref/corvid_form // the corax's raven form
 	var/transformating = FALSE
 	var/given_quirks = FALSE
 
@@ -22,6 +23,18 @@
 	lupus = lupus_form.resolve()
 	lupus?.transformator = src
 
+	var/mob/living/carbon/werewolf/corax/corax_crinos/corax = new()
+	corax_form = WEAKREF(corax)
+	corax = corax_form.resolve()
+	corax?.transformator = src
+
+	var/mob/living/carbon/werewolf/lupus/corvid/corvid = new()
+	corvid_form = WEAKREF(corvid)
+	corvid = corvid_form.resolve()
+	corvid?.transformator = src
+
+	corax?.moveToNullspace()
+	corvid?.moveToNullspace()
 	crinos?.moveToNullspace()
 	lupus?.moveToNullspace()
 
@@ -29,6 +42,8 @@
 	human_form = null
 	crinos_form = null
 	lupus_form = null
+	corax_form = null
+	corvid_form = null
 
 	return ..()
 
@@ -40,7 +55,7 @@
 	second.adjustToxLoss(round((first.getToxLoss()/100)*percentage)-second.getToxLoss())
 	second.adjustCloneLoss(round((first.getCloneLoss()/100)*percentage)-second.getCloneLoss())
 
-/datum/werewolf_holder/transformation/proc/trans_gender(mob/living/carbon/trans, form)
+/datum/werewolf_holder/transformation/proc/transform(mob/living/carbon/trans, form) //does not actually change your gender, as far as I'm aware.
 	if(trans.stat == DEAD)
 		return
 	if(transformating)
@@ -79,22 +94,56 @@
 			H.transform = M
 			G.glabro = FALSE
 			H.update_icons()
+	var/datum/language_holder/garou_lang = trans.get_language_holder()
 	switch(form)
 		if("Lupus")
+			for(var/spoken_language in garou_lang.spoken_languages)
+				garou_lang.remove_language(spoken_language, FALSE, TRUE)
+
+			garou_lang.grant_language(/datum/language/primal_tongue, TRUE, TRUE)
+			garou_lang.grant_language(/datum/language/garou_tongue, TRUE, TRUE)
 			if(iscrinos(trans))
 				ntransform.Scale(0.75, 0.75)
 			if(ishuman(trans))
 				ntransform.Scale(1, 0.75)
 		if("Crinos")
+			for(var/spoken_language in garou_lang.spoken_languages)
+				garou_lang.remove_language(spoken_language, FALSE, TRUE)
+
+			garou_lang.grant_language(/datum/language/primal_tongue, TRUE, TRUE)
+			garou_lang.grant_language(/datum/language/garou_tongue, TRUE, TRUE)
 			if(islupus(trans))
-				ntransform.Scale(1.75, 1.75)
+				var/mob/living/carbon/werewolf/lupus/lupor = trans
+				if(lupor.hispo)
+					ntransform.Scale(0.95, 1.25)
+				else
+					ntransform.Scale(1, 1.75)
 			if(ishuman(trans))
 				ntransform.Scale(1.25, 1.5)
+		if("Corvid")
+			if(iscoraxcrinos(trans))
+				ntransform.Scale(0.75, 0.75)
+			if(ishuman(trans))
+				ntransform.Scale(1, 0.75)
+		if("Corax Crinos")
+			if(iscorvid(trans))
+				ntransform.Scale(1, 1.75)
+			if(ishuman(trans))
+				ntransform.Scale(1.25, 1.5)
+
 		if("Homid")
+			for(var/spoken_language in garou_lang.understood_languages)
+				garou_lang.grant_language(spoken_language, TRUE, TRUE)
+			garou_lang.remove_language(/datum/language/primal_tongue, FALSE, TRUE)
 			if(iscrinos(trans))
-				ntransform.Scale(0.75, 0.5)
+				ntransform.Scale(0.75, 0.75)
+			if(iscoraxcrinos(trans))
+				ntransform.Scale(0.75, 0.75)
 			if(islupus(trans))
 				ntransform.Scale(1, 1.5)
+			if(iscorvid(trans))
+				ntransform.Scale(1, 1.5)
+
 	switch(form)
 		if("Lupus")
 			if(islupus(trans))
@@ -116,7 +165,7 @@
 				if(B)
 					qdel(B)
 
-			addtimer(CALLBACK(src, PROC_REF(transform_lupus), trans, lupus), 30 DECISECONDS)
+			addtimer(CALLBACK(src, PROC_REF(transform_lupus), trans, lupus), 3 SECONDS)
 		if("Crinos")
 			if(iscrinos(trans))
 				transformating = FALSE
@@ -136,7 +185,48 @@
 				if(B)
 					qdel(B)
 
-			addtimer(CALLBACK(src, PROC_REF(transform_crinos), trans, crinos), 30 DECISECONDS)
+			addtimer(CALLBACK(src, PROC_REF(transform_crinos), trans, crinos), 3 SECONDS)
+
+		if("Corvid")
+			if(iscorvid(trans))
+				transformating = FALSE
+				return
+			if(!corvid_form)
+				return
+			var/mob/living/carbon/werewolf/lupus/corvid/corvid = corvid_form.resolve()
+			if(!corvid)
+				corvid_form = null
+				return
+
+			transformating = TRUE
+
+			animate(trans, transform = ntransform, color = "#000000", time = 30)
+			playsound(get_turf(trans), 'code/modules/wod13/sounds/corax_transform.ogg', 100, FALSE)
+
+			for(var/mob/living/simple_animal/hostile/beastmaster/B in trans.beastmaster)
+				qdel(B)
+
+			addtimer(CALLBACK(src, PROC_REF(transform_corvid), trans, corvid), 3 SECONDS)
+		if("Corax Crinos")
+			if(iscoraxcrinos(trans))
+				transformating = FALSE
+				return
+			if(!corax_form)
+				return
+			var/mob/living/carbon/werewolf/corax/corax_crinos/cor_crinos = corax_form.resolve()
+			if(!cor_crinos)
+				corax_form = null
+				return
+
+			transformating = TRUE
+
+			animate(trans, transform = ntransform, color = "#000000", time = 30)
+			playsound(get_turf(trans), 'code/modules/wod13/sounds/corax_transform.ogg', 100, FALSE)
+			for(var/mob/living/simple_animal/hostile/beastmaster/B in trans.beastmaster)
+				qdel(B)
+
+			addtimer(CALLBACK(src, PROC_REF(transform_cor_crinos), trans, cor_crinos), 3 SECONDS)
+
 		if("Homid")
 			if(ishuman(trans))
 				transformating = FALSE
@@ -156,7 +246,7 @@
 				if(B)
 					qdel(B)
 
-			addtimer(CALLBACK(src, PROC_REF(transform_homid), trans, homid), 30 DECISECONDS)
+			addtimer(CALLBACK(src, PROC_REF(transform_homid), trans, homid), 3 SECONDS)
 
 /datum/werewolf_holder/transformation/proc/transform_lupus(mob/living/carbon/trans, mob/living/carbon/werewolf/lupus/lupus)
 	PRIVATE_PROC(TRUE)
@@ -179,6 +269,8 @@
 	lupus.bloodpool = trans.bloodpool
 	lupus.masquerade = trans.masquerade
 	lupus.nutrition = trans.nutrition
+	if(trans.auspice.tribe.name == "Black Spiral Dancers" || HAS_TRAIT(trans, TRAIT_WYRMTAINTED))
+		lupus.wyrm_tainted = 1
 	lupus.mind = trans.mind
 	lupus.update_blood_hud()
 	transfer_damage(trans, lupus)
@@ -186,6 +278,10 @@
 	transformating = FALSE
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	lupus.update_icons()
+	if(lupus.hispo)
+		lupus.remove_movespeed_modifier(/datum/movespeed_modifier/lupusform)
+		lupus.add_movespeed_modifier(/datum/movespeed_modifier/crinosform)
+	lupus.mind.current = lupus
 
 /datum/werewolf_holder/transformation/proc/transform_crinos(mob/living/carbon/trans, mob/living/carbon/werewolf/crinos/crinos)
 	PRIVATE_PROC(TRUE)
@@ -208,6 +304,8 @@
 	crinos.bloodpool = trans.bloodpool
 	crinos.masquerade = trans.masquerade
 	crinos.nutrition = trans.nutrition
+	if(trans.auspice.tribe.name == "Black Spiral Dancers" || HAS_TRAIT(trans, TRAIT_WYRMTAINTED))
+		crinos.wyrm_tainted = 1
 	crinos.mind = trans.mind
 	crinos.update_blood_hud()
 	crinos.physique = crinos.physique+3
@@ -216,6 +314,41 @@
 	transformating = FALSE
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	crinos.update_icons()
+	crinos.mind.current = crinos
+
+/datum/werewolf_holder/transformation/proc/transform_cor_crinos(mob/living/carbon/trans, mob/living/carbon/werewolf/corax/corax_crinos/cor_crinos)
+	PRIVATE_PROC(TRUE)
+
+	if(trans.stat == DEAD)
+		animate(trans, transform = null, color = "#FFFFFF")
+		return
+	var/items = trans.get_contents()
+	for(var/obj/item/item_worn in items)
+		if(item_worn)
+			if(!ismob(item_worn.loc))
+				continue
+			trans.dropItemToGround(item_worn, TRUE)
+
+	var/turf/current_loc = get_turf(trans)
+	cor_crinos.color = "#000000"
+	cor_crinos.forceMove(current_loc)
+	animate(cor_crinos, color = "#FFFFFF", time = 10)
+	cor_crinos.key = trans.key
+	trans.moveToNullspace()
+	cor_crinos.bloodpool = trans.bloodpool
+	cor_crinos.masquerade = trans.masquerade
+	cor_crinos.nutrition = trans.nutrition
+	if(HAS_TRAIT(trans, TRAIT_WYRMTAINTED))
+		cor_crinos.wyrm_tainted = 1
+	cor_crinos.mind = trans.mind
+	cor_crinos.update_blood_hud()
+	cor_crinos.physique = cor_crinos.physique+3
+	transfer_damage(trans, cor_crinos)
+	cor_crinos.add_movespeed_modifier(/datum/movespeed_modifier/crinosform)
+	transformating = FALSE
+	animate(trans, transform = null, color = "#FFFFFF", time = 1)
+	cor_crinos.update_icons()
+	cor_crinos.mind.current = cor_crinos
 
 /datum/werewolf_holder/transformation/proc/transform_homid(mob/living/carbon/trans, mob/living/carbon/human/homid)
 	PRIVATE_PROC(TRUE)
@@ -246,3 +379,39 @@
 	transformating = FALSE
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	homid.update_body()
+	homid.mind.current = homid
+
+/datum/werewolf_holder/transformation/proc/transform_corvid(mob/living/carbon/trans, mob/living/carbon/werewolf/lupus/corvid/corvid)
+	PRIVATE_PROC(TRUE)
+
+	if(trans.stat == DEAD || !trans.client) // [ChillRaccoon] - preventing non-player transform issues
+		animate(trans, transform = null, color = "#FFFFFF")
+		return
+	var/items = trans.get_contents()
+	for(var/obj/item/item_worn in items)
+		if(item_worn)
+			if(!ismob(item_worn.loc))
+				continue
+			trans.dropItemToGround(item_worn, TRUE)
+	var/turf/current_loc = get_turf(trans)
+	corvid.color = "#000000"
+	corvid.forceMove(current_loc)
+	animate(corvid, color = "#FFFFFF", time = 10)
+	corvid.key = trans.key
+	trans.moveToNullspace()
+	corvid.bloodpool = trans.bloodpool
+	corvid.masquerade = trans.masquerade
+	corvid.nutrition = trans.nutrition
+	if(HAS_TRAIT(trans, TRAIT_WYRMTAINTED))
+		corvid.wyrm_tainted = 1
+	corvid.mind = trans.mind
+	corvid.update_blood_hud()
+	transfer_damage(trans, corvid)
+	corvid.add_movespeed_modifier(/datum/movespeed_modifier/lupusform)
+	transformating = FALSE
+	animate(trans, transform = null, color = "#FFFFFF", time = 1)
+	corvid.update_icons()
+	if(corvid.hispo) // shouldn't ever be called, but you know..
+		corvid.remove_movespeed_modifier(/datum/movespeed_modifier/lupusform)
+		corvid.add_movespeed_modifier(/datum/movespeed_modifier/crinosform)
+	corvid.mind.current = corvid

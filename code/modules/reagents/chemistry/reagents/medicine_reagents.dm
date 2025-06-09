@@ -57,8 +57,9 @@
 				mytray.mutateweed()
 			if(1   to 32)
 				mytray.mutatepest(user)
-			else if(prob(20))
-				mytray.visible_message("<span class='warning'>Nothing happens...</span>")
+			else
+				if(prob(20))
+					mytray.visible_message("<span class='warning'>Nothing happens...</span>")
 
 /datum/reagent/medicine/adminordrazine/on_mob_life(mob/living/carbon/M)
 	M.reagents.remove_all_type(/datum/reagent/toxin, 5*REM, 0, 1)
@@ -943,8 +944,8 @@
 		return
 
 	var/mob/living/carbon/human/exposed_human = exposed_mob
-	exposed_human.hair_color = "C2F"
-	exposed_human.facial_hair_color = "C2F"
+	exposed_human.hair_color = "#CC22FF"
+	exposed_human.facial_hair_color = "#CC22FF"
 	exposed_human.update_hair()
 
 /datum/reagent/medicine/regen_jelly/on_mob_life(mob/living/carbon/M)
@@ -1290,8 +1291,8 @@
 	. = ..()
 	if(!(methods & (TOUCH|VAPOR)) || !ishuman(exposed_human) || (reac_volume < 0.5))
 		return
-	exposed_human.hair_color = "92f"
-	exposed_human.facial_hair_color = "92f"
+	exposed_human.hair_color = "#9922ff"
+	exposed_human.facial_hair_color = "#9922ff"
 	exposed_human.update_hair()
 
 /datum/reagent/medicine/polypyr/overdose_process(mob/living/M)

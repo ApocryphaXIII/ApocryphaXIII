@@ -12,8 +12,11 @@
 	heatmod = 1
 	burnmod = 1
 	dust_anim = "dust-h"
+	punchdamagelow = 10
+	punchdamagehigh = 20
 	whitelisted = FALSE
 	selectable = TRUE
+	species_language_holder = /datum/language_holder/werewolf
 	var/glabro = FALSE
 
 /datum/action/garouinfo
@@ -40,7 +43,7 @@
 			dat += "[host.real_name],"
 		if(!host.real_name)
 			dat += "Unknown,"
-		dat += " [host.auspice.tribe] [host.auspice.base_breed]"
+		dat += " [host.auspice.tribe.name] [host.auspice.base_breed]"
 		if(host.mind)
 
 			if(host.mind.assigned_role)
@@ -55,6 +58,19 @@
 			for(var/datum/antagonist/A in host.mind.antag_datums)
 				if(A.objectives)
 					dat += "[printobjectives(A.objectives)]<BR>"
+		var/masquerade_level = " have followed the rules tonight."
+		switch(host.masquerade)
+			if(4)
+				masquerade_level = " have made a faux pas tonight."
+			if(3)
+				masquerade_level = " have made a few issues tonight."
+			if(2)
+				masquerade_level = " have erred tonight."
+			if(1)
+				masquerade_level = " have acted foolishly and caused an uproar."
+			if(0)
+				masquerade_level = " should beg our totem for forgiveness."
+		dat += "My sect thinks I[masquerade_level]<BR>"
 
 		dat += "<b>Physique</b>: [host.physique] + [host.additional_physique]<BR>"
 		dat += "<b>Dexterity</b>: [host.dexterity] + [host.additional_dexterity]<BR>"
@@ -62,7 +78,17 @@
 		dat += "<b>Mentality</b>: [host.mentality] + [host.additional_mentality]<BR>"
 		dat += "<b>Cruelty</b>: [host.blood] + [host.additional_blood]<BR>"
 		dat += "<b>Lockpicking</b>: [host.lockpicking] + [host.additional_lockpicking]<BR>"
-		dat += "<b>Athletics</b>: [host.athletics] + [host.additional_athletics]<BR>"
+		dat += "<b>Athletics</b>: [host.athletics] + [host.additional_athletics]<BR><BR>"
+		dat += "<b>Gnosis</b>: [host.auspice.gnosis]<BR>"
+		dat += "<b>Rank</b>: [RankName(host.renownrank)]<BR>"
+		if(host.auspice.tribe.name == "Black Spiral Dancers")
+			dat += "<b>Power</b>: [host.honor]<BR>"
+			dat += "<b>Infamy</b>: [host.glory]<BR>"
+			dat += "<b>Cunning</b>: [host.wisdom]<BR>"
+		else
+			dat += "<b>Honor</b>: [host.honor]<BR>"
+			dat += "<b>Glory</b>: [host.glory]<BR>"
+			dat += "<b>Wisdom</b>: [host.wisdom]<BR>"
 		if(host.Myself)
 			if(host.Myself.Friend)
 				if(host.Myself.Friend.owner)
@@ -83,7 +109,7 @@
 						dat += "Their number is [host.Myself.Lover.phone_number].<BR>"
 					if(host.Myself.Lover.lover_text)
 						dat += "[host.Myself.Lover.lover_text]<BR>"
-		if(length(host.knowscontacts) > 0)
+		if(LAZYLEN(host.knowscontacts) > 0)
 			dat += "<b>I know some other of my kind in this city. Need to check my phone, there definetely should be:</b><BR>"
 			for(var/i in host.knowscontacts)
 				dat += "-[i] contact<BR>"
@@ -93,7 +119,7 @@
 				if(H.bank_id == account.bank_id)
 					dat += "<b>My bank account code is: [account.code]</b><BR>"
 		host << browse(dat, "window=vampire;size=400x450;border=1;can_resize=1;can_minimize=0")
-		onclose(HTML_SKELETON(host), "vampire", src)
+		onclose(host, "vampire", src)
 
 /datum/species/garou/on_species_gain(mob/living/carbon/human/C)
 	. = ..()
@@ -106,25 +132,36 @@
 	glabro.Grant(C)
 	var/datum/action/gift/rage_heal/GH = new()
 	GH.Grant(C)
+	var/datum/action/gift/howling/howl = new()
+	howl.Grant(C)
 	C.transformator = new(C)
 	C.transformator.human_form = WEAKREF(C)
 
 	var/mob/living/carbon/werewolf/lupus/lupus = C.transformator.lupus_form?.resolve()
 	var/mob/living/carbon/werewolf/crinos/crinos = C.transformator.crinos_form?.resolve()
+	var/mob/living/carbon/werewolf/lupus/corvid/corvid = C.transformator.corvid_form?.resolve()
+	var/mob/living/carbon/werewolf/corax/corax_crinos/corax_crinos = C.transformator.corax_form?.resolve()
 
 	//garou resist vampire bites better than mortals
 	RegisterSignal(C, COMSIG_MOB_VAMPIRE_SUCKED, PROC_REF(on_garou_bitten))
 	RegisterSignal(lupus, COMSIG_MOB_VAMPIRE_SUCKED, PROC_REF(on_garou_bitten))
 	RegisterSignal(crinos, COMSIG_MOB_VAMPIRE_SUCKED, PROC_REF(on_garou_bitten))
+	RegisterSignal(corvid, COMSIG_MOB_VAMPIRE_SUCKED, PROC_REF(on_garou_bitten))
+	RegisterSignal(corax_crinos, COMSIG_MOB_VAMPIRE_SUCKED, PROC_REF(on_garou_bitten))
 
 /datum/species/garou/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
 	. = ..()
 	var/mob/living/carbon/werewolf/lupus/lupus = C.transformator.lupus_form?.resolve()
 	var/mob/living/carbon/werewolf/crinos/crinos = C.transformator.crinos_form?.resolve()
+	var/mob/living/carbon/werewolf/lupus/corvid/corvid = C.transformator.corvid_form?.resolve()
+	var/mob/living/carbon/werewolf/corax/corax_crinos/corax_crinos = C.transformator.corax_form?.resolve()
 
 	UnregisterSignal(C, COMSIG_MOB_VAMPIRE_SUCKED)
 	UnregisterSignal(lupus, COMSIG_MOB_VAMPIRE_SUCKED)
 	UnregisterSignal(crinos, COMSIG_MOB_VAMPIRE_SUCKED)
+	UnregisterSignal(corvid, COMSIG_MOB_VAMPIRE_SUCKED)
+	UnregisterSignal(corax_crinos, COMSIG_MOB_VAMPIRE_SUCKED)
+
 	for(var/datum/action/garouinfo/VI in C.actions)
 		if(VI)
 			VI.Remove(C)

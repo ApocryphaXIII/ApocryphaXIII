@@ -53,7 +53,8 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define IS_SPINNING_1 (1 << 21)
 #define IS_ONTOP_1 (1 << 22)
 #define SUPERMATTER_IGNORES_1 (1 << 23)
-
+/// Can players recolor this in-game via vendors (and maybe more if support is added)?
+#define IS_PLAYER_COLORABLE_1 (1<<24)
 
 // Update flags for [/atom/proc/update_appearance]
 /// Update the atom's name
@@ -64,6 +65,8 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define UPDATE_ICON_STATE (1<<2)
 /// Update the atom's overlays
 #define UPDATE_OVERLAYS (1<<3)
+/// Update the atom's greyscaling
+#define UPDATE_GREYSCALE (1<<4)
 /// Update the atom's icon
 #define UPDATE_ICON (UPDATE_ICON_STATE|UPDATE_OVERLAYS)
 
@@ -138,6 +141,10 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define FLOATING		(1<<3)
 /// When moving, will Cross()/Uncross() everything, but won't stop or Bump() anything.
 #define PHASING			(1<<4)
+/// The mob is walking on the ceiling. Or is generally just, upside down.
+#define UPSIDE_DOWN (1<<5)
+/// Combination flag for movetypes which, for all intents and purposes, mean the mob is not touching the ground
+#define MOVETYPES_NOT_TOUCHING_GROUND (FLYING|FLOATING|UPSIDE_DOWN)
 
 //Fire and Acid stuff, for resistance_flags
 #define LAVA_PROOF		(1<<0)

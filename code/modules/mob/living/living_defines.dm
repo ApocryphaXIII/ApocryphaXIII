@@ -218,7 +218,7 @@
 
 	var/last_bloodpool_restore = 0
 
-	var/list/knowscontacts = list()
+	var/list/knowscontacts = null
 
 	var/mysticism_knowledge = FALSE
 
@@ -283,6 +283,12 @@
 	var/max_demon_chi = 0
 	COOLDOWN_DECLARE(chi_restore)
 	var/datum/action/chi_discipline/chi_ranged
+
+	//Garou stats
+	var/renownrank = 0
+	var/wisdom = 0
+	var/honor = 0
+	var/glory = 0
 
 	//If we are currently leaning on something, and what that object is
 	var/atom/leaned_object

@@ -131,19 +131,6 @@
 //or: "exited-[blood_state]-[dir_of_image]"
 GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 
-//Bloody shoes/footprints
-#define BLOODY_FOOTPRINT_BASE_ALPHA 20 /// Minimum alpha of footprints
-#define BLOOD_AMOUNT_PER_DECAL      50 /// How much blood a regular blood splatter contains
-#define BLOOD_ITEM_MAX              200 /// How much blood an item can have stuck on it
-#define BLOOD_POOL_MAX              300 /// How much blood a blood decal can contain
-#define BLOOD_FOOTPRINTS_MIN        5 /// How much blood a footprint need to at least contain
-
-//Bloody shoe blood states
-#define BLOOD_STATE_HUMAN			"blood"
-#define BLOOD_STATE_XENO			"xeno"
-#define BLOOD_STATE_OIL				"oil"
-#define BLOOD_STATE_NOT_BLOODY		"no blood whatsoever"
-
 //suit sensors: sensor_mode defines
 
 #define SENSOR_OFF 0
@@ -315,18 +302,6 @@ GLOBAL_LIST_INIT(pda_styles, sort_list(list(MONO, VT, ORBITRON, SHARE)))
 //TODO Move to a pref
 #define STATION_GOAL_BUDGET  1
 
-//Luma coefficients suggested for HDTVs. If you change these, make sure they add up to 1.
-#define LUMA_R 0.213
-#define LUMA_G 0.715
-#define LUMA_B 0.072
-
-//different types of atom colorations
-#define ADMIN_COLOUR_PRIORITY 		1 //only used by rare effects like greentext coloring mobs and when admins varedit color
-#define TEMPORARY_COLOUR_PRIORITY 	2 //e.g. purple effect of the revenant on a mob, black effect when mob electrocuted
-#define WASHABLE_COLOUR_PRIORITY 	3 //color splashed onto an atom (e.g. paint on turf)
-#define FIXED_COLOUR_PRIORITY 		4 //color inherent to the atom (e.g. blob color)
-#define COLOUR_PRIORITY_AMOUNT 4 //how many priority levels there are.
-
 //Endgame Results
 #define NUKE_NEAR_MISS 1
 #define NUKE_MISS_STATION 2
@@ -449,10 +424,6 @@ GLOBAL_LIST_INIT(pda_styles, sort_list(list(MONO, VT, ORBITRON, SHARE)))
 
 // Used by PDA and cartridge code to reduce repetitiveness of spritesheets
 #define PDAIMG(what) {"<span class="pda16x16 [#what]"></span>"}
-
-//Filters
-#define AMBIENT_OCCLUSION filter(type="drop_shadow", x=0, y=-2, size=4, color="#04080FAA")
-#define GAUSSIAN_BLUR(filter_size) filter(type="blur", size=filter_size)
 
 #define STANDARD_GRAVITY 1 //Anything above this is high gravity, anything below no grav
 #define GRAVITY_DAMAGE_TRESHOLD 3 //Starting with this value gravity will start to damage mobs

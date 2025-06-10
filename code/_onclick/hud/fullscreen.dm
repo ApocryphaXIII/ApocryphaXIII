@@ -176,7 +176,7 @@
 /atom/movable/screen/fullscreen/lighting_backdrop/lit
 	invisibility = INVISIBILITY_LIGHTING
 	layer = BACKGROUND_LAYER+21
-	color = "#000"
+	color = "#000000"
 	show_when_dead = TRUE
 
 //Provides whiteness in case you don't see lights so everything is still visible
@@ -189,4 +189,13 @@
 	plane = LIGHTING_PLANE
 	layer = LIGHTING_LAYER
 	blend_mode = BLEND_ADD
+	show_when_dead = TRUE
+
+/atom/movable/screen/fullscreen/film_grain
+	icon = 'icons/effects/static.dmi'
+	icon_state = "static_heavy"
+	screen_loc = "WEST,SOUTH to EAST,NORTH"
+	layer = FULLSCREEN_LAYER
+	alpha = 90
+	blend_mode = 4
 	show_when_dead = TRUE

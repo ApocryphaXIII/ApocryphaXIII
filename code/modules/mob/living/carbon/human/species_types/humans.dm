@@ -41,9 +41,9 @@
 
 			if(host.mind.assigned_role)
 				if(host.mind.special_role)
-					dat += ", carrying the [host.mind.assigned_role] (<font color=red>[host.mind.special_role]</font>) role."
+					dat += " carrying the [host.mind.assigned_role] (<font color=red>[host.mind.special_role]</font>) role."
 				else
-					dat += ", carrying the [host.mind.assigned_role] role."
+					dat += " carrying the [host.mind.assigned_role] role."
 			if(!host.mind.assigned_role)
 				dat += "."
 			dat += "<BR>"
@@ -76,7 +76,7 @@
 				dat += "Their number is [host.Myself.Lover.phone_number].<BR>"
 			if(host.Myself.Lover.lover_text)
 				dat += "[host.Myself.Lover.lover_text]<BR>"
-		if(length(host.knowscontacts) > 0)
+		if(LAZYLEN(host.knowscontacts) > 0)
 			dat += "<b>I know some other of my kind in this city. Need to check my phone, there definetely should be:</b><BR>"
 			for(var/i in host.knowscontacts)
 				dat += "-[i] contact<BR>"

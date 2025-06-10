@@ -69,13 +69,15 @@
 
 /turf/closed/wall/vampwall/MouseDrop_T(atom/dropping, mob/user, params)
 	. = ..()
+	if(islupus(user))
+		return
 	if(user.a_intent != INTENT_HARM)
 		LoadComponent(/datum/component/leanable, dropping)
 	else
 		if(get_dist(user, src) < 2)
 			var/turf/above_turf = locate(user.x, user.y, user.z + 1)
 			if(above_turf && istype(above_turf, /turf/open/openspace))
-				var/mob/living/carbon/human/carbon_human = user
+				var/mob/living/carbon_human = user
 				carbon_human.climb_wall(above_turf)
 			else
 				to_chat(user, "<span class='warning'>You can't climb there!</span>")
@@ -875,6 +877,23 @@
 	..()
 	icon_state = "toilet[rand(1, 9)]"
 
+/turf/open/floor/plating/industrial
+	gender = PLURAL
+	name = "plating"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "industrial1"
+	flags_1 = NONE
+	attachment_holes = FALSE
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_PARKET
+	barefootstep = FOOTSTEP_PARKET
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+
+/turf/open/floor/plating/industrial/Initialize()
+	..()
+	icon_state = "industrial[rand(1, 9)]"
+
 /turf/open/floor/plating/circled
 	gender = PLURAL
 	name = "fancy plating"
@@ -891,6 +910,66 @@
 /turf/open/floor/plating/circled/Initialize()
 	..()
 	icon_state = "circle[rand(1, 8)]"
+
+/turf/open/floor/plating/woodrough
+	gender = PLURAL
+	name = "wood flooring"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "wood1"
+	flags_1 = NONE
+	attachment_holes = FALSE
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_PARKET
+	barefootstep = FOOTSTEP_PARKET
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+
+/turf/open/floor/plating/woodrough/Initialize()
+	..()
+	icon_state = "wood[rand(1, 12)]"
+
+/turf/open/floor/plating/woodfancy
+	gender = PLURAL
+	name = "fancy wood flooring"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "woodd1"
+	flags_1 = NONE
+	attachment_holes = FALSE
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_PARKET
+	barefootstep = FOOTSTEP_PARKET
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+
+/turf/open/floor/plating/woodfancy/Initialize()
+	..()
+	icon_state = "woodd[rand(1, 12)]"
+
+/turf/open/floor/plating/grate
+	gender = PLURAL
+	name = "grate"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "lattice_new"
+	flags_1 = NONE
+	attachment_holes = FALSE
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_PLATING
+	barefootstep = FOOTSTEP_PARKET
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+
+/turf/open/floor/plating/grate/dirty
+	gender = PLURAL
+	name = "grate"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "lattice_new_dirt"
+	flags_1 = NONE
+	attachment_holes = FALSE
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_PLATING
+	barefootstep = FOOTSTEP_PARKET
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/floor/plating/church
 	gender = PLURAL
@@ -1022,6 +1101,48 @@
 /obj/effect/decal/wallpaper/gold/low
 	icon_state = "wallpaper-gold_low"
 
+/obj/effect/decal/wallpaper/padded
+	icon_state = "wallpaper-padded"
+
+/obj/effect/decal/wallpaper/padded/low
+	icon_state = "wallpaper-padded_low"
+
+/obj/effect/decal/wallpaper/lightpadded
+	icon_state = "wallpaper-lightpadded"
+
+/obj/effect/decal/wallpaper/lightpadded/low
+	icon_state = "wallpaper-lightpadded_low"
+
+/obj/effect/decal/wallpaper/papers
+	name = "papers"
+	plane = GAME_PLANE
+	layer = CAR_LAYER
+	anchored = TRUE
+
+/obj/effect/decal/wallpaper/papers/one
+	icon_state = "wall papers 1"
+
+/obj/effect/decal/wallpaper/papers/two
+	icon_state = "wall papers 2"
+
+/obj/effect/decal/wallpaper/papers/three
+	icon_state = "wall papers 3"
+
+/obj/effect/decal/wallpaper/papers/four
+	icon_state = "wall papers 4"
+
+/obj/effect/decal/wallpaper/papers/five
+	icon_state = "wall papers 5"
+
+/obj/effect/decal/wallpaper/papers/six
+	icon_state = "wall papers 6"
+
+/obj/effect/decal/wallpaper/papers/seven
+	icon_state = "wall papers 7"
+
+/obj/effect/decal/wallpaper/papers/eight
+	icon_state = "wall papers 8"
+
 /turf/open/floor/plating/vampwood
 	gender = PLURAL
 	name = "wood"
@@ -1125,6 +1246,20 @@
 /turf/open/floor/plating/vampocean/Initialize()
 	..()
 	set_light(1, 0.5, "#a4b7ff")
+
+/turf/open/floor/plating/vampcrossableocean
+	gender = PLURAL
+	name = "water"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "ocean"
+	flags_1 = NONE
+	attachment_holes = FALSE
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_WATER
+	barefootstep = FOOTSTEP_WATER
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	density = FALSE
 
 /turf/open/floor/plating/vampacid
 	gender = PLURAL

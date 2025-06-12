@@ -186,16 +186,3 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 	..(key, I, FALSE)
 	seer = M
 	add_hud_to(seer)
-
-/datum/atom_hud/alternate_appearance/basic/the_word
-
-/datum/atom_hud/alternate_appearance/basic/the_word/New()
-	..()
-	for(var/mob in GLOB.player_list)
-		if(mobShouldSee(mob))
-			add_hud_to(mob)
-
-/datum/atom_hud/alternate_appearance/basic/the_word/mobShouldSee(mob/M)
-	if(IS_IMBUED(M))
-		return TRUE
-	return FALSE

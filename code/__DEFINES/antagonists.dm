@@ -61,14 +61,12 @@
 #define CONTRACT_UPLINK_PAGE_CONTRACTS "CONTRACTS"
 #define CONTRACT_UPLINK_PAGE_HUB "HUB"
 
-/// Checks if the given mob is a imbued
-#define IS_IMBUED(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/imbued))
-
 ///It is faster as a macro than a proc
 #define IS_HERETIC(mob) (mob.mind?.has_antag_datum(/datum/antagonist/heretic))
 #define IS_HERETIC_MONSTER(mob) (mob.mind?.has_antag_datum(/datum/antagonist/heretic_monster))
 
 GLOBAL_LIST_INIT(heretic_start_knowledge,list(/datum/eldritch_knowledge/spell/basic,/datum/eldritch_knowledge/living_heart,/datum/eldritch_knowledge/codex_cicatrix))
+
 
 #define PATH_SIDE "Side"
 

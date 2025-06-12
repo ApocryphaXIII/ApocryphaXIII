@@ -4,9 +4,8 @@
 	var/helptext = ""
 	/// Makes it cheaper to buy this edge
 	var/related_virture
-	/// Equivelent to dna_cost from changling
-	var/xp_cost = 0
-	var/conviction_cost = 0
+	var/related_creed
+	var/edge_dots = 0
 	/// Maximum stat before the ability is blocked.
 	/// For example, `UNCONSCIOUS` prevents it from being used when in hard crit or dead,
 	/// while `DEAD` allows the ability to be used on any stat values.
@@ -28,7 +27,7 @@ the same goes for Remove(). if you override Remove(), call parent or else your p
 /datum/action/imbued_edge/IsAvailable()
 	. = ..()
 	var/datum/antagonist/imbued/imbued = IS_IMBUED(owner)
-	if(!imbued || (imbued.conviction < conviction_cost))
+	if(!imbued || (imbued.conviction < get_conviction_cost()))
 		return FALSE
 */
 
@@ -38,6 +37,12 @@ the same goes for Remove(). if you override Remove(), call parent or else your p
 		return
 	try_edge(user)
 
+//requires since for some reason 4 dot costs 5 and 5 dots cost 6. If the action can be used to cancel an ability or should otherwise be free it can override this
+/datum/action/imbued_edge/proc/get_conviction_cost()
+	if(edge_dots < 4)
+		return max(edge_dots, 0)
+	else
+		return max(edge_dots + 1, 0)
 
 /**
  *This handles the activation of the action and the deducation of its cost.
@@ -55,7 +60,10 @@ the same goes for Remove(). if you override Remove(), call parent or else your p
 	var/datum/antagonist/imbued/imbued = IS_IMBUED(user)
 	if(edge_action(user, target))
 		usage_feedback(user, target)
-		imbued.adjust_conviction(-conviction_cost)
+		var/conviction_cost = get_conviction_cost()
+		//Only bother with updating it it will change
+		if(conviction_cost > 0)
+			imbued.adjust_conviction(-conviction_cost)
 		user.changeNext_move(CLICK_CD_MELEE)
 		return TRUE
 	return FALSE
@@ -71,8 +79,8 @@ the same goes for Remove(). if you override Remove(), call parent or else your p
 // Fairly important to remember to return 1 on success >.< // Return TRUE not 1 >.<
 /datum/action/imbued_edge/proc/can_use_edge(mob/living/user, mob/living/target)
 	var/datum/antagonist/imbued/imbued = IS_IMBUED(user)
-	if(imbued.conviction < conviction_cost)
-		user.balloon_alert(user, "needs [conviction_cost] conviction!")
+	if(imbued.conviction < get_conviction_cost())
+		user.balloon_alert(user, "needs [get_conviction_cost()] conviction!")
 		return FALSE
 	if(req_stat < user.stat)
 		user.balloon_alert(user, "incapacitated!")

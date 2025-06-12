@@ -1,4 +1,7 @@
 /datum/action/imbued_edge/second_sight
 	name = "Second Sight"
-	conviction_cost = 1
-	xp_cost = IMBUED_POWER_INNATE
+	edge_dots = IMBUED_POWER_INNATE
+
+//Yea. not great but this SHOULD be only only instance of it
+/datum/action/imbued_edge/second_sight/get_conviction_cost()
+	return 1

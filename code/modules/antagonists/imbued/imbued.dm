@@ -1,10 +1,3 @@
-#define VITURE_ZEAL "zeal"
-#define VITURE_MERCY "mercy"
-#define VITURE_VISION "vision"
-
-#define MAX_DOT_TOTAL 15
-#define MAX_DOT_PER_VIRTUE 10
-
 #warn replace genetic_points with xp
 
 // https://hackmd.io/@bPZ2CWi4RqCwevLwDEezBQ/rJ4h-4lzgl
@@ -74,11 +67,11 @@
 
 /*
  * Instantiate all the default actions of a ling (transform, dna sting, absorb, etc)
- * Any Imbued action with xp_cost = IMBUED_POWER_INNATE will be added here automatically
+ * Any Imbued action with edge_dots = IMBUED_POWER_INNATE will be added here automatically
  */
 /datum/antagonist/imbued/proc/create_innate_actions()
 	for(var/datum/action/imbued_edge/path as anything in all_powers)
-		if(initial(path.xp_cost) != IMBUED_POWER_INNATE)
+		if(initial(path.edge_dots) != IMBUED_POWER_INNATE)
 			continue
 
 		var/datum/action/imbued_edge/innate_ability = new path()
@@ -154,12 +147,12 @@
 
 	#warn refactor
 	/*
-	if(genetic_points < initial(edge_path.xp_cost))
+	if(genetic_points < initial(edge_path.edge_dots))
 		to_chat(owner.current, span_warning("We have reached our capacity for abilities!"))
 		return FALSE
 	*/
 
-	if(initial(edge_path.xp_cost) < 0)
+	if(initial(edge_path.edge_dots) < 0)
 		to_chat(owner.current, span_warning("We cannot evolve this ability!"))
 		return FALSE
 
@@ -167,7 +160,7 @@
 	#warn refactor
 	/*
 	if(success)
-		genetic_points -= initial(edge_path.xp_cost)
+		genetic_points -= initial(edge_path.edge_dots)
 	*/
 	return success
 

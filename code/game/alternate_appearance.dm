@@ -13,6 +13,9 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 		return
 	if(alternate_appearances && alternate_appearances[key])
 		return
+	if(!ispath(type, /datum/atom_hud/alternate_appearance))
+		CRASH("Invalid type passed in: [type]")
+
 	var/list/arguments = args.Copy(2)
 	return new type(arglist(arguments))
 
@@ -186,3 +189,16 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 	..(key, I, FALSE)
 	seer = M
 	add_hud_to(seer)
+
+/datum/atom_hud/alternate_appearance/basic/the_word
+
+/datum/atom_hud/alternate_appearance/basic/the_word/New()
+	..()
+	for(var/mob in GLOB.player_list)
+		if(mobShouldSee(mob))
+			add_hud_to(mob)
+
+/datum/atom_hud/alternate_appearance/basic/the_word/mobShouldSee(mob/M)
+	if(IS_IMBUED(M))
+		return TRUE
+	return FALSE

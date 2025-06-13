@@ -6,6 +6,13 @@
 /datum/antagonist/imbued
 	name = "Imbued"
 
+	var/creed
+	var/virtues = list(
+		VIRTUE_ZEAL = 0,
+		VIRTUE_MECRY = 0,
+		VIRTUE_VISION = 0
+	)
+
 	/// The number of conviction points (to buy edges) this imbued currently has.
 	var/conviction = 10
 	/// The max number of conviction points (to buy edges) this imbued can have..
@@ -97,7 +104,7 @@
 	SIGNAL_HANDLER
 	items += "Conviction: [conviction]/[total_conviction]"
 
-#warn refactor
+#warn refactor to make sure it saves this
 /*
  * Adjust the chem charges of the ling by [amount]
  * and clamp it between 0 and override_cap (if supplied) or total_chem_storage (if no override supplied)
@@ -105,6 +112,7 @@
 /datum/antagonist/imbued/proc/adjust_conviction(amount, override_cap)
 	if(!isnum(amount))
 		return
+	conviction = clamp(conviction + amount, 0, total_conviction)
 
 /*
  * Remove imbued powers from the current Imbued's purchased_powers list.
@@ -142,10 +150,10 @@
 		CRASH("Imbued purchase_power attempted to purchase an invalid typepath! (got: [edge_path])")
 
 	if(purchased_powers[edge_path])
-		to_chat(owner.current, span_warning("We have already evolved this ability!"))
+		to_chat(owner.current, span_warning("You have this edge!"))
 		return FALSE
 
-	#warn refactor
+	#warn refactor to xp
 	/*
 	if(genetic_points < initial(edge_path.edge_dots))
 		to_chat(owner.current, span_warning("We have reached our capacity for abilities!"))
@@ -153,7 +161,16 @@
 	*/
 
 	if(initial(edge_path.edge_dots) < 0)
-		to_chat(owner.current, span_warning("We cannot evolve this ability!"))
+		to_chat(owner.current, span_warning("You cannot choose this edge!"))
+		return FALSE
+
+	var/matching_creed = 0
+	for(var/datum/action/imbued_edge/purchased_edge in purchased_powers)
+		if(purchased_edge.related_creed == edge_path.related_creed)
+			matching_creed++
+
+	if(matching_creed >= EDGES_PER_CREED)
+		to_chat(owner.current, span_warning("You can only have [EDGES_PER_CREED] edges per creed!"))
 		return FALSE
 
 	var/success = give_power(edge_path)
@@ -193,10 +210,10 @@
  */
 /datum/antagonist/imbued/proc/readapt()
 	if(!can_respec)
-		to_chat(owner.current, span_warning("You lack the power to readapt your evolutions!"))
+		//to_chat(owner.current, span_warning("You lack the power to readapt your evolutions!"))
 		return FALSE
 
-	to_chat(owner.current, span_notice("We have removed our evolutions from this form, and are now ready to readapt."))
+	//to_chat(owner.current, span_notice("We have removed our evolutions from this form, and are now ready to readapt."))
 	remove_imbued_powers()
 	can_respec -= 1
 	SSblackbox.record_feedback("tally", "imbued_power_purchase", 1, "Readapt")
@@ -209,6 +226,20 @@
 /obj/structure/chisel_message/the_word/Initialize(mapload)
 	. = ..()
 	var/image/I = image(icon = 'icons/effects/effects.dmi', icon_state = "blessed", layer = ABOVE_OPEN_TURF_LAYER, loc = src)
-	I.alpha = 170
+	I.alpha = 255
 	I.appearance_flags = RESET_ALPHA
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/the_word, "blessing", I)
+
+/proc/creed_to_virtue(creed)
+	var/static/indexed_by_creed = list(
+			CREED_DEFENDER = VIRTUE_ZEAL,
+			CREED_JUDGE = VIRTUE_ZEAL,
+			CREED_AVENGER = VIRTUE_ZEAL,
+			CREED_MARTYR = VIRTUE_MERCY,
+			CREED_INNOCENT = VIRTUE_MERCY,
+			CREED_REDEEMER = VIRTUE_MERCY,
+			CREED_VISIONARY = VIRTUE_VISION,
+			CREED_HERMIT = VIRTUE_VISION,
+			CREED_WAYWARY = VIRTUE_VISION
+		)
+	return indexed_by_creed[creed]

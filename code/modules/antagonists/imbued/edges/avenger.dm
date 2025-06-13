@@ -1,6 +1,7 @@
 /datum/action/imbued_edge/weapon/cleave
-	name = "cleave"
-	edge_dots = IMBUED_POWER_INNATE //1
+	name = "Cleave"
+	related_creed = CREED_AVENGER
+	edge_dots = 1
 	weapon_type = /obj/item/melee/imbued_cleave
 
 #warn cleanup
@@ -21,13 +22,26 @@
 	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)
 
 /datum/action/imbued_edge/impact
+	name = "Impact"
+	related_creed = CREED_AVENGER
+	edge_dots = 1
 
 /datum/action/imbued_edge/trail
+	related_creed = CREED_AVENGER
+	edge_dots = 2
 
 /datum/action/imbued_edge/smoulder
+	related_creed = CREED_AVENGER
+	edge_dots = 3
 
 /datum/action/imbued_edge/firewalk
+	related_creed = CREED_AVENGER
+	edge_dots = 4
 
 /datum/action/imbued_edge/surge
+	related_creed = CREED_AVENGER
+	edge_dots = 4
 
 /datum/action/imbued_edge/smite
+	related_creed = CREED_AVENGER
+	edge_dots = 5

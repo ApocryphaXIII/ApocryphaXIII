@@ -2,8 +2,7 @@
 /datum/action/imbued_edge
 	/// Details displayed in fine print within the edge menu
 	var/helptext = ""
-	/// Makes it cheaper to buy this edge
-	var/related_virture
+	//var/related_virture
 	var/related_creed
 	var/edge_dots = 0
 	/// Maximum stat before the ability is blocked.

@@ -1,7 +1,7 @@
 #warn file needs to be renamed and moved to the define folder.
-#define VITURE_ZEAL "zeal"
-#define VITURE_MERCY "mercy"
-#define VITURE_VISION "vision"
+#define VIRTUE_ZEAL "zeal"
+#define VIRTUE_MERCY "mercy"
+#define VIRTUE_VISION "vision"
 
 #define CREED_DEFENDER "defender"
 #define CREED_JUDGE "judge"

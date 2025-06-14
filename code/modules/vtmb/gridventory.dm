@@ -105,7 +105,7 @@ VENTORY!
 		'sound/effects/rustle5.ogg',
 	)
 	/// Exactly what it sounds like, this makes it use the new RE4-like inventory system
-	var/grid = FALSE
+	var/grid = TRUE
 	var/static/grid_box_size
 	var/static/list/mutable_appearance/underlay_appearances_by_size = list()
 	var/list/grid_coordinates_to_item
@@ -116,11 +116,12 @@ VENTORY!
 /obj/item/storage/ComponentInitialize() //backpacks are smaller but hold larger things
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	// ! THESE SHOULD BE ARGS YOU PASS INTO ADDCOMPONENT
 	STR.max_w_class = WEIGHT_CLASS_HUGE
 	STR.max_items = 40 //max grid
 	STR.max_combined_w_class = 100
 
-/datum/component/storage/Initialize(datum/component/storage/concrete/master)
+/datum/component/storage/Initialize(datum/component/storage/concrete/master, _screen_max_columns, _screen_max_rows)
 	if(!grid_box_size)
 		grid_box_size = world.icon_size
 	. = ..()
@@ -654,6 +655,7 @@ VENTORY!
 			coordinates = screen_loc_to_grid_coordinates(coordinates)
 
 		if(!validate_grid_coordinates(coordinates, storing.grid_width, storing.grid_height, storing))
+			to_chat(user, span_warning("[parent] cant fit the [storing]!"))
 			return FALSE
 	return TRUE
 

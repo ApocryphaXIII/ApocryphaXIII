@@ -772,3 +772,13 @@
 				"Admin login: [key_name(src)]")
 		if(string)
 			message_admins("[string]")
+
+/client/proc/localhost_roundstart()
+	sleep(1 SECONDS)
+	if(alert(mob, "Start Round Immediately?", "Start Round? (Local Host Only)", "Yes", "No") != "Yes")
+		return
+
+	SEND_SOUND(mob, sound('sound/effects/splat.ogg', volume = 50))
+	SSticker.start_immediately = TRUE
+	if(SSticker.current_state == GAME_STATE_STARTUP)
+		to_chat(mob, span_admin("The server is still setting up, but the round will be started as soon as possible."))

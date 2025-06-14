@@ -23,7 +23,7 @@
 			viewing_category = categories[1]
 
 /obj/item/blackmarket_uplink/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/holochip) || istype(I, /obj/item/stack/spacecash) || istype(I, /obj/item/coin))
+	if(iscash(I))
 		var/worth = I.get_item_credit_value()
 		if(!worth)
 			to_chat(user, "<span class='warning'>[I] doesn't seem to be worth anything!</span>")

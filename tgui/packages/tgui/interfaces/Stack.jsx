@@ -66,7 +66,7 @@ const RecipeList = (props) => {
 
   const { recipes } = props;
 
-  const sortedKeys = sortBy((key) => key.toLowerCase())(Object.keys(recipes));
+  const sortedKeys = sortBy(Object.keys(recipes),(key) => key.toLowerCase());
 
   return sortedKeys.map((title) => {
     const recipe = recipes[title];

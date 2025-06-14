@@ -149,6 +149,7 @@
 			buying = FALSE
 			selected_item = null
 
+/* No way to craft it plus doubtful it works
 /datum/crafting_recipe/blackmarket_uplink
 	name = "Black Market Uplink"
 	result = /obj/item/blackmarket_uplink
@@ -161,6 +162,7 @@
 		/obj/item/analyzer = 1
 	)
 	category = CAT_MISC
+*/
 
 /datum/crafting_recipe/blackmarket_uplink/New()
 	..()

@@ -1,5 +1,5 @@
 /datum/crafting_recipe/weedpack
-	name = "Sort Weed"
+	name = "Bag Weed"
 	time = 10
 	reqs = list(/obj/item/food/vampire/weed = 1)
 	result = /obj/item/weedpack

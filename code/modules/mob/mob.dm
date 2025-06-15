@@ -473,9 +473,9 @@
 
 /mob/proc/run_examinate(atom/examinify)
 	if(ishuman(src))
-			var/mob/living/carbon/human/ueban = src
-			if(!do_mob(src, A, max(1, 15-ueban.mentality*3), timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE)))
-				return
+		var/mob/living/carbon/human/ueban = src
+		if(!do_after(src, max(1, 15-ueban.mentality*3), examinify, timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE)))
+			return
 
 	if(isturf(examinify) && !(sight & SEE_TURFS) && !(examinify in view(client ? client.view : world.view, src)))
 		// shift-click catcher may issue examinate() calls for out-of-sight turfs

@@ -220,7 +220,7 @@
 
 	if(use_power == ACTIVE_POWER_USE)
 		powered = TRUE
-	data["account_owner"] = account_name
+	data["account_holder"] = account_name
 	data["amount"] = banking_amount
 	data["stored_cash"] = banked_cash
 	data["mean_value"] = (major_threshold - positive_cash_offset - negative_cash_offset)

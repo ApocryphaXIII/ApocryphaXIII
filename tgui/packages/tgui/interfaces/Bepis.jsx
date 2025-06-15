@@ -44,7 +44,7 @@ export const Bepis = (props) => {
             }
           >
             Console is currently being operated by{' '}
-            {data.account_owner ? data.account_owner : 'no one'}.
+            {data.account_holder ? data.account_holder : 'no one'}.
           </Section>
           <Stack>
             <Stack.Item basis="60%">

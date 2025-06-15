@@ -1,5 +1,11 @@
 #define DUMPTIME 3000
 
+/proc/create_bank_pin()
+	var/bank_code = ""
+	for(var/i = 1 to 4)
+		bank_code += "[rand(0, 9)]"
+	return bank_code
+
 /datum/bank_account
 	var/account_holder = "Rusty Venture"
 	var/account_balance = 0
@@ -8,6 +14,7 @@
 	var/list/bank_cards = list()
 	var/add_to_accounts = TRUE
 	var/account_id
+	var/bank_pin
 	var/being_dumped = FALSE //pink levels are rising
 	var/datum/bounty/civilian_bounty
 	var/list/datum/bounty/bounties
@@ -17,6 +24,9 @@
 	account_holder = newname
 	account_job = job
 	payday_modifier = modifier
+
+	if(!bank_pin)
+		bank_pin = create_bank_pin()
 	setup_unique_account_id()
 
 /datum/bank_account/Destroy()

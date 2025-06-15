@@ -191,21 +191,21 @@
 	. = FALSE
 	var/datum/bank_account/old_account = registered_account
 
-	var/new_bank_id = input(user, "Enter your account ID number.", "Account Reclamation", 111111) as num | null
+	var/new_account_id = input(user, "Enter your account ID number.", "Account Reclamation", 111111) as num | null
 
-	if (isnull(new_bank_id))
+	if (isnull(new_account_id))
 		return
 
 	if(!alt_click_can_use_id(user))
 		return
-	if(!new_bank_id || new_bank_id < 111111 || new_bank_id > 999999)
+	if(!new_account_id || new_account_id < 111111 || new_account_id > 999999)
 		to_chat(user, "<span class='warning'>The account ID number needs to be between 111111 and 999999.</span>")
 		return
-	if (registered_account && registered_account.account_id == new_bank_id)
+	if (registered_account && registered_account.account_id == new_account_id)
 		to_chat(user, "<span class='warning'>The account ID was already assigned to this card.</span>")
 		return
 
-	var/datum/bank_account/B = SSeconomy.bank_accounts_by_id["[new_bank_id]"]
+	var/datum/bank_account/B = SSeconomy.bank_accounts_by_id["[new_account_id]"]
 	if(B)
 		if (old_account)
 			old_account.bank_cards -= src

@@ -10,7 +10,7 @@ export const AtmLogin = (props) => {
     '',
   );
 
-  const { account_owner, code } = data;
+  const { account_holder, code } = data;
 
   const handleLogin = () => {
     act('login', { code: entered_code });

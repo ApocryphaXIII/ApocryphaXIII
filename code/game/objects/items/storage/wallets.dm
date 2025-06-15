@@ -120,7 +120,7 @@
 
 /obj/item/storage/wallet/GetBankCard()
 	for(var/obj/item/card/I in contents)
-		if(istype(I, /obj/item/vamp/creditcard))
+		if(istype(I, /obj/item/creditcard))
 			return I
 
 /obj/item/storage/wallet/random

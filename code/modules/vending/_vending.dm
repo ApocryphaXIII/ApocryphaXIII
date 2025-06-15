@@ -918,7 +918,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/ui_data(mob/user)
 	. = list()
-	var/obj/item/vamp/creditcard/C
+	var/obj/item/creditcard/C
 	if(isliving(user))
 		var/mob/living/L = user
 		C = L.get_bankcard()
@@ -1025,7 +1025,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 		vend_ready = TRUE
 		return
 	if(onstation)
-		var/obj/item/vamp/creditcard/C
+		var/obj/item/creditcard/C
 		if(isliving(usr))
 			var/mob/living/L = usr
 			C = L.get_bankcard(TRUE)
@@ -1218,7 +1218,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/custom/compartmentLoadAccessCheck(mob/user)
 	. = FALSE
 	var/mob/living/carbon/human/H
-	var/obj/item/vamp/creditcard/C
+	var/obj/item/creditcard/C
 	if(ishuman(user))
 		H = user
 		C = H.get_bankcard(FALSE)
@@ -1273,7 +1273,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			var/N = params["item"]
 			var/obj/S
 			vend_ready = FALSE
-			var/obj/item/vamp/creditcard/C
+			var/obj/item/creditcard/C
 			if(isliving(usr))
 				var/mob/living/L = usr
 				C = L.get_bankcard()
@@ -1326,7 +1326,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/custom/attackby(obj/item/I, mob/user, params)
 	if(!private_a && isliving(user))
 		var/mob/living/L = user
-		var/obj/item/vamp/creditcard/C = L.get_bankcard(TRUE)
+		var/obj/item/creditcard/C = L.get_bankcard(TRUE)
 		if(C?.registered_account)
 			private_a = C.registered_account
 			say("\The [src] has been linked to [C].")

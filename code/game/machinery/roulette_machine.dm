@@ -39,7 +39,7 @@
 	var/chosen_bet_type = "0"
 	var/last_anti_spam = 0
 	var/anti_spam_cooldown = 20
-	var/obj/item/vamp/creditcard/my_card
+	var/obj/item/creditcard/my_card
 	var/playing = FALSE
 	var/locked = FALSE
 	var/drop_dir = SOUTH
@@ -80,7 +80,7 @@
 	data["Spinning"] = playing
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		var/obj/item/vamp/creditcard/C = H.get_bankcard()
+		var/obj/item/creditcard/C = H.get_bankcard()
 		if(C)
 			data["AccountBalance"] = C.registered_account.account_balance
 		else
@@ -113,7 +113,7 @@
 		return
 	if(playing)
 		return ..()
-	if(istype(W, /obj/item/vamp/creditcard))
+	if(istype(W, /obj/item/creditcard))
 		playsound(src, 'sound/machines/card_slide.ogg', 50, TRUE)
 
 		if(machine_stat & MAINT || !on || locked)
@@ -121,7 +121,7 @@
 			return FALSE
 
 		if(my_card)
-			var/obj/item/vamp/creditcard/player_card = W
+			var/obj/item/creditcard/player_card = W
 			if(player_card.registered_account.account_balance < chosen_bet_amount) //Does the player have enough funds
 				audible_message("<span class='warning'>You do not have the funds to play! Lower your bet or get more money.</span>")
 				playsound(src, 'sound/machines/buzz-two.ogg', 30, TRUE)
@@ -166,7 +166,7 @@
 			addtimer(CALLBACK(src, PROC_REF(play), user, player_card, chosen_bet_type, chosen_bet_amount, potential_payout), 4) //Animation first
 			return TRUE
 		else
-			var/obj/item/vamp/creditcard/new_card = W
+			var/obj/item/creditcard/new_card = W
 			if(new_card.registered_account)
 				var/msg = stripped_input(user, "Name of your roulette wheel:", "Roulette Naming", "Roulette Machine")
 				if(!msg)
@@ -180,7 +180,7 @@
 	return ..()
 
 ///Proc called when player is going to try and play
-/obj/machinery/roulette/proc/play(mob/user, obj/item/vamp/creditcard/player_id, bet_type, bet_amount, potential_payout)
+/obj/machinery/roulette/proc/play(mob/user, obj/item/creditcard/player_id, bet_type, bet_amount, potential_payout)
 
 	var/payout = potential_payout
 
@@ -202,7 +202,7 @@
 	playsound(src, 'sound/machines/piston_lower.ogg', 70)
 
 ///Ran after a while to check if the player won or not.
-/obj/machinery/roulette/proc/finish_play(obj/item/vamp/creditcard/player_id, bet_type, bet_amount, potential_payout, rolled_number)
+/obj/machinery/roulette/proc/finish_play(obj/item/creditcard/player_id, bet_type, bet_amount, potential_payout, rolled_number)
 	last_spin = rolled_number
 
 	var/is_winner = check_win(bet_type, bet_amount, rolled_number) //Predetermine if we won

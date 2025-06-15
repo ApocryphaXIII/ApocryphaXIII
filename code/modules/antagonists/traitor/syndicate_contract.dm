@@ -141,7 +141,7 @@
 			// Pay contractor their portion of ransom
 			if (status == CONTRACT_STATUS_COMPLETE)
 				var/mob/living/carbon/human/H
-				var/obj/item/vamp/creditcard/C
+				var/obj/item/creditcard/C
 				if(ishuman(contract.owner.current))
 					H = contract.owner.current
 					C = H.get_bankcard()

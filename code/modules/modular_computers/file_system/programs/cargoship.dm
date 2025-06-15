@@ -35,7 +35,7 @@
 	// Get components
 	var/obj/item/computer_hardware/card_slot/card_slot = computer.all_components[MC_CARD]
 	var/obj/item/computer_hardware/printer/printer = computer.all_components[MC_PRINT]
-	var/obj/item/vamp/creditcard/bank_card = card_slot ? card_slot.stored_card : null
+	var/obj/item/creditcard/bank_card = card_slot ? card_slot.stored_card : null
 	if(!card_slot || !printer) //We need both to successfully use this app.
 		return
 

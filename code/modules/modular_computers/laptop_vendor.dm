@@ -250,10 +250,10 @@
 		visible_message("<span class='info'>[user] inserts a [HC.get_item_credit_value()] cr holocredit chip into [src].</span>")
 		qdel(HC)
 		return
-	else if(istype(I, /obj/item/vamp/creditcard))
+	else if(istype(I, /obj/item/creditcard))
 		if(state != 2)
 			return
-		var/obj/item/vamp/creditcard/ID = I
+		var/obj/item/creditcard/ID = I
 		var/datum/bank_account/account = ID.registered_account
 		var/target_credits = total_price - credits
 		if(!account.adjust_money(-target_credits))

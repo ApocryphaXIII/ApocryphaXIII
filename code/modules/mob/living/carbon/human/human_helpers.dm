@@ -96,7 +96,7 @@
 	if(belt)
 		items_to_check += belt
 	for(var/obj/item/i in items_to_check)
-		var/obj/item/vamp/creditcard/bank_card = i.GetBankCard()
+		var/obj/item/creditcard/bank_card = i.GetBankCard()
 		if(bank_card)
 			return bank_card
 

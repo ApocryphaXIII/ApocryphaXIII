@@ -335,7 +335,7 @@
 	id = /obj/item/card/id
 //	ears = /obj/item/radio/headset
 //	belt = /obj/item/pda
-	bank_card = /obj/item/vamp/creditcard
+	bank_card = /obj/item/creditcard
 	back = /obj/item/storage/backpack
 	shoes = /obj/item/clothing/shoes/sneakers/black
 //	box = /obj/item/storage/box/survival
@@ -404,7 +404,7 @@
 			*/
 			H.sec_hud_set_ID()
 
-	var/obj/item/vamp/creditcard/bank_card = H.get_bankcard()
+	var/obj/item/creditcard/bank_card = H.get_bankcard()
 	if(istype(bank_card))
 		var/datum/bank_account/bank_account = SSeconomy.bank_accounts_by_id["[H.account_id]"]
 		if(bank_account.account_id == H.account_id)

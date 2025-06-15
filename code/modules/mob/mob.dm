@@ -1202,8 +1202,8 @@
 					break
 				search_id = 0
 
-		if(search_bankcard && istype(A, /obj/item/vamp/creditcard))
-			var/obj/item/vamp/creditcard/bank_card = A
+		if(search_bankcard && istype(A, /obj/item/creditcard))
+			var/obj/item/creditcard/bank_card = A
 			if(bank_card.registered_account?.account_holder == oldname)
 				bank_card.registered_account.account_holder = newname
 				if(!search_id || !search_pda)

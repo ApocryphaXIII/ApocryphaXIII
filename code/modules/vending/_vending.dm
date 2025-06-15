@@ -151,7 +151,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	///Coins that we accept?
 	var/obj/item/coin/coin
 	///Bills we accept?
-	var/obj/item/stack/spacecash/bill
+	var/obj/item/stack/dollar/bill
 	///Default price of items if not overridden
 	var/default_price = 25
 	///Default price of premium items if not overridden

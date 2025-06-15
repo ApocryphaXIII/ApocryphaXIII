@@ -436,11 +436,11 @@
 /datum/export/pirate/cash
 	cost = 1
 	unit_name = "bills"
-	export_types = list(/obj/item/stack/spacecash)
+	export_types = list(/obj/item/stack/dollar)
 
 /datum/export/pirate/cash/get_amount(obj/O)
-	var/obj/item/stack/spacecash/C = O
-	return ..() * C.amount * C.value
+	var/obj/item/stack/dollar/C = O
+	return ..() * C.amount
 
 /datum/export/pirate/holochip
 	cost = 1
@@ -449,4 +449,4 @@
 
 /datum/export/pirate/holochip/get_cost(atom/movable/AM)
 	var/obj/item/holochip/H = AM
-	return H.credits
+	return H.get_item_credit_value()

@@ -1007,7 +1007,7 @@
 				var/mob/living/carbon/human/H = src
 				var/mob/living/carbon/human/NPC = who
 				if(NPC.stat < SOFT_CRIT)
-					if(istype(what, /obj/item/clothing) || istype(what, /obj/item/vamp/keys) || istype(what, /obj/item/stack/dollar))
+					if(istype(what, /obj/item/clothing) || istype(what, /obj/item/vamp/keys) || iscash(what))
 						SEND_SIGNAL(H, COMSIG_PATH_HIT, PATH_SCORE_DOWN, 6)
 						call_dharma("steal", H)
 			if(islist(where))

@@ -123,10 +123,7 @@
 	if(istype(W, /obj/item/holochip))
 		insert_money(W, user)
 		return
-	else if(istype(W, /obj/item/stack/spacecash))
-		insert_money(W, user, TRUE)
-		return
-	else if(istype(W, /obj/item/coin))
+	else if(iscash(W))
 		insert_money(W, user, TRUE)
 		return
 	else if(istype(W, /obj/item/storage/bag/money))

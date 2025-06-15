@@ -39,7 +39,7 @@
 		/obj/item/food/pizzaslice,
 		/obj/item/food/salami,
 		/obj/item/throwing_star,
-		/obj/item/stack/spacecash,
+		/obj/item/stack/dollar,
 		/obj/item/holochip,
 		/obj/item/card
 	)

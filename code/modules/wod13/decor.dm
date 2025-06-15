@@ -717,8 +717,8 @@
 /obj/structure/fuelstation/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/stack/dollar))
 		var/obj/item/stack/dollar/D = I
-		stored_money += D.amount
-		to_chat(user, "<span class='notice'>You insert [D.amount] dollars into [src].</span>")
+		stored_money += D.get_item_credit_value()
+		to_chat(user, "<span class='notice'>You insert [D.get_item_credit_value()] dollars into [src].</span>")
 		qdel(I)
 		say("Payment received.")
 	if(istype(I, /obj/item/gas_can))

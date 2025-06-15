@@ -65,7 +65,7 @@
 		else
 			to_chat(user, "<span class='warning'>ERROR: No bank account assigned to identification card.</span>")
 			return
-	if(istype(W, /obj/item/holochip))
+	if(iscash(W))
 		var/obj/item/holochip/H = W
 		var/cashmoney = input(user, "How much would you like to deposit?", "Money Deposit") as null|num
 		if(H.spend(cashmoney, FALSE))
@@ -75,7 +75,7 @@
 		else
 			to_chat(user, "<span class='warning'>ERROR: Insufficient funds to make transaction.</span>")
 			return
-	if(istype(W, /obj/item/stack/spacecash))
+	if(istype(W, /obj/item/stack/dollar))
 		to_chat(user, "What is this, the 2000s? We only take card here.")
 		return
 	if(istype(W, /obj/item/coin))

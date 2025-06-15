@@ -563,15 +563,14 @@
 	lootcount = 5
 	fan_out_items = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 100,
-		/obj/item/stack/spacecash/c10 = 80,
-		/obj/item/stack/spacecash/c20 = 60,
-		/obj/item/stack/spacecash/c50 = 40,
-		/obj/item/stack/spacecash/c100 = 30,
-		/obj/item/stack/spacecash/c200 = 20,
-		/obj/item/stack/spacecash/c500 = 10,
-		/obj/item/stack/spacecash/c1000 = 5,
-		/obj/item/stack/spacecash/c10000 = 1
+		/obj/item/stack/dollar = 100,
+		/obj/item/stack/dollar/ten = 80,
+		/obj/item/stack/dollar/twenty = 60,
+		/obj/item/stack/dollar/fifty = 40,
+		/obj/item/stack/dollar/hundred = 30,
+		/obj/item/stack/dollar/two_hundred = 20,
+		/obj/item/stack/dollar/five_hundred = 10,
+		/obj/item/stack/dollar/thousand = 5,
 	)
 
 /// Space loot spawner. Couple of random bits of technology-adjacent stuff including anomaly cores and BEPIS techs.

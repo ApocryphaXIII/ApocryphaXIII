@@ -4,6 +4,7 @@
 		bank_code += "[rand(0, 9)]"
 	return bank_code
 
+// ! evil vamp type
 /obj/machinery/vamp/atm
 	name = "ATM Machine"
 	desc = "Check your balance or make a transaction"
@@ -133,8 +134,8 @@
 			to_chat(user, "<span class='notice'>You need to be logged in.</span>")
 			return
 		else
-			atm_balance += cash.amount
-			to_chat(user, "<span class='notice'>You have deposited [cash.amount] dollars into the ATM. The ATM now holds [atm_balance] dollars.</span>")
+			atm_balance += cash.get_item_credit_value()
+			to_chat(user, "<span class='notice'>You have deposited [cash.get_item_credit_value()] dollars into the ATM. The ATM now holds [atm_balance] dollars.</span>")
 			qdel(P)
 			return
 
@@ -207,7 +208,7 @@
 					var/obj/item/stack/dollar/cash = new /obj/item/stack/dollar()
 					cash.amount = drop_amount
 					to_chat(usr, "<span class='notice'>You have withdrawn [drop_amount] dollars.</span>")
-					cash.loc = usr.loc
+					try_put_in_hand(cash, usr)
 					amount -= drop_amount
 					current_card.account.balance -= drop_amount
 			return TRUE

@@ -176,33 +176,23 @@
 	for(var/obj/item/coin/C in AM.GetAllContents()) //Coins.
 		if(payees[AM] >= threshold)
 			break
-		payees[AM] += C.value
+		payees[AM] += C.get_item_credit_value()
 		counted_money += C
-	for(var/obj/item/stack/spacecash/S in AM.GetAllContents()) //Paper Cash
+	for(var/obj/item/stack/dollar/S in AM.GetAllContents()) //Paper Cash
 		if(payees[AM] >= threshold)
 			break
-		payees[AM] += S.value * S.amount
+		payees[AM] += S.get_item_credit_value()
 		counted_money += S
 	for(var/obj/item/holochip/H in AM.GetAllContents()) //Holocredits
 		if(payees[AM] >= threshold)
 			break
-		payees[AM] += H.credits
+		payees[AM] += H.get_item_credit_value()
 		counted_money += H
 
-	if(payees[AM] < threshold && istype(AM.pulling, /obj/item/coin)) //Coins(Pulled).
-		var/obj/item/coin/C = AM.pulling
-		payees[AM] += C.value
-		counted_money += C
-
-	else if(payees[AM] < threshold && istype(AM.pulling, /obj/item/stack/spacecash)) //Cash(Pulled).
-		var/obj/item/stack/spacecash/S = AM.pulling
-		payees[AM] += S.value * S.amount
-		counted_money += S
-
-	else if(payees[AM] < threshold && istype(AM.pulling, /obj/item/holochip)) //Holocredits(pulled).
-		var/obj/item/holochip/H = AM.pulling
-		payees[AM] += H.credits
-		counted_money += H
+	if(payees[AM] < threshold && iscash(AM.pulling)) //Any type of cash(Pulled).
+		var/obj/item/dolla_dolla = AM.pulling
+		payees[AM] += dolla_dolla.get_item_credit_value()
+		counted_money += dolla_dolla
 
 	if(payees[AM] < threshold) //Suggestions for those with no arms/simple animals.
 		var/armless
@@ -229,7 +219,7 @@
 			change = TRUE
 			var/obj/item/holochip/HC = new /obj/item/holochip(AM.loc) //Change is made in holocredits exclusively.
 			HC.credits = payees[AM]
-			HC.name = "[HC.credits] credit holochip"
+			HC.name = "[HC.get_item_credit_value()] credit holochip"
 			if(istype(AM, /mob/living/carbon/human))
 				var/mob/living/carbon/human/H = AM
 				if(!H.put_in_hands(HC))

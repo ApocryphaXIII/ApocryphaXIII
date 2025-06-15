@@ -92,7 +92,7 @@
 	..()
 	if(istype(I, /obj/item/holochip))
 		var/obj/item/holochip/H = I
-		credits += H.credits
+		credits += H.get_item_credit_value()
 		to_chat(user, "<span class='notice'>You insert the credits into [src].</span>")
 		update_appearance()
 		qdel(H)

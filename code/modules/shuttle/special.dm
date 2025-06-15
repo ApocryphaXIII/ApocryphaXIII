@@ -178,10 +178,10 @@
 			break
 		payees[AM] += C.value
 		counted_money += C
-	for(var/obj/item/stack/spacecash/S in AM.GetAllContents()) //Paper Cash
+	for(var/obj/item/stack/dollar/S in AM.GetAllContents()) //Paper Cash
 		if(payees[AM] >= threshold)
 			break
-		payees[AM] += S.value * S.amount
+		payees[AM] += S.amount
 		counted_money += S
 	for(var/obj/item/holochip/H in AM.GetAllContents()) //Holocredits
 		if(payees[AM] >= threshold)
@@ -194,9 +194,9 @@
 		payees[AM] += C.value
 		counted_money += C
 
-	else if(payees[AM] < threshold && istype(AM.pulling, /obj/item/stack/spacecash)) //Cash(Pulled).
-		var/obj/item/stack/spacecash/S = AM.pulling
-		payees[AM] += S.value * S.amount
+	else if(payees[AM] < threshold && istype(AM.pulling, /obj/item/stack/dollar)) //Cash(Pulled).
+		var/obj/item/stack/dollar/S = AM.pulling
+		payees[AM] += S.amount
 		counted_money += S
 
 	else if(payees[AM] < threshold && istype(AM.pulling, /obj/item/holochip)) //Holocredits(pulled).

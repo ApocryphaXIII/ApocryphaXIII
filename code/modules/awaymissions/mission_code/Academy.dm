@@ -285,7 +285,7 @@
 			for(var/direction in GLOB.alldirs)
 				var/turf/dirturf = get_step(Start,direction)
 				if(rand(0,1))
-					new /obj/item/stack/spacecash/c1000(dirturf)
+					new /obj/item/stack/dollar/thousand(dirturf)
 				else
 					var/obj/item/storage/bag/money/M = new(dirturf)
 					for(var/i in 1 to rand(5,50))

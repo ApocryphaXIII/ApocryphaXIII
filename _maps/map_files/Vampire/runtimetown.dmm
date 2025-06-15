@@ -188,7 +188,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "fS" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_x = -16
@@ -360,7 +360,7 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "mw" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "mW" = (
@@ -834,12 +834,12 @@
 /obj/structure/closet/crate/freezer/blood{
 	name = "vampire blood freezer"
 	},
-/obj/item/drinkable_bloodpack/vitae,
-/obj/item/drinkable_bloodpack/vitae,
-/obj/item/drinkable_bloodpack/vitae,
-/obj/item/drinkable_bloodpack/vitae,
-/obj/item/drinkable_bloodpack/vitae,
-/obj/item/drinkable_bloodpack/vitae,
+/obj/item/reagent_containers/blood/vitae,
+/obj/item/reagent_containers/blood/vitae,
+/obj/item/reagent_containers/blood/vitae,
+/obj/item/reagent_containers/blood/vitae,
+/obj/item/reagent_containers/blood/vitae,
+/obj/item/reagent_containers/blood/vitae,
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "Dh" = (
@@ -1070,6 +1070,10 @@
 	},
 /turf/open/floor/plating/vampdirt/rails,
 /area/vtm/supply)
+"IL" = (
+/obj/structure/ladder/manhole/up,
+/turf/open/floor/plating/rough,
+/area/vtm/pacificheights)
 "IO" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -1082,12 +1086,12 @@
 /area/vtm/pacificheights)
 "Jo" = (
 /obj/structure/closet/crate/freezer/blood,
-/obj/item/drinkable_bloodpack,
-/obj/item/drinkable_bloodpack,
-/obj/item/drinkable_bloodpack,
-/obj/item/drinkable_bloodpack,
-/obj/item/drinkable_bloodpack,
-/obj/item/drinkable_bloodpack,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "Jv" = (
@@ -1212,12 +1216,12 @@
 /obj/structure/closet/crate/freezer/blood{
 	name = "blue blood freezer"
 	},
-/obj/item/drinkable_bloodpack/elite,
-/obj/item/drinkable_bloodpack/elite,
-/obj/item/drinkable_bloodpack/elite,
-/obj/item/drinkable_bloodpack/elite,
-/obj/item/drinkable_bloodpack/elite,
-/obj/item/drinkable_bloodpack/elite,
+/obj/item/reagent_containers/blood/elite,
+/obj/item/reagent_containers/blood/elite,
+/obj/item/reagent_containers/blood/elite,
+/obj/item/reagent_containers/blood/elite,
+/obj/item/reagent_containers/blood/elite,
+/obj/item/reagent_containers/blood/elite,
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "Of" = (
@@ -1554,6 +1558,11 @@
 "XE" = (
 /obj/structure/fence/door,
 /turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
+"XU" = (
+/obj/structure/railing,
+/obj/structure/ladder/manhole/down,
+/turf/open/floor/plating/vampcanal,
 /area/vtm/pacificheights)
 "Yr" = (
 /obj/effect/decal/trash,
@@ -2179,7 +2188,7 @@ PO
 of
 MS
 PO
-PO
+IL
 PO
 PO
 PO
@@ -4356,7 +4365,7 @@ eQ
 eQ
 MS
 nY
-Nx
+XU
 Ys
 Ys
 Ys

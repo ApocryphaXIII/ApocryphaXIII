@@ -212,36 +212,8 @@
 		return
 
 	if(iswerewolf(src) && get_dist(src, A) <= 1)
-		if(istype(A, /obj/manholeup))
-			var/obj/manholeup/M = A
-			if(!M.climbing)
-				M.climbing = TRUE
-				if(do_after(src, 30, A))
-					M.climbing = FALSE
-					var/turf/destination = get_step_multiz(A, UP)
-					var/mob/living/L = src
-					if(L.pulling)
-						L.pulling.forceMove(destination)
-					forceMove(destination)
-					playsound(A, 'code/modules/wod13/sounds/manhole.ogg', 50, TRUE)
-				else
-					M.climbing = FALSE
-		if(istype(A, /obj/manholedown))
-			var/obj/manholeup/M = A
-			if(!M.climbing)
-				M.climbing = TRUE
-				if(do_after(src, 30, A))
-					M.climbing = FALSE
-					var/turf/destination = get_step_multiz(A, DOWN)
-					var/mob/living/L = src
-					if(L.pulling)
-						L.pulling.forceMove(destination)
-					forceMove(destination)
-					playsound(A, 'code/modules/wod13/sounds/manhole.ogg', 50, TRUE)
-				else
-					M.climbing = FALSE
 		if(istype(A, /obj/structure/vampdoor))
-			if(iscrinos(src))
+			if(iscrinos(src) || iscoraxcrinos(src))
 				var/obj/structure/vampdoor/V = A
 				playsound(get_turf(A), 'code/modules/wod13/sounds/get_bent.ogg', 100, FALSE)
 				var/obj/item/shield/door/D = new(get_turf(A))
@@ -250,7 +222,7 @@
 				D.throw_at(throw_target, rand(2, 4), 4, src)
 				qdel(A)
 
-	if(iscrinos(src))
+	if(iscrinos(src) || iscoraxcrinos(src))
 		if(!W)
 			var/mob/living/carbon/werewolf/wolf = src
 			var/allowed_to_proceed = FALSE

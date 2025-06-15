@@ -351,6 +351,14 @@
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
+/area/vtm/anarch/garage
+	name = "Garage"
+	icon_state = "anarch"
+	ambience_index = AMBIENCE_INTERIOR
+	upper = FALSE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
 /area/vtm/hotel
 	name = "Hotel"
 	icon_state = "hotel"
@@ -480,11 +488,31 @@
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/interior/endron_facility
-	name = "Endron Facility"
+	name = "Endron Headquarters"
+	icon_state = "supply"
+	zone_type = "masquerade"
+	music = /datum/vampiremusic/forest
+	fire_controled = TRUE
+	yang_chi = 0
+	yin_chi = 1
+	wall_rating = LOW_WALL_RATING
+
+/area/vtm/interior/endron_facility/helipad
+	name = "Endron Helipad"
 	icon_state = "supply"
 	zone_type = "battle"
 	music = /datum/vampiremusic/forest
 	fire_controled = FALSE
+	yang_chi = 0
+	yin_chi = 1
+	wall_rating = LOW_WALL_RATING
+
+/area/vtm/interior/endron_facility/forest
+	name = "Endron Forest Worksite"
+	icon_state = "supply"
+	zone_type = "battle"
+	music = /datum/vampiremusic/forest
+	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 1
 	wall_rating = LOW_WALL_RATING
@@ -494,7 +522,7 @@
 	icon_state = "graveyard"
 	zone_type = "battle"
 	music = /datum/vampiremusic/forest
-	fire_controled = FALSE
+	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 2
 	wall_rating = LOW_WALL_RATING
@@ -504,7 +532,7 @@
 	icon_state = "graveyard"
 	zone_type = "battle"
 	music = /datum/vampiremusic/forest
-	fire_controled = FALSE
+	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 2
 	wall_rating = LOW_WALL_RATING

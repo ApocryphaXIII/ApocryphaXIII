@@ -178,7 +178,7 @@
 		return
 	if(istype(I, /obj/item/stack/dollar))
 		var/obj/item/stack/dollar/D = I
-		points = points+D.amount
+		points = points + D.get_item_credit_value()
 		qdel(D)
 		return
 	if(default_deconstruction_screwdriver(user, "mining-open", "mining", I))

@@ -449,4 +449,4 @@
 
 /datum/export/pirate/holochip/get_cost(atom/movable/AM)
 	var/obj/item/holochip/H = AM
-	return H.credits
+	return H.get_item_credit_value()

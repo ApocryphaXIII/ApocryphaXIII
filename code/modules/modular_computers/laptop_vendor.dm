@@ -240,14 +240,14 @@
 		var/obj/item/stack/dollar/c = I
 		if(!user.temporarilyRemoveItemFromInventory(c))
 			return
-		credits += c.amount
-		visible_message("<span class='info'><span class='name'>[user]</span> inserts [c.amount] cr into [src].</span>")
+		credits += c.get_item_credit_value()
+		visible_message("<span class='info'><span class='name'>[user]</span> inserts [c.get_item_credit_value()] cr into [src].</span>")
 		qdel(c)
 		return
 	else if(istype(I, /obj/item/holochip))
 		var/obj/item/holochip/HC = I
-		credits += HC.credits
-		visible_message("<span class='info'>[user] inserts a [HC.credits] cr holocredit chip into [src].</span>")
+		credits += HC.get_item_credit_value()
+		visible_message("<span class='info'>[user] inserts a [HC.get_item_credit_value()] cr holocredit chip into [src].</span>")
 		qdel(HC)
 		return
 	else if(istype(I, /obj/item/card/id))

@@ -134,8 +134,8 @@
 			to_chat(user, "<span class='notice'>You need to be logged in.</span>")
 			return
 		else
-			atm_balance += cash.amount
-			to_chat(user, "<span class='notice'>You have deposited [cash.amount] dollars into the ATM. The ATM now holds [atm_balance] dollars.</span>")
+			atm_balance += cash.get_item_credit_value()
+			to_chat(user, "<span class='notice'>You have deposited [cash.get_item_credit_value()] dollars into the ATM. The ATM now holds [atm_balance] dollars.</span>")
 			qdel(P)
 			return
 

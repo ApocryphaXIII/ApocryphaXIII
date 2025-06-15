@@ -26,7 +26,7 @@
 	var/value = 0
 	if(istype(I, /obj/item/stack/dollar))
 		var/obj/item/stack/dollar/C = I
-		value = C.amount
+		value = C.get_item_credit_value()
 	else if(istype(I, /obj/item/holochip))
 		var/obj/item/holochip/H = I
 		value = H.credits

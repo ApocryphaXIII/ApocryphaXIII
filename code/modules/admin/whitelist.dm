@@ -31,7 +31,7 @@ GLOBAL_PROTECT(whitelist)
 		return
 
 	GLOB.whitelist += canon_ckey
-	rustg_file_append("#[input_ckey]", WHITELISTFILE)
+	rustg_file_append(input_ckey, WHITELISTFILE)
 
 	message_admins("[input_ckey] has been whitelisted by [usr]")
 

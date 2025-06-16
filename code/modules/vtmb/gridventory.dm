@@ -83,8 +83,8 @@ VENTORY!
 	screen_max_rows = 9
 
 /datum/component/storage/concrete/vtm/car/track
-	screen_max_columns = 8
-	screen_max_rows = 12
+	screen_max_columns = 13
+	screen_max_rows = 9
 
 /datum/component/storage/concrete/vtm/sheathe
 	screen_max_columns = 2

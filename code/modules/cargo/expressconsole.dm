@@ -59,9 +59,9 @@
 		return
 	else if(istype(W, /obj/item/stack/dollar))
 		var/obj/item/stack/dollar/D = W
-		if(D.amount)
+		if(D.get_item_credit_value())
 			to_chat(user, "<span class='notice'>You insert [W] in [src].</span>")
-			account_balance += D.amount
+			account_balance += D.get_item_credit_value()
 			qdel(W)
 			to_chat(user, "[src]'s balance now contains [account_balance] credits.")
 	else if(istype(W, /obj/item/disk/cargo/bluespace_pod))

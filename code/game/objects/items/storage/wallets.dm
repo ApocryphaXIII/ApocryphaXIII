@@ -19,7 +19,7 @@
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage/concrete/wallet)
 	STR.max_items = 4
 	STR.set_holdable(list(
-		/obj/item/stack/spacecash,
+		/obj/item/stack/dollar,
 		/obj/item/holochip,
 		/obj/item/card,
 		/obj/item/clothing/mask/cigarette,

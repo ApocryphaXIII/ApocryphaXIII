@@ -2148,6 +2148,12 @@
 	else if (href_list["searchwhitelistckey"])
 		whitelist_panel(href_list["searchwhitelistckey"])
 
+	//Diffrent to the DB whitelist system. This is for the player connection whitelist.txt
+	else if (href_list["whitelist_newckey"])
+		var/whitelistee = input("CKey to whitelist: (Adds CKey to the whitelist.txt)") as null|text
+		if(whitelistee)
+			whitelist_ckey(whitelistee)
+
 	else if(href_list["show_paper"])
 		if(!check_rights(R_ADMIN))
 			return

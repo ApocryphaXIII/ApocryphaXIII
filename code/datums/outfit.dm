@@ -189,12 +189,8 @@
 	if(glasses)
 		H.equip_to_slot_or_del(new glasses(H),ITEM_SLOT_EYES, TRUE)
 	if(!visualsOnly)
-		if(wallet)
-			H.equip_to_slot_or_del(new wallet(H),ITEM_SLOT_ID, TRUE)
 		if(id)
 			H.equip_to_slot_or_del(new id(H),ITEM_SLOT_ID, TRUE)
-		if(bank_card)
-			H.equip_to_slot_or_del(new bank_card(H),ITEM_SLOT_ID, TRUE)
 	if(suit_store)
 		H.equip_to_slot_or_del(new suit_store(H),ITEM_SLOT_SUITSTORE, TRUE)
 
@@ -224,6 +220,11 @@
 				backpack_contents = list()
 			backpack_contents.Insert(1, box)
 			backpack_contents[box] = 1
+
+		if(bank_card)
+			H.equip_to_slot_or_del(new bank_card(H),ITEM_SLOT_BACKPACK, TRUE)
+		if(wallet)
+			H.equip_to_slot_or_del(new wallet(H),ITEM_SLOT_BACKPACK, TRUE)
 
 		if(backpack_contents)
 			for(var/path in backpack_contents)

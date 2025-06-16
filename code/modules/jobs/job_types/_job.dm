@@ -331,7 +331,8 @@
 	var/jobtype = null
 
 	uniform = /obj/item/clothing/under/color/grey
-	wallet = /obj/item/storage/wallet
+	// Wallet needs to be a seperate pr cause its undercooked rn and its already getting unatomic.
+	//wallet = /obj/item/storage/wallet
 	id = /obj/item/card/id
 //	ears = /obj/item/radio/headset
 //	belt = /obj/item/pda

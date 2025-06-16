@@ -93,12 +93,13 @@
 			max_starting_wealth = clamp(max_starting_wealth * 1.5, 4000, 20000)
 	registered_account.account_balance = rand(min_starting_wealth, max_starting_wealth)
 
-
 /obj/item/card/credit/examine(mob/user)
 	. = ..()
 	if(registered_name)
 		. += span_notice("The card bears a name: [registered_name].")
 
+/obj/item/card/credit/GetCreditCard()
+	return src
 
 /obj/machinery/vamp/atm/attackby(obj/item/P, mob/user, params)
 	if(is_creditcard(P))

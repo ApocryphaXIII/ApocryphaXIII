@@ -13,7 +13,7 @@
 	var/force_fee = 0 //replaces the "pay whatever" functionality with a set amount when non-zero.
 
 /obj/machinery/paystand/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/card/credit))
+	if(is_creditcard(W))
 		if(W == my_card)
 			if(user.a_intent == INTENT_DISARM)
 				var/rename_msg = stripped_input(user, "Rename the Paystand:", "Paystand Naming", name)

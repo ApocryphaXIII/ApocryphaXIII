@@ -491,6 +491,24 @@
 		return
 	return held_item.GetID()
 
+/mob/living/get_creditcard(hand_first)
+	if(!length(held_items)) //Early return for mobs without hands.
+		return
+	//Check hands
+	var/obj/item/held_item = get_active_held_item()
+	if(held_item) //Check active hand
+		. = held_item.GetCreditCard()
+	if(!.) //If there is no id, check the other hand
+		held_item = get_inactive_held_item()
+		if(held_item)
+			. = held_item.GetCreditCard()
+
+/mob/living/proc/get_creditcard_in_hand()
+	var/obj/item/held_item = get_active_held_item()
+	if(!held_item)
+		return
+	return held_item.GetCreditCard()
+
 //Returns the bank account of an ID the user may be holding.
 /mob/living/proc/get_bank_account()
 	RETURN_TYPE(/datum/bank_account)

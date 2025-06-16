@@ -109,9 +109,9 @@
 			dat += "<b>I know some other of my kind in this city. Need to check my phone, there definetely should be:</b><BR>"
 			for(var/i in host.knowscontacts)
 				dat += "-[i] contact<BR>"
-		var/datum/bank_account/account = SSeconomy.bank_accounts_by_id[host.account_id]
+		var/datum/bank_account/account = host.account_id ? SSeconomy.bank_accounts_by_id["[host.account_id]"] : null
 		if(account)
-			dat += "<b>My bank account code is: [account.bank_pin]</b><BR>"
+			dat += "<b>My bank pin is: [account.bank_pin]</b><BR>"
 		host << browse(HTML_SKELETON(dat), "window=vampire;size=400x450;border=1;can_resize=1;can_minimize=0")
 		onclose(host, "ghoul", src)
 

@@ -113,7 +113,7 @@
 		return
 	if(playing)
 		return ..()
-	if(istype(W, /obj/item/card/credit))
+	if(is_creditcard(W))
 		playsound(src, 'sound/machines/card_slide.ogg', 50, TRUE)
 
 		if(machine_stat & MAINT || !on || locked)

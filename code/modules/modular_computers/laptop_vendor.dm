@@ -250,7 +250,7 @@
 		visible_message("<span class='info'>[user] inserts a [HC.get_item_credit_value()] cr holocredit chip into [src].</span>")
 		qdel(HC)
 		return
-	else if(istype(I, /obj/item/card/credit))
+	else if(is_creditcard(I))
 		if(state != 2)
 			return
 		var/obj/item/card/credit/ID = I

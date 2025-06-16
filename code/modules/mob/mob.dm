@@ -1202,7 +1202,7 @@
 					break
 				search_id = 0
 
-		if(search_creditcard && istype(A, /obj/item/card/credit))
+		if(search_creditcard && is_creditcard(A))
 			var/obj/item/card/credit/bank_card = A
 			if(bank_card.registered_account?.account_holder == oldname)
 				bank_card.registered_account.account_holder = newname
@@ -1322,7 +1322,7 @@
 
 	return TRUE
 
-/mob/proc/get_creditcard()
+/mob/proc/get_creditcard(hand_first)
 	return
 
 /**

@@ -84,22 +84,12 @@
 	//Check inventory slots
 	return (wear_id?.GetID() || belt?.GetID())
 
-/mob/living/carbon/human/get_creditcard()
-	//Check hands
-	var/list/items_to_check = list()
-	if(get_active_held_item())
-		items_to_check += get_active_held_item()
-	if(get_inactive_held_item())
-		items_to_check += get_inactive_held_item()
-	if(wear_id)
-		items_to_check += wear_id
-	if(belt)
-		items_to_check += belt
-	for(var/obj/item/i in items_to_check)
-		var/obj/item/card/credit/bank_card = i.GetCreditCard()
-		if(bank_card)
-			return bank_card
-
+/mob/living/carbon/human/get_creditcard(hand_first = TRUE)
+	. = ..()
+	if(. && hand_first)
+		return
+	//Check inventory slots
+	return (wear_id?.GetCreditCard() || belt?.GetCreditCard())
 
 /mob/living/carbon/human/reagent_check(datum/reagent/R)
 	return dna.species.handle_chemicals(R,src)

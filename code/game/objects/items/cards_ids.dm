@@ -81,7 +81,7 @@
 	var/assignment = null
 	/// mapping aid
 	var/access_txt
-	/// DEPRICATED. Use /obj/item/creditcard instead
+	/// DEPRICATED. Use /obj/item/card/credit instead
 	var/datum/bank_account/registered_account
 	var/uses_overlays = TRUE
 	var/icon/cached_flat_icon

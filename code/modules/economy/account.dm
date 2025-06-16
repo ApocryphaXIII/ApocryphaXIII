@@ -32,7 +32,7 @@
 /datum/bank_account/Destroy()
 	if(add_to_accounts)
 		SSeconomy.bank_accounts_by_id -= "[account_id]"
-	for(var/obj/item/creditcard/bank_card as anything in bank_cards)
+	for(var/obj/item/card/credit/bank_card as anything in bank_cards)
 		bank_card.registered_account = null
 	//SSeconomy.bank_money -= account_balance
 	return ..()

@@ -92,7 +92,7 @@
 /obj/structure/closet/crate/secure/owned/togglelock(mob/living/user, silent)
 	if(privacy_lock)
 		if(!broken)
-			var/obj/item/creditcard/bank_card = user.get_bankcard()
+			var/obj/item/card/credit/bank_card = user.get_creditcard()
 			if(bank_card)
 				if(bank_card.registered_account)
 					if(bank_card.registered_account == buyer_account)

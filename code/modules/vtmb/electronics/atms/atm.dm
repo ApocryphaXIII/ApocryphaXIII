@@ -12,7 +12,7 @@
 	var/entered_code
 
 	var/atm_balance = 0
-	var/obj/item/creditcard/current_card = null
+	var/obj/item/card/credit/current_card = null
 	light_system = STATIC_LIGHT
 	light_color = COLOR_GREEN
 	light_range = 2
@@ -24,7 +24,8 @@
 	logged_in = FALSE
 	current_card = null
 
-/obj/item/creditcard
+// /card/ is a bit of a weird path but it allows us to inherit behavoir for wallet code.
+/obj/item/card/credit
 	name = "debit card"
 	desc = "Used to access bank money."
 	icon = 'code/modules/wod13/items.dmi'
@@ -45,36 +46,36 @@
 	var/min_starting_wealth = 600
 	var/max_starting_wealth = 1000
 
-/obj/item/creditcard/prince
+/obj/item/card/credit/prince
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 10000
 	max_starting_wealth = 15000
 
-/obj/item/creditcard/seneschal
+/obj/item/card/credit/seneschal
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 4000
 	max_starting_wealth = 8000
 
-/obj/item/creditcard/elder
+/obj/item/card/credit/elder
 	icon_state = "card3"
 	inhand_icon_state = "card3"
 	min_starting_wealth = 3000
 	max_starting_wealth = 7000
 
-/obj/item/creditcard/giovanniboss
+/obj/item/card/credit/giovanniboss
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 8000
 	max_starting_wealth = 15000
 
-/obj/item/creditcard/rich
+/obj/item/card/credit/rich
 	min_starting_wealth = 1000
 	max_starting_wealth = 4000
 
 
-/obj/item/creditcard/Initialize(mapload)
+/obj/item/card/credit/Initialize(mapload)
 	. = ..()
 	if(!registered_account)
 		registered_account = new /datum/bank_account()
@@ -91,14 +92,14 @@
 	registered_account.account_balance = rand(min_starting_wealth, max_starting_wealth)
 
 
-/obj/item/creditcard/examine(mob/user)
+/obj/item/card/credit/examine(mob/user)
 	. = ..()
 	if(registered_name)
 		. += span_notice("The card bears a name: [registered_name].")
 
 
 /obj/machinery/vamp/atm/attackby(obj/item/P, mob/user, params)
-	if(istype(P, /obj/item/creditcard))
+	if(istype(P, /obj/item/card/credit))
 		if(logged_in)
 			to_chat(user, "<span class='notice'>Someone is already logged in.</span>")
 			return

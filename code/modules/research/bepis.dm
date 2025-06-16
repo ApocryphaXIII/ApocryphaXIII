@@ -59,8 +59,8 @@
 		say("Deposited [deposit_value] credits into storage.")
 		update_appearance()
 		return
-	if(is_debitcard(O))
-		var/obj/item/creditcard/bank_card = O
+	if(is_creditcard(O))
+		var/obj/item/card/credit/bank_card = O
 		if(bank_card.registered_account)
 			account = bank_card.registered_account
 			account_name = bank_card.registered_name

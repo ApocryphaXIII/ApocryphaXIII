@@ -61,8 +61,8 @@
 	if(check_if_finished())
 		qdel(src)
 		return
-	if(is_debitcard(W))
-		var/obj/item/creditcard/card = W
+	if(is_creditcard(W))
+		var/obj/item/card/credit/card = W
 		if(!card.registered_account)
 			to_chat(user, "<span class='warning'>This card does not have a registered account!</span>")
 			return

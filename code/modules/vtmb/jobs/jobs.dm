@@ -5,9 +5,9 @@
 	. = ..()
 	var/obj/item/storage/backpack/b = locate() in H
 	if(b)
-		var/obj/item/creditcard/card = locate() in b.contents
+		var/obj/item/card/credit/card = locate() in b.contents
 		if(card && card.has_checked == FALSE)
-			for(var/obj/item/creditcard/caard in b.contents)
+			for(var/obj/item/card/credit/caard in b.contents)
 				if(caard)
 					H.account_id = caard.registered_account.account_id
 					caard.registered_account.account_holder = H.true_real_name

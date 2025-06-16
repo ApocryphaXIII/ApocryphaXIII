@@ -118,9 +118,9 @@
 	else
 		return ..()
 
-/obj/item/storage/wallet/GetBankCard()
+/obj/item/storage/wallet/GetCreditCard()
 	for(var/obj/item/card/I in contents)
-		if(istype(I, /obj/item/creditcard))
+		if(is_creditcard(I))
 			return I
 
 /obj/item/storage/wallet/random

@@ -84,7 +84,7 @@
 	//Check inventory slots
 	return (wear_id?.GetID() || belt?.GetID())
 
-/mob/living/carbon/human/get_bankcard()
+/mob/living/carbon/human/get_creditcard()
 	//Check hands
 	var/list/items_to_check = list()
 	if(get_active_held_item())
@@ -96,7 +96,7 @@
 	if(belt)
 		items_to_check += belt
 	for(var/obj/item/i in items_to_check)
-		var/obj/item/creditcard/bank_card = i.GetBankCard()
+		var/obj/item/card/credit/bank_card = i.GetCreditCard()
 		if(bank_card)
 			return bank_card
 

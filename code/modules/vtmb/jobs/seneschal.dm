@@ -58,7 +58,7 @@
 	shoes = /obj/item/clothing/shoes/vampire/brown
 	l_pocket = /obj/item/vamp/phone/seneschal
 	r_pocket = /obj/item/vamp/keys/clerk
-	backpack_contents = list(/obj/item/passport=1, /obj/item/phone_book=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/creditcard/seneschal=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/phone_book=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit/seneschal=1)
 
 /datum/outfit/job/clerk/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -131,7 +131,7 @@
 	shoes = /obj/item/clothing/shoes/vampire/brown
 	l_pocket = /obj/item/vamp/phone/harpy
 	r_pocket = /obj/item/vamp/keys/clerk
-	backpack_contents = list(/obj/item/passport=1, /obj/item/phone_book=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/creditcard/seneschal=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/phone_book=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit/seneschal=1)
 
 /datum/outfit/job/harpy/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -189,7 +189,7 @@
 	shoes = /obj/item/clothing/shoes/vampire
 	r_pocket = /obj/item/vamp/keys/camarilla/ghoul
 	l_pocket = /obj/item/vamp/phone/tower_employee
-	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/creditcard=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
 
 	backpack = /obj/item/storage/backpack
 	satchel = /obj/item/storage/backpack/satchel

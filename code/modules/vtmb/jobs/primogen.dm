@@ -40,7 +40,7 @@
 	head = /obj/item/clothing/head/vampire/malkav
 	l_pocket = /obj/item/vamp/phone/malkavian_primo
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/malkav/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/creditcard/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
+	backpack_contents = list(/obj/item/vamp/keys/malkav/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
 
 /datum/outfit/job/malkav/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -91,7 +91,7 @@
 	shoes = /obj/item/clothing/shoes/vampire
 	l_pocket = /obj/item/vamp/phone/nosferatu_primo
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/nosferatu/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/creditcard/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
+	backpack_contents = list(/obj/item/vamp/keys/nosferatu/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
 
 /datum/outfit/job/nosferatu/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -138,7 +138,7 @@
 	shoes = /obj/item/clothing/shoes/vampire
 	l_pocket = /obj/item/vamp/phone/ventrue_primo
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/ventrue/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/creditcard/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
+	backpack_contents = list(/obj/item/vamp/keys/ventrue/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
 
 /datum/outfit/job/ventrue/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -185,7 +185,7 @@
 	shoes = /obj/item/clothing/shoes/vampire
 	l_pocket = /obj/item/vamp/phone/toreador_primo
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/toreador/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/creditcard/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon, /obj/item/gun/ballistic/automatic/vampire/beretta/toreador=1, /obj/item/ammo_box/magazine/semi9mm/toreador=1)
+	backpack_contents = list(/obj/item/vamp/keys/toreador/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon, /obj/item/gun/ballistic/automatic/vampire/beretta/toreador=1, /obj/item/ammo_box/magazine/semi9mm/toreador=1)
 
 /datum/outfit/job/toreador/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -233,7 +233,7 @@
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	l_pocket = /obj/item/vamp/phone/banu_primo
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/banuhaqim/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/creditcard/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
+	backpack_contents = list(/obj/item/vamp/keys/banuhaqim/primogen=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
 
 /obj/effect/landmark/start/primogen_banu
 	name = "Primogen Banu Haqim"
@@ -279,7 +279,7 @@
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	l_pocket = /obj/item/vamp/phone/lasombra_primo
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/lasombra/primogen=1,/obj/item/passport=1, /obj/item/creditcard/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
+	backpack_contents = list(/obj/item/vamp/keys/lasombra/primogen=1,/obj/item/passport=1, /obj/item/card/credit/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
 
 /datum/outfit/job/primogen_lasombra/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -77,13 +77,15 @@
 
 /obj/item/card/credit/Initialize(mapload)
 	. = ..()
-	if(!registered_account)
-		registered_account = new /datum/bank_account()
 	var/mob/living/carbon/human/user = null
 	if(ishuman(loc)) // In pockets
 		user = loc
 	else if(ishuman(loc?.loc)) // In backpack
 		user = loc
+	if(user && user.account_id)
+		registered_account = SSeconomy.bank_accounts_by_id["[user.account_id]"]
+	if(!registered_account)
+		registered_account = new /datum/bank_account()
 	if(!isnull(user))
 		registered_name = user.real_name
 		if(user.clane?.name == CLAN_VENTRUE)

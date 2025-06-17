@@ -7,7 +7,7 @@
 }
 
 /datum/unit_test/outfit_sanity/Run()
-	var/mob/living/carbon/human/H = allocate(/mob/living/carbon/human)
+	var/mob/living/carbon/human/H = allocate(/mob/living/carbon/human/consistent)
 
 	for (var/outfit_type in subtypesof(/datum/outfit))
 		// Only make one human and keep undressing it because it's much faster

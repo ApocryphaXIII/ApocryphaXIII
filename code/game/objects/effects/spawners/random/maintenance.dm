@@ -40,5 +40,5 @@
 	spawn_loot_count = 3
 
 /obj/effect/spawner/random/maintenance/Initialize(mapload)
-	spawn_loot_count = random(1, spawn_loot_count)
+	spawn_loot_count = rand(1, spawn_loot_count)
 	. = ..()

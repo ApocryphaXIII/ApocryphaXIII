@@ -31,19 +31,8 @@
 /obj/effect/spawner/random/trash/food_packaging
 	name = "empty food packaging spawner"
 	loot = list(
-		/obj/item/trash/raisins = 2,
-		/obj/item/trash/cheesie = 2,
-		/obj/item/trash/candy = 2,
-		/obj/item/trash/chips = 2,
-		/obj/item/trash/sosjerky = 2,
-		/obj/item/trash/pistachios = 2,
-		/obj/item/trash/boritos = 1,
-		/obj/item/trash/can/food/beans = 1,
-		/obj/item/trash/popcorn = 1,
-		/obj/item/trash/energybar = 1,
-		/obj/item/trash/can/food/peaches/maint = 1,
-		/obj/item/trash/semki = 1,
-		/obj/item/trash/syndi_cakes = 1,
+		/obj/item/trash/vampirebar = 2,
+		/obj/item/trash/vampirecrisps = 2,
 	)
 
 /obj/effect/spawner/random/trash/botanical_waste
@@ -52,7 +41,6 @@
 	loot = list(
 		/obj/item/grown/bananapeel = 6,
 		/obj/item/grown/corncob = 3,
-		/obj/item/food/grown/bungopit = 1,
 	)
 
 /obj/effect/spawner/random/trash/grille_or_waste

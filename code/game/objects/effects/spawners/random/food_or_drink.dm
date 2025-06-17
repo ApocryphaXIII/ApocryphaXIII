@@ -2,17 +2,6 @@
 	name = "food or drink loot spawner"
 	desc = "Nom nom nom"
 
-/obj/effect/spawner/random/food_or_drink/donkpockets
-	name = "donk pocket box spawner"
-	icon_state = "donkpocket"
-	loot = list(
-		/obj/item/storage/box/donkpockets/donkpocketspicy,
-		/obj/item/storage/box/donkpockets/donkpocketteriyaki,
-		/obj/item/storage/box/donkpockets/donkpocketpizza,
-		/obj/item/storage/box/donkpockets/donkpocketberry,
-		/obj/item/storage/box/donkpockets/donkpockethonk,
-	)
-
 /obj/effect/spawner/random/food_or_drink/seed
 	name = "seed spawner"
 	icon_state = "seed"
@@ -80,12 +69,9 @@
 	name = "dinner spawner"
 	icon_state = "soup"
 	loot = list(
-		/obj/item/food/bearsteak,
-		/obj/item/food/enchiladas,
-		/obj/item/food/stewedsoymeat,
-		/obj/item/food/burger/bigbite,
-		/obj/item/food/burger/superbite,
-		/obj/item/food/burger/fivealarm,
+		/obj/item/food/vampire/burger,
+		/obj/item/food/vampire/nugget,
+		/obj/item/food/vampire/pizza,
 	)
 
 /obj/effect/spawner/random/food_or_drink/three_course_meal
@@ -102,16 +88,9 @@
 	name = "good soda spawner"
 	icon_state = "can"
 	loot = list(
-		/obj/item/reagent_containers/food/drinks/soda_cans/grey_bull = 3,
-		/obj/item/reagent_containers/food/drinks/soda_cans/monkey_energy = 2,
-		/obj/item/reagent_containers/food/drinks/soda_cans/shamblers = 1,
-		/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game = 1,
-		/obj/item/reagent_containers/food/drinks/soda_cans/dr_gibb = 1,
-		/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind = 1,
-		/obj/item/reagent_containers/food/drinks/soda_cans/starkist = 1,
-		/obj/item/reagent_containers/food/drinks/soda_cans/space_up = 1,
-		/obj/item/reagent_containers/food/drinks/soda_cans/sol_dry = 1,
-		/obj/item/reagent_containers/food/drinks/soda_cans/cola = 1,
+		/obj/item/reagent_containers/food/drinks/soda_cans/vampirecola = 3,
+		/obj/item/reagent_containers/food/drinks/soda_cans/vampirecola/blue = 2,
+		/obj/item/reagent_containers/food/drinks/soda_cans/vampiresoda = 1,
 	)
 
 /obj/effect/spawner/random/food_or_drink/booze
@@ -119,6 +98,7 @@
 	icon_state = "beer"
 	loot = list(
 		/obj/item/reagent_containers/food/drinks/beer/vampire = 75,
+		/obj/item/reagent_containers/food/drinks/beer/vampire/blue_stripe = 5,
 		/obj/item/reagent_containers/food/drinks/bottle/maltliquor = 5,
 		/obj/item/reagent_containers/food/drinks/bottle/whiskey = 5,
 		/obj/item/reagent_containers/food/drinks/bottle/gin = 5,
@@ -135,7 +115,6 @@
 		/obj/item/reagent_containers/food/drinks/bottle/sake = 5,
 		/obj/item/reagent_containers/food/drinks/bottle/grappa = 5,
 		/obj/item/reagent_containers/food/drinks/bottle/applejack = 5,
-		/obj/item/reagent_containers/glass/bottle/ethanol = 2,
 		/obj/item/reagent_containers/food/drinks/bottle/fernet = 2,
 		/obj/item/reagent_containers/food/drinks/bottle/champagne = 2,
 		/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium = 2,
@@ -144,7 +123,7 @@
 	)
 
 /obj/effect/spawner/random/food_or_drink/pizzaparty
-	name = "pizza bomb spawner"
+	name = "pizza spawner"
 	icon_state = "pizzabox"
 	loot = list(
 		/obj/item/pizzabox/margherita = 2,
@@ -168,17 +147,8 @@
 	name = "snack spawner"
 	icon_state = "chips"
 	loot = list(
-		/obj/item/food/spacetwinkie = 5,
-		/obj/item/food/cheesiehonkers = 5,
-		/obj/item/food/candy = 5,
-		/obj/item/food/chips = 5,
-		/obj/item/food/sosjerky = 5,
-		/obj/item/food/no_raisin = 5,
-		/obj/item/food/energybar = 5,
-		/obj/item/reagent_containers/food/drinks/dry_ramen = 5,
-		/obj/item/storage/box/gum = 3,
-		/obj/item/food/syndicake = 1,
-		/obj/item/food/candy/bronx = 1
+		/obj/item/food/vampire/crisps = 5,
+		/obj/item/food/vampire/bar = 5,
 	)
 
 /obj/effect/spawner/random/food_or_drink/condiment

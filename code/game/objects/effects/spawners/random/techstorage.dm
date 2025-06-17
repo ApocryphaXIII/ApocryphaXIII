@@ -36,7 +36,6 @@
 		/obj/item/circuitboard/machine/microwave,
 		/obj/item/circuitboard/machine/chem_dispenser/drinks,
 		/obj/item/circuitboard/machine/chem_dispenser/drinks/beer,
-		/obj/item/circuitboard/computer/slot_machine,
 	)
 
 /obj/effect/spawner/random/techstorage/rnd_all
@@ -64,7 +63,6 @@
 /obj/effect/spawner/random/techstorage/engineering_all
 	name = "engineering circuit board spawner"
 	loot = list(
-		/obj/item/circuitboard/computer/atmos_alert,
 		/obj/item/circuitboard/computer/stationalert,
 		/obj/item/circuitboard/computer/powermonitor,
 	)

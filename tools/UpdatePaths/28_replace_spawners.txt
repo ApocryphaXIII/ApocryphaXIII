@@ -80,4 +80,5 @@
 /obj/effect/spawner/lootdrop/seed_vault : /obj/effect/spawner/random/food_or_drink/seed_vault
 /obj/effect/spawner/lootdrop/whiteship_cere_ripley : /obj/effect/spawner/random/exotic/ripley
 
-
+#fallcons path updates
+/obj/effect/spawner/bundle/hobo_squat : /obj/effect/spawner/random/trash/hobo_squat

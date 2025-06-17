@@ -36,14 +36,12 @@
 		/obj/item/trash/chips = 2,
 		/obj/item/trash/sosjerky = 2,
 		/obj/item/trash/pistachios = 2,
-		/obj/item/trash/peanuts = 2,
 		/obj/item/trash/boritos = 1,
 		/obj/item/trash/can/food/beans = 1,
 		/obj/item/trash/popcorn = 1,
 		/obj/item/trash/energybar = 1,
 		/obj/item/trash/can/food/peaches/maint = 1,
 		/obj/item/trash/semki = 1,
-		/obj/item/trash/cnds = 1,
 		/obj/item/trash/syndi_cakes = 1,
 	)
 
@@ -106,7 +104,7 @@
 	spawn_scatter_radius = 2
 	loot = list( // This spawner will scatter garbage around a dirty site.
 		/obj/effect/spawner/random/trash/garbage = 6,
-		mob/living/simple_animal/hostile/cockroach = 5,
+		/mob/living/simple_animal/hostile/cockroach = 5,
 		/obj/effect/decal/cleanable/garbage = 4,
 		/obj/effect/decal/cleanable/vomit/old = 3,
 		/obj/effect/spawner/random/trash/cigbutt = 2,
@@ -131,6 +129,7 @@
 	name = "random graffiti spawner"
 	icon_state = "rune"
 	loot = list(/obj/effect/decal/cleanable/crayon)
+	#warn need to check if this is all valid
 	var/graffiti_icons = list(
 		"rune1", "rune2", "rune3", "rune4", "rune5", "rune6",
 		"amyjon", "face", "matt", "revolution", "engie", "guy",
@@ -229,4 +228,13 @@
 		/obj/item/storage/box/lights/tubes,
 		/obj/item/storage/box/lights/mixed,
 		/obj/item/storage/box/lights/bulbs,
+	)
+
+/obj/effect/spawner/random/trash/hobo_squat
+	name = "hobo squat spawner"
+	spawn_all_loot = TRUE
+	loot = list(
+		/obj/structure/bed/maint,
+		/obj/effect/spawner/random/trash/grime,
+		/obj/effect/spawner/random/entertainment/drugs
 	)

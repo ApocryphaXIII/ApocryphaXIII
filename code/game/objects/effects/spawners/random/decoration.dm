@@ -9,7 +9,6 @@
 	loot = list(
 		/obj/item/stack/sheet/sandblock{amount = 30} = 25,
 		/obj/item/stack/sheet/mineral/wood{amount = 30} = 25,
-		/obj/item/stack/sheet/bronze/thirty = 20,
 		/obj/item/stack/tile/noslip{amount = 20} = 10,
 		/obj/item/stack/sheet/plastic{amount = 30} = 10,
 		/obj/item/stack/tile/pod{amount = 20} = 4,
@@ -64,7 +63,6 @@
 		/obj/structure/statue/silver/secborg = 20,
 		/obj/structure/statue/silver/medborg = 20,
 		/obj/structure/statue/plasma/scientist = 15,
-		/obj/structure/statue/plasma/xeno = 15,
 		/obj/structure/statue/gold/hos = 5,
 		/obj/structure/statue/gold/hop = 5,
 		/obj/structure/statue/gold/cmo = 5,

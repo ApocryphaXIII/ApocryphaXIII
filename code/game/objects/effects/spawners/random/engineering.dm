@@ -57,7 +57,7 @@
 	name = "Material spawner"
 	icon_state = "metal"
 	loot = list(
-		/obj/item/stack/sheet/iron/fifty = 5,
+		/obj/item/stack/sheet/metal/fifty = 5,
 		/obj/item/stack/sheet/glass/fifty = 5,
 		/obj/item/stack/rods/fifty = 3,
 		/obj/item/stack/sheet/rglass{amount = 30} = 2,
@@ -98,14 +98,6 @@
 		/obj/item/flashlight/lantern/jade = 1,
 	)
 
-/obj/effect/spawner/random/engineering/canister
-	name = "air canister spawner"
-	icon_state = "canister"
-	loot = list( // use this for emergency storage areas and maint
-		/obj/machinery/portable_atmospherics/canister/air = 4,
-		/obj/machinery/portable_atmospherics/canister/oxygen = 1,
-	)
-
 /obj/effect/spawner/random/engineering/tank
 	name = "tank spawner"
 	icon_state = "tank"
@@ -120,15 +112,6 @@
 	icon_state = "vending_restock"
 	loot_subtype_path = /obj/item/vending_refill
 	loot = list()
-
-/obj/effect/spawner/random/engineering/atmospherics_portable
-	name = "portable atmospherics machine spawner"
-	icon_state = "heater"
-	loot = list(
-		/obj/machinery/space_heater = 8,
-		/obj/machinery/portable_atmospherics/pump = 1,
-		/obj/machinery/portable_atmospherics/scrubber = 1,
-	)
 
 /obj/effect/spawner/random/engineering/tracking_beacon
 	name = "tracking beacon spawner"

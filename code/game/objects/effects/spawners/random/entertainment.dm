@@ -70,9 +70,9 @@
 	spawn_loot_count = 3
 	spawn_loot_split = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 5,
-		/obj/item/stack/spacecash/c10 = 3,
-		/obj/item/stack/spacecash/c20 = 2,
+		/obj/item/stack/dollar = 5,
+		/obj/item/stack/dollar/ten = 3,
+		/obj/item/stack/dollar/twenty = 2,
 	)
 
 /obj/effect/spawner/random/entertainment/money
@@ -81,11 +81,11 @@
 	spawn_loot_count = 3
 	spawn_loot_split = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 10,
-		/obj/item/stack/spacecash/c10 = 5,
-		/obj/item/stack/spacecash/c20 = 3,
-		/obj/item/stack/spacecash/c50 = 2,
-		/obj/item/stack/spacecash/c100 = 1,
+		/obj/item/stack/dollar = 10,
+		/obj/item/stack/dollar/ten = 5,
+		/obj/item/stack/dollar/twenty = 3,
+		/obj/item/stack/dollar/fifty = 2,
+		/obj/item/stack/dollar/hundred = 1,
 	)
 
 /obj/effect/spawner/random/entertainment/money_large
@@ -94,26 +94,32 @@
 	spawn_loot_count = 5
 	spawn_loot_split = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 100,
-		/obj/item/stack/spacecash/c10 = 80,
-		/obj/item/stack/spacecash/c20 = 60,
-		/obj/item/stack/spacecash/c50 = 40,
-		/obj/item/stack/spacecash/c100 = 30,
-		/obj/item/stack/spacecash/c200 = 20,
-		/obj/item/stack/spacecash/c500 = 10,
-		/obj/item/stack/spacecash/c1000 = 5,
-		/obj/item/stack/spacecash/c10000 = 1,
+		/obj/item/stack/dollar = 100,
+		/obj/item/stack/dollar/ten = 80,
+		/obj/item/stack/dollar/twenty = 60,
+		/obj/item/stack/dollar/fifty = 40,
+		/obj/item/stack/dollar/hundred = 30,
+		/obj/item/stack/dollar/two_hundred = 20,
+		/obj/item/stack/dollar/five_hundred = 10,
+		/obj/item/stack/dollar/thousand = 5,
 	)
 
 /obj/effect/spawner/random/entertainment/drugs
 	name = "recreational drugs spawner"
 	icon_state = "pill"
 	loot = list(
-		/obj/item/reagent_containers/food/drinks/bottle/hooch = 50,
+		/obj/item/reagent_containers/food/drinks/beer/vampire = 50,
 		/obj/item/clothing/mask/cigarette/rollie/cannabis = 15,
 		/obj/item/reagent_containers/syringe = 15,
 		/obj/item/cigbutt/roach = 15,
 		/obj/item/clothing/mask/cigarette/rollie/mindbreaker = 5,
+		/obj/effect/spawner/random/entertainment/drugs/hard = 5,
+	)
+
+/obj/effect/spawner/random/entertainment/drugs/hard
+	name = "hard drugs spawner"
+	loot = list(
+		/obj/item/reagent_containers/food/drinks/meth = 50,
 	)
 
 /obj/effect/spawner/random/entertainment/dice
@@ -210,7 +216,6 @@
 	loot = list(
 		/obj/item/toy/cards/deck = 10,
 		/obj/item/toy/cards/deck/kotahi = 3,
-		/obj/item/toy/cards/deck/wizoff = 3,
 		/obj/item/toy/cards/deck/tarot = 2,
 		/obj/item/toy/cards/deck/cas = 1,
 		/obj/item/toy/cards/deck/cas/black = 1,

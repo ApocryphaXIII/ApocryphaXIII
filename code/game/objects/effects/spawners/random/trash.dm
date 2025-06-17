@@ -230,12 +230,3 @@
 		/obj/item/storage/box/lights/mixed,
 		/obj/item/storage/box/lights/bulbs,
 	)
-
-/obj/effect/spawner/random/trash/hobo_squat
-	name = "hobo squat spawner"
-	spawn_all_loot = TRUE
-	loot = list(
-		/obj/structure/bed/maint,
-		/obj/effect/spawner/random/trash/grime,
-		/obj/effect/spawner/random/entertainment/drugs
-	)

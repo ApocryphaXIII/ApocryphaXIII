@@ -70,21 +70,13 @@
 /obj/structure/closet/crate/dumpster/PopulateContents()
 	if(prob(internal_trash_chance))
 		if(prob(95))
-			new /obj/effect/spawner/lootdrop/garbage_spawner(src)
+			new /obj/effect/spawner/random/trash/garbage(src)
 		else //Pretty rare while the loot table is un-audited
-			new /obj/effect/spawner/lootdrop/maintenance/random(src)
+			new /obj/effect/spawner/random/maintenance/random(src)
 	if(prob(external_trash_chance))
-		new /obj/effect/spawner/scatter/grime(loc)
+		new /obj/effect/spawner/random/trash/grime(loc)
 
 /obj/structure/closet/crate/dumpster/empty
 	internal_trash_chance = 0
 	external_trash_chance = 0
-
-#warn move
-/obj/effect/spawner/lootdrop/maintenance/random
-	loot_count = 3
-
-/obj/effect/spawner/lootdrop/maintenance/random/Initialize(mapload)
-	loot_count = random(1, lootcount)
-	. = ..()
 

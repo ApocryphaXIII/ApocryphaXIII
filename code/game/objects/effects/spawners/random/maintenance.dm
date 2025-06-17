@@ -34,3 +34,11 @@
 /obj/effect/spawner/random/maintenance/eight
 	name = "8 x maintenance loot spawner"
 	spawn_loot_count = 8
+
+/obj/effect/spawner/random/maintenance/random
+	name = "random maintenance loot spawner"
+	spawn_loot_count = 3
+
+/obj/effect/spawner/random/maintenance/Initialize(mapload)
+	spawn_loot_count = random(1, spawn_loot_count)
+	. = ..()

@@ -242,7 +242,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "iA" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/trash{
 	icon_state = "trash8"
 	},
@@ -388,7 +388,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "nA" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
@@ -769,7 +769,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "Bf" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/trash{
 	icon_state = "trash7"
 	},
@@ -1115,7 +1115,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "JP" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Kt" = (

@@ -231,20 +231,6 @@
 	. = ..()
 	icon_state = "rack[rand(1, 5)]"
 
-/obj/structure/trashbag
-	name = "trash bag"
-	desc = "Holds garbage inside."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "garbage1"
-	anchored = TRUE
-
-/obj/structure/trashbag/Initialize()
-	. = ..()
-	var/garbagestate = rand(1, 9)
-	if(garbagestate > 6)
-		density = TRUE
-	icon_state = "garbage[garbagestate]"
-
 /obj/structure/hotelsign
 	name = "sign"
 	desc = "It says H O T E L."

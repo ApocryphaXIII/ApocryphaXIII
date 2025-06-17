@@ -6,7 +6,7 @@
 /obj/effect/spawner/random/trash/garbage
 	name = "garbage spawner"
 	loot = list(
-		/obj/structure/trashbag = 30,
+		/obj/effect/decal/cleanable/garbage = 30,
 		/obj/effect/spawner/random/trash/food_packaging = 26,
 		/obj/item/trash/can = 8,
 		/obj/item/shard = 8,
@@ -114,6 +114,7 @@
 		/obj/structure/mopbucket = 2,
 	)
 
+/* This is a misuse of this type. This can all be handled with a subtype of the crayon path with 0 overhead.
 /obj/effect/spawner/random/trash/graffiti
 	name = "random graffiti spawner"
 	icon_state = "rune"
@@ -143,6 +144,7 @@
 
 	decal.add_atom_colour(color, FIXED_COLOUR_PRIORITY)
 	decal.icon_state = icon_state
+*/
 
 /obj/effect/spawner/random/trash/mopbucket
 	name = "mop bucket spawner"

@@ -71,11 +71,6 @@
 				var/atom/movable/spawned_loot = new lootspawn(spawn_loc)
 				spawned_loot.setDir(dir)
 
-				if(istype(src, /obj/effect/spawner/random/trash/graffiti))
-					var/obj/effect/spawner/random/trash/graffiti/G = src
-					G.select_graffiti(spawned_loot)
-					//var/obj/graffiti = new /obj/effect/decal/cleanable/crayon(get_turf(src))
-
 				if (!spawn_loot_split && !spawn_random_offset)
 					if (pixel_x != 0)
 						spawned_loot.pixel_x = pixel_x

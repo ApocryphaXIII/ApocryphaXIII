@@ -324,10 +324,24 @@
 
 /obj/effect/decal/cleanable/garbage/Initialize()
 	. = ..()
-	var/garbagestate = rand(1, 9)
-	if(garbagestate > 6)
-		density = TRUE
-	icon_state = "garbage[garbagestate]"
+	icon_state = "garbage[rand(1, 6)]"
+
+/obj/structure/trashbag
+	name = "trash bags"
+	desc = "Enough trashbags to block your way."
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "garbage1"
+	layer = OBJ_LAYER //To display the decal over wires.
+	density = TRUE
+
+/obj/structure/trashbag/Initialize()
+	. = ..()
+	icon_state = "garbage[rand(7, 9)]"
+
+/obj/structure/trashbag/Destroy()
+	new /obj/effect/spawner/random/trash/garbage(loc)
+	return ..()
+
 
 /obj/effect/decal/cleanable/feet_trail
 	name = "trails"

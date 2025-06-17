@@ -6,8 +6,9 @@
 /obj/effect/spawner/random/trash/garbage
 	name = "garbage spawner"
 	loot = list(
-		/obj/effect/decal/cleanable/garbage = 30,
 		/obj/effect/spawner/random/trash/food_packaging = 26,
+		/obj/effect/decal/cleanable/garbage = 20,
+		/obj/structure/trashbag = 10,
 		/obj/item/trash/can = 8,
 		/obj/item/shard = 8,
 		/obj/effect/spawner/random/trash/botanical_waste = 8,

@@ -231,7 +231,7 @@
 	. = ..()
 	icon_state = "rack[rand(1, 5)]"
 
-/obj/structure/trashcan
+/obj/structure/closet/crate/trashcan
 	name = "trash can"
 	desc = "Holds garbage inside."
 	icon = 'code/modules/wod13/props.dmi'
@@ -241,7 +241,7 @@
 	anchored = TRUE
 	density = TRUE
 
-/obj/structure/trashcan/Initialize()
+/obj/structure/closet/crate/trashcan/Initialize()
 	. = ..()
 	if(prob(25))
 		icon_state = "garbage_open"

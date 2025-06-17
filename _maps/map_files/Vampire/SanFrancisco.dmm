@@ -612,7 +612,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/supply)
 "aix" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto/old)
 "aiz" = (
@@ -4185,7 +4185,7 @@
 /area/vtm/interior/millennium_tower/f4)
 "bcC" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "bcQ" = (
@@ -8296,7 +8296,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/mansion)
 "cht" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /obj/effect/decal/trash,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer/nosferatu_town)
@@ -10444,7 +10444,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer/nosferatu_town)
 "cIv" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer)
 "cIB" = (
@@ -11835,7 +11835,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/old)
 "dci" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
 "dct" = (
@@ -12810,7 +12810,7 @@
 /area/vtm/interior)
 "dpp" = (
 /obj/effect/decal/cardboard,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/lower)
 "dpu" = (
@@ -17478,7 +17478,7 @@
 "eEZ" = (
 /obj/effect/decal/trash,
 /obj/effect/decal/litter,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "eFa" = (
@@ -17526,7 +17526,7 @@
 /turf/closed/wall/vampwall,
 /area/vtm/hotel)
 "eFB" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/community)
 "eFH" = (
@@ -18946,7 +18946,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/glasswalker)
 "fbo" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/chinatown)
 "fbq" = (
@@ -28395,7 +28395,7 @@
 /area/vtm/forest)
 "hyl" = (
 /obj/effect/decal/graffiti,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/community)
 "hyq" = (
@@ -29516,7 +29516,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower/f2)
 "hOo" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer/nosferatu_town)
 "hOD" = (
@@ -30686,7 +30686,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility)
 "ieL" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior/endron_facility/forest)
 "ieS" = (
@@ -32366,7 +32366,7 @@
 	pixel_x = 10;
 	pixel_y = 3
 	},
-/obj/structure/trashcan{
+/obj/structure/closet/crate/trashcan{
 	pixel_x = 3;
 	pixel_y = 5
 	},
@@ -35758,7 +35758,7 @@
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/pacificheights/forest)
 "jzV" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "jzX" = (
@@ -36240,7 +36240,7 @@
 /area/vtm/sewer)
 "jFI" = (
 /obj/effect/decal/litter,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer)
 "jFK" = (
@@ -36631,7 +36631,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/cog/caern)
 "jLZ" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/interior)
 "jMa" = (
@@ -41982,7 +41982,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/museum)
 "liE" = (
-/obj/structure/trashcan{
+/obj/structure/closet/crate/trashcan{
 	pixel_x = 3;
 	pixel_y = 10
 	},
@@ -46634,7 +46634,7 @@
 /turf/open/floor/plating/vampwood,
 /area/vtm/hotel)
 "mys" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/financialdistrict/construction)
 "myt" = (
@@ -47011,7 +47011,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/laundromat)
 "mDa" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/fishermanswharf)
 "mDm" = (
@@ -51884,7 +51884,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict)
 "nMC" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/interior/tzimisce_manor)
 "nMG" = (
@@ -53219,7 +53219,7 @@
 /area/vtm/chinatown)
 "ogk" = (
 /obj/effect/decal/cardboard,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "ogp" = (
@@ -54313,7 +54313,7 @@
 /turf/open/floor/carpet/red,
 /area/vtm/clinic)
 "ovy" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "ovE" = (
@@ -55586,7 +55586,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
 "oLB" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /obj/item/storage/bag/trash,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
@@ -58672,7 +58672,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior/police)
 "pBu" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights/community)
 "pBv" = (
@@ -59014,7 +59014,7 @@
 /turf/open/floor/carpet/lone,
 /area/vtm/interior/millennium_tower/ventrue)
 "pGa" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /obj/machinery/light/small{
 	pixel_y = 32
 	},
@@ -66367,7 +66367,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "rxj" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "rxm" = (
@@ -70431,7 +70431,7 @@
 /obj/effect/decal/bordur{
 	dir = 1
 	},
-/obj/structure/trashcan{
+/obj/structure/closet/crate/trashcan{
 	pixel_x = 3;
 	pixel_y = 10
 	},
@@ -71102,7 +71102,7 @@
 /area/vtm/pacificheights/old)
 "sIO" = (
 /obj/effect/decal/trash,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/lower)
 "sIP" = (
@@ -78285,7 +78285,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/chinatown)
 "uHv" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "uHw" = (
@@ -78476,7 +78476,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/vtm/cabaret)
 "uKh" = (
-/obj/structure/trashcan{
+/obj/structure/closet/crate/trashcan{
 	pixel_x = 3;
 	pixel_y = 10
 	},
@@ -79951,7 +79951,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/church/interior/staff)
 "vdV" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/lower)
 "veb" = (
@@ -83753,7 +83753,7 @@
 /turf/open/floor/carpet/purple,
 /area/vtm/interior/millennium_tower/ventrue)
 "wef" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/chinatown)
 "weh" = (
@@ -84117,7 +84117,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/cog/caern)
 "wjS" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
@@ -84348,7 +84348,7 @@
 /area/vtm/church)
 "wnq" = (
 /obj/effect/decal/bordur,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "wnu" = (
@@ -87529,7 +87529,7 @@
 	dir = 4
 	},
 /obj/effect/decal/graffiti,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "xfJ" = (
@@ -91120,7 +91120,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/giovanni/outside)
 "ydt" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/trashcan,
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)

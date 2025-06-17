@@ -339,7 +339,7 @@
 /area/vtm/interior/gnawer)
 "aez" = (
 /obj/structure/rack,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/concrete,
 /area/vtm/supply)
 "aeF" = (
@@ -361,7 +361,7 @@
 /area/vtm/clinic)
 "aeP" = (
 /obj/structure/table,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/item/melee/vampirearms/baseball,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
@@ -2330,7 +2330,7 @@
 /obj/structure/flora/ausbushes/leafybush{
 	pixel_y = 13
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampwood,
 /area/vtm/interior/bianchiBank)
 "aEp" = (
@@ -2998,10 +2998,7 @@
 /obj/item/clothing/glasses/vampire/perception,
 /obj/item/clothing/glasses/vampire/perception,
 /obj/item/clothing/glasses/vampire/perception,
-/obj/item/vtm_artifact/rand{
-	pixel_x = -6;
-	pixel_y = 6
-	},
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
 "aMB" = (
@@ -4039,7 +4036,7 @@
 /obj/item/dyespray,
 /obj/item/lipstick/random,
 /obj/item/lipstick/random,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/machinery/light/prince{
 	pixel_y = 32;
 	light_power = 0.45;
@@ -4937,7 +4934,7 @@
 	name = "elegant table";
 	desc = "An extremely fancy table"
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/trujah)
 "bmx" = (
@@ -5570,7 +5567,7 @@
 "bux" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/barrels/rand,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/northbeach)
 "buz" = (
@@ -6705,7 +6702,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/strip/toreador)
 "bKo" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "bKs" = (
@@ -7110,7 +7107,7 @@
 /area/vtm/cabaret/basement)
 "bQo" = (
 /obj/structure/table/wood,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/machinery/button/curtain{
 	id = 24
 	},
@@ -7997,7 +7994,7 @@
 /area/vtm/chinatown)
 "cek" = (
 /obj/structure/table,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/museum)
 "cen" = (
@@ -8513,7 +8510,7 @@
 	dir = 1;
 	pixel_y = 12
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampwood,
 /area/vtm/northbeach)
 "ckj" = (
@@ -10410,7 +10407,7 @@
 /turf/open/floor/bronze,
 /area/vtm/interior/giovanni)
 "cIf" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/forest)
 "cIk" = (
@@ -12919,7 +12916,7 @@
 /area/vtm/financialdistrict)
 "dqu" = (
 /obj/structure/table/wood/fancy/black,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/oldchurch)
 "dqv" = (
@@ -13953,7 +13950,7 @@
 /obj/structure/trashbag,
 /obj/effect/decal/trash,
 /obj/effect/decal/graffiti,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
 "dFt" = (
@@ -14374,7 +14371,7 @@
 /area/vtm)
 "dKX" = (
 /obj/structure/table/wood/fancy,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/carpet,
 /area/vtm/interior/giovanni)
 "dLe" = (
@@ -18412,7 +18409,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/millennium_tower/f4)
 "eSR" = (
@@ -19368,7 +19365,7 @@
 /area/space)
 "fgd" = (
 /obj/structure/table/wood,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/carpet,
 /area/vtm/interior/shop)
 "fgA" = (
@@ -20787,7 +20784,7 @@
 /area/vtm/interior/police/fed)
 "fyA" = (
 /obj/structure/table,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
 "fyK" = (
@@ -22394,7 +22391,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/grill,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry,
 /area/vtm)
 "fTy" = (
@@ -23986,7 +23983,7 @@
 /obj/item/clothing/suit/vampire/trench/tzi,
 /obj/structure/table/wood,
 /obj/item/clothing/head/vampire/skull,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/indestructible/necropolis/air,
 /area/vtm/sewer)
 "goy" = (
@@ -25102,7 +25099,7 @@
 /area/vtm/cabaret/basement)
 "gCP" = (
 /obj/structure/table/wood,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
 "gCR" = (
@@ -26297,7 +26294,7 @@
 /turf/closed/wall/vampwall/bar,
 /area/vtm/anarch/basement)
 "gSF" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/structure/rack,
 /obj/item/bodybag,
 /obj/item/bodybag,
@@ -26721,7 +26718,7 @@
 /area/vtm/interior/millennium_tower/ventrue)
 "gYN" = (
 /obj/structure/table/wood/fancy/blue,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/carpet/blue,
 /area/vtm/interior/strip/toreador)
 "gYO" = (
@@ -26949,7 +26946,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/strip/toreador)
 "hcn" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/church/interior/staff)
 "hcs" = (
@@ -27891,7 +27888,7 @@
 /area/vtm/interior/chantry)
 "hqb" = (
 /obj/structure/table/wood,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "hqc" = (
@@ -28103,7 +28100,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/financialdistrict/library)
 "htf" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/shop)
 "hth" = (
@@ -28433,7 +28430,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict/construction)
 "hyT" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
 "hyW" = (
@@ -30949,7 +30946,7 @@
 /area/vtm/interior/giovanni)
 "iiH" = (
 /obj/effect/decal/pallet,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "iiO" = (
@@ -34067,7 +34064,7 @@
 	dir = 9
 	},
 /obj/structure/table/wood,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "jbW" = (
@@ -34763,7 +34760,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "jmy" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/bianchiBank)
 "jmD" = (
@@ -37021,7 +37018,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "jRd" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer/nosferatu_town)
 "jRe" = (
@@ -37738,7 +37735,7 @@
 "kbp" = (
 /obj/structure/table/wood/fancy/red,
 /obj/item/arcane_tome,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/carpet/lone,
 /area/vtm/interior/chantry/basement)
 "kbw" = (
@@ -39181,7 +39178,7 @@
 /area/vtm/interior/chantry)
 "kwH" = (
 /obj/structure/glowshroom/single,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer)
 "kwQ" = (
@@ -46182,7 +46179,7 @@
 /area/vtm/interior/millennium_tower)
 "msg" = (
 /obj/structure/table/wood,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/carpet/black,
 /area/vtm/sewer/nosferatu_town)
 "msl" = (
@@ -47390,7 +47387,7 @@
 /area/vtm/anarch/basement)
 "mHF" = (
 /obj/structure/table/wood/fancy,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "mHG" = (
@@ -51828,7 +51825,7 @@
 /area/vtm/pacificheights/forest)
 "nLS" = (
 /obj/structure/table/wood/fancy,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/item/vamp/keys/giovanni{
 	accesslocks = list("giovanni","bianchiBank","bankboss");
 	color = "#263068";
@@ -55237,7 +55234,7 @@
 /area/vtm/interior/strip/elysium)
 "oGJ" = (
 /obj/item/kirbyplants/random,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "oGM" = (
@@ -57002,7 +56999,7 @@
 /area/vtm/interior/techshop)
 "peq" = (
 /obj/structure/fire_barrel,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
 "pes" = (
@@ -59025,7 +59022,7 @@
 /obj/structure/mirror{
 	pixel_y = 32
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/item/wire_cutters,
 /obj/item/storage/box/lights/mixed,
 /turf/open/floor/plating/parquetry,
@@ -61300,7 +61297,7 @@
 /area/vtm/anarch)
 "qjB" = (
 /obj/effect/decal/pallet,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "qjJ" = (
@@ -62206,7 +62203,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower/f2)
 "qwn" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/structure/table/wood,
 /obj/item/stack/cable_coil/cut,
 /turf/open/floor/plating/parquetry/old,
@@ -62463,7 +62460,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights/community)
 "qzk" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/financialdistrict/construction)
 "qzl" = (
@@ -62780,7 +62777,7 @@
 	},
 /obj/item/flashlight,
 /obj/structure/coclock,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/carpet/green,
 /area/vtm/hotel)
 "qEj" = (
@@ -64063,7 +64060,7 @@
 "qTQ" = (
 /obj/vampire_computer,
 /obj/structure/table/wood,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/hotel)
 "qTY" = (
@@ -64812,7 +64809,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cardboard,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "ree" = (
@@ -65138,7 +65135,7 @@
 	dir = 4;
 	pixel_y = 4
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/machinery/light/dim{
 	dir = 8
 	},
@@ -66628,7 +66625,7 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/sewer)
 "rBw" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
 "rBy" = (
@@ -68200,7 +68197,7 @@
 /area/vtm/church/interior/staff)
 "rVY" = (
 /obj/structure/table/wood/fancy/red,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
@@ -68459,7 +68456,7 @@
 /area/vtm/interior)
 "rYJ" = (
 /obj/effect/decal/cleanable/blood/old,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
 "rYP" = (
@@ -74540,7 +74537,7 @@
 /area/vtm/interior/millennium_tower/f3)
 "tGj" = (
 /obj/effect/landmark/npcability,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/financialdistrict/construction)
 "tGq" = (
@@ -78581,7 +78578,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
 "uLP" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior)
 "uLT" = (
@@ -79709,7 +79706,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior)
 "vaU" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/machinery/light/red{
 	pixel_y = 32
 	},
@@ -80717,7 +80714,7 @@
 /obj/effect/decal/stock{
 	dir = 1
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights/community)
 "vpx" = (
@@ -83825,7 +83822,7 @@
 /area/vtm/financialdistrict/library)
 "weS" = (
 /obj/structure/table/wood/fancy/red,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -87419,7 +87416,7 @@
 /area/vtm/ghetto)
 "xeQ" = (
 /obj/structure/table/wood/fancy/black,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/carpet,
 /area/vtm/interior/oldchurch)
 "xeV" = (
@@ -90412,7 +90409,7 @@
 /area/vtm/interior/tzimisce_manor)
 "xUg" = (
 /obj/structure/table,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "xUh" = (
@@ -91066,7 +91063,7 @@
 /area/vtm/interior/shop)
 "ycr" = (
 /obj/effect/landmark/npcwall,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/park)
 "ycu" = (
@@ -91704,7 +91701,7 @@
 /area/vtm/interior)
 "ykD" = (
 /obj/structure/fire_barrel,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "ykH" = (

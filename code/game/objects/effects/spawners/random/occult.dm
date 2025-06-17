@@ -1,5 +1,5 @@
 /obj/effect/spawner/random/occult
-	name "occult spawner"
+	name = "occult spawner"
 	icon = 'code/modules/wod13/items.dmi'
 	icon_state = "art_rand"
 

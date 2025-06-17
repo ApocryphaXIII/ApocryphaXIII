@@ -37,10 +37,10 @@
 	name = "trash and grime scatterer"
 	max_spawns = 5
 	loot_table = list(/obj/effect/spawner/lootdrop/garbage_spawner = 30,
-					/mob/living/simple_animal/hostile/cockroach = 25,
-					/obj/effect/decal/cleanable/garbage = 20,
-					/obj/effect/decal/cleanable/vomit/old = 15,
-					/obj/effect/spawner/lootdrop/cigbutt = 10)
+					/obj/effect/decal/cleanable/garbage = 30,
+					/obj/effect/decal/cleanable/vomit/old = 25,
+					/obj/effect/spawner/lootdrop/cigbutt = 10,
+					/mob/living/simple_animal/hostile/cockroach = 5)
 
 ///This spawner will scatter water related items around a moist site.
 /obj/effect/spawner/scatter/moisture

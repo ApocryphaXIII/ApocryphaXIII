@@ -133,7 +133,9 @@
 
 /obj/effect/spawner/lootdrop/garbage_spawner
 	name = "garbage_spawner"
-	loot = list(/obj/effect/spawner/lootdrop/food_packaging = 56,
+	loot = list(
+				/obj/structure/trashbag = 30,
+				/obj/effect/spawner/lootdrop/food_packaging = 26,
 				/obj/item/trash/can = 8,
 				/obj/item/shard = 8,
 				/obj/effect/spawner/lootdrop/botanical_waste = 8,

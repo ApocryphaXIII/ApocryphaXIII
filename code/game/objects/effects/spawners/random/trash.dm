@@ -6,7 +6,8 @@
 /obj/effect/spawner/random/trash/garbage
 	name = "garbage spawner"
 	loot = list(
-		/obj/effect/spawner/random/trash/food_packaging = 56,
+		/obj/structure/trashbag = 30,
+		/obj/effect/spawner/random/trash/food_packaging = 26,
 		/obj/item/trash/can = 8,
 		/obj/item/shard = 8,
 		/obj/effect/spawner/random/trash/botanical_waste = 8,
@@ -104,10 +105,10 @@
 	spawn_scatter_radius = 2
 	loot = list( // This spawner will scatter garbage around a dirty site.
 		/obj/effect/spawner/random/trash/garbage = 6,
-		/mob/living/simple_animal/hostile/cockroach = 5,
 		/obj/effect/decal/cleanable/garbage = 4,
 		/obj/effect/decal/cleanable/vomit/old = 3,
 		/obj/effect/spawner/random/trash/cigbutt = 2,
+		/mob/living/simple_animal/hostile/cockroach = 1,
 	)
 
 /obj/effect/spawner/random/trash/moisture

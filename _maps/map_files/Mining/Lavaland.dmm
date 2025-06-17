@@ -560,7 +560,7 @@
 	dir = 1;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "fg" = (
@@ -740,7 +740,7 @@
 	dir = 8;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "hG" = (
@@ -1150,7 +1150,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "mz" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /obj/item/clothing/glasses/regular/hipster{
 	anchored = 1
 	},
@@ -1174,7 +1174,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "mS" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampwood{
 	umbra = 1
 	},
@@ -1186,7 +1186,7 @@
 	},
 /area/vtm/interior/penumbra)
 "nb" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /obj/item/clothing/glasses/regular/circle{
 	anchored = 1
 	},
@@ -1831,7 +1831,7 @@
 	dir = 4;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /obj/structure/trashbag,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
@@ -2055,11 +2055,11 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "ww" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "wy" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -2094,7 +2094,7 @@
 /area/vtm/interior/penumbra)
 "wS" = (
 /obj/police_department,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "wW" = (
@@ -4250,7 +4250,7 @@
 /area/vtm/interior/penumbra)
 "Vq" = (
 /obj/structure/strip_club,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/sidewalk{
 	umbra = 1
 	},
@@ -4320,7 +4320,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "Wg" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/sidewalk{
 	umbra = 1
 	},

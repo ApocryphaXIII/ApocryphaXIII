@@ -1449,7 +1449,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "UJ" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "UK" = (

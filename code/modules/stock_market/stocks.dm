@@ -250,7 +250,7 @@
 			return 1
 	return 0
 
-/datum/stock/proc/borrow(var/datum/borrow/B, var/who)
+/datum/stock/proc/borrow(datum/borrow/B, who)
 	if (B.lease_expires)
 		return 0
 	B.lease_expires = world.time + B.lease_time

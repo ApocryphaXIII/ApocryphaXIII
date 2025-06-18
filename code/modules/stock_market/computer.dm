@@ -232,7 +232,7 @@ a.updated {
 	to_chat(user, "<span class='notice'>Sold [amt] shares of [S.name] at [S.current_value] a share for [total] credits.</span>")
 	GLOB.stockExchange.add_log(/datum/stock_log/sell, user.name, S.name, amt, S.current_value, total)
 
-/obj/machinery/computer/stockexchange/proc/buy_some_shares(var/datum/stock/S, var/mob/user)
+/obj/machinery/computer/stockexchange/proc/buy_some_shares(datum/stock/S, mob/user)
 	if (!user || !S)
 		return
 	var/li = logged_in

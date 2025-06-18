@@ -1,6 +1,7 @@
+import { Box, Button, Flex, Icon, Stack } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
+
 import { useBackend } from '../backend';
-import { Box, Button, Flex, Stack, Icon } from 'tgui-core/components';
 import { Window } from '../layouts';
 
 // This ui is so many manual overrides and !important tags

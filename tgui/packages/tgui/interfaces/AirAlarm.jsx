@@ -1,7 +1,8 @@
-import { toFixed } from 'tgui-core/math';
 import { Fragment } from 'react';
-import { useBackend, useLocalState } from '../backend';
 import { Box, Button, LabeledList, Section } from 'tgui-core/components';
+import { toFixed } from 'tgui-core/math';
+
+import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
 import { Scrubber, Vent } from './common/AtmosControls';
 import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';

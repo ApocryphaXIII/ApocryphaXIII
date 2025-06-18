@@ -1,8 +1,5 @@
 import { uniqBy } from 'common/collections';
-import { classes } from 'tgui-core/react';
-import { createSearch } from 'tgui-core/string';
 import { Fragment } from 'react';
-import { useBackend, useSharedState } from '../backend';
 import {
   Box,
   Button,
@@ -15,6 +12,10 @@ import {
   Stack,
 } from 'tgui-core/components';
 import { formatMoney, formatSiUnit } from 'tgui-core/format';
+import { classes } from 'tgui-core/react';
+import { createSearch } from 'tgui-core/string';
+
+import { useBackend, useSharedState } from '../backend';
 import { Window } from '../layouts';
 
 const MATERIAL_KEYS = {
@@ -329,10 +330,7 @@ const PartLists = (props) => {
     getFirstValidPartSet(partSets),
   );
 
-  const [searchText, setSearchText] = useSharedState(
-    'search_text',
-    '',
-  );
+  const [searchText, setSearchText] = useSharedState('search_text', '');
 
   if (!selectedPartTab || !buildableParts[selectedPartTab]) {
     const validSet = getFirstValidPartSet(partSets);

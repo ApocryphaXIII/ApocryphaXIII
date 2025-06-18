@@ -35,6 +35,8 @@
 
 #define STATUS_EFFECT_FEAR /datum/status_effect/fear
 
+#define STATUS_EFFECT_SECOND_SIGHT /datum/status_effect/second_sight
+
 /////////////
 // DEBUFFS //
 /////////////

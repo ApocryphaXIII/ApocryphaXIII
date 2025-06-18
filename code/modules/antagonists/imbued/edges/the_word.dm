@@ -2,3 +2,4 @@
 	name = "The Word"
 	desc = "Allows you to write the word."
 	edge_dots = IMBUED_POWER_INNATE
+

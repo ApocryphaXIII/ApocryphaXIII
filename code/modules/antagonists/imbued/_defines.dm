@@ -11,7 +11,7 @@
 #define CREED_REDEEMER "redeemer"
 #define CREED_VISIONARY "visionary"
 #define CREED_HERMIT "hermit"
-#define CREED_WAYWARY "wayward"
+#define CREED_WAYWARD "wayward"
 
 #define MAX_DOT_TOTAL 15
 #define MAX_DOT_PER_VIRTUE 10

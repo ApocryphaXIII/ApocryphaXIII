@@ -15,6 +15,6 @@
 	user.apply_status_effect(STATUS_EFFECT_SECOND_SIGHT)
 	return TRUE
 
-/datum/status_effect/second_sight
+/datum/status_effect/imbued/second_sight
 	id = "second_sight"
 	duration = 10 SECONDS

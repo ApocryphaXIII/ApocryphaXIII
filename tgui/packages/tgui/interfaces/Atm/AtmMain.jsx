@@ -23,7 +23,7 @@ export const AtmMain = (props) => {
 
   const {
     balance,
-    account_owner,
+    account_holder,
     atm_balance,
     bank_account_list = '[]',
   } = data;
@@ -39,13 +39,13 @@ export const AtmMain = (props) => {
   }
 
   accounts = accounts.sort((a, b) => {
-    const nameA = (a.account_owner || '').toLowerCase();
-    const nameB = (b.account_owner || '').toLowerCase();
+    const nameA = (a.account_holder || '').toLowerCase();
+    const nameB = (b.account_holder || '').toLowerCase();
     return nameA.localeCompare(nameB);
   });
 
   const filteredAccounts = accounts.filter((account) =>
-    (account.account_owner || 'Unnamed Account')
+    (account.account_holder || 'Unnamed Account')
       .toLowerCase()
       .includes(searchTerm.toLowerCase()),
   );
@@ -79,7 +79,7 @@ export const AtmMain = (props) => {
         <Section>
           <LabeledList>
             <LabeledList.Item label="Account Owner">
-              {account_owner}
+              {account_holder}
             </LabeledList.Item>
             <LabeledList.Item label="Balance">{balance}</LabeledList.Item>
             <LabeledList.Item label="Money in ATM">
@@ -156,26 +156,26 @@ export const AtmMain = (props) => {
                     filteredAccounts.map((account, index) => (
                       <Box
                         key={index}
-                        className={`account-item ${selectedAccount === account.account_owner ? 'selected' : ''}`}
+                        className={`account-item ${selectedAccount === account.account_holder ? 'selected' : ''}`}
                         p={1}
                         mb={1}
                         cursor="pointer"
                         borderRadius="4px"
                         backgroundColor={
-                          selectedAccount === account.account_owner
+                          selectedAccount === account.account_holder
                             ? '#007bff'
                             : '#f8f9fa'
                         }
                         color={
-                          selectedAccount === account.account_owner
+                          selectedAccount === account.account_holder
                             ? '#fff'
                             : '#000'
                         }
                         onClick={() =>
-                          setSelectedAccount(account.account_owner)
+                          setSelectedAccount(account.account_holder)
                         }
                       >
-                        {account.account_owner || 'Unnamed Account'}
+                        {account.account_holder || 'Unnamed Account'}
                       </Box>
                     ))
                   ) : (

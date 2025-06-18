@@ -42,7 +42,7 @@
 		/obj/item/cockclock=1,
 		/obj/item/flashlight=1,
 		/obj/item/arcane_tome=1,
-		/obj/item/vamp/creditcard=1,
+		/obj/item/card/credit=1,
 		/obj/item/melee/vampirearms/katana/kosa=1,
 	)
 

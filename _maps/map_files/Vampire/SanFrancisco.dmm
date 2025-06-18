@@ -10374,7 +10374,7 @@
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/cabaret)
 "cHV" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /obj/structure/table/wood,
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/plating/parquetry/old,
@@ -34256,7 +34256,7 @@
 /area/vtm/sewer)
 "jfr" = (
 /obj/structure/closet/crate/large,
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/concrete,
 /area/vtm/anarch/basement)
 "jfC" = (

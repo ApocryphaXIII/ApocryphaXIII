@@ -32,7 +32,7 @@
 	backpack_contents = list(
 		/obj/item/passport=1,
 		/obj/item/flashlight=1,
-		/obj/item/vamp/creditcard=1,
+		/obj/item/card/credit=1,
 	)
 
 /datum/outfit/job/baali/pre_equip(mob/living/carbon/human/H)

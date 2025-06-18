@@ -232,13 +232,13 @@ Dancer
 	if(!ishuman(quirk_holder))
 		return
 	var/mob/living/carbon/human/debtor = quirk_holder
-	for(var/datum/vtm_bank_account/account as anything in GLOB.bank_account_list)
-		if(debtor.bank_id != account.bank_id)
+	for(var/datum/bank_account/account as anything in GLOB.bank_account_list)
+		if(debtor.account_id != account.account_id)
 			continue
 		if(debtor.clane?.name == CLAN_VENTRUE)
-			account.balance = 5 // Extra loss of dignitas.
+			account.account_balance = 5 // Extra loss of dignitas.
 		else
-			account.balance = floor(account.balance * 0.5)
+			account.account_balance = floor(account.account_balance * 0.5)
 		break
 
 /datum/quirk/messy_eater

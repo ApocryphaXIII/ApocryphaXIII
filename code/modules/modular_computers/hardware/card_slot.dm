@@ -7,6 +7,7 @@
 	device_type = MC_CARD
 
 	var/obj/item/card/id/stored_card = null
+	var/obj/item/card/credit/bank_card = null
 
 /obj/item/computer_hardware/card_slot/handle_atom_del(atom/A)
 	if(A == stored_card)

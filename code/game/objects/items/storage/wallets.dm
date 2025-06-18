@@ -118,6 +118,11 @@
 	else
 		return ..()
 
+/obj/item/storage/wallet/GetCreditCard()
+	for(var/obj/item/card/I in contents)
+		if(is_creditcard(I))
+			return I
+
 /obj/item/storage/wallet/random
 	icon_state = "random_wallet"
 

@@ -12,7 +12,7 @@
 	uniform = /obj/item/clothing/under/vampire/office
 	gloves = null
 	suit = null
-	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1, /obj/item/clipboard=1, /obj/item/pen=1, /obj/item/folder/blue=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit=1, /obj/item/clipboard=1, /obj/item/pen=1, /obj/item/folder/blue=1)
 
 /datum/outfit/job/towerwork/towersecurityguard
 	name = "Tower Employee (Tower Security Guard)"
@@ -21,7 +21,7 @@
 	gloves = null
 	suit = null
 	belt = /obj/item/gun/ballistic/automatic/vampire/m1911
-	backpack_contents = list(/obj/item/flashlight=1, /obj/item/vamp/creditcard=1,/obj/item/food/vampire/donut=5, /obj/item/cockclock=1)
+	backpack_contents = list(/obj/item/flashlight=1, /obj/item/card/credit=1,/obj/item/food/vampire/donut=5, /obj/item/cockclock=1)
 
 /datum/outfit/job/towerwork/towerpersonaldriver
 	name = "Tower Employee (Tower Personal Driver)"
@@ -38,7 +38,7 @@
 /datum/outfit/job/towerwork/towerpersonalattendant
 	name = "Tower Employee (Tower Personal Attendant)"
 	uniform = /obj/item/clothing/under/vampire/suit
-	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1, /obj/item/clipboard=1, /obj/item/pen=1, /obj/item/folder/red=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit=1, /obj/item/clipboard=1, /obj/item/pen=1, /obj/item/folder/red=1)
 
 /datum/outfit/job/towerwork/towerpersonalattendant/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -57,7 +57,7 @@
 	head = /obj/item/clothing/head/pentex/pentex_whitehardhat
 	shoes = /obj/item/clothing/shoes/vampire/jackboots/work
 	gloves = /obj/item/clothing/gloves/vampire/cleaning
-	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1, /obj/item/reagent_containers/spray/cleaner)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit=1, /obj/item/reagent_containers/spray/cleaner)
 
 /datum/outfit/job/garou/endron/endronlabourer
 	name = "Endron Employee (Endron Labourer)"
@@ -67,19 +67,19 @@
 	mask = /obj/item/clothing/mask/vampire
 	shoes = /obj/item/clothing/shoes/vampire/jackboots/work
 	gloves = /obj/item/clothing/gloves/vampire/work
-	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1, /obj/item/pickaxe, /obj/item/flashlight/flare)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit=1, /obj/item/pickaxe, /obj/item/flashlight/flare)
 
 /datum/outfit/job/garou/endron/endronresearcher
 	name = "Endron Employee (Endron Researcher)"
 	uniform = /obj/item/clothing/under/pentex/pentex_turtleneck
 	suit = /obj/item/clothing/suit/pentex/pentex_labcoat_alt
 	gloves = /obj/item/clothing/gloves/vampire/latex
-	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1, /obj/item/clipboard=1, /obj/item/pen=1, /obj/item/folder/blue=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit=1, /obj/item/clipboard=1, /obj/item/pen=1, /obj/item/folder/blue=1)
 
 /datum/outfit/job/garou/endron/endronsecretary
 	name = "Endron Employee (Endron Secretary)"
 	uniform = /obj/item/clothing/under/pentex/pentex_suit
-	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1, /obj/item/clipboard=1, /obj/item/pen=1, /obj/item/folder/blue=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit=1, /obj/item/clipboard=1, /obj/item/pen=1, /obj/item/folder/blue=1)
 
 /datum/outfit/job/garou/endron/endronsecretary/pre_equip(mob/living/carbon/human/H)
 	..()

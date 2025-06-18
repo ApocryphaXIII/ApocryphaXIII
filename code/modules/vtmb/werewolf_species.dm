@@ -115,9 +115,10 @@
 				dat += "-[i] contact<BR>"
 		if(istype(host, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = host
-			for(var/datum/vtm_bank_account/account in GLOB.bank_account_list)
-				if(H.bank_id == account.bank_id)
-					dat += "<b>My bank account code is: [account.code]</b><BR>"
+			if(H.account_id)
+				var/datum/bank_account/account = SSeconomy.bank_accounts_by_id["[H.account_id]"]
+				if(account)
+					dat += "<b>My bank pin is: [account.bank_pin]</b><BR>"
 		host << browse(dat, "window=vampire;size=400x450;border=1;can_resize=1;can_minimize=0")
 		onclose(host, "vampire", src)
 

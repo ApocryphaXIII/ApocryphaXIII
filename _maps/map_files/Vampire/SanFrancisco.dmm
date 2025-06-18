@@ -25992,7 +25992,6 @@
 /area/vtm/sewer/nosferatu_town)
 "gSo" = (
 /obj/structure/table/wood/fancy,
-/obj/structure/table/wood/fancy,
 /obj/item/paper_bin,
 /obj/item/pen/red,
 /turf/open/floor/carpet,
@@ -28798,7 +28797,6 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/giovanni)
 "hHN" = (
-/obj/structure/table,
 /obj/structure/table,
 /obj/item/clothing/suit/apron/chef,
 /obj/item/clothing/head/chefhat,
@@ -36455,7 +36453,6 @@
 /area/vtm/interior/bianchiBank)
 "jOV" = (
 /obj/structure/chair/wood/wings,
-/obj/structure/chair/wood/wings,
 /turf/open/floor/carpet/red,
 /area/vtm/interior/theatre)
 "jPb" = (
@@ -41417,7 +41414,6 @@
 /area/vtm/financialdistrict)
 "lgH" = (
 /obj/structure/table/wood,
-/obj/structure/table/wood,
 /obj/item/candle/infinite,
 /obj/item/clothing/head/vampire/cowboy,
 /turf/open/floor/plating/parquetry/old,
@@ -46105,7 +46101,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/strip)
 "mxu" = (
-/obj/structure/table/wood,
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
 /turf/open/floor/plating/parquetry/old,
@@ -53806,7 +53801,6 @@
 /area/vtm/interior/millennium_tower)
 "ovK" = (
 /obj/structure/table/wood/fancy/royalblue,
-/obj/structure/table/wood/fancy/royalblue,
 /obj/effect/turf_decal/siding/white{
 	dir = 8
 	},
@@ -56830,7 +56824,6 @@
 /area/vtm/financialdistrict)
 "pjp" = (
 /obj/structure/table/wood,
-/obj/structure/table/wood,
 /obj/item/storage/belt/vampire/sheathe/sabre,
 /turf/open/floor/carpet/lone,
 /area/vtm/interior)
@@ -59475,7 +59468,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/mansion)
 "pSs" = (
-/obj/structure/table/wood,
 /obj/structure/table/wood,
 /obj/underplate,
 /obj/underplate/stuff{
@@ -62745,7 +62737,6 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/financialdistrict)
 "qLn" = (
-/obj/structure/table/wood,
 /obj/structure/table/wood,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
@@ -70585,7 +70576,6 @@
 /area/vtm/interior/millennium_tower/ventrue)
 "sLk" = (
 /obj/structure/table/wood,
-/obj/structure/table/wood,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/mansion)
 "sLn" = (
@@ -70783,7 +70773,6 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/mansion)
 "sOe" = (
-/obj/structure/table/wood,
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
 /area/vtm/interior/strip/elysium)
@@ -72467,7 +72456,6 @@
 /area/vtm/interior/endron_facility/helipad)
 "tnz" = (
 /obj/structure/table/wood,
-/obj/structure/table/wood,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/laundromat)
 "tnF" = (
@@ -73165,7 +73153,6 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "twp" = (
-/obj/structure/table/wood,
 /obj/structure/table/wood,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/strip/toreador)
@@ -75308,7 +75295,6 @@
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/interior/glasswalker)
 "ucj" = (
-/obj/structure/table,
 /obj/structure/table,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)

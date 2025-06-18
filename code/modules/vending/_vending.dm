@@ -142,22 +142,20 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/shoot_inventory = 0
 	///How likely this is to happen (prob 100) per second
 	var/shoot_inventory_chance = 1
-	//Stop spouting those godawful pitches!
-	var/shut_up = 0
 	///can we access the hidden inventory?
 	var/extended_inventory = 0
 	///Are we checking the users ID
 	var/scan_id = 1
-	///Coins that we accept?
-	var/obj/item/coin/coin
-	///Bills we accept?
-	var/obj/item/stack/dollar/bill
 	///Default price of items if not overridden
 	var/default_price = 25
 	///Default price of premium items if not overridden
 	var/extra_price = 50
 	///Whether our age check is currently functional
 	var/age_restrictions = TRUE
+	/// How much physical cash does this vending machine have?
+	var/cash_contained = 0
+	/// Cash currently inserted awaiting to be deducted for purchases
+	var/cash_inserted = 0
 	/**
 	  * Is this item on station or not
 	  *
@@ -166,6 +164,12 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/onstation = TRUE //if it doesn't originate from off-station during mapload, everything is free
 	///A variable to change on a per instance basis on the map that allows the instance to force cost and ID requirements
 	var/onstation_override = FALSE //change this on the object on the map to override the onstation check. DO NOT APPLY THIS GLOBALLY.
+	/**
+	 * If this is set to TRUE, all products sold by the vending machine are free (cost nothing).
+	 * If unset, this will get automatically set to TRUE during init if the machine originates from off-station during mapload.
+	 * Defaults to null, set it to TRUE or FALSE explicitly on a per-machine basis if you want to force it to be a certain value.
+	 */
+	var/all_products_free
 
 	///ID's that can load this vending machine wtih refills
 	var/list/canload_access_list
@@ -230,8 +234,6 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 
 /obj/machinery/vending/Destroy()
 	QDEL_NULL(wires)
-	QDEL_NULL(coin)
-	QDEL_NULL(bill)
 	QDEL_NULL(Radio)
 	return ..()
 
@@ -555,6 +557,11 @@ GLOBAL_LIST_EMPTY(vending_products)
 		wires.interact(user)
 		return
 
+	if(iscash(I))
+		var/obj/item/dolla_dolla = I
+		cash_inserted += dolla_dolla.get_item_credit_value()
+		qdel(I)
+		return
 	if(refill_canister && istype(I, refill_canister))
 		if (!panel_open)
 			to_chat(user, "<span class='warning'>You should probably unscrew the service panel first!</span>")

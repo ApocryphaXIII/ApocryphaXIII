@@ -25883,7 +25883,6 @@
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/bianchiBank)
 "gRg" = (
-/obj/structure/table,
 /obj/structure/table/wood,
 /turf/closed/wall/vampwall/old/low,
 /area/vtm/interior/techshop)
@@ -31725,9 +31724,6 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/structure/chair{
-	dir = 4
-	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower/f2)
 "iAF" = (
@@ -36020,7 +36016,6 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "jIg" = (
-/obj/structure/table,
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/vampirecola,
 /obj/item/reagent_containers/food/drinks/soda_cans/vampirecola{
@@ -36489,7 +36484,6 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/financialdistrict/construction)
 "jPw" = (
-/obj/structure/table,
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp,
 /turf/closed/wall/vampwall/old/low,
@@ -41213,7 +41207,6 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/church/interior/staff)
 "leh" = (
-/obj/structure/table,
 /obj/structure/table/wood,
 /obj/effect/decal/wallpaper/gold/low,
 /obj/item/paper_bin{
@@ -45420,7 +45413,6 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/graveyard/interior)
 "mnU" = (
-/obj/structure/table,
 /obj/structure/table/wood,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/bianchiBank)
@@ -50342,7 +50334,6 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
 "nAT" = (
-/turf/closed/wall/vampwall/rock,
 /turf/closed/wall/vampwall/rock,
 /area/vtm/forest)
 "nAW" = (
@@ -60838,7 +60829,6 @@
 /turf/open/floor/plating/vampwood,
 /area/vtm/hotel)
 "qlo" = (
-/obj/structure/table,
 /obj/structure/table/wood,
 /obj/vampire_computer,
 /turf/closed/wall/vampwall/old/low,
@@ -62267,9 +62257,6 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior)
 "qFr" = (
-/obj/structure/chair/wood/wings{
-	dir = 1
-	},
 /obj/structure/chair/wood/wings{
 	dir = 1
 	},
@@ -67164,7 +67151,6 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer)
 "rQX" = (
-/obj/structure/table/wood,
 /obj/machinery/microwave{
 	desc = "Cooks and boils stuff, somehow.";
 	pixel_x = -3;
@@ -73040,7 +73026,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/endron_facility/helipad)
 "tvi" = (
-/obj/structure/table,
 /obj/structure/table/wood,
 /obj/item/gun/ballistic/automatic/vampire/sniper,
 /turf/open/floor/carpet,
@@ -73333,7 +73318,6 @@
 /turf/closed/wall/vampwall/rich,
 /area/vtm/interior/millennium_tower/ventrue)
 "tyL" = (
-/turf/open/water,
 /turf/closed/wall/vampwall/rock,
 /area/vtm/forest)
 "tyM" = (
@@ -90775,7 +90759,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "ykm" = (
-/obj/structure/table,
 /obj/structure/table/wood,
 /obj/effect/decal/wallpaper/gold/low,
 /obj/item/pen/fountain/captain{

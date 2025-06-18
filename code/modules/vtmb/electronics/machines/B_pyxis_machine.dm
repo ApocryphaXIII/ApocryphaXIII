@@ -16,7 +16,7 @@
 /obj/clinic_machine
 	name = "clinic machine"
 	desc = "A medical facility machine."
-	icon = 'code/modules/wod13/props.dmi'
+	icon = 'modular_tfn/icons/vendors_shops.dmi'
 	density = TRUE
 	anchored = TRUE
 

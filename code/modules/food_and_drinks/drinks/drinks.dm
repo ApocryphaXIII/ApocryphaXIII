@@ -604,7 +604,7 @@
 	reagent_flags = NONE
 	spillable = FALSE
 	isGlass = FALSE
-	custom_price = PAYCHECK_ASSISTANT * 0.9
+	custom_price = 4
 	obj_flags = CAN_BE_HIT
 
 /obj/item/reagent_containers/food/drinks/soda_cans/random/Initialize()

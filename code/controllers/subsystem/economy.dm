@@ -100,7 +100,10 @@ SUBSYSTEM_DEF(economy)
  * The goal here is that if you want to spend money, you'll have to get it, and the most efficient method is typically from other players.
  **/
 /datum/controller/subsystem/economy/proc/inflation_value()
+	return 1 //Players cannot meaningfully affect local inflation levels over the span of a single night
+	/*
 	if(!bank_accounts_by_id.len)
 		return 1
 	inflation_value = max(round(((station_total / bank_accounts_by_id.len) / station_target), 0.1), 1.0)
 	return inflation_value
+	*/

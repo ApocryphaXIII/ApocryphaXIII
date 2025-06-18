@@ -113,17 +113,18 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	  */
 	var/list/premium 	= list()
 
-	///String of slogans separated by semicolons, optional
-	var/product_slogans = ""
-	///String of small ad messages in the vending screen - random chance
-	var/product_ads = ""
-
 	var/list/product_records = list()
 	var/list/hidden_records = list()
 	var/list/coin_records = list()
-	var/list/slogan_list = list()
+
+	///String of slogans separated by semicolons, optional
+	var/product_slogans = ""
 	///Small ad messages in the vending screen - random chance of popping up whenever you open it
 	var/list/small_ads = list()
+	///String of small ad messages in the vending screen - random chance
+	var/product_ads = ""
+	var/list/slogan_list = list()
+
 	///Message sent post vend (Thank you for shopping!)
 	var/vend_reply
 	///Last world tick we sent a vent reply
@@ -132,6 +133,9 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/last_slogan = 0
 	///How many ticks until we can send another
 	var/slogan_delay = 6000
+	//Stop spouting those godawful pitches!
+	var/shut_up = 0
+
 	///Icon when vending an item to the user
 	var/icon_vend
 	///Icon to flash when user is denied a vend
@@ -860,9 +864,11 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/ui_static_data(mob/user)
 	var/list/data = list()
 	data["onstation"] = onstation
+	data["all_products_free"] = all_products_free
 	data["department"] = payment_department
-	data["jobDiscount"] = 0.2
+	data["jobDiscount"] = 1
 	data["product_records"] = list()
+	data["displayed_currency_name"] = "$"
 
 	var/list/categories = list()
 
@@ -1048,8 +1054,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 			return
 		// From what im aware you cannot tell the age of a bank account holder in real life. So I removed that part of the old code
 		var/datum/bank_account/account = C.registered_account
-		if(account.account_job && account.account_job.paycheck_department == payment_department)
-			price_to_use = max(round(price_to_use * VENDING_DISCOUNT), 1) //No longer free, but signifigantly cheaper.
 		if(coin_records.Find(R) || hidden_records.Find(R))
 			price_to_use = R.custom_premium_price ? R.custom_premium_price : extra_price
 		if(price_to_use && !account.adjust_money(-price_to_use))

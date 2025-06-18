@@ -212,7 +212,7 @@
 	input_message = STRIP_HTML_SIMPLE(input_message, MAX_MESSAGE_LEN)
 	if(CHAT_FILTER_CHECK(input_message))
 		to_chat(owner, span_warning("That message contained a word prohibited in IC chat! Consider reviewing the server rules.\n<span replaceRegex='show_filtered_ic_chat'>\"[input_message]\"</span>"))
-		SSblackbox.record_feedback("tally", "ic_blocked_words", 1, lowertext(config.ic_filter_regex.match))
+		SSblackbox.record_feedback("tally", "ic_blocked_words", 1, LOWER_TEXT(config.ic_filter_regex.match))
 		return
 
 	log_directed_talk(owner, input_message, LOG_SAY, "[name]")

@@ -18,7 +18,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "ba" = (
-/obj/machinery/mineral/equipment_vendor/fastfood/clothing,
+/obj/structure/retail/clothing_store,
 /obj/structure/table,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
@@ -139,7 +139,7 @@
 /area/vtm/pacificheights)
 "el" = (
 /obj/structure/rack/bubway/horizontal,
-/obj/machinery/mineral/equipment_vendor/fastfood/bubway,
+/obj/structure/retail/bubway_menu,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "em" = (
@@ -808,7 +808,7 @@
 /area/vtm/pacificheights)
 "Cg" = (
 /obj/structure/table/wood,
-/obj/machinery/mineral/equipment_vendor/fastfood/library,
+/obj/structure/retail/library,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
 "Cr" = (
@@ -883,7 +883,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "DG" = (
-/obj/machinery/mineral/equipment_vendor/fastfood/gas,
+/obj/structure/retail/gas_station,
 /obj/structure/table,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
@@ -1058,7 +1058,7 @@
 /area/vtm/pacificheights)
 "Ip" = (
 /obj/structure/table,
-/obj/machinery/mineral/equipment_vendor/fastfood/illegal,
+/obj/structure/retail/black_market,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "Is" = (
@@ -1120,7 +1120,7 @@
 /area/vtm/pacificheights)
 "Kt" = (
 /obj/structure/table/wood,
-/obj/machinery/mineral/equipment_vendor/fastfood/pharmacy,
+/obj/structure/retail/pharmacy,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
 "KB" = (
@@ -1173,7 +1173,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "My" = (
-/obj/machinery/mineral/equipment_vendor/fastfood/costumes,
+/obj/structure/retail/costume_store,
 /obj/structure/table,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
@@ -1197,7 +1197,7 @@
 /area/vtm/pacificheights)
 "NI" = (
 /obj/structure/rack/tacobell/horizontal,
-/obj/machinery/mineral/equipment_vendor/fastfood/bacotell,
+/obj/structure/retail/bacotell_menu,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "NO" = (
@@ -1274,7 +1274,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "Pg" = (
-/obj/machinery/mineral/equipment_vendor/fastfood/america,
+/obj/structure/retail/gun_store,
 /obj/structure/table,
 /turf/closed/wall/vampwall/market/low,
 /area/vtm/interior/shop)
@@ -1306,7 +1306,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "Qv" = (
-/obj/machinery/mineral/equipment_vendor/fastfood/smoking,
+/obj/structure/retail/smoke_menu,
 /obj/structure/table,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
@@ -1325,7 +1325,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "Ri" = (
-/obj/machinery/mineral/equipment_vendor/fastfood/products,
+/obj/structure/retail/junkfood_menu,
 /obj/structure/table,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
@@ -1336,7 +1336,7 @@
 /area/vtm/pacificheights)
 "Ro" = (
 /obj/structure/table,
-/obj/machinery/mineral/equipment_vendor/fastfood/gummaguts,
+/obj/structure/retail/gummaguts_menu,
 /turf/closed/wall/vampwall/market/low,
 /area/vtm/interior/shop)
 "Sg" = (

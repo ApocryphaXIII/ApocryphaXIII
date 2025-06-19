@@ -1,3 +1,5 @@
+/obj/machinery/vending/cola/@SUBTYPES : /obj/machinery/vending/cola {@OLD}
+
 /obj/machinery/mineral/equipment_vendor/fastfood/snacks : /obj/machinery/vending/snack {@OLD}
 /obj/machinery/mineral/equipment_vendor/fastfood/coffeevendor : /obj/machinery/vending/coffee {@OLD}
 /obj/machinery/mineral/equipment_vendor/fastfood/sodavendor : /obj/machinery/vending/cola {@OLD}
@@ -8,6 +10,7 @@
 /obj/machinery/mineral/equipment_vendor/fastfood/gummaguts : /obj/structure/retail/gummaguts_menu {@OLD}
 /obj/machinery/mineral/equipment_vendor/fastfood/products : /obj/structure/retail/junkfood_menu {@OLD}
 /obj/machinery/mineral/equipment_vendor/fastfood/smoking : /obj/structure/retail/smoke_menu {@OLD}
+/obj/machinery/mineral/equipment_vendor/fastfood/gas : /obj/structure/retail/gas_station {@OLD}
 
 /obj/machinery/mineral/equipment_vendor/fastfood/costumes : /obj/structure/retail/costume_store {@OLD}
 /obj/machinery/mineral/equipment_vendor/fastfood/clothing : /obj/structure/retail/clothing_store {@OLD}

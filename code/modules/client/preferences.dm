@@ -633,6 +633,52 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Lockpicking:</b> [build_attribute_score(lockpicking, A.archetype_additional_lockpicking, lockpicking_price, "lockpicking")]"
 			dat += "<b>Athletics:</b> [build_attribute_score(athletics, A.archetype_additional_athletics, athletics_price, "athletics")]"
 			dat += "Experience rewarded: [player_experience]<BR>"
+
+
+			//the majority of this could probably be moved to its own file, and just have the closest
+			//I can get to a class called in a function here.
+			//eg. dat += <make_font_cool(circumstance)<
+			// eg. cont. generator.circumstance
+			dat += "<h2>[make_font_cool("Circumstances")]</h2>"
+			dat += "<br><b>Choose Circumstance</b>"
+			//circumstance should be a class-like object (as evident later in the file), when called like this
+			//it should pull up a list to chose from. So far only imbued, bystander, and ghoul will be available.
+			//later add in garou kin whatever they're called
+			//if they choose imbued it should prompt them to choose a creed and store that as a var
+			//if they choose ghoul, it should ask what clane the domitor was to populate the base list
+			//ghouls should also be given a tracker for who has given them vitae in game, adding more
+			//possible disciplines they can learn to their list, as well as showing active blood bonds
+			dat += "<a href='byond://?_src_=prefs;preference=circumstance;task=input'>[circumstance]</a><br>"
+
+			//call to check if the user chose to be imbued, if so display the creed
+			if(circumstance.imbued) //psuedocode here until I write backend.
+				dat += "<b>Imbued Creed:</b>[circumstance.imbued]<br>"
+				//message_set is a placeholder until I figure out if overrides are a thing
+				dat += "<a href='byond://?_src_=prefs;preference=message_set;task=input'>Set Message {[circumstance.imbued.message_set]}</a><br>"
+				dat += "<b>Message:</b> [circumstance.imbued.message]<br>"
+				//if they have enough experience, they can redistribute and rechoose their imbued stats (including creed)
+				if(player_experience >= circumstance.cost)
+					dat += "<a href='byond://?_src_=prefs;preference=imbued_reset;task=input'>[circumstance.imbued.reset])</a><br>"
+
+			if(circumstance.ghoul)
+				dat += "<br><b>[circumstance.ghoul.bond_name.title]: </b> <i>[circumstance.ghoul.domitor]"
+				//bond_level should output a string, either "ooo", "•oo",0 etc.
+				//can see code of it being done below this section
+				dat += "<b>Blood Bond Level:</b> [circumstance.ghoul.bond_level]<br>"
+				dat += "<b> Blood Bond Settings: </b>"
+				dat += "<a href='byond://?_src_=prefs;preference=bond_tweak;task=input'>[circumstance.ghoul.bond_settings])</a><br>"
+
+				if(player_experience >= circumstance.ghoul.cost)
+					dat += "<a href='byond://?_src_=prefs;preference=ghoul_reset;task=input'>[circumstance.ghoul.reset])</a><br>"
+
+			if(circumstance.bystander)
+				dat += "<b>Bystader</b><br>"
+
+			dat += "<a href='byond://?_src_=prefs;preference=circumstance.remove;task=input'>Remove Circumstance{[circumstance.remove]}</a>"
+			
+
+
+
 			if(pref_species.name == "Werewolf")
 				dat += "<h2>[make_font_cool("TRIBE")]</h2>"
 				dat += "<br><b>Werewolf Name:</b> "

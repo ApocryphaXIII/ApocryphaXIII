@@ -3732,6 +3732,10 @@
 #include "modular_tfn\modules\morality\morality.dm"
 #include "modular_tfn\modules\morality\morality_component.dm"
 #include "modular_tfn\modules\panicbunker\code\panicbunker.dm"
+#include "modular_tfn\modules\retail\_retail.dm"
+#include "modular_tfn\modules\retail\retail_product.dm"
+#include "modular_tfn\modules\retail\spritesheet_retail.dm"
+#include "modular_tfn\modules\retail\stores\bacotell_menu.dm"
 #include "modular_tfn\modules\subtle\subtle.dm"
 #include "modular_tfn\modules\taser_tfn13\taser_tfn13.dm"
 // END_INCLUDE

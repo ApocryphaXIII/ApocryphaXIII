@@ -15,6 +15,7 @@
 	var/add_to_accounts = TRUE
 	var/account_id
 	var/bank_pin
+	var/times_used_without_pin = 0
 	var/being_dumped = FALSE //pink levels are rising
 	var/datum/bounty/civilian_bounty
 	var/list/datum/bounty/bounties
@@ -66,6 +67,19 @@
 
 /datum/bank_account/proc/dumpeet()
 	being_dumped = TRUE
+
+/datum/bank_account/proc/check_pin(mob/living/user, amount, obj/item/source)
+	//purchases over $20 require a pin, you have to use one eventually
+	if(amount > 20 || times_used_without_pin > 5)
+		if(tgui_input_text(user, "Enter the pin number for this card:", "Pin Input", max_length=4, multiline=FALSE) != bank_pin)
+			to_chat(user, span_alert("The pin you entered for the [source] is incorrect."))
+			return FALSE
+		else
+			to_chat(user, span_notice("You correctly enter the pin for the [source]."))
+			times_used_without_pin = 0
+	else
+		times_used_without_pin += 1
+	return TRUE
 
 /datum/bank_account/proc/_adjust_money(amt)
 	account_balance += amt

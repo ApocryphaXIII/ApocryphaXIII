@@ -1,15 +1,15 @@
 import { classes } from 'tgui-core/react';
 import { useBackend } from '../backend';
-import { Box, Button, Section, Table } from 'tgui-core/components';
+import { Box, Button, Section, Table, Stack, NoticeBox } from 'tgui-core/components';
 import { Window } from '../layouts';
 
-export const RetailVendor = (props) => {
-  const { act, data } = useBackend();
-  let inventory = [...data.product_records];
+/** Displays user details if an ID is present and the user is on the station */
+export const UserDetails = (props) => {
+  const { data } = useBackend();
+  const { user } = data;
+
   return (
-    <Window width={425} height={600} resizable>
-      <Window.Content scrollable>
-        <Section title="User">
+    <NoticeBox m={0} color={user && 'blue'}>
           {(data.user && (data.user.money > 0 || data.user.is_card == 1) && ((data.user.is_card == 0 && (
             <Box>
               Welcome, valued customer!
@@ -29,15 +29,28 @@ export const RetailVendor = (props) => {
               Have cash or card ready in-hand for purchase.
             </Box>
           )}
-        </Section>
-        <Section title="Equipment">
+    </NoticeBox>
+  );
+};
+
+export const RetailVendor = (props) => {
+  const { act, data } = useBackend();
+  let inventory = [...data.product_records];
+  return (
+    <Window width={431} height={635} resizable>
+      <Window.Content scrollable>
+        <Stack fill vertical>
+            <Stack.Item>
+              <UserDetails />
+            </Stack.Item>
+        <Section title="Products">
           <Table>
             {inventory.map((product) => {
               return (
                 <Table.Row key={product.name}>
                   <Table.Cell>
                     <span
-                      className={classes(['retail'+product.dimensions, product.path])}
+                      className={classes(['vending32x32', product.path])}
                       style={{
                         'vertical-align': 'middle',
                       }}
@@ -51,7 +64,7 @@ export const RetailVendor = (props) => {
                         'text-align': 'center',
                       }}
                       disabled={!data.user || (product.price > data.user.money && data.user.is_card == 0) || product.stock == 0}
-                      content={product.price + ' dollars'}
+                      content={product.price + '$'}
                       onClick={() =>
                         act('purchase', {
                           ref: product.ref,
@@ -68,6 +81,7 @@ export const RetailVendor = (props) => {
             })}
           </Table>
         </Section>
+        </Stack>
       </Window.Content>
     </Window>
   );

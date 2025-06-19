@@ -49,6 +49,9 @@ GLOBAL_LIST_EMPTY(retail_products)
 /obj/structure/retail/attackby(obj/item/I, mob/user, params)
 	. = ..()
 	if(can_shop(user))
+		if(owner_needed == TRUE && (!my_owner || (get_dist(src, my_owner) > 4) || (my_owner.stat >= HARD_CRIT)))
+			to_chat(user, span_alert("There's no teller here to sell you things..."))
+			return
 		ui_interact(user)
 
 /obj/structure/retail/proc/build_inventory()
@@ -59,7 +62,7 @@ GLOBAL_LIST_EMPTY(retail_products)
 
 /obj/structure/retail/ui_assets(mob/user)
 	return list(
-		get_asset_datum(/datum/asset/spritesheet/retail),
+		get_asset_datum(/datum/asset/spritesheet/vending),
 	)
 
 /obj/structure/retail/ui_interact(mob/user, datum/tgui/ui)

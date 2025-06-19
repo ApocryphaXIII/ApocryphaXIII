@@ -130,7 +130,7 @@ export const Vending = (props) => {
   );
 
   return (
-    <Window width={431} height={635}>
+    <Window title="Vending Machine" width={431} height={635}>
       <Window.Content>
         <Stack fill vertical>
           {!!onstation && (

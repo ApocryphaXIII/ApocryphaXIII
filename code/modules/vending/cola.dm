@@ -11,8 +11,8 @@
 		/obj/item/reagent_containers/food/drinks/soda_cans/vampiresoda = 15,
 	)
 	refill_canister = /obj/item/vending_refill/cola
-	default_price = 4
-	extra_price = 4
+	default_price = 1
+	extra_price = 1
 	payment_department = ACCOUNT_SRV
 
 /obj/machinery/vending/cola/blue

@@ -931,6 +931,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/ui_data(mob/user)
 	. = list()
+	.["cash_inserted"] = cash_inserted
 	var/obj/item/card/credit/C
 	if(isliving(user))
 		var/mob/living/L = user

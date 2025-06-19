@@ -24,6 +24,7 @@ type VendingData = {
   product_records: ProductRecord[];
   coin_records: CoinRecord[];
   hidden_records: HiddenRecord[];
+  cash_inserted: Number;
   user: UserData;
   stock: Record<string, StockItem>[];
   extended_inventory: boolean;
@@ -211,9 +212,9 @@ const ProductDisplay = (props: {
       title="Products"
       buttons={
         <Stack>
-          {!all_products_free && user && (
+          {!all_products_free && (
             <Stack.Item fontSize="16px" color="green">
-              {(user && user.cash) || 0}
+              {(data.cash_inserted) || 0}
               {displayed_currency_name}
               <Icon name={displayed_currency_icon} color="gold" />
             </Stack.Item>

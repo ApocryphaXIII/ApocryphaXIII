@@ -1,14 +1,12 @@
+import { Button, Input, LabeledList, Section } from 'tgui-core/components';
+
 import { useBackend } from '../../backend';
 import { useLocalState } from '../../backend';
-import { Button, Input, LabeledList, Section } from 'tgui-core/components';
 import { Window } from '../../layouts';
 
 export const AtmLogin = (props) => {
   const { act, data } = useBackend();
-  const [entered_code, setEnteredCode] = useLocalState(
-    'login_code',
-    '',
-  );
+  const [entered_code, setEnteredCode] = useLocalState('login_code', '');
 
   const { account_holder, code } = data;
 

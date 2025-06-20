@@ -59,7 +59,7 @@
 	for (var/T in types)
 		generateEvent(T)
 
-/datum/stock/proc/generateEvent(var/T)
+/datum/stock/proc/generateEvent(T)
 	var/datum/stockEvent/E = new T(src)
 	addEvent(E)
 
@@ -250,7 +250,7 @@
 			return 1
 	return 0
 
-/datum/stock/proc/borrow(var/datum/borrow/B, var/who)
+/datum/stock/proc/borrow(datum/borrow/B, who)
 	if (B.lease_expires)
 		return 0
 	B.lease_expires = world.time + B.lease_time
@@ -306,5 +306,5 @@
 		return 1
 	return 0
 
-/datum/stock/proc/displayValues(var/mob/user)
+/datum/stock/proc/displayValues(mob/user)
 	user << browse(plotBarGraph(values, "[name] share value per share"), "window=stock_[name];size=450x450")

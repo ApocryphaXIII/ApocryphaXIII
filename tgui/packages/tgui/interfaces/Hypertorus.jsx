@@ -1,21 +1,19 @@
-import { sortBy, map, filter } from 'common/collections';
-import { flow } from 'tgui-core/fp';
-import { toFixed } from 'tgui-core/math';
-import { useBackend } from '../backend';
+import { filter, sortBy } from 'common/collections';
 import {
-  AnimatedNumber,
   Button,
   Flex,
-  Input,
   LabeledList,
+  NumberInput,
   ProgressBar,
   Section,
-  Table,
-  NumberInput,
 } from 'tgui-core/components';
+import { formatSiBaseTenUnit, formatSiUnit } from 'tgui-core/format';
+import { flow } from 'tgui-core/fp';
+import { toFixed } from 'tgui-core/math';
+
+import { useBackend } from '../backend';
 import { getGasColor, getGasLabel } from '../constants';
 import { Window } from '../layouts';
-import { formatSiUnit, formatSiBaseTenUnit } from 'tgui-core/format';
 
 export const Hypertorus = (props) => {
   const { act, data } = useBackend();

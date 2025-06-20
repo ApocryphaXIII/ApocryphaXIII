@@ -340,7 +340,7 @@
 
 	var/is_criminal = FALSE
 
-/mob/living/carbon/human/npc/proc/AssignSocialRole(datum/socialrole/S, var/dont_random = FALSE)
+/mob/living/carbon/human/npc/proc/AssignSocialRole(datum/socialrole/S, dont_random = FALSE)
 	if(!S)
 		return
 	physique = rand(1, max_stat)

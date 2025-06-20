@@ -1,18 +1,19 @@
 import { Component, Fragment } from 'react';
-import { useBackend, useLocalState } from '../backend';
 import {
   Box,
   Button,
   Flex,
-  Stack,
   Icon,
   LabeledList,
   Modal,
   NoticeBox,
   Section,
+  Stack,
   Table,
   Tabs,
 } from 'tgui-core/components';
+
+import { useBackend, useLocalState } from '../backend';
 import { NtosWindow } from '../layouts';
 
 const CONTRACT_STATUS_INACTIVE = 1;

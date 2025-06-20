@@ -1,4 +1,3 @@
-import { useBackend } from '../backend';
 import {
   AnimatedNumber,
   Button,
@@ -7,6 +6,8 @@ import {
   Section,
 } from 'tgui-core/components';
 import { formatMoney } from 'tgui-core/format';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const BankMachine = (props) => {

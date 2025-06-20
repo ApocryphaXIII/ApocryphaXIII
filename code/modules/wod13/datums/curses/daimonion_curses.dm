@@ -3,7 +3,7 @@
 	//Amount of blood to permanently tithe
 	var/bloodcurse = 1
 
-/datum/curse/daimonion/proc/activate(var/mob/living/target)
+/datum/curse/daimonion/proc/activate(mob/living/target)
 	return
 
 /datum/curse/daimonion/lying_weakness

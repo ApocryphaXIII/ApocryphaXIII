@@ -1,15 +1,16 @@
-import { createSearch } from 'tgui-core/string';
 import { sortBy } from 'common/collections';
-import { useBackend, useLocalState } from '../backend';
 import {
   Box,
   Button,
+  Collapsible,
   Input,
   NoticeBox,
   Section,
-  Collapsible,
   Table,
 } from 'tgui-core/components';
+import { createSearch } from 'tgui-core/string';
+
+import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
 
 export const Stack = (props) => {
@@ -66,7 +67,7 @@ const RecipeList = (props) => {
 
   const { recipes } = props;
 
-  const sortedKeys = sortBy(Object.keys(recipes),(key) => key.toLowerCase());
+  const sortedKeys = sortBy(Object.keys(recipes), (key) => key.toLowerCase());
 
   return sortedKeys.map((title) => {
     const recipe = recipes[title];

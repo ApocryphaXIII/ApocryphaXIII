@@ -1,14 +1,15 @@
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
   Collapsible,
-  Stack,
   LabeledList,
   NoticeBox,
   NumberInput,
   Section,
+  Stack,
 } from 'tgui-core/components';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const NaniteDiskBox = (props) => {

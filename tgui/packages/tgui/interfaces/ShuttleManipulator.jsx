@@ -1,6 +1,14 @@
 import { map } from 'common/collections';
+import {
+  Button,
+  Flex,
+  LabeledList,
+  Section,
+  Table,
+  Tabs,
+} from 'tgui-core/components';
+
 import { useBackend, useLocalState } from '../backend';
-import { Button, Flex, LabeledList, Section, Table, Tabs } from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const ShuttleManipulator = (props) => {

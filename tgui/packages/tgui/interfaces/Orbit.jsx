@@ -1,6 +1,3 @@
-import { createSearch } from 'tgui-core/string';
-import { resolveAsset } from '../assets';
-import { useBackend, useLocalState } from '../backend';
 import {
   Box,
   Button,
@@ -10,6 +7,10 @@ import {
   Input,
   Section,
 } from 'tgui-core/components';
+import { createSearch } from 'tgui-core/string';
+
+import { resolveAsset } from '../assets';
+import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
 
 const PATTERN_NUMBER = / \(([0-9]+)\)$/;

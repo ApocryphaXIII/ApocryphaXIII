@@ -1,0 +1,4 @@
+/obj/@SUBTYPES : /obj/@SUBTYPES{@OLD;layer=@SKIP}
+
+/obj/structure/window : /obj/structure/window{@OLD;dir=@SKIP}
+/obj/structure/window/@SUBTYPES : /obj/structure/window/@SUBTYPES{@OLD;dir=@SKIP}

@@ -1,7 +1,8 @@
-import { useBackend } from '../backend';
-import { Button, LabeledList, Section, Box } from 'tgui-core/components';
-import { Window } from '../layouts';
 import { Component } from 'react';
+import { Box, Button, LabeledList, Section } from 'tgui-core/components';
+
+import { useBackend } from '../backend';
+import { Window } from '../layouts';
 
 export class VaultDoor extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export class VaultDoor extends Component {
   }
 
   handleButtonClick(value) {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       inputCode: prevState.inputCode + value,
     }));
   }

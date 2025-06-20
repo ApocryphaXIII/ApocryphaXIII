@@ -1,6 +1,7 @@
+import { Button, Flex, NoticeBox, Section, Tabs } from 'tgui-core/components';
+
 import { resolveAsset } from '../assets';
 import { useBackend, useLocalState } from '../backend';
-import { Button, Flex, NoticeBox, Section, Tabs } from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const PortraitPicker = (props) => {

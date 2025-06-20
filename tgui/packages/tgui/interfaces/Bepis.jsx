@@ -1,12 +1,13 @@
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
-  Stack,
   LabeledList,
   NumberInput,
   Section,
+  Stack,
 } from 'tgui-core/components';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const Bepis = (props) => {

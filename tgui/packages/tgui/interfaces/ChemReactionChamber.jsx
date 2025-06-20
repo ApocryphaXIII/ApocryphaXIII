@@ -1,6 +1,4 @@
 import { map } from 'common/collections';
-import { classes } from 'tgui-core/react';
-import { useBackend, useLocalState } from '../backend';
 import {
   Box,
   Button,
@@ -9,14 +7,14 @@ import {
   NumberInput,
   Section,
 } from 'tgui-core/components';
+import { classes } from 'tgui-core/react';
+
+import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
 
 export const ChemReactionChamber = (props) => {
   const { act, data } = useBackend();
-  const [reagentName, setReagentName] = useLocalState(
-    'reagentName',
-    '',
-  );
+  const [reagentName, setReagentName] = useLocalState('reagentName', '');
   const [reagentQuantity, setReagentQuantity] = useLocalState(
     'reagentQuantity',
     1,

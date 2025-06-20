@@ -1,10 +1,11 @@
 import { sortBy } from 'common/collections';
+import { Box, Button, LabeledList, Section, Stack } from 'tgui-core/components';
 import { flow } from 'tgui-core/fp';
 import { classes } from 'tgui-core/react';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, LabeledList, Section, Stack } from 'tgui-core/components';
-import { Window } from '../layouts';
 import { capitalize } from 'tgui-core/string';
+
+import { useBackend, useLocalState } from '../backend';
+import { Window } from '../layouts';
 
 export const FishCatalog = (props) => {
   const { act, data } = useBackend();
@@ -12,10 +13,7 @@ export const FishCatalog = (props) => {
   const fish_by_name = flow([sortBy((fish) => fish.name)])(
     data.fish_info || [],
   );
-  const [currentFish, setCurrentFish] = useLocalState(
-    'currentFish',
-    null,
-  );
+  const [currentFish, setCurrentFish] = useLocalState('currentFish', null);
   return (
     <Window width={500} height={300} resizable>
       <Window.Content>

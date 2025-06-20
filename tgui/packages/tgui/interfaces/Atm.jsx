@@ -1,6 +1,6 @@
-import { Window } from "../layouts";
-import { AtmScreen } from "./Atm/index";
-import { useBackend } from "../backend";
+import { useBackend } from '../backend';
+import { Window } from '../layouts';
+import { AtmScreen } from './Atm/index';
 
 export const Atm = (props) => {
   const { act, data } = useBackend();

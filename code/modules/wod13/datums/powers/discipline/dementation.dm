@@ -16,7 +16,7 @@
 
 	activate_sound = 'code/modules/wod13/sounds/insanity.ogg'
 
-/datum/discipline_power/dementation/proc/dementation_check(mob/living/carbon/human/owner, mob/living/target, base_difficulty = 4, var/dementation_succeeded = FALSE)
+/datum/discipline_power/dementation/proc/dementation_check(mob/living/carbon/human/owner, mob/living/target, base_difficulty = 4, dementation_succeeded = FALSE)
 
 	if(!ishuman(target))
 		return FALSE

@@ -1,17 +1,12 @@
-import { filter, sortBy } from 'common/collections';
-import { flow } from 'tgui-core/fp';
-import { classes } from 'tgui-core/react';
-import { createSearch } from 'tgui-core/string';
-import { Fragment } from 'react';
-import { useBackend, useLocalState } from '../backend';
-import { Button, ByondUi, Input, Section } from 'tgui-core/components';
+import { Button, ByondUi } from 'tgui-core/components';
+
+import { useBackend } from '../backend';
 import { NtosWindow } from '../layouts';
 import {
+  CameraConsoleContent,
   prevNextCamera,
   selectCameras,
-  CameraConsoleContent,
 } from './CameraConsole';
-import { logger } from '../logging';
 
 export const NtosSecurEye = (props) => {
   const { act, data, config } = useBackend();

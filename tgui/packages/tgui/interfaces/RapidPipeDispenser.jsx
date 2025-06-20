@@ -1,5 +1,3 @@
-import { classes } from 'tgui-core/react';
-import { useBackend, useLocalState } from '../backend';
 import {
   Box,
   Button,
@@ -9,6 +7,9 @@ import {
   Section,
   Tabs,
 } from 'tgui-core/components';
+import { classes } from 'tgui-core/react';
+
+import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
 
 const ROOT_CATEGORIES = ['Atmospherics', 'Disposals', 'Transit Tubes'];
@@ -68,9 +69,7 @@ export const RapidPipeDispenser = (props) => {
     mode,
   } = data;
   const previews = data.preview_rows.flatMap((row) => row.previews);
-  const [categoryName, setCategoryName] = useLocalState(
-    'categoryName',
-  );
+  const [categoryName, setCategoryName] = useLocalState('categoryName');
   const shownCategory =
     categories.find((category) => category.cat_name === categoryName) ||
     categories[0];

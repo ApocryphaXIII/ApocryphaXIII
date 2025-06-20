@@ -47,7 +47,7 @@ it will be sent to all connected chats.
 
 /proc/send2chat(datum/tgs_message_content/message, channel_tag, admin_only = FALSE)
 	set waitfor = FALSE
-  
+
 	if(channel_tag == null || !world.TgsAvailable())
 		return
 

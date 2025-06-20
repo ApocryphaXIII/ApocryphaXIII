@@ -1,17 +1,16 @@
-import { map, sortBy } from 'common/collections';
-import { flow } from 'tgui-core/fp';
-import { useBackend } from '../backend';
 import {
+  Box,
   Button,
   Input,
+  LabeledControls,
   LabeledList,
-  Section,
-  Table,
   NoticeBox,
   NumberInput,
-  LabeledControls,
-  Box,
+  Section,
+  Table,
 } from 'tgui-core/components';
+
+import { useBackend } from '../backend';
 import { RADIO_CHANNELS } from '../constants';
 import { Window } from '../layouts';
 

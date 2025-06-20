@@ -1,9 +1,4 @@
 import { filter, uniqBy } from 'common/collections';
-import { flow } from 'tgui-core/fp';
-import { classes } from 'tgui-core/react';
-import { capitalize } from 'tgui-core/string';
-import { resolveAsset } from '../assets';
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
@@ -19,6 +14,12 @@ import {
   Section,
   Stack,
 } from 'tgui-core/components';
+import { flow } from 'tgui-core/fp';
+import { classes } from 'tgui-core/react';
+import { capitalize } from 'tgui-core/string';
+
+import { resolveAsset } from '../assets';
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 const SUBJECT_CONCIOUS = 0;

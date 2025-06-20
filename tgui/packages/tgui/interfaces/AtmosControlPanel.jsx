@@ -1,7 +1,8 @@
 import { map, sortBy } from 'common/collections';
-import { flow } from 'tgui-core/fp';
-import { useBackend } from '../backend';
 import { Box, Button, Flex, Section, Table } from 'tgui-core/components';
+import { flow } from 'tgui-core/fp';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const AtmosControlPanel = (props) => {

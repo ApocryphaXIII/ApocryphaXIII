@@ -1,4 +1,5 @@
 /obj/machinery/vending/cola/@SUBTYPES : /obj/machinery/vending/cola {@OLD}
+/obj/machinery/vending/snack/@SUBTYPES : /obj/machinery/vending/snack {@OLD}
 
 /obj/machinery/mineral/equipment_vendor/fastfood/snacks : /obj/machinery/vending/snack {@OLD}
 /obj/machinery/mineral/equipment_vendor/fastfood/coffeevendor : /obj/machinery/vending/coffee {@OLD}

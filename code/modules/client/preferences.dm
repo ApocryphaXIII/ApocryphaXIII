@@ -733,7 +733,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/cost
 					if (discipline_level <= 0)
 						cost = 10
-					else if (clane.name == "Caitiff")
+					else if (clane.name == CLAN_NONE)
 						cost = discipline_level * 6
 					else if (clane.clane_disciplines.Find(discipline_type))
 						cost = discipline_level * 5
@@ -748,7 +748,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "-[discipline.desc]<BR>"
 					qdel(discipline)
 
-				if (clane.name == "Caitiff")
+				if (clane.name == CLAN_NONE)
 					var/list/possible_new_disciplines = subtypesof(/datum/discipline) - discipline_types - /datum/discipline/bloodheal
 					for (var/discipline_type in possible_new_disciplines)
 						var/datum/discipline/discipline = new discipline_type
@@ -760,7 +760,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				switch(clane.name)
 
-					if("Salubri")
+					if(CLAN_SALUBRI)
 
 						var/list/possible_new_valerens = list(/datum/discipline/valeren, /datum/discipline/valeren_warrior)
 						possible_new_valerens -= discipline_types
@@ -768,7 +768,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						if (possible_new_valerens.len && (player_experience >= 10))
 							dat += "<a href='byond://?_src_=prefs;preference=newvaleren;task=input'>Learn a new Valeren Path (10)</a><BR>"
 
-					if("Salubri Warrior")
+					if(CLAN_SALUBRI_WARRIOR)
 
 						var/list/possible_new_valerens = list(/datum/discipline/valeren, /datum/discipline/valeren_warrior)
 						possible_new_valerens -= discipline_types
@@ -2363,7 +2363,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						eye_color = sanitize_hexcolor(new_eyes)
 
 				if("newdiscipline")
-					if((player_experience < 10) || !(pref_species.id == "kindred") || !(clane.name == "Caitiff"))
+					if((player_experience < 10) || !(pref_species.id == "kindred") || !(clane.name == CLAN_NONE))
 						return
 
 					var/list/possible_new_disciplines = subtypesof(/datum/discipline) - discipline_types - /datum/discipline/bloodheal
@@ -2383,7 +2383,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						experience_used_on_character += 10
 
 				if("newvaleren")
-					if((player_experience < 10) || !(pref_species.id == "kindred") || !((clane.name == "Salubri") || (clane.name == "Salubri Warrior")))
+					if((player_experience < 10) || !(pref_species.id == "kindred") || !((clane.name == CLAN_SALUBRI) || (clane.name == CLAN_SALUBRI_WARRIOR)))
 						return
 
 					var/list/possible_new_valerens = list(/datum/discipline/valeren, /datum/discipline/valeren_warrior)
@@ -2546,7 +2546,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						clane = new newtype()
 						discipline_types = list()
 						discipline_levels = list()
-						if(result == "Caitiff")
+						if(result == CLAN_NONE)
 							generation = 13
 							for (var/i = clane.clane_disciplines.len; i < 3; i++)
 								if (slotlocked)
@@ -2703,7 +2703,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						var/cost = discipline_level * 7
 						if (discipline_level <= 0)
 							cost = 10
-						else if (clane.name == "Caitiff")
+						else if (clane.name == CLAN_NONE)
 							cost = discipline_level * 6
 						else if (clane.common_disciplines.Find(discipline_types[i]))
 							cost = discipline_level * 6
@@ -2852,7 +2852,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						po = max_limit-sett
 
 				if("generation")
-					if((clane?.name == "Caitiff") || (player_experience < 20))
+					if((clane?.name == CLAN_NONE) || (player_experience < 20))
 						return
 
 					player_experience -= 20
@@ -2935,7 +2935,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					slotlocked = FALSE
 
 				if("reset_with_bonus")
-					if((clane?.name == "Caitiff") || !generation_bonus)
+					if((clane?.name == CLAN_NONE) || !generation_bonus)
 						return
 
 					var/bonus = generation-generation_bonus

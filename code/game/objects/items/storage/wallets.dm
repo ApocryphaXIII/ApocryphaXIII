@@ -124,8 +124,7 @@
 			return I
 
 /obj/item/storage/wallet/random
-	icon_state = "random_wallet"
 
 /obj/item/storage/wallet/random/PopulateContents()
-	new /obj/item/holochip(src, rand(5,30))
-	icon_state = "wallet"
+	new /obj/item/holochip(src, rand(5, 30))
+	new /obj/effect/spawner/random/entertainment/wallet_storage(src)

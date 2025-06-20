@@ -37,7 +37,7 @@
 	id = /obj/item/card/id/police
 	l_pocket = /obj/item/vamp/phone
 	r_pocket = /obj/item/vamp/keys/police
-	backpack_contents = list(/obj/item/passport=1, /obj/item/vamp/creditcard=1, /obj/item/restraints/handcuffs = 1,/obj/item/melee/classic_baton/vampire = 1, /obj/item/storage/firstaid/ifak = 1, /obj/item/reagent_containers/spray/pepper = 1, /obj/item/ammo_box/magazine/vamp45acp = 2)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/card/credit=1, /obj/item/restraints/handcuffs = 1,/obj/item/melee/classic_baton/vampire = 1, /obj/item/storage/firstaid/ifak = 1, /obj/item/reagent_containers/spray/pepper = 1, /obj/item/ammo_box/magazine/vamp45acp = 2)
 
 /datum/job/vamp/police_sergeant
 	title = "Police Sergeant"
@@ -76,7 +76,7 @@
 	id = /obj/item/card/id/police/sergeant
 	l_pocket = /obj/item/vamp/phone
 	r_pocket = /obj/item/vamp/keys/police/secure
-	backpack_contents = list(/obj/item/passport=1, /obj/item/vamp/creditcard=1, /obj/item/restraints/handcuffs = 1,/obj/item/melee/classic_baton/vampire = 1, /obj/item/storage/firstaid/ifak = 1, /obj/item/reagent_containers/spray/pepper = 1, /obj/item/ammo_box/magazine/vamp45acp = 2)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/card/credit=1, /obj/item/restraints/handcuffs = 1,/obj/item/melee/classic_baton/vampire = 1, /obj/item/storage/firstaid/ifak = 1, /obj/item/reagent_containers/spray/pepper = 1, /obj/item/ammo_box/magazine/vamp45acp = 2)
 
 /datum/job/vamp/police_chief
 	title = "Police Chief"
@@ -114,7 +114,7 @@
 	id = /obj/item/card/id/police/chief
 	l_pocket = /obj/item/vamp/phone
 	r_pocket = /obj/item/vamp/keys/police/secure/chief
-	backpack_contents = list(/obj/item/passport=1, /obj/item/vamp/creditcard=1, /obj/item/restraints/handcuffs = 1,/obj/item/melee/classic_baton/vampire = 1, /obj/item/storage/firstaid/ifak = 1, /obj/item/reagent_containers/spray/pepper = 1, /obj/item/ammo_box/magazine/vamp45acp = 2)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/card/credit=1, /obj/item/restraints/handcuffs = 1,/obj/item/melee/classic_baton/vampire = 1, /obj/item/storage/firstaid/ifak = 1, /obj/item/reagent_containers/spray/pepper = 1, /obj/item/ammo_box/magazine/vamp45acp = 2)
 
 
 /datum/outfit/job/police_chief/post_equip(mob/living/carbon/human/H)

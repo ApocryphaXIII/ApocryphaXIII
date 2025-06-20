@@ -496,24 +496,24 @@
 	var/list/parts = list()
 	parts += "<span class='header'>City Economic Summary:</span>"
 	///This is the richest account on station at roundend.
-	var/datum/vtm_bank_account/mr_moneybags = GLOB.bank_account_list[1]
+	var/datum/bank_account/mr_moneybags = GLOB.bank_account_list[1]
 	if(!istype(mr_moneybags))
 		CRASH("A bank account wasn't found in GLOB.bank_account_list for determining the richest player at round-end.")
 	///This is the station's total wealth at the end of the round.
 	var/station_vault = 0
 	///How many players joined the round.
 	var/total_players = GLOB.joined_player_list.len
-	for(var/datum/vtm_bank_account/account in GLOB.bank_account_list)
-		if(account && account.account_owner)
-			station_vault += account.balance
-			if(mr_moneybags.balance < account.balance)
+	for(var/datum/bank_account/account in GLOB.bank_account_list)
+		if(account && account.account_holder)
+			station_vault += account.account_balance
+			if(mr_moneybags.account_balance < account.account_balance)
 				mr_moneybags = account
 	parts += "<div class='panel stationborder'>There were [station_vault] dollars collected by people this shift.<br>"
 	if(total_players > 0)
 		parts += "An average of [station_vault/total_players] dollars were collected.<br>"
 		log_econ("Roundend credit total: [station_vault] dollars. Average cash amount: [station_vault/total_players]")
 	if(mr_moneybags)
-		parts += "The most affluent person at the night's end was <b>[mr_moneybags.account_owner] with [mr_moneybags.balance]</b> dollars!</div>"
+		parts += "The most affluent person at the night's end was <b>[mr_moneybags.account_holder] with [mr_moneybags.account_balance]</b> dollars!</div>"
 	else
 		parts += "Somehow, nobody made any money this shift! This'll result in some budget cuts...</div>"
 	return parts

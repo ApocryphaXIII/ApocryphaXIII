@@ -212,34 +212,6 @@
 		return
 
 	if(iswerewolf(src) && get_dist(src, A) <= 1)
-		if(istype(A, /obj/manholeup))
-			var/obj/manholeup/M = A
-			if(!M.climbing)
-				M.climbing = TRUE
-				if(do_after(src, 30, A))
-					M.climbing = FALSE
-					var/turf/destination = get_step_multiz(A, UP)
-					var/mob/living/L = src
-					if(L.pulling)
-						L.pulling.forceMove(destination)
-					forceMove(destination)
-					playsound(A, 'code/modules/wod13/sounds/manhole.ogg', 50, TRUE)
-				else
-					M.climbing = FALSE
-		if(istype(A, /obj/manholedown))
-			var/obj/manholeup/M = A
-			if(!M.climbing)
-				M.climbing = TRUE
-				if(do_after(src, 30, A))
-					M.climbing = FALSE
-					var/turf/destination = get_step_multiz(A, DOWN)
-					var/mob/living/L = src
-					if(L.pulling)
-						L.pulling.forceMove(destination)
-					forceMove(destination)
-					playsound(A, 'code/modules/wod13/sounds/manhole.ogg', 50, TRUE)
-				else
-					M.climbing = FALSE
 		if(istype(A, /obj/structure/vampdoor))
 			if(iscrinos(src) || iscoraxcrinos(src))
 				var/obj/structure/vampdoor/V = A

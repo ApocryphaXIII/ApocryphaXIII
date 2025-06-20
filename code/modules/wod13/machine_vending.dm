@@ -44,7 +44,7 @@
 		new /datum/data/mining_equipment("Silver Pickaxe",				/obj/item/pickaxe/silver,											1000),
 		new /datum/data/mining_equipment("Mining Conscription Kit",		/obj/item/storage/backpack/duffelbag/mining_conscript,				1500),
 		new /datum/data/mining_equipment("Jetpack Upgrade",				/obj/item/jetpack/suit,										2000),
-		new /datum/data/mining_equipment("Space Cash",					/obj/item/stack/spacecash/c1000,									2000),
+		new /datum/data/mining_equipment("Space Cash",					/obj/item/stack/dollar/thousand,									2000),
 		new /datum/data/mining_equipment("Mining Hardsuit",				/obj/item/clothing/suit/space/hardsuit/mining,						2000),
 		new /datum/data/mining_equipment("Diamond Pickaxe",				/obj/item/pickaxe/diamond,											2000),
 		new /datum/data/mining_equipment("Super Resonator",				/obj/item/resonator/upgraded,										2500),
@@ -178,7 +178,7 @@
 		return
 	if(istype(I, /obj/item/stack/dollar))
 		var/obj/item/stack/dollar/D = I
-		points = points+D.amount
+		points = points + D.get_item_credit_value()
 		qdel(D)
 		return
 	if(default_deconstruction_screwdriver(user, "mining-open", "mining", I))
@@ -364,24 +364,8 @@
 
 /obj/item/card/mining_point_card
 	name = "mining points card"
-	desc = "A small card preloaded with mining points. Swipe your ID card over it to transfer the points, then discard."
+	desc = "A small card preloaded with mining points."
 	icon_state = "data_1"
-	var/points = 500
-
-/obj/item/card/mining_point_card/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/card/id))
-		if(points)
-			var/obj/item/card/id/C = I
-			C.mining_points += points
-			to_chat(user, "<span class='info'>You transfer [points] points to [C].</span>")
-			points = 0
-		else
-			to_chat(user, "<span class='alert'>There's no points left on [src].</span>")
-	..()
-
-/obj/item/card/mining_point_card/examine(mob/user)
-	..()
-	to_chat(user, "<span class='alert'>There's [points] point\s on the card.</span>")
 
 ///Conscript kit
 /obj/item/card/mining_access_card

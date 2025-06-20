@@ -1,0 +1,5 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - qol: "you can now move while examining"
+  - qol: "the examine progress bar appears above what you examine"

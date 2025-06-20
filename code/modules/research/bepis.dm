@@ -52,18 +52,18 @@
 	if(!is_operational)
 		to_chat(user, "<span class='notice'>[src] can't accept money when it's not functioning.</span>")
 		return
-	if(istype(O, /obj/item/holochip) || istype(O, /obj/item/stack/spacecash))
+	if(iscash(O))
 		var/deposit_value = O.get_item_credit_value()
 		banked_cash += deposit_value
 		qdel(O)
 		say("Deposited [deposit_value] credits into storage.")
 		update_appearance()
 		return
-	if(istype(O, /obj/item/card/id))
-		var/obj/item/card/id/Card = O
-		if(Card.registered_account)
-			account = Card.registered_account
-			account_name = Card.registered_name
+	if(is_creditcard(O))
+		var/obj/item/card/credit/bank_card = O
+		if(bank_card.registered_account)
+			account = bank_card.registered_account
+			account_name = bank_card.registered_name
 			say("New account detected. Console Updated.")
 		else
 			say("No account detected on card. Aborting.")
@@ -220,7 +220,7 @@
 
 	if(use_power == ACTIVE_POWER_USE)
 		powered = TRUE
-	data["account_owner"] = account_name
+	data["account_holder"] = account_name
 	data["amount"] = banking_amount
 	data["stored_cash"] = banked_cash
 	data["mean_value"] = (major_threshold - positive_cash_offset - negative_cash_offset)

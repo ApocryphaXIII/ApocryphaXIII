@@ -231,40 +231,6 @@
 	. = ..()
 	icon_state = "rack[rand(1, 5)]"
 
-/obj/structure/trashcan
-	name = "trash can"
-	desc = "Holds garbage inside."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "garbage"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-	density = TRUE
-
-/obj/structure/trashcan/Initialize()
-	. = ..()
-	if(prob(25))
-		icon_state = "garbage_open"
-	if(GLOB.winter)
-		if(istype(get_area(src), /area/vtm))
-			var/area/vtm/V = get_area(src)
-			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
-/obj/structure/trashbag
-	name = "trash bag"
-	desc = "Holds garbage inside."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "garbage1"
-	anchored = TRUE
-
-/obj/structure/trashbag/Initialize()
-	. = ..()
-	var/garbagestate = rand(1, 9)
-	if(garbagestate > 6)
-		density = TRUE
-	icon_state = "garbage[garbagestate]"
-
 /obj/structure/hotelsign
 	name = "sign"
 	desc = "It says H O T E L."
@@ -717,8 +683,8 @@
 /obj/structure/fuelstation/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/stack/dollar))
 		var/obj/item/stack/dollar/D = I
-		stored_money += D.amount
-		to_chat(user, "<span class='notice'>You insert [D.amount] dollars into [src].</span>")
+		stored_money += D.get_item_credit_value()
+		to_chat(user, "<span class='notice'>You insert [D.get_item_credit_value()] dollars into [src].</span>")
 		qdel(I)
 		say("Payment received.")
 	if(istype(I, /obj/item/gas_can))

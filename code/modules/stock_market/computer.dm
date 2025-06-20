@@ -16,8 +16,8 @@
 		var/obj/item/stack/dollar/D = I
 		var/obj/item/stocks_license/CR = get_fuckin_card_number(logged_in)
 		if(CR)
-			CR.balance += D.amount
-			to_chat(user, "<span class='notice'>You insert [D.amount] dollars into [src].</span>")
+			CR.balance += D.get_item_credit_value()
+			to_chat(user, "<span class='notice'>You insert [D.get_item_credit_value()] dollars into [src].</span>")
 			qdel(I)
 		return
 	..()

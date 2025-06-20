@@ -236,24 +236,24 @@
 		ui.open()
 
 /obj/machinery/lapvend/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/stack/spacecash))
-		var/obj/item/stack/spacecash/c = I
+	if(istype(I, /obj/item/stack/dollar))
+		var/obj/item/stack/dollar/c = I
 		if(!user.temporarilyRemoveItemFromInventory(c))
 			return
-		credits += c.value
-		visible_message("<span class='info'><span class='name'>[user]</span> inserts [c.value] cr into [src].</span>")
+		credits += c.get_item_credit_value()
+		visible_message("<span class='info'><span class='name'>[user]</span> inserts [c.get_item_credit_value()] cr into [src].</span>")
 		qdel(c)
 		return
 	else if(istype(I, /obj/item/holochip))
 		var/obj/item/holochip/HC = I
-		credits += HC.credits
-		visible_message("<span class='info'>[user] inserts a [HC.credits] cr holocredit chip into [src].</span>")
+		credits += HC.get_item_credit_value()
+		visible_message("<span class='info'>[user] inserts a [HC.get_item_credit_value()] cr holocredit chip into [src].</span>")
 		qdel(HC)
 		return
-	else if(istype(I, /obj/item/card/id))
+	else if(is_creditcard(I))
 		if(state != 2)
 			return
-		var/obj/item/card/id/ID = I
+		var/obj/item/card/credit/ID = I
 		var/datum/bank_account/account = ID.registered_account
 		var/target_credits = total_price - credits
 		if(!account.adjust_money(-target_credits))

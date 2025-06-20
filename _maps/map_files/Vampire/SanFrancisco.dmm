@@ -58921,7 +58921,7 @@
 	pixel_y = 32
 	},
 /obj/effect/spawner/random/occult/artifact,
-/obj/item/wire_cutters,
+/obj/item/wirecutters,
 /obj/item/storage/box/lights/mixed,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/strip)

@@ -1,3 +1,4 @@
+// The way this completely bypasses the entire power system is so strange
 /obj/fusebox
 	name = "fuse box"
 	desc = "Power the controlled area with pure electricity."
@@ -8,6 +9,7 @@
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	pixel_y = 32
+	// ! This is stupid, it should just be using integrity
 	var/damaged = 0
 	var/repairing = FALSE
 
@@ -27,10 +29,10 @@
 			user.electrocute_act(50, src, siemens_coeff = 1, flags = NONE)
 
 /obj/fusebox/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/wire_cutters))
+	if(I.tool_behaviour == TOOL_WIRECUTTER)
 		if(!repairing)
 			repairing = TRUE
-			if(do_after(user, 100, src))
+			if(do_after(user, 10 SECONDS, src))
 				icon_state = "fusebox"
 				damaged = 0
 				playsound(get_turf(src),'code/modules/wod13/sounds/fix.ogg', 75, FALSE)

@@ -5,12 +5,12 @@
 	. = ..()
 	var/obj/item/storage/backpack/b = locate() in H
 	if(b)
-		var/obj/item/vamp/creditcard/card = locate() in b.contents
+		var/obj/item/card/credit/card = locate() in b.contents
 		if(card && card.has_checked == FALSE)
-			for(var/obj/item/vamp/creditcard/caard in b.contents)
+			for(var/obj/item/card/credit/caard in b.contents)
 				if(caard)
-					H.bank_id = caard.account.bank_id
-					caard.account.account_owner = H.true_real_name
+					H.account_id = caard.registered_account.account_id
+					caard.registered_account.account_holder = H.true_real_name
 					caard.has_checked = TRUE
 
 //ID
@@ -85,7 +85,7 @@
 						return
 		if(iskindred(H))
 			if(H.clane)
-				if(H.clane.name == "Baali")
+				if(H.clane.name == CLAN_BAALI)
 					H.emote("scream")
 					H.pointed(user)
 	M.show_message("<span class='warning'><b>GOD SEES YOU!</b></span>", MSG_AUDIBLE)
@@ -103,7 +103,7 @@
 	if(iskindred(target))
 		var/mob/living/carbon/human/H = target
 		if(H.clane)
-			if(H.clane.name == "Baali")
+			if(H.clane.name == CLAN_BAALI)
 				last_detonated = world.time
 				var/turf/lightning_source = get_step(get_step(H, NORTH), NORTH)
 				lightning_source.Beam(H, icon_state="lightning[rand(1,12)]", time = 5)

@@ -42,7 +42,7 @@
 	if(iskindred(user))
 		var/mob/living/carbon/human/H = user
 		if(H.clane)
-			if(H.clane.name == "Lasombra")
+			if(H.clane.name == CLAN_LASOMBRA)
 				return
 	..()
 	on = !on
@@ -566,15 +566,6 @@
 /obj/item/flashlight/glowstick/pink
 	name = "pink glowstick"
 	color = LIGHT_COLOR_PINK
-
-/obj/effect/spawner/lootdrop/glowstick
-	name = "random colored glowstick"
-	icon = 'icons/obj/lighting.dmi'
-	icon_state = "random_glowstick"
-
-/obj/effect/spawner/lootdrop/glowstick/Initialize()
-	loot = typesof(/obj/item/flashlight/glowstick)
-	. = ..()
 
 /obj/item/flashlight/spotlight //invisible lighting source
 	name = "disco light"

@@ -22,17 +22,17 @@
 	v_duty = "You are a member of the Kiasyd bloodline! You maintain the Library on the top floor of the Church, sharing space with the local Lasombra, and conduct arcane rituals out of sight. Good luck."
 	duty = "You are a member of the Kiasyd bloodline! You maintain the Library on the top floor of the Church, sharing space with the local Lasombra, and conduct arcane rituals out of sight. Good luck."
 	minimal_masquerade = 0
-	allowed_bloodlines = list("Kiasyd")
+	allowed_bloodlines = list(CLAN_KIASYD)
 
 /datum/outfit/job/kiasyd
-	name = "kiasyd"
+	name = CLAN_KIASYD
 	jobtype = /datum/job/vamp/kiasyd
 	l_pocket = /obj/item/vamp/phone
 	id = /obj/item/cockclock
 	backpack_contents = list(
 		/obj/item/passport=1,
 		/obj/item/flashlight=1,
-		/obj/item/vamp/creditcard=1,
+		/obj/item/card/credit=1,
 	)
 
 /datum/outfit/job/kiasyd/pre_equip(mob/living/carbon/human/H)

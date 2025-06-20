@@ -364,24 +364,8 @@
 
 /obj/item/card/mining_point_card
 	name = "mining points card"
-	desc = "A small card preloaded with mining points. Swipe your ID card over it to transfer the points, then discard."
+	desc = "A small card preloaded with mining points."
 	icon_state = "data_1"
-	var/points = 500
-
-/obj/item/card/mining_point_card/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/card/id))
-		if(points)
-			var/obj/item/card/id/C = I
-			C.mining_points += points
-			to_chat(user, "<span class='info'>You transfer [points] points to [C].</span>")
-			points = 0
-		else
-			to_chat(user, "<span class='alert'>There's no points left on [src].</span>")
-	..()
-
-/obj/item/card/mining_point_card/examine(mob/user)
-	..()
-	to_chat(user, "<span class='alert'>There's [points] point\s on the card.</span>")
 
 ///Conscript kit
 /obj/item/card/mining_access_card

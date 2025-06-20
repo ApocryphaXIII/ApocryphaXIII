@@ -87,7 +87,7 @@
 	///List of species that are limited to a certain amount of that species doing this job.
 	var/list/species_slots = list()
 	///List of Bloodlines that are allowed to do this job.
-	var/list/allowed_bloodlines = list("Brujah", "Tremere", "Ventrue", "Nosferatu", "Gangrel", "Toreador", "Malkavian", "Banu Haqim", "Giovanni", "Ministry")
+	var/list/allowed_bloodlines = list(CLAN_BRUJAH, CLAN_TREMERE, CLAN_VENTRUE, CLAN_NOSFERATU, CLAN_GANGREL, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_BANU_HAQIM, CLAN_GIOVANNI, CLAN_SETITES)
 	///List of Tribes that are allowed to do this job.
 	var/list/allowed_tribes = list("Galestalkers", "Ghost Council", "Hart Wardens", "Children of Gaia", "Glass Walkers", "Bone Gnawers", "Ronin", "Black Spiral Dancers","Get of Fenris","Black Furies","Silver Fangs","Silent Striders","Shadow Lords","Red Talons","Stargazers", "Corax")
 	///List of Auspices that are allowed to do this job.
@@ -238,9 +238,10 @@
 			H.apply_pref_name("human", preference_source)
 */
 //No need to humanize fucking furries, since there is no fucking furries
+
 	if(!visualsOnly)
 		var/datum/bank_account/bank_account = new(H.real_name, src, H.dna.species.payday_modifier)
-		bank_account.payday(STARTING_PAYCHECKS, TRUE)
+		//bank_account.payday(STARTING_PAYCHECKS, TRUE)
 		H.account_id = bank_account.account_id
 
 	//Equip the rest of the gear
@@ -331,12 +332,15 @@
 	var/jobtype = null
 
 	uniform = /obj/item/clothing/under/color/grey
+	// Wallet needs to be a seperate pr cause its undercooked rn and its already getting unatomic.
+	//wallet = /obj/item/storage/wallet
 	id = /obj/item/card/id
-//	ears = /obj/item/radio/headset
-//	belt = /obj/item/pda
+	//ears = /obj/item/radio/headset
+	//belt = /obj/item/pda
+	//bank_card = /obj/item/card/credit
 	back = /obj/item/storage/backpack
 	shoes = /obj/item/clothing/shoes/sneakers/black
-//	box = /obj/item/storage/box/survival
+	//box = /obj/item/storage/box/survival
 
 	var/backpack = /obj/item/storage/backpack
 	var/satchel  = /obj/item/storage/backpack/satchel
@@ -379,7 +383,7 @@
 	if(!J)
 		J = SSjob.GetJob(H.job)
 
-	var/obj/item/card/id/C = H.wear_id
+	var/obj/item/card/id/C = H.get_idcard(TRUE)
 	if(istype(C))
 		if(C)
 			C.access = J.get_access()
@@ -394,11 +398,20 @@
 			if(H.age)
 				C.registered_age = H.age
 			C.update_label()
+			/*
 			var/datum/bank_account/B = SSeconomy.bank_accounts_by_id["[H.account_id]"]
 			if(B && B.account_id == H.account_id)
 				C.registered_account = B
 				B.bank_cards += C
+			*/
 			H.sec_hud_set_ID()
+
+	var/obj/item/card/credit/bank_card = H.get_creditcard()
+	if(istype(bank_card))
+		var/datum/bank_account/bank_account = SSeconomy.bank_accounts_by_id["[H.account_id]"]
+		if(bank_account.account_id == H.account_id)
+			bank_card.registered_account = bank_account
+			bank_account.bank_cards += bank_card
 
 	var/obj/item/pda/PDA = H.get_item_by_slot(pda_slot)
 	if(istype(PDA))

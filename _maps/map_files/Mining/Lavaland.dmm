@@ -415,7 +415,7 @@
 	},
 /area/vtm/interior/penumbra)
 "es" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/rough{
 	umbra = 1
 	},
@@ -560,11 +560,11 @@
 	dir = 1;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "fg" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/grass/fakebasalt{
 	umbra = 1
 	},
@@ -740,7 +740,7 @@
 	dir = 8;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "hG" = (
@@ -944,7 +944,7 @@
 /area/vtm/interior/penumbra)
 "jO" = (
 /obj/item/chair/stool/bar,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "jR" = (
@@ -995,7 +995,7 @@
 /area/vtm/interior/penumbra)
 "ks" = (
 /obj/item/chair/stool/bar,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/carpet{
 	umbra = 1
 	},
@@ -1134,7 +1134,7 @@
 /area/vtm/interior/penumbra)
 "lW" = (
 /obj/effect/decal/bordur,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -1150,7 +1150,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "mz" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /obj/item/clothing/glasses/regular/hipster{
 	anchored = 1
 	},
@@ -1174,7 +1174,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "mS" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampwood{
 	umbra = 1
 	},
@@ -1186,7 +1186,7 @@
 	},
 /area/vtm/interior/penumbra)
 "nb" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /obj/item/clothing/glasses/regular/circle{
 	anchored = 1
 	},
@@ -1620,7 +1620,7 @@
 /area/vtm/interior/penumbra)
 "sH" = (
 /obj/effect/decal/litter,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -1803,25 +1803,11 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "uA" = (
-/obj/structure/trashbag{
-	pixel_x = 6;
-	pixel_y = -12
-	},
-/obj/structure/trashbag{
-	pixel_x = -8;
-	pixel_y = -10
-	},
-/obj/structure/trashbag{
-	pixel_x = 10;
-	pixel_y = 3
-	},
-/obj/structure/trashbag{
-	pixel_y = -13
-	},
-/obj/structure/trashbag{
-	pixel_x = -9;
-	pixel_y = 8
-	},
+/obj/effect/decal/cleanable/garbage,
+/obj/effect/decal/cleanable/garbage,
+/obj/effect/decal/cleanable/garbage,
+/obj/effect/decal/cleanable/garbage,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampdirt{
 	umbra = 1
 	},
@@ -1831,8 +1817,8 @@
 	dir = 4;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
-/obj/structure/trashbag,
+/obj/structure/closet/crate/dumpster,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "uM" = (
@@ -2044,7 +2030,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "wr" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "wt" = (
@@ -2055,11 +2041,11 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "ww" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "wy" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -2094,7 +2080,7 @@
 /area/vtm/interior/penumbra)
 "wS" = (
 /obj/police_department,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "wW" = (
@@ -2648,7 +2634,7 @@
 /area/vtm/interior/penumbra)
 "De" = (
 /obj/structure/table,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -3452,7 +3438,7 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "LC" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampdirt{
 	umbra = 1
 	},
@@ -4250,7 +4236,7 @@
 /area/vtm/interior/penumbra)
 "Vq" = (
 /obj/structure/strip_club,
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/sidewalk{
 	umbra = 1
 	},
@@ -4320,7 +4306,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "Wg" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/sidewalk{
 	umbra = 1
 	},
@@ -4422,7 +4408,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "Xm" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/sidewalk/poor{
 	umbra = 1
 	},
@@ -4661,7 +4647,7 @@
 	},
 /area/vtm/interior/penumbra)
 "ZC" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},

@@ -8,7 +8,7 @@ export const AtmLogin = (props) => {
   const { act, data } = useBackend();
   const [entered_code, setEnteredCode] = useLocalState('login_code', '');
 
-  const { account_owner, code } = data;
+  const { account_holder, code } = data;
 
   const handleLogin = () => {
     act('login', { code: entered_code });

@@ -18,7 +18,7 @@
 	exp_type_department = EXP_TYPE_CHURCH
 
 	allowed_species = list("Human", "Ghoul", "Vampire")
-	allowed_bloodlines = list("Lasombra", "Toreador", "Malkavian", "Salubri", "Salubri Warrior", "Nagaraja", "Cappadocian", "Banu Haqim", "Caitiff")
+	allowed_bloodlines = list(CLAN_LASOMBRA, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_SALUBRI, CLAN_SALUBRI_WARRIOR, CLAN_NAGARAJA, CLAN_CAPPADOCIAN, CLAN_BANU_HAQIM, CLAN_NONE)
 	species_slots = list("Vampire" = 2)
 	minimal_generation = 13
 
@@ -37,7 +37,7 @@
 	r_pocket = /obj/item/flashlight
 	l_hand = /obj/item/vamp/keys/church
 	back = /obj/item/storage/backpack/satchel
-	backpack_contents = list(/obj/item/passport=1, /obj/item/vamp/creditcard=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/card/credit=1)
 
 /datum/outfit/job/priest/pre_equip(mob/living/carbon/human/H)
 	..()

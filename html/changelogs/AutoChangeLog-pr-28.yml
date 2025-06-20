@@ -1,0 +1,6 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - qol: "Added new vars for random spawners for mappers to use. See code/game/objects/effects/spawners/random/readme.md for more info."
+  - code_imp: "Changed the file paths to most spawners and put them into separate files. All random spawners inherit from the base random class."
+  - refactor: "Refactor spawner code to make it clean and unison. All of the random spawners now follow the same formatting."

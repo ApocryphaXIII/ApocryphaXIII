@@ -42,3 +42,41 @@
 /obj/structure/closet/crate/bin/proc/do_close()
 	playsound(loc, close_sound, 15, TRUE, -3)
 	update_appearance()
+
+//I should make these slow to move
+/obj/structure/closet/crate/dumpster
+	name = "dumpster"
+	desc = "Holds garbage inside."
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "garbage"
+	plane = GAME_PLANE
+	layer = ABOVE_ALL_MOB_LAYER
+	anchored = TRUE
+	density = TRUE
+	var/internal_trash_chance = 75
+	var/external_trash_chance = 10
+
+/obj/structure/closet/crate/dumpster/Initialize()
+	if(prob(25))
+		icon_state = "garbageopen"
+	. = ..()
+	//Letting you clear the snow by opening and closing it is acctually pretty flavor
+	if(GLOB.winter)
+		if(istype(get_area(src), /area/vtm))
+			var/area/vtm/V = get_area(src)
+			if(V.upper)
+				icon_state = "[initial(icon_state)]-snow"
+
+/obj/structure/closet/crate/dumpster/PopulateContents()
+	if(prob(internal_trash_chance))
+		if(prob(95))
+			new /obj/effect/spawner/random/trash/garbage(src)
+		else //Pretty rare while the loot table is un-audited
+			new /obj/effect/spawner/random/maintenance/random(src)
+	if(prob(external_trash_chance))
+		new /obj/effect/spawner/random/trash/grime(loc)
+
+/obj/structure/closet/crate/dumpster/empty
+	internal_trash_chance = 0
+	external_trash_chance = 0
+

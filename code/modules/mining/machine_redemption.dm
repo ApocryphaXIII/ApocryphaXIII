@@ -248,18 +248,8 @@
 	var/datum/component/material_container/mat_container = materials.mat_container
 	switch(action)
 		if("Claim")
-			var/obj/item/card/id/I
-			if(isliving(usr))
-				var/mob/living/L = usr
-				I = L.get_idcard(TRUE)
-			if(points)
-				if(I)
-					I.mining_points += points
-					points = 0
-				else
-					to_chat(usr, "<span class='warning'>No valid ID detected.</span>")
-			else
-				to_chat(usr, "<span class='warning'>No points to claim.</span>")
+			//This feature is very depricated rn and this pr is keeping a bit out of scope..
+			to_chat(usr, "<span class='warning'>Network link current offline!</span>")
 			return TRUE
 		if("Release")
 			if(!mat_container)

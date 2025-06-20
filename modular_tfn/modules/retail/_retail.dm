@@ -1,5 +1,3 @@
-GLOBAL_LIST_EMPTY(retail_products)
-
 /obj/structure/retail
 	name = "retail outlet"
 	desc = "A counter for partaking in wretched capitalism. Takes cash or card."
@@ -58,7 +56,7 @@ GLOBAL_LIST_EMPTY(retail_products)
 	for(var/datum/data/retail_product/product in products_list)
 		if(!product)
 			CRASH("Null retail product loaded in initialization of [src]. This should not happen!")
-		GLOB.retail_products[product.equipment_path] = 1
+		GLOB.vending_products[product.equipment_path] = 1
 
 /obj/structure/retail/ui_assets(mob/user)
 	return list(

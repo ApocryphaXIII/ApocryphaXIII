@@ -136,7 +136,6 @@
 /obj/effect/decal/cleanable/gasoline/attackby(obj/item/I, mob/living/user)
 	var/attacked_by_hot_thing = I.get_temperature()
 	if(attacked_by_hot_thing)
-		call_dharma("grief", user)
 		visible_message("<span class='warning'>[user] tries to ignite [src] with [I]!</span>", "<span class='warning'>You try to ignite [src] with [I].</span>")
 		log_combat(user, src, (attacked_by_hot_thing < 480) ? "tried to ignite" : "ignited", I)
 		fire_act(attacked_by_hot_thing)
@@ -204,6 +203,25 @@
 	icon_state = "vomit_1"
 	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
 	beauty = -150
+
+/obj/effect/decal/cleanable/vomit/attack_hand(mob/user, list/modifiers)
+	. = ..()
+	if(.)
+		return
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(isflyperson(H))
+			playsound(get_turf(src), 'sound/items/drink.ogg', 50, TRUE) //slurp
+			H.visible_message("<span class='alert'>[H] extends a small proboscis into the vomit pool, sucking it with a slurping sound.</span>")
+			if(reagents)
+				for(var/datum/reagent/R in reagents.reagent_list)
+					if (istype(R, /datum/reagent/consumable))
+						var/datum/reagent/consumable/nutri_check = R
+						if(nutri_check.nutriment_factor >0)
+							H.adjust_nutrition(nutri_check.nutriment_factor * nutri_check.volume)
+							reagents.remove_reagent(nutri_check.type,nutri_check.volume)
+			reagents.trans_to(H, reagents.total_volume, transfered_by = user)
+			qdel(src)
 
 /obj/effect/decal/cleanable/vomit/old
 	name = "crusty dried vomit"

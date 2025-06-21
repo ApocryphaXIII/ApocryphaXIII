@@ -376,3 +376,25 @@
 		var/turf/T = get_step(Start,direction)
 		if(!T.density)
 			target_mob.Move(T)
+
+/obj/structure/ladder/unbreakable/rune
+	name = "\improper Teleportation Rune"
+	desc = "Could lead anywhere."
+	icon = 'icons/obj/rune.dmi'
+	icon_state = "1"
+	color = rgb(0,0,255)
+
+/obj/structure/ladder/unbreakable/rune/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/update_icon_blocker)
+
+/obj/structure/ladder/unbreakable/rune/show_initial_fluff_message(mob/user, going_up)
+	balloon_alert(user, "activating...")
+
+/obj/structure/ladder/unbreakable/rune/show_final_fluff_message(mob/user, obj/structure/ladder/destination, going_up)
+	visible_message(span_notice("[user] activates [src] and teleports away."))
+	balloon_alert(user, "warped in")
+
+/obj/structure/ladder/unbreakable/rune/use(mob/user, going_up = TRUE)
+	if(!(user.mind in SSticker.mode.wizards))
+		..()

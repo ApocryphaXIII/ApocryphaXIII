@@ -96,6 +96,7 @@
 #include "card_mismatch.dm"
 #include "combat.dm"
 #include "component_tests.dm"
+#include "connect_loc.dm"
 #include "confusion.dm"
 #include "container_sanity.dm"
 #include "create_and_destroy.dm"

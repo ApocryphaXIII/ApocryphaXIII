@@ -43,7 +43,7 @@ GLOBAL_LIST_INIT(malkavian_character_replacements, list(
 	vampiric = TRUE
 	cooldown_time = 5 SECONDS
 
-/datum/action/cooldown/malk_hivemind/Trigger()
+/datum/action/cooldown/malk_hivemind/Trigger(trigger_flags)
 	. = ..()
 	if(!IsAvailable())
 		return
@@ -71,7 +71,7 @@ GLOBAL_LIST_INIT(malkavian_character_replacements, list(
 	///clan datum
 	var/datum/vampire_clan/malkavian/clan_datum
 
-/datum/action/cooldown/malk_speech/Trigger()
+/datum/action/cooldown/malk_speech/Trigger(trigger_flags)
 	. = ..()
 	var/mad_speak = FALSE
 	if(IsAvailable())

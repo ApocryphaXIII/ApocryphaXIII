@@ -159,7 +159,7 @@
 	. = ..()
 	. += "A direct link to another dimension full of creatures not very happy to see you. <span class='warning'>Entering the link would be a very bad idea.</span>"
 
-/obj/structure/spawner/nether/attack_hand(mob/user)
+/obj/structure/spawner/nether/attack_hand(mob/user, list/modifiers)
 	. = ..()
 	user.visible_message("<span class='warning'>[user] is violently pulled into the link!</span>", \
 						"<span class='userdanger'>Touching the portal, you are quickly pulled through into a world of unimaginable horror!</span>")

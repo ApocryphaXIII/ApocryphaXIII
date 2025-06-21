@@ -666,8 +666,11 @@
 
 /obj/matrix/attack_hand(mob/user)
 	if(user.client)
-		if(do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
-			cryo_mob(user, src)
+		if(iswerewolf(user))
+			to_chat(user, span_warning("Return to your homid form before you matrix!"))
+			return TRUE
+		if(do_after(user, 100, src))
+			cryoMob(user, src)
 	return TRUE
 
 /obj/matrix/proc/cryo_mob(mob/living/mob_occupant)
@@ -1229,21 +1232,14 @@
 							dead_amongst = TRUE
 						icon_state = "pit1"
 						user.visible_message("<span class='warning'>[user] digs a hole in [src].</span>", "<span class='warning'>You dig a hole in [src].</span>")
-						if(dead_amongst)
-							call_dharma("respect", user)
 					if(!dead_amongst)
 						user.visible_message("<span class='warning'>[user] refills [src].</span>", "<span class='warning'>You refill [src].</span>")
 						qdel(src)
 				else
-					var/dead_amongst = FALSE
 					for(var/mob/living/L in src)
 						L.forceMove(get_turf(src))
-						if(L.stat == DEAD)
-							dead_amongst = TRUE
 					icon_state = "pit0"
 					user.visible_message("<span class='warning'>[user] digs a hole in [src].</span>", "<span class='warning'>You dig a hole in [src].</span>")
-					if(dead_amongst)
-						call_dharma("disrespect", user)
 			else
 				burying = FALSE
 

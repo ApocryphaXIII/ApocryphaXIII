@@ -25,7 +25,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 		reflection.setup_visuals(src)
 		ref = WEAKREF(reflection)
 
-/obj/structure/mirror/attack_hand(mob/user)
+/obj/structure/mirror/Destroy()
+	. = ..()
+	GLOB.las_mirrors -= src
+
+/obj/structure/mirror/attack_hand(mob/user, list/modifiers)
 	. = ..()
 	if(.)
 		return
@@ -92,7 +96,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 
 /obj/structure/mirror/welder_act(mob/living/user, obj/item/I)
 	..()
-	if(user.a_intent == INTENT_HARM)
+	if(user.combat_mode)
 		return FALSE
 
 	if(!broken)
@@ -144,7 +148,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 			choosable_races += initial(S.id)
 	..()
 
-/obj/structure/mirror/magic/attack_hand(mob/user)
+/obj/structure/mirror/magic/attack_hand(mob/user, list/modifiers)
 	. = ..()
 	if(.)
 		return

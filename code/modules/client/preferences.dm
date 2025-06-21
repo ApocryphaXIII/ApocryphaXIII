@@ -659,8 +659,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					qdel(ACT)
 				dat += "<b>Initial Gifts:</b> [gifts_text]"
 				// These mobs should be made in nullspace to avoid dumping them onto the map somewhere.
-				var/mob/living/carbon/werewolf/crinos/DAWOF = new
-				var/mob/living/carbon/werewolf/lupus/DAWOF2 = new
+				var/mob/living/simple_animal/werewolf/crinos/DAWOF = new
+				var/mob/living/simple_animal/werewolf/lupus/DAWOF2 = new
 
 				DAWOF.sprite_color = werewolf_color
 				DAWOF2.sprite_color = werewolf_color
@@ -1365,10 +1365,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<h2>[make_font_cool("OOC")]</h2>"
 			dat += "<b>Window Flashing:</b> <a href='byond://?_src_=prefs;preference=winflash'>[(windowflashing) ? "Enabled":"Disabled"]</a><br>"
 			dat += "<br>"
-			dat += "<b>Play Admin MIDIs:</b> <a href='byond://?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Enabled":"Disabled"]</a><br>"
-			dat += "<b>Play Lobby Music:</b> <a href='byond://?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Enabled":"Disabled"]</a><br>"
-			dat += "<b>Play End of Round Sounds:</b> <a href='byond://?_src_=prefs;preference=endofround_sounds'>[(toggles & SOUND_ENDOFROUND) ? "Enabled":"Disabled"]</a><br>"
-			dat += "<b>See Pull Requests:</b> <a href='byond://?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Enabled":"Disabled"]</a><br>"
+			dat += "<b>Play Admin MIDIs:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Enabled":"Disabled"]</a><br>"
+			dat += "<b>Play Lobby Music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Enabled":"Disabled"]</a><br>"
+			dat += "<b>Play End of Round Sounds:</b> <a href='?_src_=prefs;preference=endofround_sounds'>[(toggles & SOUND_ENDOFROUND) ? "Enabled":"Disabled"]</a><br>"
+			dat += "<b>Play Combat Mode Sounds:</b> <a href='?_src_=prefs;preference=combat_mode_sound'>[(toggles & SOUND_COMBATMODE) ? "Enabled":"Disabled"]</a><br>"
+			dat += "<b>See Pull Requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Enabled":"Disabled"]</a><br>"
 			dat += "<br>"
 
 
@@ -3392,6 +3393,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("endofround_sounds")
 					toggles ^= SOUND_ENDOFROUND
 
+				if("combat_mode_sound")
+					toggles ^= SOUND_COMBATMODE
+
 				if("ghost_ears")
 					if(isobserver(user.client.mob))
 						if(isavatar(user.client.mob))
@@ -3751,8 +3755,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				character.auspice.start_gnosis = 3
 				character.auspice.base_breed = "Crinos"
 		if(character.transformator?.crinos_form && character.transformator?.lupus_form && !HAS_TRAIT(character,TRAIT_CORAX))
-			var/mob/living/carbon/werewolf/crinos/crinos = character.transformator.crinos_form?.resolve()
-			var/mob/living/carbon/werewolf/lupus/lupus = character.transformator.lupus_form?.resolve()
+			var/mob/living/simple_animal/werewolf/crinos/crinos = character.transformator.crinos_form?.resolve()
+			var/mob/living/simple_animal/werewolf/lupus/lupus = character.transformator.lupus_form?.resolve()
 
 			if(!crinos)
 				character.transformator.crinos_form = null
@@ -3770,10 +3774,18 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			lupus.sprite_eye_color = werewolf_eye_color
 
 			if(werewolf_name)
+				crinos.real_name = werewolf_name
+				crinos.true_real_name = werewolf_name
 				crinos.name = werewolf_name
+				lupus.real_name = werewolf_name
+				lupus.true_real_name = werewolf_name
 				lupus.name = werewolf_name
 			else
+				crinos.real_name = real_name
+				crinos.true_real_name = real_name
 				crinos.name = real_name
+				lupus.real_name = real_name
+				lupus.true_real_name = real_name
 				lupus.name = real_name
 
 			crinos.physique = physique
@@ -3793,8 +3805,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			crinos.maxHealth = round((crinos::maxHealth + (character::maxHealth / 4) * (character.physique + character.additional_physique))) + (character.auspice.level - 1) * 50
 			crinos.health = crinos.maxHealth
 		else if(HAS_TRAIT(character,TRAIT_CORAX)/*character.transformator?.corax_form && character.transformator?.corvid_form*/) // if we have the Corax tribe, use the Corax forms instead..
-			var/mob/living/carbon/werewolf/corax/corax_crinos/cor_crinos = character.transformator.corax_form?.resolve()
-			var/mob/living/carbon/werewolf/lupus/corvid/corvid = character.transformator.corvid_form?.resolve()
+			var/mob/living/simple_animal/werewolf/corax/corax_crinos/cor_crinos = character.transformator.corax_form?.resolve()
+			var/mob/living/simple_animal/werewolf/lupus/corvid/corvid = character.transformator.corvid_form?.resolve()
 
 			if(!cor_crinos)
 				character.transformator.corax_form = null

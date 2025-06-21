@@ -10,21 +10,21 @@
 	var/is_gun_store = FALSE
 
 	var/list/products_list = list(
-		new /datum/data/retail_product("Plain Donut", /obj/item/food/donut/plain, 5),
-		new /datum/data/retail_product("Plain Jelly Donut", /obj/item/food/donut/jelly/plain, 5),
-		new /datum/data/retail_product("Berry Donut", /obj/item/food/donut/berry, 5),
-		new /datum/data/retail_product("Frosted Jelly Donut", /obj/item/food/donut/jelly/berry, 5),
-		new /datum/data/retail_product("Purple Donut", /obj/item/food/donut/trumpet, 5),
-		new /datum/data/retail_product("Frosted Purple-Jelly Donut", /obj/item/food/donut/jelly/trumpet, 5),
-		new /datum/data/retail_product("Apple Donut", /obj/item/food/donut/apple, 5),
-		new /datum/data/retail_product("Apple Jelly Donut", /obj/item/food/donut/jelly/apple, 5),
-		new /datum/data/retail_product("Caramel Donut", /obj/item/food/donut/caramel, 5),
-		new /datum/data/retail_product("Caramel Jelly Donut", /obj/item/food/donut/jelly/caramel, 5),
-		new /datum/data/retail_product("Chocolate Donut", /obj/item/food/donut/choco, 5),
-		new /datum/data/retail_product("Chocolate Custard Donut", /obj/item/food/donut/jelly/choco, 5),
-		new /datum/data/retail_product("Matcha Donut", /obj/item/food/donut/matcha, 5),
-		new /datum/data/retail_product("Matcha Jelly Donut", /obj/item/food/donut/jelly/matcha, 5),
-		new /datum/data/retail_product("Blueberry Muffin", /obj/item/food/muffin/berry, 8),
+		new /datum/data/vending_product("Plain Donut", /obj/item/food/donut/plain, 5),
+		new /datum/data/vending_product("Plain Jelly Donut", /obj/item/food/donut/jelly/plain, 5),
+		new /datum/data/vending_product("Berry Donut", /obj/item/food/donut/berry, 5),
+		new /datum/data/vending_product("Frosted Jelly Donut", /obj/item/food/donut/jelly/berry, 5),
+		new /datum/data/vending_product("Purple Donut", /obj/item/food/donut/trumpet, 5),
+		new /datum/data/vending_product("Frosted Purple-Jelly Donut", /obj/item/food/donut/jelly/trumpet, 5),
+		new /datum/data/vending_product("Apple Donut", /obj/item/food/donut/apple, 5),
+		new /datum/data/vending_product("Apple Jelly Donut", /obj/item/food/donut/jelly/apple, 5),
+		new /datum/data/vending_product("Caramel Donut", /obj/item/food/donut/caramel, 5),
+		new /datum/data/vending_product("Caramel Jelly Donut", /obj/item/food/donut/jelly/caramel, 5),
+		new /datum/data/vending_product("Chocolate Donut", /obj/item/food/donut/choco, 5),
+		new /datum/data/vending_product("Chocolate Custard Donut", /obj/item/food/donut/jelly/choco, 5),
+		new /datum/data/vending_product("Matcha Donut", /obj/item/food/donut/matcha, 5),
+		new /datum/data/vending_product("Matcha Jelly Donut", /obj/item/food/donut/jelly/matcha, 5),
+		new /datum/data/vending_product("Blueberry Muffin", /obj/item/food/muffin/berry, 8),
 	)
 
 /obj/structure/retail/Initialize()
@@ -53,16 +53,16 @@
 		ui_interact(user)
 
 /obj/structure/retail/proc/build_inventory()
-	for(var/datum/data/retail_product/product in products_list)
+	for(var/datum/data/vending_product/product in products_list)
 		if(!product)
 			CRASH("Null retail product loaded in initialization of [src]. This should not happen!")
-		GLOB.vending_products[product.equipment_path] = 1
+		GLOB.vending_products[product.product_path] = 1
 
 /obj/structure/retail/ui_assets(mob/user)
 	return list(
 		get_asset_datum(/datum/asset/spritesheet/vending),
 	)
-
+//yea
 /obj/structure/retail/ui_interact(mob/user, datum/tgui/ui)
 	if(owner_needed == TRUE)
 		if(!my_owner)
@@ -79,10 +79,10 @@
 /obj/structure/retail/ui_static_data(mob/user)
 	. = list()
 	.["product_records"] = list()
-	for(var/datum/data/retail_product/product in products_list)
+	for(var/datum/data/vending_product/product in products_list)
 		var/list/product_data = list(
-			path = replacetext(replacetext("[product.equipment_path]", "/obj/item/", ""), "/", "-"),
-			name = product.equipment_name,
+			path = replacetext(replacetext("[product.product_path]", "/obj/item/", ""), "/", "-"),
+			name = product.name,
 			price = product.cost,
 			stock = product.stock,
 			dimensions = product.icon_dimension,
@@ -130,7 +130,7 @@
 				return
 			var/mob/living/user = usr
 
-			var/datum/data/retail_product/product = locate(params["ref"]) in products_list
+			var/datum/data/vending_product/product = locate(params["ref"]) in products_list
 			if(!product)
 				to_chat(usr, span_alert("Error: Invalid choice!"))
 				return
@@ -162,9 +162,9 @@
 				to_chat(user, span_alert("You don't have enough money in your hand."))
 				return
 			playsound(get_turf(src), 'sound/effects/cashregister.ogg', 50, TRUE)
-			new product.equipment_path(loc)
+			new product.product_path(loc)
 			if(product.stock > 0)
 				--product.stock
 				update_static_data(usr)
-			SSblackbox.record_feedback("nested tally", "retail_item_bought", 1, list("[type]", "[product.equipment_path]"))
+			SSblackbox.record_feedback("nested tally", "retail_item_bought", 1, list("[type]", "[product.product_path]"))
 			. = TRUE

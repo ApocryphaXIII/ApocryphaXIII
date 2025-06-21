@@ -68,13 +68,13 @@
 	)
 
 /datum/data/mining_equipment
-	var/equipment_name = "generic"
-	var/equipment_path = null
+	var/name = "generic"
+	var/product_path = null
 	var/cost = 0
 
 /datum/data/mining_equipment/New(name, path, cost)
-	src.equipment_name = name
-	src.equipment_path = path
+	src.name = name
+	src.product_path = path
 	src.cost = cost
 
 /obj/machinery/mineral/equipment_vendor/Initialize()
@@ -88,7 +88,7 @@
 /obj/machinery/mineral/equipment_vendor/proc/build_inventory()
 	for(var/p in prize_list)
 		var/datum/data/mining_equipment/M = p
-		GLOB.vending_products[M.equipment_path] = 1
+		GLOB.vending_products[M.product_path] = 1
 
 /obj/machinery/mineral/equipment_vendor/update_icon_state()
 	. = ..()
@@ -120,8 +120,8 @@
 	.["product_records"] = list()
 	for(var/datum/data/mining_equipment/prize in prize_list)
 		var/list/product_data = list(
-			path = replacetext(replacetext("[prize.equipment_path]", "/obj/item/", ""), "/", "-"),
-			name = prize.equipment_name,
+			path = replacetext(replacetext("[prize.product_path]", "/obj/item/", ""), "/", "-"),
+			name = prize.name,
 			price = prize.cost,
 			ref = REF(prize)
 		)
@@ -156,13 +156,13 @@
 				flick(icon_deny, src)
 				return
 			if(prize.cost > points)
-				to_chat(usr, "<span class='alert'>Error: Insufficient points for [prize.equipment_name]!</span>")
+				to_chat(usr, "<span class='alert'>Error: Insufficient points for [prize.name]!</span>")
 				flick(icon_deny, src)
 				return
 			points -= prize.cost
-			to_chat(usr, "<span class='notice'>[src] clanks to life briefly before vending [prize.equipment_name]!</span>")
-			new prize.equipment_path(loc)
-			SSblackbox.record_feedback("nested tally", "mining_equipment_bought", 1, list("[type]", "[prize.equipment_path]"))
+			to_chat(usr, "<span class='notice'>[src] clanks to life briefly before vending [prize.name]!</span>")
+			new prize.product_path(loc)
+			SSblackbox.record_feedback("nested tally", "mining_equipment_bought", 1, list("[type]", "[prize.product_path]"))
 			. = TRUE
 
 /obj/machinery/mineral/equipment_vendor/fastfood/attackby(obj/item/I, mob/user, params)

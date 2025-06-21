@@ -54,7 +54,7 @@ export const RetailVendor = (props) => {
                   <Table.Cell>
                     <Button
                       style={{
-                        'min-width': '95px',
+                        'min-width': '60px',
                         'text-align': 'center',
                       }}
                       disabled={!data.user || (product.price > data.user.money && data.user.is_card == 0) || product.stock == 0}

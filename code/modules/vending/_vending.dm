@@ -41,6 +41,23 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	/// The category the product was in, if any.
 	/// Sourced directly from product_categories.
 	var/category
+	var/icon_dimension
+
+/datum/data/vending_product/New(name = "product", path, price, amount = -1)
+	src.name = name
+	src.product_path = path
+	src.custom_price = price
+	src.amount = amount
+
+	var/atom/item = product_path
+	if(!item)
+		CRASH("Retail product equipment path of [product_path] is not a valid path!")
+	var/icon_file = initial(item.icon)
+	var/icon_state = initial(item.icon_state)
+	var/icon/temp_icon = icon(icon_file, icon_state, SOUTH)
+	icon_dimension = "[temp_icon.Width()]x[temp_icon.Height()]"
+	qdel(temp_icon)
+
 
 /**
  * # vending machines

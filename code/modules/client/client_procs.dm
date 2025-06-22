@@ -1178,10 +1178,13 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(prefs.toggles & SOUND_AMBIENCE)
 		if(SSambience.ambience_listening_clients[src] <= world.time)
 			SSambience.ambience_listening_clients[src] = world.time + 10 SECONDS //Just wait 10 seconds before the next one aight mate? cheers.
+	else
+		SSambience.ambience_listening_clients -= src
+
+	if(prefs.toggles & SOUND_MUSIC_TRACKS)
 		if(SSambience.track_listening_clients[src] <= world.time)
 			SSambience.track_listening_clients[src] = world.time + 10 SECONDS
 	else
-		SSambience.ambience_listening_clients -= src
 		SSambience.track_listening_clients -= src
 
 /**

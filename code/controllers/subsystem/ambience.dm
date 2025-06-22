@@ -72,8 +72,7 @@ SUBSYSTEM_DEF(ambience)
 
 	if(!new_sound) //We didnt come up with a sound, try again in 10 seconds
 		return 10 SECONDS
-	//This prob deserves its own channel
-	new_sound = sound(new_sound, repeat = 0, wait = 0, volume = volume, channel = CHANNEL_LOBBYMUSIC)
+	new_sound = sound(new_sound, repeat = 0, wait = 0, volume = volume, channel = CHANNEL_MUSIC_TRACKS)
 
 	SEND_SOUND(M, new_sound)
 

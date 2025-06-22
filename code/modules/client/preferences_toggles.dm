@@ -251,7 +251,6 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/settings/sound, Toggle_Soundscape)()
 	else
 		to_chat(usr, "You will no longer hear ambient sounds.")
 		usr.stop_sound_channel(CHANNEL_AMBIENCE)
-		usr.stop_sound_channel(CHANNEL_BUZZ)
 	usr.client.update_ambience_pref()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ambience", "[usr.client.prefs.toggles & SOUND_AMBIENCE ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 /datum/verbs/menu/settings/sound/Toggle_Soundscape/Get_checked(client/C)
@@ -259,19 +258,20 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/settings/sound, Toggle_Soundscape)()
 
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/settings/sound, toggle_ship_ambience)()
-	set name = "Hear/Silence Ship Ambience"
+	set name = "Hear/Silence Music Tracks"
 	set category = "Preferences"
-	set desc = "Hear Ship Ambience Roar"
-	usr.client.prefs.toggles ^= SOUND_SHIP_AMBIENCE
+	set desc = "Hear Area Based Music"
+	usr.client.prefs.toggles ^= SOUND_MUSIC_TRACKS
 	usr.client.prefs.save_preferences()
-	if(usr.client.prefs.toggles & SOUND_SHIP_AMBIENCE)
-		to_chat(usr, "You will now hear ship ambience.")
+	if(usr.client.prefs.toggles & SOUND_MUSIC_TRACKS)
+		to_chat(usr, "You will now hear area based non-diagetic music.")
 	else
-		to_chat(usr, "You will no longer hear ship ambience.")
-		usr.stop_sound_channel(CHANNEL_BUZZ)
-	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ship Ambience", "[usr.client.prefs.toggles & SOUND_SHIP_AMBIENCE ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, I bet you read this comment expecting to see the same thing :^)
+		to_chat(usr, "You will no longer hear area based non-diagetic music.")
+		usr.stop_sound_channel(CHANNEL_MUSIC_TRACKS)
+	usr.client.update_ambience_pref()
+	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Music Tracks", "[usr.client.prefs.toggles & SOUND_MUSIC_TRACKS ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, I bet you read this comment expecting to see the same thing :^)
 /datum/verbs/menu/settings/sound/toggle_ship_ambience/Get_checked(client/C)
-	return C.prefs.toggles & SOUND_SHIP_AMBIENCE
+	return C.prefs.toggles & SOUND_MUSIC_TRACKS
 
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/settings/sound, toggle_announcement_sound)()

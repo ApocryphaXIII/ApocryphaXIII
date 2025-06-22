@@ -79,10 +79,12 @@ VENTORY!
 	screen_max_rows = 4
 
 /datum/component/storage/concrete/vtm/car
+	max_w_class = WEIGHT_CLASS_HUGE
 	screen_max_columns = 7
 	screen_max_rows = 9
 
 /datum/component/storage/concrete/vtm/car/track
+	max_w_class = WEIGHT_CLASS_GIGANTIC
 	screen_max_columns = 13
 	screen_max_rows = 9
 

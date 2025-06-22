@@ -91,7 +91,6 @@ GLOBAL_LIST_INIT(beach_ambience,list('code/modules/wod13/sounds/beach.ogg'))
 GLOBAL_LIST_INIT(nature_ambience,list('code/modules/wod13/sounds/nature.ogg'))
 GLOBAL_LIST_INIT(sewer_ambience,list('code/modules/wod13/sounds/canalization.ogg'))
 GLOBAL_LIST_INIT(interior_ambience,list('code/modules/wod13/sounds/interior.ogg'))
-GLOBAL_LIST_INIT(prince_ambience,list('code/modules/wod13/sounds/prince.ogg'))
 
 GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_GENERIC = GLOB.generic_ambience,
@@ -111,6 +110,12 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_BEACH = GLOB.beach_ambience,
 	AMBIENCE_NATURE = GLOB.nature_ambience,
 	AMBIENCE_SEWER = GLOB.sewer_ambience,
-	AMBIENCE_INTERIOR = GLOB.interior_ambience,
-	AMBIENCE_PRINCE = GLOB.prince_ambience
+	AMBIENCE_INTERIOR = GLOB.interior_ambience
+	))
+
+
+GLOBAL_LIST_INIT(prince_music,list('code/modules/wod13/sounds/prince.ogg'))
+
+GLOBAL_LIST_INIT(music_assoc,list(
+	MUSIC_PRINCE = GLOB.prince_music,
 	))

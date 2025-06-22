@@ -65,6 +65,10 @@
 	///Used to decide what the maximum time between ambience is
 	var/max_ambience_cooldown = 60 SECONDS
 
+	var/music_index
+	/// Equivelent to ambientsounds, A list of music tracks to pick from every so often to play to clients.
+	var/list/musictracks
+
 	flags_1 = CAN_BE_DIRTY_1 | CULT_PERMITTED_1
 
 	var/list/firedoors
@@ -150,6 +154,8 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	icon_state = ""
 	if(!ambientsounds)
 		ambientsounds = GLOB.ambience_assoc[ambience_index]
+	if(!musictracks)
+		musictracks = GLOB.music_assoc[music_index]
 	if(requires_power)
 		luminosity = 0
 	else

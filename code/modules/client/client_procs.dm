@@ -554,6 +554,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		movingmob = null
 	active_mousedown_item = null
 	SSambience.ambience_listening_clients -= src
+	SSambience.track_listening_clients -= src
 	QDEL_NULL(view_size)
 	QDEL_NULL(void)
 	QDEL_NULL(tooltips)
@@ -1175,11 +1176,13 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 /client/proc/update_ambience_pref()
 	if(prefs.toggles & SOUND_AMBIENCE)
-		if(SSambience.ambience_listening_clients[src] > world.time)
-			return // If already properly set we don't want to reset the timer.
-		SSambience.ambience_listening_clients[src] = world.time + 10 SECONDS //Just wait 10 seconds before the next one aight mate? cheers.
+		if(SSambience.ambience_listening_clients[src] <= world.time)
+			SSambience.ambience_listening_clients[src] = world.time + 10 SECONDS //Just wait 10 seconds before the next one aight mate? cheers.
+		if(SSambience.track_listening_clients[src] <= world.time)
+			SSambience.track_listening_clients[src] = world.time + 10 SECONDS
 	else
 		SSambience.ambience_listening_clients -= src
+		SSambience.track_listening_clients -= src
 
 /**
  * Handles incoming messages from the stat-panel TGUI.

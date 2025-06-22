@@ -55,7 +55,8 @@
 #define AMBIENCE_NATURE "nature"
 #define AMBIENCE_SEWER "sewer"
 #define AMBIENCE_INTERIOR "interior"
-#define AMBIENCE_PRINCE "prince"
+
+#define MUSIC_PRINCE "prince"
 
 //default byond sound environments
 #define SOUND_ENVIRONMENT_NONE -1

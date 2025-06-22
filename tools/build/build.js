@@ -215,8 +215,7 @@ export const DmTarget = new Juke.Target({
     !get(SkipIconCutter) && IconCutterTarget, TguiTarget,
   ],
   inputs: [
-    '_maps/map_files/generic/**',
-    'maps/**/*.dm',
+    '_maps/**',
     'code/**',
     'html/**',
     'icons/**',

@@ -79,4 +79,4 @@ SUBSYSTEM_DEF(ambience)
 
 	var/sound_length = ceil(SSsound_cache.get_sound_length(new_sound.file))
 #warn add equivelents to min_ambience_cooldown and max_ambience_cooldown mabye?
-	return rand(30 SECONDS + sound_length, 60 SECONDS + sound_length)
+	return rand(2 MINUTES + sound_length, 3 MINUTES + sound_length)

@@ -57,7 +57,7 @@
 		else
 			return TRUE
 
-/mob/living/proc/CheckEyewitness(var/mob/living/source, var/mob/attacker, var/range = 0, var/affects_source = FALSE)
+/mob/living/proc/CheckEyewitness(mob/living/source, mob/attacker, range = 0, affects_source = FALSE)
 	var/actual_range = max(1, round(range*(attacker.alpha/255)))
 	var/list/seenby = list()
 	for(var/mob/living/carbon/human/npc/NPC in oviewers(1, source))

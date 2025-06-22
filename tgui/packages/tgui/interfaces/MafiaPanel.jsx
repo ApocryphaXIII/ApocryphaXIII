@@ -1,5 +1,3 @@
-import { classes } from 'tgui-core/react';
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
@@ -10,6 +8,9 @@ import {
   Stack,
   TimeDisplay,
 } from 'tgui-core/components';
+import { classes } from 'tgui-core/react';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const MafiaPanel = (props) => {

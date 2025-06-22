@@ -1,4 +1,3 @@
-import { useBackend, useLocalState } from '../backend';
 import {
   Box,
   Button,
@@ -8,6 +7,8 @@ import {
   Section,
   Tabs,
 } from 'tgui-core/components';
+
+import { useBackend, useLocalState } from '../backend';
 import { NtosWindow } from '../layouts';
 import { AccessList } from './common/AccessList';
 

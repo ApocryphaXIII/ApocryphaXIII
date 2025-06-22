@@ -1,5 +1,6 @@
-import { useLocalState } from '../../../backend';
 import { Button, Input } from 'tgui-core/components';
+
+import { useLocalState } from '../../../backend';
 
 export const News = (props) => {
   const { app, act } = props;

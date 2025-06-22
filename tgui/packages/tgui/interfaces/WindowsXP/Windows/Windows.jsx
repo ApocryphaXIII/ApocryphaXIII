@@ -1,5 +1,6 @@
-import { Window } from './Window';
 import { Component } from 'react';
+
+import { Window } from './Window';
 
 export class Windows extends Component {
   render() {

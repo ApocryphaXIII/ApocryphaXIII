@@ -1,0 +1,4 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - refactor: "killed off flav wirecutters meaning you can use wirecutters for normal wirecutter interactions"

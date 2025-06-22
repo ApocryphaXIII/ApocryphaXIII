@@ -1,6 +1,7 @@
+import { Box, Button, Input, LabeledList, Section } from 'tgui-core/components';
+
 import { useBackend } from '../../backend';
 import { useLocalState } from '../../backend';
-import { Button, Input, LabeledList, Section, Box } from 'tgui-core/components';
 import { Window } from '../../layouts';
 
 export const AtmMain = (props) => {

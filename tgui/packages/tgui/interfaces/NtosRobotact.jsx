@@ -1,4 +1,3 @@
-import { useBackend, useSharedState } from '../backend';
 import {
   AnimatedNumber,
   Box,
@@ -10,6 +9,8 @@ import {
   Slider,
   Tabs,
 } from 'tgui-core/components';
+
+import { useBackend, useSharedState } from '../backend';
 import { NtosWindow } from '../layouts';
 
 export const NtosRobotact = (props) => {

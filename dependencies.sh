@@ -7,8 +7,9 @@
 export BYOND_MAJOR=516
 export BYOND_MINOR=1659
 
+# ! THIS IS CURRENTLY OUT OF SYNC WITH THE .DLL WHICH IS 3.6.0
 #rust_g git tag
-export RUST_G_VERSION=3.6.0
+export RUST_G_VERSION=3.8.0
 
 #node version
 export NODE_VERSION_LTS=22.11.0

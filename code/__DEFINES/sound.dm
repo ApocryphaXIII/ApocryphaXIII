@@ -50,6 +50,13 @@
 #define AMBIENCE_AWAY "away"
 #define AMBIENCE_CREEPY "creepy" //not to be confused with spooky
 
+#define AMBIENCE_CITY "city"
+#define AMBIENCE_BEACH "beach"
+#define AMBIENCE_NATURE "nature"
+#define AMBIENCE_SEWER "sewer"
+#define AMBIENCE_INTERIOR "interior"
+#define AMBIENCE_PRINCE "prince"
+
 //default byond sound environments
 #define SOUND_ENVIRONMENT_NONE -1
 #define SOUND_ENVIRONMENT_GENERIC 0

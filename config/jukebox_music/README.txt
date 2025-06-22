@@ -10,6 +10,5 @@ Naming Conventions:
 
 Every sound you add must have a unique name. Avoid using the plus sign "+" and the period "." in names, as these are used internally to classify sounds.
 
-Sound names must be in the format of [song name]+[length in deciseconds]+[beat in deciseconds].ogg
-
-A three minute song title "SS13" that lasted 3 minutes would have a file name SS13+1800+5.ogg
+Sound names must be in the format of [song name]+[beats per minute].ogg
+Bpm is optional and doesnt matter as nothing uses it.

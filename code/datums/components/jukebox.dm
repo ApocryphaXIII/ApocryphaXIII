@@ -99,15 +99,19 @@
 	if(isnull(config_songs))
 		config_songs = list()
 		var/list/tracks = flist("[global.config.directory]/jukebox_music/sounds/")
+		//Cache all the sounds ahead of time so we minimize rust calls
+		SSsound_cache.cache_sounds(tracks)
 		for(var/track_file in tracks)
 			var/datum/track/new_track = new()
 			new_track.song_path = file("[global.config.directory]/jukebox_music/sounds/[track_file]")
+			new_track.song_length = SSsound_cache.get_sound_length(new_track.song_path)
 			var/list/track_data = splittext(track_file, "+")
-			if(length(track_data) != 3)
-				continue
 			new_track.song_name = track_data[1]
-			new_track.song_length = text2num(track_data[2])
-			new_track.song_beat = text2num(track_data[3])
+			var/bpm
+			if(length(track_data) > 1)
+				bpm = text2num(track_data[2])
+			if(isnum(bpm))
+				new_track.song_beat_deciseconds = 600 / bpm
 			config_songs[new_track.song_name] = new_track
 
 		if(!length(config_songs))
@@ -131,7 +135,6 @@
 		UNTYPED_LIST_ADD(songs_data, list( \
 			"name" = song_name, \
 			"length" = DisplayTimeText(one_song.song_length), \
-			"beat" = one_song.song_beat, \
 		))
 
 	data["active"] = !!active_song_sound
@@ -394,13 +397,10 @@
 	var/song_path = null
 	/// How long is the song in deciseconds
 	var/song_length = 0
-	/// How long is a beat of the song in decisconds
-	/// Used to determine time between effects when played
-	var/song_beat = 0
+	var/song_beat_deciseconds = 120
 
 // Default track supplied for testing and also because it's a banger
 /datum/track/default
 	song_path = 'sound/ambience/title3.ogg'
 	song_name = "Tintin on the Moon"
-	song_length = 3 MINUTES + 52 SECONDS
-	song_beat = 1 SECONDS
+	//song_beat_deciseconds = 60

@@ -16,7 +16,6 @@ import { Window } from '../layouts';
 type Song = {
   name: string;
   length: number;
-  beat: number;
 };
 
 type Data = {
@@ -75,10 +74,6 @@ export const Jukebox = () => {
             </LabeledList.Item>
             <LabeledList.Item label="Track Length">
               {song_selected?.length || 'No Track Selected'}
-            </LabeledList.Item>
-            <LabeledList.Item label="Track Beat">
-              {song_selected?.beat || 'No Track Selected'}
-              {song_selected?.beat === 1 ? ' beat' : ' beats'}
             </LabeledList.Item>
           </LabeledList>
         </Section>

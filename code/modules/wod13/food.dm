@@ -3,6 +3,7 @@
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	eatsound = 'code/modules/wod13/sounds/eat.ogg'
+	custom_price = 3
 	var/biten = FALSE
 
 /obj/item/food/vampire/proc/got_biten()

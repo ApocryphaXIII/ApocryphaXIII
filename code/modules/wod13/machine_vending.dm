@@ -68,7 +68,6 @@
 	)
 
 /datum/data/mining_equipment
-	var/name = "generic"
 	var/product_path = null
 	var/cost = 0
 
@@ -80,9 +79,10 @@
 /obj/machinery/mineral/equipment_vendor/Initialize()
 	. = ..()
 	if(owner_needed == TRUE)
+		//Im 99% sure this can be a locate instead.
 		for(var/mob/living/carbon/human/npc/NPC in range(2, src))
-			if(NPC)	//PSEUDO_M come back to fix this
-				my_owner = NPC
+			my_owner = NPC
+			break
 	build_inventory()
 
 /obj/machinery/mineral/equipment_vendor/proc/build_inventory()

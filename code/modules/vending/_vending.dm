@@ -52,6 +52,10 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/atom/item = product_path
 	if(!item)
 		CRASH("Retail product equipment path of [product_path] is not a valid path!")
+
+	if(!price)
+		src.custom_price = item.custom_price
+
 	var/icon_file = initial(item.icon)
 	var/icon_state = initial(item.icon_state)
 	var/icon/temp_icon = icon(icon_file, icon_state, SOUTH)
@@ -361,16 +365,14 @@ GLOBAL_LIST_EMPTY(vending_products)
 			amount = 0
 
 		var/atom/temp = typepath
-		var/datum/data/vending_product/R = new /datum/data/vending_product()
+		var/datum/data/vending_product/R = new /datum/data/vending_product(initial(temp.name), typepath)
 		GLOB.vending_products[typepath] = 1
-		R.name = initial(temp.name)
-		R.product_path = typepath
 		if(!start_empty)
 			R.amount = amount
 		R.max_amount = amount
 		///Prices of vending machines are all increased uniformly.
 		R.custom_price = round(initial(temp.custom_price) * SSeconomy.inflation_value())
-		R.custom_premium_price = round(initial(temp.custom_premium_price) * SSeconomy.inflation_value())
+		R.custom_premium_price = round(initial(temp.custom_premium_price))
 		R.age_restricted = initial(temp.age_restricted)
 		R.colorable = !!(initial(temp.greyscale_config) && initial(temp.greyscale_colors) && (initial(temp.flags_1) & IS_PLAYER_COLORABLE_1))
 		R.category = product_to_category[typepath]

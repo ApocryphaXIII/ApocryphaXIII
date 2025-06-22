@@ -1,9 +1,4 @@
-import {
-  Button,
-  Knob,
-  LabeledControls,
-  Section,
-} from 'tgui-core/components';
+import { Button, Knob, LabeledControls, Section } from 'tgui-core/components';
 
 import { useBackend } from '../backend';
 import { Window } from '../layouts';

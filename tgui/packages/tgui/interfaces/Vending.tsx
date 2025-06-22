@@ -214,7 +214,7 @@ const ProductDisplay = (props: {
         <Stack>
           {!all_products_free && (
             <Stack.Item fontSize="16px" color="green">
-              {(data.cash_inserted) || 0}
+              {data.cash_inserted || 0}
               {displayed_currency_name}
               <Icon name={displayed_currency_icon} color="gold" />
             </Stack.Item>

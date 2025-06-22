@@ -17,8 +17,12 @@ SUBSYSTEM_DEF(ambience)
 		//Check to see if the client exists and isn't held by a new player
 		var/mob/client_mob = client_iterator?.mob
 
-		if(isnull(client_iterator) || isnewplayer(client_iterator.mob))
+		if(isnull(client_iterator))
 			ambience_listening_clients -= client_iterator
+			continue
+
+		// We dont want ambience playing in the lobby but its is also prob more efficent then having to readd every player to the list.
+		if(isnewplayer(client_iterator.mob))
 			continue
 
 		if(ambience_listening_clients[client_iterator] > world.time)
@@ -34,8 +38,12 @@ SUBSYSTEM_DEF(ambience)
 		//Check to see if the client exists and isn't held by a new player
 		var/mob/client_mob = client_iterator?.mob
 
-		if(isnull(client_iterator) || isnewplayer(client_iterator.mob))
+		if(isnull(client_iterator))
 			track_listening_clients -= client_iterator
+			continue
+
+		// We dont want ambience playing in the lobby but its is also prob more efficent then having to readd every player to the list.
+		if(isnewplayer(client_iterator.mob))
 			continue
 
 		if(track_listening_clients[client_iterator] > world.time)
@@ -48,6 +56,9 @@ SUBSYSTEM_DEF(ambience)
 ///Attempts to play an ambient sound to a mob, returning the cooldown in deciseconds
 /area/proc/play_ambience(mob/M, sound/override_sound, volume = 27)
 	var/sound/new_sound = override_sound || pick(ambientsounds)
+
+	if(!new_sound) //We didnt come up with a sound, try again in 10 seconds
+		return 10 SECONDS
 	new_sound = sound(new_sound, repeat = 0, wait = 0, volume = volume, channel = CHANNEL_AMBIENCE)
 
 	SEND_SOUND(M, new_sound)
@@ -58,6 +69,9 @@ SUBSYSTEM_DEF(ambience)
 ///Attempts to play a non-diagetic music track to a mob, returning the cooldown in deciseconds
 /area/proc/play_music(mob/M, sound/override_sound, volume = 27)
 	var/sound/new_sound = override_sound || pick(musictracks)
+
+	if(!new_sound) //We didnt come up with a sound, try again in 10 seconds
+		return 10 SECONDS
 	//This prob deserves its own channel
 	new_sound = sound(new_sound, repeat = 0, wait = 0, volume = volume, channel = CHANNEL_LOBBYMUSIC)
 

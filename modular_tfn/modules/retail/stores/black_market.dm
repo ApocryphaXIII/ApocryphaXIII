@@ -1,4 +1,4 @@
-#warn you should not be able to use credit here.
+// TODO: you should not be able to use credit here. -Fallcon
 /obj/structure/retail/black_market
 	products_list = list(
 		new /datum/data/vending_product("lighter",		/obj/item/lighter/greyscale,	10),

@@ -18,13 +18,11 @@ type VendingData = {
   all_products_free: boolean;
   onstation: boolean;
   department: string;
-  jobDiscount: number;
   displayed_currency_icon: string;
   displayed_currency_name: string;
   product_records: ProductRecord[];
   coin_records: CoinRecord[];
   hidden_records: HiddenRecord[];
-  cash_inserted: Number;
   user: UserData;
   stock: Record<string, StockItem>[];
   extended_inventory: boolean;
@@ -57,10 +55,9 @@ type HiddenRecord = ProductRecord & {
 };
 
 type UserData = {
-  name: string;
-  cash: number;
-  job: string;
-  department: string;
+  money: number;
+  is_card: boolean;
+  payment_item: string;
 };
 
 type StockItem = {
@@ -176,9 +173,7 @@ export const UserDetails = (props) => {
           <Icon name="id-card" size={1.5} />
         </Stack.Item>
         <Stack.Item>
-          {user
-            ? `${user.name || 'Unknown'} | ${user.job}`
-            : 'Please Insert Card or Cash.'}
+           Please Insert Card or Cash.
         </Stack.Item>
       </Stack>
     </NoticeBox>
@@ -214,7 +209,7 @@ const ProductDisplay = (props: {
         <Stack>
           {!all_products_free && (
             <Stack.Item fontSize="16px" color="green">
-              {data.cash_inserted || 0}
+              {data.user.money || 0}
               {displayed_currency_name}
               <Icon name={displayed_currency_icon} color="gold" />
             </Stack.Item>
@@ -258,19 +253,13 @@ const ProductDisplay = (props: {
 const Product = (props) => {
   const { act, data } = useBackend<VendingData>();
   const { custom, product, productStock, fluid } = props;
-  const { access, department, jobDiscount, all_products_free, user } = data;
+  const { access, department, all_products_free, user } = data;
 
   const colorable = !!productStock?.colorable;
   const free = all_products_free || product.price === 0;
-  const discount = !product.premium && department === user?.department;
   const remaining = custom ? product.amount : productStock.amount;
-  const redPrice = Math.round(product.price * jobDiscount);
-  const disabled =
-    remaining === 0 ||
-    (!all_products_free && !user) ||
-    (!all_products_free &&
-      !access &&
-      (discount ? redPrice : product.price) > user?.cash);
+  const redPrice = product.price;
+  const disabled = remaining === 0
 
   const baseProps = {
     base64: product.image,
@@ -293,13 +282,13 @@ const Product = (props) => {
         : act('vend', {
             ref: product.ref,
             discountless: !!product.premium,
+            payment_item: data.user.payment_item,
           });
     },
   };
 
   const priceProps = {
     custom: custom,
-    discount: discount,
     free: free,
     product: product,
     redPrice: redPrice,

@@ -104,7 +104,7 @@
 		held_items += user.get_inactive_held_item()
 
 	for(var/obj/item/held_item in held_items)
-		if(istype(held_item, /obj/item/card/credit))
+		if(is_creditcard(held_item))
 			.["user"]["is_card"] = 1
 			.["user"]["payment_item"] = REF(held_item)
 			break
@@ -113,7 +113,6 @@
 			.["user"]["money"] = money.get_item_credit_value()
 			.["user"]["payment_item"] = REF(held_item)
 			break
-	qdel(held_items)
 	return
 
 /obj/structure/retail/ui_act(action, params)
@@ -137,7 +136,7 @@
 				return
 
 			var/obj/item/held_item = locate(params["payment_item"]) in user
-			if(!product)
+			if(!held_item)
 				to_chat(usr, span_alert("Error: Payment method not found!"))
 				return
 

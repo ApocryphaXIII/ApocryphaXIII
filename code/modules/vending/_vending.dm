@@ -179,8 +179,6 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/age_restrictions = TRUE
 	/// How much physical cash does this vending machine have?
 	var/cash_contained = 0
-	/// Cash currently inserted awaiting to be deducted for purchases
-	var/cash_inserted = 0
 	/**
 	  * Is this item on station or not
 	  *
@@ -580,11 +578,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 		wires.interact(user)
 		return
 
-	if(iscash(I))
-		var/obj/item/dolla_dolla = I
-		cash_inserted += dolla_dolla.get_item_credit_value()
-		qdel(I)
-		return
 	if(refill_canister && istype(I, refill_canister))
 		if (!panel_open)
 			to_chat(user, "<span class='warning'>You should probably unscrew the service panel first!</span>")
@@ -885,7 +878,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 	data["onstation"] = onstation
 	data["all_products_free"] = all_products_free
 	data["department"] = payment_department
-	data["jobDiscount"] = 1
 	data["product_records"] = list()
 	data["displayed_currency_name"] = "$"
 
@@ -950,21 +942,27 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/ui_data(mob/user)
 	. = list()
-	.["cash_inserted"] = cash_inserted
-	var/obj/item/card/credit/C
-	if(isliving(user))
-		var/mob/living/L = user
-		C = L.get_creditcard()
-	if(C?.registered_account)
-		.["user"] = list()
-		.["user"]["name"] = C.registered_account.account_holder
-		.["user"]["cash"] = C.registered_account.account_balance
-		if(C.registered_account.account_job)
-			.["user"]["job"] = C.registered_account.account_job.title
-			.["user"]["department"] = C.registered_account.account_job.paycheck_department
-		else
-			.["user"]["job"] = "No Job"
-			.["user"]["department"] = "No Department"
+	.["user"] = list()
+	.["user"]["money"] = 0
+	.["user"]["is_card"] = 0
+
+	var/list/held_items = list()
+	if(user.get_active_held_item())
+		held_items += user.get_active_held_item()
+	if(user.get_inactive_held_item())
+		held_items += user.get_inactive_held_item()
+
+	for(var/obj/item/held_item in held_items)
+		if(is_creditcard(held_item))
+			.["user"]["is_card"] = 1
+			.["user"]["payment_item"] = REF(held_item)
+			break
+		if(iscash(held_item))
+			var/obj/item/money = held_item
+			.["user"]["money"] = money.get_item_credit_value()
+			.["user"]["payment_item"] = REF(held_item)
+			break
+
 	.["stock"] = list()
 	for (var/datum/data/vending_product/product_record in product_records + coin_records + hidden_records)
 		var/list/product_data = list(
@@ -1033,6 +1031,9 @@ GLOBAL_LIST_EMPTY(vending_products)
 	. = TRUE
 	if(!can_vend(usr))
 		return
+	if(!isliving(usr))
+		return
+	var/mob/living/user = usr
 	vend_ready = FALSE //One thing at a time!!
 	var/datum/data/vending_product/R = locate(params["ref"])
 	var/list/record_to_check = product_records + coin_records
@@ -1057,35 +1058,44 @@ GLOBAL_LIST_EMPTY(vending_products)
 		flick(icon_deny,src)
 		vend_ready = TRUE
 		return
-	if(onstation)
-		var/obj/item/card/credit/C
-		if(isliving(usr))
-			var/mob/living/L = usr
-			C = L.get_creditcard(TRUE)
-		if(!C)
-			say("No card found.")
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
-		else if (!C.registered_account)
-			say("No account found.")
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
-		// From what im aware you cannot tell the age of a bank account holder in real life. So I removed that part of the old code
-		var/datum/bank_account/account = C.registered_account
+
+	var/obj/item/held_item = locate(params["payment_item"]) in user
+	if(!held_item)
+		to_chat(usr, span_alert("Error: Payment method not found!"))
+		return
+
+	if(!all_products_free)
 		if(coin_records.Find(R) || hidden_records.Find(R))
 			price_to_use = R.custom_premium_price ? R.custom_premium_price : extra_price
-		if(price_to_use && !account.adjust_money(-price_to_use))
-			say("You do not possess the funds to purchase [R.name].")
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
-		var/datum/bank_account/D = SSeconomy.get_dep_account(payment_department)
-		if(D)
-			D.adjust_money(price_to_use)
-			SSblackbox.record_feedback("amount", "vending_spent", price_to_use)
-			log_econ("[price_to_use] credits were inserted into [src] by [D.account_holder] to buy [R].")
+
+		if(is_creditcard(held_item))
+			var/obj/item/card/credit/creditcard = held_item
+			var/datum/bank_account/used_account = creditcard.registered_account
+			if(!used_account)
+				to_chat(user, span_alert("The [creditcard] has no linked account."))
+				flick(icon_deny,src)
+				return
+			if(!used_account.check_pin(user, price_to_use, creditcard))
+				flick(icon_deny,src)
+				return
+			if(!used_account.adjust_money(price_to_use))
+				to_chat(user, span_alert("The transaction is declined - Insufficient funds."))
+				flick(icon_deny,src)
+				return
+			//used_account.process_credit_fraud(user, product.price)
+			var/datum/bank_account/D = SSeconomy.get_dep_account(payment_department)
+			if(D)
+				D.adjust_money(price_to_use)
+
+		if(iscash(held_item))
+			if(!held_item.use(price_to_use))
+				to_chat(user, span_alert("You don't have enough money in your hand."))
+				flick(icon_deny,src)
+				return
+			cash_contained += price_to_use
+
+		SSblackbox.record_feedback("amount", "vending_spent", price_to_use)
+
 	if(last_shopper != usr || purchase_message_cooldown < world.time)
 		say("Thank you for shopping with [src]!")
 		purchase_message_cooldown = world.time + 5 SECONDS

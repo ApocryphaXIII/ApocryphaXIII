@@ -25,6 +25,7 @@
 	name = "donut"
 	desc = "Goes great with robust coffee."
 	icon_state = "donut1"
+	custom_price = 1
 	bite_consumption = 5
 	tastes = list("donut" = 1)
 	foodtypes = JUNKFOOD | GRAIN | FRIED | SUGAR | BREAKFAST

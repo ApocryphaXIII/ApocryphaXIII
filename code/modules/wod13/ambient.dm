@@ -103,6 +103,7 @@
 /area/vtm/interior/police
 	name = "Police Station"
 	icon_state = "police"
+	ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING

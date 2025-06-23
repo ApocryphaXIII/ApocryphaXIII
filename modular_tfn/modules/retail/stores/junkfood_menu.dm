@@ -1,12 +1,13 @@
 /obj/structure/retail/junkfood_menu
 	desc = "Purchase junkfood and crap."
-	products_list = list(new /datum/data/vending_product("chocolate bar",	/obj/item/food/vampire/bar,	3),
-		new /datum/data/vending_product("chips",	/obj/item/food/vampire/crisps,	5),
-		new /datum/data/vending_product("water bottle",	/obj/item/reagent_containers/food/drinks/bottle/vampirewater,	3),
-		new /datum/data/vending_product("soda can",	/obj/item/reagent_containers/food/drinks/soda_cans/vampiresoda,	3),
-		new /datum/data/vending_product("two liter cola bottle",	/obj/item/reagent_containers/food/drinks/bottle/vampirecola,	7),
-		new /datum/data/vending_product("cola can",	/obj/item/reagent_containers/food/drinks/soda_cans/vampirecola,	5),
-		new /datum/data/vending_product("summer thaw", /obj/item/reagent_containers/food/drinks/bottle/vampirecola/summer_thaw, 5),
+	products_list = list(
+		new /datum/data/vending_product("chocolate bar", /obj/item/food/vampire/bar),
+		new /datum/data/vending_product("chips", /obj/item/food/vampire/crisps),
+		new /datum/data/vending_product("water bottle",	/obj/item/reagent_containers/food/drinks/bottle/vampirewater),
+		new /datum/data/vending_product("soda can",	/obj/item/reagent_containers/food/drinks/soda_cans/vampiresoda),
+		new /datum/data/vending_product("two liter cola bottle",	/obj/item/reagent_containers/food/drinks/bottle/vampirecola),
+		new /datum/data/vending_product("cola can",	/obj/item/reagent_containers/food/drinks/soda_cans/vampirecola),
+		new /datum/data/vending_product("summer thaw", /obj/item/reagent_containers/food/drinks/bottle/vampirecola/summer_thaw),
 		new /datum/data/vending_product("milk",	/obj/item/reagent_containers/food/condiment/vampiremilk,	5),
 		new /datum/data/vending_product("beer bottle",	/obj/item/reagent_containers/food/drinks/beer/vampire,	10),
 		new /datum/data/vending_product("blue stripe", /obj/item/reagent_containers/food/drinks/beer/vampire/blue_stripe, 8),

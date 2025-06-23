@@ -37,7 +37,7 @@
 /area/vtm/interior
 	name = "Interior"
 	icon_state = "interior"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	wall_rating = HIGH_WALL_RATING
 
@@ -295,7 +295,7 @@
 /area/vtm/jazzclub
 	name = "Jazz Club"
 	icon_state = "camarilla"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	zone_type = "elysium"
 	fire_controled = TRUE
@@ -304,7 +304,7 @@
 /area/vtm/cabaret
 	name = "Siren's Cabaret"
 	icon_state = "melpominee"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -315,7 +315,7 @@
 /area/vtm/clinic
 	name = "Hospital"
 	icon_state = "clinic"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	yang_chi = 2
@@ -329,14 +329,14 @@
 /area/vtm/supply
 	name = "Supply Depot"
 	icon_state = "supply"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/anarch
 	name = "Bar"
 	icon_state = "anarch"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	musictracks = list('code/modules/wod13/sounds/naive.ogg')
 	zone_type = "elysium"
@@ -346,7 +346,7 @@
 /area/vtm/anarch/basement
 	name = "Bar - Basement"
 	icon_state = "anarch"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	musictracks = list('code/modules/wod13/sounds/naive.ogg')
 	zone_type = "elysium"
@@ -356,7 +356,7 @@
 /area/vtm/anarch/garage
 	name = "Garage"
 	icon_state = "anarch"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -365,7 +365,7 @@
 	name = "Hotel"
 	icon_state = "hotel"
 	musictracks = list('code/modules/wod13/sounds/naive.ogg')
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -381,7 +381,7 @@
 	name = "Church - Interior"
 	icon_state = "church"
 	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
@@ -391,7 +391,7 @@
 	icon_state = "church"
 	zone_type = "elysium"
 	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
@@ -401,7 +401,7 @@
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
 	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	yang_chi = 0
@@ -411,7 +411,7 @@
 /area/vtm/graveyard
 	name = "Graveyard"
 	icon_state = "graveyard"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	musictracks = list('code/modules/wod13/sounds/hollywood.ogg')
 	upper = TRUE
 	zone_type = "battle"
@@ -461,7 +461,7 @@
 /area/vtm/sewer/cappadocian
 	name = "Cappadocian Crypt"
 	icon_state = "graveyard"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	musictracks = list('code/modules/wod13/sounds/hollywood.ogg')
 	upper = FALSE
 	zone_type = "elysium"

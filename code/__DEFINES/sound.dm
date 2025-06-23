@@ -54,7 +54,7 @@
 #define AMBIENCE_BEACH "beach"
 #define AMBIENCE_NATURE "nature"
 #define AMBIENCE_SEWER "sewer"
-#define AMBIENCE_INTERIOR "interior"
+#define AMBIENCE_OFFICE "interior"
 
 #define MUSIC_PRINCE "prince"
 

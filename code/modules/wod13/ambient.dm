@@ -249,6 +249,9 @@
 	name = "Beach"
 	icon_state = "northbeach"
 	ambience_index = AMBIENCE_BEACH
+	//The waves dont really stop.
+	min_ambience_cooldown = 0
+	max_ambience_cooldown = 5 SECONDS
 	musictracks = list('code/modules/wod13/sounds/santamonica.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING

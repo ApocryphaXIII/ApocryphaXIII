@@ -1,3 +1,4 @@
+// Use /obj/structure/retail/gas_station unless you really only want junkfood
 /obj/structure/retail/junkfood_menu
 	desc = "Purchase junkfood and crap."
 	products_list = list(

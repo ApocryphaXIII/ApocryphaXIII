@@ -657,7 +657,6 @@ VENTORY!
 			coordinates = screen_loc_to_grid_coordinates(coordinates)
 
 		if(!validate_grid_coordinates(coordinates, storing.grid_width, storing.grid_height, storing))
-			to_chat(user, span_warning("[parent] cant fit the [storing]!"))
 			return FALSE
 	return TRUE
 

@@ -33612,9 +33612,9 @@
 /area/vtm/cabaret)
 "iac" = (
 /obj/structure/rack,
-/obj/item/wire_cutters,
-/obj/item/wire_cutters,
-/obj/item/wire_cutters,
+/obj/item/wirecutters,
+/obj/item/wirecutters,
+/obj/item/wirecutters,
 /obj/item/screwdriver,
 /obj/item/screwdriver,
 /obj/machinery/light{
@@ -65528,7 +65528,7 @@
 /obj/structure/mirror{
 	pixel_y = 32
 	},
-/obj/effect/spawner/random/occult/artifact,
+/obj/item/vtm_artifact/rand,
 /obj/item/wirecutters,
 /obj/item/storage/box/lights/mixed,
 /turf/open/floor/plating/parquetry,

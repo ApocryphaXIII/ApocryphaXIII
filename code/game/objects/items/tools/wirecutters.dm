@@ -79,7 +79,6 @@
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "cutters"
 	toolspeed = 0.1
-	random_color = FALSE
 
 /obj/item/wirecutters/cyborg
 	name = "powered wirecutters"
@@ -88,4 +87,3 @@
 	icon_state = "wirecutters_cyborg"
 	worn_icon_state = "cutters"
 	toolspeed = 0.5
-	random_color = FALSE

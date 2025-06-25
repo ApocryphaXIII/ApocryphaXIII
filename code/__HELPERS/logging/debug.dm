@@ -40,7 +40,6 @@
 
 /* Log to the logfile only. */
 /proc/log_runtime(text, list/data)
-	to_chat(world, text)
 	logger.Log(LOG_CATEGORY_RUNTIME, text, data)
 
 /proc/log_signal(text, list/data)

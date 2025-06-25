@@ -2,7 +2,6 @@
 	name = "snack vending machine"
 	//desc = "A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars."
 	icon_state = "vend_b"
-	#warn see about a new light mask
 	//light_mask = "snack-light-mask"
 	icon = 'modular_tfn/icons/vendors_shops.dmi'
 	products = list(

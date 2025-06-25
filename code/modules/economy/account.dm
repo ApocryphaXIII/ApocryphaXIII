@@ -25,6 +25,9 @@
 	account_job = job
 	payday_modifier = modifier
 
+	if(add_to_accounts)
+		GLOB.bank_account_list += src
+
 	if(!bank_pin)
 		bank_pin = create_bank_pin()
 	setup_unique_account_id()
@@ -32,6 +35,7 @@
 /datum/bank_account/Destroy()
 	if(add_to_accounts)
 		SSeconomy.bank_accounts_by_id -= "[account_id]"
+		GLOB.bank_account_list -= src
 	for(var/obj/item/card/credit/bank_card as anything in bank_cards)
 		bank_card.registered_account = null
 	//SSeconomy.bank_money -= account_balance

@@ -7,7 +7,7 @@
 
 /datum/discipline/thaumaturgy/post_gain()
 	. = ..()
-	owner.faction |= "Tremere"
+	owner.faction |= CLAN_TREMERE
 	if(level >= 1)
 		var/datum/action/thaumaturgy/thaumaturgy = new()
 		thaumaturgy.Grant(owner)
@@ -268,22 +268,22 @@
 			// All stages (fail completely)
 			animate(target, pixel_y = 16, color = "#ff0000", time = 5 SECONDS, loop = 1)
 			addtimer(CALLBACK(src, /datum/discipline_power/thaumaturgy/cauldron_of_blood/proc/reset_target_appearance, target), 5 SECONDS)
-			addtimer(CALLBACK(src, .proc/blood_burn_stage1, target), 0)
-			addtimer(CALLBACK(src, .proc/blood_burn_stage2, target), 2.5 SECONDS)
-			addtimer(CALLBACK(src, .proc/blood_burn_stage3, target), 5 SECONDS)
+			addtimer(CALLBACK(src, PROC_REF(blood_burn_stage1), target), 0)
+			addtimer(CALLBACK(src, PROC_REF(blood_burn_stage2), target), 2.5 SECONDS)
+			addtimer(CALLBACK(src, PROC_REF(blood_burn_stage3), target), 5 SECONDS)
 
 		else if(successes == 2)
 			// Stages 1 & 2
 			animate(target, pixel_y = 16, color = "#ff0000", time = 2.5 SECONDS, loop = 1)
 			addtimer(CALLBACK(src, /datum/discipline_power/thaumaturgy/cauldron_of_blood/proc/reset_target_appearance, target), 2.5 SECONDS)
-			addtimer(CALLBACK(src, .proc/blood_burn_stage1, target), 0)
-			addtimer(CALLBACK(src, .proc/blood_burn_stage2, target), 2.5 SECONDS)
+			addtimer(CALLBACK(src, PROC_REF(blood_burn_stage1), target), 0)
+			addtimer(CALLBACK(src, PROC_REF(blood_burn_stage2), target), 2.5 SECONDS)
 
 		else if(successes == 3)
 			animate(target, pixel_y = 16, color = "#ff0000", time = 1 SECONDS, loop = 1)
 			addtimer(CALLBACK(src, /datum/discipline_power/thaumaturgy/cauldron_of_blood/proc/reset_target_appearance, target), 1 SECONDS)
 			// Stage 1 only
-			addtimer(CALLBACK(src, .proc/blood_burn_stage1, target), 0)
+			addtimer(CALLBACK(src, PROC_REF(blood_burn_stage1), target), 0)
 
 		else
 			// Resisted completely
@@ -362,7 +362,7 @@
 			if(R.thaumlevel <= level)
 				shit += i
 			qdel(R)
-		var/ritual = tgui_input_list(owner, "Choose rune to draw (You need an Arcane Tome to reduce random):", "Thaumaturgy") as null|anything in list("???")
+		var/ritual = tgui_input_list(owner, "Choose rune to draw (You need an Arcane Tome to reduce random):", "Thaumaturgy", list("???"))
 		if(ritual)
 			drawing = TRUE
 			if(do_after(H, 3 SECONDS * max(1, 5 - H.get_total_mentality()), H))

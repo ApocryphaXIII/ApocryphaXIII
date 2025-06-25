@@ -1190,6 +1190,7 @@
 	var/list/searching = GetAllContents()
 	var/search_id = 1
 	var/search_pda = 1
+	var/search_creditcard = 1
 
 	for(var/A in searching)
 		if( search_id && istype(A, /obj/item/card/id) )
@@ -1197,18 +1198,24 @@
 			if(ID.registered_name == oldname)
 				ID.registered_name = newname
 				ID.update_label()
-				if(ID.registered_account?.account_holder == oldname)
-					ID.registered_account.account_holder = newname
-				if(!search_pda)
+				if(!search_pda || !search_creditcard)
 					break
 				search_id = 0
 
-		else if( search_pda && istype(A, /obj/item/pda) )
+		if(search_creditcard && is_creditcard(A))
+			var/obj/item/card/credit/bank_card = A
+			if(bank_card.registered_account?.account_holder == oldname)
+				bank_card.registered_account.account_holder = newname
+				if(!search_id || !search_pda)
+					break
+				search_creditcard = 0
+
+		else if(search_pda && istype(A, /obj/item/pda))
 			var/obj/item/pda/PDA = A
 			if(PDA.owner == oldname)
 				PDA.owner = newname
 				PDA.update_label()
-				if(!search_id)
+				if(!search_id || !search_creditcard)
 					break
 				search_pda = 0
 
@@ -1314,6 +1321,9 @@
 		return FALSE
 
 	return TRUE
+
+/mob/proc/get_creditcard(hand_first)
+	return
 
 /**
  * Get the mob VV dropdown extras

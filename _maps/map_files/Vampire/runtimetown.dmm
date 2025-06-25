@@ -13,6 +13,12 @@
 /obj/item/gun/ballistic/automatic/vampire/m1911,
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
+"aN" = (
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "aO" = (
 /obj/machinery/fax/admin/camarilla,
 /turf/open/floor/plating/vampbeach,
@@ -43,6 +49,10 @@
 /obj/structure/table/wood,
 /obj/item/vtm_artifact/fae_charm,
 /turf/open/floor/plating/parquetry/old,
+/area/vtm/pacificheights)
+"by" = (
+/obj/item/clothing/head/collectable/pirate,
+/turf/open/floor/plating/woodrough,
 /area/vtm/pacificheights)
 "bC" = (
 /obj/item/reagent_containers/glass/bottle/morphine,
@@ -85,6 +95,9 @@
 /obj/item/defibrillator/compact,
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
+"cf" = (
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
 "ch" = (
 /obj/structure/table/wood,
 /obj/item/vtm_artifact/galdjum,
@@ -115,6 +128,13 @@
 	locked = 0
 	},
 /turf/open/floor/plating/sidewalk/poor,
+/area/vtm/pacificheights)
+"cZ" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "dA" = (
 /obj/structure/table,
@@ -200,12 +220,39 @@
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"gj" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
 "gn" = (
 /turf/open/floor/plating/parquetry/old,
+/area/vtm/pacificheights)
+"gs" = (
+/obj/effect/decal/bordur{
+	dir = 1
+	},
+/obj/structure/lamppost/one{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "gF" = (
 /turf/open/floor/plating/rough,
 /area/vtm/interior/shop)
+"gS" = (
+/obj/effect/decal/bordur{
+	dir = 8
+	},
+/obj/structure/lamppost/four,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"hi" = (
+/obj/effect/decal/asphaltline,
+/turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
 "ht" = (
 /obj/effect/decal/trash{
 	icon_state = "trash5"
@@ -242,7 +289,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "iA" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/trash{
 	icon_state = "trash8"
 	},
@@ -253,6 +300,12 @@
 /area/vtm/interior/shop)
 "iH" = (
 /turf/open/floor/plating/rough/cave,
+/area/vtm/pacificheights)
+"iM" = (
+/obj/effect/decal/bordur/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "iV" = (
 /obj/vampire_car/track{
@@ -282,7 +335,7 @@
 /area/vtm/supply)
 "jt" = (
 /obj/effect/decal/litter,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "jW" = (
@@ -314,11 +367,17 @@
 /obj/item/molotov,
 /obj/item/molotov,
 /obj/item/molotov,
-/turf/open/floor/plating/asphalt,
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "kS" = (
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
+"kX" = (
+/obj/effect/decal/crosswalk{
+	dir = 4
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
 "lk" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -332,7 +391,7 @@
 /obj/effect/decal/trash{
 	icon_state = "trash5"
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "lU" = (
@@ -347,6 +406,9 @@
 	dir = 4
 	},
 /turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
+"md" = (
+/turf/closed/wall/vampwall/old,
 /area/vtm/pacificheights)
 "mj" = (
 /obj/structure/vampdoor/anarch{
@@ -387,8 +449,14 @@
 /obj/item/ammo_box/vampire/c45acp,
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
+"nq" = (
+/obj/structure/lamppost/three{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "nA" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
@@ -417,6 +485,15 @@
 /obj/effect/decal/litter,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"ov" = (
+/obj/effect/decal/crosswalk{
+	dir = 8
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
+"oJ" = (
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/pacificheights)
 "oK" = (
 /turf/open/floor/plating/vampbeach,
 /area/shuttle/arrival)
@@ -433,6 +510,12 @@
 "oW" = (
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"oX" = (
+/obj/effect/decal/bordur{
+	dir = 6
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "pf" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -450,12 +533,25 @@
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
+"pG" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "pH" = (
 /obj/effect/decal/trash{
 	icon_state = "trash7"
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
+/area/vtm/pacificheights)
+"qn" = (
+/obj/effect/decal/bordur{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "qt" = (
 /obj/machinery/computer/cargo/express{
@@ -463,6 +559,10 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
+"qz" = (
+/obj/structure/lamppost/one,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "qN" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/plating/rough,
@@ -477,6 +577,9 @@
 "qT" = (
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
+"qV" = (
+/turf/closed/wall/vampwall/brick,
+/area/vtm/pacificheights)
 "ri" = (
 /obj/structure/table/wood,
 /turf/closed/wall/vampwall/painted/low,
@@ -485,6 +588,12 @@
 /obj/matrix,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
+"rF" = (
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "rI" = (
 /obj/structure/table/wood,
 /obj/item/vtm_artifact/saulocept,
@@ -528,12 +637,25 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
+"sk" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "sm" = (
 /obj/effect/decal/bordur{
 	dir = 1
 	},
 /obj/structure/roadsign/stop,
 /turf/open/floor/plating/sidewalk/poor,
+/area/vtm/pacificheights)
+"so" = (
+/obj/effect/decal/bordur/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "sw" = (
 /obj/machinery/light{
@@ -554,6 +676,18 @@
 	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"tb" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"tf" = (
+/obj/effect/decal/bordur{
+	dir = 10
+	},
+/obj/structure/lamppost/four,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "tj" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -570,6 +704,10 @@
 	locked = 0
 	},
 /turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
+"ty" = (
+/obj/effect/decal/bordur,
+/turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "tF" = (
 /obj/vampire_car/retro/rand{
@@ -598,6 +736,15 @@
 	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"uK" = (
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/obj/structure/lamppost/one{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
 "uL" = (
 /obj/structure/rack/bubway/horizontal,
 /obj/underplate/stuff{
@@ -605,12 +752,29 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"vl" = (
+/obj/effect/decal/bordur{
+	dir = 8
+	},
+/obj/structure/lamppost/one{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
 "vm" = (
 /obj/bacotell{
 	pixel_x = 1;
 	pixel_y = 40
 	},
 /turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
+"vn" = (
+/turf/open/floor/plating/woodrough,
+/area/vtm/pacificheights)
+"vs" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur/corner,
+/turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "vz" = (
 /obj/structure/vampdoor{
@@ -652,6 +816,12 @@
 /obj/effect/landmark/observer_start,
 /turf/open/floor/plating/vampbeach,
 /area/shuttle/arrival)
+"xh" = (
+/obj/effect/decal/bordur{
+	dir = 1
+	},
+/turf/closed/wall/vampwall/junk/alt,
+/area/vtm/pacificheights)
 "xC" = (
 /obj/effect/decal/litter,
 /turf/open/floor/plating/concrete,
@@ -742,6 +912,12 @@
 /obj/effect/decal/wallpaper/red,
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
+"Ak" = (
+/obj/effect/decal/crosswalk{
+	dir = 1
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
 "Ao" = (
 /obj/structure/vampdoor{
 	dir = 8
@@ -760,6 +936,15 @@
 /obj/machinery/fax/admin/anarch,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"AU" = (
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/obj/structure/lamppost/three{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "AX" = (
 /obj/structure/table/wood,
 /obj/item/vtm_artifact/weekapaug_thistle,
@@ -769,7 +954,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "Bf" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/trash{
 	icon_state = "trash7"
 	},
@@ -815,6 +1000,12 @@
 /obj/structure/vampdoor/glass/police_chief,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
+"Ct" = (
+/obj/structure/lamppost/one{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "Cz" = (
 /obj/effect/decal/asphaltline{
 	dir = 8
@@ -856,6 +1047,12 @@
 /obj/item/storage/firstaid/o2,
 /obj/item/storage/firstaid/o2,
 /turf/open/floor/plating/rough,
+/area/vtm/pacificheights)
+"Dr" = (
+/obj/effect/decal/bordur/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Dw" = (
 /obj/order1{
@@ -904,6 +1101,10 @@
 /obj/structure/table,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"DY" = (
+/obj/structure/lamppost/one,
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
 "Et" = (
 /obj/structure/table/optable,
 /obj/machinery/defibrillator_mount/loaded{
@@ -936,6 +1137,9 @@
 "EX" = (
 /obj/machinery/fax/glasswalker,
 /turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
+"EY" = (
+/turf/closed/wall/vampwall/rich,
 /area/vtm/pacificheights)
 "Fg" = (
 /turf/closed/wall/vampwall/brick,
@@ -1031,6 +1235,16 @@
 	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"Hb" = (
+/obj/effect/decal/bordur{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
+"Hd" = (
+/obj/effect/landmark/npcwall,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "Hg" = (
 /obj/item/paper{
 	default_raw_text = "Error room!!"
@@ -1043,6 +1257,15 @@
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
+"Hn" = (
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "Hp" = (
 /obj/effect/decal/wallpaper,
 /turf/closed/wall/vampwall/brick,
@@ -1050,6 +1273,19 @@
 "HJ" = (
 /obj/effect/decal/stock,
 /turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
+"HO" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"Ie" = (
+/obj/effect/decal/bordur/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "Ig" = (
 /obj/effect/decal/bordur,
@@ -1070,6 +1306,9 @@
 	},
 /turf/open/floor/plating/vampdirt/rails,
 /area/vtm/supply)
+"ID" = (
+/turf/closed/wall/vampwall/market,
+/area/vtm/pacificheights)
 "IL" = (
 /obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/rough,
@@ -1095,7 +1334,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "Jv" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "JE" = (
@@ -1115,8 +1354,21 @@
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "JP" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
+"Kg" = (
+/obj/effect/decal/bordur,
+/obj/effect/decal/bordur{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"Ko" = (
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Kt" = (
 /obj/structure/table/wood,
@@ -1130,6 +1382,12 @@
 /obj/item/ammo_box/magazine/vamp545,
 /obj/item/gun/ballistic/automatic/vampire/ak74,
 /turf/open/floor/plating/rough,
+/area/vtm/pacificheights)
+"KU" = (
+/obj/effect/decal/bordur{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Lk" = (
 /obj/effect/decal/trash{
@@ -1148,7 +1406,7 @@
 /obj/item/gas_can,
 /obj/item/gas_can,
 /obj/item/gas_can,
-/turf/open/floor/plating/asphalt,
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Ly" = (
 /obj/vampire_car/taxi{
@@ -1167,6 +1425,12 @@
 /obj/item/clothing/head/vampire/police,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"LX" = (
+/obj/effect/decal/bordur{
+	dir = 10
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "Mv" = (
 /obj/structure/table/wood,
 /obj/item/vtm_artifact/heart_of_eliza,
@@ -1177,6 +1441,15 @@
 /obj/structure/table,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
+"MH" = (
+/obj/machinery/light/small{
+	pixel_y = 16
+	},
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/pacificheights)
 "MJ" = (
 /obj/structure/table,
 /obj/item/blood_hunt,
@@ -1207,7 +1480,7 @@
 /area/vtm/interior/shop)
 "NP" = (
 /obj/structure/table,
-/turf/open/floor/plating/asphalt,
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "NR" = (
 /turf/open/floor/plating/vampbeach,
@@ -1300,16 +1573,43 @@
 "PO" = (
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
+"PW" = (
+/obj/effect/decal/bordur/corner,
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
 "PX" = (
 /obj/structure/table/reinforced,
 /obj/item/arcane_tome,
 /turf/open/floor/plating/parquetry/old,
+/area/vtm/pacificheights)
+"Qi" = (
+/obj/effect/decal/asphaltline/alt,
+/turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "Qv" = (
 /obj/machinery/mineral/equipment_vendor/fastfood/smoking,
 /obj/structure/table,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
+"QK" = (
+/obj/effect/decal/bordur,
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"QM" = (
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/pacificheights)
+"QS" = (
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "QW" = (
 /obj/machinery/light{
 	pixel_y = 32
@@ -1339,6 +1639,13 @@
 /obj/machinery/mineral/equipment_vendor/fastfood/gummaguts,
 /turf/closed/wall/vampwall/market/low,
 /area/vtm/interior/shop)
+"Rx" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
 "Sg" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -1380,6 +1687,11 @@
 "Tb" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/plating/rough,
+/area/vtm/pacificheights)
+"Tp" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur/corner,
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Tq" = (
 /obj/effect/gibspawner/human,
@@ -1449,7 +1761,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "UJ" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "UK" = (
@@ -1476,7 +1788,14 @@
 /obj/structure/table,
 /obj/item/melee/vampirearms/tire,
 /obj/item/melee/vampirearms/tire,
-/turf/open/floor/plating/asphalt,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"Vh" = (
+/obj/effect/landmark/npcbeacon,
+/obj/effect/decal/bordur/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "Vu" = (
 /obj/structure/closet/cardboard,
@@ -1504,6 +1823,12 @@
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
+"We" = (
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "Wl" = (
 /obj/structure/table,
@@ -1535,6 +1860,12 @@
 	},
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
+"WZ" = (
+/obj/structure/lamppost/one{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "Xf" = (
 /obj/structure/table,
 /obj/item/ammo_box/magazine/m50,
@@ -1559,14 +1890,30 @@
 /obj/structure/fence/door,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"XJ" = (
+/obj/effect/decal/bordur,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"XM" = (
+/turf/closed/wall/vampwall/junk/alt,
+/area/vtm/pacificheights)
 "XU" = (
 /obj/structure/railing,
 /obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/vampcanal,
 /area/vtm/pacificheights)
+"XW" = (
+/obj/effect/decal/bordur,
+/mob/living/carbon/human/npc/hobo,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"XY" = (
+/obj/structure/lamppost/three,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "Yr" = (
 /obj/effect/decal/trash,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "Ys" = (
@@ -1596,7 +1943,7 @@
 	maxbloodpool = 10;
 	name = "Cain"
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "YF" = (
@@ -1619,6 +1966,12 @@
 /obj/item/vtm_artifact/odious_chalice,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
+"Zc" = (
+/obj/effect/decal/bordur{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
 "Zf" = (
 /obj/machinery/fax/camarilla,
 /turf/open/floor/plating/vampbeach,
@@ -1626,7 +1979,7 @@
 "Zw" = (
 /obj/structure/table,
 /obj/item/vampire_flamethrower,
-/turf/open/floor/plating/asphalt,
+/turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "ZT" = (
 /obj/structure/vampdoor/graveyard{
@@ -3829,23 +4182,23 @@ MS
 MS
 MS
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
-eQ
-eQ
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+qV
+qV
+qV
+qV
+qV
+sb
+sb
+sb
 "}
 (2,1,2) = {"
 MS
@@ -3863,23 +4216,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+sb
+qz
+XJ
+FB
 ik
+VQ
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
-eQ
-eQ
+HJ
+KU
+Ct
+sb
 "}
 (3,1,2) = {"
 MS
@@ -3897,23 +4250,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+sb
+rF
+XW
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
-eQ
-eQ
+KU
+rF
+sb
 "}
 (4,1,2) = {"
 MS
@@ -3931,23 +4284,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+sb
+eQ
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-MS
-MS
-MS
-ik
-ik
-ik
-MS
-MS
-MS
+KU
+eQ
+sb
 "}
 (5,1,2) = {"
 MS
@@ -3965,23 +4318,23 @@ MS
 MS
 MS
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+sb
 eQ
-MS
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
+KU
+eQ
+sb
 "}
 (6,1,2) = {"
 MS
@@ -3999,23 +4352,23 @@ Ys
 Ys
 Ys
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+sb
 eQ
-MS
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
+KU
+eQ
+sb
 "}
 (7,1,2) = {"
 MS
@@ -4032,24 +4385,24 @@ Ys
 Ys
 Ys
 Ys
-eR
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
 MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+sb
 eQ
-MS
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
+KU
+eQ
+sb
 "}
 (8,1,2) = {"
 MS
@@ -4066,24 +4419,24 @@ Ys
 Ys
 Ys
 Ys
-eR
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
 MS
+oJ
+oJ
+oJ
+sb
+oJ
+oJ
+sb
 eQ
-MS
-MS
-MS
-MS
-ik
-ik
-ik
+tb
+rW
+rW
+VQ
+rW
+rW
+cZ
+QS
+qV
 "}
 (9,1,2) = {"
 MS
@@ -4101,23 +4454,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+sb
+oJ
+oJ
+sb
+qz
+XJ
 ik
 ik
+VQ
 ik
 ik
+kX
 ik
-ik
-ik
-ik
-MS
-eQ
-eQ
-eQ
-eQ
-MS
-ik
-ik
-ik
+qV
 "}
 (10,1,2) = {"
 MS
@@ -4135,23 +4488,23 @@ Ys
 Ys
 Ys
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
+oJ
+oJ
+oJ
+sb
+oJ
+oJ
+sb
 eQ
-eQ
-eQ
-eQ
-MS
+XJ
 ik
 ik
+VQ
 ik
+ik
+kX
+hi
+qV
 "}
 (11,1,2) = {"
 MS
@@ -4169,23 +4522,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+sb
+sb
+sb
+sb
+eQ
+XJ
 ik
 ik
+VQ
 ik
 ik
+kX
 ik
-ik
-ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-ik
-ik
-ik
+qV
 "}
 (12,1,2) = {"
 MS
@@ -4203,23 +4556,23 @@ Ys
 Ys
 Ys
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+cj
+eQ
+tb
+rW
+rW
+VQ
+rW
+rW
+sk
+Zc
+qV
 "}
 (13,1,2) = {"
 MS
@@ -4237,23 +4590,23 @@ Ys
 Ys
 Ys
 eR
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+cj
+aN
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+KU
+nq
+qV
 "}
 (14,1,2) = {"
 MS
@@ -4263,31 +4616,31 @@ eQ
 eQ
 MS
 vJ
-Nx
-Ys
-Ys
+nY
+vn
+by
 Ys
 Ys
 Ys
 Ys
 eR
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+cj
+eQ
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+KU
+eQ
+ID
 "}
 (15,1,2) = {"
 MS
@@ -4305,23 +4658,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+md
+md
+md
+md
+eQ
+XJ
 ik
 ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+VQ
 ik
 ik
-ik
+KU
+eQ
+ID
 "}
 (16,1,2) = {"
 MS
@@ -4339,23 +4692,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+md
+oJ
+oJ
+md
+qz
+XJ
 ik
 ik
-ik
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+VQ
 ik
 ik
-ik
+KU
+eQ
+ID
 "}
 (17,1,2) = {"
 MS
@@ -4373,23 +4726,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+md
+eQ
+XJ
 ik
 ik
-ik
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+VQ
 ik
 ik
-ik
+KU
+eQ
+ID
 "}
 (18,1,2) = {"
 MS
@@ -4407,23 +4760,23 @@ Ys
 Ys
 Ys
 MS
-ik
-ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+md
 eQ
+XJ
+FB
+ik
+VQ
+ik
+HJ
+KU
 eQ
-MS
-ik
-ik
-ik
+ID
 "}
 (19,1,2) = {"
 MS
@@ -4441,23 +4794,23 @@ Ys
 Ys
 Ys
 eR
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+md
 eQ
+XJ
+ik
+ik
+VQ
+ik
+ik
+KU
 eQ
-MS
-ik
-ik
-ik
+ID
 "}
 (20,1,2) = {"
 MS
@@ -4475,23 +4828,23 @@ Ys
 Ys
 Ys
 eR
+oJ
+oJ
+oJ
+md
+oJ
+oJ
+md
+eQ
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
-ik
-ik
-MS
-ik
-ik
-ik
+KU
+eQ
+ID
 "}
 (21,1,2) = {"
 MS
@@ -4499,7 +4852,7 @@ eQ
 eQ
 eQ
 eQ
-MS
+eQ
 nY
 nY
 Ys
@@ -4509,23 +4862,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+md
+md
+md
+md
+eQ
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
-MS
-MS
-MS
-ik
-ik
-ik
+KU
+eQ
+ID
 "}
 (22,1,2) = {"
 MS
@@ -4533,7 +4886,7 @@ eQ
 eQ
 eQ
 eQ
-MS
+eQ
 nY
 nY
 Ys
@@ -4543,23 +4896,23 @@ Ys
 Ys
 Ys
 MS
+oJ
+oJ
+oJ
+md
+md
+eQ
+eQ
+eQ
+XJ
 ik
 ik
-ik
-MS
-MS
-MS
-MS
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+KU
+eQ
+ID
 "}
 (23,1,2) = {"
 MS
@@ -4572,139 +4925,139 @@ vz
 vz
 MS
 MS
-MS
-MS
-MS
-MS
-MS
-ik
-ik
-ik
-MS
+sb
+sb
+sb
+sb
+sb
+MH
+QM
+QM
+md
+md
 eQ
 eQ
-MS
+XY
+XJ
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
+KU
+eQ
+ID
 "}
 (24,1,2) = {"
 MS
-ik
-ik
+eQ
+eQ
 NP
 Lw
 Vg
-ik
-ik
+eQ
+eQ
 kn
 Zw
-NP
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
+oX
+QS
+QS
+QS
+QS
+Hn
+QS
+QS
+QS
+QS
+QS
+QS
+pG
+rW
+rW
+VQ
+rW
+rW
+HO
 eQ
-MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+ID
 "}
 (25,1,2) = {"
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-pz
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
 eQ
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+XJ
 ik
 ik
 ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ov
+ik
+ik
+VQ
+ik
+ik
+KU
+eQ
+ID
 "}
 (26,1,2) = {"
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
 eQ
 eQ
 eQ
 eQ
-eQ
-eQ
-eQ
-eQ
-MS
+oX
+QS
+QS
+QS
+QS
+QK
+FB
 ik
 ik
 ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ov
+ik
+ik
+VQ
+ik
+ik
+Dr
+AU
+ID
 "}
 (27,1,2) = {"
 MS
-ik
-ik
-ik
-ik
-ik
-ik
+eQ
+eQ
+eQ
+eQ
+eQ
+XJ
 ik
 ik
 pz
@@ -4712,109 +5065,101 @@ ik
 ik
 ik
 ik
+Ie
+qn
+qn
+qn
+vl
+qn
+qn
+qn
+qn
+PW
+ik
+ik
+VQ
 ik
 ik
 ik
 ik
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
-ik
-ik
-ik
+qV
 "}
 (28,1,2) = {"
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
 eQ
 eQ
-MS
+eQ
+eQ
+eQ
+XJ
 ik
 ik
 ik
+ik
+ik
+ik
+ik
+Hb
+EY
+EY
+eR
+eR
+eR
+EY
+EY
+cf
+ty
+ik
+ik
+VQ
+ik
+ik
+ik
+ik
+qV
 "}
 (29,1,2) = {"
 MS
-ik
-ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
 eQ
-MS
+eQ
+eQ
+eQ
+XJ
+ik
+ik
+pz
 ik
 ik
 ik
+ik
+Hb
+EY
+Ys
+Ys
+Ys
+Ys
+Ys
+EY
+cf
+ty
+ik
+ik
+VQ
+ik
+ik
+ik
+ik
+qV
 "}
 (30,1,2) = {"
 MS
-ik
-ik
-MS
-MS
 eQ
 eQ
 eQ
 eQ
 eQ
-eQ
-eQ
-eQ
-eQ
-MS
+XJ
 ik
 ik
 ik
@@ -4822,33 +5167,33 @@ ik
 ik
 ik
 ik
+Hb
+eR
+Ys
+Ys
+Ys
+Ys
+Ys
+eR
+cf
+ty
+ik
+ik
+VQ
 ik
 ik
 ik
-MS
-eQ
-eQ
-MS
 ik
-ik
-ik
+qV
 "}
 (31,1,2) = {"
 MS
-ik
-ik
-MS
 eQ
 eQ
 eQ
 eQ
 eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+XJ
 ik
 ik
 ik
@@ -4856,97 +5201,101 @@ ik
 ik
 ik
 ik
+gs
+eR
+Ys
+Ys
+Ys
+Ys
+Ys
+eR
+DY
+ty
+FB
+ik
+VQ
 ik
 ik
 ik
-MS
-eQ
-eQ
-MS
 ik
-ik
-ik
+qV
 "}
 (32,1,2) = {"
 MS
-ik
-ik
-MS
 eQ
 eQ
 eQ
 eQ
 eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+XJ
 ik
 ik
 ik
-MS
-MS
-MS
-MS
 ik
 ik
 ik
-MS
-eQ
-eQ
-MS
+ik
+Hb
+eR
+Ys
+Ys
+Ys
+Ys
+Ys
+eR
+cf
+ty
+ik
+ik
+VQ
 ik
 ik
 ik
+ik
+qV
 "}
 (33,1,2) = {"
 MS
-ik
-ik
-MS
 eQ
 eQ
 eQ
 eQ
 eQ
-eQ
-MS
-MS
-MS
-MS
-MS
+XJ
 ik
 ik
 ik
-MS
-eQ
-eQ
-MS
 ik
 ik
 ik
-MS
-eQ
-eQ
-MS
+ik
+Hb
+EY
+Ys
+Ys
+Ys
+Ys
+Ys
+EY
+cf
+ty
+ik
+ik
+VQ
 ik
 ik
 ik
+ik
+qV
 "}
 (34,1,2) = {"
 MS
-ik
-ik
-MS
 eQ
 eQ
 eQ
 eQ
 eQ
-eQ
-MS
+XJ
 ik
 ik
 ik
@@ -4954,180 +5303,177 @@ ik
 ik
 ik
 ik
-MS
-eQ
-eQ
-MS
+Hb
+EY
+EY
+eR
+eR
+eR
+EY
+EY
+cf
+ty
+ik
+ik
+VQ
 ik
 ik
 ik
-MS
-eQ
-eQ
-MS
 ik
-ik
-ik
+qV
 "}
 (35,1,2) = {"
 MS
-ik
-ik
-MS
 eQ
 eQ
 eQ
 eQ
 eQ
-eQ
-MS
+tf
+Zc
+Zc
+Zc
+Zc
+Kg
 ik
 ik
+Hb
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+ty
 ik
 ik
+VQ
 ik
 ik
-ik
-MS
-eQ
-eQ
-MS
-ik
-ik
-ik
-MS
-eQ
-eQ
-MS
-ik
-ik
-ik
+so
+gS
+qV
 "}
 (36,1,2) = {"
 MS
-ik
-ik
-MS
-MS
 eQ
 eQ
 eQ
 eQ
 eQ
-MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
 eQ
-MS
-ik
-ik
-ik
-MS
 eQ
 eQ
-MS
-ik
-ik
-ik
+eQ
+tb
+Ak
+Ak
+Rx
+We
+We
+We
+uK
+We
+We
+We
+We
+Vh
+Ak
+Ak
+VQ
+Ak
+Ak
+cZ
+QS
+qV
 "}
 (37,1,2) = {"
 MS
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+XJ
+ik
+ik
+ov
 ik
 ik
 ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
 ik
 ik
 ik
 ik
 ik
+ov
 ik
 ik
-MS
-eQ
-eQ
-MS
+VQ
 ik
 ik
+ov
 ik
-MS
-MS
-MS
-MS
-ik
-ik
-ik
+qV
 "}
 (38,1,2) = {"
 MS
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+XJ
 ik
 ik
+ov
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+ov
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
-eQ
-eQ
-MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+ov
+Qi
+qV
 "}
 (39,1,2) = {"
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
 eQ
-MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
+ik
+ik
+ov
 ik
 ik
 ik
@@ -5136,490 +5482,494 @@ ik
 ik
 ik
 ik
+ov
 ik
 ik
+VQ
+ik
+ik
+ov
+ik
+qV
 "}
 (40,1,2) = {"
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
 eQ
-MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+tb
+Ak
+Ak
+gj
+qn
+qn
+qn
+vl
+qn
+qn
+qn
+qn
+vs
+Ak
+Ak
+VQ
+rW
+rW
+sk
+Zc
+qV
 "}
 (41,1,2) = {"
 MS
-MS
-MS
-ik
-ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
 eQ
 eQ
-MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+cf
+ty
 ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+ik
+VQ
+ik
+ik
+KU
+nq
+qV
 "}
 (42,1,2) = {"
 MS
 eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
+ik
+ik
+Hb
 MS
-ik
-ik
-ik
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+eR
+eR
+eR
 MS
-ik
-ik
-ik
 MS
+cf
+ty
+ik
+ik
+VQ
+ik
+ik
+KU
 eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+XM
 "}
 (43,1,2) = {"
 MS
 eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
+ik
+ik
+Hb
 MS
-ik
-ik
-ik
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+cf
+ty
 ik
 ik
+VQ
 ik
-MS
+ik
+KU
 eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+XM
 "}
 (44,1,2) = {"
 MS
-MS
-MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
-ik
+Hb
 MS
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+cf
+ty
 ik
 ik
+VQ
 ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+ik
+KU
+eQ
+XM
 "}
 (45,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
+MS
+Ys
+Ys
+Ys
+Ys
+Ys
+MS
+cf
+ty
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+KU
+eQ
+XM
 "}
 (46,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
+MS
+Ys
+Ys
+Ys
+Ys
+Ys
+MS
+cf
+ty
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+KU
+eQ
+XM
 "}
 (47,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
+MS
+Ys
+Ys
+Ys
+Ys
+Ys
+MS
+cf
+ty
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
+KU
+eQ
+XM
 "}
 (48,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
 MS
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+cf
+ty
 ik
 ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+VQ
 ik
 ik
+KU
+eQ
+XM
 "}
 (49,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+gs
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
+DY
+ty
 ik
 ik
-ik
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+VQ
 ik
 ik
+KU
+Ct
+XM
 "}
 (50,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
-MS
-MS
-MS
-MS
-MS
-MS
+cf
+ty
 ik
 ik
-ik
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+VQ
 ik
 ik
+KU
+eQ
+XM
 "}
 (51,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
+cf
+ty
 ik
 ik
+VQ
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
+HJ
+KU
 eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
-ik
-ik
+XM
 "}
 (52,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
+cf
+ty
+FB
+ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
+KU
 eQ
-eQ
-eQ
-MS
-MS
-MS
-MS
-MS
-ik
-ik
+XM
 "}
 (53,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
+cf
+ty
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
-ik
-MS
+KU
 eQ
-eQ
-eQ
-MS
-ik
-ik
-ik
-ik
-ik
-ik
+XM
 "}
 (54,1,2) = {"
 MS
-ik
-ik
-MS
 eQ
 eQ
 eQ
@@ -5627,169 +5977,169 @@ eQ
 eQ
 eQ
 eQ
-MS
-ik
-ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
 eQ
-eQ
-eQ
+Hd
+Hd
+XJ
+ik
+ik
+Hb
 MS
+Ys
+Ys
+Ys
+Ys
+Ys
+MS
+cf
+ty
 ik
 ik
+VQ
 ik
 ik
-ik
-ik
+KU
+eQ
+XM
 "}
 (55,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
+cf
+ty
 ik
 ik
-ik
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+VQ
 ik
 ik
-ik
-ik
-ik
-ik
+KU
+eQ
+XM
 "}
 (56,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
+Ys
+Ys
+Ys
+Ys
+Ys
 MS
+cf
+ty
 ik
 ik
-ik
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+VQ
 ik
 ik
-ik
-MS
-MS
-MS
+KU
+eQ
+XM
 "}
 (57,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
+Hb
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
 MS
-ik
-ik
-ik
+eR
+eR
+eR
 MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
 MS
+cf
+ty
 ik
 ik
+VQ
 ik
-MS
+ik
+KU
 eQ
-eQ
+XM
 "}
 (58,1,2) = {"
 MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
 ik
 ik
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-MS
+iM
+We
+We
+We
+We
+We
+We
+We
+We
+Vh
 ik
 ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+VQ
 ik
 ik
-ik
-MS
+KU
 eQ
-eQ
+XM
 "}
 (59,1,2) = {"
 MS
-ik
-ik
-MS
 eQ
 eQ
 eQ
@@ -5797,33 +6147,33 @@ eQ
 eQ
 eQ
 eQ
-MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
-eQ
+Hd
+Hd
+XJ
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ov
+ik
+ik
+VQ
+ik
+ik
+KU
+Ct
+XM
 "}
 (60,1,2) = {"
 MS
-ik
-ik
-MS
 eQ
 eQ
 eQ
@@ -5831,116 +6181,101 @@ eQ
 eQ
 eQ
 eQ
-MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
+Hd
+Hd
+XJ
+FB
+ik
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+ov
+ik
+ik
+VQ
+ik
+ik
+KU
 eQ
+XM
 "}
 (61,1,2) = {"
 MS
-ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
 eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ov
+ik
+ik
+VQ
+ik
+ik
+KU
+eQ
+XM
 "}
 (62,1,2) = {"
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
 eQ
 eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+LX
+Zc
+Zc
+Zc
+Zc
+Zc
+Zc
+Zc
+Zc
+Zc
+Zc
+Zc
+Tp
+rW
+rW
+VQ
+rW
+rW
+HO
+eQ
+XM
 "}
 (63,1,2) = {"
 MS
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-MS
 eQ
 eQ
 eQ
@@ -5949,11 +6284,29 @@ eQ
 eQ
 eQ
 eQ
+Hd
+Hd
+eQ
+WZ
 eQ
 eQ
 eQ
 eQ
 eQ
+WZ
+eQ
+eQ
+eQ
+eQ
+XJ
+ik
+ik
+VQ
+ik
+ik
+KU
+Ko
+XM
 "}
 (64,1,2) = {"
 MS
@@ -5966,26 +6319,26 @@ MS
 MS
 MS
 MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+qV
+qV
+qV
+qV
+qV
+xh
+XM
+XM
 "}

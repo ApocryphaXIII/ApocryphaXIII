@@ -441,10 +441,7 @@
 	. = ..()
 	if(.)
 		return
-	var/obj/item/card/id/potential_acc
-	if(isliving(usr))
-		var/mob/living/L = usr
-		potential_acc = L.get_idcard(hand_first = TRUE)
+	var/obj/item/card/credit/potential_acc = usr.get_creditcard()
 	switch(action)
 		if("Buy")
 			if(!showpiece)
@@ -520,9 +517,9 @@
 			return TRUE
 	. = TRUE
 /obj/structure/displaycase/forsale/attackby(obj/item/I, mob/living/user, params)
-	if(isidcard(I))
+	if(is_creditcard(I))
 		//Card Registration
-		var/obj/item/card/id/potential_acc = I
+		var/obj/item/card/credit/potential_acc = I
 		if(!potential_acc.registered_account)
 			to_chat(user, "<span class='warning'>This ID card has no account registered!</span>")
 			return

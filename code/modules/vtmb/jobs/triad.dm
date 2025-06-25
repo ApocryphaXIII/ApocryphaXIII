@@ -40,4 +40,4 @@
 	l_pocket = /obj/item/vamp/phone/triads_soldier
 	r_pocket = /obj/item/flashlight
 	l_hand = /obj/item/vamp/keys/triads
-	backpack_contents = list(/obj/item/passport=1, /obj/item/vamp/creditcard=1, /obj/item/clothing/mask/vampire/balaclava =1, /obj/item/gun/ballistic/automatic/vampire/beretta=2,/obj/item/ammo_box/magazine/semi9mm=2, /obj/item/melee/vampirearms/knife)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/card/credit=1, /obj/item/clothing/mask/vampire/balaclava =1, /obj/item/gun/ballistic/automatic/vampire/beretta=2,/obj/item/ammo_box/magazine/semi9mm=2, /obj/item/melee/vampirearms/knife)

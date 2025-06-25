@@ -1,5 +1,11 @@
 #define DUMPTIME 3000
 
+/proc/create_bank_pin()
+	var/bank_code = ""
+	for(var/i = 1 to 4)
+		bank_code += "[rand(0, 9)]"
+	return bank_code
+
 /datum/bank_account
 	var/account_holder = "Rusty Venture"
 	var/account_balance = 0
@@ -8,6 +14,7 @@
 	var/list/bank_cards = list()
 	var/add_to_accounts = TRUE
 	var/account_id
+	var/bank_pin
 	var/being_dumped = FALSE //pink levels are rising
 	var/datum/bounty/civilian_bounty
 	var/list/datum/bounty/bounties
@@ -17,11 +24,17 @@
 	account_holder = newname
 	account_job = job
 	payday_modifier = modifier
+
+	if(!bank_pin)
+		bank_pin = create_bank_pin()
 	setup_unique_account_id()
 
 /datum/bank_account/Destroy()
 	if(add_to_accounts)
 		SSeconomy.bank_accounts_by_id -= "[account_id]"
+	for(var/obj/item/card/credit/bank_card as anything in bank_cards)
+		bank_card.registered_account = null
+	//SSeconomy.bank_money -= account_balance
 	return ..()
 
 /// Proc guarantees the account_id possesses a unique number. If it doesn't, it tries to find a unique alternative. It then adds it to the `SSeconomy.bank_accounts_by_id` global list.
@@ -103,10 +116,6 @@
 		return
 	for(var/obj/A in bank_cards)
 		var/icon_source = A
-		if(istype(A, /obj/item/card/id))
-			var/obj/item/card/id/id_card = A
-			if(id_card.uses_overlays)
-				icon_source = id_card.get_cached_flat_icon()
 		var/mob/card_holder = recursive_loc_check(A, /mob)
 		if(ismob(card_holder)) //If on a mob
 			if(!card_holder.client || (!(card_holder.client.prefs.chat_toggles & CHAT_BANKCARD) && !force))

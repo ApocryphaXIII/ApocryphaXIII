@@ -1,0 +1,4 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - rscdel: "Removed the display of bpm for music because no one cares and its often innacurate anyway"

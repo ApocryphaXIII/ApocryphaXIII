@@ -5,7 +5,7 @@
 #define CHANNEL_JUKEBOX 1021
 #define CHANNEL_HEARTBEAT 1020 //sound channel for heartbeats
 #define CHANNEL_AMBIENCE 1019
-#define CHANNEL_BUZZ 1018
+#define CHANNEL_MUSIC_TRACKS 1018
 #define CHANNEL_BICYCLE 1017
 #define CHANNEL_BLOOD 1016
 #define CHANNEL_DISCIPLINES 1015
@@ -48,8 +48,15 @@
 #define AMBIENCE_SPACE "space"
 #define AMBIENCE_MAINT "maint"
 #define AMBIENCE_AWAY "away"
-#define AMBIENCE_REEBE "reebe" //unused
 #define AMBIENCE_CREEPY "creepy" //not to be confused with spooky
+
+#define AMBIENCE_CITY "city"
+#define AMBIENCE_BEACH "beach"
+#define AMBIENCE_NATURE "nature"
+#define AMBIENCE_SEWER "sewer"
+#define AMBIENCE_OFFICE "interior"
+
+#define MUSIC_PRINCE "prince"
 
 //default byond sound environments
 #define SOUND_ENVIRONMENT_NONE -1

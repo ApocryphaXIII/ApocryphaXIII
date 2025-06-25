@@ -333,6 +333,7 @@
 	icon_state = "garbage1"
 	layer = OBJ_LAYER //To display the decal over wires.
 	density = TRUE
+	anchored = TRUE
 
 /obj/structure/trashbag/Initialize()
 	. = ..()

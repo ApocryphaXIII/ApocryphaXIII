@@ -91,8 +91,6 @@
 			return
 
 	var/mob/dead/observer/O = src
-	if(isobserver(src) && O.auspex_ghosted) //[Lucifernix] - Makes it so you can't talk to ghosts in auspex
-		return
 	if(isobserver(src) && O.deadchat_name)
 		name = "[O.deadchat_name]"
 	else
@@ -155,7 +153,7 @@
 			if(stat == CONSCIOUS) //necessary indentation so it gets stripped of the semicolon anyway.
 				mods[MODE_HEADSET] = TRUE
 		else if((key in GLOB.department_radio_prefixes) && length(message) > length(key) + 1 && !mods[RADIO_EXTENSION])
-			mods[RADIO_KEY] = lowertext(message[1 + length(key)])
+			mods[RADIO_KEY] = LOWER_TEXT(message[1 + length(key)])
 			mods[RADIO_EXTENSION] = GLOB.department_radio_keys[mods[RADIO_KEY]]
 			chop_to = length(key) + 2
 		else if(key == "," && !mods[LANGUAGE_EXTENSION])

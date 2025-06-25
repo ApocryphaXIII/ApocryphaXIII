@@ -1,7 +1,16 @@
 import { map, sortBy } from 'common/collections';
+import {
+  Box,
+  Button,
+  Dimmer,
+  Flex,
+  Icon,
+  Table,
+  Tabs,
+} from 'tgui-core/components';
 import { flow } from 'tgui-core/fp';
+
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Dimmer, Flex, Icon, Table, Tabs } from 'tgui-core/components';
 import { Window } from '../layouts';
 import { AreaCharge, powerRank } from './PowerMonitor';
 
@@ -87,10 +96,7 @@ const ApcLoggedIn = (props) => {
 const ControlPanel = (props) => {
   const { act, data } = useBackend();
   const { emagged, logging } = data;
-  const [sortByField, setSortByField] = useLocalState(
-    'sortByField',
-    null,
-  );
+  const [sortByField, setSortByField] = useLocalState('sortByField', null);
   return (
     <Flex>
       <Flex.Item>

@@ -75,21 +75,27 @@
 	var/minimal_generation = 13
 	///Minimum Masquerade level necessary to do this job.
 	var/minimal_masquerade = 1
-	/// If set to a positive value, character must be at least this age (in years) to join as role.
-	var/minimum_character_age = JOB_NO_MINIMUM_CHARACTER_AGE
+	///Minimum Renown Rank (garou) necessary to do this job.
+	var/minimal_renownrank
+	/// Character must be at least this age (in years) to join as role.
+	var/minimum_character_age = 0
+	/// Character must be at least this age (in years) since embrace (chronological_age - age) to join as role.
+	var/minimum_vampire_age = 0
 
 	///List of species that are allowed to do this job.
 	var/list/allowed_species = list("Vampire")
 	///List of species that are limited to a certain amount of that species doing this job.
 	var/list/species_slots = list()
 	///List of Bloodlines that are allowed to do this job.
-	var/list/allowed_bloodlines = list("Brujah", "Tremere", "Ventrue", "Nosferatu", "Gangrel", "Toreador", "Malkavian", "Banu Haqim", "Giovanni", "Ministry")
+	var/list/allowed_bloodlines = list(CLAN_BRUJAH, CLAN_TREMERE, CLAN_VENTRUE, CLAN_NOSFERATU, CLAN_GANGREL, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_BANU_HAQIM, CLAN_GIOVANNI, CLAN_SETITES)
+	///List of Tribes that are allowed to do this job.
+	var/list/allowed_tribes = list("Galestalkers", "Ghost Council", "Hart Wardens", "Children of Gaia", "Glass Walkers", "Bone Gnawers", "Ronin", "Black Spiral Dancers","Get of Fenris","Black Furies","Silver Fangs","Silent Striders","Shadow Lords","Red Talons","Stargazers", "Corax")
+	///List of Auspices that are allowed to do this job.
+	var/list/allowed_auspice = list("Philodox", "Galliard", "Ragabash", "Theurge", "Ahroun")
 	///If this job requires whitelisting before it can be selected for characters.
 	var/whitelisted = FALSE
-	// List for phone shit
-	var/my_contact_is_important = FALSE
 	// Only for display in memories
-	var/list/known_contacts = list()
+	var/list/known_contacts = null
 
 	var/duty
 	var/v_duty
@@ -127,6 +133,68 @@
 	if(!ishuman(H))
 		return
 
+	// TFN ADDITION START: loadout spawning
+	var/list/gear_leftovers
+
+	var/mob/living/carbon/human/spawnee = H
+
+	if(M.client && (M.client.prefs.equipped_gear && length(M.client.prefs.equipped_gear)))
+		for(var/gear in M.client.prefs.equipped_gear)
+			var/datum/gear/G = GLOB.gear_datums[gear]
+			if(G)
+				var/permitted = FALSE
+
+				if(G.allowed_roles && H.mind && (H.mind.assigned_role in G.allowed_roles))
+					permitted = TRUE
+				else if(!G.allowed_roles)
+					permitted = TRUE
+				else
+					permitted = FALSE
+
+				if(G.species_blacklist && (spawnee.dna.species.id in G.species_blacklist))
+					permitted = FALSE
+
+				if(G.species_whitelist && !(spawnee.dna.species.id in G.species_whitelist))
+					permitted = FALSE
+
+				if(!permitted)
+					to_chat(M, span_warning("Your current species or role does not permit you to spawn with [gear]!"))
+					continue
+				if(G.slot)
+					var/item = G.spawn_item(null, H)
+					if(!H.equip_to_slot_or_del(item, G.slot, TRUE))
+						LAZYADD(gear_leftovers, G)
+				else
+					LAZYADD(gear_leftovers, G)
+			else
+				M.client.prefs.equipped_gear -= gear
+
+	if(length(gear_leftovers))
+		for(var/datum/gear/G in gear_leftovers)
+			var/item = G.spawn_item(null, H)
+			var/atom/placed_in = spawnee.equip_to_slot_if_possible(item, disable_warning = TRUE)
+
+			if(istype(placed_in))
+				if(isturf(placed_in))
+					to_chat(M, span_notice("Placing [G.display_name] on [placed_in]!"))
+				else
+					to_chat(M, span_notice("Placing [G.display_name] in [placed_in.name]]"))
+				continue
+
+			if(H.put_in_hands(item))
+				to_chat(M, span_notice("Placing [G.display_name] in your hands!"))
+				continue
+
+			if(H.equip_to_slot_if_possible(item, ITEM_SLOT_BACKPACK, TRUE))
+				to_chat(M, span_notice("Placing [G.display_name] in your backpack!"))
+				continue
+
+			to_chat(M, span_danger("Failed to locate a storage object on your mob, either you spawned with no hands free and no backpack or this is a bug."))
+			qdel(item)
+	if(spawnee.base_body_mod != "") // Is the user fat or slim? if so, let's regenerate their icons so they're scaled accordingly.
+		spawnee.regenerate_icons()
+	// TFN ADDITION END: loadout spawning
+
 	if(!config)	//Needed for robots.
 		roundstart_experience = minimal_skills
 
@@ -140,12 +208,7 @@
 		for(var/i in roundstart_experience)
 			experiencer.mind.adjust_experience(i, roundstart_experience[i], TRUE)
 
-	if(my_contact_is_important)
-		for(var/obj/item/vamp/phone/PHONE in GLOB.phones_list)
-			if(PHONE)
-				PHONE.add_important_contacts()
-
-	if(length(known_contacts) > 0)
+	if(LAZYLEN(known_contacts) > 0)
 		H.knowscontacts = known_contacts
 
 /datum/job/proc/announce(mob/living/carbon/human/H)
@@ -160,7 +223,7 @@
 	return TRUE
 
 /datum/job/proc/GetAntagRep()
-	. = CONFIG_GET(keyed_list/antag_rep)[lowertext(title)]
+	. = CONFIG_GET(keyed_list/antag_rep)[LOWER_TEXT(title)]
 	if(. == null)
 		return antag_rep
 
@@ -175,9 +238,10 @@
 			H.apply_pref_name("human", preference_source)
 */
 //No need to humanize fucking furries, since there is no fucking furries
+
 	if(!visualsOnly)
 		var/datum/bank_account/bank_account = new(H.real_name, src, H.dna.species.payday_modifier)
-		bank_account.payday(STARTING_PAYCHECKS, TRUE)
+		//bank_account.payday(STARTING_PAYCHECKS, TRUE)
 		H.account_id = bank_account.account_id
 
 	//Equip the rest of the gear
@@ -268,12 +332,15 @@
 	var/jobtype = null
 
 	uniform = /obj/item/clothing/under/color/grey
+	// Wallet needs to be a seperate pr cause its undercooked rn and its already getting unatomic.
+	//wallet = /obj/item/storage/wallet
 	id = /obj/item/card/id
-//	ears = /obj/item/radio/headset
-//	belt = /obj/item/pda
+	//ears = /obj/item/radio/headset
+	//belt = /obj/item/pda
+	//bank_card = /obj/item/card/credit
 	back = /obj/item/storage/backpack
 	shoes = /obj/item/clothing/shoes/sneakers/black
-//	box = /obj/item/storage/box/survival
+	//box = /obj/item/storage/box/survival
 
 	var/backpack = /obj/item/storage/backpack
 	var/satchel  = /obj/item/storage/backpack/satchel
@@ -316,7 +383,7 @@
 	if(!J)
 		J = SSjob.GetJob(H.job)
 
-	var/obj/item/card/id/C = H.wear_id
+	var/obj/item/card/id/C = H.get_idcard(TRUE)
 	if(istype(C))
 		if(C)
 			C.access = J.get_access()
@@ -331,11 +398,20 @@
 			if(H.age)
 				C.registered_age = H.age
 			C.update_label()
+			/*
 			var/datum/bank_account/B = SSeconomy.bank_accounts_by_id["[H.account_id]"]
 			if(B && B.account_id == H.account_id)
 				C.registered_account = B
 				B.bank_cards += C
+			*/
 			H.sec_hud_set_ID()
+
+	var/obj/item/card/credit/bank_card = H.get_creditcard()
+	if(istype(bank_card))
+		var/datum/bank_account/bank_account = SSeconomy.bank_accounts_by_id["[H.account_id]"]
+		if(bank_account.account_id == H.account_id)
+			bank_card.registered_account = bank_account
+			bank_account.bank_cards += bank_card
 
 	var/obj/item/pda/PDA = H.get_item_by_slot(pda_slot)
 	if(istype(PDA))
@@ -368,3 +444,6 @@
 
 /datum/job/proc/is_character_old_enough(chronological_age)
 	return minimum_character_age <= chronological_age
+
+/datum/job/proc/is_vampire_old_enough(biological_age, chronological_age)
+	return minimum_vampire_age <= chronological_age - biological_age

@@ -1,10 +1,10 @@
 // THIS IS A SKYRAT UI FILE
 import { useState } from 'react';
+import { Section, Stack, Tabs } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { Section, Stack, Tabs } from 'tgui-core/components';
-import { BooleanLike } from 'tgui-core/react';
 import { Window } from '../layouts';
 
 type ExamineData = {
@@ -12,11 +12,11 @@ type ExamineData = {
   obscured: BooleanLike;
   flavor_text: string;
   flavor_text_nsfw: string;
-  headshot: string,
+  headshot: string;
   ooc_notes: string;
   character_notes: string;
   nsfw_content: BooleanLike;
-}
+};
 
 function formatURLs(text: string) {
   if (!text) return;
@@ -44,7 +44,7 @@ function formatURLs(text: string) {
   parts.push(text.substring(lastIndex));
 
   return <div>{parts}</div>;
-};
+}
 
 export const ExaminePanel = (props) => {
   const [tabIndex, setTabIndex] = useState(1);
@@ -138,32 +138,32 @@ export const ExaminePanel = (props) => {
                 <Section fitted title={'OOC Notes (NSFW)'} />
               </Tabs.Tab>
             </Tabs>
-              {lowerTabIndex === 1 && (
-                <Section
-                  style={{ 'overflow-y': 'scroll' }}
-                  preserveWhitespace
-                  fitted
-                  minHeight="35%"
-                  maxHeight="35%"
-                  fontSize="14px"
-                  lineHeight="1.5"
-                >
-                  <Stack.Item>{formatURLs(character_notes)}</Stack.Item>
-                </Section>
-              )}
-              {lowerTabIndex === 2 && (
-                <Section
-                  style={{ 'overflow-y': 'scroll' }}
-                  preserveWhitespace
-                  fitted
-                  minHeight="35%"
-                  maxHeight="35%"
-                  fontSize="14px"
-                  lineHeight="1.5"
-                >
-                  <Stack.Item>{formatURLs(ooc_notes)}</Stack.Item>
-                </Section>
-              )}
+            {lowerTabIndex === 1 && (
+              <Section
+                style={{ 'overflow-y': 'scroll' }}
+                preserveWhitespace
+                fitted
+                minHeight="35%"
+                maxHeight="35%"
+                fontSize="14px"
+                lineHeight="1.5"
+              >
+                <Stack.Item>{formatURLs(character_notes)}</Stack.Item>
+              </Section>
+            )}
+            {lowerTabIndex === 2 && (
+              <Section
+                style={{ 'overflow-y': 'scroll' }}
+                preserveWhitespace
+                fitted
+                minHeight="35%"
+                maxHeight="35%"
+                fontSize="14px"
+                lineHeight="1.5"
+              >
+                <Stack.Item>{formatURLs(ooc_notes)}</Stack.Item>
+              </Section>
+            )}
           </Stack.Item>
         </Stack>
       </Window.Content>

@@ -10,12 +10,11 @@
 				return
 	..()
 
-/mob/living/carbon/proc/rollfrenzy()
+/mob/living/carbon/proc/rollfrenzy(frenzyoverride = 0)
 	if(client)
 		var/mob/living/carbon/human/H
 		if(ishuman(src))
 			H = src
-
 		if(isgarou(src) || iswerewolf(src))
 			to_chat(src, "I'm full of <span class='danger'><b>ANGER</b></span>, and I'm about to flare up in <span class='danger'><b>RAGE</b></span>. Rolling...")
 		else if(iskindred(src))
@@ -26,33 +25,39 @@
 			to_chat(src, "I'm too <span class='danger'><b>AFRAID</b></span> to continue doing this. Rolling...")
 		SEND_SOUND(src, sound('code/modules/wod13/sounds/bloodneed.ogg', 0, 0, 50))
 		var/check
+		var/frenzydicepool = 1
+		var/frenzydiff = 4
 		if(iscathayan(src))
-			check = SSroll.storyteller_roll(max(1, mind.dharma.Hun), min(10, (mind.dharma.level*2)-max_demon_chi), src)
-		else
-			check = SSroll.storyteller_roll(max(1, round(H.morality_path.score/2)), min(frenzy_chance_boost, frenzy_hardness), src)
+			frenzydicepool = max(1, mind.dharma.Hun)
+			frenzydiff = max(frenzy_hardness, (mind.dharma.level*2)-max_demon_chi)
+		else if(iskindred(src))
+			frenzydicepool = max(1, round(H.morality_path.score/2))
+			frenzydiff = frenzy_hardness
+		else if(isgarou(src) || iswerewolf(src))
+			frenzydicepool = max(1, max(round(wisdom/2),renownrank))
+			frenzydiff = frenzy_hardness
+		if(frenzyoverride)
+			frenzydiff = frenzyoverride
+		check = SSroll.storyteller_roll(frenzydicepool, difficulty = frenzydiff, mobs_to_show_output = src)
 		switch(check)
-			if(DICE_FAILURE)
-				enter_frenzymod()
+			if(ROLL_FAILURE)
+				src.enter_frenzymod()
 				if(iskindred(src))
 					addtimer(CALLBACK(src, PROC_REF(exit_frenzymod)), 100*H.clane.frenzymod)
 					SEND_SIGNAL(H, COMSIG_PATH_HIT, PATH_SCORE_DOWN)
 				else
 					addtimer(CALLBACK(src, PROC_REF(exit_frenzymod)), 100)
-				frenzy_hardness = 1
-			if(DICE_CRIT_FAILURE)
-				enter_frenzymod()
+				frenzy_hardness = initial(src.frenzy_hardness)
+			if(ROLL_BOTCH)
+				src.enter_frenzymod()
 				if(iskindred(src))
 					addtimer(CALLBACK(src, PROC_REF(exit_frenzymod)), 200*H.clane.frenzymod)
 					SEND_SIGNAL(H, COMSIG_PATH_HIT, PATH_SCORE_DOWN)
 				else
 					addtimer(CALLBACK(src, PROC_REF(exit_frenzymod)), 200)
-				frenzy_hardness = 1
-			if(DICE_CRIT_WIN)
-				frenzy_hardness = max(1, frenzy_hardness-1)
-				if(iskindred(src))
-					SEND_SIGNAL(H, COMSIG_PATH_HIT, PATH_SCORE_UP)
+				frenzy_hardness = initial(src.frenzy_hardness)
 			else
-				frenzy_hardness = min(10, frenzy_hardness+1)
+				frenzy_hardness = min(10, src.frenzy_hardness+1)
 
 /mob/living/carbon/proc/enter_frenzymod()
 	if (in_frenzy)
@@ -62,7 +67,8 @@
 	in_frenzy = TRUE
 	add_client_colour(/datum/client_colour/glass_colour/red)
 	demon_chi = 0
-	adjust_rage(-10, src, TRUE)
+	if(isgarou(src) || iswerewolf(src))
+		adjust_rage(-10, src, TRUE)
 	GLOB.frenzy_list += src
 
 /mob/living/carbon/proc/exit_frenzymod()
@@ -193,7 +199,7 @@
 
 /datum/species/kindred/spec_life(mob/living/carbon/human/H)
 	. = ..()
-	if(H.clane?.name == "Baali")
+	if(H.clane?.name == CLAN_BAALI)
 		if(istype(get_area(H), /area/vtm/church))
 			if(prob(25))
 				to_chat(H, "<span class='warning'>You don't belong here!</span>")
@@ -253,14 +259,14 @@
 		H.bloodpool = max(0, H.bloodpool-1)
 		to_chat(H, "<span class='warning'>Necromancy Vision reduces your blood points too sustain itself.</span>")
 
-	if(H.clane?.name == "Tzimisce" || H.clane?.name == "Old Clan Tzimisce")
+	if(H.clane?.name == CLAN_TZIMISCE || H.clane?.name == CLAN_OLD_TZIMISCE)
 		var/datum/vampireclane/tzimisce/TZ = H.clane
 		if(TZ.heirl)
 			if(!(TZ.heirl in H.GetAllContents()))
 				if(prob(5))
 					to_chat(H, "<span class='warning'>You are missing your home soil...</span>")
 					H.bloodpool = max(0, H.bloodpool-1)
-	if(H.clane?.name == "Kiasyd")
+	if(H.clane?.name == CLAN_KIASYD)
 		var/datum/vampireclane/kiasyd/kiasyd = H.clane
 		for(var/obj/item/I in H.contents)
 			if(I?.is_iron)
@@ -288,7 +294,7 @@
 					P.reason_of_death = "Lost control to the Beast ([time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")])."
 
 	if(H.clane && !H.antifrenzy && !HAS_TRAIT(H, TRAIT_KNOCKEDOUT))
-		if(H.clane.name == "Banu Haqim")
+		if(H.clane.name == CLAN_BANU_HAQIM)
 			if(H.mind)
 				if(H.mind.enslaved_to)
 					if(get_dist(H, H.mind.enslaved_to) > 10)

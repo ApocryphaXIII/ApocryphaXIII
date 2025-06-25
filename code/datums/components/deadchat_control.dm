@@ -48,7 +48,7 @@
 /datum/component/deadchat_control/proc/deadchat_react(mob/source, message)
 	SIGNAL_HANDLER
 
-	message = lowertext(message)
+	message = LOWER_TEXT(message)
 
 	if(!inputs[message])
 		return

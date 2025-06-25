@@ -228,11 +228,11 @@
 	if(haircolor)
 		H.hair_color = haircolor
 	else
-		H.hair_color = random_short_color()
+		H.hair_color = random_color()
 	if(facial_haircolor)
 		H.facial_hair_color = facial_haircolor
 	else
-		H.facial_hair_color = random_short_color()
+		H.facial_hair_color = random_color()
 	if(skin_tone)
 		H.skin_tone = skin_tone
 	else
@@ -257,25 +257,25 @@
 			if(istype(C))
 				C.sensor_mode = NO_SENSORS
 
-	if(istype(H.wear_id, /obj/item/card/id))
-		var/obj/item/card/id/W = H.wear_id
-		if(W)
-			if(H.age)
-				W.registered_age = H.age
-			if(id_access)
-				for(var/jobtype in typesof(/datum/job))
-					var/datum/job/J = new jobtype
-					if(J.title == id_access)
-						W.access = J.get_access()
-						break
-			if(id_access_list)
-				if(!islist(W.access))
-					W.access = list()
-				W.access |= id_access_list
-			if(id_job)
-				W.assignment = id_job
-			W.registered_name = H.real_name
-			W.update_label()
+
+	var/obj/item/card/id/W = H.get_idcard()
+	if(W)
+		if(H.age)
+			W.registered_age = H.age
+		if(id_access)
+			for(var/jobtype in typesof(/datum/job))
+				var/datum/job/J = new jobtype
+				if(J.title == id_access)
+					W.access = J.get_access()
+					break
+		if(id_access_list)
+			if(!islist(W.access))
+				W.access = list()
+			W.access |= id_access_list
+		if(id_job)
+			W.assignment = id_job
+		W.registered_name = H.real_name
+		W.update_label()
 
 //Instant version - use when spawning corpses during runtime
 /obj/effect/mob_spawn/human/corpse

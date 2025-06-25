@@ -59,7 +59,7 @@
 		if(G.master)
 			dat += "My Regnant is [G.master.real_name], I should obey their wants.<BR>"
 			if(G.master.clane)
-				if(G.master.clane.name != "Caitiff")
+				if(G.master.clane.name != CLAN_NONE)
 					dat += "Regnant's clan is [G.master.clane], maybe I can try some of it's disciplines..."
 		if(host.mind.special_role)
 			for(var/datum/antagonist/A in host.mind.antag_datums)
@@ -105,13 +105,13 @@
 						dat += "Their number is [host.Myself.Lover.phone_number].<BR>"
 					if(host.Myself.Lover.lover_text)
 						dat += "[host.Myself.Lover.lover_text]<BR>"
-		if(length(host.knowscontacts) > 0)
+		if(LAZYLEN(host.knowscontacts) > 0)
 			dat += "<b>I know some other of my kind in this city. Need to check my phone, there definetely should be:</b><BR>"
 			for(var/i in host.knowscontacts)
 				dat += "-[i] contact<BR>"
-		for(var/datum/vtm_bank_account/account in GLOB.bank_account_list)
-			if(host.bank_id == account.bank_id)
-				dat += "<b>My bank account code is: [account.code]</b><BR>"
+		var/datum/bank_account/account = host.account_id ? SSeconomy.bank_accounts_by_id["[host.account_id]"] : null
+		if(account)
+			dat += "<b>My bank pin is: [account.bank_pin]</b><BR>"
 		host << browse(HTML_SKELETON(dat), "window=vampire;size=400x450;border=1;can_resize=1;can_minimize=0")
 		onclose(host, "ghoul", src)
 
@@ -276,18 +276,7 @@
 		H.last_bloodpool_restore = world.time
 		H.bloodpool = min(H.maxbloodpool, H.bloodpool+1)
 
-/datum/species/garou/spec_life(mob/living/carbon/human/H)
-	. = ..()
-	if(HAS_TRAIT(H, TRAIT_UNMASQUERADE))
-		if(H.CheckEyewitness(H, H, 7, FALSE))
-			H.adjust_veil(-1)
 
-	if((H.last_bloodpool_restore + 60 SECONDS) <= world.time)
-		H.last_bloodpool_restore = world.time
-		H.bloodpool = min(H.maxbloodpool, H.bloodpool+1)
-	if(glabro)
-		if(H.CheckEyewitness(H, H, 7, FALSE))
-			H.adjust_veil(-1)
 
 /**
  * Accesses a certain Discipline that a Ghoul has. Returns false if they don't.

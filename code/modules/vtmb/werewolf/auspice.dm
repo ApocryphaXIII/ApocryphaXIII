@@ -7,42 +7,31 @@
 	var/start_gnosis = 1
 	var/gnosis = 1
 	var/base_breed = "Homid"
-	var/tribe = "Wendigo"
+	var/datum/garou_tribe/tribe = new /datum/garou_tribe/galestalkers()
 	var/list/gifts = list()
 	var/force_abomination = FALSE
-
-	var/list/wendigo = list(
-		/datum/action/gift/stoic_pose = 1,
-		/datum/action/gift/freezing_wind = 2,
-		/datum/action/gift/bloody_feast = 3
-	)
-
-	var/list/glasswalker = list(
-		/datum/action/gift/smooth_move = 1,
-		/datum/action/gift/digital_feelings = 2,
-		/datum/action/gift/elemental_improvement = 3
-	)
-
-	var/list/spiral = list(
-		/datum/action/gift/stinky_fur = 1,
-		/datum/action/gift/venom_claws = 2,
-		/datum/action/gift/burning_scars = 3
-	)
 
 /datum/auspice/proc/on_gain(mob/living/carbon/C)
 	C.update_rage_hud()
 
 	var/mob/living/carbon/werewolf/lupus/lupus = C.transformator.lupus_form?.resolve()
 	var/mob/living/carbon/werewolf/crinos/crinos = C.transformator.crinos_form?.resolve()
-
+	var/mob/living/carbon/werewolf/corax/corax_crinos/cor_crinos = C.transformator.corax_form?.resolve()
+	var/mob/living/carbon/werewolf/lupus/corvid/corvid = C.transformator.corvid_form?.resolve()
 	lupus?.auspice = src
 	lupus?.dna = C.dna
 	crinos?.auspice = src
 	crinos?.dna = C.dna
+	cor_crinos?.auspice = src
+	cor_crinos?.dna = C.dna
+	ADD_TRAIT(cor_crinos, TRAIT_CORAX, tribe )
+	corvid?.auspice = src
+	corvid?.dna = C.dna
+	ADD_TRAIT(corvid, TRAIT_CORAX, tribe)
 
 
 	rage = start_rage
-	if(length(gifts))
+	if(length(gifts)) // This grants the auspice gifts, I believe
 		for(var/i in gifts)
 			var/datum/action/A1 = new i()
 			A1.Grant(C)
@@ -50,35 +39,30 @@
 			A2.Grant(lupus)
 			var/datum/action/A3 = new i()
 			A3.Grant(crinos)
+			var/datum/action/A4 = new i()
+			A4.Grant(cor_crinos)
+			var/datum/action/A5 = new i()
+			A5.Grant(corvid)
 
-	switch(tribe)
-		if("Glasswalkers")
-			for(var/i in 1 to level)
-				var/zalupa = glasswalker[i]
-				var/datum/action/A = new zalupa()
-				A.Grant(C)
-				var/datum/action/A1 = new zalupa()
-				A1.Grant(lupus)
-				var/datum/action/A2 = new zalupa()
-				A2.Grant(crinos)
-		if("Wendigo")
-			for(var/i in 1 to level)
-				var/zalupa = wendigo[i]
-				var/datum/action/A = new zalupa()
-				A.Grant(C)
-				var/datum/action/A1 = new zalupa()
-				A1.Grant(lupus)
-				var/datum/action/A2 = new zalupa()
-				A2.Grant(crinos)
-		if("Black Spiral Dancers")
-			for(var/i in 1 to level)
-				var/zalupa = spiral[i]
-				var/datum/action/A = new zalupa()
-				A.Grant(C)
-				var/datum/action/A1 = new zalupa()
-				A1.Grant(lupus)
-				var/datum/action/A2 = new zalupa()
-				A2.Grant(crinos)
+	for(var/i in 1 to level) // This grants the tribe-specific gifts, linked to the werewolf "power" stat
+		var/zalupa
+		zalupa = tribe.tribal_gifts[i]
+		var/datum/action/A = new zalupa()
+		A.Grant(C)
+		var/datum/action/A1 = new zalupa()
+		A1.Grant(lupus)
+		var/datum/action/A2 = new zalupa()
+		A2.Grant(crinos)
+		var/datum/action/A3 = new zalupa()
+		A3.Grant(cor_crinos)
+		var/datum/action/A4 = new zalupa()
+		A4.Grant(corvid)
+
+	if(tribe.tribe_keys)
+		C.put_in_hands(new tribe.tribe_keys(C))
+	if(tribe.tribe_trait==TRAIT_CORAX)
+		ADD_TRAIT(C,TRAIT_CORAX, tribe)
+
 
 /datum/auspice/ahroun
 	name = "Ahroun"

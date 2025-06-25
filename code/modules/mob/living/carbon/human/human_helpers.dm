@@ -65,7 +65,7 @@
 	var/obj/item/modular_computer/tablet/tablet = wear_id
 	if(istype(wallet))
 		id = wallet.front_id
-	if(istype(id))
+	if(istype(id) && id.registered_name_is_public)
 		. = id.registered_name
 	else if(istype(pda))
 		. = pda.owner
@@ -83,6 +83,13 @@
 		return
 	//Check inventory slots
 	return (wear_id?.GetID() || belt?.GetID())
+
+/mob/living/carbon/human/get_creditcard(hand_first = TRUE)
+	. = ..()
+	if(. && hand_first)
+		return
+	//Check inventory slots
+	return (wear_id?.GetCreditCard() || belt?.GetCreditCard())
 
 /mob/living/carbon/human/reagent_check(datum/reagent/R)
 	return dna.species.handle_chemicals(R,src)

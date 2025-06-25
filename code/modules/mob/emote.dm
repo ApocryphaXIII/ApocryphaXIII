@@ -13,7 +13,7 @@
 		param = copytext(act, custom_param + length(act[custom_param]))
 		act = copytext(act, 1, custom_param)
 
-	act = lowertext(act)
+	act = LOWER_TEXT(act)
 	var/list/key_emotes = GLOB.emote_list[act]
 
 	if(!length(key_emotes))
@@ -58,7 +58,7 @@
 	message += keys.Join(", ")
 	message += "."
 	message = message.Join("")
-	to_chat(user, message)
+	to_chat(user, boxed_message(message))
 
 /datum/emote/flip
 	key = "flip"

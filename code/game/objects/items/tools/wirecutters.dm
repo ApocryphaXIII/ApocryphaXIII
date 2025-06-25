@@ -1,8 +1,13 @@
 /obj/item/wirecutters
 	name = "wirecutters"
 	desc = "This cuts wires."
+	icon_state = "fixer"
+	icon = 'code/modules/wod13/items.dmi'
+	onflooricon = 'code/modules/wod13/onfloor.dmi'
+/*
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "cutters_map"
+*/
 	inhand_icon_state = "cutters"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
@@ -23,7 +28,7 @@
 	tool_behaviour = TOOL_WIRECUTTER
 	toolspeed = 1
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 50, ACID = 30)
-	var/random_color = TRUE
+	var/random_color = FALSE
 	var/static/list/wirecutter_colors = list(
 		"blue" = "#1861d5",
 		"red" = "#951710",
@@ -33,7 +38,6 @@
 		"cyan" = "#18a2d5",
 		"yellow" = "#d58c18"
 	)
-
 
 /obj/item/wirecutters/Initialize()
 	. = ..()

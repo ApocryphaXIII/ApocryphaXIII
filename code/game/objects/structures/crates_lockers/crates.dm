@@ -101,7 +101,7 @@
 /obj/structure/closet/crate/maint/PopulateContents()
 	. = ..()
 	for(var/i in 1 to rand(2,6))
-		new /obj/effect/spawner/lootdrop/maintenance(src)
+		new /obj/effect/spawner/random/maintenance(src)
 
 /obj/structure/closet/crate/trashcart/Initialize()
 	. = ..()
@@ -112,10 +112,10 @@
 /obj/structure/closet/crate/trashcart/filled/PopulateContents()
 	. = ..()
 	for(var/i in 1 to rand(7,15))
-		new /obj/effect/spawner/lootdrop/garbage_spawner(src)
+		new /obj/effect/spawner/random/trash/garbage(src)
 		if(prob(12))
 			new	/obj/item/storage/bag/trash/filled(src)
-	new /obj/effect/spawner/scatter/grime(loc)
+	new /obj/effect/spawner/random/trash/grime(loc)
 
 /obj/structure/closet/crate/internals
 	desc = "An internals crate."
@@ -183,11 +183,11 @@
 	. = ..()
 	new /obj/item/reagent_containers/blood(src)
 	new /obj/item/reagent_containers/blood(src)
+	new /obj/item/reagent_containers/blood(src)
 	new /obj/item/reagent_containers/blood/a_minus(src)
 	new /obj/item/reagent_containers/blood/a_plus(src)
 	new /obj/item/reagent_containers/blood/b_minus(src)
 	new /obj/item/reagent_containers/blood/b_plus(src)
-	new /obj/item/reagent_containers/blood/o_minus(src)
 	new /obj/item/reagent_containers/blood/o_plus(src)
 	for(var/i in 1 to 3)
 		new /obj/item/reagent_containers/blood/random(src)
@@ -293,4 +293,4 @@
 /obj/structure/closet/crate/decorations/PopulateContents()
 	. = ..()
 	for(var/i in 1 to 4)
-		new /obj/effect/spawner/lootdrop/decorations_spawner(src)
+		new /obj/effect/spawner/random/decoration/generic(src)

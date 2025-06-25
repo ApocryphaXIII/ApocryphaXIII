@@ -25,12 +25,13 @@
 	display_order = JOB_DISPLAY_ORDER_PRINCE
 
 	minimal_generation = 10
-	minimum_character_age = 150
+//	minimum_character_age = 150 //Uncomment if age-restriction wanted
+	minimum_vampire_age = 75
+
 	minimal_masquerade = 5
 	allowed_species = list("Vampire")
-	allowed_bloodlines = list("Tremere", "Ventrue", "Nosferatu", "Toreador", "Malkavian", "Brujah", "Lasombra", "Gangrel", "True Brujah")
+	allowed_bloodlines = list(CLAN_TREMERE, CLAN_VENTRUE, CLAN_NOSFERATU, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_BRUJAH, CLAN_LASOMBRA, CLAN_GANGREL, CLAN_TRUE_BRUJAH)
 
-	my_contact_is_important = TRUE
 	known_contacts = list(
 		"Sheriff",
 		"Seneschal",
@@ -61,7 +62,7 @@
 	shoes = /obj/item/clothing/shoes/vampire
 	l_pocket = /obj/item/vamp/phone/prince
 	r_pocket = /obj/item/vamp/keys/prince
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/vampire/deagle=1, /obj/item/phone_book=1, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/masquerade_contract=1, /obj/item/vamp/creditcard/prince=1)
+	backpack_contents = list(/obj/item/gun/ballistic/automatic/vampire/deagle=1, /obj/item/phone_book=1, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/masquerade_contract=1, /obj/item/card/credit/prince=1)
 
 
 	backpack = /obj/item/storage/backpack

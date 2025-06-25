@@ -1,4 +1,3 @@
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
@@ -11,6 +10,8 @@ import {
   TextArea,
 } from 'tgui-core/components';
 import { formatMoney } from 'tgui-core/format';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const RequestKiosk = (props) => {

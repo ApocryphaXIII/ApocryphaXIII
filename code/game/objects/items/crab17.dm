@@ -48,7 +48,7 @@
 
 /obj/structure/checkoutmachine/examine(mob/living/user)
 	. = ..()
-	. += "<span class='info'>It's integrated integrity meter reads: <b>HEALTH: [obj_integrity]</b>.</span>"
+	. += span_info("It's integrated integrity meter reads: <b>HEALTH: [atom_integrity]</b>.")
 
 /obj/structure/checkoutmachine/proc/check_if_finished()
 	for(var/i in accounts_to_rob)
@@ -61,8 +61,8 @@
 	if(check_if_finished())
 		qdel(src)
 		return
-	if(istype(W, /obj/item/card/id))
-		var/obj/item/card/id/card = W
+	if(is_creditcard(W))
+		var/obj/item/card/credit/card = W
 		if(!card.registered_account)
 			to_chat(user, "<span class='warning'>This card does not have a registered account!</span>")
 			return

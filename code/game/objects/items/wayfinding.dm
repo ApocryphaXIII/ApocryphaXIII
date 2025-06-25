@@ -176,14 +176,14 @@
 				synth_acc._adjust_money(-refund_amt)
 				var/obj/item/holochip/holochip = new (loc)
 				holochip.credits = refund_amt
-				holochip.name = "[holochip.credits] credit holochip"
+				holochip.name = "[holochip.get_item_credit_value()] credit holochip"
 				if(ishuman(user))
 					var/mob/living/carbon/human/customer = user
 					customer.put_in_hands(holochip)
 
 		if(!refundiscredits)
 			qdel(WP)
-			var/costume = pick(subtypesof(/obj/effect/spawner/bundle/costume))
+			var/costume = pick(subtypesof(/obj/effect/spawner/costume))
 			new costume(user.loc)
 
 		set_expression("veryhappy", 2 SECONDS)

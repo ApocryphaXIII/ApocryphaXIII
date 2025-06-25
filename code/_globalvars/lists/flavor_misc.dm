@@ -42,25 +42,25 @@ GLOBAL_LIST_EMPTY(caps_list)
 GLOBAL_LIST_EMPTY(tails_list_monkey)
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
-	"Red" = "ff4d4d",
-	"Faint Red" = "ffb3b3",
-	"Dark Red" = "9c3030",
-	"Orange" = "ffa64d",
-	"Burnt Orange" = "cc4400",
-	"Bright Yellow" = "ffff99",
-	"Dull Yellow" = "fbdf56",
-	"Faint Green" = "ddff99",
-	"Green" = "97ee63",
-	"Seafoam Green" = "00fa9a",
-	"Dark Green" = "37835b",
-	"Cyan Blue" = "00ffff",
-	"Faint Blue" = "b3d9ff",
-	"Blue" = "3399ff",
-	"Dark Blue" = "6666ff",
-	"Purple" = "ee82ee",
-	"Dark Fuschia" = "cc0066",
-	"Pink" = "ff99cc",
-	"White" = "f2f2f2",))
+	"Red" = "#ff4d4d",
+	"Faint Red" = "#ffb3b3",
+	"Dark Red" = "#9c3030",
+	"Orange" = "#ffa64d",
+	"Burnt Orange" = "#cc4400",
+	"Bright Yellow" = "#ffff99",
+	"Dull Yellow" = "#fbdf56",
+	"Faint Green" = "#ddff99",
+	"Green" = "#97ee63",
+	"Seafoam Green" = "#00fa9a",
+	"Dark Green" = "#37835b",
+	"Cyan Blue" = "#00ffff",
+	"Faint Blue" = "#b3d9ff",
+	"Blue" = "#3399ff",
+	"Dark Blue" = "#6666ff",
+	"Purple" = "#ee82ee",
+	"Dark Fuschia" = "#cc0066",
+	"Pink" = "#ff99cc",
+	"White" = "#f2f2f2",))
 
 GLOBAL_LIST_INIT(ghost_forms_with_directions_list, list(
 	"ghost",
@@ -145,7 +145,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 			var/datum/portrait_picker/tgui  = new(usr)//create the datum
 			tgui.ui_interact(usr)//datum has a tgui component, here we open the window
 			return "ai-portrait" //just take this until they decide
-		return "ai-[lowertext(input)]"
+		return "ai-[LOWER_TEXT(input)]"
 
 GLOBAL_LIST_INIT(security_depts_prefs, sort_list(list(SEC_DEPT_RANDOM, SEC_DEPT_NONE, SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SCIENCE, SEC_DEPT_SUPPLY)))
 

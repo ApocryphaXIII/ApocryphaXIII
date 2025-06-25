@@ -218,6 +218,7 @@
 	name = "robust coffee"
 	desc = "Careful, the beverage you're about to enjoy is extremely hot."
 	icon_state = "coffee"
+	custom_price = 1
 	list_reagents = list(/datum/reagent/consumable/coffee = 30)
 	spillable = TRUE
 	resistance_flags = FREEZE_PROOF
@@ -270,7 +271,7 @@
 	list_reagents = list(/datum/reagent/consumable/dry_ramen = 15, /datum/reagent/consumable/salt = 3)
 	foodtype = GRAIN
 	isGlass = FALSE
-	custom_price = PAYCHECK_ASSISTANT * 0.9
+	custom_price = 4
 
 /obj/item/reagent_containers/food/drinks/waterbottle
 	name = "bottle of water"
@@ -604,7 +605,7 @@
 	reagent_flags = NONE
 	spillable = FALSE
 	isGlass = FALSE
-	custom_price = PAYCHECK_ASSISTANT * 0.9
+	custom_price = 1
 	obj_flags = CAN_BE_HIT
 
 /obj/item/reagent_containers/food/drinks/soda_cans/random/Initialize()

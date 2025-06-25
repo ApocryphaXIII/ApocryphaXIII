@@ -415,6 +415,7 @@
 	if(qdel_on_fail)
 		qdel(W)
 	return FALSE
+
 /**
  * Reset the attached clients perspective (viewpoint)
  *
@@ -468,37 +469,45 @@
 	set name = "Examine"
 	set category = "IC"
 
-	if(ishuman(src))
-		if(ishuman(A) || isitem(A))
-			var/mob/living/carbon/human/ueban = src
-			if(!do_mob(src, src, max(1, 15-ueban.mentality*3)))
-				return
+	run_examinate(A)
 
-	if(isturf(A) && !(sight & SEE_TURFS) && !(A in view(client ? client.view : world.view, src)))
+/mob/proc/run_examinate(atom/examinify)
+	if(ishuman(src))
+		var/mob/living/carbon/human/ueban = src
+		if(!do_after(src, max(1, 15-ueban.mentality*3), examinify, timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE)))
+			return
+
+	if(isturf(examinify) && !(sight & SEE_TURFS) && !(examinify in view(client ? client.view : world.view, src)))
 		// shift-click catcher may issue examinate() calls for out-of-sight turfs
 		return
 
-	if(is_blind() && !blind_examine_check(A)) //blind people see things differently (through touch)
+	if(is_blind() && !blind_examine_check(examinify)) //blind people see things differently (through touch)
 		return
 
-	face_atom(A)
+	face_atom(examinify)
 	var/list/result
 	if(client)
 		LAZYINITLIST(client.recent_examines)
-		if(isnull(client.recent_examines[A]) || client.recent_examines[A] < world.time)
-			result = A.examine(src)
-			client.recent_examines[A] = world.time + EXAMINE_MORE_TIME // set the value to when the examine cooldown ends
-			RegisterSignal(A, COMSIG_PARENT_QDELETING, PROC_REF(clear_from_recent_examines), override=TRUE) // to flush the value if deleted early
-			addtimer(CALLBACK(src, PROC_REF(clear_from_recent_examines), A), EXAMINE_MORE_TIME)
-			handle_eye_contact(A)
+		var/ref_to_atom = ref(examinify)
+		var/examine_time = client.recent_examines[ref_to_atom]
+		if(examine_time && (world.time - examine_time < EXAMINE_MORE_TIME))
+			result = examinify.examine_more(src)
+			if(!length(result))
+				result += span_notice("<i>You examine [examinify] closer, but find nothing of interest...</i>")
 		else
-			result = A.examine_more(src)
+			result = examinify.examine(src)
+			client.recent_examines[ref_to_atom] = world.time // set to when we last normal examine'd them
+			addtimer(CALLBACK(src, PROC_REF(clear_from_recent_examines), ref_to_atom), RECENT_EXAMINE_MAX_WINDOW)
+			handle_eye_contact(examinify)
 	else
-		result = A.examine(src) // if a tree is examined but no client is there to see it, did the tree ever really exist?
+		result = examinify.examine(src) // if a tree is examined but no client is there to see it, did the tree ever really exist?
 
-	to_chat(src, result.Join("\n"))
-	SEND_SIGNAL(src, COMSIG_MOB_EXAMINATE, A)
+	if(result.len)
+		for(var/i in 1 to (length(result) - 1))
+			result[i] += "\n"
 
+	to_chat(src, boxed_message("<span class='infoplain'>[result.Join()]</span>"))
+	SEND_SIGNAL(src, COMSIG_MOB_EXAMINATE, examinify)
 
 /mob/proc/blind_examine_check(atom/examined_thing)
 	return TRUE //The non-living will always succeed at this check.
@@ -553,13 +562,11 @@
 	return TRUE
 
 
-/mob/proc/clear_from_recent_examines(atom/A)
+/mob/proc/clear_from_recent_examines(ref_to_clear)
 	SIGNAL_HANDLER
-
 	if(!client)
 		return
-	UnregisterSignal(A, COMSIG_PARENT_QDELETING)
-	LAZYREMOVE(client.recent_examines, A)
+	LAZYREMOVE(client.recent_examines, ref_to_clear)
 
 /**
  * handle_eye_contact() is called when we examine() something. If we examine an alive mob with a mind who has examined us in the last second within 5 tiles, we make eye contact!
@@ -746,11 +753,9 @@
 //			return
 
 	if(!usr.can_respawn())
-		if(istype(usr.client.mob, /mob/dead/observer))
-			var/mob/dead/observer/obs = usr.client.mob
-			if(obs.auspex_ghosted)
-				to_chat(usr, "<span class='notice'>You cannot respawn while astrally projecting!</span>")
-				return
+		if(isavatar(usr.client.mob))
+			to_chat(usr, span_notice("You cannot respawn while astrally projecting!"))
+			return
 
 		to_chat(usr, "<span class='notice'>You need to wait [DisplayTimeText(GLOB.respawn_timers[usr.client.ckey] + 10 MINUTES - world.time)] before you can respawn.</span>")
 
@@ -1185,6 +1190,7 @@
 	var/list/searching = GetAllContents()
 	var/search_id = 1
 	var/search_pda = 1
+	var/search_creditcard = 1
 
 	for(var/A in searching)
 		if( search_id && istype(A, /obj/item/card/id) )
@@ -1192,18 +1198,24 @@
 			if(ID.registered_name == oldname)
 				ID.registered_name = newname
 				ID.update_label()
-				if(ID.registered_account?.account_holder == oldname)
-					ID.registered_account.account_holder = newname
-				if(!search_pda)
+				if(!search_pda || !search_creditcard)
 					break
 				search_id = 0
 
-		else if( search_pda && istype(A, /obj/item/pda) )
+		if(search_creditcard && is_creditcard(A))
+			var/obj/item/card/credit/bank_card = A
+			if(bank_card.registered_account?.account_holder == oldname)
+				bank_card.registered_account.account_holder = newname
+				if(!search_id || !search_pda)
+					break
+				search_creditcard = 0
+
+		else if(search_pda && istype(A, /obj/item/pda))
 			var/obj/item/pda/PDA = A
 			if(PDA.owner == oldname)
 				PDA.owner = newname
 				PDA.update_label()
-				if(!search_id)
+				if(!search_id || !search_creditcard)
 					break
 				search_pda = 0
 
@@ -1309,6 +1321,9 @@
 		return FALSE
 
 	return TRUE
+
+/mob/proc/get_creditcard(hand_first)
+	return
 
 /**
  * Get the mob VV dropdown extras

@@ -3,6 +3,7 @@
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	eatsound = 'code/modules/wod13/sounds/eat.ogg'
+	custom_price = 3
 	var/biten = FALSE
 
 /obj/item/food/vampire/proc/got_biten()
@@ -24,6 +25,7 @@
 	name = "donut"
 	desc = "Goes great with robust coffee."
 	icon_state = "donut1"
+	custom_price = 1
 	bite_consumption = 5
 	tastes = list("donut" = 1)
 	foodtypes = JUNKFOOD | GRAIN | FRIED | SUGAR | BREAKFAST
@@ -197,6 +199,7 @@
 	icon_state = "colared"
 	icon = 'code/modules/wod13/items.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	custom_price = 2
 	isGlass = FALSE
 	list_reagents = list(/datum/reagent/consumable/space_cola = 100)
 	foodtype = SUGAR
@@ -217,6 +220,7 @@
 	name = "thaw club soda"
 	desc = "For your energy needs. Brought to you by King Breweries and Distilleries!"
 	icon_state = "soda"
+	custom_price = 1
 	list_reagents = list(/datum/reagent/consumable/monkey_energy = 50)
 	foodtype = SUGAR | JUNKFOOD
 
@@ -250,6 +254,7 @@
 	icon_state = "soda"
 	icon = 'code/modules/wod13/items.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	custom_price = 3
 	list_reagents = list(/datum/reagent/consumable/sodawater = 50)
 	foodtype = SUGAR
 

@@ -53,18 +53,6 @@
 		status_report = "Please insert your ID first."
 		playsound(loc, 'sound/machines/synth_no.ogg', 30 , TRUE)
 		return FALSE
-	if(!inserted_scan_id.registered_account.civilian_bounty)
-		status_report = "Please accept a new civilian bounty first."
-		playsound(loc, 'sound/machines/synth_no.ogg', 30 , TRUE)
-		return FALSE
-	status_report = "Civilian Bounty: "
-	for(var/atom/movable/AM in get_turf(pad))
-		if(AM == pad)
-			continue
-		if(inserted_scan_id.registered_account.civilian_bounty.applies_to(AM))
-			status_report += "Target Applicable."
-			playsound(loc, 'sound/machines/synth_yes.ogg', 30 , TRUE)
-			return
 	status_report += "Not Applicable."
 	playsound(loc, 'sound/machines/synth_no.ogg', 30 , TRUE)
 

@@ -328,6 +328,13 @@
 	color = "#99620e"
 
 //===========================CLINIC KEYS===========================
+
+/obj/item/vamp/keys/mortician // same as clinic but here for future stuff
+	name = "Mortician keys"
+	accesslocks = list(
+		"clinic"
+	)
+
 /obj/item/vamp/keys/clinic
 	name = "Clinic keys"
 	accesslocks = list(
@@ -387,6 +394,7 @@
 		"laundromat"
 	)
 
+//GAROU KEYS
 /obj/item/vamp/keys/techstore
 	name = "Tech Store keys"
 	accesslocks = list(
@@ -407,6 +415,8 @@
 		"coggie"
 	)
 	color = "#339933"
+
+//JOB KEYS
 
 /obj/item/vamp/keys/graveyard
 	name = "Graveyard keys"

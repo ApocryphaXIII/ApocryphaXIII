@@ -222,6 +222,7 @@ export const DmTarget = new Juke.Target({
     'icons/**',
     'interface/**',
     'sound/**',
+    'modular_tfn/**',
     'tgui/public/tgui.html',
     `${DME_NAME}.dme`,
     NamedVersionFile,
@@ -502,3 +503,17 @@ export const TgsTarget = new Juke.Target({
 
 
 export default TGS_MODE ? TgsTarget : BuildTarget;
+
+export const TguiPrettierFix = new Juke.Target({
+  dependsOn: [YarnTarget],
+  executes: () => yarn('tgui:prettier-fix'),
+});
+
+export const TguiEslintFix = new Juke.Target({
+  dependsOn: [YarnTarget],
+  executes: () => yarn('tgui:eslint-fix'),
+});
+
+export const TguiFix = new Juke.Target({
+  dependsOn: [TguiPrettierFix, TguiEslintFix],
+});

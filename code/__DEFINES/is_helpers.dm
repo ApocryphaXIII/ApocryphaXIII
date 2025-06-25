@@ -93,6 +93,12 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define islupus(A) (istype(A, /mob/living/carbon/werewolf/lupus))
 
+#define iscorax(A) (istype(A, /mob/living/carbon/werewolf/corax))
+
+#define iscorvid(A) (istype(A, /mob/living/carbon/werewolf/lupus/corvid))
+
+#define iscoraxcrinos(A) (istype(A, /mob/living/carbon/werewolf/corax/corax_crinos)) //not sure if necessary, not taking chances
+
 #define isalien(A) (istype(A, /mob/living/carbon/alien))
 
 #define islarva(A) (istype(A, /mob/living/carbon/alien/larva))
@@ -161,6 +167,8 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 //Misc mobs
 #define isobserver(A) (istype(A, /mob/dead/observer))
 
+#define isavatar(A) (istype(A, /mob/dead/observer/avatar))
+
 #define isdead(A) (istype(A, /mob/dead))
 
 #define isnewplayer(A) (istype(A, /mob/dead/new_player))
@@ -188,6 +196,8 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isidcard(I) (istype(I, /obj/item/card/id))
 
+#define is_creditcard(I) (istype(I, /obj/item/card/credit))
+
 #define isstructure(A) (istype(A, /obj/structure))
 
 #define ismachinery(A) (istype(A, /obj/machinery))
@@ -204,7 +214,7 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isclothing(A) (istype(A, /obj/item/clothing))
 
-#define iscash(A) (istype(A, /obj/item/coin) || istype(A, /obj/item/stack/spacecash) || istype(A, /obj/item/holochip))
+#define iscash(A) (istype(A, /obj/item/coin) || istype(A, /obj/item/holochip) || istype(A, /obj/item/stack/dollar))
 
 #define isbodypart(A) (istype(A, /obj/item/bodypart))
 

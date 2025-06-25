@@ -20,7 +20,6 @@
 	has_gravity = STANDARD_GRAVITY
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	wall_rating = VERY_HIGH_WALL_RATING
-	var/music
 	var/upper = TRUE
 
 
@@ -38,7 +37,7 @@
 /area/vtm/interior
 	name = "Interior"
 	icon_state = "interior"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	wall_rating = HIGH_WALL_RATING
 
@@ -104,6 +103,7 @@
 /area/vtm/interior/police
 	name = "Police Station"
 	icon_state = "police"
+	ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -184,7 +184,7 @@
 	name = "Financial District"
 	icon_state = "financialdistrict"
 	ambience_index = AMBIENCE_CITY
-	music = /datum/vampiremusic/downtown
+	musictracks = list('code/modules/wod13/sounds/downtown.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -198,7 +198,7 @@
 	name = "Ghetto"
 	icon_state = "ghetto"
 	ambience_index = AMBIENCE_CITY
-	music = /datum/vampiremusic/downtown
+	musictracks = list('code/modules/wod13/sounds/downtown.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -209,13 +209,13 @@
 	name = "Pacific Heights"
 	icon_state = "pacificheights"
 	ambience_index = AMBIENCE_NATURE
-	music = /datum/vampiremusic/hollywood
+	musictracks = list('code/modules/wod13/sounds/hollywood.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/pacificheights/forest
 	name = "Pacific Heights Forest Outskirts"
-	music = /datum/vampiremusic/forest
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/pacificheights/old
@@ -228,7 +228,7 @@
 	name = "Chinatown"
 	icon_state = "chinatown"
 	ambience_index = AMBIENCE_CITY
-	music = /datum/vampiremusic/chinatown
+	musictracks = list('code/modules/wod13/sounds/chinatown.ogg')
 	upper = TRUE
 	wall_rating = LOW_WALL_RATING	//Kinda chinatown is part of asia and has some deeper connection?
 
@@ -236,7 +236,7 @@
 	name = "Fisherman's Wharf"
 	icon_state = "fishermanswharf"
 	ambience_index = AMBIENCE_CITY
-	music = /datum/vampiremusic/santamonica
+	musictracks = list('code/modules/wod13/sounds/santamonica.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -250,7 +250,10 @@
 	name = "Beach"
 	icon_state = "northbeach"
 	ambience_index = AMBIENCE_BEACH
-	music = /datum/vampiremusic/santamonica
+	//The waves dont really stop.
+	min_ambience_cooldown = 0
+	max_ambience_cooldown = 5 SECONDS
+	musictracks = list('code/modules/wod13/sounds/santamonica.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -258,14 +261,14 @@
 	name = "Union Square"
 	icon_state = "unionsquare"
 	ambience_index = AMBIENCE_CITY
-	music = /datum/vampiremusic/downtown
+	musictracks = list('code/modules/wod13/sounds/downtown.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/interior/millennium_tower
 	name = "Millennium Tower F1"
 	icon_state = "millenniumtowerf1"
-	music = /datum/vampiremusic/prince
+	music_index = MUSIC_PRINCE
 	zone_type = "elysium"
 	fire_controled = TRUE
 
@@ -293,7 +296,7 @@
 /area/vtm/jazzclub
 	name = "Jazz Club"
 	icon_state = "camarilla"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	zone_type = "elysium"
 	fire_controled = TRUE
@@ -302,7 +305,7 @@
 /area/vtm/cabaret
 	name = "Siren's Cabaret"
 	icon_state = "melpominee"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -313,7 +316,7 @@
 /area/vtm/clinic
 	name = "Hospital"
 	icon_state = "clinic"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	yang_chi = 2
@@ -327,16 +330,16 @@
 /area/vtm/supply
 	name = "Supply Depot"
 	icon_state = "supply"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/anarch
 	name = "Bar"
 	icon_state = "anarch"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
-	music = /datum/vampiremusic/bar
+	musictracks = list('code/modules/wod13/sounds/naive.ogg')
 	zone_type = "elysium"
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -344,18 +347,26 @@
 /area/vtm/anarch/basement
 	name = "Bar - Basement"
 	icon_state = "anarch"
-	ambience_index = AMBIENCE_INTERIOR
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
-	music = /datum/vampiremusic/bar
+	musictracks = list('code/modules/wod13/sounds/naive.ogg')
 	zone_type = "elysium"
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/anarch/garage
+	name = "Garage"
+	icon_state = "anarch"
+	//ambience_index = AMBIENCE_OFFICE
+	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/hotel
 	name = "Hotel"
 	icon_state = "hotel"
-	music = /datum/vampiremusic/bar
-	ambience_index = AMBIENCE_INTERIOR
+	musictracks = list('code/modules/wod13/sounds/naive.ogg')
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -363,15 +374,15 @@
 /area/vtm/church
 	name = "Church Grounds"
 	icon_state = "church"
-	music = /datum/vampiremusic/forest
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
 	upper = TRUE
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/church/interior
 	name = "Church - Interior"
 	icon_state = "church"
-	music = /datum/vampiremusic/church
-	ambience_index = AMBIENCE_INTERIOR
+	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
@@ -380,8 +391,8 @@
 	name = "Church - Backrooms"
 	icon_state = "church"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/church
-	ambience_index = AMBIENCE_INTERIOR
+	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
@@ -390,8 +401,8 @@
 	name = "Church - Restricted Floor"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/church
-	ambience_index = AMBIENCE_INTERIOR
+	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
+	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	yang_chi = 0
@@ -401,8 +412,8 @@
 /area/vtm/graveyard
 	name = "Graveyard"
 	icon_state = "graveyard"
-	ambience_index = AMBIENCE_INTERIOR
-	music = /datum/vampiremusic/hollywood
+	//ambience_index = AMBIENCE_OFFICE
+	musictracks = list('code/modules/wod13/sounds/hollywood.ogg')
 	upper = TRUE
 	zone_type = "battle"
 	yang_chi = 0
@@ -421,7 +432,7 @@
 	name = "Park"
 	icon_state = "park"
 	ambience_index = AMBIENCE_NATURE
-	music = /datum/vampiremusic/downtown
+	musictracks = list('code/modules/wod13/sounds/downtown.ogg')
 	upper = TRUE
 	yang_chi = 2
 	yin_chi = 0
@@ -431,7 +442,7 @@
 	name = "Sewer"
 	icon_state = "sewer"
 	ambience_index = AMBIENCE_SEWER
-	music = /datum/vampiremusic/sewer
+	musictracks = list('code/modules/wod13/sounds/enterlair.ogg')
 	upper = FALSE
 	zone_type = "battle"
 	yang_chi = 0
@@ -442,7 +453,7 @@
 	name = "Underground Town"
 	icon_state = "hotel"
 	upper = FALSE
-	music = /datum/vampiremusic/nosferatu
+	musictracks = list('code/modules/wod13/sounds/nosferatu.ogg')
 	zone_type = "elysium"
 	yang_chi = 0
 	yin_chi = 2
@@ -451,8 +462,8 @@
 /area/vtm/sewer/cappadocian
 	name = "Cappadocian Crypt"
 	icon_state = "graveyard"
-	ambience_index = AMBIENCE_INTERIOR
-	music = /datum/vampiremusic/hollywood
+	//ambience_index = AMBIENCE_OFFICE
+	musictracks = list('code/modules/wod13/sounds/hollywood.ogg')
 	upper = FALSE
 	zone_type = "elysium"
 	yang_chi = 0
@@ -465,7 +476,7 @@
 	icon_state = "park"
 	upper = TRUE
 	zone_type = "battle"
-	music = /datum/vampiremusic/forest
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
 	yang_chi = 2
 	yin_chi = 0
 	wall_rating = LOW_WALL_RATING	//for werewolves in future
@@ -475,16 +486,36 @@
 	icon_state = "supply"
 	upper = FALSE
 	zone_type = "battle"
-	music = /datum/vampiremusic/forest
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/interior/endron_facility
-	name = "Endron Facility"
+	name = "Endron Headquarters"
+	icon_state = "supply"
+	zone_type = "masquerade"
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	fire_controled = TRUE
+	yang_chi = 0
+	yin_chi = 1
+	wall_rating = LOW_WALL_RATING
+
+/area/vtm/interior/endron_facility/helipad
+	name = "Endron Helipad"
 	icon_state = "supply"
 	zone_type = "battle"
-	music = /datum/vampiremusic/forest
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
 	fire_controled = FALSE
+	yang_chi = 0
+	yin_chi = 1
+	wall_rating = LOW_WALL_RATING
+
+/area/vtm/interior/endron_facility/forest
+	name = "Endron Forest Worksite"
+	icon_state = "supply"
+	zone_type = "battle"
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 1
 	wall_rating = LOW_WALL_RATING
@@ -493,8 +524,8 @@
 	name = "Endron Facility Restricted"
 	icon_state = "graveyard"
 	zone_type = "battle"
-	music = /datum/vampiremusic/forest
-	fire_controled = FALSE
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 2
 	wall_rating = LOW_WALL_RATING
@@ -503,8 +534,8 @@
 	name = "Wyrm Corruption"
 	icon_state = "graveyard"
 	zone_type = "battle"
-	music = /datum/vampiremusic/forest
-	fire_controled = FALSE
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 2
 	wall_rating = LOW_WALL_RATING
@@ -516,21 +547,21 @@
 /area/vtm/interior/cog/pantry
 	name = "Earth's Bounty Food Pantry"
 	icon_state = "cog_pantry"
-	music = /datum/vampiremusic/forest
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/interior/cog/caern
 	name = "Children of Gaia Caern"
 	icon_state = "cog_caern"
-	music = /datum/vampiremusic/forest
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
 	zone_type = "elysium"
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/interior/gnawer
 	name = "Bone Gnawer Shrine"
 	icon_state = "gnawer"
-	music = /datum/vampiremusic/forest
+	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
 	wall_rating = LOW_WALL_RATING
 
 //MISC AND CONTINUED AREAS
@@ -540,7 +571,7 @@
 	ambience_index = AMBIENCE_NATURE
 	upper = FALSE
 	zone_type = "battle"
-	music = /datum/vampiremusic/penumbra
+	musictracks = list('code/modules/wod13/sounds/penumbra.ogg')
 	fire_controled = FALSE
 	wall_rating = LOW_WALL_RATING
 
@@ -561,14 +592,14 @@
 /area/vtm/interior/theatre
 	name = "Theatre"
 	icon_state = "theatre"
-	music = /datum/vampiremusic/theatre
+	musictracks = list('code/modules/wod13/sounds/theatre.ogg')
 	zone_type = "elysium"
 	fire_controled = TRUE
 
 /area/vtm/interior/oldchurch
 	name = "Old Seaside Church"
 	icon_state = "church"
-	music = /datum/vampiremusic/church
+	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
 
@@ -576,7 +607,7 @@
 	name = "Historical Museum"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/prince
+	music_index = MUSIC_PRINCE
 	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 2
@@ -586,7 +617,7 @@
 	name = "Antique Shop"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/prince
+	music_index = MUSIC_PRINCE
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING // something-something safe house to the Shadowlands/Enoch?
 
@@ -594,7 +625,7 @@
 	name = "Alcoholics Anonymous"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/prince
+	music_index = MUSIC_PRINCE
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING // Holy "All hail Satan" Batman!
 
@@ -602,14 +633,14 @@
 	name = "Veterinary Clinic"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/prince
+	music_index = MUSIC_PRINCE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/interior/banu
 	name = "Coffee House"
 	icon_state = "old_clan_tzimisce"
-	music = /datum/vampiremusic/prince
+	music_index = MUSIC_PRINCE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -617,7 +648,7 @@
 	name = "Coffee House Staff Section"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/prince
+	music_index = MUSIC_PRINCE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -625,14 +656,14 @@
 	name = "Clan Tzimisce Manor"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/prince
+	music_index = MUSIC_PRINCE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/sewer/tzimisce_sanctum
 	name = "Clan Tzimisce Sanctum"
 	icon_state = "old_clan_sanctum"
 	zone_type = "elysium"
-	music = /datum/vampiremusic/nosferatu
+	musictracks = list('code/modules/wod13/sounds/nosferatu.ogg')
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/interior/setite
@@ -648,72 +679,8 @@
 	yang_chi = 0
 	yin_chi = 2
 
-//MUSIC
-
-/datum/vampiremusic
-	var/length = 30 SECONDS
-	var/sound
-	var/forced = FALSE
-
-/datum/vampiremusic/forest
-	length = 389 SECONDS
-	sound = 'code/modules/wod13/sounds/night_ambience.ogg'
-
-/datum/vampiremusic/penumbra
-	length = 336 SECONDS
-	sound = 'code/modules/wod13/sounds/penumbra.ogg'
-
-/datum/vampiremusic/santamonica
-	length = 304 SECONDS
-	sound = 'code/modules/wod13/sounds/santamonica.ogg'
-
-/datum/vampiremusic/downtown
-	length = 259 SECONDS
-	sound = 'code/modules/wod13/sounds/downtown.ogg'
-
-/datum/vampiremusic/sewer
-	length = 134 SECONDS
-	sound = 'code/modules/wod13/sounds/enterlair.ogg'
-	forced = TRUE
-
-/datum/vampiremusic/hollywood
-	length = 337 SECONDS
-	sound = 'code/modules/wod13/sounds/hollywood.ogg'
-
-/datum/vampiremusic/chinatown
-	length = 369 SECONDS
-	sound = 'code/modules/wod13/sounds/chinatown.ogg'
-
-/datum/vampiremusic/prince
-	length = 132 SECONDS
-	sound = 'code/modules/wod13/sounds/prince.ogg'
-	forced = TRUE
-
-/datum/vampiremusic/church
-	length = 91 SECONDS
-	sound = 'code/modules/wod13/sounds/hahihaho.ogg'
-	forced = TRUE
-
-/datum/vampiremusic/bar
-	length = 497 SECONDS
-	sound = 'code/modules/wod13/sounds/naive.ogg'
-	forced = TRUE
-
-/datum/vampiremusic/theatre
-	length = 93 SECONDS
-	sound = 'code/modules/wod13/sounds/theatre.ogg'
-	forced = TRUE
-
-/datum/vampiremusic/nosferatu
-	length = 181 SECONDS
-	sound = 'code/modules/wod13/sounds/nosferatu.ogg'
-	forced = TRUE
-
-/datum/vampiremusic/elevator
-	length = 157 SECONDS
-	sound = 'code/modules/wod13/sounds/lift.ogg'
-	forced = TRUE
-
+#warn fully remove once refactor done
+/*
 /mob/living/proc/handle_vampire_music()
 	if(!client)
 		return
@@ -739,7 +706,7 @@
 			if(iskindred(src))
 				var/mob/living/carbon/human/H = src
 				if(H.clane)
-					if(H.clane.name == "Daughters of Cacophony")
+					if(H.clane.name == CLAN_DAUGHTERS_OF_CACOPHONY)
 						cacophony = FALSE //This Variable was TRUE, which makes the DoC music loop play.
 
 			if(!cacophony)
@@ -774,6 +741,7 @@
 					wait_for_music = 1740
 					client << sound('code/modules/wod13/sounds/daughters.ogg', 0, 0, CHANNEL_LOBBYMUSIC, 5)
 					last_vampire_ambience = world.time
+*/
 
 #undef VERY_HIGH_WALL_RATING
 #undef HIGH_WALL_RATING

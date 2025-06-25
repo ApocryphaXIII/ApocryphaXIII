@@ -231,40 +231,6 @@
 	. = ..()
 	icon_state = "rack[rand(1, 5)]"
 
-/obj/structure/trashcan
-	name = "trash can"
-	desc = "Holds garbage inside."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "garbage"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-	density = TRUE
-
-/obj/structure/trashcan/Initialize()
-	. = ..()
-	if(prob(25))
-		icon_state = "garbage_open"
-	if(GLOB.winter)
-		if(istype(get_area(src), /area/vtm))
-			var/area/vtm/V = get_area(src)
-			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
-/obj/structure/trashbag
-	name = "trash bag"
-	desc = "Holds garbage inside."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "garbage1"
-	anchored = TRUE
-
-/obj/structure/trashbag/Initialize()
-	. = ..()
-	var/garbagestate = rand(1, 9)
-	if(garbagestate > 6)
-		density = TRUE
-	icon_state = "garbage[garbagestate]"
-
 /obj/structure/hotelsign
 	name = "sign"
 	desc = "It says H O T E L."
@@ -717,8 +683,8 @@
 /obj/structure/fuelstation/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/stack/dollar))
 		var/obj/item/stack/dollar/D = I
-		stored_money += D.amount
-		to_chat(user, "<span class='notice'>You insert [D.amount] dollars into [src].</span>")
+		stored_money += D.get_item_credit_value()
+		to_chat(user, "<span class='notice'>You insert [D.get_item_credit_value()] dollars into [src].</span>")
 		qdel(I)
 		say("Payment received.")
 	if(istype(I, /obj/item/gas_can))
@@ -732,52 +698,12 @@
 			to_chat(user, "<span class='notice'>You fill [I].</span>")
 			say("Gas filled.")
 
-/obj/structure/bloodextractor
-	name = "blood extractor"
-	desc = "Extract blood in packs."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "bloodextractor"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	density = TRUE
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-	var/last_extracted = 0
 
 /obj/structure/reagent_dispensers/cleaningfluid
 	name = "cleaning fluid tank"
 	desc = "A container filled with cleaning fluid."
 	reagent_id = /datum/reagent/space_cleaner
 	icon_state = "water"
-
-/mob/living/carbon/human/MouseDrop(atom/over_object)
-	. = ..()
-	if(istype(over_object, /obj/structure/bloodextractor))
-		if(get_dist(src, over_object) < 2)
-			var/obj/structure/bloodextractor/V = over_object
-			if(!buckled)
-				V.visible_message("<span class='warning'>Buckle [src] fist!</span>")
-			if(bloodpool < 2)
-				V.visible_message("<span class='warning'>[V] can't find enough blood in [src]!</span>")
-				return
-			if(iskindred(src))
-				if(bloodpool < 4)
-					V.visible_message("<span class='warning'>[V] can't find enough blood in [src]!</span>")
-					return
-			if(V.last_extracted+1200 > world.time)
-				V.visible_message("<span class='warning'>[V] isn't ready!</span>")
-				return
-			V.last_extracted = world.time
-			if(!iskindred(src))
-				if(HAS_TRAIT(src,TRAIT_POTENT_BLOOD))
-					new /obj/item/drinkable_bloodpack/elite(get_step(V, SOUTH))
-				else
-					new /obj/item/drinkable_bloodpack(get_step(V, SOUTH))
-				bloodpool = max(0, bloodpool-2)
-			else
-				new /obj/item/drinkable_bloodpack/vitae(get_step(V, SOUTH))
-				bloodpool = max(0, bloodpool-4)
-
 
 /obj/structure/rack/tacobell
 	name = "table"

@@ -15,20 +15,20 @@
 	can_be_shoved_into = TRUE
 
 	//Hair colour and style
-	var/hair_color = "000"
+	var/hair_color = "#000000"
 	var/hairstyle = "Bald"
 
 ///Colour used for the hair gradient.
-	var/grad_color = "000"
+	var/grad_color = "#000000"
 	///Style used for the hair gradient.
 	var/grad_style
 
 	//Facial hair colour and style
-	var/facial_hair_color = "000"
+	var/facial_hair_color = "#000000"
 	var/facial_hairstyle = "Shaved"
 
 	//Eye colour
-	var/eye_color = "000"
+	var/eye_color = "#000000"
 
 	var/skin_tone = "caucasian1"	//Skin tone
 
@@ -41,17 +41,17 @@
 	var/chronological_age = 30
 
 	var/underwear = "Nude"	//Which underwear the player wants
-	var/underwear_color = "000"
+	var/underwear_color = "#000000"
 	var/undershirt = "Nude" //Which undershirt the player wants
 	var/socks = "Nude" //Which socks the player wants
 	var/backpack = DBACKPACK		//Which backpack type the player has chosen.
 	var/jumpsuit_style = PREF_SUIT		//suit/skirt
+	var/underwear_visibility = NONE ///Flag for showing/hiding underwear, toggleable by a verb
 
 	//Equipment slots
 	var/obj/item/clothing/wear_suit = null
 	var/obj/item/clothing/w_uniform = null
 	var/obj/item/belt = null
-	var/obj/item/wear_id = null
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
 	var/obj/item/s_store = null
@@ -69,7 +69,7 @@
 	var/lastpuke = 0
 	var/last_fire_update
 	var/account_id
-	var/bank_id
+	var/bank_pin
 
 	var/hardcore_survival_score = 0
 	/// For agendered spessmen, which body type to use
@@ -89,8 +89,6 @@
 	var/datum/morality/morality_path
 
 	var/last_repainted_mark
-
-	//var/given_penis = FALSE
 
 	///Performs CPR on the target after a delay. //[Lucia] what does this mean?
 	var/last_cpr_exp = 0
@@ -126,7 +124,6 @@
 
 	bloodquality = 2
 
-	var/soul_state = SOUL_PRESENT
 
 	var/can_be_embraced = TRUE
 

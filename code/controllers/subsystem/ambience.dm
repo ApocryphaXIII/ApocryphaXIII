@@ -70,8 +70,13 @@ SUBSYSTEM_DEF(ambience)
 /area/proc/play_music(mob/M, sound/override_sound, volume = 27)
 	var/sound/new_sound = override_sound || pick(musictracks)
 
+	//An admin played song is going or recently finished
+	if(!COOLDOWN_FINISHED(GLOB, web_sound_cooldown))
+		return COOLDOWN_TIMELEFT(GLOB, web_sound_cooldown) + (30 SECONDS)
+
 	if(!new_sound)
 		return 30 SECONDS
+
 	new_sound = sound(new_sound, repeat = 0, wait = 0, volume = volume, channel = CHANNEL_MUSIC_TRACKS)
 
 	SEND_SOUND(M, new_sound)

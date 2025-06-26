@@ -946,11 +946,12 @@
 		user.visible_message(span_notice("[user] strikes a [lowertext(choice)]!"), span_notice("You strike your target!"))
 		playsound(src, 'sound/items/poolball_strike.ogg', 75)
 
+		var/desired_modifer = SSroll.storyteller_roll(user.get_total_dexterity(), 4, FALSE, list(user))
+
 		var/attempts = 0
-		//21 is mostly a magic number to prevent a infinite loop if i wrote bad code
-		while(total_balls() && (attempts <= 21))
+		while(total_balls() && (attempts <= 10))
 			attempts++
-			sink_ball(user, choice)
+			sink_ball(user, choice, desired_modifer)
 			if(prob(80))
 				break
 	else
@@ -965,9 +966,9 @@
 		#warn refactor icon_state stuff into a proc
 		icon_state = "billiard2"
 
-/obj/structure/billiard_table/proc/sink_ball(mob/living/user, target_ball, sunk_ball)
+/obj/structure/billiard_table/proc/sink_ball(mob/living/user, target_ball, desired_modifer, sunk_ball)
 	if(!sunk_ball)
-		sunk_ball = random_ball(target_ball)
+		sunk_ball = random_ball(target_ball, desired_modifer)
 
 	if(!balls_left[sunk_ball] || balls_left[sunk_ball] <= 0)
 		user.visible_message(span_warning("[user] MISSED"), span_warning("You missed"))
@@ -981,11 +982,11 @@
 	icon_state = "billiard3"
 
 #warn tie this into stats for flavor
-/obj/structure/billiard_table/proc/random_ball(desired_ball)
+/obj/structure/billiard_table/proc/random_ball(desired_ball, desired_modifer = 2)
 	var/list/ball_chances = balls_left.Copy()
 	if(balls_left[desired_ball] > 0)
 		//Higher chance to sink the ball type your aiming for.
-		ball_chances[desired_ball] = ball_chances[desired_ball] * 2
+		ball_chances[desired_ball] = ball_chances[desired_ball] * desired_modifer
 	return pickweight(ball_chances)
 
 /obj/structure/billiard_table/proc/total_balls()

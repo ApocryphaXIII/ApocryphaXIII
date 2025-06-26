@@ -4568,7 +4568,7 @@
 /turf/closed/wall/vampwall/rich,
 /area/vtm/interior/endron_facility)
 "biB" = (
-/obj/structure/billiard_table,
+/obj/structure/table/billiard,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police/upstairs)
 "biH" = (
@@ -32811,6 +32811,11 @@
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower/f2)
+"iQN" = (
+/obj/structure/table/billiard,
+/obj/item/pool_cue,
+/turf/open/floor/carpet/blue,
+/area/vtm/anarch)
 "iQQ" = (
 /obj/machinery/light/blacklight{
 	dir = 8
@@ -52473,7 +52478,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/chinatown)
 "oeX" = (
-/obj/structure/billiard_table,
+/obj/structure/table/billiard,
 /turf/open/floor/carpet/blue,
 /area/vtm/anarch)
 "off" = (
@@ -61438,7 +61443,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/theatre)
 "qwh" = (
-/obj/structure/billiard_table,
+/obj/structure/table/billiard,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower/f2)
 "qwn" = (
@@ -62771,6 +62776,12 @@
 /obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
+"qNX" = (
+/obj/structure/table/billiard,
+/obj/item/pool_cue,
+/obj/item/pool_cue,
+/turf/open/floor/carpet/blue,
+/area/vtm/anarch)
 "qOh" = (
 /obj/structure/vampdoor/reinf{
 	dir = 1;
@@ -75466,7 +75477,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch)
 "uiK" = (
-/obj/structure/billiard_table{
+/obj/structure/table/billiard{
 	density = 0;
 	pixel_x = -15
 	},
@@ -240001,7 +240012,7 @@ qtE
 qtE
 ofj
 qtg
-oeX
+iQN
 qtg
 qtg
 oeX
@@ -240772,10 +240783,10 @@ mbo
 mbo
 fqy
 qtg
-oeX
+qNX
 qtg
 qtg
-oeX
+iQN
 qtg
 pMC
 fkk

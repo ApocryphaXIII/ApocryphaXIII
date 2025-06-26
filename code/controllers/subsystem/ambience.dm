@@ -57,8 +57,8 @@ SUBSYSTEM_DEF(ambience)
 /area/proc/play_ambience(mob/M, sound/override_sound, volume = 27)
 	var/sound/new_sound = override_sound || pick(ambientsounds)
 
-	if(!new_sound) //We didnt come up with a sound, try again in 10 seconds
-		return 10 SECONDS
+	if(!new_sound) //We didnt come up with a sound, try again in 30 seconds
+		return 30 SECONDS
 	new_sound = sound(new_sound, repeat = 0, wait = 0, volume = volume, channel = CHANNEL_AMBIENCE)
 
 	SEND_SOUND(M, new_sound)
@@ -70,12 +70,11 @@ SUBSYSTEM_DEF(ambience)
 /area/proc/play_music(mob/M, sound/override_sound, volume = 27)
 	var/sound/new_sound = override_sound || pick(musictracks)
 
-	if(!new_sound) //We didnt come up with a sound, try again in 10 seconds
-		return 10 SECONDS
+	if(!new_sound)
+		return 30 SECONDS
 	new_sound = sound(new_sound, repeat = 0, wait = 0, volume = volume, channel = CHANNEL_MUSIC_TRACKS)
 
 	SEND_SOUND(M, new_sound)
 
 	var/sound_length = ceil(SSsound_cache.get_sound_length(new_sound.file))
-#warn add equivelents to min_ambience_cooldown and max_ambience_cooldown mabye?
-	return rand(2 MINUTES + sound_length, 3 MINUTES + sound_length)
+	return rand(min_music_cooldown + sound_length, max_music_cooldown + sound_length)

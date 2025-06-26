@@ -56,6 +56,7 @@
 #define AMBIENCE_SEWER "sewer"
 #define AMBIENCE_OFFICE "interior"
 
+#define MUSIC_CITY "city"
 #define MUSIC_PRINCE "prince"
 
 //default byond sound environments

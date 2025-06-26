@@ -184,7 +184,7 @@
 	name = "Financial District"
 	icon_state = "financialdistrict"
 	ambience_index = AMBIENCE_CITY
-	musictracks = list('code/modules/wod13/sounds/downtown.ogg')
+	music_index = MUSIC_CITY
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -198,7 +198,7 @@
 	name = "Ghetto"
 	icon_state = "ghetto"
 	ambience_index = AMBIENCE_CITY
-	musictracks = list('code/modules/wod13/sounds/downtown.ogg')
+	music_index = MUSIC_CITY
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -261,7 +261,7 @@
 	name = "Union Square"
 	icon_state = "unionsquare"
 	ambience_index = AMBIENCE_CITY
-	musictracks = list('code/modules/wod13/sounds/downtown.ogg')
+	music_index = MUSIC_CITY
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -391,8 +391,6 @@
 	name = "Church - Backrooms"
 	icon_state = "church"
 	zone_type = "elysium"
-	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
@@ -401,8 +399,6 @@
 	name = "Church - Restricted Floor"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
-	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	yang_chi = 0
@@ -432,7 +428,7 @@
 	name = "Park"
 	icon_state = "park"
 	ambience_index = AMBIENCE_NATURE
-	musictracks = list('code/modules/wod13/sounds/downtown.ogg')
+	music_index = MUSIC_CITY
 	upper = TRUE
 	yang_chi = 2
 	yin_chi = 0
@@ -678,70 +674,6 @@
 	zone_type = "elysium"
 	yang_chi = 0
 	yin_chi = 2
-
-#warn fully remove once refactor done
-/*
-/mob/living/proc/handle_vampire_music()
-	if(!client)
-		return
-	if(stat == DEAD)
-		return
-
-	var/turf/T
-
-	if(!isturf(loc))
-		var/atom/A = loc
-		if(!isturf(A.loc))
-			return
-		T = A.loc
-	else
-		T = loc
-
-	if(istype(get_area(T), /area/vtm))
-		var/area/vtm/VTM = get_area(T)
-		if(VTM)
-
-			var/cacophony = FALSE
-
-			if(iskindred(src))
-				var/mob/living/carbon/human/H = src
-				if(H.clane)
-					if(H.clane.name == CLAN_DAUGHTERS_OF_CACOPHONY)
-						cacophony = FALSE //This Variable was TRUE, which makes the DoC music loop play.
-
-			if(!cacophony)
-				if(!(client && (client.prefs.toggles & SOUND_AMBIENCE)))
-					return
-
-				if(!VTM.music)
-					client << sound(null, 0, 0, CHANNEL_LOBBYMUSIC)
-					last_vampire_ambience = 0
-					wait_for_music = 0
-					return
-				var/datum/vampiremusic/VMPMSC = new VTM.music()
-				if(VMPMSC.forced && wait_for_music != VMPMSC.length)
-					client << sound(null, 0, 0, CHANNEL_LOBBYMUSIC)
-					last_vampire_ambience = 0
-					wait_for_music = 0
-					wasforced = TRUE
-
-				else if(wasforced && wait_for_music != VMPMSC.length)
-					client << sound(null, 0, 0, CHANNEL_LOBBYMUSIC)
-					last_vampire_ambience = 0
-					wait_for_music = 0
-					wasforced = FALSE
-
-				if(last_vampire_ambience+wait_for_music+10 < world.time)
-					wait_for_music = VMPMSC.length
-					client << sound(VMPMSC.sound, 0, 0, CHANNEL_LOBBYMUSIC, 10)
-					last_vampire_ambience = world.time
-				qdel(VMPMSC)
-			else
-				if(last_vampire_ambience+wait_for_music+10 < world.time)
-					wait_for_music = 1740
-					client << sound('code/modules/wod13/sounds/daughters.ogg', 0, 0, CHANNEL_LOBBYMUSIC, 5)
-					last_vampire_ambience = world.time
-*/
 
 #undef VERY_HIGH_WALL_RATING
 #undef HIGH_WALL_RATING

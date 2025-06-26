@@ -57,6 +57,9 @@
 #define AMBIENCE_OFFICE "interior"
 
 #define MUSIC_CITY "city"
+// Currently used as the track for any werewolf owned space
+#define MUSIC_FOREST "forest"
+#define MUSIC_CHURCH "church"
 #define MUSIC_PRINCE "prince"
 
 //default byond sound environments

@@ -215,7 +215,7 @@
 
 /area/vtm/pacificheights/forest
 	name = "Pacific Heights Forest Outskirts"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/pacificheights/old
@@ -374,14 +374,14 @@
 /area/vtm/church
 	name = "Church Grounds"
 	icon_state = "church"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	upper = TRUE
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/church/interior
 	name = "Church - Interior"
 	icon_state = "church"
-	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
+	music_index = MUSIC_CHURCH
 	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
@@ -472,7 +472,7 @@
 	icon_state = "park"
 	upper = TRUE
 	zone_type = "battle"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	yang_chi = 2
 	yin_chi = 0
 	wall_rating = LOW_WALL_RATING	//for werewolves in future
@@ -482,7 +482,7 @@
 	icon_state = "supply"
 	upper = FALSE
 	zone_type = "battle"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
 
@@ -490,7 +490,7 @@
 	name = "Endron Headquarters"
 	icon_state = "supply"
 	zone_type = "masquerade"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 1
@@ -500,7 +500,7 @@
 	name = "Endron Helipad"
 	icon_state = "supply"
 	zone_type = "battle"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	fire_controled = FALSE
 	yang_chi = 0
 	yin_chi = 1
@@ -510,7 +510,7 @@
 	name = "Endron Forest Worksite"
 	icon_state = "supply"
 	zone_type = "battle"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 1
@@ -520,7 +520,7 @@
 	name = "Endron Facility Restricted"
 	icon_state = "graveyard"
 	zone_type = "battle"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 2
@@ -530,7 +530,7 @@
 	name = "Wyrm Corruption"
 	icon_state = "graveyard"
 	zone_type = "battle"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	fire_controled = TRUE
 	yang_chi = 0
 	yin_chi = 2
@@ -543,21 +543,21 @@
 /area/vtm/interior/cog/pantry
 	name = "Earth's Bounty Food Pantry"
 	icon_state = "cog_pantry"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/interior/cog/caern
 	name = "Children of Gaia Caern"
 	icon_state = "cog_caern"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	zone_type = "elysium"
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/interior/gnawer
 	name = "Bone Gnawer Shrine"
 	icon_state = "gnawer"
-	musictracks = list('code/modules/wod13/sounds/night_ambience.ogg')
+	music_index = MUSIC_FOREST
 	wall_rating = LOW_WALL_RATING
 
 //MISC AND CONTINUED AREAS
@@ -595,7 +595,7 @@
 /area/vtm/interior/oldchurch
 	name = "Old Seaside Church"
 	icon_state = "church"
-	musictracks = list('code/modules/wod13/sounds/hahihaho.ogg')
+	music_index = MUSIC_CHURCH
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
 

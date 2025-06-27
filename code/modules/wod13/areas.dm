@@ -236,7 +236,7 @@
 	name = "Fisherman's Wharf"
 	icon_state = "fishermanswharf"
 	ambience_index = AMBIENCE_CITY
-	musictracks = list('sound/musictracks/santamonica.ogg')
+	music_index = MUSIC_SANTAMONICA
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -253,7 +253,7 @@
 	//The waves dont really stop.
 	min_ambience_cooldown = 0
 	max_ambience_cooldown = 5 SECONDS
-	musictracks = list('sound/musictracks/santamonica.ogg')
+	music_index = MUSIC_SANTAMONICA
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -409,7 +409,7 @@
 	name = "Graveyard"
 	icon_state = "graveyard"
 	//ambience_index = AMBIENCE_OFFICE
-	music_index = MUSIC_HOLLYWOOD
+	musictracks = list('sound/musictracks/infected_warehouse.ogg')
 	upper = TRUE
 	zone_type = "battle"
 	yang_chi = 0
@@ -419,6 +419,7 @@
 /area/vtm/graveyard/interior
 	name = "Graveyard Interior"
 	icon_state = "interior"
+	musictracks = list('sound/musictracks/enterlair.ogg')
 	upper = FALSE
 	zone_type = "battle"
 	yang_chi = 0
@@ -438,7 +439,7 @@
 	name = "Sewer"
 	icon_state = "sewer"
 	ambience_index = AMBIENCE_SEWER
-	musictracks = list('sound/musictracks/enterlair.ogg')
+	musictracks = list('sound/musictracks/enterlair.ogg', 'sound/musictracks/infected_warehouse.ogg')
 	upper = FALSE
 	zone_type = "battle"
 	yang_chi = 0

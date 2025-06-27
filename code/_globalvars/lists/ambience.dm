@@ -114,10 +114,11 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	))
 
 GLOBAL_LIST_INIT(music_assoc,list(
-	MUSIC_CITY = list('sound/musictracks/downtown.ogg'),
-	MUSIC_FOREST = list('sound/musictracks/night_ambience.ogg'),
+	MUSIC_CITY = list('sound/musictracks/downtown.ogg', 'sound/musictracks/downtown_alt.ogg', 'sound/musictracks/what_comes_next.ogg'),
+	MUSIC_FOREST = list('sound/musictracks/night_ambience.ogg', 'sound/musictracks/for_my_clan.ogg'),
 	MUSIC_CHURCH = list('sound/musictracks/hahihaho.ogg'),
 	MUSIC_PRINCE = list('sound/musictracks/prince.ogg'),
 	MUSIC_BAR = list('sound/musictracks/naive.ogg'),
-	MUSIC_HOLLYWOOD = list('sound/musictracks/hollywood.ogg')
+	MUSIC_HOLLYWOOD = list('sound/musictracks/hollywood.ogg', 'sound/musictracks/open_season.ogg', 'sound/musictracks/is_it_all_worth_it.ogg'),
+	MUSIC_SANTAMONICA = list('sound/musictracks/santamonica.ogg')
 	))

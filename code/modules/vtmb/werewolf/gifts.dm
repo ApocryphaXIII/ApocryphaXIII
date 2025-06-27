@@ -238,11 +238,11 @@
 	. = ..()
 	if(allowed_to_proceed)
 		if(HAS_TRAIT(owner, TRAIT_SCENTTRUEFORM))
-			REMOVE_TRAIT(owner, TRAIT_SCENTTRUEFORM, src)
+			REMOVE_TRAIT(owner, TRAIT_SCENTTRUEFORM, REF(src))
 			to_chat(owner, "<span class='notice'>You allow the essence of the spirit to leave your senses.</span>")
 
 		else
-			ADD_TRAIT(owner, TRAIT_SCENTTRUEFORM, src)
+			ADD_TRAIT(owner, TRAIT_SCENTTRUEFORM, REF(src))
 			to_chat(owner, "<span class='notice'>Your nose gains a clarity for the supernal around you...</span>")
 
 

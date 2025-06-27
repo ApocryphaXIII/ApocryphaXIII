@@ -121,5 +121,5 @@ GLOBAL_LIST_INIT(music_assoc,list(
 	MUSIC_BAR = list('sound/musictracks/naive.ogg'),
 	MUSIC_HOLLYWOOD = list('sound/musictracks/hollywood.ogg', 'sound/musictracks/open_season.ogg', 'sound/musictracks/is_it_all_worth_it.ogg'),
 	MUSIC_SANTAMONICA = list('sound/musictracks/santamonica.ogg'),
-	MUSIC_SAFE = list('sound/musictracks/volition.ogg', 'sound/musictracks/safe_house.ogg')
+	MUSIC_SAFE = list('sound/musictracks/volition.ogg', 'sound/musictracks/safe_room.ogg')
 	))

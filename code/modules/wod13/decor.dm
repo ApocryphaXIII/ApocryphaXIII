@@ -942,7 +942,7 @@
 	. += "There are [balls_left[SOLID_BALL]] solid and [balls_left[STRIPED_BALL]] striped balls left."
 	if(!balls_left[EIGHT_BALL])
 		. += "The 8-Ball has been sunk."
-	. += span_notice("The game can be reset with Alt-Click")
+	. += span_notice("The game can be reset with <b>Alt-Click</b>")
 
 /obj/structure/table/billiard/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/pool_cue))

@@ -473,7 +473,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "bT" = (
-/obj/effect/spawner/randomarcade,
+/obj/effect/spawner/random/entertainment/arcade,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "bU" = (

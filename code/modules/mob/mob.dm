@@ -474,7 +474,7 @@
 /mob/proc/run_examinate(atom/examinify)
 	if(ishuman(src))
 		var/mob/living/carbon/human/ueban = src
-		if(!do_after(src, max(1, 15-ueban.mentality*3), src))
+		if(!do_after(src, max(1, 15-ueban.mentality*3), examinify, timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE)))
 			return
 
 	if(isturf(examinify) && !(sight & SEE_TURFS) && !(examinify in view(client ? client.view : world.view, src)))
@@ -562,13 +562,11 @@
 	return TRUE
 
 
-/mob/proc/clear_from_recent_examines(atom/A)
+/mob/proc/clear_from_recent_examines(ref_to_clear)
 	SIGNAL_HANDLER
-
 	if(!client)
 		return
-	UnregisterSignal(A, COMSIG_PARENT_QDELETING)
-	LAZYREMOVE(client.recent_examines, A)
+	LAZYREMOVE(client.recent_examines, ref_to_clear)
 
 /**
  * handle_eye_contact() is called when we examine() something. If we examine an alive mob with a mind who has examined us in the last second within 5 tiles, we make eye contact!
@@ -1192,6 +1190,7 @@
 	var/list/searching = GetAllContents()
 	var/search_id = 1
 	var/search_pda = 1
+	var/search_creditcard = 1
 
 	for(var/A in searching)
 		if( search_id && istype(A, /obj/item/card/id) )
@@ -1199,18 +1198,24 @@
 			if(ID.registered_name == oldname)
 				ID.registered_name = newname
 				ID.update_label()
-				if(ID.registered_account?.account_holder == oldname)
-					ID.registered_account.account_holder = newname
-				if(!search_pda)
+				if(!search_pda || !search_creditcard)
 					break
 				search_id = 0
 
-		else if( search_pda && istype(A, /obj/item/pda) )
+		if(search_creditcard && is_creditcard(A))
+			var/obj/item/card/credit/bank_card = A
+			if(bank_card.registered_account?.account_holder == oldname)
+				bank_card.registered_account.account_holder = newname
+				if(!search_id || !search_pda)
+					break
+				search_creditcard = 0
+
+		else if(search_pda && istype(A, /obj/item/pda))
 			var/obj/item/pda/PDA = A
 			if(PDA.owner == oldname)
 				PDA.owner = newname
 				PDA.update_label()
-				if(!search_id)
+				if(!search_id || !search_creditcard)
 					break
 				search_pda = 0
 
@@ -1316,6 +1321,9 @@
 		return FALSE
 
 	return TRUE
+
+/mob/proc/get_creditcard(hand_first)
+	return
 
 /**
  * Get the mob VV dropdown extras

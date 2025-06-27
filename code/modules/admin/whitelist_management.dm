@@ -1,6 +1,6 @@
 /datum/admins/proc/whitelist_panel(searchkey)
 	var/ckey
-	var/list/output = list("All whitelists<br>To edit, use the New/Delete Whitelist verbs.<br><a href='byond://?_src_=holder;[HrefToken()];newwhitelist=1'>New Whitelist</a><a href='byond://?_src_=holder;[HrefToken()];reloadwhitelists=1'>Reload Whitelists</a><hr>")
+	var/list/output = list("All whitelists<br>To edit, use the New/Delete Whitelist verbs.<br><a href='byond://?_src_=holder;[HrefToken()];whitelist_newckey=1'>New Connection Whitelist</a><br><a href='byond://?_src_=holder;[HrefToken()];newwhitelist=1'>New Whitelist</a><a href='byond://?_src_=holder;[HrefToken()];reloadwhitelists=1'>Reload Whitelists</a><hr>")
 	output += {"
 		<form method='get' action='byond://?src=[REF(src)]'>[HrefTokenFormField()]
 		<input type='hidden' name='src' value='[REF(src)]'>

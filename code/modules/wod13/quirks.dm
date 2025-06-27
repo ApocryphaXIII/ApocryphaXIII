@@ -65,7 +65,7 @@ Dancer
 	gain_text = "<span class='notice'>You feel more experienced in love.</span>"
 	lose_text = "<span class='warning'>You feel more clueless in love.</span>"
 	allowed_species = list("Vampire", "Kuei-Jin")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/quirk/tough_flesh
 	name = "Tough Flesh"
@@ -97,7 +97,7 @@ Dancer
 	gain_text = "<span class='warning'>You feel anxious about the way you feed.</span>"
 	lose_text = "<span class='warning'>You can feed normal again.</span>"
 	allowed_species = list("Vampire", "Kuei-Jin")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/quirk/lazy
 	name = "Lazy"
@@ -232,13 +232,13 @@ Dancer
 	if(!ishuman(quirk_holder))
 		return
 	var/mob/living/carbon/human/debtor = quirk_holder
-	for(var/datum/vtm_bank_account/account as anything in GLOB.bank_account_list)
-		if(debtor.bank_id != account.bank_id)
+	for(var/datum/bank_account/account as anything in GLOB.bank_account_list)
+		if(debtor.account_id != account.account_id)
 			continue
 		if(debtor.clane?.name == CLAN_VENTRUE)
-			account.balance = 5 // Extra loss of dignitas.
+			account.account_balance = 5 // Extra loss of dignitas.
 		else
-			account.balance = floor(account.balance * 0.5)
+			account.account_balance = floor(account.account_balance * 0.5)
 		break
 
 /datum/quirk/messy_eater
@@ -249,7 +249,7 @@ Dancer
 	gain_text = "<span class='warning'>Your fangs feel awkward in your mouth.</span>"
 	lose_text = "<span class='notice'>You fangs feel comfortable in your mouth.</span>"
 	allowed_species = list("Vampire","Kuei-Jin")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/quirk/animal_repulsion
 	name = "Animal Repulsion"
@@ -314,7 +314,7 @@ Dancer
 	gain_text = "<span class='warning'>You have a craving for liver.</span>"
 	lose_text = "<span class='notice'>Your craving subsides...</span>"
 	allowed_species = list("Vampire")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/action/fly_upper
 	name = "Fly Up"
@@ -642,7 +642,7 @@ Dancer
 	gain_text = "<span class='notice'>You feel necroresistant.</span>"
 	lose_text = "<span class='notice'>You don't want necrophilia anymore.</span>"
 	allowed_species = list("Vampire")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/quirk/charmer
 	name = "Abnormal Charmer"

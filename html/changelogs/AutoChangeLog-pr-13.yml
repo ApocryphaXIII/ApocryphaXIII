@@ -1,0 +1,4 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - balance: "werewolfs can now climb all ladders twice as fast instead of the original manhole snowflake code"

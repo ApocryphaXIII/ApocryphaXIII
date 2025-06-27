@@ -22,7 +22,7 @@
 	v_duty = "You are a member of the Order of Moloch! Acting as an alcoholics anonymous counselor, your kin have etched out a cover as members of alcoholics anonymous. Good luck."
 	duty = "You are a member of the Order of Moloch! Acting as an alcoholics anonymous counselor, your kin have etched out a cover as members of alcoholics anonymous. Good luck."
 	minimal_masquerade = 0
-	allowed_bloodlines = list("Baali")
+	allowed_bloodlines = list(CLAN_BAALI)
 
 /datum/outfit/job/baali
 	name = "Counselor"
@@ -32,7 +32,7 @@
 	backpack_contents = list(
 		/obj/item/passport=1,
 		/obj/item/flashlight=1,
-		/obj/item/vamp/creditcard=1,
+		/obj/item/card/credit=1,
 	)
 
 /datum/outfit/job/baali/pre_equip(mob/living/carbon/human/H)

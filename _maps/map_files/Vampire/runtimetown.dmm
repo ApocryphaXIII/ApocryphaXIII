@@ -188,7 +188,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "fS" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_x = -16
@@ -242,7 +242,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "iA" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/trash{
 	icon_state = "trash8"
 	},
@@ -282,7 +282,7 @@
 /area/vtm/supply)
 "jt" = (
 /obj/effect/decal/litter,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "jW" = (
@@ -332,7 +332,7 @@
 /obj/effect/decal/trash{
 	icon_state = "trash5"
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "lU" = (
@@ -360,7 +360,7 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "mw" = (
-/obj/manholeup,
+/obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "mW" = (
@@ -388,7 +388,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "nA" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
@@ -454,7 +454,7 @@
 /obj/effect/decal/trash{
 	icon_state = "trash7"
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "qt" = (
@@ -769,7 +769,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "Bf" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/trash{
 	icon_state = "trash7"
 	},
@@ -1070,6 +1070,10 @@
 	},
 /turf/open/floor/plating/vampdirt/rails,
 /area/vtm/supply)
+"IL" = (
+/obj/structure/ladder/manhole/up,
+/turf/open/floor/plating/rough,
+/area/vtm/pacificheights)
 "IO" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -1091,7 +1095,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "Jv" = (
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "JE" = (
@@ -1111,7 +1115,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/pacificheights)
 "JP" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Kt" = (
@@ -1445,7 +1449,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "UJ" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "UK" = (
@@ -1555,9 +1559,14 @@
 /obj/structure/fence/door,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"XU" = (
+/obj/structure/railing,
+/obj/structure/ladder/manhole/down,
+/turf/open/floor/plating/vampcanal,
+/area/vtm/pacificheights)
 "Yr" = (
 /obj/effect/decal/trash,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "Ys" = (
@@ -1587,7 +1596,7 @@
 	maxbloodpool = 10;
 	name = "Cain"
 	},
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/pacificheights)
 "YF" = (
@@ -2179,7 +2188,7 @@ PO
 of
 MS
 PO
-PO
+IL
 PO
 PO
 PO
@@ -4356,7 +4365,7 @@ eQ
 eQ
 MS
 nY
-Nx
+XU
 Ys
 Ys
 Ys

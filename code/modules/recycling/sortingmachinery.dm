@@ -406,8 +406,8 @@
 
 /obj/item/sales_tagger/attackby(obj/item/I, mob/living/user, params)
 	. = ..()
-	if(istype(I, /obj/item/card/id))
-		var/obj/item/card/id/potential_acc = I
+	if(is_creditcard(I))
+		var/obj/item/card/credit/potential_acc = I
 		if(potential_acc.registered_account)
 			if(payments_acc == potential_acc.registered_account)
 				to_chat(user, "<span class='notice'>ID card already registered.</span>")

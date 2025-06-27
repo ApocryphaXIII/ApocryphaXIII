@@ -23,7 +23,7 @@
 			viewing_category = categories[1]
 
 /obj/item/blackmarket_uplink/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/holochip) || istype(I, /obj/item/stack/spacecash) || istype(I, /obj/item/coin))
+	if(iscash(I))
 		var/worth = I.get_item_credit_value()
 		if(!worth)
 			to_chat(user, "<span class='warning'>[I] doesn't seem to be worth anything!</span>")
@@ -149,6 +149,7 @@
 			buying = FALSE
 			selected_item = null
 
+/* No way to craft it plus doubtful it works
 /datum/crafting_recipe/blackmarket_uplink
 	name = "Black Market Uplink"
 	result = /obj/item/blackmarket_uplink
@@ -161,6 +162,7 @@
 		/obj/item/analyzer = 1
 	)
 	category = CAT_MISC
+*/
 
 /datum/crafting_recipe/blackmarket_uplink/New()
 	..()

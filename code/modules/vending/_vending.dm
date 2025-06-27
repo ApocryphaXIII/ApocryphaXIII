@@ -151,7 +151,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	///Coins that we accept?
 	var/obj/item/coin/coin
 	///Bills we accept?
-	var/obj/item/stack/spacecash/bill
+	var/obj/item/stack/dollar/bill
 	///Default price of items if not overridden
 	var/default_price = 25
 	///Default price of premium items if not overridden
@@ -918,10 +918,10 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/ui_data(mob/user)
 	. = list()
-	var/obj/item/card/id/C
+	var/obj/item/card/credit/C
 	if(isliving(user))
 		var/mob/living/L = user
-		C = L.get_idcard(TRUE)
+		C = L.get_creditcard()
 	if(C?.registered_account)
 		.["user"] = list()
 		.["user"]["name"] = C.registered_account.account_holder
@@ -1025,10 +1025,10 @@ GLOBAL_LIST_EMPTY(vending_products)
 		vend_ready = TRUE
 		return
 	if(onstation)
-		var/obj/item/card/id/C
+		var/obj/item/card/credit/C
 		if(isliving(usr))
 			var/mob/living/L = usr
-			C = L.get_idcard(TRUE)
+			C = L.get_creditcard(TRUE)
 		if(!C)
 			say("No card found.")
 			flick(icon_deny,src)
@@ -1039,20 +1039,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			flick(icon_deny,src)
 			vend_ready = TRUE
 			return
-		else if(!C.registered_account.account_job)
-			say("Departmental accounts have been blacklisted from personal expenses due to embezzlement.")
-			flick(icon_deny, src)
-			vend_ready = TRUE
-			return
-		else if(age_restrictions && R.age_restricted && (!C.registered_age || C.registered_age < AGE_MINOR))
-			say("You are not of legal age to purchase [R.name].")
-			if(!(usr in GLOB.narcd_underages))
-				Radio.set_frequency(FREQ_SECURITY)
-				Radio.talk_into(src, "SECURITY ALERT: Underaged crewmember [usr] recorded attempting to purchase [R.name] in [get_area(src)]. Please watch for substance abuse.", FREQ_SECURITY)
-				GLOB.narcd_underages += usr
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
+		// From what im aware you cannot tell the age of a bank account holder in real life. So I removed that part of the old code
 		var/datum/bank_account/account = C.registered_account
 		if(account.account_job && account.account_job.paycheck_department == payment_department)
 			price_to_use = max(round(price_to_use * VENDING_DISCOUNT), 1) //No longer free, but signifigantly cheaper.
@@ -1230,12 +1217,13 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/custom/compartmentLoadAccessCheck(mob/user)
 	. = FALSE
-	if(!isliving(user))
-		return FALSE
-	var/mob/living/L = user
-	var/obj/item/card/id/C = L.get_idcard(FALSE)
-	if(C?.registered_account && C.registered_account == private_a)
-		return TRUE
+	var/mob/living/carbon/human/H
+	var/obj/item/card/credit/C
+	if(ishuman(user))
+		H = user
+		C = H.get_creditcard(FALSE)
+		if(C?.registered_account && C.registered_account == private_a)
+			return TRUE
 
 /obj/machinery/vending/custom/canLoadItem(obj/item/I, mob/user)
 	. = FALSE
@@ -1285,10 +1273,10 @@ GLOBAL_LIST_EMPTY(vending_products)
 			var/N = params["item"]
 			var/obj/S
 			vend_ready = FALSE
-			var/obj/item/card/id/C
+			var/obj/item/card/credit/C
 			if(isliving(usr))
 				var/mob/living/L = usr
-				C = L.get_idcard(TRUE)
+				C = L.get_creditcard()
 			if(!C)
 				say("No card found.")
 				flick(icon_deny,src)
@@ -1338,7 +1326,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/custom/attackby(obj/item/I, mob/user, params)
 	if(!private_a && isliving(user))
 		var/mob/living/L = user
-		var/obj/item/card/id/C = L.get_idcard(TRUE)
+		var/obj/item/card/credit/C = L.get_creditcard(TRUE)
 		if(C?.registered_account)
 			private_a = C.registered_account
 			say("\The [src] has been linked to [C].")

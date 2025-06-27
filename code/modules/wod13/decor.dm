@@ -968,7 +968,7 @@
 		while(total_balls() && (attempts <= 10))
 			attempts++
 			sink_ball(user, choice, desired_modifer)
-			if(prob(100 - (user.get_total_strength() * 10)))
+			if(prob(100 - (user.get_total_physique() * 10)))
 				break
 	else
 		return ..()

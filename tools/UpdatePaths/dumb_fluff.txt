@@ -1,0 +1,9 @@
+/obj/american_flag : /obj/flag/usa {@OLD}
+
+/obj/effect/decal/trash : /obj/effect/decal/cleanable/trash {@OLD}
+/obj/effect/decal/litter : /obj/effect/decal/cleanable/litter {@OLD}
+/obj/effect/decal/cardboard : /obj/effect/decal/cleanable/cardboard {@OLD}
+
+/obj/bacotell : /obj/structure/store_sign/bacotell {@OLD}
+/obj/bubway : /obj/structure/store_sign/bubway {@OLD}
+/obj/gummaguts : /obj/structure/store_sign/gummaguts {@OLD}

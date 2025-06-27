@@ -164,27 +164,6 @@
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
 
-/obj/effect/decal/litter
-	name = "litter"
-	icon = 'code/modules/wod13/tiles.dmi'
-	icon_state = "paper1"
-
-/obj/effect/decal/litter/Initialize()
-	. = ..()
-	icon_state = "paper[rand(1, 6)]"
-
-/obj/effect/decal/cardboard
-	name = "cardboard"
-	icon = 'code/modules/wod13/tiles.dmi'
-	icon_state = "cardboard1"
-
-/obj/effect/decal/cardboard/Initialize()
-	. = ..()
-	icon_state = "cardboard[rand(1, 5)]"
-	var/matrix/M = matrix()
-	M.Turn(rand(0, 360))
-	transform = M
-
 /obj/structure/clothingrack
 	name = "clothing rack"
 	desc = "Have some clothes."
@@ -552,15 +531,6 @@
 	. = ..()
 	icon_state = "under[rand(1, 2)]"
 
-/obj/effect/decal/trash
-	name = "trash"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "trash1"
-
-/obj/effect/decal/trash/Initialize()
-	. = ..()
-	icon_state = "trash[rand(1, 30)]"
-
 /obj/cargotrain
 	name = "cargocrate"
 	desc = "It delivers a lot of things."
@@ -757,9 +727,7 @@
 /obj/structure/rack/bubway/west
 	icon_state = "bubway6"
 
-/obj/bacotell
-	name = "Baco Tell"
-	desc = "Eat some precious tacos and pizza!"
+/obj/structure/store_sign
 	icon = 'code/modules/wod13/fastfood.dmi'
 	icon_state = "bacotell"
 	plane = GAME_PLANE
@@ -767,25 +735,20 @@
 	anchored = TRUE
 	pixel_w = -16
 
-/obj/bubway
+/obj/structure/store_sign/bacotell
+	name = "Baco Tell"
+	desc = "Eat some precious tacos and pizza!"
+	icon_state = "bacotell"
+
+/obj/structure/store_sign/bubway
 	name = "BubWay"
 	desc = "Eat some precious burgers and pizza!"
-	icon = 'code/modules/wod13/fastfood.dmi'
 	icon_state = "bubway"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	pixel_w = -16
 
-/obj/gummaguts
+/obj/structure/store_sign/gummaguts
 	name = "Gumma Guts"
 	desc = "Eat some precious chicken nuggets and donuts!"
-	icon = 'code/modules/wod13/fastfood.dmi'
 	icon_state = "gummaguts"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	pixel_w = -16
 
 /obj/underplate
 	name = "underplate"
@@ -1092,15 +1055,6 @@
 		for(var/turf/T in range(1, src))
 			if(T && !istype(T, /turf/open/floor/plating/bloodshit))
 				new /turf/open/floor/plating/bloodshit(T)
-
-/obj/american_flag
-	name = "american flag"
-	desc = "PATRIOTHICC!!!"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "flag_usa"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
 
 //flags
 

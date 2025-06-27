@@ -61,6 +61,8 @@
 #define MUSIC_FOREST "forest"
 #define MUSIC_CHURCH "church"
 #define MUSIC_PRINCE "prince"
+#define MUSIC_BAR "bar"
+#define MUSIC_HOLLYWOOD "hollywood"
 
 //default byond sound environments
 #define SOUND_ENVIRONMENT_NONE -1

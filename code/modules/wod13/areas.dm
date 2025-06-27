@@ -209,7 +209,7 @@
 	name = "Pacific Heights"
 	icon_state = "pacificheights"
 	ambience_index = AMBIENCE_NATURE
-	musictracks = list('code/modules/wod13/sounds/hollywood.ogg')
+	music_index = MUSIC_HOLLYWOOD
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -228,7 +228,7 @@
 	name = "Chinatown"
 	icon_state = "chinatown"
 	ambience_index = AMBIENCE_CITY
-	musictracks = list('code/modules/wod13/sounds/chinatown.ogg')
+	musictracks = list('sound/musictracks/chinatown.ogg')
 	upper = TRUE
 	wall_rating = LOW_WALL_RATING	//Kinda chinatown is part of asia and has some deeper connection?
 
@@ -236,7 +236,7 @@
 	name = "Fisherman's Wharf"
 	icon_state = "fishermanswharf"
 	ambience_index = AMBIENCE_CITY
-	musictracks = list('code/modules/wod13/sounds/santamonica.ogg')
+	musictracks = list('sound/musictracks/santamonica.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -253,7 +253,7 @@
 	//The waves dont really stop.
 	min_ambience_cooldown = 0
 	max_ambience_cooldown = 5 SECONDS
-	musictracks = list('code/modules/wod13/sounds/santamonica.ogg')
+	musictracks = list('sound/musictracks/santamonica.ogg')
 	upper = TRUE
 	wall_rating = HIGH_WALL_RATING
 
@@ -339,7 +339,7 @@
 	icon_state = "anarch"
 	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
-	musictracks = list('code/modules/wod13/sounds/naive.ogg')
+	music_index = MUSIC_BAR
 	zone_type = "elysium"
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -349,7 +349,7 @@
 	icon_state = "anarch"
 	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
-	musictracks = list('code/modules/wod13/sounds/naive.ogg')
+	music_index = MUSIC_BAR
 	zone_type = "elysium"
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -365,7 +365,7 @@
 /area/vtm/hotel
 	name = "Hotel"
 	icon_state = "hotel"
-	musictracks = list('code/modules/wod13/sounds/naive.ogg')
+	music_index = MUSIC_BAR
 	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
@@ -409,7 +409,7 @@
 	name = "Graveyard"
 	icon_state = "graveyard"
 	//ambience_index = AMBIENCE_OFFICE
-	musictracks = list('code/modules/wod13/sounds/hollywood.ogg')
+	music_index = MUSIC_HOLLYWOOD
 	upper = TRUE
 	zone_type = "battle"
 	yang_chi = 0
@@ -438,7 +438,7 @@
 	name = "Sewer"
 	icon_state = "sewer"
 	ambience_index = AMBIENCE_SEWER
-	musictracks = list('code/modules/wod13/sounds/enterlair.ogg')
+	musictracks = list('sound/musictracks/enterlair.ogg')
 	upper = FALSE
 	zone_type = "battle"
 	yang_chi = 0
@@ -449,7 +449,7 @@
 	name = "Underground Town"
 	icon_state = "hotel"
 	upper = FALSE
-	musictracks = list('code/modules/wod13/sounds/nosferatu.ogg')
+	musictracks = list('sound/musictracks/nosferatu.ogg')
 	zone_type = "elysium"
 	yang_chi = 0
 	yin_chi = 2
@@ -459,7 +459,7 @@
 	name = "Cappadocian Crypt"
 	icon_state = "graveyard"
 	//ambience_index = AMBIENCE_OFFICE
-	musictracks = list('code/modules/wod13/sounds/hollywood.ogg')
+	music_index = MUSIC_HOLLYWOOD
 	upper = FALSE
 	zone_type = "elysium"
 	yang_chi = 0
@@ -567,7 +567,7 @@
 	ambience_index = AMBIENCE_NATURE
 	upper = FALSE
 	zone_type = "battle"
-	musictracks = list('code/modules/wod13/sounds/penumbra.ogg')
+	musictracks = list('sound/musictracks/penumbra.ogg')
 	fire_controled = FALSE
 	wall_rating = LOW_WALL_RATING
 
@@ -588,7 +588,7 @@
 /area/vtm/interior/theatre
 	name = "Theatre"
 	icon_state = "theatre"
-	musictracks = list('code/modules/wod13/sounds/theatre.ogg')
+	musictracks = list('sound/musictracks/theatre.ogg')
 	zone_type = "elysium"
 	fire_controled = TRUE
 
@@ -659,7 +659,7 @@
 	name = "Clan Tzimisce Sanctum"
 	icon_state = "old_clan_sanctum"
 	zone_type = "elysium"
-	musictracks = list('code/modules/wod13/sounds/nosferatu.ogg')
+	musictracks = list('sound/musictracks/nosferatu.ogg')
 	wall_rating = LOW_WALL_RATING
 
 /area/vtm/interior/setite

@@ -911,6 +911,7 @@
 	smoothing_flags = NONE
 	smoothing_groups = null
 	canSmoothWith = null
+	pixel_z = -16
 
 	var/list/balls_left = list(
 		SOLID_BALL = 7,

@@ -620,7 +620,7 @@
 		M3.opacity = TRUE
 	M3.anchored = TRUE
 
-/proc/get_farthest_open_chain_turf(turf/start, dir = EAST, distance = 15)
+/proc/get_farthest_open_chain_turf(turf/start, dir = EAST, distance = 20)
 	var/turf/current = start
 	var/turf/last_open = null
 	for(var/i = 1 to distance)

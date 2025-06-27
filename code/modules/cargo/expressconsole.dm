@@ -221,8 +221,8 @@
 				train.glide_size = (32 / 3) * world.tick_lag
 				walk_to(train, LZ, 1, 3)
 				playsound(train, 'code/modules/wod13/sounds/train_arrive.ogg', 50, FALSE)
-				var/trackLength = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
-				spawn(trackLength)
+				var/track_travel_time = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
+				spawn(track_travel_time)
 					var/obj/structure/closet/crate/crate = new(get_turf(train))
 					crate.name = "Supply Crate"
 					for(var/datum/supply_pack/vampire/pack in final_order)
@@ -234,7 +234,7 @@
 								item_instance.forceMove(crate)
 					playsound(train, 'code/modules/wod13/sounds/train_depart.ogg', 50, FALSE)
 					walk_to(train, get_farthest_open_chain_turf(LZ), 1, 3)
-					spawn(trackLength)
+					spawn(track_travel_time)
 						qdel(train)
 					order_queue.Cut()
 				return
@@ -308,12 +308,12 @@
 						train.glide_size = (32 / 3) * world.tick_lag
 						walk_to(train, LZ, 1, 3)
 						playsound(train, 'code/modules/wod13/sounds/train_arrive.ogg', 50, FALSE)
-						var/trackLength = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
-						spawn(trackLength)
+						var/track_travel_time = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
+						spawn(track_travel_time)
 							SO.generate(get_turf(train))
 							playsound(train, 'code/modules/wod13/sounds/train_depart.ogg', 50, FALSE)
 							walk_to(train, get_farthest_open_chain_turf(LZ), 1, 3)
-							spawn(trackLength)
+							spawn(track_travel_time)
 								qdel(train)
 //						if(pack.special_pod)
 //							new /obj/effect/pod_landingzone(LZ, pack.special_pod, SO)
@@ -342,12 +342,12 @@
 							train.glide_size = (32 / 3) * world.tick_lag
 							walk_to(train, LZ, 1, 3)
 							playsound(train, 'code/modules/wod13/sounds/train_arrive.ogg', 50, FALSE)
-							var/trackLength = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
-							spawn(trackLength)
+							var/track_travel_time = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
+							spawn(track_travel_time)
 								playsound(train, 'code/modules/wod13/sounds/train_depart.ogg', 50, FALSE)
 								SO.generate(get_turf(train))
 								walk_to(train, get_farthest_open_chain_turf(LZ), 1, 3)
-								spawn(trackLength)
+								spawn(track_travel_time)
 									qdel(train)
 //							if(pack.special_pod)
 //								new /obj/effect/pod_landingzone(LZ, pack.special_pod, SO)

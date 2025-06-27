@@ -942,12 +942,14 @@
 	. += "There are [balls_left[SOLID_BALL]] solid and [balls_left[STRIPED_BALL]] striped balls left."
 	if(!balls_left[EIGHT_BALL])
 		. += "The 8-Ball has been sunk."
+	. += span_notice("The game can be reset with Alt-Click")
 
 /obj/structure/table/billiard/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/pool_cue))
 		var/cue_options = list(
 			SOLID_BALL = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "solid_ball"),
 			STRIPED_BALL = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "striped_ball"),
+			EIGHT_BALL = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "striped_ball"),
 		)
 		var/choice = show_radial_menu(user, src, cue_options, require_near = TRUE)
 		if(!choice)
@@ -960,13 +962,13 @@
 		user.visible_message(span_notice("[user] strikes a [lowertext(choice)]!"), span_notice("You strike your target!"))
 		playsound(src, 'sound/items/poolball_strike.ogg', 75)
 
-		var/desired_modifer = SSroll.storyteller_roll(user.get_total_dexterity(), 4, FALSE, list(user))
+		var/desired_modifer = user.get_total_dexterity() * 2 //SSroll.storyteller_roll(user.get_total_dexterity(), 4, FALSE, list(user))
 
 		var/attempts = 0
 		while(total_balls() && (attempts <= 10))
 			attempts++
 			sink_ball(user, choice, desired_modifer)
-			if(prob(80))
+			if(prob(100 - (user.get_total_strength() * 10)))
 				break
 	else
 		return ..()
@@ -984,7 +986,7 @@
 		sunk_ball = random_ball(target_ball, desired_modifer)
 
 	if(!balls_left[sunk_ball] || balls_left[sunk_ball] <= 0)
-		user.visible_message(span_warning("[user] MISSED"), span_warning("You missed"))
+		//user.visible_message(span_warning("[user] MISSED"), span_warning("You missed"))
 		return
 	if(sunk_ball == EIGHT_BALL)
 		user.visible_message(span_warning("[user] sunk the 8-Ball.. Damn.."), span_warning("Shit.. You sunk the 8-Ball"))

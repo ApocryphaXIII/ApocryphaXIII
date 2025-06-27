@@ -737,7 +737,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/effect/spawner/random/trash/grime,
+/obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "uK" = (
@@ -1148,6 +1148,13 @@
 "EY" = (
 /turf/closed/wall/vampwall/rich,
 /area/vtm/pacificheights)
+"Ff" = (
+/obj/effect/spawner/random/trash/grime{
+	spawn_loot_count = 30;
+	spawn_scatter_radius = 3
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "Fg" = (
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
@@ -1277,6 +1284,13 @@
 /obj/effect/decal/wallpaper,
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
+"Hy" = (
+/obj/machinery/vamp/atm{
+	dir = 8;
+	pixel_x = 8
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "HJ" = (
 /obj/effect/decal/stock,
 /turf/open/floor/plating/asphalt,
@@ -1554,7 +1568,10 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "OU" = (
-/obj/effect/spawner/random/trash/grime,
+/obj/effect/spawner/random/trash/grime{
+	spawn_loot_count = 20;
+	spawn_scatter_radius = 3
+	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "OX" = (
@@ -1637,7 +1654,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
-/obj/effect/spawner/random/trash/grime,
+/obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Rb" = (
@@ -2067,7 +2084,7 @@ mw
 ok
 NR
 NR
-NR
+Ff
 NR
 fn
 ok
@@ -2822,7 +2839,7 @@ Bt
 rL
 UJ
 NR
-NR
+Hy
 NR
 cj
 ik

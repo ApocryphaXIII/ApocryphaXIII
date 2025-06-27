@@ -313,10 +313,12 @@
 /area/vtm/cabaret/basement
 	name = "Siren's Cabaret - Basement"
 	zone_type = "elysium"
+
 /area/vtm/clinic
 	name = "Hospital"
 	icon_state = "clinic"
 	//ambience_index = AMBIENCE_OFFICE
+	music_index = MUSIC_SAFE
 	upper = FALSE
 	fire_controled = TRUE
 	yang_chi = 2
@@ -439,7 +441,7 @@
 	name = "Sewer"
 	icon_state = "sewer"
 	ambience_index = AMBIENCE_SEWER
-	musictracks = list('sound/musictracks/enterlair.ogg', 'sound/musictracks/infected_warehouse.ogg')
+	musictracks = list('sound/musictracks/enterlair.ogg', 'sound/musictracks/infected_warehouse.ogg', 'sound/musictracks/rotting_stones.ogg')
 	upper = FALSE
 	zone_type = "battle"
 	yang_chi = 0

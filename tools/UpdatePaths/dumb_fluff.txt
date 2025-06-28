@@ -4,11 +4,9 @@
 /obj/effect/decal/litter : /obj/effect/decal/cleanable/litter {@OLD}
 /obj/effect/decal/cardboard : /obj/effect/decal/cleanable/cardboard {@OLD}
 
-/obj/structure/store_sign/@SUBTYPES : /obj/structure/sign/city/store/@SUBTYPES {@OLD}
-
-/obj/bacotell : /obj/structure/store_sign/bacotell {@OLD}
-/obj/bubway : /obj/structure/store_sign/bubway {@OLD}
-/obj/gummaguts : /obj/structure/store_sign/gummaguts {@OLD}
+/obj/bacotell : /obj/structure/sign/city/store/bacotell {@OLD}
+/obj/bubway : /obj/structure/sign/city/store/bubway {@OLD}
+/obj/gummaguts : /obj/structure/sign/city/store/gummaguts {@OLD}
 
 /obj/police_department : /obj/structure/sign/city/police_department {@OLD}
 /obj/order : /obj/structure/sign/city/order {@OLD}
@@ -20,7 +18,7 @@
 /obj/structure/milleniumsign : /obj/structure/sign/city/millenium {@OLD}
 /obj/structure/strip_club : /obj/structure/sign/city/strip_club {@OLD}
 /obj/structure/cabaret_sign : /obj/structure/sign/city/cabaret_sign {@OLD}
-/obj/structure/cabaret_sign2 : /obj/structure/sign/city/cabaret_sign/two
+/obj/structure/cabaret_sign2 : /obj/structure/sign/city/cabaret_sign/two {@OLD}
 
 /obj/structure/showcase/machinery/tv : /obj/structure/fluff/tv {@OLD}
 /obj/order1 : /obj/structure/fluff/tv/order/one {@OLD}

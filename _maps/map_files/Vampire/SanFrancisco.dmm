@@ -30331,7 +30331,6 @@
 	density = 0
 	},
 /obj/structure/fluff/tv{
-	density = 0;
 	pixel_y = 10
 	},
 /obj/effect/bump_teleporter{
@@ -31515,7 +31514,6 @@
 	pixel_y = 32
 	},
 /obj/structure/fluff/tv{
-	density = 0;
 	pixel_y = 10
 	},
 /obj/effect/bump_teleporter{
@@ -85823,7 +85821,9 @@
 /obj/effect/decal/bordur{
 	dir = 4
 	},
-/obj/structure/sign/city/cabaret_sign/two,
+/obj/structure/sign/city/cabaret_sign/two{
+	pixel_y = 27
+	},
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/fishermanswharf/lower)
 "wYg" = (

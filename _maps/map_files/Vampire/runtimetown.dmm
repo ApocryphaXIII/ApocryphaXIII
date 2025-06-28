@@ -145,12 +145,8 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "ee" = (
-/obj/structure/sign/city/store/gummaguts{
-	pixel_x = 32;
-	pixel_y = 38
-	},
-/turf/open/floor/plating/vampbeach,
-/area/vtm/pacificheights)
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/shop)
 "eg" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
@@ -556,6 +552,12 @@
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
+"qr" = (
+/obj/structure/sign/city/police_department{
+	dir = 8
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "qt" = (
 /obj/machinery/computer/cargo/express{
 	dir = 4
@@ -697,6 +699,12 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
+"tr" = (
+/obj/structure/sign/city/police_department{
+	dir = 1
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "ts" = (
 /obj/machinery/fax/endron,
 /turf/open/floor/plating/vampbeach,
@@ -717,6 +725,10 @@
 	locked = 0
 	},
 /turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
+"tO" = (
+/obj/structure/sign/city/police_department,
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "uC" = (
 /obj/structure/table,
@@ -1396,6 +1408,12 @@
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"Kj" = (
+/obj/structure/sign/city/police_department{
+	dir = 4
+	},
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Ko" = (
 /obj/effect/landmark/npcbeacon/directed{
@@ -3111,7 +3129,7 @@ Fg
 mm
 GH
 Fg
-NR
+tO
 NR
 cj
 ik
@@ -3179,7 +3197,7 @@ oW
 oW
 LW
 Fg
-NR
+tr
 NR
 cj
 ik
@@ -3213,7 +3231,7 @@ kS
 kS
 kS
 Fg
-NR
+Kj
 NR
 Dh
 en
@@ -3245,9 +3263,9 @@ kS
 DF
 yE
 Tq
-Cr
 ee
-NR
+Fg
+qr
 NR
 cj
 ik
@@ -3279,8 +3297,8 @@ kS
 Tq
 pt
 TO
-kS
-NR
+ee
+Cr
 NR
 NR
 cj
@@ -3314,7 +3332,7 @@ BX
 Ro
 zx
 kS
-NR
+kS
 NR
 NR
 cj

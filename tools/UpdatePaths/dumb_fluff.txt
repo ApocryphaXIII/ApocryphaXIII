@@ -4,9 +4,20 @@
 /obj/effect/decal/litter : /obj/effect/decal/cleanable/litter {@OLD}
 /obj/effect/decal/cardboard : /obj/effect/decal/cleanable/cardboard {@OLD}
 
+/obj/structure/store_sign/@SUBTYPES : /obj/structure/sign/city/store/@SUBTYPES {OLD}
+
 /obj/bacotell : /obj/structure/store_sign/bacotell {@OLD}
 /obj/bubway : /obj/structure/store_sign/bubway {@OLD}
 /obj/gummaguts : /obj/structure/store_sign/gummaguts {@OLD}
+
+/obj/police_department : /obj/structure/sign/city/police_department {@OLD}
+/obj/order : /obj/structure/sign/city/order {@OLD}
+/obj/structure/hotelsign : /obj/structure/sign/city/hotel {@OLD}
+/obj/structure/anarchsign : /obj/structure/sign/city/anarch {@OLD}
+/obj/structure/chinesesign : /obj/structure/sign/city/chinese {@OLD}
+/obj/structure/chinesesign/alt : /obj/structure/sign/city/chinese/alt {@OLD}
+/obj/structure/chinesesign/alt/alt : /obj/structure/sign/city/chinese/alt2 {@OLD}
+/obj/structure/milleniumsign : /obj/structure/sign/city/millenium {@OLD}
 
 /obj/structure/showcase/machinery/tv : /obj/structure/fluff/tv {@OLD}
 /obj/order1 : /obj/structure/fluff/tv/order/one {@OLD}

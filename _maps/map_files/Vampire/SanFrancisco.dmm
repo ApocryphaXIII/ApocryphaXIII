@@ -1510,7 +1510,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower)
 "atQ" = (
-/obj/structure/chinesesign/alt/alt{
+/obj/structure/sign/city/chinese/alt2{
 	dir = 4;
 	pixel_y = 32
 	},
@@ -4706,7 +4706,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/millennium_tower)
 "bkr" = (
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	dir = 4
 	},
 /obj/structure/fluff/hedge,
@@ -8164,7 +8164,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/northbeach)
 "cgF" = (
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	dir = 1
 	},
 /obj/effect/decal/bordur,
@@ -8287,7 +8287,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/endron_facility/restricted)
 "ciR" = (
-/obj/structure/hotelsign,
+/obj/structure/sign/city/hotel,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/ghetto/old)
 "ciS" = (
@@ -12008,7 +12008,7 @@
 	},
 /area/vtm/sewer/tzimisce_sanctum)
 "dgt" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalkalt,
@@ -12738,7 +12738,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/oldchurch)
 "dqv" = (
-/obj/structure/chinesesign/alt,
+/obj/structure/sign/city/chinese/alt,
 /obj/structure/fluff/hedge,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/chinatown)
@@ -17701,7 +17701,7 @@
 	},
 /area/vtm/sewer/tzimisce_sanctum)
 "eMn" = (
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalkalt,
@@ -21025,7 +21025,7 @@
 /turf/closed/wall/vampwall,
 /area/vtm/interior/shop)
 "fEb" = (
-/obj/structure/anarchsign,
+/obj/structure/sign/city/anarch,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/fishermanswharf)
 "fEd" = (
@@ -23794,7 +23794,7 @@
 /turf/open/floor/carpet/purple,
 /area/vtm/interior/millennium_tower/ventrue)
 "gpZ" = (
-/obj/structure/chinesesign/alt/alt{
+/obj/structure/sign/city/chinese/alt2{
 	pixel_y = 32
 	},
 /turf/open/floor/plating/sidewalkalt,
@@ -26463,7 +26463,7 @@
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/staff)
 "gZB" = (
-/obj/structure/milleniumsign{
+/obj/structure/sign/city/millenium{
 	pixel_y = 32
 	},
 /turf/open/floor/plating/vampplating,
@@ -29459,7 +29459,7 @@
 /turf/open/floor/carpet/red,
 /area/vtm/hotel)
 "hSQ" = (
-/obj/order{
+/obj/structure/sign/city/order{
 	pixel_y = 32
 	},
 /turf/open/floor/plating/bacotell,
@@ -30393,7 +30393,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/ghetto)
 "ifP" = (
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	dir = 8
 	},
 /obj/effect/decal/bordur{
@@ -31054,7 +31054,7 @@
 /turf/open/floor/plating/roofwalk,
 /area/vtm/park)
 "irj" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 8
 	},
 /obj/structure/fluff/hedge,
@@ -31151,7 +31151,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/giovanni/basement)
 "isL" = (
-/obj/structure/chinesesign,
+/obj/structure/sign/city/chinese,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/chinatown)
 "isR" = (
@@ -33880,7 +33880,7 @@
 /area/vtm/interior/mansion)
 "jgk" = (
 /obj/structure/table,
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	pixel_x = -8
 	},
 /obj/item/folder/blue{
@@ -34726,7 +34726,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower)
 "jrC" = (
-/obj/structure/hotelsign{
+/obj/structure/sign/city/hotel{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
@@ -38327,7 +38327,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch/basement)
 "kqV" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/poor,
@@ -38503,7 +38503,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/police/fed)
 "ktR" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	pixel_x = -8
 	},
 /turf/open/floor/plating/vampcarpet,
@@ -39603,7 +39603,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/church/interior/haven)
 "kJm" = (
-/obj/structure/chinesesign,
+/obj/structure/sign/city/chinese,
 /obj/structure/fluff/hedge,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/chinatown)
@@ -40129,7 +40129,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
 "kRu" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
@@ -40793,7 +40793,7 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/park)
 "kZT" = (
-/obj/structure/chinesesign/alt/alt{
+/obj/structure/sign/city/chinese/alt2{
 	dir = 1;
 	pixel_y = 32
 	},
@@ -45098,7 +45098,7 @@
 /area/vtm/interior/banu/haven)
 "mkh" = (
 /obj/structure/table,
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	dir = 4;
 	pixel_y = 16
 	},
@@ -47471,7 +47471,7 @@
 /area/vtm/interior/millennium_tower/f2)
 "mQe" = (
 /obj/structure/chair/stool/bar,
-/obj/order{
+/obj/structure/sign/city/order{
 	pixel_y = 26
 	},
 /turf/open/floor/carpet,
@@ -47560,7 +47560,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/giovanni/basement)
 "mRf" = (
-/obj/structure/hotelsign{
+/obj/structure/sign/city/hotel{
 	dir = 1
 	},
 /obj/effect/decal/bordur,
@@ -56332,7 +56332,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/strip)
 "pey" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 1
 	},
 /obj/structure/fluff/hedge,
@@ -59104,7 +59104,7 @@
 /obj/structure/flora/ausbushes/ywflowers{
 	pixel_y = 10
 	},
-/obj/structure/anarchsign,
+/obj/structure/sign/city/anarch,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/jazzclub)
 "pPw" = (
@@ -62743,7 +62743,7 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 8
 	},
-/obj/structure/milleniumsign{
+/obj/structure/sign/city/millenium{
 	dir = 1;
 	pixel_y = 32
 	},
@@ -63650,7 +63650,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/financialdistrict/construction)
 "qYQ" = (
-/obj/structure/chinesesign/alt/alt{
+/obj/structure/sign/city/chinese/alt2{
 	dir = 8;
 	pixel_y = 32
 	},
@@ -65214,7 +65214,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/techshop)
 "rsU" = (
-/obj/structure/chinesesign/alt,
+/obj/structure/sign/city/chinese/alt,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/chinatown)
 "rsV" = (
@@ -65808,7 +65808,7 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/financialdistrict)
 "rBp" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalkalt,
@@ -66207,7 +66207,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
 "rGZ" = (
-/obj/structure/hotelsign{
+/obj/structure/sign/city/hotel{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalkalt,
@@ -72233,7 +72233,7 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/interior/endron_facility/helipad)
 "tnF" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/poor,
@@ -73034,7 +73034,7 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/church)
 "txG" = (
-/obj/police_department,
+/obj/structure/sign/city/police_department,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
 "txK" = (
@@ -74940,7 +74940,7 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/interior/millennium_tower)
 "uag" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	pixel_x = -8
 	},
 /turf/open/floor/plating/parquetry/old,
@@ -77293,7 +77293,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer)
 "uHt" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalkalt,

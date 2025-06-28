@@ -210,24 +210,6 @@
 	. = ..()
 	icon_state = "rack[rand(1, 5)]"
 
-/obj/structure/hotelsign
-	name = "sign"
-	desc = "It says H O T E L."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "hotel"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/hotelsign/Initialize()
-	. = ..()
-	set_light(3, 3, "#8e509e")
-	if(GLOB.winter)
-		if(istype(get_area(src), /area/vtm))
-			var/area/vtm/V = get_area(src)
-			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
 /obj/structure/hotelbanner
 	name = "banner"
 	desc = "It says H O T E L."
@@ -245,60 +227,6 @@
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
-
-/obj/structure/milleniumsign
-	name = "sign"
-	desc = "It says M I L L E N I U M."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "millenium"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/milleniumsign/Initialize()
-	. = ..()
-	set_light(3, 3, "#4299bb")
-
-/obj/structure/anarchsign
-	name = "sign"
-	desc = "It says B A R."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "bar"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/anarchsign/Initialize()
-	. = ..()
-	set_light(3, 3, "#ffffff")
-	if(GLOB.winter)
-		if(istype(get_area(src), /area/vtm))
-			var/area/vtm/V = get_area(src)
-			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
-/obj/structure/chinesesign
-	name = "sign"
-	desc = "雨天和血的机会."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "chinese1"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/chinesesign/Initialize()
-	. = ..()
-	if(GLOB.winter)
-		if(istype(get_area(src), /area/vtm))
-			var/area/vtm/V = get_area(src)
-			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
-/obj/structure/chinesesign/alt
-	icon_state = "chinese2"
-
-/obj/structure/chinesesign/alt/alt
-	icon_state = "chinese3"
 
 /obj/structure/arc
 	name = "chinatown arc"
@@ -727,29 +655,6 @@
 /obj/structure/rack/bubway/west
 	icon_state = "bubway6"
 
-/obj/structure/store_sign
-	icon = 'code/modules/wod13/fastfood.dmi'
-	icon_state = "bacotell"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	pixel_w = -16
-
-/obj/structure/store_sign/bacotell
-	name = "Baco Tell"
-	desc = "Eat some precious tacos and pizza!"
-	icon_state = "bacotell"
-
-/obj/structure/store_sign/bubway
-	name = "BubWay"
-	desc = "Eat some precious burgers and pizza!"
-	icon_state = "bubway"
-
-/obj/structure/store_sign/gummaguts
-	name = "Gumma Guts"
-	desc = "Eat some precious chicken nuggets and donuts!"
-	icon_state = "gummaguts"
-
 /obj/underplate
 	name = "underplate"
 	icon = 'code/modules/wod13/props.dmi'
@@ -760,15 +665,6 @@
 
 /obj/underplate/stuff
 	icon_state = "stuff"
-
-/obj/order
-	name = "order sign"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-
 
 /obj/matrix
 	name = "matrix"
@@ -844,16 +740,6 @@
 	. = ..()
 	icon_state = "billiard[rand(1, 3)]"
 
-/obj/police_department
-	name = "San Francisco Police Department"
-	desc = "Stop right there you criminal scum! Nobody can break the law on my watch!!"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "police"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	pixel_z = 40
-
 /obj/structure/pole
 	name = "stripper pole"
 	desc = "A pole fastened to the ceiling and floor, used to show of ones goods to company."
@@ -911,47 +797,6 @@
 	user.do_jitter_animation()
 	sleep(6)
 	user.dir = 2
-
-/obj/structure/strip_club
-	name = "sign"
-	desc = "It says DO RA. Maybe it's some kind of strip club..."
-	icon = 'code/modules/wod13/48x48.dmi'
-	icon_state = "dora"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-	pixel_w = -8
-	pixel_z = 32
-
-/obj/structure/strip_club/Initialize()
-	. = ..()
-	set_light(3, 2, "#8e509e")
-
-/obj/structure/cabaret_sign
-	name = "cabaret"
-	desc = "An enticing pair of legs... I wonder what's inside?"
-	icon = 'icons/cabaret.dmi'
-	icon_state = "cabar"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/cabaret_sign/Initialize()
-	. = ..()
-	set_light(3, 2, "#d98aec")
-
-/obj/structure/cabaret_sign2
-	name = "cabaret"
-	desc = "An enticing pair of legs... I wonder what's inside?"
-	icon = 'icons/cabaret.dmi'
-	icon_state = "et"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/cabaret_sign2/Initialize()
-	. = ..()
-	set_light(3, 2, "#d98aec")
 
 /obj/structure/fire_barrel
 	name = "barrel"

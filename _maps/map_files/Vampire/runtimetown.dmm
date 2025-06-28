@@ -349,7 +349,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "ki" = (
-/obj/order{
+/obj/structure/sign/city/order{
 	pixel_y = 32
 	},
 /obj/structure/fluff/tv/order/three{

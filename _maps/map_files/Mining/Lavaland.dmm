@@ -556,7 +556,7 @@
 	},
 /area/vtm/interior/penumbra)
 "fe" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 1;
 	icon_state = "police"
 	},
@@ -736,7 +736,7 @@
 	},
 /area/vtm/interior/penumbra)
 "hz" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 8;
 	icon_state = "police"
 	},
@@ -787,7 +787,7 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "ii" = (
-/obj/structure/anarchsign,
+/obj/structure/sign/city/anarch,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "ik" = (
@@ -1300,7 +1300,7 @@
 	},
 /area/vtm/interior/penumbra)
 "oY" = (
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	pixel_x = 12
 	},
 /turf/closed/wall/vampwall/market{
@@ -1732,7 +1732,7 @@
 	},
 /area/vtm/interior/penumbra)
 "tI" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 1;
 	icon_state = "chinese1"
 	},
@@ -1813,7 +1813,7 @@
 	},
 /area/vtm/interior/penumbra)
 "uK" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 4;
 	icon_state = "police"
 	},
@@ -2079,7 +2079,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "wS" = (
-/obj/police_department,
+/obj/structure/sign/city/police_department,
 /obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
@@ -2511,7 +2511,7 @@
 	},
 /area/vtm/interior/penumbra)
 "BP" = (
-/obj/structure/milleniumsign{
+/obj/structure/sign/city/millenium{
 	pixel_y = 32
 	},
 /turf/open/floor/plating/umbra,
@@ -2527,7 +2527,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "Ca" = (
-/obj/structure/milleniumsign{
+/obj/structure/sign/city/millenium{
 	dir = 1;
 	icon_state = "millenium";
 	pixel_y = 32
@@ -3279,7 +3279,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "JU" = (
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	dir = 4;
 	icon_state = "chinese2"
 	},
@@ -4007,7 +4007,7 @@
 	},
 /area/vtm/interior/penumbra)
 "SW" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 1;
 	pixel_x = -12
 	},

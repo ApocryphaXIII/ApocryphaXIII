@@ -495,7 +495,7 @@
 /area/vtm/interior/laundromat)
 "ahh" = (
 /obj/structure/table,
-/obj/structure/showcase/machinery/tv,
+/obj/structure/fluff/tv,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility)
 "ahl" = (
@@ -1338,7 +1338,7 @@
 "arS" = (
 /obj/effect/decal/cleanable/garbage,
 /obj/effect/decal/pallet,
-/obj/structure/showcase/machinery/tv,
+/obj/structure/fluff/tv,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/community)
 "asb" = (
@@ -1349,11 +1349,11 @@
 /area/vtm/interior/endron_facility)
 "asf" = (
 /obj/structure/rack/bubway/horizontal,
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_x = -16
 	},
-/obj/order2,
-/obj/order3{
+/obj/structure/fluff/tv/order/two,
+/obj/structure/fluff/tv/order/three{
 	pixel_x = 16
 	},
 /turf/open/floor/plating/concrete,
@@ -22754,7 +22754,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "gcv" = (
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_off";
 	pixel_y = 13
 	},
@@ -22968,7 +22968,7 @@
 /area/space)
 "gfr" = (
 /obj/structure/table,
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	pixel_y = 12
 	},
 /turf/open/floor/plating/vampcarpet,
@@ -28107,11 +28107,11 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
 "hyW" = (
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_x = -16
 	},
-/obj/order2,
-/obj/order3{
+/obj/structure/fluff/tv/order/two,
+/obj/structure/fluff/tv/order/three{
 	pixel_x = 16
 	},
 /turf/closed/wall/vampwall/bar,
@@ -30330,7 +30330,7 @@
 /obj/structure/table/wood{
 	density = 0
 	},
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	density = 0;
 	pixel_y = 10
 	},
@@ -31514,7 +31514,7 @@
 /obj/machinery/light/red{
 	pixel_y = 32
 	},
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	density = 0;
 	pixel_y = 10
 	},
@@ -32861,7 +32861,7 @@
 /area/vtm/church/interior/staff)
 "iSg" = (
 /obj/structure/rack/bubway/east,
-/obj/order4,
+/obj/structure/fluff/tv/order/four,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "iSl" = (
@@ -33691,7 +33691,7 @@
 /area/vtm/clinic)
 "jcD" = (
 /obj/effect/decal/wallpaper/red,
-/obj/order4,
+/obj/structure/fluff/tv/order/four,
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
 "jcF" = (
@@ -33858,7 +33858,7 @@
 	dir = 4;
 	color = "#570090"
 	},
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	pixel_y = 6
 	},
 /obj/structure/table/reinforced,
@@ -36809,7 +36809,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "jUi" = (
-/obj/structure/showcase/machinery/tv,
+/obj/structure/fluff/tv,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior)
 "jUq" = (
@@ -37154,7 +37154,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower/f2)
 "jZy" = (
-/obj/order4,
+/obj/structure/fluff/tv/order/four,
 /turf/closed/wall/vampwall/bar,
 /area/vtm/interior/shop)
 "jZA" = (
@@ -37795,7 +37795,7 @@
 /area/vtm/interior/setite)
 "kiL" = (
 /obj/structure/table/wood,
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_nature";
 	pixel_y = 12
 	},
@@ -39367,11 +39367,11 @@
 /obj/effect/decal/wallpaper/grey{
 	color = "#585858"
 	},
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_x = -16
 	},
-/obj/order2,
-/obj/order3{
+/obj/structure/fluff/tv/order/two,
+/obj/structure/fluff/tv/order/three{
 	pixel_x = 16
 	},
 /turf/closed/wall/vampwall,
@@ -44831,11 +44831,11 @@
 /area/vtm/interior/laundromat)
 "mfC" = (
 /obj/effect/decal/wallpaper/red,
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_x = -16
 	},
-/obj/order2,
-/obj/order3{
+/obj/structure/fluff/tv/order/two,
+/obj/structure/fluff/tv/order/three{
 	pixel_x = 16
 	},
 /turf/closed/wall/vampwall/market,
@@ -58217,7 +58217,7 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/millennium_tower/f3)
 "pEO" = (
-/obj/structure/showcase/machinery/tv,
+/obj/structure/fluff/tv,
 /turf/open/floor/carpet,
 /area/vtm/interior)
 "pEQ" = (
@@ -60999,7 +60999,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict)
 "qqA" = (
-/obj/structure/showcase/machinery/tv,
+/obj/structure/fluff/tv,
 /turf/open/floor/plating/bacotell,
 /area/vtm/clinic/haven)
 "qqB" = (
@@ -65207,7 +65207,7 @@
 /area/vtm/interior/bianchiBank)
 "rsP" = (
 /obj/structure/table,
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_off";
 	pixel_y = 13
 	},
@@ -66505,16 +66505,16 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/chinatown)
 "rKW" = (
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_analog";
 	pixel_x = 10;
 	pixel_y = 13
 	},
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_nature";
 	pixel_y = 29
 	},
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	pixel_x = -10;
 	pixel_y = 13
 	},
@@ -71439,7 +71439,7 @@
 /obj/effect/decal/wallpaper/grey{
 	color = "#585858"
 	},
-/obj/order4,
+/obj/structure/fluff/tv/order/four,
 /turf/closed/wall/vampwall,
 /area/vtm/interior/shop)
 "tcp" = (
@@ -76329,7 +76329,7 @@
 /area/vtm/interior)
 "utY" = (
 /obj/structure/table,
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	pixel_y = 13
 	},
 /turf/open/floor/plating/vampplating,
@@ -76459,7 +76459,7 @@
 /turf/open/floor/carpet,
 /area/vtm/interior/chantry/basement)
 "uvQ" = (
-/obj/structure/showcase/machinery/tv,
+/obj/structure/fluff/tv,
 /turf/open/floor/carpet,
 /area/vtm/supply)
 "uvU" = (
@@ -78226,7 +78226,7 @@
 /area/vtm/interior/tzimisce_manor)
 "uVl" = (
 /obj/structure/table,
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_off";
 	pixel_y = 13
 	},
@@ -83761,7 +83761,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch/basement)
 "wuU" = (
-/obj/structure/showcase/machinery/tv,
+/obj/structure/fluff/tv,
 /obj/machinery/light/small{
 	dir = 8;
 	pixel_x = 16
@@ -85804,15 +85804,15 @@
 /area/vtm/hotel)
 "wXZ" = (
 /obj/structure/table,
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	pixel_x = -10;
 	pixel_y = 13
 	},
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_nature";
 	pixel_y = 29
 	},
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_analog";
 	pixel_x = 10;
 	pixel_y = 13
@@ -86201,7 +86201,7 @@
 /obj/structure/rack/tacobell/vertical{
 	pixel_y = 10
 	},
-/obj/order2,
+/obj/structure/fluff/tv/order/two,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
 "xcU" = (
@@ -87450,7 +87450,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "xvA" = (
-/obj/structure/showcase/machinery/tv,
+/obj/structure/fluff/tv,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/setite)
 "xvF" = (
@@ -88703,7 +88703,7 @@
 /area/vtm/anarch/basement)
 "xLy" = (
 /obj/structure/table,
-/obj/structure/showcase/machinery/tv{
+/obj/structure/fluff/tv{
 	icon_state = "tv_off";
 	pixel_y = 13
 	},

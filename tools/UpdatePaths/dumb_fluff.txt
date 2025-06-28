@@ -7,3 +7,9 @@
 /obj/bacotell : /obj/structure/store_sign/bacotell {@OLD}
 /obj/bubway : /obj/structure/store_sign/bubway {@OLD}
 /obj/gummaguts : /obj/structure/store_sign/gummaguts {@OLD}
+
+/obj/structure/showcase/machinery/tv : /obj/structure/fluff/tv {@OLD}
+/obj/order1 : /obj/structure/fluff/tv/order/one {@OLD}
+/obj/order2 : /obj/structure/fluff/tv/order/two {@OLD}
+/obj/order3 : /obj/structure/fluff/tv/order/three {@OLD}
+/obj/order4 : /obj/structure/fluff/tv/order/four {@OLD}

@@ -352,11 +352,11 @@
 /obj/order{
 	pixel_y = 32
 	},
-/obj/order3{
+/obj/structure/fluff/tv/order/three{
 	pixel_x = -10;
 	pixel_y = 12
 	},
-/obj/order4{
+/obj/structure/fluff/tv/order/four{
 	pixel_y = 12;
 	pixel_x = 6
 	},
@@ -461,11 +461,11 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "nD" = (
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_y = 12;
 	pixel_x = -10
 	},
-/obj/order2{
+/obj/structure/fluff/tv/order/two{
 	pixel_y = 12;
 	pixel_x = 6
 	},
@@ -1059,17 +1059,17 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Dw" = (
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_y = 12
 	},
-/obj/order2{
+/obj/structure/fluff/tv/order/two{
 	pixel_y = 12
 	},
-/obj/order3{
+/obj/structure/fluff/tv/order/three{
 	pixel_x = 16;
 	pixel_y = 12
 	},
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_x = -16;
 	pixel_y = 12
 	},
@@ -1849,7 +1849,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Vv" = (
-/obj/order4{
+/obj/structure/fluff/tv/order/four{
 	pixel_y = 12
 	},
 /obj/machinery/griddle,

@@ -769,37 +769,6 @@
 	layer = CAR_LAYER
 	anchored = TRUE
 
-/obj/order1
-	name = "order screen"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order1"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-
-/obj/order2
-	name = "order screen"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order2"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-
-/obj/order3
-	name = "order screen"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order3"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-
-/obj/order4
-	name = "order screen"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order4"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
 
 /obj/matrix
 	name = "matrix"
@@ -1454,3 +1423,31 @@
 			burying = FALSE
 		else
 			burying = FALSE
+
+/obj/structure/fluff/tv
+	name = "\improper TV"
+	desc = "A slightly battered looking TV. Various infomercials play on a loop, accompanied by a jaunty tune."
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "tv_news"
+
+/obj/structure/fluff/tv/order
+	name = "order screen"
+	icon_state = "order1"
+
+/obj/structure/fluff/tv/order/one
+	icon_state = "order1"
+
+/obj/structure/fluff/tv/order/two
+	icon_state = "order2"
+
+/obj/structure/fluff/tv/order/three
+	icon_state = "order3"
+
+/obj/structure/fluff/tv/order/four
+	icon_state = "order4"
+
+/obj/structure/fluff/tv/order/random
+
+/obj/structure/fluff/tv/order/random/Initialize()
+	. = ..()
+	icon_state = "order[rand(1,4)]"

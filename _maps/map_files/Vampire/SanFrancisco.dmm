@@ -4040,7 +4040,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/strip)
 "bbC" = (
-/obj/structure/store_sign/bubway{
+/obj/structure/sign/city/store/bubway{
 	pixel_y = 40
 	},
 /turf/open/floor/plating/sidewalk,
@@ -21136,7 +21136,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/baali)
 "fFJ" = (
-/obj/structure/store_sign/bacotell{
+/obj/structure/sign/city/store/bacotell{
 	pixel_x = 16;
 	pixel_y = 40
 	},
@@ -30977,7 +30977,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
 "ipP" = (
-/obj/structure/cabaret_sign{
+/obj/structure/sign/city/cabaret_sign{
 	pixel_x = -16;
 	pixel_y = 27
 	},
@@ -32597,7 +32597,7 @@
 /turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/f3)
 "iOn" = (
-/obj/structure/store_sign/gummaguts{
+/obj/structure/sign/city/store/gummaguts{
 	pixel_x = 16;
 	pixel_y = 40
 	},
@@ -34104,7 +34104,7 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/obj/structure/store_sign/bacotell{
+/obj/structure/sign/city/store/bacotell{
 	pixel_x = 16;
 	pixel_y = 40
 	},
@@ -43082,7 +43082,7 @@
 /obj/underplate{
 	pixel_y = 8
 	},
-/obj/structure/store_sign/bacotell{
+/obj/structure/sign/city/store/bacotell{
 	pixel_y = 40
 	},
 /turf/open/floor/plating/bacotell,
@@ -45793,7 +45793,7 @@
 /area/vtm/interior/millennium_tower/f4)
 "muZ" = (
 /obj/structure/chair/stool/bar,
-/obj/structure/strip_club,
+/obj/structure/sign/city/strip_club,
 /turf/open/floor/carpet/red,
 /area/vtm/interior/strip/elysium)
 "mva" = (
@@ -50887,7 +50887,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "nIQ" = (
-/obj/structure/store_sign/gummaguts{
+/obj/structure/sign/city/store/gummaguts{
 	pixel_x = 16;
 	pixel_y = 40
 	},
@@ -69723,7 +69723,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior)
 "sBG" = (
-/obj/structure/strip_club,
+/obj/structure/sign/city/strip_club,
 /obj/effect/landmark/npcbeacon,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict/construction)
@@ -72819,7 +72819,7 @@
 /turf/open/floor/carpet,
 /area/vtm/interior/bianchiBank)
 "tvn" = (
-/obj/structure/store_sign/bacotell{
+/obj/structure/sign/city/store/bacotell{
 	pixel_x = 16;
 	pixel_y = 40
 	},
@@ -74760,7 +74760,7 @@
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/staff)
 "tXN" = (
-/obj/structure/store_sign/bacotell{
+/obj/structure/sign/city/store/bacotell{
 	pixel_x = 16;
 	pixel_y = 40
 	},
@@ -83233,7 +83233,7 @@
 /area/vtm/interior)
 "wmC" = (
 /obj/structure/fluff/hedge,
-/obj/structure/strip_club,
+/obj/structure/sign/city/strip_club,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/strip)
 "wmG" = (
@@ -85823,9 +85823,7 @@
 /obj/effect/decal/bordur{
 	dir = 4
 	},
-/obj/structure/cabaret_sign2{
-	pixel_y = 27
-	},
+/obj/structure/sign/city/cabaret_sign/two,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/fishermanswharf/lower)
 "wYg" = (
@@ -88171,7 +88169,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/tzimisce_manor)
 "xFA" = (
-/obj/structure/store_sign/bubway{
+/obj/structure/sign/city/store/bubway{
 	pixel_y = 40
 	},
 /mob/living/carbon/human/npc/bubway,

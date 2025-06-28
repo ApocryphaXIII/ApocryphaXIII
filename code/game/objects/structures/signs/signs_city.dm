@@ -1,3 +1,4 @@
+//Considering having a subtype of this for "hanging" signs
 /obj/structure/sign/city
 	icon = 'code/modules/wod13/props.dmi'
 
@@ -81,6 +82,37 @@
 /obj/structure/sign/city/chinese/alt2
 	icon_state = "chinese3"
 
+/obj/structure/sign/city/strip_club
+	name = "sign"
+	desc = "It says DO RA. Maybe it's some kind of strip club..."
+	icon = 'code/modules/wod13/48x48.dmi'
+	icon_state = "dora"
+	plane = GAME_PLANE
+	layer = ABOVE_ALL_MOB_LAYER
+	anchored = TRUE
+	pixel_w = -8
+	pixel_z = 32
+
+/obj/structure/sign/city/strip_club/Initialize()
+	. = ..()
+	set_light(3, 2, "#8e509e")
+
+/obj/structure/sign/city/cabaret_sign
+	name = "cabaret"
+	desc = "An enticing pair of legs... I wonder what's inside?"
+	icon = 'icons/cabaret.dmi'
+	icon_state = "cabar"
+	plane = GAME_PLANE
+	layer = ABOVE_ALL_MOB_LAYER
+	anchored = TRUE
+
+/obj/structure/sign/city/cabaret_sign/Initialize()
+	. = ..()
+	set_light(3, 2, "#d98aec")
+
+/obj/structure/sign/city/cabaret_sign/two
+	icon_state = "et"
+
 /obj/structure/sign/city/store
 	icon = 'code/modules/wod13/fastfood.dmi'
 	icon_state = "bacotell"
@@ -103,46 +135,3 @@
 	name = "Gumma Guts"
 	desc = "Eat some precious chicken nuggets and donuts!"
 	icon_state = "gummaguts"
-
-#warn repath below
-
-/obj/structure/strip_club
-	name = "sign"
-	desc = "It says DO RA. Maybe it's some kind of strip club..."
-	icon = 'code/modules/wod13/48x48.dmi'
-	icon_state = "dora"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-	pixel_w = -8
-	pixel_z = 32
-
-/obj/structure/strip_club/Initialize()
-	. = ..()
-	set_light(3, 2, "#8e509e")
-
-/obj/structure/cabaret_sign
-	name = "cabaret"
-	desc = "An enticing pair of legs... I wonder what's inside?"
-	icon = 'icons/cabaret.dmi'
-	icon_state = "cabar"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/cabaret_sign/Initialize()
-	. = ..()
-	set_light(3, 2, "#d98aec")
-
-/obj/structure/cabaret_sign2
-	name = "cabaret"
-	desc = "An enticing pair of legs... I wonder what's inside?"
-	icon = 'icons/cabaret.dmi'
-	icon_state = "et"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/cabaret_sign2/Initialize()
-	. = ..()
-	set_light(3, 2, "#d98aec")

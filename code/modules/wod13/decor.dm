@@ -1432,6 +1432,7 @@
 
 /obj/structure/fluff/tv/order
 	name = "order screen"
+	desc = "A slightly battered looking TV. It shows a menu to order from."
 	icon_state = "order1"
 
 /obj/structure/fluff/tv/order/one

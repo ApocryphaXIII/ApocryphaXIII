@@ -85,6 +85,7 @@ GLOBAL_VAR(restart_counter)
 	Master.Initialize(10, FALSE, TRUE)
 
 	#ifdef UNIT_TESTS
+	log_world("Starting Test Run at [time_stamp()]!")
 	HandleTestRun()
 	#endif
 

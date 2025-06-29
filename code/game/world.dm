@@ -56,8 +56,10 @@ GLOBAL_VAR(restart_counter)
 	//DB schema and set RoundID if we can
 	SSdbcore.CheckSchemaVersion()
 	SSdbcore.SetRoundID()
+	log_world("Poll Data loading at [time_stamp()]!")
 	load_poll_data()
 
+	log_world("Gear loading at [time_stamp()]!")
 	populate_gear_list() // TFN ADDITION START: loadout
 	log_world("Gear loaded at [time_stamp()]!")
 

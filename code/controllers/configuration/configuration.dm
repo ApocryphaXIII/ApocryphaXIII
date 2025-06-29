@@ -118,7 +118,7 @@
 
 	log_config("Loading config file [filename]...")
 	var/list/lines = world.file2list("[directory]/[filename]")
-	log_config("[filename] has [length(Lines)] Lines.")
+	log_config("[filename] has [length(lines)] Lines.")
 	var/list/_entries = entries
 	for(var/L in lines)
 		L = trim(L)

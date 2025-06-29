@@ -71,7 +71,7 @@ SUBSYSTEM_DEF(city_time)
 				to_chat(H, span_danger("THE SUN SEARS YOUR FLESH"))
 				H.take_damage(50, BURN)
 
-	if(station_time_passed() > time_till_roundend && !roundend__started)
+	if(station_time_passed() > time_till_roundend && !roundend_started)
 		roundend_started = TRUE
 		SSticker.force_ending = 1
 		SSticker.current_state = GAME_STATE_FINISHED

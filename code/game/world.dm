@@ -59,6 +59,7 @@ GLOBAL_VAR(restart_counter)
 	load_poll_data()
 
 	populate_gear_list() // TFN ADDITION START: loadout
+	log_world("Gear loaded at [time_stamp()]!")
 
 #ifndef USE_CUSTOM_ERROR_HANDLER
 	world.log = file("[GLOB.log_directory]/dd.log")
@@ -78,6 +79,7 @@ GLOBAL_VAR(restart_counter)
 		fdel(RESTART_COUNTER_PATH)
 
 	if(NO_INIT_PARAMETER in params)
+		log_world("NO_INIT_PARAMETER in params so returning")
 		return
 
 	SetupLogs()
@@ -89,9 +91,12 @@ GLOBAL_VAR(restart_counter)
 	HandleTestRun()
 	#endif
 
+	log_world("World extra done loading at [time_stamp()]!")
+
 /world/proc/InitTgs()
 	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)
 	GLOB.revdata.load_tgs_info()
+	log_world("TGS loaded at [time_stamp()]!")
 
 /world/proc/HandleTestRun()
 	//trigger things to run the whole process

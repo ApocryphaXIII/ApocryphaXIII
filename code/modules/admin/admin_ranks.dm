@@ -131,7 +131,6 @@ GLOBAL_PROTECT(protected_ranks)
 	var/ranks_text = file2text("[global.config.directory]/admin_ranks.txt")
 	var/datum/admin_rank/previous_rank
 	var/regex/admin_ranks_regex = new(@"^Name\s*=\s*(.+?)\s*\n+Include\s*=\s*([\l @]*?)\s*\n+Exclude\s*=\s*([\l @]*?)\s*\n+Edit\s*=\s*([\l @]*?)\s*\n*$", "gm")
-	log_world("TESTING: entering danger zone")
 	while(admin_ranks_regex.Find(ranks_text))
 		var/datum/admin_rank/R = new(admin_ranks_regex.group[1])
 		if(!R)
@@ -147,22 +146,17 @@ GLOBAL_PROTECT(protected_ranks)
 		GLOB.admin_ranks += R
 		GLOB.protected_ranks += R
 		previous_rank = R
-	log_world("TESTING: hurts you")
 	if(!CONFIG_GET(flag/admin_legacy_system) || dbfail)
 		if(CONFIG_GET(flag/load_legacy_ranks_only))
-			log_world("TESTING: are we here?")
 			if(!no_update)
 				sync_ranks_with_db()
 		else
-			log_world("TESTING: or are we here.")
 			var/datum/db_query/query_load_admin_ranks = SSdbcore.NewQuery("SELECT `rank`, flags, exclude_flags, can_edit_flags FROM [format_table_name("admin_ranks")]")
 			if(!query_load_admin_ranks.Execute())
-				log_world("TESTING: *scream")
 				message_admins("Error loading admin ranks from database. Loading from backup.")
 				log_sql("Error loading admin ranks from database. Loading from backup.")
 				dbfail = 1
 			else
-				log_world("TESTING: danger zone 2")
 				while(query_load_admin_ranks.NextRow())
 					var/skip
 					var/rank_name = query_load_admin_ranks.item[1]
@@ -179,7 +173,6 @@ GLOBAL_PROTECT(protected_ranks)
 							continue
 						GLOB.admin_ranks += R
 			qdel(query_load_admin_ranks)
-	log_world("TESTING: how did i get here.")
 	//load ranks from backup file
 	if(dbfail)
 		var/backup_file = file2text("data/admins_backup.json")
@@ -187,7 +180,6 @@ GLOBAL_PROTECT(protected_ranks)
 			log_world("Unable to locate admins backup file.")
 			return FALSE
 		var/list/json = json_decode(backup_file)
-		log_world("TESTING: danger zone 3")
 		for(var/J in json["ranks"])
 			var/skip
 			for(var/datum/admin_rank/R in GLOB.admin_ranks)
@@ -200,7 +192,6 @@ GLOBAL_PROTECT(protected_ranks)
 				continue
 			GLOB.admin_ranks += R
 		return json
-	log_world("TESTING: letting the days go by")
 	#ifdef TESTING
 	var/msg = "Permission Sets Built:\n"
 	for(var/datum/admin_rank/R in GLOB.admin_ranks)
@@ -213,28 +204,23 @@ GLOBAL_PROTECT(protected_ranks)
 
 /proc/load_admins(no_update)
 	var/dbfail
-	log_world("TESTING: where")
 	if(!CONFIG_GET(flag/admin_legacy_system) && !SSdbcore.Connect())
 		message_admins("Failed to connect to database while loading admins. Loading from backup.")
 		log_sql("Failed to connect to database while loading admins. Loading from backup.")
 		dbfail = 1
-	log_world("TESTING: are")
 	//clear the datums references
 	GLOB.admin_datums.Cut()
 	for(var/client/C in GLOB.admins)
 		C.remove_admin_verbs()
 		C.holder = null
-	log_world("TESTING: you")
 	GLOB.admins.Cut()
 	GLOB.protected_admins.Cut()
 	GLOB.deadmins.Cut()
 	var/list/backup_file_json = load_admin_ranks(dbfail, no_update)
 	dbfail = backup_file_json != null
-	log_world("TESTING: piece")
 	//Clear profile access
 	for(var/A in world.GetConfig("admin"))
 		world.SetConfig("APP/admin", A, null)
-	log_world("TESTING: of")
 	var/list/rank_names = list()
 	for(var/datum/admin_rank/R in GLOB.admin_ranks)
 		rank_names[R.name] = R
@@ -242,14 +228,12 @@ GLOBAL_PROTECT(protected_ranks)
 	var/admins_text = file2text("[global.config.directory]/admins.txt")
 	var/regex/admins_regex = new(@"^(?!#)(.+?)\s+=\s+(.+)", "gm")
 	var/saftey_word = 0
-	log_world("TESTING: shit")
 	while(admins_regex.Find(admins_text))
 		saftey_word++
 		if(saftey_word > 500)
 			stack_trace("We do NOT have [saftey_word] admins. Something is wrong.")
 			break
 		new /datum/admins(rank_names[admins_regex.group[2]], ckey(admins_regex.group[1]), FALSE, TRUE)
-	log_world("TESTING: why")
 	if(!CONFIG_GET(flag/admin_legacy_system) || dbfail)
 		var/datum/db_query/query_load_admins = SSdbcore.NewQuery("SELECT ckey, `rank` FROM [format_table_name("admin")] ORDER BY `rank`")
 		if(!query_load_admins.Execute())
@@ -273,7 +257,6 @@ GLOBAL_PROTECT(protected_ranks)
 				if(!skip)
 					new /datum/admins(rank_names[admin_rank], admin_ckey)
 		qdel(query_load_admins)
-	log_world("TESTING: who")
 	//load admins from backup file
 	if(dbfail)
 		if(!backup_file_json)

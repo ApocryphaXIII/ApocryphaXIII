@@ -7,7 +7,6 @@
 		/datum/discipline/presence,
 		/datum/discipline/temporis
 	)
-	violating_appearance = FALSE
 	is_enlightened = TRUE
 	male_clothes = /obj/item/clothing/under/vampire/rich
 	female_clothes = /obj/item/clothing/under/vampire/business

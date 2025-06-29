@@ -158,8 +158,7 @@
 					dominate_me = TRUE
 				if(istype(H.ears, /obj/item/clothing/ears/earmuffs))
 					continue
-
-			if(user.generation > L.generation && !dominate_me)
+			if(user.generation > L.generation && !dominate_me && !HAS_TRAIT(L, TRAIT_CANNOT_RESIST_MIND_CONTROL))
 				continue
 
 			var/mypower = SSroll.storyteller_roll(user.get_total_social(), difficulty = 6, mobs_to_show_output = user, numerical = 1)

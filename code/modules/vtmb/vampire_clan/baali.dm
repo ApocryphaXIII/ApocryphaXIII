@@ -7,6 +7,9 @@
 		/datum/discipline/presence,
 		/datum/discipline/daimonion
 	)
+	clan_traits = list(
+		TRAIT_REPELLED_BY_HOLINESS
+	)
 	male_clothes = /obj/item/clothing/under/vampire/baali
 	female_clothes = /obj/item/clothing/under/vampire/baali/female
 	is_enlightened = TRUE
@@ -16,6 +19,11 @@
 /datum/vampire_clan/baali/on_gain(mob/living/carbon/human/H)
 	..()
 	H.faction |= CLAN_BAALI
+
+	H.AddElement(/datum/element/holy_weakness)
+
+	var/datum/brain_trauma/mild/phobia/security/religious_trauma = new()
+	H.gain_trauma(religious_trauma, TRAUMA_RESILIENCE_ABSOLUTE)
 
 /mob/living/simple_animal/hostile/baali_guard
 	name = "Infernal Creature"

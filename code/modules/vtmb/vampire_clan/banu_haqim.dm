@@ -7,6 +7,9 @@
 		/datum/discipline/obfuscate,
 		/datum/discipline/quietus
 	)
+	clan_traits = list(
+		TRAIT_VITAE_ADDICTION
+	)
 	male_clothes = /obj/item/clothing/under/vampire/turtleneck_navy
 	female_clothes = /obj/item/clothing/under/vampire/turtleneck_navy
 	clan_keys = /obj/item/vamp/keys/banuhaqim

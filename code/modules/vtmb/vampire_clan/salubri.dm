@@ -8,6 +8,10 @@
 		/datum/discipline/valeren
 	)
 	common_disciplines = list(/datum/discipline/valeren_warrior)
+	clan_traits = list(
+		TRAIT_CONSENSUAL_FEEDING_ONLY,
+		TRAIT_IRRESISTIBLE_VITAE
+	)
 	male_clothes = /obj/item/clothing/under/vampire/salubri
 	female_clothes = /obj/item/clothing/under/vampire/salubri/female
 	whitelisted = TRUE

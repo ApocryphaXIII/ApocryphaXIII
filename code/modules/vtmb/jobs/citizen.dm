@@ -48,13 +48,8 @@
 			shoes = /obj/item/clothing/shoes/vampire
 		else
 			shoes = /obj/item/clothing/shoes/vampire/heels
-	if(H.clan)
-		if(H.clan.name == CLAN_LASOMBRA)
-			backpack_contents = list(/obj/item/passport =1, /obj/item/card/credit=1)
-	if(!H.clan)
-		backpack_contents = list(/obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
-	if(H.clane && H.clane.name != "Lasombra" && H.clane.name != "Kiasyd")
-		backpack_contents = list(/obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
+
+	backpack_contents = list(/obj/item/passport, /obj/item/flashlight, /obj/item/vamp/creditcard)
 
 /obj/effect/landmark/start/citizen
 	name = "Citizen"

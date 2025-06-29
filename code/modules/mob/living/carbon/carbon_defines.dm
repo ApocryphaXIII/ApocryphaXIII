@@ -113,6 +113,7 @@
 
 	var/last_experience = 0
 
+	var/datum/relationship/Myself
 	var/datum/relationship/MyRelationships
 
 

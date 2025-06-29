@@ -7,14 +7,19 @@
 		/datum/discipline/dominate,
 		/datum/discipline/obtenebration
 	)
+	clan_traits = list(
+		TRAIT_REJECTED_BY_TECHNOLOGY,
+		TRAIT_NO_REFLECTION
+	)
 	male_clothes = /obj/item/clothing/under/vampire/emo
 	female_clothes = /obj/item/clothing/under/vampire/business
 	is_enlightened = TRUE
 	whitelisted = FALSE
 	clan_keys = /obj/item/vamp/keys/lasombra
 
-/datum/vampire_clan/lasombra/post_gain(mob/living/carbon/human/H)
-	..()
+/datum/vampire_clan/lasombra/on_gain(mob/living/carbon/human/H)
+	. = ..()
+
 	var/obj/item/organ/eyes/night_vision/NV = new()
 	NV.Insert(H, TRUE, FALSE)
 	H.vis_flags |= VIS_HIDE

@@ -7,7 +7,6 @@
 		/datum/discipline/animalism,
 		/datum/discipline/dominate
 	)
-	violating_appearance = FALSE
 	male_clothes = /obj/item/clothing/under/vampire/sport
 	female_clothes = /obj/item/clothing/under/vampire/red
 	is_enlightened = TRUE
@@ -15,8 +14,9 @@
 	restricted_disciplines = list(/datum/discipline/vicissitude)
 	whitelisted = FALSE
 
-/datum/vampire_clan/old_clan_tzimisce/post_gain(mob/living/carbon/human/H)
-	..()
+/datum/vampire_clan/old_clan_tzimisce/on_join_round(mob/living/carbon/human/H)
+	. = ..()
+
 	var/obj/item/ground_heir/heirloom = new(get_turf(H))
 	var/list/slots = list(
 		LOCATION_LPOCKET = ITEM_SLOT_LPOCKET,
@@ -25,4 +25,4 @@
 		LOCATION_HANDS = ITEM_SLOT_HANDS
 	)
 	H.equip_in_one_of_slots(heirloom, slots, FALSE)
-	heirl = heirloom
+	H.AddComponent(/datum/component/needs_home_soil, heirloom)

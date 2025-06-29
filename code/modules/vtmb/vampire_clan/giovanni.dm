@@ -7,12 +7,16 @@
 		/datum/discipline/dominate,
 		/datum/discipline/necromancy
 	)
+	clan_traits = list(
+		TRAIT_PAINFUL_VAMPIRE_KISS
+	)
 	male_clothes = /obj/item/clothing/under/vampire/suit
 	female_clothes = /obj/item/clothing/under/vampire/suit/female
 	whitelisted = FALSE
 
-/datum/vampire_clan/giovanni/post_gain(mob/living/carbon/human/H)
+/datum/vampire_clan/giovanni/on_join_round(mob/living/carbon/human/H)
 	. = ..()
+
 	H.grant_language(/datum/language/italian)
 
 	var/obj/item/necromancy_tome/necrotome = new()

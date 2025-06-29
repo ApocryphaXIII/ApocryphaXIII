@@ -7,7 +7,6 @@
 		/datum/discipline/fortitude,
 		/datum/discipline/necromancy
 	)
-	violating_appearance = FALSE
 	alt_sprite = "rotten1"
 	alt_sprite_greyscale = TRUE
 
@@ -15,20 +14,20 @@
 	clan_keys = /obj/item/vamp/keys/cappadocian
 
 /datum/vampire_clan/cappadocian/on_gain(mob/living/carbon/human/H)
+	. = ..()
+
 	var/years_undead = H.chronological_age - H.age
 	switch(years_undead)
 		if (-INFINITY to 100)
-			rot_body(1)
+			H.rot_body(1)
 		if (100 to 300)
-			rot_body(2)
+			H.rot_body(2)
 		if (300 to 500)
-			rot_body(3)
+			H.rot_body(3)
 		if (500 to INFINITY)
-			rot_body(4)
+			H.rot_body(4)
 
-	..()
-
-/datum/vampire_clan/cappadocian/post_gain(mob/living/carbon/human/H)
+/datum/vampire_clan/cappadocian/on_join_round(mob/living/carbon/human/H)
 	. = ..()
 
 	var/obj/item/necromancy_tome/necrotome = new()
@@ -40,7 +39,9 @@
 	)
 	H.equip_in_one_of_slots(necrotome, slots, FALSE)
 
-	if ((alt_sprite == "rotten1") || (alt_sprite == "rotten2"))
+	// Only old, skeletonised Cappadocians need the robes and mask
+	var/alternative_appearance = GET_BODY_SPRITE(H)
+	if ((alternative_appearance == "rotten1") || (alternative_appearance == "rotten2"))
 		return
 
 	var/obj/item/clothing/suit/hooded/robes/darkred/new_robe = new(H.loc)

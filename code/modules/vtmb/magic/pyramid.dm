@@ -659,9 +659,7 @@
 		// Revive the specimen and turn them into a gargoyle kindred
 		target_body.revive(TRUE)
 		target_body.set_species(/datum/species/kindred)
-		target_body.clan = new /datum/vampire_clan/gargoyle()
-		target_body.clan.on_gain(target_body)
-		target_body.clan.post_gain(target_body)
+		target_body.set_clan(/datum/vampire_clan/gargoyle)
 		target_body.apply_status_effect(STATUS_EFFECT_INLOVE, usr)
 		target_body.real_name = old_name // the ritual for some reason is deleting their old name and replacing it with a random name.
 		target_body.name = old_name

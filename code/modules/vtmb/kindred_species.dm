@@ -204,10 +204,6 @@
 	var/datum/action/give_vitae/vitae = new()
 	vitae.Grant(C)
 
-	//this needs to be adjusted to be more accurate for blood spending rates
-	var/datum/discipline/bloodheal/giving_bloodheal = new(clamp(11 - C.generation, 1, 10))
-	C.give_discipline(giving_bloodheal)
-
 	var/datum/action/blood_power/bloodpower = new()
 	bloodpower.Grant(C)
 
@@ -400,20 +396,17 @@
 							else
 								save_data_v = FALSE
 
-						childe.roundstart_vampire = FALSE
 						childe.set_species(/datum/species/kindred)
-						childe.clan = null
+						childe.set_clan(null)
 						childe.generation = sire.generation+1
 
 						childe.skin_tone = get_vamp_skin_color(childe.skin_tone)
 						childe.update_body()
 
 						if(childe.generation <= 13)
-							childe.clan = new sire.clan.type()
-							childe.clan.on_gain(childe)
-							childe.clan.post_gain(childe)
+							childe.set_clan(sire.clan)
 						else
-							childe.clan = new /datum/vampire_clan/caitiff()
+							childe.set_clan(/datum/vampire_clan/caitiff)
 
 						if(childe.clan.alt_sprite)
 							childe.skin_tone = "albino"
@@ -513,7 +506,6 @@
 						if(NPC.ghoulificate(owner))
 							if(!HAS_TRAIT(regnant, TRAIT_UNBONDING))
 								new_master = TRUE
-								NPC.roundstart_vampire = FALSE
 					if(thrall.mind)
 						if(iskindred(thrall) && HAS_TRAIT(regnant, TRAIT_DEFICIENT_VITAE))
 							thrall.mind.link_blood_of_creator(owner)
@@ -538,9 +530,8 @@
 					else if(!iskindred(thrall) && !isnpc(thrall))
 						var/save_data_g = FALSE
 						thrall.set_species(/datum/species/ghoul)
-						thrall.clan = null
+						thrall.set_clan(null)
 						var/response_g = input(thrall, "Do you wish to keep being a ghoul on your save slot?(Yes will be a permanent choice and you can't go back)") in list("Yes", "No")
-						thrall.roundstart_vampire = FALSE
 						var/datum/species/ghoul/ghoul = thrall.dna.species
 						ghoul.master = owner
 						ghoul.last_vitae = world.time
@@ -572,7 +563,7 @@
  * If discipline_pref is true, it grabs all of the source's Disciplines from their preferences
  * and applies those using the give_discipline() proc. If false, it instead grabs a given list
  * of Discipline typepaths and initialises those for the character. Only works for ghouls and
- * vampires, and it also applies the Clan's post_gain() effects
+ * vampires.
  *
  * Arguments:
  * * discipline_pref - Whether Disciplines will be taken from preferences. True by default.
@@ -608,9 +599,6 @@
 
 		for (var/datum/discipline/discipline in adding_disciplines)
 			give_discipline(discipline)
-
-		if(clan)
-			clan.post_gain(src)
 
 	if((dna.species.id == "kuei-jin")) //only splats that have Disciplines qualify
 		var/list/datum/chi_discipline/adding_disciplines = list()
@@ -664,26 +652,6 @@
 
 /datum/species/kindred/check_roundstart_eligible()
 	return TRUE
-
-/datum/species/kindred/handle_body(mob/living/carbon/human/H)
-	if (!H.clan)
-		return ..()
-
-	//deflate people if they're super rotten
-	if ((H.clan.alt_sprite == "rotten4") && (H.base_body_mod == "f"))
-		H.base_body_mod = ""
-
-	if(H.clan.alt_sprite)
-		H.dna.species.limbs_id = "[H.base_body_mod][H.clan.alt_sprite]"
-
-	if (H.clan.no_hair)
-		H.hairstyle = "Bald"
-
-	if (H.clan.no_facial)
-		H.facial_hairstyle = "Shaved"
-
-	..()
-
 
 /**
  * Signal handler for lose_organ to near-instantly kill Kindred whose hearts have been removed.
@@ -802,12 +770,12 @@
 				var/datum/vampire_clan/main_clan
 				switch(student.clan.type)
 					if (/datum/vampire_clan/true_brujah)
-						main_clan = new /datum/vampire_clan/brujah
+						main_clan = GLOB.vampire_clans[/datum/vampire_clan/brujah]
 					if (/datum/vampire_clan/old_clan_tzimisce)
-						main_clan = new /datum/vampire_clan/tzimisce
+						main_clan = GLOB.vampire_clans[/datum/vampire_clan/tzimisce]
 
 				student_prefs.clan = main_clan
-				student.clan = main_clan
+				student.set_clan(main_clan)
 
 			student_prefs.save_character()
 			teacher_prefs.save_character()

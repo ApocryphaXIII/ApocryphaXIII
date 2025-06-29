@@ -458,7 +458,7 @@
 
 		//examine text for unusual appearances
 		if (iskindred(src) && is_face_visible())
-			switch(clan.alt_sprite)
+			switch (GET_BODY_SPRITE(src))
 				if (CLAN_NOSFERATU)
 					msg += span_warning("[p_they(TRUE)] look[p_s()] utterly deformed and inhuman!<br>")
 				if (CLAN_GARGOYLE)

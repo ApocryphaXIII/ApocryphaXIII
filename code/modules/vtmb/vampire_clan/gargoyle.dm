@@ -7,23 +7,23 @@
 		/datum/discipline/potence,
 		/datum/discipline/visceratika
 	)
+	clan_traits = list(
+		TRAIT_CANNOT_RESIST_MIND_CONTROL,
+		TRAIT_MASQUERADE_VIOLATING_FACE
+	)
 	alt_sprite = "gargoyle"
 	no_facial = FALSE
-	violating_appearance = TRUE
 	male_clothes = /obj/item/clothing/under/vampire/malkavian
 	female_clothes = /obj/item/clothing/under/vampire/malkavian
-	current_accessory = "gargoyle_full"
+	default_accessory = "gargoyle_full"
 	accessories = list("gargoyle_full", "gargoyle_left", "gargoyle_right", "gargoyle_broken", "gargoyle_round", "gargoyle_devil", "gargoyle_oni", "none")
 	accessories_layers = list("gargoyle_full" = UNICORN_LAYER, "gargoyle_left" = UNICORN_LAYER, "gargoyle_right" = UNICORN_LAYER, "gargoyle_broken" = UNICORN_LAYER, "gargoyle_round" = UNICORN_LAYER, "gargoyle_devil" = UNICORN_LAYER, "gargoyle_oni" = UNICORN_LAYER, "none" = UNICORN_LAYER)
 	whitelisted = FALSE
 
-/datum/vampire_clan/gargoyle/on_gain(mob/living/carbon/human/H)
+/datum/vampire_clan/gargoyle/on_gain(mob/living/carbon/human/gargoyle)
 	..()
-	H.dna.species.wings_icon = "Gargoyle"
-	H.physiology.brute_mod = 0.8
-
-/datum/vampire_clan/gargoyle/post_gain(mob/living/carbon/human/gargoyle)
-	..()
+	gargoyle.dna.species.wings_icon = "Gargoyle"
+	gargoyle.physiology.brute_mod = 0.8
 	gargoyle.dna.species.GiveSpeciesFlight(gargoyle)
 
 	if(gargoyle.shoes)

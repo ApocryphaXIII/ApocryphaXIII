@@ -130,12 +130,30 @@
 	var/mob/living/carbon/human/vampire = target
 	if(iskindred(vampire))
 		var/datum/species/kindred/clan = vampire.dna.species
-		for(var/datum/discipline/discipline in clan.disciplines)
-			if(!discipline.clan_restricted)
-				break
-			if (!vampire.clan.clan_disciplines.Find(discipline.type))
-				to_chat(owner, span_notice("[target] fears that the fact they stole the knowledge of [discipline] will be known."))
-				break
+		if(clan.get_discipline("Quietus") && vampire.clan?.name != CLAN_BANU_HAQIM)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Banu Haqim's Quietus will be known."))
+		if(clan.get_discipline("Protean") && vampire.clan?.name != CLAN_GANGREL)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Gangrel's Protean will be known."))
+		if(clan.get_discipline("Serpentis") && vampire.clan?.name != CLAN_SETITES)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Ministry's Serpentis will be known."))
+		if(clan.get_discipline("Necromancy") && vampire.clan?.name != CLAN_GIOVANNI || clan.get_discipline("Necromancy") && vampire.clan?.name != CLAN_CAPPADOCIAN)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Giovanni's Necromancy will be known."))
+		if(clan.get_discipline("Obtenebration") && vampire.clan?.name != CLAN_LASOMBRA)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Lasombra's Obtenebration will be known."))
+		if(clan.get_discipline("Dementation") && vampire.clan?.name != CLAN_MALKAVIAN)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Malkavian's Dementation will be known."))
+		if(clan.get_discipline("Vicissitude") && vampire.clan?.name != CLAN_TZIMISCE)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Tzimisce's Vicissitude will be known."))
+		if(clan.get_discipline("Melpominee") && vampire.clan?.name != CLAN_DAUGHTERS_OF_CACOPHONY)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Daughters of Cacophony's Melpominee will be known."))
+		if(clan.get_discipline("Daimonion") && vampire.clan?.name != CLAN_BAALI)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Baali's Daimonion will be known."))
+		if(clan.get_discipline("Temporis") && vampire.clan?.name != CLAN_TRUE_BRUJAH)
+			to_chat(owner, span_notice("[target] fears that the fact they stole True Brujah's Temporis will be known."))
+		if(clan.get_discipline("Valeren") && vampire.clan?.name != CLAN_SALUBRI)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Salubri's Valeren will be known."))
+		if(clan.get_discipline("Mytherceria") && vampire.clan?.name != CLAN_KIASYD)
+			to_chat(owner, span_notice("[target] fears that the fact they stole Kiasyd's Mytherceria will be known."))
 
 //FEAR OF THE VOID BELOW
 /datum/discipline_power/daimonion/fear_of_the_void_below

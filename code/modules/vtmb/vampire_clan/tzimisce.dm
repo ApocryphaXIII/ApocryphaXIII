@@ -7,14 +7,12 @@
 		/datum/discipline/animalism,
 		/datum/discipline/vicissitude
 	)
-	violating_appearance = FALSE
 	male_clothes = /obj/item/clothing/under/vampire/sport
 	female_clothes = /obj/item/clothing/under/vampire/red
 	clan_keys = /obj/item/vamp/keys/tzimisce
 	is_enlightened = TRUE
 	var/obj/item/heirl
 	whitelisted = FALSE // dont ruin it
-	current_accessory = "none"
 	accessories = list("spines", "spines_slim", "animal_skull", "none")
 	accessories_layers = list("spines" = UNICORN_LAYER, "spines_slim" = UNICORN_LAYER, "animal_skull" = UNICORN_LAYER, "none" = UNICORN_LAYER)
 
@@ -37,8 +35,9 @@
 	die_with_shapeshifted_form = FALSE
 	shapeshift_type = /mob/living/simple_animal/hostile/bloodcrawler
 
-/datum/vampire_clan/tzimisce/post_gain(mob/living/carbon/human/H)
-	..()
+/datum/vampire_clan/tzimisce/on_join_round(mob/living/carbon/human/H)
+	. = ..()
+
 	var/obj/item/ground_heir/heirloom = new(get_turf(H))
 	var/list/slots = list(
 		LOCATION_LPOCKET = ITEM_SLOT_LPOCKET,
@@ -47,7 +46,7 @@
 		LOCATION_HANDS = ITEM_SLOT_HANDS
 	)
 	H.equip_in_one_of_slots(heirloom, slots, FALSE)
-	heirl = heirloom
+	H.AddComponent(/datum/component/needs_home_soil, heirloom)
 
 /datum/crafting_recipe/tzi_trench
 	name = "Leather-Bone Trenchcoat (Armor)"

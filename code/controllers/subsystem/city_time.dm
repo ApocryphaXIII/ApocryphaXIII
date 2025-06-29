@@ -7,8 +7,6 @@ SUBSYSTEM_DEF(city_time)
 	var/hour = 21
 	var/minutes = 0
 
-	var/timeofnight = "21:00"
-
 /proc/get_next_hour(number)
 	if(number == 23)
 		return 0
@@ -28,7 +26,6 @@ SUBSYSTEM_DEF(city_time)
 	else
 		minutes = max(0, minutes+1)
 
-	timeofnight = "[get_watch_number(hour)]:[get_watch_number(minutes)]"
 	// TFN EDIT REFACTOR START
 	if(minutes == 0)
 		for(var/mob/living/carbon/werewolf/W in GLOB.player_list)
@@ -80,7 +77,7 @@ SUBSYSTEM_DEF(city_time)
 		Master.SetRunLevel(RUNLEVEL_POSTGAME)
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			var/area/vtm/V = get_area(H)
-			if(iskindred(H) && V.upper)
-				H.death()
-			if(iscathayan(H) && V.upper)
+			if(!V?.upper)
+				continue
+			if(iskindred(H) || iscathayan(H))
 				H.death()

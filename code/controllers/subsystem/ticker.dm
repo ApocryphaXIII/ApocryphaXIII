@@ -38,8 +38,8 @@ SUBSYSTEM_DEF(ticker)
 	var/timeLeft						//pregame timer
 	var/start_at
 
-	var/gametime_offset = 432000		//Deciseconds to add to world.time for station time.
-	var/station_time_rate_multiplier = 1		//factor of station time progressal vs real time.
+	var/gametime_offset = 21 HOURS //Deciseconds to add to world.time for station time.
+	var/station_time_rate_multiplier = 2 //factor of station time progressal vs real time.
 
 	var/totalPlayers = 0					//used for pregame stats on statpanel
 	var/totalPlayersReady = 0				//used for pregame stats on statpanel
@@ -54,6 +54,7 @@ SUBSYSTEM_DEF(ticker)
 	var/roundend_check_paused = FALSE
 
 	var/round_start_time = 0
+	var/round_start_timeofday = 0
 	var/list/round_start_events
 	var/list/round_end_events
 	var/mode_result = "undefined"
@@ -141,11 +142,7 @@ SUBSYSTEM_DEF(ticker)
 		GLOB.syndicate_code_response_regex = codeword_match
 
 	start_at = world.time + (CONFIG_GET(number/lobby_countdown) * 10)
-	gametime_offset = 23 HOURS
-	if(CONFIG_GET(flag/randomize_shift_time))
-		gametime_offset = rand(0, 23) HOURS
-	else if(CONFIG_GET(flag/shift_time_realtime))
-		gametime_offset = world.timeofday
+
 	return ..()
 
 /datum/controller/subsystem/ticker/fire()
@@ -294,6 +291,7 @@ SUBSYSTEM_DEF(ticker)
 
 	log_world("Game start took [(world.timeofday - init_start)/10]s")
 	round_start_time = world.time
+	round_start_timeofday = world.timeofday
 	SSdbcore.SetRoundStart()
 
 	to_chat(world, "<span class='notice'><B>[station_name()] is calling you. Farewell, vampire!</B></span>")

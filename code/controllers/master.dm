@@ -109,10 +109,6 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	if(!GLOB)
 		new /datum/controller/global_vars
 
-	#ifdef UNIT_TESTS
-		log_world("Loaded Master Controller at [time_stamp()]!")
-	#endif
-
 /datum/controller/master/Destroy()
 	..()
 	// Tell qdel() to Del() this object.

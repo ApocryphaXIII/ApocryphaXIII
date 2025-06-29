@@ -64,6 +64,7 @@
 
 	if (Master)
 		Master.OnConfigLoad()
+	log_config("All configs loaded")
 
 /datum/controller/configuration/proc/full_wipe()
 	if(IsAdminAdvancedProcCall())
@@ -117,6 +118,7 @@
 
 	log_config("Loading config file [filename]...")
 	var/list/lines = world.file2list("[directory]/[filename]")
+	log_config("[filename] has [length(Lines)] Lines.")
 	var/list/_entries = entries
 	for(var/L in lines)
 		L = trim(L)
@@ -186,6 +188,7 @@
 		if(validated)
 			E.modified = TRUE
 
+	log_config("Finished config file [filename]...")
 	++.
 
 /datum/controller/configuration/can_vv_get(var_name)
@@ -290,7 +293,7 @@ Example config:
 			policy = parsed
 
 /datum/controller/configuration/proc/loadmaplist(filename)
-	log_config("Loading config file [filename]...")
+	log_config("Loading map config file [filename]...")
 	filename = "[directory]/[filename]"
 	var/list/Lines = world.file2list(filename)
 	log_config("[filename] has [length(Lines)] Lines.")

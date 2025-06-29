@@ -1589,8 +1589,9 @@
 				drop_all_held_items()
 				ClickOn(our_pole)
 			else
-				for(var/obj/structure/pole/P in loc)
+				for(var/obj/structure/pole/P in range(1, src))
 					our_pole = P
+					step_to(src, P.loc, 0)
 					break
 
 /mob/living/carbon/human/npc/incel

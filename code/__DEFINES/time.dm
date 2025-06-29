@@ -3,6 +3,9 @@
 ///displays the current time into the round, with a lot of extra code just there for ensuring it looks okay after an entire day passes
 #define ROUND_TIME(...) ( "[STATION_TIME_PASSED() > MIDNIGHT_ROLLOVER ? "[round(STATION_TIME_PASSED()/MIDNIGHT_ROLLOVER)]:[gameTimestamp(wtime = STATION_TIME_PASSED())]" : gameTimestamp(wtime = STATION_TIME_PASSED())]" )
 
+///same as above, but based on real time of day
+#define ROUND_REALTIMEOFDAY(...) ( "[REALTIMEOFDAY - SSticker.round_start_timeofday > MIDNIGHT_ROLLOVER ? "[round((REALTIMEOFDAY - SSticker.round_start_timeofday)/MIDNIGHT_ROLLOVER)]:[time2text(world.timeofday - SSticker.round_start_timeofday, "hh:mm:ss", 0)]" : time2text(world.timeofday - SSticker.round_start_timeofday, "hh:mm:ss", 0)]" )
+
 ///Returns the time that has passed since the game started
 #define STATION_TIME_PASSED(...) (world.time - SSticker.round_start_time)
 
@@ -10,7 +13,7 @@
 #define CURRENT_STATION_YEAR (GLOB.year_integer + STATION_YEAR_OFFSET)
 
 /// In-universe, TFN is set 10 years in the past from the real-world day, hence this number for determining the year-offset for the in-game year.
-#define STATION_YEAR_OFFSET -10
+#define STATION_YEAR_OFFSET -17
 
 #define JANUARY		1
 #define FEBRUARY	2

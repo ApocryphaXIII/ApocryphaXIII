@@ -397,3 +397,36 @@
 						var/obj/effect/decal/cleanable/car_trail/trail = new(src)
 						trail.dir = Obj.dir
 	*/
+
+/obj/effect/decal/cleanable/trash
+	name = "trash"
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "trash1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/trash/Initialize()
+	. = ..()
+	icon_state = "trash[rand(1, 30)]"
+
+/obj/effect/decal/cleanable/litter
+	name = "litter"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "paper1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/litter/Initialize()
+	. = ..()
+	icon_state = "paper[rand(1, 6)]"
+
+/obj/effect/decal/cleanable/cardboard
+	name = "cardboard"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "cardboard1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/cardboard/Initialize()
+	. = ..()
+	icon_state = "cardboard[rand(1, 5)]"
+	var/matrix/M = matrix()
+	M.Turn(rand(0, 360))
+	transform = M

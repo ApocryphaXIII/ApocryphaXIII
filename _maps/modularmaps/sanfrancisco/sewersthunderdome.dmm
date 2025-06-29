@@ -21,7 +21,7 @@
 /turf/open/floor/light/colour_cycle/dancefloor_b,
 /area/vtm/sewer)
 "cl" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "cx" = (
@@ -37,7 +37,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "eM" = (
-/obj/effect/decal/litter{
+/obj/effect/decal/cleanable/litter{
 	pixel_x = 5;
 	pixel_y = 3
 	},
@@ -99,7 +99,7 @@
 /area/vtm/sewer)
 "ny" = (
 /obj/effect/decal/pallet,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/structure/closet/crate/large,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
@@ -238,7 +238,7 @@
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/sewer)
 "As" = (
-/obj/effect/decal/litter{
+/obj/effect/decal/cleanable/litter{
 	pixel_x = 5;
 	pixel_y = 3
 	},
@@ -305,7 +305,7 @@
 /turf/open/floor/light/colour_cycle/dancefloor_b,
 /area/vtm/sewer)
 "KB" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/machinery/light/small{
 	pixel_y = 18

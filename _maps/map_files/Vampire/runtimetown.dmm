@@ -145,12 +145,8 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "ee" = (
-/obj/gummaguts{
-	pixel_x = 32;
-	pixel_y = 38
-	},
-/turf/open/floor/plating/vampbeach,
-/area/vtm/pacificheights)
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/shop)
 "eg" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
@@ -177,7 +173,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "eJ" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash5"
 	},
 /turf/open/floor/plating/concrete,
@@ -204,7 +200,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "fn" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "fS" = (
@@ -216,7 +212,7 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/pacificheights)
 "gb" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
@@ -254,7 +250,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "ht" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash5"
 	},
 /turf/open/floor/plating/vampbeach,
@@ -290,7 +286,7 @@
 /area/vtm/pacificheights)
 "iA" = (
 /obj/effect/decal/cleanable/garbage,
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash8"
 	},
 /turf/open/floor/plating/vampbeach,
@@ -334,7 +330,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "jt" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
@@ -349,14 +345,14 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "ki" = (
-/obj/order{
+/obj/structure/sign/city/order{
 	pixel_y = 32
 	},
-/obj/order3{
+/obj/structure/fluff/tv/order/three{
 	pixel_x = -10;
 	pixel_y = 12
 	},
-/obj/order4{
+/obj/structure/fluff/tv/order/four{
 	pixel_y = 12;
 	pixel_x = 6
 	},
@@ -388,7 +384,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "lP" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash5"
 	},
 /obj/effect/spawner/random/occult/artifact,
@@ -457,15 +453,15 @@
 /area/vtm/pacificheights)
 "nA" = (
 /obj/effect/decal/cleanable/garbage,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "nD" = (
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_y = 12;
 	pixel_x = -10
 	},
-/obj/order2{
+/obj/structure/fluff/tv/order/two{
 	pixel_y = 12;
 	pixel_x = 6
 	},
@@ -482,7 +478,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "ok" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "ov" = (
@@ -502,7 +498,7 @@
 /area/vtm/supply)
 "oU" = (
 /obj/weapon_showcase,
-/obj/american_flag{
+/obj/flag/usa{
 	pixel_y = 32
 	},
 /turf/open/floor/plating/parquetry/old,
@@ -541,7 +537,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "pH" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash7"
 	},
 /obj/effect/spawner/random/occult/artifact,
@@ -555,6 +551,12 @@
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
+"qr" = (
+/obj/structure/sign/city/police_department{
+	dir = 8
+	},
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "qt" = (
 /obj/machinery/computer/cargo/express{
@@ -668,13 +670,13 @@
 /area/vtm/interior/techshop)
 "sy" = (
 /mob/living/carbon/human/npc/shop,
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash7"
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "sX" = (
-/obj/bubway{
+/obj/structure/sign/city/store/bubway{
 	pixel_y = 40
 	},
 /turf/open/floor/plating/vampbeach,
@@ -697,6 +699,12 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
+"tr" = (
+/obj/structure/sign/city/police_department{
+	dir = 1
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "ts" = (
 /obj/machinery/fax/endron,
 /turf/open/floor/plating/vampbeach,
@@ -718,6 +726,10 @@
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
+"tO" = (
+/obj/structure/sign/city/police_department,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "uC" = (
 /obj/structure/table,
 /obj/item/ammo_box/magazine/glock45acp,
@@ -737,6 +749,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+/obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "uK" = (
@@ -765,7 +778,7 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "vm" = (
-/obj/bacotell{
+/obj/structure/sign/city/store/bacotell{
 	pixel_x = 1;
 	pixel_y = 40
 	},
@@ -812,7 +825,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/shuttle/arrival)
 "wO" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "wW" = (
@@ -826,7 +839,7 @@
 /turf/closed/wall/vampwall/junk/alt,
 /area/vtm/pacificheights)
 "xC" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "xE" = (
@@ -958,7 +971,7 @@
 /area/vtm/sewer)
 "Bf" = (
 /obj/effect/decal/cleanable/garbage,
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash7"
 	},
 /turf/open/floor/plating/vampbeach,
@@ -1058,24 +1071,24 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Dw" = (
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_y = 12
 	},
-/obj/order2{
+/obj/structure/fluff/tv/order/two{
 	pixel_y = 12
 	},
-/obj/order3{
+/obj/structure/fluff/tv/order/three{
 	pixel_x = 16;
 	pixel_y = 12
 	},
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_x = -16;
 	pixel_y = 12
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "DF" = (
-/obj/gummaguts{
+/obj/structure/sign/city/store/gummaguts{
 	pixel_x = 16;
 	pixel_y = 38
 	},
@@ -1147,6 +1160,13 @@
 "EY" = (
 /turf/closed/wall/vampwall/rich,
 /area/vtm/pacificheights)
+"Ff" = (
+/obj/effect/spawner/random/trash/grime{
+	spawn_loot_count = 30;
+	spawn_scatter_radius = 3
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "Fg" = (
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
@@ -1167,7 +1187,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "FG" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/effect/decal/graffiti/large,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
@@ -1276,6 +1296,13 @@
 /obj/effect/decal/wallpaper,
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
+"Hy" = (
+/obj/machinery/vamp/atm{
+	dir = 8;
+	pixel_x = 8
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "HJ" = (
 /obj/effect/decal/stock,
 /turf/open/floor/plating/asphalt,
@@ -1382,6 +1409,12 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
+"Kj" = (
+/obj/structure/sign/city/police_department{
+	dir = 4
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "Ko" = (
 /obj/effect/landmark/npcbeacon/directed{
 	dir = 8
@@ -1408,7 +1441,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Lk" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash7"
 	},
 /turf/open/floor/plating/vampbeach,
@@ -1552,6 +1585,13 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"OU" = (
+/obj/effect/spawner/random/trash/grime{
+	spawn_loot_count = 20;
+	spawn_scatter_radius = 3
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "OX" = (
 /obj/machinery/fax/admin/endron,
 /turf/open/floor/plating/vampbeach,
@@ -1632,6 +1672,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
+/obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Rb" = (
@@ -1685,7 +1726,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "SF" = (
@@ -1826,7 +1867,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Vv" = (
-/obj/order4{
+/obj/structure/fluff/tv/order/four{
 	pixel_y = 12
 	},
 /obj/machinery/griddle,
@@ -1936,7 +1977,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Yr" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
@@ -2061,7 +2102,7 @@ mw
 ok
 NR
 NR
-NR
+Ff
 NR
 fn
 ok
@@ -2780,7 +2821,7 @@ ZU
 ZU
 ZU
 ZU
-NR
+OU
 NR
 NR
 NR
@@ -2816,7 +2857,7 @@ Bt
 rL
 UJ
 NR
-NR
+Hy
 NR
 cj
 ik
@@ -3088,7 +3129,7 @@ Fg
 mm
 GH
 Fg
-NR
+tO
 NR
 cj
 ik
@@ -3156,7 +3197,7 @@ oW
 oW
 LW
 Fg
-NR
+tr
 NR
 cj
 ik
@@ -3190,7 +3231,7 @@ kS
 kS
 kS
 Fg
-NR
+Kj
 NR
 Dh
 en
@@ -3222,9 +3263,9 @@ kS
 DF
 yE
 Tq
-Cr
 ee
-NR
+Fg
+qr
 NR
 cj
 ik
@@ -3256,8 +3297,8 @@ kS
 Tq
 pt
 TO
-kS
-NR
+ee
+Cr
 NR
 NR
 cj
@@ -3291,7 +3332,7 @@ BX
 Ro
 zx
 kS
-NR
+kS
 NR
 NR
 cj

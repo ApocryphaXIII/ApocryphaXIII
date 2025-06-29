@@ -201,23 +201,28 @@ GLOBAL_PROTECT(protected_ranks)
 
 /proc/load_admins(no_update)
 	var/dbfail
+	log_world("TESTING: where")
 	if(!CONFIG_GET(flag/admin_legacy_system) && !SSdbcore.Connect())
 		message_admins("Failed to connect to database while loading admins. Loading from backup.")
 		log_sql("Failed to connect to database while loading admins. Loading from backup.")
 		dbfail = 1
+	log_world("TESTING: are")
 	//clear the datums references
 	GLOB.admin_datums.Cut()
 	for(var/client/C in GLOB.admins)
 		C.remove_admin_verbs()
 		C.holder = null
+	log_world("TESTING: you")
 	GLOB.admins.Cut()
 	GLOB.protected_admins.Cut()
 	GLOB.deadmins.Cut()
 	var/list/backup_file_json = load_admin_ranks(dbfail, no_update)
 	dbfail = backup_file_json != null
+	log_world("TESTING: piece")
 	//Clear profile access
 	for(var/A in world.GetConfig("admin"))
 		world.SetConfig("APP/admin", A, null)
+	log_world("TESTING: of")
 	var/list/rank_names = list()
 	for(var/datum/admin_rank/R in GLOB.admin_ranks)
 		rank_names[R.name] = R
@@ -225,12 +230,14 @@ GLOBAL_PROTECT(protected_ranks)
 	var/admins_text = file2text("[global.config.directory]/admins.txt")
 	var/regex/admins_regex = new(@"^(?!#)(.+?)\s+=\s+(.+)", "gm")
 	var/saftey_word = 0
+	log_world("TESTING: shit")
 	while(admins_regex.Find(admins_text))
 		saftey_word++
 		if(saftey_word > 500)
 			stack_trace("We do NOT have [saftey_word] admins. Something is wrong.")
 			break
 		new /datum/admins(rank_names[admins_regex.group[2]], ckey(admins_regex.group[1]), FALSE, TRUE)
+	log_world("TESTING: why")
 	if(!CONFIG_GET(flag/admin_legacy_system) || dbfail)
 		var/datum/db_query/query_load_admins = SSdbcore.NewQuery("SELECT ckey, `rank` FROM [format_table_name("admin")] ORDER BY `rank`")
 		if(!query_load_admins.Execute())
@@ -254,6 +261,7 @@ GLOBAL_PROTECT(protected_ranks)
 				if(!skip)
 					new /datum/admins(rank_names[admin_rank], admin_ckey)
 		qdel(query_load_admins)
+	log_world("TESTING: who")
 	//load admins from backup file
 	if(dbfail)
 		if(!backup_file_json)

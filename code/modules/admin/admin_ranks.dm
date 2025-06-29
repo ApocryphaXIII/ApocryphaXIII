@@ -131,6 +131,7 @@ GLOBAL_PROTECT(protected_ranks)
 	var/ranks_text = file2text("[global.config.directory]/admin_ranks.txt")
 	var/datum/admin_rank/previous_rank
 	var/regex/admin_ranks_regex = new(@"^Name\s*=\s*(.+?)\s*\n+Include\s*=\s*([\l @]*?)\s*\n+Exclude\s*=\s*([\l @]*?)\s*\n+Edit\s*=\s*([\l @]*?)\s*\n*$", "gm")
+	log_world("TESTING: entering danger zone")
 	while(admin_ranks_regex.Find(ranks_text))
 		var/datum/admin_rank/R = new(admin_ranks_regex.group[1])
 		if(!R)
@@ -140,9 +141,13 @@ GLOBAL_PROTECT(protected_ranks)
 			if(i)
 				R.process_keyword(i, count, previous_rank)
 			count++
+			if(count > 500)
+				stack_trace("Possible infinite loop. Breaking")
+				return
 		GLOB.admin_ranks += R
 		GLOB.protected_ranks += R
 		previous_rank = R
+	log_world("TESTING: hurts you")
 	if(!CONFIG_GET(flag/admin_legacy_system) || dbfail)
 		if(CONFIG_GET(flag/load_legacy_ranks_only))
 			if(!no_update)

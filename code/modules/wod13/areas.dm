@@ -37,13 +37,13 @@
 /area/vtm/interior
 	name = "Interior"
 	icon_state = "interior"
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/interior/shop
 	name = "Shop"
 	icon_state = "shop"
+	ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -88,6 +88,7 @@
 /area/vtm/interior/techshop
 	name = "Nightwolf Techshop"
 	icon_state = "shop"
+	ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -95,6 +96,7 @@
 /area/vtm/interior/bianchiBank
 	name = "Bianchi Bank"
 	icon_state = "giovanni"
+	ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	zone_type = "elysium"
 	fire_controled = TRUE
@@ -296,7 +298,6 @@
 /area/vtm/jazzclub
 	name = "Jazz Club"
 	icon_state = "camarilla"
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	zone_type = "elysium"
 	fire_controled = TRUE
@@ -305,7 +306,6 @@
 /area/vtm/cabaret
 	name = "Siren's Cabaret"
 	icon_state = "melpominee"
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -339,7 +339,6 @@
 /area/vtm/anarch
 	name = "Bar"
 	icon_state = "anarch"
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	music_index = MUSIC_BAR
 	zone_type = "elysium"
@@ -349,7 +348,6 @@
 /area/vtm/anarch/basement
 	name = "Bar - Basement"
 	icon_state = "anarch"
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	music_index = MUSIC_BAR
 	zone_type = "elysium"
@@ -359,7 +357,6 @@
 /area/vtm/anarch/garage
 	name = "Garage"
 	icon_state = "anarch"
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
@@ -384,7 +381,6 @@
 	name = "Church - Interior"
 	icon_state = "church"
 	music_index = MUSIC_CHURCH
-	//ambience_index = AMBIENCE_OFFICE
 	upper = FALSE
 	fire_controled = TRUE
 	wall_rating = LOW_WALL_RATING
@@ -410,7 +406,6 @@
 /area/vtm/graveyard
 	name = "Graveyard"
 	icon_state = "graveyard"
-	//ambience_index = AMBIENCE_OFFICE
 	musictracks = list('sound/musictracks/infected_warehouse.ogg')
 	upper = TRUE
 	zone_type = "battle"
@@ -461,7 +456,6 @@
 /area/vtm/sewer/cappadocian
 	name = "Cappadocian Crypt"
 	icon_state = "graveyard"
-	//ambience_index = AMBIENCE_OFFICE
 	music_index = MUSIC_HOLLYWOOD
 	upper = FALSE
 	zone_type = "elysium"

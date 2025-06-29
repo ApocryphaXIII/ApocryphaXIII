@@ -81,10 +81,6 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 		config = new
 	// Highlander-style: there can only be one! Kill off the old and replace it with the new.
 
-	#ifdef UNIT_TESTS
-		log_world("Starting Master Controller at [time_stamp()]!")
-	#endif
-
 	if(!random_seed)
 		#ifdef UNIT_TESTS
 		random_seed = 29051994

@@ -143,7 +143,7 @@ GLOBAL_PROTECT(protected_ranks)
 			count++
 			if(count > 500)
 				stack_trace("Possible infinite loop. Breaking")
-				return
+				break
 		GLOB.admin_ranks += R
 		GLOB.protected_ranks += R
 		previous_rank = R
@@ -159,6 +159,7 @@ GLOBAL_PROTECT(protected_ranks)
 				log_sql("Error loading admin ranks from database. Loading from backup.")
 				dbfail = 1
 			else
+				log_world("TESTING: danger zone 2")
 				while(query_load_admin_ranks.NextRow())
 					var/skip
 					var/rank_name = query_load_admin_ranks.item[1]
@@ -175,6 +176,7 @@ GLOBAL_PROTECT(protected_ranks)
 							continue
 						GLOB.admin_ranks += R
 			qdel(query_load_admin_ranks)
+	log_world("TESTING: how did i get here.")
 	//load ranks from backup file
 	if(dbfail)
 		var/backup_file = file2text("data/admins_backup.json")
@@ -182,6 +184,7 @@ GLOBAL_PROTECT(protected_ranks)
 			log_world("Unable to locate admins backup file.")
 			return FALSE
 		var/list/json = json_decode(backup_file)
+		log_world("TESTING: danger zone 3")
 		for(var/J in json["ranks"])
 			var/skip
 			for(var/datum/admin_rank/R in GLOB.admin_ranks)
@@ -194,6 +197,7 @@ GLOBAL_PROTECT(protected_ranks)
 				continue
 			GLOB.admin_ranks += R
 		return json
+	log_world("TESTING: letting the days go by")
 	#ifdef TESTING
 	var/msg = "Permission Sets Built:\n"
 	for(var/datum/admin_rank/R in GLOB.admin_ranks)

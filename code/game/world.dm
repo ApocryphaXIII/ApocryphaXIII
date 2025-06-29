@@ -86,16 +86,14 @@ GLOBAL_VAR(restart_counter)
 	Master.Initialize(10, FALSE, TRUE)
 
 	#ifdef UNIT_TESTS
-	log_world("Starting Test Run at [time_stamp()]!")
 	HandleTestRun()
 	#endif
 
-	log_world("World extra done loading at [time_stamp()]!")
+	log_world("World finished at [time_stamp()]!")
 
 /world/proc/InitTgs()
 	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)
 	GLOB.revdata.load_tgs_info()
-	log_world("TGS loaded at [time_stamp()]!")
 
 /world/proc/HandleTestRun()
 	//trigger things to run the whole process

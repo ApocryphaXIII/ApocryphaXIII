@@ -201,6 +201,7 @@ GLOBAL_PROTECT(protected_ranks)
 
 /proc/load_admins(no_update)
 	var/dbfail
+	log_world("Admins loading at [time_stamp()]!")
 	if(!CONFIG_GET(flag/admin_legacy_system) && !SSdbcore.Connect())
 		message_admins("Failed to connect to database while loading admins. Loading from backup.")
 		log_sql("Failed to connect to database while loading admins. Loading from backup.")
@@ -271,6 +272,7 @@ GLOBAL_PROTECT(protected_ranks)
 		msg += "\t[ckey] - [D.rank.name]\n"
 	testing(msg)
 	#endif
+	log_world("Admins loaded at [time_stamp()]!")
 	return dbfail
 
 #ifdef TESTING

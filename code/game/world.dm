@@ -50,11 +50,14 @@ GLOBAL_VAR(restart_counter)
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
 
+	log_world("Admins loading at [time_stamp()]!")
 	load_admins()
+	log_world("Admins loaded at [time_stamp()]!")
 
 	//SetupLogs depends on the RoundID, so lets check
 	//DB schema and set RoundID if we can
 	SSdbcore.CheckSchemaVersion()
+	log_world("Trying to set RoundID at [time_stamp()]!")
 	SSdbcore.SetRoundID()
 	log_world("Poll Data loading at [time_stamp()]!")
 	load_poll_data()

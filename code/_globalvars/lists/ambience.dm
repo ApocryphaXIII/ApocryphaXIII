@@ -113,9 +113,9 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_OFFICE = GLOB.interior_office
 	))
 
-
-GLOBAL_LIST_INIT(prince_music,list('code/modules/wod13/sounds/prince.ogg'))
-
 GLOBAL_LIST_INIT(music_assoc,list(
-	MUSIC_PRINCE = GLOB.prince_music,
+	MUSIC_CITY = list('code/modules/wod13/sounds/downtown.ogg'),
+	MUSIC_FOREST = list('code/modules/wod13/sounds/night_ambience.ogg'),
+	MUSIC_CHURCH = list('code/modules/wod13/sounds/hahihaho.ogg'),
+	MUSIC_PRINCE = list('code/modules/wod13/sounds/prince.ogg'),
 	))

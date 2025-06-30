@@ -59,7 +59,7 @@ SUBSYSTEM_DEF(dbcore)
 		if(2)
 			message_admins("Could not get schema version from database")
 
-	return TRUE
+	. = ..()
 
 /datum/controller/subsystem/dbcore/OnConfigLoad()
 	. = ..()

@@ -43,19 +43,12 @@
 		burnt = TRUE
 	if(mapload && prob(33))
 		MakeDirty()
-	if(is_station_level(z))
-		GLOB.station_turfs += src
 
 /turf/open/floor/proc/setup_broken_states()
 	return list("damaged1", "damaged2", "damaged3", "damaged4", "damaged5")
 
 /turf/open/floor/proc/setup_burnt_states()
 	return
-
-/turf/open/floor/Destroy()
-	if(is_station_level(z))
-		GLOB.station_turfs -= src
-	return ..()
 
 /turf/open/floor/ex_act(severity, target)
 	var/shielded = is_shielded()

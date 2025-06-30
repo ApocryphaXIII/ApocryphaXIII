@@ -140,6 +140,9 @@ GLOBAL_PROTECT(protected_ranks)
 			if(i)
 				R.process_keyword(i, count, previous_rank)
 			count++
+			if(count > 500)
+				stack_trace("Possible infinite loop. Breaking")
+				break
 		GLOB.admin_ranks += R
 		GLOB.protected_ranks += R
 		previous_rank = R
@@ -224,7 +227,12 @@ GLOBAL_PROTECT(protected_ranks)
 	//ckeys listed in admins.txt are always made admins before sql loading is attempted
 	var/admins_text = file2text("[global.config.directory]/admins.txt")
 	var/regex/admins_regex = new(@"^(?!#)(.+?)\s+=\s+(.+)", "gm")
+	var/saftey_word = 0
 	while(admins_regex.Find(admins_text))
+		saftey_word++
+		if(saftey_word > 500)
+			stack_trace("We do NOT have [saftey_word] admins. Something is wrong.")
+			break
 		new /datum/admins(rank_names[admins_regex.group[2]], ckey(admins_regex.group[1]), FALSE, TRUE)
 	if(!CONFIG_GET(flag/admin_legacy_system) || dbfail)
 		var/datum/db_query/query_load_admins = SSdbcore.NewQuery("SELECT ckey, `rank` FROM [format_table_name("admin")] ORDER BY `rank`")
@@ -234,6 +242,10 @@ GLOBAL_PROTECT(protected_ranks)
 			dbfail = 1
 		else
 			while(query_load_admins.NextRow())
+				saftey_word++
+				if(saftey_word > 500)
+					stack_trace("We do NOT have [saftey_word] admins. Something is wrong.")
+					break
 				var/admin_ckey = ckey(query_load_admins.item[1])
 				var/admin_rank = query_load_admins.item[2]
 				var/skip

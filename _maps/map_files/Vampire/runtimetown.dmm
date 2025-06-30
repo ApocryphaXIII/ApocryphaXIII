@@ -418,7 +418,10 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "mw" = (
-/obj/structure/ladder/manhole/up,
+/obj/structure/ladder/manhole/up{
+	connect_down = 1;
+	connect_up = 0
+	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "mW" = (
@@ -1346,7 +1349,10 @@
 /turf/closed/wall/vampwall/market,
 /area/vtm/pacificheights)
 "IL" = (
-/obj/structure/ladder/manhole/up,
+/obj/structure/ladder/manhole/up{
+	connect_down = 1;
+	connect_up = 0
+	},
 /turf/open/floor/plating/rough,
 /area/vtm/interior/techshop)
 "IO" = (
@@ -1964,7 +1970,10 @@
 /area/vtm/pacificheights)
 "XU" = (
 /obj/structure/railing,
-/obj/structure/ladder/manhole/down,
+/obj/structure/ladder/manhole/up{
+	connect_down = 1;
+	connect_up = 0
+	},
 /turf/open/floor/plating/vampcanal,
 /area/vtm/pacificheights)
 "XW" = (

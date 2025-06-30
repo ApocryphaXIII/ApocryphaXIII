@@ -41,7 +41,7 @@
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
 "bp" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/roadsign/crosswalk,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -111,7 +111,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "cj" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "cQ" = (
@@ -122,7 +122,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "cT" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/vampire_car/rand/camarilla{
 	dir = 2;
 	locked = 0
@@ -131,7 +131,7 @@
 /area/vtm/pacificheights)
 "cZ" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
@@ -185,7 +185,7 @@
 /turf/closed/wall/vampwall/rich/old/low/window/reinforced,
 /area/vtm/pacificheights)
 "fd" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/item/vamp/keys/clinic,
@@ -218,7 +218,7 @@
 /area/vtm/pacificheights)
 "gj" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -227,7 +227,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "gs" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/structure/lamppost/one{
@@ -239,14 +239,14 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/shop)
 "gS" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /obj/structure/lamppost/four,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "hi" = (
-/obj/effect/decal/asphaltline,
+/obj/effect/turf_decal/asphaltline,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "ht" = (
@@ -298,7 +298,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/pacificheights)
 "iM" = (
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -369,7 +369,7 @@
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
 "kX" = (
-/obj/effect/decal/crosswalk{
+/obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
@@ -482,7 +482,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "ov" = (
-/obj/effect/decal/crosswalk{
+/obj/effect/turf_decal/crosswalk{
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
@@ -507,7 +507,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "oX" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 6
 	},
 /turf/open/floor/plating/sidewalk,
@@ -531,7 +531,7 @@
 /area/vtm/pacificheights)
 "pG" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
@@ -547,7 +547,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "qn" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -629,7 +629,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/techshop)
 "rW" = (
-/obj/effect/decal/crosswalk,
+/obj/effect/turf_decal/crosswalk,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "sb" = (
@@ -644,20 +644,20 @@
 /area/vtm/sewer)
 "sk" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "sm" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/structure/roadsign/stop,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "so" = (
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
@@ -683,11 +683,11 @@
 /area/vtm/pacificheights)
 "tb" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "tf" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 10
 	},
 /obj/structure/lamppost/four,
@@ -717,7 +717,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "ty" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "tF" = (
@@ -753,7 +753,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "uK" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /obj/structure/lamppost/one{
@@ -769,7 +769,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "vl" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /obj/structure/lamppost/one{
@@ -789,7 +789,7 @@
 /area/vtm/pacificheights)
 "vs" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner,
+/obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "vz" = (
@@ -833,7 +833,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/shuttle/arrival)
 "xh" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/closed/wall/vampwall/junk/alt,
@@ -929,7 +929,7 @@
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
 "Ak" = (
-/obj/effect/decal/crosswalk{
+/obj/effect/turf_decal/crosswalk{
 	dir = 1
 	},
 /turf/open/floor/plating/asphalt,
@@ -953,7 +953,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "AU" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /obj/structure/lamppost/three{
@@ -977,7 +977,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Bq" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/lamppost/one,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -1023,7 +1023,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Cz" = (
-/obj/effect/decal/asphaltline{
+/obj/effect/turf_decal/asphaltline{
 	dir = 8
 	},
 /obj/structure/roadblock{
@@ -1050,7 +1050,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "Dh" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/vampire_car/rand/anarch{
 	dir = 2;
 	locked = 0
@@ -1065,7 +1065,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "Dr" = (
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1171,13 +1171,13 @@
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
 "Fs" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "FB" = (
-/obj/effect/decal/stock{
+/obj/effect/turf_decal/stock{
 	dir = 1
 	},
 /turf/open/floor/plating/asphalt,
@@ -1262,7 +1262,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Hb" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -1284,7 +1284,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "Hn" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /obj/effect/landmark/npcbeacon/directed{
@@ -1304,12 +1304,12 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "HJ" = (
-/obj/effect/decal/stock,
+/obj/effect/turf_decal/stock,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "HO" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1318,13 +1318,13 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/techshop)
 "Ie" = (
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "Ig" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/roadblock,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -1403,8 +1403,8 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Kg" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1435,7 +1435,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "KU" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1477,7 +1477,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "LX" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 10
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1496,7 +1496,7 @@
 /obj/machinery/light/small{
 	pixel_y = 16
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
@@ -1575,7 +1575,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "OH" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/item/vamp/keys/police,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -1632,7 +1632,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "PW" = (
-/obj/effect/decal/bordur/corner,
+/obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "PX" = (
@@ -1641,7 +1641,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "Qi" = (
-/obj/effect/decal/asphaltline/alt,
+/obj/effect/turf_decal/asphaltline/alt,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "Qv" = (
@@ -1650,20 +1650,20 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "QK" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "QM" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "QS" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1700,7 +1700,7 @@
 /area/vtm/interior/shop)
 "Rx" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -1718,7 +1718,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "Sv" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/barrels/rand,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -1752,7 +1752,7 @@
 /area/vtm/clinic)
 "Tp" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner,
+/obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Tq" = (
@@ -1857,7 +1857,7 @@
 /area/vtm/pacificheights)
 "Vh" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -1884,13 +1884,13 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "VQ" = (
-/obj/effect/decal/asphaltline{
+/obj/effect/turf_decal/asphaltline{
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "We" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -1956,7 +1956,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "XJ" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "XM" = (
@@ -1968,7 +1968,7 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/pacificheights)
 "XW" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /mob/living/carbon/human/npc/hobo,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
@@ -2020,7 +2020,7 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "YL" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/structure/roadsign/speedlimit,
@@ -2032,7 +2032,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "Zc" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,

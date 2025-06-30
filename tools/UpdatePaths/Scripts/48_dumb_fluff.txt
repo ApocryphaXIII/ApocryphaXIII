@@ -25,3 +25,11 @@
 /obj/order2 : /obj/structure/fluff/tv/order/two {@OLD}
 /obj/order3 : /obj/structure/fluff/tv/order/three {@OLD}
 /obj/order4 : /obj/structure/fluff/tv/order/four {@OLD}
+
+/obj/effect/decal/asphaltline : /obj/effect/turf_decal/asphaltline {@OLD}
+/obj/effect/decal/asphaltline/@SUBTYPES : /obj/effect/turf_decal/asphaltline/@SUBTYPES {@OLD}
+/obj/effect/decal/bordur : /obj/effect/turf_decal/bordur {@OLD}
+/obj/effect/decal/bordur/@SUBTYPES : /obj/effect/turf_decal/bordur/@SUBTYPES {@OLD}
+/obj/effect/decal/asphalt : /obj/effect/turf_decal/asphalt {@OLD}
+/obj/effect/decal/crosswalk : /obj/effect/turf_decal/crosswalk {@OLD}
+/obj/effect/decal/stock : /obj/effect/turf_decal/stock {@OLD}

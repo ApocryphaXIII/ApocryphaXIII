@@ -243,10 +243,10 @@
 	. = ..()
 	if(allowed_to_proceed)
 		if(!HAS_TRAIT(owner,TRAIT_DOGWOLF))
-			ADD_TRAIT(owner, TRAIT_DOGWOLF, src)
+			ADD_TRAIT(owner, TRAIT_DOGWOLF, REF(src))
 			to_chat(owner, span_notice("You feel your canid nature softening!"))
 		else
-			REMOVE_TRAIT(owner, TRAIT_DOGWOLF, src)
+			REMOVE_TRAIT(owner, TRAIT_DOGWOLF, REF(src))
 			to_chat(owner, span_notice("You feel your lupine nature intensifying!"))
 
 		if(istype(owner, /mob/living/carbon/werewolf/lupus))

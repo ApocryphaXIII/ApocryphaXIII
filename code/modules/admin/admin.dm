@@ -389,6 +389,28 @@
 		to_chat(usr, "<font color='red'>Error: Start Now: Game has already started.</font>")
 	return FALSE
 
+/datum/admins/proc/set_end_time()
+	set category = "Server"
+	set desc="Set time for round to end"
+	set name="Set End Time"
+
+	var/newtime = input("Set a new time for round to end in seconds","Set End Time",round(SScity_time.time_till_roundend/10)) as num|null
+	if(newtime)
+		SScity_time.time_till_roundend = newtime*10
+		log_admin("[key_name(usr)] set end time.")
+		message_admins("[key_name_admin(usr)] has set end time to [SScity_time.time_till_roundend].")
+
+/datum/admins/proc/set_day_time()
+	set category = "Server"
+	set desc="Set time for day to start"
+	set name="Set Day Time"
+
+	var/newtime = input("Set a new time for daytime to start in seconds","Set End Time",round(SScity_time.time_till_daytime/10)) as num|null
+	if(newtime)
+		SScity_time.time_till_daytime = newtime*10
+		log_admin("[key_name(usr)] set day time.")
+		message_admins("[key_name_admin(usr)] has set day time to [SScity_time.time_till_daytime].")
+
 /datum/admins/proc/toggleenter()
 	set category = "Server"
 	set desc="People can't enter"

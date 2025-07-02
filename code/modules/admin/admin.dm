@@ -398,7 +398,7 @@
 	if(newtime)
 		SScity_time.time_till_roundend = newtime*10
 		log_admin("[key_name(usr)] set end time.")
-		message_admins("[key_name_admin(usr)] has set end time to [SScity_time.time_till_roundend].")
+		message_admins("[key_name_admin(usr)] has set end time to [SScity_time.time_till_roundend]/[DisplayTimeText(SScity_time.time_till_roundend)].")
 
 /datum/admins/proc/set_day_time()
 	set category = "Server"
@@ -409,7 +409,7 @@
 	if(newtime)
 		SScity_time.time_till_daytime = newtime*10
 		log_admin("[key_name(usr)] set day time.")
-		message_admins("[key_name_admin(usr)] has set day time to [SScity_time.time_till_daytime].")
+		message_admins("[key_name_admin(usr)] has set day time to [SScity_time.time_till_daytime]/[DisplayTimeText(SScity_time.time_till_daytime)].")
 
 /datum/admins/proc/toggleenter()
 	set category = "Server"

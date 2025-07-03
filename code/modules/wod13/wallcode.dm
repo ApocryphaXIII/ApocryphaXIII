@@ -377,13 +377,13 @@
 
 //TURFS
 
-/obj/effect/decal/asphalt
+/obj/effect/turf_decal/asphalt
 	name = "asphalt"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "decal1"
 	mouse_opacity = 0
 
-/obj/effect/decal/asphalt/Initialize()
+/obj/effect/turf_decal/asphalt/Initialize()
 	..()
 	icon_state = "decal[rand(1, 24)]"
 	update_appearance()
@@ -400,16 +400,17 @@
 	alpha = 200
 	mouse_opacity = 0
 
-/obj/effect/decal/asphaltline
+/obj/effect/turf_decal/asphaltline
 	name = "asphalt"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "line"
 	mouse_opacity = 0
+	layer = TURF_DECAL_LAYER
 
-/obj/effect/decal/asphaltline/alt
+/obj/effect/turf_decal/asphaltline/alt
 	icon_state = "line_alt"
 
-/obj/effect/decal/asphaltline/Initialize()
+/obj/effect/turf_decal/asphaltline/Initialize()
 	..()
 	icon_state = "[initial(icon_state)][rand(1, 3)]"
 	update_appearance()
@@ -419,13 +420,13 @@
 			if(V.upper)
 				icon_state = "[initial(icon_state)][rand(1, 3)]-snow"
 
-/obj/effect/decal/crosswalk
+/obj/effect/turf_decal/crosswalk
 	name = "asphalt"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "crosswalk1"
 	mouse_opacity = 0
 
-/obj/effect/decal/crosswalk/Initialize()
+/obj/effect/turf_decal/crosswalk/Initialize()
 	..()
 	icon_state = "crosswalk[rand(1, 3)]"
 	update_appearance()
@@ -462,7 +463,7 @@
 		icon_state = "asphalt[rand(1, 3)]"
 		update_appearance()
 	if(prob(25))
-		new /obj/effect/decal/asphalt(src)
+		new /obj/effect/turf_decal/asphalt(src)
 	set_light(1, 0.5, "#a4b7ff")
 
 /turf/open/floor/plating/asphalt/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
@@ -471,7 +472,7 @@
 /turf/open/floor/plating/asphalt/ex_act(severity, target)
 	contents_explosion(severity, target)
 
-/obj/effect/decal/stock
+/obj/effect/turf_decal/stock
 	name = "stock"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "stock"
@@ -574,13 +575,13 @@
 /turf/open/floor/plating/roofwalk/cobblestones
 	name = "cobblestones"
 
-/obj/effect/decal/bordur
+/obj/effect/turf_decal/bordur
 	name = "sidewalk"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "border"
 	mouse_opacity = 0
 
-/obj/effect/decal/bordur/Initialize()
+/obj/effect/turf_decal/bordur/Initialize()
 	. = ..()
 	if(GLOB.winter)
 		if(istype(get_area(src), /area/vtm))
@@ -588,7 +589,7 @@
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
 
-/obj/effect/decal/bordur/corner
+/obj/effect/turf_decal/bordur/corner
 	icon_state = "border_corner"
 
 //OTHER TURFS

@@ -1516,6 +1516,8 @@
 
 /mob/living/carbon/human/npc/stripper
 	staying = TRUE
+	//Stored so we have to do less range calls
+	var/obj/structure/pole/our_pole
 
 /mob/living/carbon/human/npc/stripper/Initialize()
 	. = ..()
@@ -1530,10 +1532,14 @@
 	. = ..()
 	if(stat < 2)
 		if(prob(20))
-			for(var/obj/structure/pole/P in range(1, src))
-				if(P)
-					drop_all_held_items()
-					ClickOn(P)
+			if(istype(our_pole) && (our_pole.loc == src.loc))
+				drop_all_held_items()
+				ClickOn(our_pole)
+			else
+				for(var/obj/structure/pole/P in range(1, src))
+					our_pole = P
+					step_to(src, P.loc, 0)
+					break
 
 /mob/living/carbon/human/npc/incel
 	staying = TRUE

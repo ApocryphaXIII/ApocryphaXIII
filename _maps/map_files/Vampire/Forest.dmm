@@ -22,24 +22,24 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "i" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 10
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "k" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "m" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "q" = (
@@ -64,16 +64,16 @@
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "y" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "z" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
 	dir = 9;
 	icon_state = "border"
 	},
@@ -129,8 +129,8 @@
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "Z" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/poor,

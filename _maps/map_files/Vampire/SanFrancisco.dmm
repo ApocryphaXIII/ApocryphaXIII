@@ -131,7 +131,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/laundromat)
 "aca" = (
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
 "aci" = (
@@ -6931,7 +6931,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/hotel)
 "bOv" = (
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "bOA" = (
@@ -11695,7 +11695,7 @@
 /area/vtm/interior/millennium_tower/f3)
 "dcU" = (
 /obj/effect/decal/graffiti,
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "dcW" = (
@@ -44791,7 +44791,7 @@
 /obj/structure/toilet{
 	dir = 8
 	},
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "mfu" = (
@@ -56411,7 +56411,7 @@
 	dir = 8;
 	pixel_x = 16
 	},
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "pgq" = (
@@ -57359,7 +57359,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/oldchurch)
 "ptE" = (
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "ptG" = (
@@ -71848,7 +71848,7 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/interior/endron_facility/helipad)
 "tib" = (
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto/old)
 "tic" = (
@@ -88670,7 +88670,7 @@
 /area/vtm/forest)
 "xLt" = (
 /obj/structure/barrels/rand,
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "xLv" = (

@@ -735,12 +735,15 @@ CREATE TABLE `SS13_tutorial_completions` (
   UNIQUE INDEX `ckey_tutorial_unique` (`ckey`, `tutorial_key`));
 
 DROP TABLE IF EXISTS `SS13_privacy`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `SS13_privacy` (
   `ckey` varchar(32) NOT NULL,
   `datetime` datetime NOT NULL,
   `consent` bit(1) NOT NULL,
   PRIMARY KEY (`ckey`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

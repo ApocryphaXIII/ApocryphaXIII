@@ -92,6 +92,9 @@
 	if(!GLOB.join_tos)
 		return TRUE
 
+	if(tos_consent)
+		return TRUE
+
 	if(!SSdbcore.Connect())
 		tos_consent = TRUE
 		return TRUE
@@ -164,10 +167,10 @@
 		var/datum/db_query/query = SSdbcore.NewQuery("REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES ('[ckey]', '[sqltime]', 1)")
 		query.Execute()
 		src << browse(null, "window=privacy_consent")
-		tos_consent = 1
+		tos_consent = TRUE
 		new_player_panel()
 	if(href_list["consent_rejected"])
-		tos_consent = 0
+		tos_consent = FALSE
 		to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
 		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
 		var/datum/db_query/query = SSdbcore.NewQuery("REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES ('[ckey]', '[sqltime]', 0)")

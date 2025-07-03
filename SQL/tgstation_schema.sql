@@ -735,6 +735,18 @@ CREATE TABLE `tutorial_completions` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `ckey_tutorial_unique` (`ckey`, `tutorial_key`));
 
+--
+-- Table structure for table `privacy`
+--
+
+DROP TABLE IF EXISTS `privacy`;
+CREATE TABLE `privacy` (
+  `ckey` varchar(32) NOT NULL,
+  `datetime` datetime NOT NULL,
+  `consent` bit(1) NOT NULL,
+  PRIMARY KEY (`ckey`)
+);
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;

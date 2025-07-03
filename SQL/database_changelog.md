@@ -15,8 +15,8 @@ INSERT INTO `SS13_schema_revision` (`major`, `minor`) VALUES (5, 32);
 In any query remember to add a prefix to the table names if you use one.
 
 -----------------------------------------------------
-Version 5.32, 2 June 2025, by FalloutFalcon
-Privacy policy consent
+Version 5.32, 3 July 2025, by FalloutFalcon
+Add a `privacy` policy consent table
 
 ```
 DROP TABLE IF EXISTS `privacy`;

@@ -910,6 +910,10 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/space)
+"hc" = (
+/obj/structure/tank_holder/anesthetic,
+/turf/open/floor/plating/vampplating,
+/area/space)
 "he" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -1309,6 +1313,10 @@
 /turf/open/floor/plating/concrete,
 /area/space)
 "kA" = (
+/turf/open/floor/wood,
+/area/space)
+"kC" = (
+/obj/structure/table/wood,
 /turf/open/floor/wood,
 /area/space)
 "kF" = (
@@ -1724,6 +1732,12 @@
 	},
 /turf/open/floor/plating/vampplating,
 /area/space)
+"nT" = (
+/obj/structure/fluff/hedge{
+	layer = 2.8
+	},
+/turf/open/floor/plating/concrete,
+/area/space)
 "nX" = (
 /obj/effect/decal/bordur/corner{
 	dir = 4
@@ -1974,6 +1988,10 @@
 	dir = 4
 	},
 /turf/open/floor/plating/vampplating/mono,
+/area/space)
+"pL" = (
+/obj/machinery/hydroponics,
+/turf/open/floor/plating/concrete,
 /area/space)
 "pM" = (
 /obj/structure/chair/plastic,
@@ -2747,6 +2765,10 @@
 	pixel_w = -16
 	},
 /turf/open/floor/plating/granite/black,
+/area/space)
+"wY" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/wood,
 /area/space)
 "xb" = (
 /obj/structure/chair/sofa/left{
@@ -3600,6 +3622,13 @@
 	dir = 1
 	},
 /area/space)
+"EK" = (
+/obj/structure/fluff/arc{
+	pixel_y = 13;
+	pixel_x = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/space)
 "EL" = (
 /obj/structure/closet/crate,
 /obj/item/weedpack,
@@ -3968,6 +3997,10 @@
 	dir = 8
 	},
 /turf/open/floor/plating/church,
+/area/space)
+"Il" = (
+/obj/structure/ice_stasis,
+/turf/open/floor/plating/vampplating,
 /area/space)
 "Io" = (
 /obj/effect/turf_decal/siding/white{
@@ -4479,6 +4512,10 @@
 "No" = (
 /obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/plating/vampdirt,
+/area/space)
+"Nt" = (
+/obj/structure/showcase/horrific_experiment,
+/turf/open/floor/plating/vampplating,
 /area/space)
 "Nu" = (
 /obj/effect/turf_decal/siding/white{
@@ -5646,6 +5683,10 @@
 	layer = 3.1
 	},
 /turf/open/floor/plating/vampplating/stone,
+/area/space)
+"WQ" = (
+/obj/structure/fermenting_barrel,
+/turf/open/floor/plating/concrete,
 /area/space)
 "WV" = (
 /obj/structure/chair/comfy/black{
@@ -17127,7 +17168,7 @@ tQ
 zR
 RL
 RL
-tQ
+RL
 tQ
 tQ
 tQ
@@ -39758,7 +39799,7 @@ wm
 Ca
 Ca
 Ca
-Ca
+EK
 Ca
 Ca
 Ca
@@ -40018,8 +40059,8 @@ Ca
 Ca
 Ca
 Ca
-Ca
-Ca
+Nt
+Il
 Ca
 Ca
 Ca
@@ -86330,15 +86371,15 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+WQ
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
 tQ
 tQ
 Lr
@@ -86587,16 +86628,16 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+nT
+XO
+nT
+ry
+ry
+ry
+ry
+ry
+ry
+ry
 tQ
 tQ
 Lr
@@ -86844,17 +86885,17 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+nT
+XO
+nT
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
 tQ
 Lr
 Lr
@@ -87101,17 +87142,17 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+nT
+XO
+nT
+ry
+ry
+ry
+ry
+ry
+pL
+ry
+ry
 tQ
 Lr
 Lr
@@ -87358,17 +87399,17 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+nT
+XO
+nT
+ry
+ry
+ry
+ry
+ry
+pL
+ry
+ry
 tQ
 Lr
 Lr
@@ -87615,17 +87656,17 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+WQ
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+pL
+ry
+ry
 tQ
 Lr
 Lr
@@ -87872,17 +87913,17 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+pL
+ry
+ry
 tQ
 Lr
 Lr
@@ -88129,17 +88170,17 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
 tQ
 Lr
 Lr
@@ -88386,17 +88427,17 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
 tQ
 Lr
 Lr
@@ -88643,17 +88684,17 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
+ry
 tQ
 Lr
 Lr
@@ -88900,13 +88941,13 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+kA
+kC
+kC
+kC
+kA
+kA
+kA
 tQ
 tQ
 tQ
@@ -89157,13 +89198,13 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+kA
+kA
+kA
+kC
+kA
+kA
+kA
 tQ
 Lr
 Lr
@@ -89414,14 +89455,14 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+kA
+kA
+kA
+kC
+kA
+kA
+kA
+kA
 Lr
 Lr
 Lr
@@ -89671,13 +89712,13 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+kA
+kA
+kA
+kC
+kA
+kA
+kA
 tQ
 Lr
 Lr
@@ -89928,12 +89969,12 @@ Lr
 GS
 Lr
 tQ
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
+wY
+kA
+kA
+kC
+kA
+kA
 tQ
 tQ
 Lr
@@ -166761,7 +166802,7 @@ BY
 RL
 DJ
 DJ
-Le
+hc
 Ca
 Ca
 YY
@@ -167017,8 +167058,8 @@ BY
 BY
 DJ
 DJ
-Le
-Le
+hc
+hc
 Ca
 Ca
 YY

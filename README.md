@@ -2,10 +2,8 @@
 * **Website:** TO_BE_DECLARED
 * **Code:** https://github.com/ApocryphaXIII/ApocryphaXIII
 * **Wiki:** UNDER_CONSTRUCTION
-* ~~**Codedocs:** https://codedocs.tgstation13.org/~~ + uselessly out of date +
 * **Apocrypha Discord:** https://discord.gg/2hnYrBJThD
 * **Coderbus Discord:** https://discord.gg/Vh8TJp9
-* ~~**IRC:** irc://irc.rizon.net/coderbus~~ (dead)
 
 This is the codebase for the ApocryphaXIII, a build of a fork of a downstream of a-- in any case...
 

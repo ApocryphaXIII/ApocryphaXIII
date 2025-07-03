@@ -63,6 +63,8 @@ SUBSYSTEM_DEF(city_time)
 	if(station_time_passed() > time_till_daytime && !daytime_started)
 		daytime_started = TRUE
 		to_chat(world, "<span class='ghostalert'>THE NIGHT IS OVER.</span>")
+
+	if(daytime_started)
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			var/area/vtm/V = get_area(H)
 			if(!V?.upper)

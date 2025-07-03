@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(unallocted_transfer_points)
+
 /obj/transfer_point_vamp
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "matrix_go"
@@ -8,15 +10,21 @@
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	var/obj/transfer_point_vamp/exit
-	var/id = 1
+	var/id = "unallocated"
 
 /obj/transfer_point_vamp/Initialize()
 	. = ..()
 	if(!exit)
-		for(var/obj/transfer_point_vamp/T in world)
+		if(isnum(id))
+			warning("[src] has a ID of [id]. Numbers are bad practice") // Im considering them bad practice cause you cant fucking tell where the lead - Fallcon
+		GLOB.unallocted_transfer_points += src
+		for(var/obj/transfer_point_vamp/T in GLOB.unallocted_transfer_points)
 			if(T.id == id && T != src)
 				exit = T
+				GLOB.unallocted_transfer_points -= T
 				T.exit = src
+				GLOB.unallocted_transfer_points -= src
+				break
 
 /obj/transfer_point_vamp/backrooms
 	id = "backrooms"

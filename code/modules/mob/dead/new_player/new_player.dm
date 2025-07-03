@@ -99,7 +99,10 @@
 		tos_consent = TRUE
 		return TRUE
 
-	var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM [format_table_name("privacy")] WHERE ckey='[src.ckey]' AND consent=1")
+	var/datum/db_query/query = SSdbcore.NewQuery(
+		"SELECT * FROM [format_table_name("privacy")] WHERE ckey=:ckey AND consent=:consent",
+		list("ckey" = ckey, "consent" = TRUE)
+	)
 	query.Execute()
 	while(query.NextRow())
 		tos_consent = TRUE
@@ -164,7 +167,10 @@
 
 	if(href_list["consent_signed"])
 		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
-		var/datum/db_query/query = SSdbcore.NewQuery("REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES ('[ckey]', '[sqltime]', 1)")
+		var/datum/db_query/query = SSdbcore.NewQuery(
+			"REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES (:ckey, :datetime, :consent)",
+			list("ckey" = ckey, "datetime" = sqltime, "consent" = TRUE)
+		)
 		query.Execute()
 		src << browse(null, "window=privacy_consent")
 		tos_consent = TRUE
@@ -173,7 +179,10 @@
 		tos_consent = FALSE
 		to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
 		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
-		var/datum/db_query/query = SSdbcore.NewQuery("REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES ('[ckey]', '[sqltime]', 0)")
+		var/datum/db_query/query = SSdbcore.NewQuery(
+			"REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES (:ckey, :datetime, :consent)",
+			list("ckey" = ckey, "datetime" = sqltime, "consent" = FALSE)
+		)
 		query.Execute()
 
 	if(client.interviewee)

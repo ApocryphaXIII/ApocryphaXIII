@@ -70,6 +70,8 @@ SUBSYSTEM_DEF(city_time)
 			if(!V?.upper)
 				continue
 			if(iskindred(H) || iscathayan(H))
+				if(((H.morality_path.score >= 10) && (H.morality_path.alignment == MORALITY_HUMANITY)))
+					continue
 				to_chat(H, span_danger("THE SUN SEARS YOUR FLESH"))
 				H.take_damage(50, BURN)
 

@@ -1,4 +1,0 @@
-author: "FalloutFalcon"
-delete-after: True
-changes:
-  - refactor: "few unrelated refactors to try and speed up init"

@@ -387,6 +387,10 @@
 
 /datum/config_entry/flag/shift_time_realtime
 
+/datum/config_entry/number/shift_time_start
+	max_val = 24
+	min_val = 0
+
 /datum/config_entry/keyed_list/antag_rep
 	key_mode = KEY_MODE_TEXT
 	value_mode = VALUE_MODE_NUM

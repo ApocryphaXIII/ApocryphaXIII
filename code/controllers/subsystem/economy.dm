@@ -86,8 +86,9 @@ SUBSYSTEM_DEF(economy)
 	for(var/obj/machinery/vending/V in GLOB.machines)
 		if(istype(V, /obj/machinery/vending/custom))
 			continue
-		if(!is_station_level(V.z))
-			continue
+		//Should not be needed anymore as even things off san-fran should prob have prices.
+		//if(!is_station_level(V.z))
+		//	continue
 		V.reset_prices(V.product_records, V.coin_records)
 	earning_report = "Sector Economic Report<br /> Sector vendor prices is currently at [SSeconomy.inflation_value()*100]%.<br /> The station spending power is currently <b>[station_total] Credits</b>, and the crew's targeted allowance is at <b>[station_target] Credits</b>.<br /> That's all from the <i>Nanotrasen Economist Division</i>."
 	GLOB.news_network.submit_article(earning_report, "Station Earnings Report", "Station Announcements", null, update_alert = FALSE)

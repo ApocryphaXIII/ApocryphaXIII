@@ -73,7 +73,7 @@ SUBSYSTEM_DEF(city_time)
 				if(((H.morality_path.score >= 10) && (H.morality_path.alignment == MORALITY_HUMANITY)))
 					continue
 				to_chat(H, span_danger("THE SUN SEARS YOUR FLESH"))
-				H.take_damage(50, BURN, FIRE)
+				H.apply_damage(50, BURN)
 
 	if(station_time_passed() > time_till_roundend && !roundend_started)
 		roundend_started = TRUE

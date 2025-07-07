@@ -10,7 +10,6 @@
 	density = TRUE
 	roundstart = FALSE
 	death = FALSE
-	mob_species = /datum/species/pod
 	short_desc = "You are a sentient ecosystem, an example of the mastery over life that your creators possessed."
 	flavour_text = "Your masters, benevolent as they were, created uncounted seed vaults and spread them across \
 	the universe to every planet they could chart. You are in one such seed vault. \

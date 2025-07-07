@@ -64,6 +64,15 @@ SUBSYSTEM_DEF(city_time)
 		daytime_started = TRUE
 		to_chat(world, "<span class='ghostalert'>THE NIGHT IS OVER.</span>")
 
+	if(station_time_passed() > time_till_roundend && !roundend_started)
+		roundend_started = TRUE
+		SSticker.force_ending = 1
+		SSticker.current_state = GAME_STATE_FINISHED
+		toggle_ooc(TRUE) // Turn it on
+		toggle_dooc(TRUE)
+		SSticker.declare_completion(SSticker.force_ending)
+		Master.SetRunLevel(RUNLEVEL_POSTGAME)
+
 	if(daytime_started)
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			var/area/vtm/V = get_area(H)
@@ -74,12 +83,3 @@ SUBSYSTEM_DEF(city_time)
 					continue
 				to_chat(H, span_danger("THE SUN SEARS YOUR FLESH"))
 				H.apply_damage(50, BURN)
-
-	if(station_time_passed() > time_till_roundend && !roundend_started)
-		roundend_started = TRUE
-		SSticker.force_ending = 1
-		SSticker.current_state = GAME_STATE_FINISHED
-		toggle_ooc(TRUE) // Turn it on
-		toggle_dooc(TRUE)
-		SSticker.declare_completion(SSticker.force_ending)
-		Master.SetRunLevel(RUNLEVEL_POSTGAME)

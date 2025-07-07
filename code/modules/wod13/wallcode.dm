@@ -1352,7 +1352,10 @@
 	. = ..()
 	if(istype(mover, /mob/living/carbon/human))
 		if(prob(0.5))
-			new /mob/living/simple_animal/mouse(oldloc)
+			var/cap = CONFIG_GET(number/ratcap)
+			if(LAZYLEN(SSmobs.cheeserats) >= cap)
+				return
+			SSmobs.cheeserats += new /mob/living/simple_animal/mouse(oldloc)
 
 /turf/open/floor/plating/vampcanal/Initialize()
 	..()
@@ -1375,7 +1378,10 @@
 	. = ..()
 	if(istype(mover, /mob/living/carbon/human))
 		if(prob(0.5))
-			new /mob/living/simple_animal/mouse(oldloc)
+			var/cap = CONFIG_GET(number/ratcap)
+			if(LAZYLEN(SSmobs.cheeserats) >= cap)
+				return
+			SSmobs.cheeserats += new /mob/living/simple_animal/mouse(oldloc)
 
 /turf/open/floor/plating/vampcanal/Initialize()
 	..()

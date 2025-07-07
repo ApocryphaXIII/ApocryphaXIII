@@ -640,14 +640,11 @@
 				death()
 				petrify(INFINITY)
 			if(3)
-				if(prob(95))
-					var/obj/item/bodypart/BP = get_bodypart(pick(BODY_ZONE_CHEST,BODY_ZONE_HEAD))
-					if(BP)
-						BP.dismember()
-					else
-						gib()
+				var/obj/item/bodypart/BP = get_bodypart(pick(BODY_ZONE_CHEST,BODY_ZONE_HEAD))
+				if(BP)
+					BP.dismember()
 				else
-					set_species(/datum/species/dullahan)
+					gib()
 			if(4)
 				visible_message("<span class='warning'>[src]'s skin melts off!</span>", "<span class='boldwarning'>Your skin melts off!</span>")
 				spawn_gibs()

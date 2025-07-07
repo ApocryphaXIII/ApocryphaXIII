@@ -76,7 +76,7 @@ SUBSYSTEM_DEF(city_time)
 	if(daytime_started)
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			var/area/vtm/V = get_area(H)
-			if(!V?.upper)
+			if(!istype(V) || !V?.upper)
 				continue
 			if(iskindred(H) || iscathayan(H))
 				if(((H.morality_path.score >= 10) && (H.morality_path.alignment == MORALITY_HUMANITY)))

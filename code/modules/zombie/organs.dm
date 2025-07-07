@@ -73,7 +73,6 @@
 		return
 
 	old_species = owner.dna.species.type
-	owner.set_species(/datum/species/zombie/infectious)
 
 	var/stand_up = (owner.stat == DEAD) || (owner.stat == UNCONSCIOUS)
 

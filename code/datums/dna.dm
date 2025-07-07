@@ -627,7 +627,6 @@
 					if(prob(20))
 						O.animate_atom_living()
 			if(9 to 10)
-				ForceContractDisease(new/datum/disease/gastrolosis())
 				to_chat(src, "<span class='notice'>Oh, I actually feel quite alright!</span>")
 	else
 		switch(rand(0,5))
@@ -648,7 +647,6 @@
 			if(4)
 				visible_message("<span class='warning'>[src]'s skin melts off!</span>", "<span class='boldwarning'>Your skin melts off!</span>")
 				spawn_gibs()
-				set_species(/datum/species/skeleton)
 				if(prob(90))
 					addtimer(CALLBACK(src, PROC_REF(death)), 30)
 			if(5)

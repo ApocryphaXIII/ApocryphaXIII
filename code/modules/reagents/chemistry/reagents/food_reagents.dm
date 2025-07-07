@@ -422,17 +422,11 @@
 	metabolization_rate = 0.15 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/garlic/on_mob_life(mob/living/carbon/M)
-	if(iskindred(M)) //weakening but not incapacitating.
-		if(prob(min(25,current_cycle)))
-			to_chat(M, "<span class='danger'>You can't get the scent of garlic out of your nose! You can barely think...</span>")
-			M.Paralyze(5)
-			M.Jitter(5)
-	else
-		var/obj/item/organ/liver/liver = M.getorganslot(ORGAN_SLOT_LIVER)
-		if(liver && HAS_TRAIT(liver, TRAIT_CULINARY_METABOLISM))
-			if(prob(20)) //stays in the system much longer than sprinkles/banana juice, so heals slower to partially compensate
-				M.heal_bodypart_damage(brute = 1, burn = 1)
-				. = 1
+	var/obj/item/organ/liver/liver = M.getorganslot(ORGAN_SLOT_LIVER)
+	if(liver && HAS_TRAIT(liver, TRAIT_CULINARY_METABOLISM))
+		if(prob(20)) //stays in the system much longer than sprinkles/banana juice, so heals slower to partially compensate
+			M.heal_bodypart_damage(brute = 1, burn = 1)
+			. = 1
 	..()
 
 /datum/reagent/consumable/sprinkles

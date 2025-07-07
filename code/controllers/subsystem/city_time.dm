@@ -6,10 +6,10 @@ SUBSYSTEM_DEF(city_time)
 
 	var/first_warning = FALSE
 	var/second_warning = FALSE
-	var/time_till_daytime = 6 HOURS
+	var/time_till_daytime = 5.5 HOURS
 	var/daytime_started = FALSE
 
-	var/time_till_roundend = 7 HOURS
+	var/time_till_roundend = 6.5 HOURS
 	var/roundend_started = FALSE
 
 	var/last_xp_drop = 0

@@ -59,10 +59,9 @@
 		return
 	if(!owner.getorgan(/obj/item/organ/brain))
 		return
-	if(!iszombie(owner))
-		to_chat(owner, "<span class='cultlarge'>You can feel your heart stopping, but something isn't right... \
-		life has not abandoned your broken form. You can only feel a deep and immutable hunger that \
-		not even death can stop, you will rise again!</span>")
+	to_chat(owner, "<span class='cultlarge'>You can feel your heart stopping, but something isn't right... \
+	life has not abandoned your broken form. You can only feel a deep and immutable hunger that \
+	not even death can stop, you will rise again!</span>")
 	var/revive_time = rand(revive_time_min, revive_time_max)
 	var/flags = TIMER_STOPPABLE
 	timer_id = addtimer(CALLBACK(src, PROC_REF(zombify)), revive_time, flags)
@@ -73,9 +72,8 @@
 	if(!converts_living && owner.stat != DEAD)
 		return
 
-	if(!iszombie(owner))
-		old_species = owner.dna.species.type
-		owner.set_species(/datum/species/zombie/infectious)
+	old_species = owner.dna.species.type
+	owner.set_species(/datum/species/zombie/infectious)
 
 	var/stand_up = (owner.stat == DEAD) || (owner.stat == UNCONSCIOUS)
 

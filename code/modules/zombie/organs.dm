@@ -30,7 +30,7 @@
 /obj/item/organ/zombie_infection/Remove(mob/living/carbon/M, special = 0)
 	. = ..()
 	STOP_PROCESSING(SSobj, src)
-	if(iszombie(M) && old_species)
+	if(old_species)
 		M.set_species(old_species)
 	if(timer_id)
 		deltimer(timer_id)
@@ -47,7 +47,7 @@
 		Remove(owner)
 	if(owner.mob_biotypes & MOB_MINERAL)//does not process in inorganic things
 		return
-	if (causes_damage && !iszombie(owner) && owner.stat != DEAD)
+	if (causes_damage && owner.stat != DEAD)
 		owner.adjustToxLoss(0.5 * delta_time)
 		if(DT_PROB(5, delta_time))
 			to_chat(owner, "<span class='danger'>You feel sick...</span>")

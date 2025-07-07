@@ -225,26 +225,6 @@
 	else
 		new_spawn.mind.assigned_role = "Free Golem"
 
-/obj/effect/mob_spawn/human/golem/attack_hand(mob/user)
-	. = ..()
-	if(.)
-		return
-	if(isgolem(user) && can_transfer)
-		var/mob/living/carbon/human/H = user
-		var/transfer_choice = alert("Transfer your soul to [src]? (Warning, your old body will die!)",,"Yes","No")
-		if(transfer_choice != "Yes")
-			return
-		if(QDELETED(src) || uses <= 0)
-			return
-		log_game("[key_name(H)] golem-swapped into [src]")
-		H.visible_message("<span class='notice'>A faint light leaves [H], moving to [src] and animating it!</span>","<span class='notice'>You leave your old body behind, and transfer into [src]!</span>")
-		show_flavour = FALSE
-		var/mob/living/carbon/human/newgolem = create(newname = H.real_name)
-		H.transfer_trait_datums(newgolem)
-		H.mind.transfer_to(newgolem)
-		H.death()
-		return
-
 /obj/effect/mob_spawn/human/golem/servant
 	has_owner = TRUE
 	name = "inert servant golem shell"

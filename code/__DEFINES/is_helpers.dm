@@ -69,24 +69,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isghoul(A) (is_species(A,/datum/species/ghoul))
 #define isgarou(A) (is_species(A,/datum/species/garou))
 
-//DEPRICATED SPECIES
-#define isabductor(A) (FALSE)
-#define isgolem(A) (FALSE)
-#define islizard(A) (FALSE)
-#define isplasmaman(A) (FALSE)
-#define ispodperson(A) (FALSE)
-#define isflyperson(A) (FALSE)
-#define isjellyperson(A) (FALSE)
-#define isslimeperson(A) (FALSE)
-#define isluminescent(A) (FALSE)
-#define iszombie(A) (FALSE)
-#define isskeleton(A) (FALSE)
-#define ismoth(A) (FALSE)
-#define isfelinid(A) (FALSE)
-#define isethereal(A) (FALSE)
-#define isvampire(A) (FALSE)
-#define isdullahan(A) (FALSE)
-
 //more carbon mobs
 
 #define iswerewolf(A) (istype(A, /mob/living/carbon/werewolf))

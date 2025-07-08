@@ -81,6 +81,8 @@
 #define ABOVE_ALL_MOB_LAYER 4.6
 #define ABOVE_ALL_MOB_LAYERS_LAYER 4.7
 
+//Overlaps with space vine but im not sure anyone cares
+#define THE_WORLD_LAYER 4.8
 #define SPACEVINE_LAYER 4.8
 #define SPACEVINE_MOB_LAYER 4.9
 //#define FLY_LAYER 5 //For easy recordkeeping; this is a byond define

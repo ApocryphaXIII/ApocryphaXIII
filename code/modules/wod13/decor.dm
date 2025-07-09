@@ -849,7 +849,7 @@
 	return TRUE
 
 /obj/matrix/proc/cryoMob(mob/living/mob_occupant)
-	message_admins("[mob_occupant] has exited through the matrix.")
+	message_admins("[ADMIN_LOOKUP(mob_occupant)] has exited through the matrix.")
 	log_game("[mob_occupant] has exited through the matrix.")
 	var/list/crew_member = list()
 	crew_member["name"] = mob_occupant.real_name

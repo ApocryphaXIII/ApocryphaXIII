@@ -28,7 +28,6 @@
 	loot = list( // /obj/item/seeds/random is not a random seed, but an exotic seed.
 		/obj/item/seeds/random = 30,
 		/obj/item/seeds/liberty = 5,
-		/obj/item/seeds/replicapod = 5,
 		/obj/item/seeds/reishi = 5,
 		/obj/item/seeds/nettle/death = 1,
 		/obj/item/seeds/plump/walkingmushroom = 1,

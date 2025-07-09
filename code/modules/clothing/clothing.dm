@@ -120,16 +120,6 @@
 	else
 		qdel(src)
 
-/obj/item/clothing/attack(mob/attacker, mob/user, def_zone)
-	if(user.a_intent != INTENT_HARM && ismoth(attacker))
-		if (isnull(moth_snack))
-			moth_snack = new
-			moth_snack.name = name
-			moth_snack.clothing = WEAKREF(src)
-		moth_snack.attack(attacker, user, def_zone)
-	else
-		return ..()
-
 /obj/item/clothing/attackby(obj/item/W, mob/user, params)
 	if(!istype(W, repairable_by))
 		return ..()

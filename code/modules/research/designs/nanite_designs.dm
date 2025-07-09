@@ -526,13 +526,6 @@
 	program_type = /datum/nanite_program/sensor/nanite_volume
 	category = list("Sensor Nanites")
 
-/datum/design/nanites/sensor_species
-	name = "Species Sensor"
-	desc = "When triggered, the nanites scan the host to determine their species and output a signal depending on the conditions set in the settings."
-	id = "sensor_species_nanites"
-	program_type = /datum/nanite_program/sensor/species
-	category = list("Sensor Nanites")
-
 ////////////////////NANITE PROTOCOLS//////////////////////////////////////
 //Note about the category name: The UI cuts the last 8 characters from the category name to remove the " Nanites" in the other categories
 //Because of this, Protocols was getting cut down to "P", so i had to add some padding

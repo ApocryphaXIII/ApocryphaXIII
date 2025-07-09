@@ -28,7 +28,6 @@
 	desc = "<i>'HONK!'</i>"
 	icon_state = "clown"
 	inhand_icon_state = "clown"
-	species_exception = list(/datum/species/golem/bananium)
 
 /obj/item/clothing/under/rank/civilian/clown/Initialize()
 	. = ..()

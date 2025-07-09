@@ -91,7 +91,6 @@
 	A.say("APOTHEOSIS!!", forced="plasma fist")
 	if (ishuman(A))
 		var/mob/living/carbon/human/human_attacker = A
-		human_attacker.set_species(/datum/species/plasmaman)
 		human_attacker.dna.species.species_traits += TRAIT_BOMBIMMUNE
 		human_attacker.unequip_everything()
 		human_attacker.underwear = "Nude"

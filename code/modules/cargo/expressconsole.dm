@@ -116,8 +116,8 @@
 /obj/machinery/computer/cargo/express/ui_interact(mob/living/user, datum/tgui/ui)
 	if(iskindred(user))
 		var/mob/living/carbon/human/H = user
-		if(H.clane)
-			if(H.clane.name == CLAN_LASOMBRA)
+		if(H.clan)
+			if(H.clan.name == CLAN_LASOMBRA)
 				return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)

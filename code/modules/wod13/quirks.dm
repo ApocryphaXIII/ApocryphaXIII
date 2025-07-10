@@ -173,7 +173,7 @@ Dancer
 
 /datum/quirk/frenetic_aura/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
-	H.clane.frenzymod += 1
+	H.clan.frenzymod += 1
 
 /datum/quirk/blush_of_health
 	name = "Blush of Health"
@@ -235,7 +235,7 @@ Dancer
 	for(var/datum/bank_account/account as anything in GLOB.bank_account_list)
 		if(debtor.account_id != account.account_id)
 			continue
-		if(debtor.clane?.name == CLAN_VENTRUE)
+		if(debtor.clan?.name == CLAN_VENTRUE)
 			account.account_balance = 5 // Extra loss of dignitas.
 		else
 			account.account_balance = floor(account.account_balance * 0.5)

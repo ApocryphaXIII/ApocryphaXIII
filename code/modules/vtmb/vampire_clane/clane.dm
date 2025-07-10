@@ -4,17 +4,17 @@ GLOBAL_LIST_INIT(basic_disciplines, list(/datum/discipline/animalism)) //write h
 This datum stores a declarative description of clans, in order to make an instance of the clan component from this implementation in runtime
 And it also helps for the character set panel
 */
-/datum/vampireclane
+/datum/vampire_clan
 	var/name = CLAN_NONE
 	var/desc = "The clanless. The rabble. Of no importance."
-	var/list/clane_disciplines = list() //discipline datums
+	var/list/clan_disciplines = list() //discipline datums
 	var/list/restricted_disciplines = list()
 	var/list/common_disciplines = list() //Discs that you don't start with but are easier to purchase like catiff instead of non clan discs
-	var/datum/outfit/clane_outfit
+	var/datum/outfit/clan_outfit
 	var/curse = "None."
 	var/list/allowed_jobs = list()
 	var/list/denied_jobs = list()
-	var/clane_curse //There should be a reference here.
+	var/clan_curse //There should be a reference here.
 	///The Clan's unique body sprite
 	var/alt_sprite
 	///If the Clan's unique body sprites need to account for skintone
@@ -35,7 +35,7 @@ And it also helps for the character set panel
 	var/current_accessory
 	var/clan_keys //Keys to your hideout
 
-/datum/vampireclane/proc/on_gain(mob/living/carbon/human/H)
+/datum/vampire_clan/proc/on_gain(mob/living/carbon/human/H)
 	SHOULD_CALL_PARENT(TRUE)
 
 	if(length(accessories))
@@ -52,7 +52,7 @@ And it also helps for the character set panel
 		H.update_body()
 		H.update_appearance()
 
-/datum/vampireclane/proc/post_gain(mob/living/carbon/human/H)
+/datum/vampire_clan/proc/post_gain(mob/living/carbon/human/H)
 	SHOULD_CALL_PARENT(TRUE)
 
 	if(violating_appearance && H.roundstart_vampire)
@@ -146,7 +146,7 @@ And it also helps for the character set panel
  * Arguments
  * * rot_stage - how much to rot the vampire, on a scale from 1 to 4.
  */
-/datum/vampireclane/proc/rot_body(rot_stage)
+/datum/vampire_clan/proc/rot_body(rot_stage)
 	if (alt_sprite)
 		if (!findtext(alt_sprite, "rotten") && (rot_stage <= 2))
 			return

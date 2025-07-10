@@ -55,10 +55,10 @@
 	//faction, job, etc
 	if(iskindred(user) && iskindred(src) && is_face_visible())
 		var/mob/living/carbon/human/vampire = user
-		var/same_clan = vampire.clane == clane
+		var/same_clan = vampire.clan == clan
 		switch(info_known)
 			if(INFO_KNOWN_PUBLIC)
-				. += "<b>You know [p_them()] as a [job] of the [clane] bloodline.</b>"
+				. += "<b>You know [p_them()] as a [job] of the [clan] bloodline.</b>"
 			if(INFO_KNOWN_CLAN_ONLY)
 				if(same_clan)
 					. += "<b>You know [p_them()] as a [job]. You are of the same bloodline.</b>"
@@ -459,7 +459,7 @@
 
 		//examine text for unusual appearances
 		if (iskindred(src) && is_face_visible())
-			switch(clane.alt_sprite)
+			switch(clan.alt_sprite)
 				if (CLAN_NOSFERATU)
 					msg += "<span class='danger'><b>[p_they(TRUE)] look[p_s()] utterly deformed and inhuman!</b></span><br>"
 				if (CLAN_GARGOYLE)
@@ -522,7 +522,7 @@
 				if ((vampire.morality_path.score < 7) || client?.prefs?.is_enlightened)
 					wyrm_taint++
 
-				if ((vampire.clane?.name == CLAN_BAALI) || ( (client?.prefs?.is_enlightened && (vampire.morality_path.score > 7)) || (!client?.prefs?.is_enlightened && (vampire.morality_path.score < 4)) ))
+				if ((vampire.clan?.name == CLAN_BAALI) || ( (client?.prefs?.is_enlightened && (vampire.morality_path.score > 7)) || (!client?.prefs?.is_enlightened && (vampire.morality_path.score < 4)) ))
 					wyrm_taint++
 
 			if (isgarou(src) || iswerewolf(src)) //werewolves have the taint of whatever Triat member they venerate most

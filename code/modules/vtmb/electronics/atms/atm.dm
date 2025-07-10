@@ -87,7 +87,7 @@
 		registered_account = new /datum/bank_account()
 	if(!isnull(user))
 		registered_name = user.real_name
-		if(user.clane?.name == CLAN_VENTRUE)
+		if(user.clan?.name == CLAN_VENTRUE)
 			min_starting_wealth = max(min_starting_wealth, 1000)
 			max_starting_wealth = clamp(max_starting_wealth * 1.5, 4000, 20000)
 	registered_account.account_balance = rand(min_starting_wealth, max_starting_wealth)

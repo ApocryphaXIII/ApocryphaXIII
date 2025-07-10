@@ -161,9 +161,9 @@
 	impersonating_facialhaircolor = victim.facial_hair_color
 	impersonating_eyecolor = victim.eye_color
 	impersonating_body_mod = victim.base_body_mod
-	if (victim.clane)
-		impersonating_alt_sprite = victim.clane.alt_sprite
-		impersonating_alt_sprite_greyscale = victim.clane.alt_sprite_greyscale
+	if (victim.clan)
+		impersonating_alt_sprite = victim.clan.alt_sprite
+		impersonating_alt_sprite_greyscale = victim.clan.alt_sprite_greyscale
 
 /datum/discipline_power/vicissitude/malleable_visage/proc/initialize_original()
 	if (is_shapeshifted)
@@ -181,8 +181,8 @@
 	original_facialhaircolor = owner.facial_hair_color
 	original_eyecolor = owner.eye_color
 	original_body_mod = owner.base_body_mod
-	original_alt_sprite = owner.clane?.alt_sprite
-	original_alt_sprite_greyscale = owner.clane?.alt_sprite_greyscale
+	original_alt_sprite = owner.clan?.alt_sprite
+	original_alt_sprite_greyscale = owner.clan?.alt_sprite_greyscale
 
 /datum/discipline_power/vicissitude/malleable_visage/proc/shapeshift(to_original = FALSE, instant = FALSE)
 	if (!impersonating_dna)
@@ -211,8 +211,8 @@
 		owner.facial_hair_color = original_facialhaircolor
 		owner.eye_color = original_eyecolor
 		owner.base_body_mod = original_body_mod
-		owner.clane?.alt_sprite = original_alt_sprite
-		owner.clane?.alt_sprite_greyscale = original_alt_sprite_greyscale
+		owner.clan?.alt_sprite = original_alt_sprite
+		owner.clan?.alt_sprite_greyscale = original_alt_sprite_greyscale
 		is_shapeshifted = FALSE
 		QDEL_NULL(impersonating_dna)
 	else
@@ -228,8 +228,8 @@
 		owner.facial_hair_color = impersonating_facialhaircolor
 		owner.eye_color = impersonating_eyecolor
 		owner.base_body_mod = impersonating_body_mod
-		owner.clane?.alt_sprite = impersonating_alt_sprite
-		owner.clane?.alt_sprite_greyscale = impersonating_alt_sprite_greyscale
+		owner.clan?.alt_sprite = impersonating_alt_sprite
+		owner.clan?.alt_sprite_greyscale = impersonating_alt_sprite_greyscale
 		is_shapeshifted = TRUE
 
 	owner.update_body()
@@ -239,12 +239,12 @@
 		return
 	if (!is_shapeshifted)
 		return
-	if (!owner.clane)
+	if (!owner.clan)
 		return
 
 	owner.base_body_mod = original_body_mod
-	owner.clane.alt_sprite = original_alt_sprite
-	owner.clane.alt_sprite_greyscale = original_alt_sprite_greyscale
+	owner.clan.alt_sprite = original_alt_sprite
+	owner.clan.alt_sprite_greyscale = original_alt_sprite_greyscale
 
 	to_chat(owner, span_warning("Your cursed appearance reasserts itself!"))
 

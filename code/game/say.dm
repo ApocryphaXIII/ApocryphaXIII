@@ -49,11 +49,11 @@ GLOBAL_LIST_INIT(freqtospan, list(
 //		var/mob/living/carbon/human/H = src
 //		if(!client)
 //			return
-//		if(H.clane)
-//			if(H.clane.name == CLAN_MALKAVIAN)
+//		if(H.clan)
+//			if(H.clan.name == CLAN_MALKAVIAN)
 //				for(var/mob/living/carbon/human/hive in GLOB.player_list)
-//					if(hive.clane && hive.client && hive != src)
-//						if(hive.clane.name == CLAN_MALKAVIAN)
+//					if(hive.clan && hive.client && hive != src)
+//						if(hive.clan.name == CLAN_MALKAVIAN)
 //							if(z != hive.z || get_dist(src, hive) > 7)
 //								to_chat(hive, "[rendered]")
 

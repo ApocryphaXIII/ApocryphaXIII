@@ -1,9 +1,9 @@
 /mob/living/simple_animal/mouse
-	name = "mouse"
+	name = "rat"
 	desc = "It's a nasty, ugly, evil, disease-ridden rodent."
-	icon_state = "mouse_gray"
-	icon_living = "mouse_gray"
-	icon_dead = "mouse_gray_dead"
+	icon_state = "rat"
+	icon_living = "rat"
+	icon_dead = "rat_dead"
 	speak = list("Squeak!","SQUEAK!","Squeak?")
 	speak_emote = list("squeaks")
 	emote_hear = list("squeaks.")
@@ -29,17 +29,21 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	var/chew_probability = 1
 	can_be_held = TRUE
-	held_state = "mouse_gray"
+	held_state = "rat"
 	faction = list("rat")
 
 /mob/living/simple_animal/mouse/Initialize()
 	. = ..()
+	pixel_w = rand(-8, 8)
+	pixel_z = rand(-8, 8)
 	AddComponent(/datum/component/squeak, list('sound/effects/mousesqueek.ogg'=1), 100, extrarange = SHORT_RANGE_SOUND_EXTRARANGE) //as quiet as a mouse or whatever
+	/*
 	if(!body_color)
 		body_color = pick( list("brown","gray","white") )
 	icon_state = "mouse_[body_color]"
 	icon_living = "mouse_[body_color]"
 	icon_dead = "mouse_[body_color]_dead"
+	*/
 	add_cell_sample()
 
 /mob/living/simple_animal/mouse/add_cell_sample()

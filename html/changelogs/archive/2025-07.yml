@@ -8,3 +8,10 @@
   - qol: trash on the streets is now cleanable
   - qol: more fluff in the city can be properly damaged
   - refactor: few unrelated refactors to try and speed up init
+  - bugfix: changelog uses our server name and credits former vtm servers
+  - bugfix: more interfaces use our repo links
+2025-07-13:
+  FalloutFalcon:
+  - admin: exiting via matrix is now logged
+  - bugfix: removed the hear flag on credit cards preventing them from showing up
+      it subtle

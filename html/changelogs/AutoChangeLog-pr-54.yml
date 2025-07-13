@@ -1,5 +1,0 @@
-author: "FalloutFalcon"
-delete-after: True
-changes:
-  - bugfix: "changelog uses our server name and credits former vtm servers"
-  - bugfix: "more interfaces use our repo links"

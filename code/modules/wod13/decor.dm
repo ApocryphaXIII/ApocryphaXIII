@@ -663,20 +663,16 @@
 	opacity = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-	var/matrixing = FALSE
 
 /obj/matrix/attack_hand(mob/user)
 	if(user.client)
-		if(!matrixing)
-			matrixing = TRUE
-			if(do_after(user, 100, src))
-				cryoMob(user, src)
-				matrixing = FALSE
-			else
-				matrixing = FALSE
+		if(do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
+			cryo_mob(user, src)
 	return TRUE
 
-/obj/matrix/proc/cryoMob(mob/living/mob_occupant)
+/obj/matrix/proc/cryo_mob(mob/living/mob_occupant)
+	message_admins("[ADMIN_LOOKUP(mob_occupant)] has exited through the matrix.")
+	log_game("[mob_occupant] has exited through the matrix.")
 	var/list/crew_member = list()
 	crew_member["name"] = mob_occupant.real_name
 	if(mob_occupant.mind && mob_occupant.mind.assigned_role)

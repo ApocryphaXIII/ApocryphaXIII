@@ -1,0 +1,5 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - rscadd: "new music tracks all over the place!"
+  - bugfix: "opening the map may lag less"

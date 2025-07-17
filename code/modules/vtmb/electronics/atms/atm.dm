@@ -34,7 +34,6 @@
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
 	item_flags = NOBLUDGEON
-	flags_1 = HEAR_1
 	w_class = WEIGHT_CLASS_SMALL
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -88,7 +87,7 @@
 		registered_account = new /datum/bank_account()
 	if(!isnull(user))
 		registered_name = user.real_name
-		if(user.clane?.name == CLAN_VENTRUE)
+		if(user.clan?.name == CLAN_VENTRUE)
 			min_starting_wealth = max(min_starting_wealth, 1000)
 			max_starting_wealth = clamp(max_starting_wealth * 1.5, 4000, 20000)
 	registered_account.account_balance = rand(min_starting_wealth, max_starting_wealth)

@@ -18,6 +18,8 @@
 	icon = 'icons/obj/food/containers.dmi'
 	resistance_flags = FLAMMABLE
 	custom_materials = list(/datum/material/cardboard = 2000)
+	storage_max_columns = 5
+	storage_max_rows = 5
 	var/icon_type = "donut"
 	var/spawn_type = null
 	var/fancy_open = FALSE
@@ -79,6 +81,8 @@
 	fancy_open = TRUE
 	appearance_flags = KEEP_TOGETHER
 	custom_premium_price = PAYCHECK_HARD * 1.75
+	storage_max_columns = 6
+	storage_max_rows = 2
 
 /obj/item/storage/fancy/donut_box/ComponentInitialize()
 	. = ..()
@@ -131,6 +135,8 @@
 	name = "egg box"
 	desc = "A carton for containing eggs."
 	spawn_type = /obj/item/food/egg
+	storage_max_columns = 6
+	storage_max_rows = 2
 
 /obj/item/storage/fancy/egg_box/ComponentInitialize()
 	. = ..()
@@ -460,6 +466,7 @@
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "nuggetbox"
 	icon_type = "nugget"
+	custom_price = 3
 	spawn_type = /obj/item/food/vampire/nugget
 
 /obj/item/storage/fancy/nugget_box/ComponentInitialize()

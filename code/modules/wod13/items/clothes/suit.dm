@@ -293,7 +293,7 @@
 
 /obj/item/clothing/suit/vampire/jacket/better/armored
 	name = "armored leather jacket"
-	armor = list(MELEE = 45, BULLET = 45, LASER = 10, ENERGY = 10, BOMB = 35, BIO = 0, RAD = 0, FIRE = 45, ACID = 10,WOUND = 35);
+	armor = list(MELEE = 45, BULLET = 45, LASER = 10, ENERGY = 10, BOMB = 35, BIO = 0, RAD = 0, FIRE = 45, ACID = 10,WOUND = 35)
 
 /obj/item/clothing/suit/vampire/trench
 	name = "trenchcoat"
@@ -308,7 +308,7 @@
 /obj/item/clothing/suit/vampire/trench/alt/armored
 	name = "armored trenchcoat"
 	icon_state = "trench2"
-	armor = list("melee"=50,"bullet"=50,"laser"=50,"energy"=10,"bomb"=40,"bio"=0,"rad"=0,"fire"=40,"acid"=10,"wound"=25);
+	armor = list("melee"=50,"bullet"=50,"laser"=50,"energy"=10,"bomb"=40,"bio"=0,"rad"=0,"fire"=40,"acid"=10,"wound"=25)
 	max_integrity = 1000;
 
 /obj/item/clothing/suit/vampire/trench/archive

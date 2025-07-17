@@ -1,13 +1,14 @@
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
-  Stack,
   LabeledList,
   NumberInput,
   ProgressBar,
   Section,
+  Stack,
 } from 'tgui-core/components';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const SolarControl = (props) => {

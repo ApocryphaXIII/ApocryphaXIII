@@ -1,6 +1,4 @@
 import { sortBy } from 'common/collections';
-import { capitalize } from 'tgui-core/string';
-import { useBackend, useLocalState } from '../backend';
 import {
   Blink,
   Box,
@@ -13,6 +11,9 @@ import {
   Section,
   TextArea,
 } from 'tgui-core/components';
+import { capitalize } from 'tgui-core/string';
+
+import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
 import { sanitizeText } from '../sanitize';
 

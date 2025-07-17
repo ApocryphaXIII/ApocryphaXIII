@@ -57,7 +57,7 @@
 
 	var/list/filter_data //For handling persistent filters
 
-	///Price of an item in a vending machine, overriding the base vending machine price. Define in terms of paycheck defines as opposed to raw numbers.
+	///Price of an item in a vending machine or retail store, overriding the base vending machine price. Define in terms of paycheck defines as opposed to raw numbers.
 	var/custom_price
 	///Price of an item in a vending machine, overriding the premium vending machine price. Define in terms of paycheck defines as opposed to raw numbers.
 	var/custom_premium_price

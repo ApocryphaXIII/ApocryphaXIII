@@ -1,5 +1,6 @@
-import gmail_icon from '../../../assets/WindowsXP/gmail.png';
 import { Icon, Input, TextArea } from 'tgui-core/components';
+
+import gmail_icon from '../../../assets/WindowsXP/gmail.png';
 import { useLocalState } from '../../../backend';
 import { XPButton } from '../Components';
 

@@ -57,8 +57,22 @@
 
 	var/parallax_movedir = 0
 
-	var/ambience_index = AMBIENCE_GENERIC
+	var/ambience_index
+	///A list of sounds to pick from every so often to play to clients.
 	var/list/ambientsounds
+	///Used to decide what the minimum time between ambience is
+	var/min_ambience_cooldown = 30 SECONDS
+	///Used to decide what the maximum time between ambience is
+	var/max_ambience_cooldown = 60 SECONDS
+
+	var/music_index
+	/// Equivelent to ambientsounds, A list of music tracks to pick from every so often to play to clients.
+	var/list/musictracks
+	///Used to decide what the minimum time between music tracks is
+	var/min_music_cooldown = 1 MINUTES
+	///Used to decide what the maximum time between music tracks is
+	var/max_music_cooldown = 2 MINUTES
+
 	flags_1 = CAN_BE_DIRTY_1 | CULT_PERMITTED_1
 
 	var/list/firedoors
@@ -144,6 +158,8 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	icon_state = ""
 	if(!ambientsounds)
 		ambientsounds = GLOB.ambience_assoc[ambience_index]
+	if(!musictracks)
+		musictracks = GLOB.music_assoc[music_index]
 	if(requires_power)
 		luminosity = 0
 	else
@@ -638,30 +654,6 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	if(!L.ckey)
 		return
 
-	// Ambience goes down here -- make sure to list each area separately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
-//	if(L.client && !L.client.ambience_playing && L.client.prefs.toggles & SOUND_SHIP_AMBIENCE)
-//		L.client.ambience_playing = 1
-	if(L)
-		if(L.client)
-			if(istype(get_area(loc), /area/vtm/northbeach))
-				if(!L.client.ambience_playing)
-					L.client.ambience_playing = 1
-					SEND_SOUND(L, sound('code/modules/wod13/sounds/beach.ogg', repeat = 1, wait = 0, volume = 35, channel = CHANNEL_BUZZ))
-			else if(L.client.ambience_playing)
-				L.client.ambience_playing = 0
-				SEND_SOUND(L, sound(null, channel = CHANNEL_BUZZ))
-
-	if(!(L.client && (L.client.prefs.toggles & SOUND_AMBIENCE)))
-		return //General ambience check is below the ship ambience so one can play without the other
-
-	if(prob(50))
-		var/sound = pick(ambientsounds)
-
-		if(!L.client.played)
-			SEND_SOUND(L, sound(sound, repeat = 0, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE))
-			L.client.played = TRUE
-			addtimer(CALLBACK(L.client, TYPE_PROC_REF(/client, ResetAmbiencePlayed)), 600)
-
 ///Divides total beauty in the room by roomsize to allow us to get an average beauty per tile.
 /area/proc/update_beauty()
 	if(!areasize)
@@ -682,11 +674,6 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	SEND_SIGNAL(src, COMSIG_AREA_EXITED, M)
 	SEND_SIGNAL(M, COMSIG_EXIT_AREA, src) //The atom that exits the area
 
-/**
- * Reset the played var to false on the client
- */
-/client/proc/ResetAmbiencePlayed()
-	played = FALSE
 
 /**
  * Setup an area (with the given name)

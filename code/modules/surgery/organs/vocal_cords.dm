@@ -141,7 +141,7 @@
 
 	user.say(message, spans = span_list, sanitize = FALSE)
 
-	message = lowertext(message)
+	message = LOWER_TEXT(message)
 	var/list/mob/living/listeners = list()
 	for(var/mob/living/L in get_hearers_in_view(8, user))
 		if(L.can_hear() && !L.anti_magic_check(FALSE, TRUE) && L.stat != DEAD)
@@ -154,7 +154,7 @@
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
 				conditioner = H.conditioner?.resolve()
-				if(H.clane?.name == CLAN_GARGOYLE)
+				if(H.clan?.name == CLAN_GARGOYLE)
 					dominate_me = TRUE
 				if(istype(H.ears, /obj/item/clothing/ears/earmuffs))
 					continue

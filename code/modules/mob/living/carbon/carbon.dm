@@ -57,7 +57,7 @@
 		selhand = (active_hand_index % held_items.len)+1
 
 	if(istext(selhand))
-		selhand = lowertext(selhand)
+		selhand = LOWER_TEXT(selhand)
 		if(selhand == "right" || selhand == "r")
 			selhand = 2
 		if(selhand == "left" || selhand == "l")
@@ -569,8 +569,6 @@
 	else
 		if(message)
 			visible_message("<span class='danger'>[src] throws up!</span>", "<span class='userdanger'>You throw up!</span>")
-			if(!isflyperson(src))
-				SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "vomit", /datum/mood_event/vomit)
 
 	if(stun)
 		Paralyze(80)

@@ -1,0 +1,55 @@
+2025-06-25:
+  FalloutFalcon:
+  - admin: new prompt when local hosting that lets you test quicker
+  - rscdel: mirrors are no longer named and numberd
+  - qol: Added new vars for random spawners for mappers to use. See code/game/objects/effects/spawners/random/readme.md
+      for more info.
+  - code_imp: Changed the file paths to most spawners and put them into separate files.
+      All random spawners inherit from the base random class.
+  - refactor: Refactor spawner code to make it clean and unison. All of the random
+      spawners now follow the same formatting.
+  - qol: ATMs try and put your money in your hand
+  - bugfix: removes any chances of reciving spacecash instead of dollars in all code
+  - qol: you can now move while examining
+  - qol: the examine progress bar appears above what you examine
+  - balance: werewolfs can now climb all ladders twice as fast instead of the original
+      manhole snowflake code
+  - rscadd: Readds stack recipes with a trimmed recipe list
+  - refactor: killed off flav wirecutters meaning you can use wirecutters for normal
+      wirecutter interactions
+  - code_imp: keybad code should be slightly faster on init
+  - bugfix: Daughters of Cacophony are now allowed to become taxi drivers again.
+  - rscdel: IDs no longer have bank accounts attached to them.
+  - qol: Debit cards have replaced IDs for most cash based interactions
+  - bugfix: phones are now indexed by 1 instead of 0. Should fix alot of runtimes
+  - rscadd: New players now have the cool dice roll message on by default. This will
+      not affect existing players.
+  - bugfix: Trash piles can no longer be pushed around.
+  - rscdel: Removed the display of bpm for music because no one cares and its often
+      innacurate anyway
+  FalloutFalcon, hex37:
+  - rscadd: You now have to enter your pin of purchases over 20$ or after 5 uses
+  - rscadd: The booze vendor is now sorted by catagory
+  - rscadd: Vending machines now have a few extra items
+  - rscadd: Few new retail store types for mappers to chew on
+  - rscdel: IDs no longer hold your bank account info
+  - rscdel: Vending machines no longer have price inflated by players having money
+      sitting in there bank'
+  - qol: you can now easily buy goods with both your creditcard and cash from vending
+      machines and retail outlets
+  - balance: some fast food has gotten cheaper
+  - bugfix: fixed almost all behavoir of old vendors, you can now use them pretty
+      much
+  - refactor: major refactors to vending machines and retail outlets
+  - refactor: all vending machiens are now acctually vending machines
+  - refactor: vending machines and retail stores share spritesheets and other code
+      (should be faster)
+2025-06-27:
+  FalloutFalcon:
+  - bugfix: you can now see other peoples bank accounts in the ATM again
+2025-06-29:
+  FalloutFalcon:
+  - balance: some boxes have cooler shapes now
+2025-06-30:
+  FalloutFalcon:
+  - bugfix: Change-log should now function on live.

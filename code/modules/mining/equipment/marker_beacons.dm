@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sort_list(list(
 
 /obj/item/stack/marker_beacon/update_icon_state()
 	. = ..()
-	icon_state = "[initial(icon_state)][lowertext(picked_color)]"
+	icon_state = "[initial(icon_state)][LOWER_TEXT(picked_color)]"
 
 /obj/item/stack/marker_beacon/attack_self(mob/user)
 	if(!isturf(user.loc))
@@ -105,7 +105,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sort_list(list(
 	. = ..()
 	while(!picked_color || !GLOB.marker_beacon_colors[picked_color])
 		picked_color = pick(GLOB.marker_beacon_colors)
-	icon_state = "[icon_prefix][lowertext(picked_color)]-on"
+	icon_state = "[icon_prefix][LOWER_TEXT(picked_color)]-on"
 	set_light(light_range, light_power, GLOB.marker_beacon_colors[picked_color])
 
 /obj/structure/marker_beacon/attack_hand(mob/living/user)
@@ -131,13 +131,6 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sort_list(list(
 			playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
 			qdel(src)
 			return
-	if(istype(I, /obj/item/light_eater))
-		var/obj/effect/decal/cleanable/ash/A = new /obj/effect/decal/cleanable/ash(drop_location())
-		A.desc += "\nLooks like this used to be \a [src] some time ago."
-		visible_message("<span class='danger'>[src] is disintegrated by [I]!</span>")
-		playsound(src, 'sound/items/welder.ogg', 50, TRUE)
-		qdel(src)
-		return
 	return ..()
 
 /obj/structure/marker_beacon/AltClick(mob/living/user)

@@ -32,7 +32,7 @@
 	var/datum/article/product_article = null
 	var/effect = 0
 
-/datum/stockEvent/product/New(var/datum/stock/S)
+/datum/stockEvent/product/New(datum/stock/S)
 	company = S
 	var/mins = rand(5*TIME_MULTIPLIER,20*TIME_MULTIPLIER)
 	next_phase = mins * (600*TIME_MULTIPLIER) + world.time

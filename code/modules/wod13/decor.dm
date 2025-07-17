@@ -164,27 +164,6 @@
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
 
-/obj/effect/decal/litter
-	name = "litter"
-	icon = 'code/modules/wod13/tiles.dmi'
-	icon_state = "paper1"
-
-/obj/effect/decal/litter/Initialize()
-	. = ..()
-	icon_state = "paper[rand(1, 6)]"
-
-/obj/effect/decal/cardboard
-	name = "cardboard"
-	icon = 'code/modules/wod13/tiles.dmi'
-	icon_state = "cardboard1"
-
-/obj/effect/decal/cardboard/Initialize()
-	. = ..()
-	icon_state = "cardboard[rand(1, 5)]"
-	var/matrix/M = matrix()
-	M.Turn(rand(0, 360))
-	transform = M
-
 /obj/structure/clothingrack
 	name = "clothing rack"
 	desc = "Have some clothes."
@@ -231,24 +210,6 @@
 	. = ..()
 	icon_state = "rack[rand(1, 5)]"
 
-/obj/structure/hotelsign
-	name = "sign"
-	desc = "It says H O T E L."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "hotel"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/hotelsign/Initialize()
-	. = ..()
-	set_light(3, 3, "#8e509e")
-	if(GLOB.winter)
-		if(istype(get_area(src), /area/vtm))
-			var/area/vtm/V = get_area(src)
-			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
 /obj/structure/hotelbanner
 	name = "banner"
 	desc = "It says H O T E L."
@@ -266,60 +227,6 @@
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
-
-/obj/structure/milleniumsign
-	name = "sign"
-	desc = "It says M I L L E N I U M."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "millenium"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/milleniumsign/Initialize()
-	. = ..()
-	set_light(3, 3, "#4299bb")
-
-/obj/structure/anarchsign
-	name = "sign"
-	desc = "It says B A R."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "bar"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/anarchsign/Initialize()
-	. = ..()
-	set_light(3, 3, "#ffffff")
-	if(GLOB.winter)
-		if(istype(get_area(src), /area/vtm))
-			var/area/vtm/V = get_area(src)
-			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
-/obj/structure/chinesesign
-	name = "sign"
-	desc = "雨天和血的机会."
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "chinese1"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/chinesesign/Initialize()
-	. = ..()
-	if(GLOB.winter)
-		if(istype(get_area(src), /area/vtm))
-			var/area/vtm/V = get_area(src)
-			if(V.upper)
-				icon_state = "[initial(icon_state)]-snow"
-
-/obj/structure/chinesesign/alt
-	icon_state = "chinese2"
-
-/obj/structure/chinesesign/alt/alt
-	icon_state = "chinese3"
 
 /obj/structure/arc
 	name = "chinatown arc"
@@ -552,15 +459,6 @@
 	. = ..()
 	icon_state = "under[rand(1, 2)]"
 
-/obj/effect/decal/trash
-	name = "trash"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "trash1"
-
-/obj/effect/decal/trash/Initialize()
-	. = ..()
-	icon_state = "trash[rand(1, 30)]"
-
 /obj/cargotrain
 	name = "cargocrate"
 	desc = "It delivers a lot of things."
@@ -620,30 +518,16 @@
 		M3.opacity = TRUE
 	M3.anchored = TRUE
 
-/proc/get_nearest_free_turf(turf/start)
-	if(isopenturf(get_step(start, EAST)))
-		if(isopenturf(get_step(get_step(start, EAST), EAST)))
-			if(isopenturf(get_step(get_step(get_step(start, EAST), EAST), EAST)))
-				if(isopenturf(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST)))
-					if(isopenturf(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST)))
-						if(isopenturf(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST)))
-							if(isopenturf(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST)))
-								if(isopenturf(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST)))
-									if(isopenturf(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST)))
-										if(isopenturf(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST)))
-											if(isopenturf(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST)))
-												return get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST)
-											return get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST)
-										return get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST)
-									return get_step(get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST), EAST)
-								return get_step(get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST), EAST)
-							return get_step(get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST), EAST)
-						return get_step(get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST), EAST)
-					return get_step(get_step(get_step(get_step(start, EAST), EAST), EAST), EAST)
-				return get_step(get_step(get_step(start, EAST), EAST), EAST)
-			return get_step(get_step(start, EAST), EAST)
-		return get_step(start, EAST)
-	return start
+/proc/get_farthest_open_chain_turf(turf/start, dir = EAST, distance = 20)
+	var/turf/current = start
+	var/turf/last_open = null
+	for(var/i = 1 to distance)
+		current = get_step(current, dir)
+		if(isopenturf(current))
+			last_open = current
+		else
+			break
+	return last_open || start
 
 /obj/structure/marketplace
 	name = "stock market"
@@ -757,36 +641,6 @@
 /obj/structure/rack/bubway/west
 	icon_state = "bubway6"
 
-/obj/bacotell
-	name = "Baco Tell"
-	desc = "Eat some precious tacos and pizza!"
-	icon = 'code/modules/wod13/fastfood.dmi'
-	icon_state = "bacotell"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	pixel_w = -16
-
-/obj/bubway
-	name = "BubWay"
-	desc = "Eat some precious burgers and pizza!"
-	icon = 'code/modules/wod13/fastfood.dmi'
-	icon_state = "bubway"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	pixel_w = -16
-
-/obj/gummaguts
-	name = "Gumma Guts"
-	desc = "Eat some precious chicken nuggets and donuts!"
-	icon = 'code/modules/wod13/fastfood.dmi'
-	icon_state = "gummaguts"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	pixel_w = -16
-
 /obj/underplate
 	name = "underplate"
 	icon = 'code/modules/wod13/props.dmi'
@@ -797,46 +651,6 @@
 
 /obj/underplate/stuff
 	icon_state = "stuff"
-
-/obj/order
-	name = "order sign"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-
-/obj/order1
-	name = "order screen"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order1"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-
-/obj/order2
-	name = "order screen"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order2"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-
-/obj/order3
-	name = "order screen"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order3"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-
-/obj/order4
-	name = "order screen"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "order4"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
 
 /obj/matrix
 	name = "matrix"
@@ -849,20 +663,16 @@
 	opacity = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-	var/matrixing = FALSE
 
 /obj/matrix/attack_hand(mob/user)
 	if(user.client)
-		if(!matrixing)
-			matrixing = TRUE
-			if(do_after(user, 100, src))
-				cryoMob(user, src)
-				matrixing = FALSE
-			else
-				matrixing = FALSE
+		if(do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
+			cryo_mob(user, src)
 	return TRUE
 
-/obj/matrix/proc/cryoMob(mob/living/mob_occupant)
+/obj/matrix/proc/cryo_mob(mob/living/mob_occupant)
+	message_admins("[ADMIN_LOOKUP(mob_occupant)] has exited through the matrix.")
+	log_game("[mob_occupant] has exited through the matrix.")
 	var/list/crew_member = list()
 	crew_member["name"] = mob_occupant.real_name
 	if(mob_occupant.mind && mob_occupant.mind.assigned_role)
@@ -912,16 +722,6 @@
 	. = ..()
 	icon_state = "billiard[rand(1, 3)]"
 
-/obj/police_department
-	name = "San Francisco Police Department"
-	desc = "Stop right there you criminal scum! Nobody can break the law on my watch!!"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "police"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
-	pixel_z = 40
-
 /obj/structure/pole
 	name = "stripper pole"
 	desc = "A pole fastened to the ceiling and floor, used to show of ones goods to company."
@@ -954,72 +754,33 @@
 		icon_state = initial(icon_state)
 
 /obj/structure/pole/proc/animatepole(mob/living/user)
-	return
-
-/obj/structure/pole/animatepole(mob/living/user)
-
-	if (user.loc != src.loc)
+	if(user.loc != src.loc)
 		return
-	animate(user,pixel_x = -6, pixel_y = 0, time = 10)
-	sleep(20)
-	user.dir = 4
-	animate(user,pixel_x = -6,pixel_y = 24, time = 10)
-	sleep(12)
-	src.layer = 4.01 //move the pole infront for now. better to move the pole, because the character moved behind people sitting above otherwise
-	animate(user,pixel_x = 6,pixel_y = 12, time = 5)
-	user.dir = 8
-	sleep(6)
-	animate(user,pixel_x = -6,pixel_y = 4, time = 5)
-	user.dir = 4
-	src.layer = 4 // move it back.
-	sleep(6)
-	user.dir = 1
-	animate(user,pixel_x = 0, pixel_y = 0, time = 3)
-	sleep(6)
-	user.do_jitter_animation()
-	sleep(6)
-	user.dir = 2
-
-/obj/structure/strip_club
-	name = "sign"
-	desc = "It says DO RA. Maybe it's some kind of strip club..."
-	icon = 'code/modules/wod13/48x48.dmi'
-	icon_state = "dora"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-	pixel_w = -8
-	pixel_z = 32
-
-/obj/structure/strip_club/Initialize()
-	. = ..()
-	set_light(3, 2, "#8e509e")
-
-/obj/structure/cabaret_sign
-	name = "cabaret"
-	desc = "An enticing pair of legs... I wonder what's inside?"
-	icon = 'icons/cabaret.dmi'
-	icon_state = "cabar"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/cabaret_sign/Initialize()
-	. = ..()
-	set_light(3, 2, "#d98aec")
-
-/obj/structure/cabaret_sign2
-	name = "cabaret"
-	desc = "An enticing pair of legs... I wonder what's inside?"
-	icon = 'icons/cabaret.dmi'
-	icon_state = "et"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
-
-/obj/structure/cabaret_sign2/Initialize()
-	. = ..()
-	set_light(3, 2, "#d98aec")
+	if(!QDELETED(src))
+		animate(user, pixel_x = -6, pixel_y = 0, time = 1 SECONDS)
+		sleep(2 SECONDS)
+		user.dir = 4
+	if(!QDELETED(src))
+		animate(user, pixel_x = -6, pixel_y = 24, time = 1 SECONDS)
+		sleep(1.2 SECONDS)
+		src.layer = 4.01 //move the pole infront for now. better to move the pole, because the character moved behind people sitting above otherwise
+	if(!QDELETED(src))
+		animate(user, pixel_x = 6, pixel_y = 12, time = 0.5 SECONDS)
+		user.dir = 8
+		sleep(0.6 SECONDS)
+	if(!QDELETED(src))
+		animate(user, pixel_x = -6, pixel_y = 4, time = 0.5 SECONDS)
+		user.dir = 4
+		src.layer = 4 // move it back.
+		sleep(0.6 SECONDS)
+	if(!QDELETED(src))
+		user.dir = 1
+		animate(user, pixel_x = 0, pixel_y = 0, time = 0.3 SECONDS)
+		sleep(0.6 SECONDS)
+	if(!QDELETED(src))
+		user.do_jitter_animation()
+		sleep(0.6 SECONDS)
+		user.dir = 2
 
 /obj/structure/fire_barrel
 	name = "barrel"
@@ -1092,15 +853,6 @@
 		for(var/turf/T in range(1, src))
 			if(T && !istype(T, /turf/open/floor/plating/bloodshit))
 				new /turf/open/floor/plating/bloodshit(T)
-
-/obj/american_flag
-	name = "american flag"
-	desc = "PATRIOTHICC!!!"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "flag_usa"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
 
 //flags
 
@@ -1500,3 +1252,32 @@
 			burying = FALSE
 		else
 			burying = FALSE
+
+/obj/structure/fluff/tv
+	name = "\improper TV"
+	desc = "A slightly battered looking TV. Various infomercials play on a loop, accompanied by a jaunty tune."
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "tv_news"
+
+/obj/structure/fluff/tv/order
+	name = "order screen"
+	desc = "A slightly battered looking TV. It shows a menu to order from."
+	icon_state = "order1"
+
+/obj/structure/fluff/tv/order/one
+	icon_state = "order1"
+
+/obj/structure/fluff/tv/order/two
+	icon_state = "order2"
+
+/obj/structure/fluff/tv/order/three
+	icon_state = "order3"
+
+/obj/structure/fluff/tv/order/four
+	icon_state = "order4"
+
+/obj/structure/fluff/tv/order/random
+
+/obj/structure/fluff/tv/order/random/Initialize()
+	. = ..()
+	icon_state = "order[rand(1,4)]"

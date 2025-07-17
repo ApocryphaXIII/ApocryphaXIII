@@ -162,15 +162,8 @@ Charged extracts:
 	if(!istype(H))
 		to_chat(user, "<span class='warning'>You must be a humanoid to use this!</span>")
 		return
-	var/racechoice = input(H, "Choose your slime subspecies.", "Slime Selection") as null|anything in sort_list(subtypesof(/datum/species/jelly), GLOBAL_PROC_REF(cmp_typepaths_asc))
-	if(!racechoice)
-		to_chat(user, "<span class='notice'>You decide not to become a slime for now.</span>")
-		return
-	if(!user.canUseTopic(src, BE_CLOSE))
-		return
-	H.set_species(racechoice, icon_update=1)
-	H.visible_message("<span class='warning'>[H] suddenly shifts form as [src] dissolves into [H.p_their()] skin!</span>")
-	..()
+	to_chat(user, "<span class='notice'>You decide not to become a slime for now.</span>")
+	return
 
 /obj/item/slimecross/charged/pink
 	colour = "pink"
@@ -256,7 +249,6 @@ Charged extracts:
 
 /obj/item/slimecross/charged/adamantine/do_effect(mob/user)
 	user.visible_message("<span class='notice'>[src] produces a fully formed golem shell!</span>")
-	new /obj/effect/mob_spawn/human/golem/servant(get_turf(src), /datum/species/golem/adamantine, user)
 	..()
 
 /obj/item/slimecross/charged/rainbow

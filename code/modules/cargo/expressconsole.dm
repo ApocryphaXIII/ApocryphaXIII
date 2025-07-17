@@ -116,8 +116,8 @@
 /obj/machinery/computer/cargo/express/ui_interact(mob/living/user, datum/tgui/ui)
 	if(iskindred(user))
 		var/mob/living/carbon/human/H = user
-		if(H.clane)
-			if(H.clane.name == CLAN_LASOMBRA)
+		if(H.clan)
+			if(H.clan.name == CLAN_LASOMBRA)
 				return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -216,13 +216,13 @@
 				LZ = get_turf(beacon)
 				beacon.update_status(SP_LAUNCH)
 				TIMER_COOLDOWN_START(src, COOLDOWN_EXPRESSPOD_CONSOLE, 5 SECONDS)
-				var/obj/cargotrain/train = new(get_nearest_free_turf(LZ))
+				var/obj/cargotrain/train = new(get_farthest_open_chain_turf(LZ))
 				train.starter = usr
 				train.glide_size = (32 / 3) * world.tick_lag
 				walk_to(train, LZ, 1, 3)
 				playsound(train, 'code/modules/wod13/sounds/train_arrive.ogg', 50, FALSE)
-				var/trackLength = get_dist(get_nearest_free_turf(LZ), LZ)*5
-				spawn(trackLength)
+				var/track_travel_time = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
+				spawn(track_travel_time)
 					var/obj/structure/closet/crate/crate = new(get_turf(train))
 					crate.name = "Supply Crate"
 					for(var/datum/supply_pack/vampire/pack in final_order)
@@ -233,8 +233,8 @@
 								var/obj/item/item_instance = new item_path
 								item_instance.forceMove(crate)
 					playsound(train, 'code/modules/wod13/sounds/train_depart.ogg', 50, FALSE)
-					walk_to(train, get_nearest_free_turf(LZ), 1, 3)
-					spawn(trackLength)
+					walk_to(train, get_farthest_open_chain_turf(LZ), 1, 3)
+					spawn(track_travel_time)
 						qdel(train)
 					order_queue.Cut()
 				return
@@ -303,17 +303,17 @@
 					if (SO.pack.cost <= points_to_check && LZ)//we need to call the cost check again because of the CHECK_TICK call
 						TIMER_COOLDOWN_START(src, COOLDOWN_EXPRESSPOD_CONSOLE, 5 SECONDS)
 						account_balance = max(0, account_balance-SO.pack.cost)
-						var/obj/cargotrain/train = new(get_nearest_free_turf(LZ))
+						var/obj/cargotrain/train = new(get_farthest_open_chain_turf(LZ))
 						train.starter = usr
 						train.glide_size = (32 / 3) * world.tick_lag
 						walk_to(train, LZ, 1, 3)
 						playsound(train, 'code/modules/wod13/sounds/train_arrive.ogg', 50, FALSE)
-						var/trackLength = get_dist(get_nearest_free_turf(LZ), LZ)*5
-						spawn(trackLength)
+						var/track_travel_time = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
+						spawn(track_travel_time)
 							SO.generate(get_turf(train))
 							playsound(train, 'code/modules/wod13/sounds/train_depart.ogg', 50, FALSE)
-							walk_to(train, get_nearest_free_turf(LZ), 1, 3)
-							spawn(trackLength)
+							walk_to(train, get_farthest_open_chain_turf(LZ), 1, 3)
+							spawn(track_travel_time)
 								qdel(train)
 //						if(pack.special_pod)
 //							new /obj/effect/pod_landingzone(LZ, pack.special_pod, SO)
@@ -337,17 +337,17 @@
 						for(var/i in 1 to MAX_EMAG_ROCKETS)
 							var/LZ = pick(empty_turfs)
 							LAZYREMOVE(empty_turfs, LZ)
-							var/obj/cargotrain/train = new(get_nearest_free_turf(LZ))
+							var/obj/cargotrain/train = new(get_farthest_open_chain_turf(LZ))
 							train.starter = usr
 							train.glide_size = (32 / 3) * world.tick_lag
 							walk_to(train, LZ, 1, 3)
 							playsound(train, 'code/modules/wod13/sounds/train_arrive.ogg', 50, FALSE)
-							var/trackLength = get_dist(get_nearest_free_turf(LZ), LZ)*5
-							spawn(trackLength)
+							var/track_travel_time = get_dist(get_farthest_open_chain_turf(LZ), LZ)*5
+							spawn(track_travel_time)
 								playsound(train, 'code/modules/wod13/sounds/train_depart.ogg', 50, FALSE)
 								SO.generate(get_turf(train))
-								walk_to(train, get_nearest_free_turf(LZ), 1, 3)
-								spawn(trackLength)
+								walk_to(train, get_farthest_open_chain_turf(LZ), 1, 3)
+								spawn(track_travel_time)
 									qdel(train)
 //							if(pack.special_pod)
 //								new /obj/effect/pod_landingzone(LZ, pack.special_pod, SO)

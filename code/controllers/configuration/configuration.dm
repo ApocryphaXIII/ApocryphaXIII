@@ -64,6 +64,7 @@
 
 	if (Master)
 		Master.OnConfigLoad()
+	log_config("All configs loaded")
 
 /datum/controller/configuration/proc/full_wipe()
 	if(IsAdminAdvancedProcCall())
@@ -109,7 +110,7 @@
 	if(IsAdminAdvancedProcCall())
 		return
 
-	var/filename_to_test = world.system_type == MS_WINDOWS ? lowertext(filename) : filename
+	var/filename_to_test = world.system_type == MS_WINDOWS ? LOWER_TEXT(filename) : filename
 	if(filename_to_test in stack)
 		log_config("Warning: Config recursion detected ([english_list(stack)]), breaking!")
 		return
@@ -117,6 +118,7 @@
 
 	log_config("Loading config file [filename]...")
 	var/list/lines = world.file2list("[directory]/[filename]")
+	log_config("[filename] has [length(lines)] Lines.")
 	var/list/_entries = entries
 	for(var/L in lines)
 		L = trim(L)
@@ -136,10 +138,10 @@
 		var/value = null
 
 		if(pos)
-			entry = lowertext(copytext(L, 1, pos))
+			entry = LOWER_TEXT(copytext(L, 1, pos))
 			value = copytext(L, pos + length(L[pos]))
 		else
-			entry = lowertext(L)
+			entry = LOWER_TEXT(L)
 
 		if(!entry)
 			continue
@@ -186,6 +188,7 @@
 		if(validated)
 			E.modified = TRUE
 
+	log_config("Finished config file [filename]...")
 	++.
 
 /datum/controller/configuration/can_vv_get(var_name)
@@ -290,9 +293,10 @@ Example config:
 			policy = parsed
 
 /datum/controller/configuration/proc/loadmaplist(filename)
-	log_config("Loading config file [filename]...")
+	log_config("Loading map config file [filename]...")
 	filename = "[directory]/[filename]"
 	var/list/Lines = world.file2list(filename)
+	log_config("[filename] has [length(Lines)] Lines.")
 
 	var/datum/map_config/currentmap = null
 	for(var/t in Lines)
@@ -310,10 +314,10 @@ Example config:
 		var/data = null
 
 		if(pos)
-			command = lowertext(copytext(t, 1, pos))
+			command = LOWER_TEXT(copytext(t, 1, pos))
 			data = copytext(t, pos + length(t[pos]))
 		else
-			command = lowertext(t)
+			command = LOWER_TEXT(t)
 
 		if(!command)
 			continue
@@ -345,7 +349,7 @@ Example config:
 				currentmap = null
 			else
 				log_config("Unknown command in map vote config: '[command]'")
-
+	log_config("Finished config file [filename]...")
 
 /datum/controller/configuration/proc/pick_mode(mode_name)
 	// I wish I didn't have to instance the game modes in order to look up

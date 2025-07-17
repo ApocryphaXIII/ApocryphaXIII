@@ -11,11 +11,11 @@ GLOBAL_LIST_INIT(malkavian_character_replacements, list(
 		"v"	   = "𝐯",            "V" = "𝓥",
 	))
 
-/datum/vampireclane/malkavian
+/datum/vampire_clan/malkavian
 	name = CLAN_MALKAVIAN
 	desc = "Derided as Lunatics by other vampires, the Blood of the Malkavians lets them perceive and foretell truths hidden from others. Like the �wise madmen� of poetry their fractured perspective stems from seeing too much of the world at once, from understanding too deeply, and feeling emotions that are just too strong to bear."
 	curse = "Insanity."
-	clane_disciplines = list(
+	clan_disciplines = list(
 		/datum/discipline/auspex,
 		/datum/discipline/dementation,
 		/datum/discipline/obfuscate
@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(malkavian_character_replacements, list(
 	clan_keys = /obj/item/vamp/keys/malkav
 	var/derangement = TRUE
 
-/datum/vampireclane/malkavian/post_gain(mob/living/carbon/human/malky)
+/datum/vampire_clan/malkavian/post_gain(mob/living/carbon/human/malky)
 	. = ..()
 	var/datum/action/cooldown/malk_hivemind/hivemind = new()
 	var/datum/action/cooldown/malk_speech/malk_font = new()
@@ -68,8 +68,8 @@ GLOBAL_LIST_INIT(malkavian_character_replacements, list(
 	check_flags = AB_CHECK_CONSCIOUS
 	vampiric = TRUE
 	cooldown_time = 5 SECONDS
-	///clane datum
-	var/datum/vampireclane/malkavian/clane_datum
+	///clan datum
+	var/datum/vampire_clan/malkavian/clan_datum
 
 /datum/action/cooldown/malk_speech/Trigger()
 	. = ..()
@@ -80,7 +80,7 @@ GLOBAL_LIST_INIT(malkavian_character_replacements, list(
 		//before we inadvertently obfuscate the message to pass filters, filter it first.
 		//as funny as malkavians saying "amogus" would be, the filter also includes slurs... how unfortunate.
 		to_chat(src, span_warning("That message contained a word prohibited in IC chat! Consider reviewing the server rules.\n<span replaceRegex='show_filtered_ic_chat'>\"[mad_speak]\"</span>"))
-		SSblackbox.record_feedback("tally", "ic_blocked_words", 1, lowertext(config.ic_filter_regex.match))
+		SSblackbox.record_feedback("tally", "ic_blocked_words", 1, LOWER_TEXT(config.ic_filter_regex.match))
 		return
 
 	if(mad_speak)

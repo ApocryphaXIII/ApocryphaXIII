@@ -142,6 +142,40 @@
 	name = "McGriff"
 	desc = "This dog can tell something smells around here, and that something is CRIME!"
 
+/mob/living/simple_animal/pet/dog/wolfkin
+	name = "Lupus Wolfkin"
+	real_name = "Lupus Wolfkin"
+	desc = "It's an actual wolf."
+	icon = 'code/modules/wod13/tfn_lupus.dmi'
+	icon_state = "white"
+	butcher_results = list(/obj/item/food/meat/slab = 5)
+	limb_destroyer = 1
+	gold_core_spawnable = FRIENDLY_SPAWN
+
+/mob/living/simple_animal/pet/dog/wolfkin/red
+	icon_state = "red"
+	icon_dead = "red_rest"
+
+/mob/living/simple_animal/pet/dog/wolfkin/ginger
+	icon_state = "ginger"
+	icon_dead = "ginger_rest"
+
+/mob/living/simple_animal/pet/dog/wolfkin/gray
+	icon_state = "gray"
+	icon_dead = "gray_rest"
+
+/mob/living/simple_animal/pet/dog/wolfkin/white
+	icon_state = "white"
+	icon_dead = "white_rest"
+
+/mob/living/simple_animal/pet/dog/wolfkin/brown
+	icon_state = "brown"
+	icon_dead = "brown_rest"
+
+/mob/living/simple_animal/pet/dog/wolfkin/black
+	icon_state = "black"
+	icon_dead = "black_rest"
+
 /mob/living/simple_animal/pet/dog/bullterrier
 	name = "\improper bull terrier"
 	real_name = "bull terrier"

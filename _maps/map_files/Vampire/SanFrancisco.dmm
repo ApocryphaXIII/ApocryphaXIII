@@ -64391,7 +64391,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/strip/toreador)
 "rjg" = (
-/mob/living/simple_animal/pet/dog/wolfkin,
+/mob/living/simple_animal/pet/dog/wolfkin/white,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "rjh" = (

@@ -152,6 +152,24 @@
 	limb_destroyer = 1
 	gold_core_spawnable = FRIENDLY_SPAWN
 
+/mob/living/simple_animal/pet/dog/wolfkin/red
+	icon_state = "red"
+
+/mob/living/simple_animal/pet/dog/wolfkin/ginger
+	icon_state = "ginger"
+
+/mob/living/simple_animal/pet/dog/wolfkin/gray
+	icon_state = "gray"
+
+/mob/living/simple_animal/pet/dog/wolfkin/white
+	icon_state = "white"
+
+/mob/living/simple_animal/pet/dog/wolfkin/brown
+	icon_state = "brown"
+
+/mob/living/simple_animal/pet/dog/wolfkin/black
+	icon_state = "black"
+
 /mob/living/simple_animal/pet/dog/bullterrier
 	name = "\improper bull terrier"
 	real_name = "bull terrier"

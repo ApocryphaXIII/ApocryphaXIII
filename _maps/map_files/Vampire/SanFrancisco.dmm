@@ -4690,10 +4690,11 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/theatre)
 "bki" = (
-/mob/living/simple_animal/pet/dog/wolfkin{
-	icon_state = "brown"
+/obj/effect/turf_decal/weather/dirt{
+	dir = 9
 	},
-/turf/open/floor/plating/rough/cave,
+/mob/living/simple_animal/pet/dog/wolfkin/black,
+/turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "bkl" = (
 /obj/structure/vampdoor/camarilla,
@@ -4732,10 +4733,8 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/banu/haven)
 "bkJ" = (
-/mob/living/simple_animal/pet/dog/wolfkin{
-	icon_state = "black"
-	},
-/turf/open/floor/plating/vampgrass,
+/mob/living/simple_animal/pet/dog/wolfkin/brown,
+/turf/open/floor/plating/rough/cave,
 /area/vtm/forest)
 "bkP" = (
 /obj/structure/railing{
@@ -15015,6 +15014,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
 	},
+/mob/living/simple_animal/pet/dog/wolfkin/ginger,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "dYJ" = (
@@ -56197,9 +56197,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/church/interior/haven)
 "pcD" = (
-/mob/living/simple_animal/pet/dog/wolfkin{
-	icon_state = "ginger"
-	},
+/mob/living/simple_animal/pet/dog/wolfkin/red,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/forest)
 "pcM" = (
@@ -67319,10 +67317,9 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/tzimisce_manor)
 "rVD" = (
-/mob/living/simple_animal/pet/dog/wolfkin{
-	icon_state = "gray"
-	},
-/turf/open/floor/plating/vampdirt,
+/obj/structure/flora/ausbushes/sparsegrass,
+/mob/living/simple_animal/pet/dog/wolfkin/gray,
+/turf/open/floor/plating/vampgrass,
 /area/vtm/forest)
 "rVG" = (
 /obj/structure/toilet{
@@ -73000,12 +72997,6 @@
 /obj/weapon_showcase,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
-"txt" = (
-/mob/living/simple_animal/pet/dog/wolfkin{
-	icon_state = "red"
-	},
-/turf/open/floor/plating/vampdirt,
-/area/vtm/forest)
 "txy" = (
 /obj/effect/turf_decal/siding/white,
 /obj/structure/fluff/hedge,
@@ -503544,8 +503535,8 @@ laE
 laE
 laE
 laE
-bki
 laE
+bkJ
 laE
 gYr
 qia
@@ -504066,8 +504057,8 @@ tyL
 sDZ
 cRj
 qia
+qia
 rVD
-gYr
 sDZ
 qia
 qia
@@ -504585,7 +504576,7 @@ qia
 sDZ
 lSY
 sDZ
-bkJ
+sDZ
 ohk
 qia
 enI
@@ -504842,7 +504833,7 @@ qia
 sDZ
 gYr
 sDZ
-ohk
+bki
 qia
 qia
 qia
@@ -506642,7 +506633,7 @@ sDZ
 sDZ
 flX
 eGF
-txt
+qia
 qia
 nrc
 tTf

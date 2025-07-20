@@ -85533,9 +85533,8 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "wEG" = (
-/obj/effect/decal/bordur,
-/obj/structure/barrels{
-	icon_state = "barrel12"
+/obj/structure/railing{
+	layer = 4
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm)
@@ -86051,8 +86050,8 @@
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/millennium_tower/f4)
 "wLD" = (
-/obj/effect/decal/bordur{
-	dir = 10
+/obj/structure/railing/metal/corner{
+	pixel_x = 1
 	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/techshop)
@@ -87291,13 +87290,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/lower)
 "xdU" = (
-/obj/effect/decal/bordur{
-	dir = 1
-	},
-/obj/effect/decal/graffiti/large{
-	pixel_x = 9
-	},
-/turf/open/floor/plating/roofwalk,
+/turf/open/floor/plating/parquetry/old,
 /area/vtm)
 "xej" = (
 /obj/structure/bed,
@@ -87451,13 +87444,15 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/cog/pantry)
 "xfI" = (
-/obj/effect/decal/bordur{
-	dir = 4
+/obj/structure/dresser,
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_x = 16
 	},
-/obj/effect/decal/graffiti,
-/obj/structure/trashcan,
-/turf/open/floor/plating/sidewalk,
-/area/vtm/unionsquare)
+/turf/open/floor/plating/vampcarpet{
+	color = "#fFa670"
+	},
+/area/vtm/interior/techshop)
 "xfJ" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/clerk,
@@ -88148,10 +88143,9 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/millennium_tower/ventrue)
 "xpS" = (
-/obj/effect/decal/trash,
-/obj/structure/closet/cardboard,
-/turf/open/floor/plating/rough,
-/area/vtm/interior/glasswalker)
+/obj/machinery/washing_machine,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/techshop)
 "xpW" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -90148,11 +90142,11 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/cog/pantry)
 "xRb" = (
-/obj/effect/decal/trash,
-/obj/structure/closet/crate/grave,
-/obj/item/candle/infinite,
-/turf/open/floor/plating/vampdirt,
-/area/vtm/interior/glasswalker)
+/obj/effect/decal/cleanable/trash{
+	icon_state = "trash7"
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "xRl" = (
 /obj/structure/table/wood,
 /obj/item/phone_book,

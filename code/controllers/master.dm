@@ -195,6 +195,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	init_stage_completed = 0
 	var/mc_started = FALSE
 
+	log_world("Initializing subsystems...")
 	to_chat(world, "<span class='boldannounce'>Initializing subsystems...</span>")
 
 	var/list/stage_sorted_subsystems = new(INITSTAGE_MAX)

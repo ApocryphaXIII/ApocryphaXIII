@@ -41,7 +41,7 @@
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
 "bp" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/roadsign/crosswalk,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -111,7 +111,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "cj" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "cQ" = (
@@ -122,7 +122,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "cT" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/vampire_car/rand/camarilla{
 	dir = 2;
 	locked = 0
@@ -131,7 +131,7 @@
 /area/vtm/pacificheights)
 "cZ" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
@@ -145,12 +145,8 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "ee" = (
-/obj/gummaguts{
-	pixel_x = 32;
-	pixel_y = 38
-	},
-/turf/open/floor/plating/vampbeach,
-/area/vtm/pacificheights)
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/shop)
 "eg" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
@@ -177,7 +173,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "eJ" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash5"
 	},
 /turf/open/floor/plating/concrete,
@@ -189,7 +185,7 @@
 /turf/closed/wall/vampwall/rich/old/low/window/reinforced,
 /area/vtm/pacificheights)
 "fd" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/item/vamp/keys/clinic,
@@ -204,7 +200,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "fn" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "fS" = (
@@ -216,13 +212,13 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/pacificheights)
 "gb" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "gj" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -231,7 +227,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "gs" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/structure/lamppost/one{
@@ -243,18 +239,18 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/shop)
 "gS" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /obj/structure/lamppost/four,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "hi" = (
-/obj/effect/decal/asphaltline,
+/obj/effect/turf_decal/asphaltline,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "ht" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash5"
 	},
 /turf/open/floor/plating/vampbeach,
@@ -290,7 +286,7 @@
 /area/vtm/pacificheights)
 "iA" = (
 /obj/effect/decal/cleanable/garbage,
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash8"
 	},
 /turf/open/floor/plating/vampbeach,
@@ -302,7 +298,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/pacificheights)
 "iM" = (
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -334,7 +330,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "jt" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
@@ -349,14 +345,14 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "ki" = (
-/obj/order{
+/obj/structure/sign/city/order{
 	pixel_y = 32
 	},
-/obj/order3{
+/obj/structure/fluff/tv/order/three{
 	pixel_x = -10;
 	pixel_y = 12
 	},
-/obj/order4{
+/obj/structure/fluff/tv/order/four{
 	pixel_y = 12;
 	pixel_x = 6
 	},
@@ -373,7 +369,7 @@
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
 "kX" = (
-/obj/effect/decal/crosswalk{
+/obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
@@ -388,7 +384,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "lP" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash5"
 	},
 /obj/effect/spawner/random/occult/artifact,
@@ -422,7 +418,10 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "mw" = (
-/obj/structure/ladder/manhole/up,
+/obj/structure/ladder/manhole/up{
+	connect_down = 1;
+	connect_up = 0
+	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "mW" = (
@@ -457,15 +456,15 @@
 /area/vtm/pacificheights)
 "nA" = (
 /obj/effect/decal/cleanable/garbage,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "nD" = (
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_y = 12;
 	pixel_x = -10
 	},
-/obj/order2{
+/obj/structure/fluff/tv/order/two{
 	pixel_y = 12;
 	pixel_x = 6
 	},
@@ -482,11 +481,11 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "ok" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "ov" = (
-/obj/effect/decal/crosswalk{
+/obj/effect/turf_decal/crosswalk{
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
@@ -502,7 +501,7 @@
 /area/vtm/supply)
 "oU" = (
 /obj/weapon_showcase,
-/obj/american_flag{
+/obj/flag/usa{
 	pixel_y = 32
 	},
 /turf/open/floor/plating/parquetry/old,
@@ -511,7 +510,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "oX" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 6
 	},
 /turf/open/floor/plating/sidewalk,
@@ -535,13 +534,13 @@
 /area/vtm/pacificheights)
 "pG" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "pH" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash7"
 	},
 /obj/effect/spawner/random/occult/artifact,
@@ -551,10 +550,16 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "qn" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
+/area/vtm/pacificheights)
+"qr" = (
+/obj/structure/sign/city/police_department{
+	dir = 8
+	},
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "qt" = (
 /obj/machinery/computer/cargo/express{
@@ -627,7 +632,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/techshop)
 "rW" = (
-/obj/effect/decal/crosswalk,
+/obj/effect/turf_decal/crosswalk,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "sb" = (
@@ -642,20 +647,20 @@
 /area/vtm/sewer)
 "sk" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "sm" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/structure/roadsign/stop,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "so" = (
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
@@ -668,24 +673,24 @@
 /area/vtm/interior/techshop)
 "sy" = (
 /mob/living/carbon/human/npc/shop,
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash7"
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "sX" = (
-/obj/bubway{
+/obj/structure/sign/city/store/bubway{
 	pixel_y = 40
 	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "tb" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "tf" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 10
 	},
 /obj/structure/lamppost/four,
@@ -697,6 +702,12 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
+"tr" = (
+/obj/structure/sign/city/police_department{
+	dir = 1
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "ts" = (
 /obj/machinery/fax/endron,
 /turf/open/floor/plating/vampbeach,
@@ -709,7 +720,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "ty" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "tF" = (
@@ -717,6 +728,10 @@
 	locked = 0
 	},
 /turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
+"tO" = (
+/obj/structure/sign/city/police_department,
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "uC" = (
 /obj/structure/table,
@@ -737,10 +752,11 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+/obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "uK" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /obj/structure/lamppost/one{
@@ -756,7 +772,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "vl" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /obj/structure/lamppost/one{
@@ -765,7 +781,7 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "vm" = (
-/obj/bacotell{
+/obj/structure/sign/city/store/bacotell{
 	pixel_x = 1;
 	pixel_y = 40
 	},
@@ -776,7 +792,7 @@
 /area/vtm/pacificheights)
 "vs" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner,
+/obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "vz" = (
@@ -812,7 +828,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/shuttle/arrival)
 "wO" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "wW" = (
@@ -820,13 +836,13 @@
 /turf/open/floor/plating/vampbeach,
 /area/shuttle/arrival)
 "xh" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/closed/wall/vampwall/junk/alt,
 /area/vtm/pacificheights)
 "xC" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "xE" = (
@@ -916,7 +932,7 @@
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
 "Ak" = (
-/obj/effect/decal/crosswalk{
+/obj/effect/turf_decal/crosswalk{
 	dir = 1
 	},
 /turf/open/floor/plating/asphalt,
@@ -940,7 +956,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "AU" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /obj/structure/lamppost/three{
@@ -958,13 +974,13 @@
 /area/vtm/sewer)
 "Bf" = (
 /obj/effect/decal/cleanable/garbage,
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash7"
 	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Bq" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/lamppost/one,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -1010,7 +1026,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Cz" = (
-/obj/effect/decal/asphaltline{
+/obj/effect/turf_decal/asphaltline{
 	dir = 8
 	},
 /obj/structure/roadblock{
@@ -1037,7 +1053,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "Dh" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/vampire_car/rand/anarch{
 	dir = 2;
 	locked = 0
@@ -1052,30 +1068,30 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "Dr" = (
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Dw" = (
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_y = 12
 	},
-/obj/order2{
+/obj/structure/fluff/tv/order/two{
 	pixel_y = 12
 	},
-/obj/order3{
+/obj/structure/fluff/tv/order/three{
 	pixel_x = 16;
 	pixel_y = 12
 	},
-/obj/order1{
+/obj/structure/fluff/tv/order/one{
 	pixel_x = -16;
 	pixel_y = 12
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "DF" = (
-/obj/gummaguts{
+/obj/structure/sign/city/store/gummaguts{
 	pixel_x = 16;
 	pixel_y = 38
 	},
@@ -1147,17 +1163,24 @@
 "EY" = (
 /turf/closed/wall/vampwall/rich,
 /area/vtm/pacificheights)
+"Ff" = (
+/obj/effect/spawner/random/trash/grime{
+	spawn_loot_count = 30;
+	spawn_scatter_radius = 3
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "Fg" = (
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
 "Fs" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "FB" = (
-/obj/effect/decal/stock{
+/obj/effect/turf_decal/stock{
 	dir = 1
 	},
 /turf/open/floor/plating/asphalt,
@@ -1167,7 +1190,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "FG" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/effect/decal/graffiti/large,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
@@ -1242,7 +1265,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Hb" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -1264,7 +1287,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "Hn" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /obj/effect/landmark/npcbeacon/directed{
@@ -1276,13 +1299,20 @@
 /obj/effect/decal/wallpaper,
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
+"Hy" = (
+/obj/machinery/vamp/atm{
+	dir = 8;
+	pixel_x = 8
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "HJ" = (
-/obj/effect/decal/stock,
+/obj/effect/turf_decal/stock,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "HO" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1291,13 +1321,13 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/techshop)
 "Ie" = (
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "Ig" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/roadblock,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -1319,7 +1349,10 @@
 /turf/closed/wall/vampwall/market,
 /area/vtm/pacificheights)
 "IL" = (
-/obj/structure/ladder/manhole/up,
+/obj/structure/ladder/manhole/up{
+	connect_down = 1;
+	connect_up = 0
+	},
 /turf/open/floor/plating/rough,
 /area/vtm/interior/techshop)
 "IO" = (
@@ -1376,11 +1409,17 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Kg" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
+/area/vtm/pacificheights)
+"Kj" = (
+/obj/structure/sign/city/police_department{
+	dir = 4
+	},
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Ko" = (
 /obj/effect/landmark/npcbeacon/directed{
@@ -1402,13 +1441,13 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "KU" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Lk" = (
-/obj/effect/decal/trash{
+/obj/effect/decal/cleanable/trash{
 	icon_state = "trash7"
 	},
 /turf/open/floor/plating/vampbeach,
@@ -1444,7 +1483,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "LX" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 10
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1463,7 +1502,7 @@
 /obj/machinery/light/small{
 	pixel_y = 16
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
@@ -1542,7 +1581,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "OH" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/item/vamp/keys/police,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -1552,6 +1591,13 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"OU" = (
+/obj/effect/spawner/random/trash/grime{
+	spawn_loot_count = 20;
+	spawn_scatter_radius = 3
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "OX" = (
 /obj/machinery/fax/admin/endron,
 /turf/open/floor/plating/vampbeach,
@@ -1592,7 +1638,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "PW" = (
-/obj/effect/decal/bordur/corner,
+/obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "PX" = (
@@ -1601,7 +1647,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "Qi" = (
-/obj/effect/decal/asphaltline/alt,
+/obj/effect/turf_decal/asphaltline/alt,
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "Qv" = (
@@ -1610,20 +1656,20 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "QK" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "QM" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "QS" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
@@ -1632,6 +1678,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
+/obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Rb" = (
@@ -1659,7 +1706,7 @@
 /area/vtm/interior/shop)
 "Rx" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -1677,7 +1724,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
 "Sv" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/barrels/rand,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
@@ -1685,7 +1732,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "SF" = (
@@ -1711,7 +1758,7 @@
 /area/vtm/clinic)
 "Tp" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner,
+/obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Tq" = (
@@ -1816,7 +1863,7 @@
 /area/vtm/pacificheights)
 "Vh" = (
 /obj/effect/landmark/npcbeacon,
-/obj/effect/decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -1826,7 +1873,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "Vv" = (
-/obj/order4{
+/obj/structure/fluff/tv/order/four{
 	pixel_y = 12
 	},
 /obj/machinery/griddle,
@@ -1843,13 +1890,13 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "VQ" = (
-/obj/effect/decal/asphaltline{
+/obj/effect/turf_decal/asphaltline{
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "We" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -1915,7 +1962,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "XJ" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "XM" = (
@@ -1923,11 +1970,14 @@
 /area/vtm/pacificheights)
 "XU" = (
 /obj/structure/railing,
-/obj/structure/ladder/manhole/down,
+/obj/structure/ladder/manhole/up{
+	connect_down = 1;
+	connect_up = 0
+	},
 /turf/open/floor/plating/vampcanal,
 /area/vtm/pacificheights)
 "XW" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /mob/living/carbon/human/npc/hobo,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
@@ -1936,7 +1986,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "Yr" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
@@ -1979,7 +2029,7 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "YL" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/structure/roadsign/speedlimit,
@@ -1991,7 +2041,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "Zc" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
@@ -2061,7 +2111,7 @@ mw
 ok
 NR
 NR
-NR
+Ff
 NR
 fn
 ok
@@ -2780,7 +2830,7 @@ ZU
 ZU
 ZU
 ZU
-NR
+OU
 NR
 NR
 NR
@@ -2816,7 +2866,7 @@ Bt
 rL
 UJ
 NR
-NR
+Hy
 NR
 cj
 ik
@@ -3088,7 +3138,7 @@ Fg
 mm
 GH
 Fg
-NR
+tO
 NR
 cj
 ik
@@ -3156,7 +3206,7 @@ oW
 oW
 LW
 Fg
-NR
+tr
 NR
 cj
 ik
@@ -3190,7 +3240,7 @@ kS
 kS
 kS
 Fg
-NR
+Kj
 NR
 Dh
 en
@@ -3222,9 +3272,9 @@ kS
 DF
 yE
 Tq
-Cr
 ee
-NR
+Fg
+qr
 NR
 cj
 ik
@@ -3256,8 +3306,8 @@ kS
 Tq
 pt
 TO
-kS
-NR
+ee
+Cr
 NR
 NR
 cj
@@ -3291,7 +3341,7 @@ BX
 Ro
 zx
 kS
-NR
+kS
 NR
 NR
 cj

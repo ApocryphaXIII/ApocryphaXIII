@@ -180,7 +180,7 @@
 
 /obj/effect/decal/gut_floor
 	name = "gut floor"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/icons/tiles.dmi'
 	icon_state = "tzimisce_floor"
 
 /datum/movespeed_modifier/centipede

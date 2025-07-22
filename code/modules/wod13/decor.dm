@@ -1,6 +1,6 @@
 /obj/effect/decal/rugs
 	name = "rugs"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/icons/tiles.dmi'
 	icon_state = "rugs"
 
 /obj/effect/decal/rugs/Initialize()
@@ -834,7 +834,7 @@
 /turf/open/floor/plating/bloodshit
 	gender = PLURAL
 	name = "blood"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/icons/tiles.dmi'
 	icon_state = "blood"
 	flags_1 = NONE
 	attachment_holes = FALSE

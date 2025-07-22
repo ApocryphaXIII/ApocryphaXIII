@@ -1406,10 +1406,10 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/plating/vampplating/stone
+/turf/open/floor/plating/gummaguts
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "gummaguts"
 	flags_1 = NONE
 	attachment_holes = FALSE

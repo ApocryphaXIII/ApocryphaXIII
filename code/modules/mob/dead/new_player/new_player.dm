@@ -198,24 +198,6 @@
 			list("ckey" = ckey, "datetime" = sqltime, "consent" = FALSE)
 		)
 		query.Execute()
-	if(href_list["withdraw_consent"])
-		var/choice = alert(usr, "Are you SURE you want to withdraw your consent to the Terms of Service?\nYou will be instantaneously removed from the server and will have to re-accept the Terms of Service.", "Warning", "Yes", "No")
-		if(choice == "No")
-			return
-		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
-		// Update the DB
-		var/datum/db_query/query = SSdbcore.NewQuery(
-			"REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES (:ckey, :datetime, :consent)",
-			list("ckey" = ckey, "datetime" = sqltime, "consent" = FALSE)
-		)
-		if(!query.warn_execute())
-			to_chat(usr, "Well, this is embarassing. We tried to save your ToS withdrawal but the DB failed. Please contact the server host")
-			return
-
-		// I know its a very rare occurance, but I wouldnt doubt people using this to withdraw consent right when sec captures them
-		message_admins("[key_name_admin(usr)] was disconnected due to withdrawing their ToS consent.")
-		to_chat(usr, "<span class='boldannounce'>Your ToS consent has been withdrawn. You have been kicked from the server</span>")
-		del(src)
 
 	if(client.interviewee)
 		return FALSE

@@ -16,11 +16,12 @@ SUBSYSTEM_DEF(city_time)
 	/// Time between xp drops in INGAME time
 	var/time_between_xp_drops = 1 HOURS
 
-/datum/controller/subsystem/city_time/fire()
-	//Should be grabbed as part of city time init.
+/datum/controller/subsystem/city_time/Initialize(start_timeofday)
+	. = ..()
 	time_till_daytime = CONFIG_GET(number/time_till_day)
 	time_till_roundend = CONFIG_GET(number/time_till_roundend)
 
+/datum/controller/subsystem/city_time/fire()
 	if(last_xp_drop + time_between_xp_drops < station_time_passed())
 		last_xp_drop = station_time_passed()
 		for(var/mob/living/carbon/werewolf/W in GLOB.player_list)

@@ -393,6 +393,7 @@
 
 /datum/config_entry/number/time_till_day
 	config_entry_value = 198000
+	protection = CONFIG_ENTRY_LOCKED
 
 /datum/config_entry/number/time_till_roundend
 	config_entry_value = 216000

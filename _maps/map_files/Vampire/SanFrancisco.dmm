@@ -16405,6 +16405,11 @@
 	},
 /turf/open/floor/carpet,
 /area/vtm/interior/chantry)
+"erv" = (
+/obj/structure/table/wood,
+/obj/structure/retail/gummaguts_menu,
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "erz" = (
 /obj/effect/turf_decal/stock,
 /turf/open/floor/plating/asphalt,
@@ -17209,6 +17214,13 @@
 	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/endron_facility/restricted)
+"eEH" = (
+/obj/structure/table/wood,
+/obj/underplate/stuff{
+	pixel_y = 8
+	},
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "eEJ" = (
 /obj/effect/decal/pallet,
 /obj/effect/decal/pallet{
@@ -19463,7 +19475,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
-/turf/open/floor/plating/vampplating/stone,
+/turf/open/floor/plating/gummaguts,
 /area/vtm/interior/shop)
 "fkR" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -32600,7 +32612,7 @@
 	pixel_y = 40
 	},
 /mob/living/carbon/human/npc/guard,
-/turf/open/floor/plating/vampplating/stone,
+/turf/open/floor/plating/gummaguts,
 /area/vtm/interior/shop)
 "iOy" = (
 /obj/machinery/light/small/red{
@@ -37226,7 +37238,7 @@
 /obj/structure/vampdoor/npc{
 	lockpick_difficulty = 6
 	},
-/turf/open/floor/plating/vampplating/stone,
+/turf/open/floor/plating/gummaguts,
 /area/vtm/interior/shop)
 "kaA" = (
 /obj/structure/railing{
@@ -38292,6 +38304,12 @@
 "kqs" = (
 /turf/open/floor/plating/asphalt,
 /area/vtm/ghetto/old)
+"kqu" = (
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "kqv" = (
 /obj/effect/decal/garou_glyph/hive,
 /turf/open/floor/plating/circled,
@@ -40901,6 +40919,10 @@
 /obj/structure/lattice/catwalk,
 /turf/open/openspace,
 /area/vtm)
+"lbo" = (
+/mob/living/carbon/human/npc/gummaguts,
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "lbp" = (
 /obj/structure/mirror{
 	pixel_y = 32
@@ -43204,6 +43226,11 @@
 /obj/structure/table/wood,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/graveyard/interior)
+"lIG" = (
+/obj/structure/table/wood,
+/obj/underplate,
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "lIL" = (
 /obj/effect/decal/wallpaper/paper/rich,
 /turf/closed/wall/vampwall/rich/old,
@@ -49432,6 +49459,12 @@
 /obj/effect/landmark/npcability,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/chinatown)
+"nqP" = (
+/obj/structure/chair/wood{
+	dir = 4
+	},
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "nqS" = (
 /obj/structure/table/wood,
 /obj/item/vamp/keys/police{
@@ -52865,6 +52898,10 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/cabaret)
+"oks" = (
+/obj/structure/table/wood,
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "oku" = (
 /obj/effect/decal/wallpaper/paper/darkred,
 /turf/closed/wall/vampwall/bar,
@@ -53163,6 +53200,10 @@
 	},
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/staff)
+"oom" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "ooH" = (
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -55943,7 +55984,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plating/vampplating/stone,
+/turf/open/floor/plating/gummaguts,
 /area/vtm/interior/shop)
 "oYL" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -72407,7 +72448,7 @@
 /area/vtm/sewer)
 "tpV" = (
 /obj/structure/closet/crate/bin,
-/turf/open/floor/plating/vampplating/stone,
+/turf/open/floor/plating/gummaguts,
 /area/vtm/interior/shop)
 "tqi" = (
 /obj/structure/railing{
@@ -78807,7 +78848,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
-/turf/open/floor/plating/vampplating/stone,
+/turf/open/floor/plating/gummaguts,
 /area/vtm/interior/shop)
 "vci" = (
 /obj/structure/barrels/rand,
@@ -79076,6 +79117,12 @@
 /mob/living/simple_animal/hostile/retaliate/goose,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/forest)
+"vgl" = (
+/obj/structure/chair/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "vgo" = (
 /obj/effect/decal/cleanable/trash{
 	icon_state = "trash8"
@@ -88637,8 +88684,8 @@
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/sewer/nosferatu_town)
 "xKS" = (
-/turf/open/floor/plating/vampplating/stone,
-/area/vtm/interior/techshop)
+/turf/open/floor/plating/gummaguts,
+/area/vtm/interior/shop)
 "xKZ" = (
 /obj/structure/chair/office,
 /turf/open/floor/carpet,
@@ -159879,11 +159926,11 @@ cFm
 msq
 msq
 mrd
-ioi
-ioi
-kdg
-ljs
-kdg
+nqP
+nqP
+xKS
+oom
+xKS
 fDZ
 rYb
 gQE
@@ -160136,11 +160183,11 @@ cFm
 msq
 msq
 mrd
-gKm
-qbT
-kdg
-kdg
-kdg
+lIG
+oks
+xKS
+xKS
+xKS
 fDZ
 nHi
 gQE
@@ -160394,10 +160441,10 @@ msq
 msq
 mrd
 vcg
-iQw
-kdg
-kdg
-kdg
+vgl
+xKS
+xKS
+xKS
 fDZ
 lJh
 gQE
@@ -160651,10 +160698,10 @@ msq
 msq
 mrd
 fkF
-kdg
-kdg
-kdg
-kdg
+xKS
+xKS
+xKS
+xKS
 fDZ
 lJh
 gQE
@@ -160907,11 +160954,11 @@ cFm
 msq
 msq
 mrd
-ioi
-ioi
-kdg
-kdg
-kdg
+nqP
+nqP
+xKS
+xKS
+xKS
 fDZ
 hhq
 gQE
@@ -161164,11 +161211,11 @@ cFm
 msq
 msq
 mrd
-qbT
-qbT
-kdg
-kdg
-kdg
+oks
+oks
+xKS
+xKS
+xKS
 fDZ
 nIQ
 gQE
@@ -161422,10 +161469,10 @@ msq
 msq
 mrd
 vcg
-iQw
-kdg
-kdg
-kdg
+vgl
+xKS
+xKS
+xKS
 fDZ
 lJh
 gQE
@@ -161678,11 +161725,11 @@ cFm
 msq
 msq
 mrd
-kdg
-kdg
-kdg
-kdg
-kdg
+xKS
+xKS
+xKS
+xKS
+xKS
 wPB
 lJh
 gQE
@@ -161935,11 +161982,11 @@ xWP
 xWP
 xWP
 mrd
-ioi
-ioi
-kdg
-kdg
-kdg
+nqP
+nqP
+xKS
+xKS
+xKS
 wPB
 lJh
 gQE
@@ -162192,11 +162239,11 @@ oWV
 oWV
 oWV
 mrd
-gKm
-qbT
-kdg
-kdg
-kdg
+lIG
+oks
+xKS
+xKS
+xKS
 fDZ
 lJh
 gQE
@@ -162450,10 +162497,10 @@ oWV
 oWV
 mrd
 vcg
-iQw
-kdg
-kdg
-kdg
+vgl
+xKS
+xKS
+xKS
 fDZ
 rLH
 gQE
@@ -162707,10 +162754,10 @@ kjB
 kjB
 mrd
 iOn
-kdg
-kdg
-ioi
-ioi
+xKS
+xKS
+nqP
+nqP
 wPB
 lJh
 gQE
@@ -162963,10 +163010,10 @@ fDZ
 fDZ
 fDZ
 mrd
-ljs
-kdg
-kdg
-gKm
+oom
+xKS
+xKS
+lIG
 oYE
 wPB
 gMQ
@@ -163217,14 +163264,14 @@ paa
 paa
 mrd
 tpV
-kdg
-qbT
-kdg
-kdg
-kdg
-kdg
-iQw
-iQw
+xKS
+oks
+xKS
+xKS
+xKS
+xKS
+vgl
+vgl
 fDZ
 rky
 btE
@@ -163473,15 +163520,15 @@ paa
 paa
 paa
 kaz
-kdg
-iVw
-ndI
-kdg
-kdg
-kdg
-kdg
-kdg
-kdg
+xKS
+lbo
+erv
+xKS
+xKS
+xKS
+xKS
+xKS
+xKS
 fDZ
 gMQ
 oQa
@@ -163730,15 +163777,15 @@ paa
 paa
 gwD
 mrd
-muE
-kdg
-gKm
-kdg
-kdg
-kdg
-kdg
-ioi
-ioi
+kqu
+xKS
+lIG
+xKS
+xKS
+xKS
+xKS
+nqP
+nqP
 wPB
 lJh
 gQE
@@ -163987,14 +164034,14 @@ paa
 paa
 oaR
 kFJ
-kdg
-kdg
-qcp
-kdg
-kdg
-kdg
-kdg
-qbT
+xKS
+xKS
+eEH
+xKS
+xKS
+xKS
+xKS
+oks
 oYE
 wPB
 lJh
@@ -164244,15 +164291,15 @@ paa
 paa
 paa
 tco
-ljs
-kdg
-kdg
-kdg
-kdg
-ljs
-kdg
-iQw
-iQw
+oom
+xKS
+xKS
+xKS
+xKS
+oom
+xKS
+vgl
+vgl
 fDZ
 nIQ
 gQE
@@ -264103,7 +264150,7 @@ gBH
 gBH
 jsG
 qIU
-xKS
+uoc
 qwF
 qIU
 ssF

@@ -313,6 +313,7 @@ GLOBAL_VAR_INIT(focused_tests, focused_tests())
 
 /proc/RunUnitTests()
 	CHECK_TICK
+	log_world("Running Unit Tests!")
 
 	var/list/tests_to_run = subtypesof(/datum/unit_test)
 	var/list/focused_tests = list()

@@ -531,126 +531,6 @@
 		return
 	..()
 
-/datum/reagent/mutationtoxin/classic //The one from plasma on green slimes
-	name = "Mutation Toxin"
-	description = "A corruptive toxin."
-	color = "#13BC5E" // rgb: 19, 188, 94
-	race = /datum/species/jelly/slime
-
-/datum/reagent/mutationtoxin/felinid
-	name = "Felinid Mutation Toxin"
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/human/felinid
-	taste_description = "something nyat good"
-
-/datum/reagent/mutationtoxin/lizard
-	name = "Lizard Mutation Toxin"
-	description = "A lizarding toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/lizard
-	taste_description = "dragon's breath but not as cool"
-
-/datum/reagent/mutationtoxin/fly
-	name = "Fly Mutation Toxin"
-	description = "An insectifying toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/fly
-	taste_description = "trash"
-
-/datum/reagent/mutationtoxin/moth
-	name = "Moth Mutation Toxin"
-	description = "A glowing toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/moth
-	taste_description = "clothing"
-
-/datum/reagent/mutationtoxin/pod
-	name = "Podperson Mutation Toxin"
-	description = "A vegetalizing toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/pod
-	taste_description = "flowers"
-
-/datum/reagent/mutationtoxin/jelly
-	name = "Imperfect Mutation Toxin"
-	description = "A jellyfying toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/jelly
-	taste_description = "grandma's gelatin"
-
-/datum/reagent/mutationtoxin/jelly/on_mob_life(mob/living/carbon/human/H)
-	if(isjellyperson(H))
-		to_chat(H, "<span class='warning'>Your jelly shifts and morphs, turning you into another subspecies!</span>")
-		var/species_type = pick(subtypesof(/datum/species/jelly))
-		H.set_species(species_type)
-		holder.del_reagent(type)
-		return TRUE
-	if(current_cycle >= cycles_to_turn) //overwrite since we want subtypes of jelly
-		var/datum/species/species_type = pick(subtypesof(race))
-		H.set_species(species_type)
-		holder.del_reagent(type)
-		to_chat(H, "<span class='warning'>You've become \a [initial(species_type.name)]!</span>")
-		return TRUE
-	return ..()
-
-/datum/reagent/mutationtoxin/golem
-	name = "Golem Mutation Toxin"
-	description = "A crystal toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/golem/random
-	taste_description = "rocks"
-
-/datum/reagent/mutationtoxin/abductor
-	name = "Abductor Mutation Toxin"
-	description = "An alien toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/abductor
-	taste_description = "something out of this world... no, universe!"
-
-/datum/reagent/mutationtoxin/android
-	name = "Android Mutation Toxin"
-	description = "A robotic toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/android
-	taste_description = "circuitry and steel"
-
-//BLACKLISTED RACES
-/datum/reagent/mutationtoxin/skeleton
-	name = "Skeleton Mutation Toxin"
-	description = "A scary toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/skeleton
-	taste_description = "milk... and lots of it"
-
-/datum/reagent/mutationtoxin/zombie
-	name = "Zombie Mutation Toxin"
-	description = "An undead toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/zombie //Not the infectious kind. The days of xenobio zombie outbreaks are long past.
-	taste_description = "brai...nothing in particular"
-
-/datum/reagent/mutationtoxin/ash
-	name = "Ash Mutation Toxin"
-	description = "An ashen toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/lizard/ashwalker
-	taste_description = "savagery"
-
-//DANGEROUS RACES
-/datum/reagent/mutationtoxin/shadow
-	name = "Shadow Mutation Toxin"
-	description = "A dark toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/shadow
-	taste_description = "the night"
-
-/datum/reagent/mutationtoxin/plasma
-	name = "Plasma Mutation Toxin"
-	description = "A plasma-based toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/plasmaman
-	taste_description = "plasma"
-
 #undef MUT_MSG_IMMEDIATE
 #undef MUT_MSG_EXTENDED
 #undef MUT_MSG_ABOUT2TURN
@@ -676,11 +556,6 @@
 	color = "#13BC5E" // rgb: 19, 188, 94
 	taste_description = "slime"
 	penetrates_skin = NONE
-
-/datum/reagent/aslimetoxin/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message=TRUE, touch_protection=0)
-	. = ..()
-	if(methods & ~TOUCH)
-		exposed_mob.ForceContractDisease(new /datum/disease/transformation/slime(), FALSE, TRUE)
 
 /datum/reagent/gluttonytoxin
 	name = "Gluttony's Blessing"
@@ -1154,11 +1029,6 @@
 	can_synth = FALSE //special orange man request
 	penetrates_skin = NONE
 
-/datum/reagent/snail/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message = TRUE, touch_protection = 0)
-	. = ..()
-	if((methods & (PATCH|INGEST|INJECT)) || ((methods & VAPOR) && prob(min(reac_volume,100)*(1 - touch_protection))))
-		exposed_mob.ForceContractDisease(new /datum/disease/gastrolosis(), FALSE, TRUE)
-
 /datum/reagent/fluorosurfactant//foam precursor
 	name = "Fluorosurfactant"
 	description = "A perfluoronated sulfonic acid that forms a foam when mixed with water."
@@ -1303,16 +1173,6 @@
 	metabolization_rate = REAGENTS_METABOLISM * 0.5 // Because stimulum/nitryl/freon/hyper-nob are handled through gas breathing, metabolism must be lower for breathcode to keep up
 	color = "90560B"
 	taste_description = "searingly cold"
-
-/datum/reagent/hypernoblium/on_mob_metabolize(mob/living/L)
-	. = ..()
-	if(isplasmaman(L))
-		ADD_TRAIT(L, TRAIT_NOFIRE, type)
-
-/datum/reagent/hypernoblium/on_mob_end_metabolize(mob/living/L)
-	if(isplasmaman(L))
-		REMOVE_TRAIT(L, TRAIT_NOFIRE, type)
-	return ..()
 
 /datum/reagent/healium
 	name = "Healium"

@@ -10,7 +10,6 @@
 	fitted = NO_FEMALE_UNIFORM
 	mutantrace_variation = MUTANTRACE_VARIATION
 	can_adjust = FALSE
-	species_exception = list(/datum/species/golem)
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/under/jeanshorts

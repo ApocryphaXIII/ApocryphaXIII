@@ -35,7 +35,6 @@
 	player_mind.assigned_role = "Nightmare"
 	player_mind.special_role = "Nightmare"
 	player_mind.add_antag_datum(/datum/antagonist/nightmare)
-	S.set_species(/datum/species/shadow/nightmare)
 	playsound(S, 'sound/magic/ethereal_exit.ogg', 50, TRUE, -1)
 	message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Nightmare by an event.")
 	log_game("[key_name(S)] was spawned as a Nightmare by an event.")

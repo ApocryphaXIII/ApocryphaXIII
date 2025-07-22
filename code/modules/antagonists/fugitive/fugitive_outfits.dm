@@ -115,32 +115,3 @@
 	W.assignment = "Bounty Hunter"
 	W.registered_name = H.real_name
 	W.update_label()
-
-/datum/outfit/bountysynth
-	name = "Bounty Hunter - Synth"
-	uniform = /obj/item/clothing/under/rank/prisoner
-	back = /obj/item/storage/backpack
-	suit = /obj/item/clothing/suit/armor/riot
-	shoes = /obj/item/clothing/shoes/jackboots
-	glasses = /obj/item/clothing/glasses/eyepatch
-	r_pocket = /obj/item/restraints/handcuffs/cable
-	ears = /obj/item/radio/headset
-	id = /obj/item/card/id
-	r_hand = /obj/item/storage/firstaid/regular
-	l_hand = /obj/item/pinpointer/shuttle
-
-	backpack_contents = list(
-		/obj/item/bountytrap = 4
-		)
-
-/datum/outfit/bountysynth/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	if(visualsOnly)
-		return
-	var/datum/species/synth/synthetic_appearance = new()
-	H.set_species(synthetic_appearance)
-	synthetic_appearance.assume_disguise(synthetic_appearance, H)
-	H.update_hair()
-	var/obj/item/card/id/W = H.wear_id
-	W.assignment = "Bounty Hunter"
-	W.registered_name = H.real_name
-	W.update_label()

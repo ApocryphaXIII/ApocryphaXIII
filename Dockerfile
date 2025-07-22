@@ -21,7 +21,7 @@ RUN apt-get install -y --no-install-recommends \
 COPY dependencies.sh .
 
 RUN . ./dependencies.sh \
-    && curl "http://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip" -o byond.zip \
+    && curl -H "User-Agent: Apocrypha/1.0 Continuous Integration" "http://spacestation13.github.io/byond-builds/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip" -o byond.zip \
     && unzip byond.zip \
     && cd byond \
     && sed -i 's|install:|&\n\tmkdir -p $(MAN_DIR)/man6|' Makefile \

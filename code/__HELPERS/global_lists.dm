@@ -2,7 +2,7 @@
 /////Initial Building/////
 //////////////////////////
 
-GLOBAL_LIST_EMPTY(clanes_list)	//>:3
+GLOBAL_LIST_EMPTY(vampire_clan_list)	//>:3
 GLOBAL_LIST_EMPTY(morality_list) // TFN EDIT: morality system
 GLOBAL_LIST_EMPTY(auspices_list)
 GLOBAL_LIST_EMPTY(tribes_list)
@@ -47,10 +47,10 @@ GLOBAL_LIST_EMPTY(glyph_list)
 		GLOB.species_list[S.id] = spath
 	sort_list(GLOB.species_list, GLOBAL_PROC_REF(cmp_typepaths_asc))
 
-	for(var/spath in subtypesof(/datum/vampireclane))
-		var/datum/vampireclane/S = new spath()
-		GLOB.clanes_list[S.name] = spath
-	sort_list(GLOB.clanes_list, GLOBAL_PROC_REF(cmp_typepaths_asc))
+	for(var/spath in subtypesof(/datum/vampire_clan))
+		var/datum/vampire_clan/S = new spath()
+		GLOB.vampire_clan_list[S.name] = spath
+	sort_list(GLOB.vampire_clan_list, GLOBAL_PROC_REF(cmp_typepaths_asc))
 
 	for(var/spath in subtypesof(/datum/garou_tribe))
 		var/datum/garou_tribe/S = new spath()

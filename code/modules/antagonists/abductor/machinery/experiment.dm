@@ -18,8 +18,6 @@
 /obj/machinery/abductor/experiment/MouseDrop_T(mob/target, mob/user)
 	if(user.stat != CONSCIOUS || HAS_TRAIT(user, TRAIT_UI_BLOCKED) || !Adjacent(user) || !target.Adjacent(user) || !ishuman(target))
 		return
-	if(isabductor(target))
-		return
 	close_machine(target)
 
 /obj/machinery/abductor/experiment/open_machine()
@@ -27,9 +25,6 @@
 		..()
 
 /obj/machinery/abductor/experiment/close_machine(mob/target)
-	for(var/A in loc)
-		if(isabductor(A))
-			return
 	if(state_open && !panel_open)
 		..(target)
 

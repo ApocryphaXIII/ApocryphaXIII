@@ -47,3 +47,9 @@
 2025-06-27:
   FalloutFalcon:
   - bugfix: you can now see other peoples bank accounts in the ATM again
+2025-06-29:
+  FalloutFalcon:
+  - balance: some boxes have cooler shapes now
+2025-06-30:
+  FalloutFalcon:
+  - bugfix: Change-log should now function on live.

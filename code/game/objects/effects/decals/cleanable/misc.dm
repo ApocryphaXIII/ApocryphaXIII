@@ -205,25 +205,6 @@
 	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
 	beauty = -150
 
-/obj/effect/decal/cleanable/vomit/attack_hand(mob/user)
-	. = ..()
-	if(.)
-		return
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(isflyperson(H))
-			playsound(get_turf(src), 'sound/items/drink.ogg', 50, TRUE) //slurp
-			H.visible_message("<span class='alert'>[H] extends a small proboscis into the vomit pool, sucking it with a slurping sound.</span>")
-			if(reagents)
-				for(var/datum/reagent/R in reagents.reagent_list)
-					if (istype(R, /datum/reagent/consumable))
-						var/datum/reagent/consumable/nutri_check = R
-						if(nutri_check.nutriment_factor >0)
-							H.adjust_nutrition(nutri_check.nutriment_factor * nutri_check.volume)
-							reagents.remove_reagent(nutri_check.type,nutri_check.volume)
-			reagents.trans_to(H, reagents.total_volume, transfered_by = user)
-			qdel(src)
-
 /obj/effect/decal/cleanable/vomit/old
 	name = "crusty dried vomit"
 	desc = "You try not to look at the chunks, and fail."
@@ -397,3 +378,36 @@
 						var/obj/effect/decal/cleanable/car_trail/trail = new(src)
 						trail.dir = Obj.dir
 	*/
+
+/obj/effect/decal/cleanable/trash
+	name = "trash"
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "trash1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/trash/Initialize()
+	. = ..()
+	icon_state = "trash[rand(1, 30)]"
+
+/obj/effect/decal/cleanable/litter
+	name = "litter"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "paper1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/litter/Initialize()
+	. = ..()
+	icon_state = "paper[rand(1, 6)]"
+
+/obj/effect/decal/cleanable/cardboard
+	name = "cardboard"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "cardboard1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/cardboard/Initialize()
+	. = ..()
+	icon_state = "cardboard[rand(1, 5)]"
+	var/matrix/M = matrix()
+	M.Turn(rand(0, 360))
+	transform = M

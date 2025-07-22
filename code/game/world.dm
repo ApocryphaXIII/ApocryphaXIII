@@ -81,6 +81,7 @@ GLOBAL_VAR(restart_counter)
 		fdel(RESTART_COUNTER_PATH)
 
 	if(NO_INIT_PARAMETER in params)
+		log_world("NO_INIT_PARAMETER in params so returning")
 		return
 
 	SetupLogs()
@@ -90,6 +91,8 @@ GLOBAL_VAR(restart_counter)
 	#ifdef UNIT_TESTS
 	HandleTestRun()
 	#endif
+
+	log_world("World finished at [time_stamp()]!")
 
 /world/proc/InitTgs()
 	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)

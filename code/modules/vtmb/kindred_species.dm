@@ -23,14 +23,13 @@
 	limbs_id = "human"
 	wings_icon = "Dragon"
 	mutant_bodyparts = list("tail_human" = "None", "ears" = "None", "wings" = "None")
-	mutantbrain = /obj/item/organ/brain/vampire
 	brutemod = 0.5	// or change to 0.8
 	heatmod = 1		//Sucking due to overheating	///THEY DON'T SUCK FROM FIRE ANYMORE
 	burnmod = 2
 	punchdamagelow = 10
 	punchdamagehigh = 20
 	dust_anim = "dust-h"
-	var/datum/vampireclane/clane
+	var/datum/vampire_clan/clan
 	var/list/datum/discipline/disciplines = list()
 	selectable = TRUE
 	COOLDOWN_DECLARE(torpor_timer)
@@ -59,9 +58,9 @@
 			dat += "[host.real_name],"
 		if(!host.real_name)
 			dat += "Unknown,"
-		if(host.clane)
-			dat += " the [host.clane.name]"
-		if(!host.clane)
+		if(host.clan)
+			dat += " the [host.clan.name]"
+		if(!host.clan)
 			dat += " the caitiff"
 
 		if(host.mind)
@@ -97,7 +96,7 @@
 		dat += "The Camarilla thinks I[masquerade_level]<BR>"
 		var/humanity = "I'm out of my mind."
 
-		if(!host.clane.is_enlightened)
+		if(!host.clan.is_enlightened)
 			switch(host.morality_path.score)
 				if(8 to 10)
 					humanity = "I'm saintly."
@@ -129,10 +128,10 @@
 
 		dat += "[humanity]<BR>"
 
-		var/datum/phonecontact/clane_leader_contact = GLOB.important_contacts[host.clane.name]
-		if (!isnull(clane_leader_contact) && host.real_name != clane_leader_contact.name)
-			var/clane_leader_number = isnull(clane_leader_contact.number) ? "unknown" : clane_leader_contact.number
-			dat += " My clane leader is [clane_leader_contact.name]. Their phone number is [clane_leader_number].<BR>"
+		var/datum/phonecontact/clan_leader_contact = GLOB.important_contacts[host.clan.name]
+		if (!isnull(clan_leader_contact) && host.real_name != clan_leader_contact.name)
+			var/clan_leader_number = isnull(clan_leader_contact.number) ? "unknown" : clan_leader_contact.number
+			dat += " My clan leader is [clan_leader_contact.name]. Their phone number is [clan_leader_number].<BR>"
 
 		dat += "<b>Physique</b>: [host.physique] + [host.additional_physique]<BR>"
 		dat += "<b>Dexterity</b>: [host.dexterity] + [host.additional_dexterity]<BR>"
@@ -402,20 +401,20 @@
 
 						childe.roundstart_vampire = FALSE
 						childe.set_species(/datum/species/kindred)
-						childe.clane = null
+						childe.clan = null
 						childe.generation = sire.generation+1
 
 						childe.skin_tone = get_vamp_skin_color(childe.skin_tone)
 						childe.update_body()
 
 						if(childe.generation <= 13)
-							childe.clane = new sire.clane.type()
-							childe.clane.on_gain(childe)
-							childe.clane.post_gain(childe)
+							childe.clan = new sire.clan.type()
+							childe.clan.on_gain(childe)
+							childe.clan.post_gain(childe)
 						else
-							childe.clane = new /datum/vampireclane/caitiff()
+							childe.clan = new /datum/vampire_clan/caitiff()
 
-						if(childe.clane.alt_sprite)
+						if(childe.clan.alt_sprite)
 							childe.skin_tone = "albino"
 							childe.update_body()
 
@@ -427,7 +426,7 @@
 						childe.create_disciplines(FALSE, disciplines_to_give)
 						// TODO: Rework the max blood pool calculations.
 						childe.maxbloodpool = 10+((13-min(13, childe.generation))*3)
-						childe.clane.is_enlightened = sire.clane.is_enlightened
+						childe.clan.is_enlightened = sire.clan.is_enlightened
 
 						//Verify if they accepted to save being a vampire
 						if(iskindred(childe) && save_data_v)
@@ -435,7 +434,7 @@
 
 							childe_prefs_v.pref_species.id = "kindred"
 							childe_prefs_v.pref_species.name = "Vampire"
-							childe_prefs_v.clane = childe.clane
+							childe_prefs_v.clan = childe.clan
 							// If the childe is somehow 15th gen, reset to 14th.
 							if(childe.generation <= 14)
 								childe_prefs_v.generation = childe.generation
@@ -443,7 +442,7 @@
 								childe_prefs_v.generation = 14
 
 							childe_prefs_v.skin_tone = get_vamp_skin_color(childe.skin_tone)
-							childe_prefs_v.clane.is_enlightened = sire.clane.is_enlightened
+							childe_prefs_v.clan.is_enlightened = sire.clan.is_enlightened
 
 							//Rarely the new mid round vampires get the 3 brujah skil(it is default)
 							//This will remove if it happens
@@ -458,7 +457,7 @@
 
 							if(childe_prefs_v.discipline_types.len == 0)
 								for (var/i in 1 to 3)
-									childe_prefs_v.discipline_types += childe_prefs_v.clane.clane_disciplines[i]
+									childe_prefs_v.discipline_types += childe_prefs_v.clan.clan_disciplines[i]
 									childe_prefs_v.discipline_levels += 1
 
 							childe_prefs_v.save_character()
@@ -519,7 +518,7 @@
 					else if(!iskindred(thrall) && !isnpc(thrall))
 						var/save_data_g = FALSE
 						thrall.set_species(/datum/species/ghoul)
-						thrall.clane = null
+						thrall.clan = null
 						var/response_g = input(thrall, "Do you wish to keep being a ghoul on your save slot?(Yes will be a permanent choice and you can't go back)") in list("Yes", "No")
 						thrall.roundstart_vampire = FALSE
 						var/datum/species/ghoul/ghoul = thrall.dna.species
@@ -590,8 +589,8 @@
 		for (var/datum/discipline/discipline in adding_disciplines)
 			give_discipline(discipline)
 
-		if(clane)
-			clane.post_gain(src)
+		if(clan)
+			clan.post_gain(src)
 
 	if((dna.species.id == "kuei-jin")) //only splats that have Disciplines qualify
 		var/list/datum/chi_discipline/adding_disciplines = list()
@@ -647,20 +646,20 @@
 	return TRUE
 
 /datum/species/kindred/handle_body(mob/living/carbon/human/H)
-	if (!H.clane)
+	if (!H.clan)
 		return ..()
 
 	//deflate people if they're super rotten
-	if ((H.clane.alt_sprite == "rotten4") && (H.base_body_mod == "f"))
+	if ((H.clan.alt_sprite == "rotten4") && (H.base_body_mod == "f"))
 		H.base_body_mod = ""
 
-	if(H.clane.alt_sprite)
-		H.dna.species.limbs_id = "[H.base_body_mod][H.clane.alt_sprite]"
+	if(H.clan.alt_sprite)
+		H.dna.species.limbs_id = "[H.base_body_mod][H.clan.alt_sprite]"
 
-	if (H.clane.no_hair)
+	if (H.clan.no_hair)
 		H.hairstyle = "Bald"
 
-	if (H.clane.no_facial)
+	if (H.clan.no_facial)
 		H.facial_hairstyle = "Shaved"
 
 	..()
@@ -758,8 +757,8 @@
 				return
 
 		var/alienation = FALSE
-		if (student.clane.restricted_disciplines.Find(teaching_discipline))
-			if (alert(student, "Learning [giving_discipline] will alienate you from the rest of the [student.clane], making you just like the false Clan. Do you wish to continue?", "Confirmation", "Yes", "No") != "Yes")
+		if (student.clan.restricted_disciplines.Find(teaching_discipline))
+			if (alert(student, "Learning [giving_discipline] will alienate you from the rest of the [student.clan], making you just like the false Clan. Do you wish to continue?", "Confirmation", "Yes", "No") != "Yes")
 				visible_message(span_notice("[student] refuses [teacher]'s mentoring!"))
 				qdel(giving_discipline)
 				return
@@ -780,15 +779,15 @@
 			student_prefs.discipline_levels += 0
 
 			if (alienation)
-				var/datum/vampireclane/main_clan
-				switch(student.clane.type)
-					if (/datum/vampireclane/true_brujah)
-						main_clan = new /datum/vampireclane/brujah
-					if (/datum/vampireclane/old_clan_tzimisce)
-						main_clan = new /datum/vampireclane/tzimisce
+				var/datum/vampire_clan/main_clan
+				switch(student.clan.type)
+					if (/datum/vampire_clan/true_brujah)
+						main_clan = new /datum/vampire_clan/brujah
+					if (/datum/vampire_clan/old_clan_tzimisce)
+						main_clan = new /datum/vampire_clan/tzimisce
 
-				student_prefs.clane = main_clan
-				student.clane = main_clan
+				student_prefs.clan = main_clan
+				student.clan = main_clan
 
 			student_prefs.save_character()
 			teacher_prefs.save_character()
@@ -837,12 +836,12 @@
 	qdel(discipline_object_checking)
 
 	//first, check their Clan Disciplines to see if that gives them access
-	if (vampire_checking.clane.clane_disciplines.Find(discipline_checking))
+	if (vampire_checking.clan.clan_disciplines.Find(discipline_checking))
 		return TRUE
 
 	//next, go through all Clans to check if they have access to any with the Discipline
-	for (var/clan_type in subtypesof(/datum/vampireclane))
-		var/datum/vampireclane/clan_checking = new clan_type
+	for (var/clan_type in subtypesof(/datum/vampire_clan))
+		var/datum/vampire_clan/clan_checking = new clan_type
 
 		//skip this if they can't access it due to whitelists
 		if (clan_checking.whitelisted)
@@ -850,7 +849,7 @@
 				qdel(clan_checking)
 				continue
 
-		if (clan_checking.clane_disciplines.Find(discipline_checking))
+		if (clan_checking.clan_disciplines.Find(discipline_checking))
 			qdel(clan_checking)
 			return TRUE
 

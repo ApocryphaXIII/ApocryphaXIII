@@ -83,7 +83,7 @@
 /obj/item/storage/box/gum/bubblegum,
 /obj/item/storage/box/gum/bubblegum,
 /obj/item/storage/crayons,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "abf" = (
 /obj/structure/table/wood,
@@ -4763,7 +4763,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "bkT" = (
 /turf/closed/wall/vampwall/painted/low/window/reinforced,
@@ -6975,7 +6975,7 @@
 /area/vtm/interior/millennium_tower/f5)
 "bPB" = (
 /obj/effect/decal/cleanable/cardboard,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "bPG" = (
 /obj/structure/table,
@@ -9782,7 +9782,7 @@
 /area/vtm/forest)
 "cBo" = (
 /obj/effect/decal/cleanable/trash,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "cBq" = (
 /obj/structure/fluff/hedge{
@@ -19463,7 +19463,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "fkR" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -22407,7 +22407,7 @@
 	lockpick_difficulty = 16;
 	name = "Tech supply door"
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "fXz" = (
 /obj/effect/turf_decal/bordur,
@@ -24618,7 +24618,7 @@
 	dir = 1;
 	pixel_y = 16
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "gBp" = (
 /obj/structure/curtain/cloth/fancy/mechanical/luxurious{
@@ -25359,7 +25359,7 @@
 "gKm" = (
 /obj/structure/table/wood,
 /obj/underplate,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "gKn" = (
 /obj/structure/fluff/hedge,
@@ -26028,7 +26028,7 @@
 /area/vtm/interior/cog/caern)
 "gTh" = (
 /obj/structure/coclock,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "gTi" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -28348,7 +28348,7 @@
 /obj/item/assembly/infra,
 /obj/item/assembly/infra,
 /obj/item/assembly/infra,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "hCX" = (
 /obj/item/kirbyplants/random,
@@ -29650,7 +29650,7 @@
 /obj/vampire_computer{
 	pixel_y = 5
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "hVI" = (
 /obj/effect/decal/cleanable/litter,
@@ -30839,7 +30839,7 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "iot" = (
 /obj/structure/vampipe{
@@ -31415,7 +31415,7 @@
 /area/vtm/financialdistrict)
 "iwr" = (
 /obj/structure/vampdoor/glass,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "iwA" = (
 /obj/structure/vampipe{
@@ -32059,7 +32059,7 @@
 /obj/item/laser_pointer/red,
 /obj/item/laser_pointer/purple,
 /obj/item/laser_pointer/green,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "iFy" = (
 /obj/structure/table/wood,
@@ -32600,7 +32600,7 @@
 	pixel_y = 40
 	},
 /mob/living/carbon/human/npc/guard,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "iOy" = (
 /obj/machinery/light/small/red{
@@ -32777,7 +32777,7 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "iQD" = (
 /obj/structure/vampdoor/wood{
@@ -33161,7 +33161,7 @@
 /area/vtm/interior/giovanni)
 "iVw" = (
 /mob/living/carbon/human/npc/gummaguts,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "iVD" = (
 /obj/structure/table/wood,
@@ -36962,7 +36962,7 @@
 /obj/item/camera,
 /obj/item/camera,
 /obj/item/camera,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "jWI" = (
 /obj/machinery/light/small{
@@ -37226,7 +37226,7 @@
 /obj/structure/vampdoor/npc{
 	lockpick_difficulty = 6
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "kaA" = (
 /obj/structure/railing{
@@ -37414,7 +37414,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/sewer)
 "kdg" = (
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "kdi" = (
 /obj/structure/lamppost/two,
@@ -40690,7 +40690,7 @@
 /obj/structure/rack,
 /obj/item/vamp/keys/hack,
 /obj/item/vamp/keys/hack,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "kYB" = (
 /obj/structure/vampfence/rich,
@@ -41517,7 +41517,7 @@
 /area/vtm/sewer)
 "ljs" = (
 /obj/item/kirbyplants/random,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "ljt" = (
 /obj/effect/landmark/start/citizen,
@@ -43091,7 +43091,7 @@
 /obj/item/assembly/signaler,
 /obj/item/assembly/signaler,
 /obj/item/assembly/signaler,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "lHp" = (
 /obj/machinery/light/small{
@@ -43229,7 +43229,7 @@
 /area/vtm/interior/chantry)
 "lJe" = (
 /obj/structure/table,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "lJh" = (
 /turf/open/floor/plating/sidewalk,
@@ -45742,7 +45742,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "muI" = (
 /obj/effect/turf_decal/siding/white{
@@ -48499,7 +48499,7 @@
 "ndI" = (
 /obj/structure/table/wood,
 /obj/structure/retail/gummaguts_menu,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "ndJ" = (
 /obj/structure/closet/crate/freezer/fridge,
@@ -55943,7 +55943,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "oYL" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -59790,7 +59790,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "pYN" = (
 /obj/structure/table,
@@ -59921,7 +59921,7 @@
 /area/vtm/interior/baali)
 "qbT" = (
 /obj/structure/table/wood,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "qbU" = (
 /obj/effect/turf_decal/siding/white{
@@ -59983,7 +59983,7 @@
 /obj/underplate/stuff{
 	pixel_y = 8
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "qcq" = (
 /obj/machinery/light/small/pink{
@@ -60962,7 +60962,7 @@
 /obj/item/storage/box/lights/bulbs,
 /obj/item/storage/box/lights/bulbs,
 /obj/item/storage/box/lights/bulbs,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "qqr" = (
 /obj/effect/turf_decal/bordur{
@@ -61948,7 +61948,7 @@
 /obj/item/toy/crayon/spraycan,
 /obj/item/toy/crayon/spraycan,
 /obj/item/toy/crayon/spraycan,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "qDj" = (
 /obj/effect/decal/cleanable/oil/streak,
@@ -62579,7 +62579,7 @@
 /obj/item/assembly/timer,
 /obj/item/assembly/timer,
 /obj/item/assembly/timer,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "qLv" = (
 /obj/machinery/light{
@@ -62796,7 +62796,7 @@
 /obj/item/storage/box/lights/tubes,
 /obj/item/storage/box/lights/tubes,
 /obj/item/storage/box/lights/tubes,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "qOK" = (
 /obj/machinery/light{
@@ -65931,7 +65931,7 @@
 /area/vtm/interior/techshop)
 "rDw" = (
 /obj/fusebox,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "rDy" = (
 /obj/effect/turf_decal/bordur,
@@ -66304,7 +66304,7 @@
 /obj/item/assembly/voice,
 /obj/item/assembly/voice,
 /obj/item/assembly/voice,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "rIO" = (
 /obj/structure/curtain/cloth/fancy/mechanical/luxurious{
@@ -71279,7 +71279,7 @@
 /obj/item/assembly/igniter,
 /obj/item/assembly/igniter,
 /obj/item/assembly/igniter,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "taP" = (
 /turf/open/floor/plating/vampwood,
@@ -72407,7 +72407,7 @@
 /area/vtm/sewer)
 "tpV" = (
 /obj/structure/closet/crate/bin,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "tqi" = (
 /obj/structure/railing{
@@ -75185,7 +75185,7 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "uew" = (
 /obj/item/kirbyplants/random,
@@ -75849,7 +75849,7 @@
 /turf/closed/wall/vampwall/city,
 /area/vtm/interior/laundromat)
 "uoc" = (
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "uok" = (
 /obj/structure/filingcabinet/filingcabinet,
@@ -78021,7 +78021,7 @@
 /obj/item/stock_parts/cell,
 /obj/item/stock_parts/cell,
 /obj/item/stock_parts/cell,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "uSR" = (
 /obj/effect/decal/cleanable/trash{
@@ -78807,7 +78807,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/shop)
 "vci" = (
 /obj/structure/barrels/rand,
@@ -81963,7 +81963,7 @@
 /obj/item/storage/box/actionfigure,
 /obj/item/storage/box/actionfigure,
 /obj/item/storage/box/actionfigure,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "vUw" = (
 /obj/structure/vampfence/rich{
@@ -83049,7 +83049,7 @@
 /obj/structure/rack,
 /obj/item/detective_scanner,
 /obj/item/detective_scanner,
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "wkd" = (
 /obj/effect/decal/pallet,
@@ -83250,7 +83250,7 @@
 	id = 587;
 	name = "stairs"
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "wmW" = (
 /obj/effect/turf_decal/bordur{
@@ -88440,7 +88440,7 @@
 /obj/machinery/cell_charger{
 	pixel_y = 10
 	},
-/turf/open/floor/plating/gummaguts,
+/turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "xIG" = (
 /obj/effect/landmark/npcactivity,

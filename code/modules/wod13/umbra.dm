@@ -4,7 +4,7 @@
 /turf/open/floor/plating/umbra
 	gender = PLURAL
 	name = "nothing"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "black"
 	flags_1 = NONE
 	attachment_holes = FALSE

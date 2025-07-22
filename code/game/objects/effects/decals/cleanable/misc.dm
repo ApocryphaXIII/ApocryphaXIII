@@ -391,7 +391,7 @@
 
 /obj/effect/decal/cleanable/litter
 	name = "litter"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "paper1"
 	clean_type = CLEAN_TYPE_HARD_DECAL
 
@@ -401,7 +401,7 @@
 
 /obj/effect/decal/cleanable/cardboard
 	name = "cardboard"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "cardboard1"
 	clean_type = CLEAN_TYPE_HARD_DECAL
 

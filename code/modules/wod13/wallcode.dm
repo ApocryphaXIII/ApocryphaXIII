@@ -379,7 +379,7 @@
 
 /obj/effect/turf_decal/asphalt
 	name = "asphalt"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "decal1"
 	mouse_opacity = 0
 
@@ -395,14 +395,14 @@
 
 /obj/effect/decal/snow_overlay
 	name = "snow"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "snow_overlay"
 	alpha = 200
 	mouse_opacity = 0
 
 /obj/effect/turf_decal/asphaltline
 	name = "asphalt"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "line"
 	mouse_opacity = 0
 	layer = TURF_DECAL_LAYER
@@ -422,7 +422,7 @@
 
 /obj/effect/turf_decal/crosswalk
 	name = "asphalt"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "crosswalk1"
 	mouse_opacity = 0
 
@@ -439,7 +439,7 @@
 /turf/open/floor/plating/asphalt
 	gender = PLURAL
 	name = "asphalt"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "asphalt1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -474,14 +474,14 @@
 
 /obj/effect/turf_decal/stock
 	name = "stock"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "stock"
 	mouse_opacity = 0
 
 /turf/open/floor/plating/sidewalkalt
 	gender = PLURAL
 	name = "sidewalk"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "sidewalk_alt"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -505,7 +505,7 @@
 /turf/open/floor/plating/sidewalk
 	gender = PLURAL
 	name = "sidewalk"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "sidewalk1"
 	var/number_of_variations = 3
 	var/based_icon_state = "sidewalk"
@@ -547,7 +547,7 @@
 /turf/open/floor/plating/roofwalk
 	gender = PLURAL
 	name = "roof"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "roof"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -577,7 +577,7 @@
 
 /obj/effect/turf_decal/bordur
 	name = "sidewalk"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "border"
 	mouse_opacity = 0
 
@@ -597,7 +597,7 @@
 /turf/open/floor/plating/parquetry
 	gender = PLURAL
 	name = "parquetry"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "parquet"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -616,7 +616,7 @@
 /turf/open/floor/plating/granite
 	gender = PLURAL
 	name = "granite"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "granite"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -632,7 +632,7 @@
 /turf/open/floor/plating/concrete
 	gender = PLURAL
 	name = "concrete"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "concrete1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -649,7 +649,7 @@
 /turf/open/floor/plating/vampgrass
 	gender = PLURAL
 	name = "grass"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "grass1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -714,7 +714,7 @@
 /turf/open/floor/plating/vampcarpet
 	gender = PLURAL
 	name = "carpet"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "carpet_black"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -727,7 +727,7 @@
 /turf/open/floor/plating/vampdirt
 	gender = PLURAL
 	name = "dirt"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "dirt"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -805,7 +805,7 @@
 /turf/open/floor/plating/vampplating
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "plating"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -824,7 +824,7 @@
 /turf/open/floor/plating/rough
 	gender = PLURAL
 	name = "rough floor"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "rough"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -844,7 +844,7 @@
 /turf/open/floor/plating/stone
 	gender = PLURAL
 	name = "rough floor"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "stone"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -864,7 +864,7 @@
 /turf/open/floor/plating/toilet
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "toilet1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -881,7 +881,7 @@
 /turf/open/floor/plating/industrial
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "industrial1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -898,7 +898,7 @@
 /turf/open/floor/plating/circled
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "circle1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -915,7 +915,7 @@
 /turf/open/floor/plating/woodrough
 	gender = PLURAL
 	name = "wood flooring"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "wood1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -932,7 +932,7 @@
 /turf/open/floor/plating/woodfancy
 	gender = PLURAL
 	name = "fancy wood flooring"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "woodd1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -949,7 +949,7 @@
 /turf/open/floor/plating/grate
 	gender = PLURAL
 	name = "grate"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "lattice_new"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -962,7 +962,7 @@
 /turf/open/floor/plating/grate/dirty
 	gender = PLURAL
 	name = "grate"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "lattice_new_dirt"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -975,7 +975,7 @@
 /turf/open/floor/plating/church
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "church1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -992,7 +992,7 @@
 /turf/open/floor/plating/saint
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "saint1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1010,7 +1010,7 @@
 
 /obj/effect/decal/wallpaper
 	name = "wall paint"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "wallpaper"
 	plane = GAME_PLANE
 	layer = ABOVE_NORMAL_TURF_LAYER	//WALLPAPER_LAYER dont work
@@ -1147,7 +1147,7 @@
 /turf/open/floor/plating/vampwood
 	gender = PLURAL
 	name = "wood"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "bwood"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1172,7 +1172,7 @@
 /turf/open/floor/plating/vampbeach
 	gender = PLURAL
 	name = "sand"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "sand1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1233,7 +1233,7 @@
 /turf/open/floor/plating/vampocean
 	gender = PLURAL
 	name = "water"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "ocean"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1251,7 +1251,7 @@
 /turf/open/floor/plating/vampcrossableocean
 	gender = PLURAL
 	name = "water"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "ocean"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1265,7 +1265,7 @@
 /turf/open/floor/plating/vampacid
 	gender = PLURAL
 	name = "goop"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "acid"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1297,7 +1297,7 @@
 
 /obj/effect/decal/coastline
 	name = "water"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "coastline"
 
 /obj/effect/decal/coastline/corner
@@ -1305,7 +1305,7 @@
 
 /obj/effect/decal/shadow
 	name = "shadow"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "shadow"
 
 /obj/effect/decal/shadow/Initialize()
@@ -1316,13 +1316,13 @@
 
 /obj/effect/decal/support
 	name = "support"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "support"
 
 /turf/open/floor/plating/shit
 	gender = PLURAL
 	name = "sewage"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "shit"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1338,7 +1338,7 @@
 /turf/open/floor/plating/vampcanal
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "canal1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1364,7 +1364,7 @@
 /turf/open/floor/plating/vampcanalplating
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "canal_plating1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1390,13 +1390,13 @@
 /turf/closed/indestructible/elevatorshaft
 	name = "elevator shaft"
 	desc = "Floors, floors, floors..."
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "black"
 
 /turf/open/floor/plating/bacotell
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "bacotell"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1406,10 +1406,10 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/plating/gummaguts
+/turf/open/floor/plating/vampplating/stone
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/icons/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "gummaguts"
 	flags_1 = NONE
 	attachment_holes = FALSE

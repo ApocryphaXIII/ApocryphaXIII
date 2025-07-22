@@ -69,9 +69,9 @@
 	/// Equivelent to ambientsounds, A list of music tracks to pick from every so often to play to clients.
 	var/list/musictracks
 	///Used to decide what the minimum time between music tracks is
-	var/min_music_cooldown = 2 MINUTES
+	var/min_music_cooldown = 1 MINUTES
 	///Used to decide what the maximum time between music tracks is
-	var/max_music_cooldown = 3 MINUTES
+	var/max_music_cooldown = 2 MINUTES
 
 	flags_1 = CAN_BE_DIRTY_1 | CULT_PERMITTED_1
 

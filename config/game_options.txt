@@ -561,6 +561,10 @@ DISABLE_HUMAN_MOOD
 ## Number between 0 to 24. Time in hoours shift time is set to at round start##
 #SHIFT_TIME_START 19
 
+## In deciseconds
+#TIME_UNTILL_DAY 198000
+#TIME_UNTILL_ROUNDEND 216000
+
 ## A cap on how many monkeys may be created via monkey cubes
 MONKEYCAP 64
 

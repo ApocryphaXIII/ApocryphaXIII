@@ -391,6 +391,13 @@
 	max_val = 24
 	min_val = 0
 
+/datum/config_entry/number/time_till_day
+	config_entry_value = 198000
+
+/datum/config_entry/number/time_till_roundend
+	config_entry_value = 216000
+	protection = CONFIG_ENTRY_LOCKED
+
 /datum/config_entry/keyed_list/antag_rep
 	key_mode = KEY_MODE_TEXT
 	value_mode = VALUE_MODE_NUM

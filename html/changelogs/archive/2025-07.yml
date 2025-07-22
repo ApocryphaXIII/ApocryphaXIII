@@ -18,3 +18,7 @@
   - rscadd: new music tracks all over the place!
   - bugfix: opening the map may lag less
   - rscdel: Removed alot of old tg species code, nothing player facing i think
+2025-07-21:
+  FalloutFalcon:
+  - rscdel: rats no longer disable if no one is in range of them
+  - balance: rats spawn every 200~ steps in the sewers instead of 10~

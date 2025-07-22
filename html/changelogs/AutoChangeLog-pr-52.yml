@@ -1,5 +1,0 @@
-author: "FalloutFalcon"
-delete-after: True
-changes:
-  - rscdel: "rats no longer disable if no one is in range of them"
-  - balance: "rats spawn every 200~ steps in the sewers instead of 10~"

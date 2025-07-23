@@ -10,8 +10,8 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	pixel_y = 32
 
-	//If our shit damaged. bool
-	var/damaged = FALSE
+	//Damage on the fusebox
+	var/damaged = 0
 	//If our shit is open/closed. bool
 	var/open = FALSE
 	//Repairing var for the loop

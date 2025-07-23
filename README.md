@@ -7,7 +7,9 @@
 
 This is the codebase for the ApocryphaXIII, a build of a fork of a downstream of a-- in any case...
 
-We are based on the Paradox Interactive World of Darkness(c) gamelines, with administrative oversight determining what we add to our game. 
+We are based on the Paradox Interactive World of Darkness(c) gamelines, with administrative oversight determining what we add to our game. Please see below for our guides on contributing.
+
+If you'd like to contribute to this codebase, consider uncommenting line 1 @ _maps\_basemap.dm for faster initialization.
 
 ## DOWNLOADING
 [Downloading](.github/DOWNLOADING.md)

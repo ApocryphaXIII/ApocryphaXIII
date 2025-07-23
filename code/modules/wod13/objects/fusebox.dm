@@ -43,7 +43,7 @@
 	if(istype(I, /obj/item/wirecutters))
 		if(!repairing)
 			repairing = TRUE
-			if(do_after(user, 100, src))
+			if(do_after(user, 10 SECONDS, src))
 				icon_state = "fusebox"
 				damaged = 0
 				playsound(get_turf(src),'code/modules/wod13/sounds/fix.ogg', 75, FALSE)

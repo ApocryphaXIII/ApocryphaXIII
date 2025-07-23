@@ -40,7 +40,7 @@
 	update_icon()
 
 /obj/fusebox/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/wirecutters))
+	if(I.tool_behaviour == TOOL_WIRECUTTER)
 		if(!repairing)
 			repairing = TRUE
 			if(do_after(user, 10 SECONDS, src))

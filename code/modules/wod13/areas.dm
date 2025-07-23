@@ -457,7 +457,6 @@
 	name = "Underground Warren"
 	icon_state = "hotel"
 	upper = FALSE
-	music = /datum/vampiremusic/nosferatu
 	zone_type = "elysium"
 	yang_chi = 0
 	yin_chi = 2
@@ -476,7 +475,6 @@
 	name = "Underground Office"
 	icon_state = "hotel"
 	upper = FALSE
-	music = /datum/vampiremusic/nosferatu
 	zone_type = "elysium"
 	yang_chi = 0
 	yin_chi = 2

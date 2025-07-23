@@ -155,4 +155,4 @@
 	id = /obj/item/card/id/government/districtattorney
 	l_pocket = /obj/item/vamp/phone
 	r_pocket = /obj/item/vamp/keys/police/districtattorney
-	backpack_contents = list(/obj/item/passport=1, /obj/item/vamp/creditcard=1, /obj/item/stamp/law/districtattorney=1)
+	backpack_contents = list(/obj/item/passport=1, /obj/item/card/credit=1, /obj/item/stamp/law/districtattorney=1)

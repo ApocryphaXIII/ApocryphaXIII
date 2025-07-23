@@ -38,7 +38,7 @@
 	update_icon()
 
 /obj/fusebox/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/wire_cutters))
+	if(istype(I, /obj/item/wirecutters))
 		if(!repairing)
 			repairing = TRUE
 			if(do_after(user, 100, src))

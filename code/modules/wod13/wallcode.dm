@@ -691,6 +691,8 @@
 				barefootstep = FOOTSTEP_SNOW
 				heavyfootstep = FOOTSTEP_SNOW
 
+/turf/open/floor/plating/gutfloor
+
 /turf/open/floor/plating/vampcarpet
 	gender = PLURAL
 	name = "carpet"
@@ -815,6 +817,7 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/floor/plating/rough/cave
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "cave1"
 
 /turf/open/floor/plating/rough/cave/Initialize()

@@ -14,6 +14,8 @@
 	var/damaged = FALSE
 	//If our shit is open/closed. bool
 	var/open = FALSE
+	//Repairing var for the loop
+	var/repairing = FALSE
 
 /obj/fusebox/update_icon(updates)
 	. = ..()

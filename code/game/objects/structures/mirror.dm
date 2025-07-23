@@ -36,8 +36,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 		var/mob/living/carbon/human/H = user
 
 		//Sorry, you can't see yourself in front of the mirror!
-		if(H.clane)
-			if(H.clane.name == CLAN_LASOMBRA)
+		if(H.clan)
+			if(H.clan.name == CLAN_LASOMBRA)
 				return
 
 		//see code/modules/mob/dead/new_player/preferences.dm at approx line 545 for comments!

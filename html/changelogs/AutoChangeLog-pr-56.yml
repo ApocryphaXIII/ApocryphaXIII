@@ -1,4 +1,0 @@
-author: "FalloutFalcon"
-delete-after: True
-changes:
-  - bugfix: "removed the hear flag on credit cards preventing them from showing up it subtle"

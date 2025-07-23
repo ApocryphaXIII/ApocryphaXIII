@@ -10,3 +10,25 @@
   - refactor: few unrelated refactors to try and speed up init
   - bugfix: changelog uses our server name and credits former vtm servers
   - bugfix: more interfaces use our repo links
+2025-07-13:
+  FalloutFalcon:
+  - admin: exiting via matrix is now logged
+  - bugfix: removed the hear flag on credit cards preventing them from showing up
+      it subtle
+  - rscadd: new music tracks all over the place!
+  - bugfix: opening the map may lag less
+  - rscdel: Removed alot of old tg species code, nothing player facing i think
+2025-07-21:
+  FalloutFalcon:
+  - rscdel: rats no longer disable if no one is in range of them
+  - balance: rats spawn every 200~ steps in the sewers instead of 10~
+2025-07-22:
+  INFRARED_BARON, Spooky, PositiveEntropy:
+  - image: A variety of tiles have been upgraded!
+  SetchDreskar:
+  - rscadd: Added Lupus Wolfkin as its own friendly mob!
+  - map: Removed old wolfkin corgi reskin from map
+  - map: Added new Lupus Wolfkin to current map
+  - code_imp: Added lines 145 to 214 in dog.dm
+  imaginos_:
+  - image: Replaces corax sprites

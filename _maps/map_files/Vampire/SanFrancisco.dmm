@@ -131,7 +131,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/laundromat)
 "aca" = (
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
 "aci" = (
@@ -4690,16 +4690,11 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/theatre)
 "bki" = (
-/obj/structure/bed/dogbed,
-/mob/living/simple_animal/pet/dog/corgi{
-	icon = 'code/modules/wod13/mobs.dmi';
-	icon_dead = "dog_dead";
-	icon_state = "dog";
-	name = "Lupus Wolfkin";
-	desc = "A white timber wolf.";
-	icon_living = "dog"
+/obj/effect/turf_decal/weather/dirt{
+	dir = 9
 	},
-/turf/open/floor/plating/vampgrass,
+/mob/living/simple_animal/pet/dog/wolfkin/black,
+/turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "bkl" = (
 /obj/structure/vampdoor/camarilla,
@@ -4738,14 +4733,8 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/banu/haven)
 "bkJ" = (
-/mob/living/simple_animal/pet/dog/corgi{
-	icon = 'code/modules/wod13/werewolf_lupus.dmi';
-	icon_dead = null;
-	icon_state = "white";
-	name = "Lupus Wolfkin";
-	desc = "A white timber wolf."
-	},
-/turf/open/floor/plating/vampdirt,
+/mob/living/simple_animal/pet/dog/wolfkin/brown,
+/turf/open/floor/plating/rough/cave,
 /area/vtm/forest)
 "bkP" = (
 /obj/structure/railing{
@@ -6931,7 +6920,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/hotel)
 "bOv" = (
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "bOA" = (
@@ -11695,7 +11684,7 @@
 /area/vtm/interior/millennium_tower/f3)
 "dcU" = (
 /obj/effect/decal/graffiti,
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "dcW" = (
@@ -15025,6 +15014,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
 	},
+/mob/living/simple_animal/pet/dog/wolfkin/ginger,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "dYJ" = (
@@ -44789,7 +44779,7 @@
 /obj/structure/toilet{
 	dir = 8
 	},
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "mfu" = (
@@ -56207,15 +56197,8 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/church/interior/haven)
 "pcD" = (
-/mob/living/simple_animal/pet/dog/corgi{
-	icon = 'code/modules/wod13/mobs.dmi';
-	icon_dead = "dog_dead";
-	icon_state = "dog";
-	name = "Lupus Wolfkin";
-	desc = "A white timber wolf.";
-	icon_living = "dog"
-	},
-/turf/open/floor/plating/vampdirt,
+/mob/living/simple_animal/pet/dog/wolfkin/red,
+/turf/open/floor/plating/vampgrass,
 /area/vtm/forest)
 "pcM" = (
 /obj/structure/table/wood,
@@ -56409,7 +56392,7 @@
 	dir = 8;
 	pixel_x = 16
 	},
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "pgq" = (
@@ -57357,7 +57340,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/oldchurch)
 "ptE" = (
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "ptG" = (
@@ -64407,6 +64390,10 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/strip/toreador)
+"rjg" = (
+/mob/living/simple_animal/pet/dog/wolfkin/white,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
 "rjh" = (
 /obj/structure/table/wood,
 /obj/item/vamp/keys/children_of_gaia,
@@ -67329,6 +67316,11 @@
 	},
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/tzimisce_manor)
+"rVD" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/mob/living/simple_animal/pet/dog/wolfkin/gray,
+/turf/open/floor/plating/vampgrass,
+/area/vtm/forest)
 "rVG" = (
 /obj/structure/toilet{
 	dir = 8;
@@ -71846,7 +71838,7 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/interior/endron_facility/helipad)
 "tib" = (
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto/old)
 "tic" = (
@@ -73005,17 +72997,6 @@
 /obj/weapon_showcase,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
-"txt" = (
-/mob/living/simple_animal/pet/dog/corgi{
-	icon = 'code/modules/wod13/mobs.dmi';
-	icon_dead = "dog_dead";
-	icon_state = "dog";
-	name = "Lupus Wolfkin";
-	desc = "A white timber wolf.";
-	icon_living = "dog"
-	},
-/turf/open/floor/plating/vampgrass,
-/area/vtm/forest)
 "txy" = (
 /obj/effect/turf_decal/siding/white,
 /obj/structure/fluff/hedge,
@@ -81457,13 +81438,6 @@
 /area/vtm/pacificheights/forest)
 "vNC" = (
 /obj/structure/bed/dogbed,
-/mob/living/simple_animal/pet/dog/corgi{
-	icon = 'code/modules/wod13/werewolf_lupus.dmi';
-	icon_dead = null;
-	icon_state = "white";
-	name = "Lupus Wolfkin";
-	desc = "A white timber wolf."
-	},
 /turf/open/floor/plating/rough/cave,
 /area/vtm/forest)
 "vNI" = (
@@ -88668,7 +88642,7 @@
 /area/vtm/forest)
 "xLt" = (
 /obj/structure/barrels/rand,
-/mob/living/simple_animal/pet/rat,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/ghetto)
 "xLv" = (
@@ -503562,7 +503536,7 @@ laE
 laE
 laE
 laE
-laE
+bkJ
 laE
 gYr
 qia
@@ -503829,7 +503803,7 @@ qia
 qia
 sDZ
 qia
-bkJ
+qia
 qia
 qia
 qia
@@ -504084,7 +504058,7 @@ sDZ
 cRj
 qia
 qia
-gYr
+rVD
 sDZ
 qia
 qia
@@ -504859,7 +504833,7 @@ qia
 sDZ
 gYr
 sDZ
-ohk
+bki
 qia
 qia
 qia
@@ -505124,7 +505098,7 @@ qia
 enI
 qia
 qia
-pcD
+qia
 qia
 qia
 qia
@@ -505332,7 +505306,7 @@ sDZ
 sDZ
 sDZ
 vqi
-bki
+aEa
 aEa
 sDZ
 cjV
@@ -505628,7 +505602,7 @@ laE
 qia
 qia
 sDZ
-qia
+rjg
 eVN
 qia
 qia
@@ -507165,7 +507139,7 @@ mIV
 tyL
 laE
 sDZ
-sDZ
+pcD
 xUt
 mco
 sDZ
@@ -507949,7 +507923,7 @@ qia
 sDZ
 pte
 sDZ
-txt
+sDZ
 kOS
 tyL
 gfq

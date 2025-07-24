@@ -24772,6 +24772,13 @@
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/chinatown)
+"fUh" = (
+/obj/structure/chair/wood/wings{
+	dir = 8;
+	pixel_y = 6
+	},
+/turf/open/floor/carpet/blue,
+/area/vtm/interior/strip/toreador)
 "fUk" = (
 /obj/structure/table/wood,
 /obj/vampire_computer,
@@ -63491,8 +63498,12 @@
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/jazzclub)
 "pnK" = (
-/obj/structure/chair/wood/wings{
-	dir = 1
+/obj/machinery/light{
+	dir = 1;
+	pixel_x = 16
+	},
+/obj/structure/railing{
+	dir = 8
 	},
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/strip/toreador)
@@ -66539,9 +66550,8 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/interior/strip)
 "pWR" = (
-/obj/structure/musician/piano{
-	icon_state = "piano"
-	},
+/obj/structure/easel,
+/obj/item/canvas/twentythree_nineteen,
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/strip/toreador)
 "pWT" = (
@@ -73475,6 +73485,18 @@
 /obj/item/binoculars,
 /turf/open/floor/carpet/green,
 /area/vtm/interior/bianchiBank)
+"rDl" = (
+/obj/structure/railing{
+	dir = 4;
+	layer = 2.91
+	},
+/obj/structure/railing{
+	dir = 1;
+	pixel_y = 11
+	},
+/obj/item/kirbyplants/random,
+/turf/open/floor/carpet/blue,
+/area/vtm/interior/strip/toreador)
 "rDq" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -80555,9 +80577,9 @@
 	},
 /area/vtm/sewer/nosferatu_town)
 "toX" = (
-/obj/item/canvas/twentythree_twentythree,
-/obj/structure/table/wood,
+/obj/structure/closet/crate,
 /obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_twentythree,
 /obj/item/canvas/twentyfour_twentyfour,
 /obj/item/canvas/nineteen_nineteen,
 /turf/open/floor/plating/parquetry/rich,
@@ -90695,8 +90717,10 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto/old)
 "vMt" = (
-/obj/structure/easel,
-/turf/open/floor/plating/parquetry/rich,
+/obj/structure/musician/piano{
+	icon_state = "piano"
+	},
+/turf/open/floor/carpet/blue,
 /area/vtm/interior/strip/toreador)
 "vMw" = (
 /obj/effect/turf_decal/bordur{
@@ -95577,6 +95601,11 @@
 "wWN" = (
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility)
+"wWQ" = (
+/turf/open/floor/plasteel/stairs{
+	dir = 1
+	},
+/area/vtm/interior/strip/toreador)
 "wWR" = (
 /obj/structure/rack,
 /obj/item/instrument/piano_synth/headphones,
@@ -374697,15 +374726,15 @@ sab
 pWR
 hcg
 jbL
-tOQ
+toX
 sab
 tOQ
 oxI
-toX
-vMt
-pnK
 hwV
-tOQ
+hwV
+hwV
+rDl
+vMt
 sab
 hYq
 qCY
@@ -374961,8 +374990,8 @@ hwV
 hwV
 hwV
 hwV
-hwV
-tOQ
+wWQ
+fUh
 sab
 ueN
 qCY
@@ -375218,7 +375247,7 @@ ibC
 ibC
 bBX
 hwV
-vzI
+pnK
 kLa
 kLa
 kLa

@@ -820,7 +820,7 @@
 
 /obj/structure/coclock/examine(mob/user)
 	. = ..()
-	to_chat(user, "<b>[SScity_time.timeofnight]</b>")
+	. += "The clock reads: <b>[station_time_timestamp()]</b>"
 
 /obj/structure/coclock/grandpa
 	icon = 'code/modules/wod13/grandpa_cock.dmi'

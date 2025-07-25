@@ -26,8 +26,10 @@ SUBSYSTEM_DEF(statpanels)
 		num_fires++
 		global_data = list(
 			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]",
-			"Round Duration: [DisplayTimeText(world.time - SSticker.round_start_time)]",
-			"---",
+			"\n",
+			"Local City Time: [SSticker.round_start_timeofday ? "[station_time_timestamp("hh:mm MMM")] [CURRENT_STATION_YEAR]" : "The round hasn't started yet!"]",
+			"Round Duration: [SSticker.round_start_timeofday ? ROUND_REALTIMEOFDAY() : "The round hasn't started yet!"]",
+			"\n",
 			"Canon: [GLOB.canon_event ? "Yes" : "No"]",
 			"Masquerade: [SSmasquerade.get_description()] [SSmasquerade.total_level]/1000",
 		)

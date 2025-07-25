@@ -92,7 +92,7 @@
 // Creates a standardized log entry
 /obj/clinic_machine/pyxis/proc/create_log_entry(type, extra_data = null)
 	var/list/entry = list(
-		"timestamp" = SScity_time.timeofnight,
+		"timestamp" = station_time_timestamp("hh:mm"),
 		"type" = type,
 		"user" = scan?.registered_name || "Unknown",
 		"user_job" = get_obfuscated_job(scan?.assignment)
@@ -671,7 +671,7 @@
 			if(entry["type"] == "emergency_mode" && !entry["deactivated"])
 				entry["deactivated"] = TRUE
 				entry["deactivated_by"] = scan?.registered_name || "Unknown"
-				entry["deactivated_time"] = SScity_time.timeofnight
+				entry["deactivated_time"] = station_time_timestamp("hh:mm")
 				break
 
 	return TRUE
@@ -748,7 +748,7 @@
 		if(entry["type"] == "override" && entry["category"] == category && !entry["deactivated"])
 			entry["deactivated"] = TRUE
 			entry["deactivated_by"] = scan?.registered_name || "Unknown"
-			entry["deactivated_time"] = SScity_time.timeofnight
+			entry["deactivated_time"] = station_time_timestamp("hh:mm")
 			break
 
 	category_overrides.Remove(category)

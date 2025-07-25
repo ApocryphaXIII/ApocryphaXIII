@@ -32,3 +32,6 @@
   - code_imp: Added lines 145 to 214 in dog.dm
   imaginos_:
   - image: Replaces corax sprites
+2025-07-25:
+  generalthrax:
+  - rscdel: Removed weird quirk descriptions

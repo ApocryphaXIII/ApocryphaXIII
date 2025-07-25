@@ -31,8 +31,11 @@
 	l_pocket = /obj/item/vamp/phone
 	id = /obj/item/cockclock
 
+
+
 /datum/outfit/job/citizen/pre_equip(mob/living/carbon/human/H)
 	..()
+
 	if(H.clan)
 		if(H.gender == MALE)
 			shoes = /obj/item/clothing/shoes/vampire
@@ -48,12 +51,14 @@
 			shoes = /obj/item/clothing/shoes/vampire
 		else
 			shoes = /obj/item/clothing/shoes/vampire/heels
-	if(H.clan)
+	if(H.clan && (H.clan.name == CLAN_LASOMBRA || H.clan.name == CLAN_KIASYD))
 		if(H.clan.name == CLAN_LASOMBRA)
-			backpack_contents = list(/obj/item/passport =1, /obj/item/card/credit=1)
+			backpack_contents = list(/obj/item/passport=1, /obj/item/card/credit=1)
+		if(H.clan.name == CLAN_KIASYD)
+			backpack_contents = list(/obj/item/passport=1, /obj/item/card/credit=1)
 	if(!H.clan)
 		backpack_contents = list(/obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
-	if(H.clan && H.clan.name != CLAN_LASOMBRA)
+	if(H.clan && H.clan.name != CLAN_LASOMBRA && H.clan.name != CLAN_KIASYD)
 		backpack_contents = list(/obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
 
 /obj/effect/landmark/start/citizen

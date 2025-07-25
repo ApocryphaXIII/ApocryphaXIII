@@ -86174,13 +86174,6 @@
 "uIl" = (
 /turf/open/openspace,
 /area/vtm/interior/bianchiBank)
-"uIt" = (
-/obj/structure/chair/sofa/corp/left{
-	dir = 8;
-	color = "#CD5C5C"
-	},
-/turf/open/floor/carpet/royalblack,
-/area/vtm/interior/tzimisce_manor)
 "uIB" = (
 /turf/closed/wall/vampwall/painted,
 /area/vtm/interior/endron_facility)
@@ -290260,7 +290253,7 @@ rOo
 rOo
 mjs
 ctX
-uIt
+ctX
 pVD
 uYk
 uYk

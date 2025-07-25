@@ -95407,6 +95407,7 @@
 	dir = 10;
 	pixel_x = 1;
 	pixel_y = 2;
+	layer = 2.91
 	},
 /obj/structure/pole{
 	pixel_w = -16

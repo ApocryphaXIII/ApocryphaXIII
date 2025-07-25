@@ -542,7 +542,7 @@ Dancer
 
 /datum/quirk/german
 	name = "German"
-	desc = "You know the German language, FUR DAR FATERLAND!"
+	desc = "You know the German language."
 	value = 1
 
 /datum/quirk/german/add()
@@ -551,7 +551,7 @@ Dancer
 
 /datum/quirk/latin
 	name = "Latin"
-	desc = "You know the ancient holy language OF THE ROMANS AND THE CLERGY!!"
+	desc = "You know the ancient Latin language."
 	value = 1
 
 /datum/quirk/latin/add()
@@ -560,7 +560,7 @@ Dancer
 
 /datum/quirk/hebrew
 	name = "Hebrew"
-	desc = "You know the language of the ancient Hebrews!"
+	desc = "You know the ancient Hebrew language."
 	value = 1
 
 /datum/quirk/hebrew/add()

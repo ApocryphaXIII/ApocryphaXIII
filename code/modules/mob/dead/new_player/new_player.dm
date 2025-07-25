@@ -4,6 +4,7 @@
 	var/ready = 0
 	var/late_ready = FALSE
 	var/spawning = 0//Referenced when you want to delete the new_player later on in the code.
+	var/tos_consent = FALSE
 
 	flags_1 = NONE
 
@@ -45,6 +46,9 @@
  * This proc generates the panel that opens to all newly joining players, allowing them to join, observe, view polls, view the current crew manifest, and open the character customization menu.
  */
 /mob/dead/new_player/proc/new_player_panel()
+	if(!handle_tos_consent())
+		return
+
 	if (client?.interviewee)
 		return
 
@@ -70,6 +74,9 @@
 		output += "<p><a href='byond://?src=[REF(src)];late_join=1'>Join Game!</a></p>"
 		output += "<p>[LINKIFY_READY("Observe", PLAYER_READY_TO_OBSERVE)]</p>"
 
+	if(GLOB.join_tos)
+		output += "<p><a href='byond://?src=[REF(src)];tos=1'>Terms of Service</A></p>"
+
 	if(!IsGuestKey(src.key))
 		output += playerpolls()
 
@@ -79,6 +86,56 @@
 	popup.set_window_options("can_close=0")
 	popup.set_content(output.Join())
 	popup.open(FALSE)
+
+
+/mob/dead/new_player/proc/handle_tos_consent()
+	if(!GLOB.join_tos)
+		return TRUE
+
+	if(tos_consent)
+		return TRUE
+
+	if(!SSdbcore.Connect())
+		tos_consent = TRUE
+		return TRUE
+
+	var/datum/db_query/query = SSdbcore.NewQuery(
+		"SELECT * FROM [format_table_name("privacy")] WHERE ckey=:ckey AND consent=:consent",
+		list("ckey" = ckey, "consent" = TRUE)
+	)
+	query.Execute()
+	while(query.NextRow())
+		tos_consent = TRUE
+		return TRUE
+
+	privacy_consent()
+	return FALSE
+
+/mob/dead/new_player/proc/privacy_consent()
+	src << browse(null, "window=playersetup")
+	var/output = GLOB.join_tos
+	output += "<p><a href='byond://?src=[REF(src)];consent_signed=SIGNED'>I consent</A>"
+	output += "<p><a href='byond://?src=[REF(src)];consent_rejected=NOTSIGNED'>I DO NOT consent</A>"
+	src << browse(output,"window=privacy_consent;size=500x300")
+	var/datum/browser/popup = new(src, "privacy_consent", "<div align='center'>Privacy Consent</div>", 500, 400)
+	popup.set_window_options("can_close=0")
+	popup.set_content(output)
+	popup.open(0)
+	return
+
+// Verb scoped to the client level so its ALWAYS available
+/client/verb/open_tos()
+	set category = "OOC"
+	set name = "Terms of Service"
+
+	var/output = GLOB.join_tos
+	output += "<hr><p>By withdrawing your consent, you acknowledge that you will be instantaneously kicked from the server and will have to re-accept the Terms of Service. If you do not wish to withdraw your consent at this moment, feel free to close this window.</p>"
+	output += "<p><a href='byond://?src=[REF(src)];withdraw_consent=1'>Withdraw consent</a></p>"
+	src << browse(output,"window=privacy_consent;size=600x500")
+	var/datum/browser/popup = new(src, "privacy_consent", "<div align='center'>Privacy Consent</div>", 500, 400)
+	popup.set_content(output)
+	popup.open(FALSE)
+	return
 
 /mob/dead/new_player/proc/playerpolls()
 	var/list/output = list()
@@ -122,6 +179,26 @@
 	if(!client)
 		return
 
+	if(href_list["consent_signed"])
+		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
+		var/datum/db_query/query = SSdbcore.NewQuery(
+			"REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES (:ckey, :datetime, :consent)",
+			list("ckey" = ckey, "datetime" = sqltime, "consent" = TRUE)
+		)
+		query.Execute()
+		src << browse(null, "window=privacy_consent")
+		tos_consent = TRUE
+		new_player_panel()
+	if(href_list["consent_rejected"])
+		tos_consent = FALSE
+		to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
+		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
+		var/datum/db_query/query = SSdbcore.NewQuery(
+			"REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES (:ckey, :datetime, :consent)",
+			list("ckey" = ckey, "datetime" = sqltime, "consent" = FALSE)
+		)
+		query.Execute()
+
 	if(client.interviewee)
 		return FALSE
 
@@ -139,6 +216,9 @@
 		return TRUE
 
 	if(href_list["ready"])
+		if(!tos_consent)
+			to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
+			return 0
 		SSbad_guys_party.candidates -= src
 		late_ready = FALSE
 		var/tready = text2num(href_list["ready"])
@@ -170,7 +250,14 @@
 			late_ready = TRUE
 			SSbad_guys_party.candidates += src
 
+	if(href_list["tos"])
+		privacy_consent()
+		return 0
+
 	if(href_list["late_join"])
+		if(!tos_consent)
+			to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
+			return 0
 		if (!can_respawn())
 			to_chat(usr, "<span class='boldwarning'>You cannot respawn yet.</span>")
 			return

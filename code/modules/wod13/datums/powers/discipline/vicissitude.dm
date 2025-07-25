@@ -214,6 +214,19 @@
 		owner.clan?.alt_sprite = original_alt_sprite
 		owner.clan?.alt_sprite_greyscale = original_alt_sprite_greyscale
 		is_shapeshifted = FALSE
+
+		impersonating_dna = null
+		impersonating_name = null
+		impersonating_skintone = null
+		impersonating_hairstyle = null
+		impersonating_facialhair = null
+		impersonating_haircolor = null
+		impersonating_facialhaircolor = null
+		impersonating_eyecolor = null
+		impersonating_body_mod = null
+		impersonating_alt_sprite = null
+		impersonating_alt_sprite_greyscale = null
+
 		QDEL_NULL(impersonating_dna)
 	else
 		//Nosferatu, Cappadocians, Gargoyles, Kiasyd, etc. will revert instead of being indefinitely without their curse

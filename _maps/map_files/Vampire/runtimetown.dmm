@@ -1144,7 +1144,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "EL" = (
-/turf/closed/wall/vampwall/rich/old/low/window/reinforced,
+/turf/closed/wall/vampwall/rich/old/low/window,
 /area/vtm/clinic)
 "EN" = (
 /obj/effect/landmark/error,

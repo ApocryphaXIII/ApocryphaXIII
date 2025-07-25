@@ -2678,7 +2678,6 @@
 /turf/closed/wall/vampwall/junk/alt/low/window,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "aFn" = (
 /obj/vampire_car/retro/rand/anarch,
@@ -5908,7 +5907,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "brk" = (
 /obj/structure/big_vamprocks,
@@ -8264,7 +8262,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "bVk" = (
 /obj/machinery/light{
@@ -11983,7 +11980,6 @@
 /turf/closed/wall/vampwall/junk/low,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "cNN" = (
 /obj/item/kirbyplants/random,
@@ -12693,7 +12689,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "cWF" = (
 /obj/structure/rack,
@@ -13558,7 +13553,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "dhW" = (
 /obj/effect/turf_decal/siding/wood{
@@ -16143,7 +16137,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "dQz" = (
 /obj/structure/rack/tacobell/horizontal,
@@ -17392,7 +17385,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "egP" = (
 /obj/effect/decal/cleanable/trash{
@@ -20709,7 +20701,6 @@
 /turf/closed/wall/vampwall/junk/low,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "eWA" = (
 /obj/effect/turf_decal/asphaltline/alt{
@@ -21744,7 +21735,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "fjk" = (
 /obj/effect/decal/wallpaper/stone,
@@ -23074,7 +23064,6 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "fzA" = (
 /obj/effect/turf_decal/siding/white,
@@ -25008,7 +24997,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "fWY" = (
 /obj/structure/fluff/hedge,
@@ -25914,7 +25902,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "giF" = (
 /obj/structure/railing{
@@ -32942,7 +32929,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "hUx" = (
 /obj/structure/vampstatue,
@@ -34276,7 +34262,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "inz" = (
 /obj/effect/turf_decal/bordur{
@@ -34678,7 +34663,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "isR" = (
 /obj/item/reagent_containers/food/drinks/beer/vampire{
@@ -36997,7 +36981,6 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "iVJ" = (
 /obj/effect/turf_decal/bordur{
@@ -38819,7 +38802,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "jrL" = (
 /obj/structure/bed/maint{
@@ -40511,7 +40493,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "jMJ" = (
 /obj/effect/turf_decal/siding/wood{
@@ -42427,7 +42408,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "klT" = (
 /obj/effect/decal/wallpaper/gold,
@@ -42550,7 +42530,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "knj" = (
 /obj/effect/turf_decal/siding/white{
@@ -42687,7 +42666,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "kpd" = (
 /obj/structure/chair/wood/wings,
@@ -44292,7 +44270,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "kLG" = (
 /obj/effect/turf_decal/bordur{
@@ -44841,7 +44818,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "kSj" = (
 /obj/structure/table,
@@ -45203,7 +45179,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "kWB" = (
 /obj/effect/turf_decal/bordur{
@@ -47667,7 +47642,6 @@
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "lDE" = (
 /obj/structure/vampipe{
@@ -48383,7 +48357,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "lLx" = (
 /obj/structure/curtain/bounty,
@@ -52112,7 +52085,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "mHs" = (
 /obj/machinery/light{
@@ -53653,7 +53625,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "mZf" = (
 /obj/structure/rack,
@@ -54103,7 +54074,6 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "nfe" = (
 /obj/effect/turf_decal/bordur,
@@ -54206,7 +54176,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "ngp" = (
 /obj/effect/turf_decal/bordur{
@@ -56946,7 +56915,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "nLN" = (
 /obj/effect/decal/pallet{
@@ -57653,7 +57621,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "nVn" = (
 /obj/structure/flora/ausbushes/ppflowers,
@@ -60073,7 +60040,6 @@
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "oyi" = (
 /obj/machinery/light/small{
@@ -60800,7 +60766,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "oGA" = (
 /obj/structure/fluff/hedge,
@@ -60837,7 +60802,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "oGI" = (
 /obj/structure/chair{
@@ -61307,7 +61271,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "oMH" = (
 /obj/machinery/light{
@@ -62103,7 +62066,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "oUD" = (
 /obj/machinery/light{
@@ -62938,7 +62900,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "pfO" = (
 /obj/effect/turf_decal/siding/white/corner{
@@ -63886,7 +63847,6 @@
 /turf/closed/wall/vampwall/junk/low,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "prP" = (
 /obj/effect/turf_decal/siding/white{
@@ -64408,7 +64368,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "pyi" = (
 /obj/structure/bed,
@@ -65165,7 +65124,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "pGW" = (
 /obj/structure/vampdoor/simple{
@@ -65296,7 +65254,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "pHY" = (
 /obj/structure/railing{
@@ -65681,7 +65638,6 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "pLS" = (
 /obj/structure/sink{
@@ -65817,7 +65773,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "pMY" = (
 /obj/effect/decal/painting/third,
@@ -66703,7 +66658,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "pYs" = (
 /obj/effect/turf_decal/bordur,
@@ -67272,7 +67226,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "qeM" = (
 /obj/structure/chair/sofa/corp/right{
@@ -68948,7 +68901,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "qzs" = (
 /obj/transfer_point_vamp{
@@ -71236,13 +71188,11 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "rav" = (
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "rax" = (
 /obj/effect/turf_decal/bordur{
@@ -72953,7 +72903,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "rvE" = (
 /turf/closed/wall/vampwall/rich,
@@ -74375,7 +74324,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "rNJ" = (
 /obj/structure/fence/door,
@@ -74945,7 +74893,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "rTV" = (
 /obj/structure/table/wood,
@@ -74971,7 +74918,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "rUw" = (
 /turf/open/floor/plasteel/stairs{
@@ -75327,7 +75273,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "rXW" = (
 /obj/structure/vampgate,
@@ -76927,7 +76872,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "srH" = (
 /obj/structure/pole{
@@ -77542,7 +77486,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "syK" = (
 /obj/structure/werewolf_totem/bone_gnawer,
@@ -78875,7 +78818,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "sTw" = (
 /obj/structure/vampdoor/wood/cappadocian,
@@ -81723,7 +81665,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "tBS" = (
 /obj/structure/bed/roller,
@@ -82312,7 +82253,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "tKi" = (
 /obj/structure/railing{
@@ -84446,7 +84386,6 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "uns" = (
 /obj/machinery/shower,
@@ -88117,7 +88056,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vgx" = (
 /obj/structure/table,
@@ -88195,7 +88133,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vhn" = (
 /obj/item/kirbyplants/random,
@@ -88645,7 +88582,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vmB" = (
 /obj/machinery/light{
@@ -88837,7 +88773,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vpp" = (
 /obj/structure/vampdoor/children_of_gaia,
@@ -88872,7 +88807,6 @@
 /turf/open/floor/plating/industrial,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vpB" = (
 /turf/open/floor/plating/sidewalk/poor,
@@ -89570,7 +89504,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vyw" = (
 /obj/effect/turf_decal/siding/white{
@@ -89792,7 +89725,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vBB" = (
 /obj/effect/turf_decal/siding/white{
@@ -90702,7 +90634,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vLV" = (
 /obj/structure/toilet{
@@ -91682,7 +91613,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "vXL" = (
 /obj/effect/turf_decal/siding/white{
@@ -92923,7 +92853,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "wnu" = (
 /obj/structure/stairs/east,
@@ -94257,7 +94186,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "wEv" = (
 /obj/structure/flora/ausbushes,
@@ -94525,7 +94453,6 @@
 /turf/closed/wall/vampwall/junk/low,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "wId" = (
 /obj/structure/table/glass,
@@ -95807,7 +95734,6 @@
 	},
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "wYS" = (
 /obj/structure/vampipe{
@@ -96239,7 +96165,6 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "xdb" = (
 /obj/structure/toilet{
@@ -97775,7 +97700,6 @@
 /turf/closed/wall/vampwall/junk/low,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "xye" = (
 /obj/item/pet_carrier,
@@ -99887,7 +99811,6 @@
 /turf/closed/wall/vampwall/junk/alt/low/window,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "xWF" = (
 /turf/open/floor/plating/asphalt,
@@ -100961,7 +100884,6 @@
 /turf/open/floor/plating/industrial,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "yjk" = (
 /turf/closed/wall/vampwall/painted{
@@ -101016,7 +100938,6 @@
 /turf/open/floor/plating/industrial,
 /area/vtm/sewer/nosferatu_bar{
 	fire_controled = 1;
-	music = null
 	})
 "yjQ" = (
 /obj/effect/decal/cleanable/litter,

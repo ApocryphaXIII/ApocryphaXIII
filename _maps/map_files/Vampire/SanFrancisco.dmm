@@ -15934,7 +15934,9 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/baali)
 "dNs" = (
-/obj/structure/railing,
+/obj/structure/railing{
+	layer = 2.91
+	},
 /obj/effect/decal/shadow{
 	pixel_y = -32
 	},
@@ -15942,7 +15944,8 @@
 	dir = 1
 	},
 /obj/structure/chair/wood/wings{
-	dir = 8
+	dir = 8;
+	layer = 2.9
 	},
 /turf/open/floor/carpet/red,
 /area/vtm/interior/tzimisce_manor)
@@ -18415,12 +18418,21 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/supply)
 "etW" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/decal/shadow{
+	pixel_y = -32
+	},
+/obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/effect/turf_decal/siding/white,
-/turf/open/floor/plating/sidewalk/old,
-/area/vtm/financialdistrict/construction)
+/obj/structure/railing{
+	layer = 2.91
+	},
+/obj/structure/chair/wood/wings{
+	dir = 4;
+	layer = 2.9
+	},
+/turf/open/floor/carpet/red,
+/area/vtm/interior/tzimisce_manor)
 "eud" = (
 /obj/structure/table/wood,
 /obj/item/kirbyplants{
@@ -44116,7 +44128,9 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower/f2)
 "kIZ" = (
-/obj/structure/railing,
+/obj/structure/railing{
+	layer = 2.91
+	},
 /obj/effect/decal/shadow{
 	pixel_y = -32
 	},
@@ -44124,7 +44138,8 @@
 	dir = 1
 	},
 /obj/structure/chair/wood/wings{
-	dir = 4
+	dir = 4;
+	layer = 2.9
 	},
 /turf/open/floor/carpet/red,
 /area/vtm/interior/tzimisce_manor)
@@ -47206,16 +47221,18 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower/ventrue)
 "lxT" = (
-/obj/structure/railing,
 /obj/effect/decal/shadow{
 	pixel_y = -32
 	},
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
+/obj/structure/railing{
+	layer = 2.91
+	},
 /obj/structure/chair/wood/wings{
 	dir = 8;
-	pixel_y = 6
+	layer = 2.9
 	},
 /turf/open/floor/carpet/red,
 /area/vtm/interior/tzimisce_manor)
@@ -64552,7 +64569,9 @@
 /turf/open/floor/plating/roofwalk/cobblestones,
 /area/vtm/jazzclub)
 "pAc" = (
-/obj/structure/coclock,
+/obj/machinery/light/small/pink{
+	pixel_y = 27
+	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip)
 "pAg" = (
@@ -68413,6 +68432,9 @@
 /obj/structure/railing{
 	dir = 8;
 	pixel_x = 2
+	},
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 8
 	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/tzimisce_manor)
@@ -81622,7 +81644,9 @@
 /obj/effect/decal/shadow{
 	pixel_y = -32
 	},
-/obj/structure/railing,
+/obj/structure/railing{
+	layer = 3.1
+	},
 /obj/structure/chair/sofa/corp/left{
 	dir = 8;
 	color = "#CD5C5C"
@@ -188163,7 +188187,7 @@ oZH
 rJz
 oZH
 oZH
-etW
+cHw
 hNu
 hNu
 hNu
@@ -248278,7 +248302,7 @@ ntq
 ntq
 ntq
 sPq
-iNm
+iaS
 iPt
 qxt
 qxt
@@ -289980,7 +290004,7 @@ rOo
 hiL
 ctX
 ctX
-kIZ
+etW
 uYk
 uYk
 uYk

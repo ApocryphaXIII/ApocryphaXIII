@@ -8,25 +8,6 @@
 			"name" = "Alcoholic",
 			"icon" = "wine-bottle",
 			"products" = list(
-				/obj/item/reagent_containers/food/drinks/drinkingglass = 15,
-				/obj/item/reagent_containers/food/drinks/drinkingglass/martini_glass = 15,
-				/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass = 15,
-				/obj/item/reagent_containers/food/drinks/drinkingglass/whiskey_shot = 15,
-				/obj/item/reagent_containers/food/drinks/drinkingglass/wine_glass = 15,
-				/obj/item/reagent_containers/food/drinks/drinkingglass/pint = 15,
-				/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass = 12,
-				/obj/item/reagent_containers/food/drinks/flask = 3,
-				/obj/item/reagent_containers/food/drinks/ice = 10,
-				/obj/item/reagent_containers/food/drinks/bottle/orangejuice = 4,
-				/obj/item/reagent_containers/food/drinks/bottle/tomatojuice = 4,
-				/obj/item/reagent_containers/food/drinks/bottle/limejuice = 4,
-				/obj/item/reagent_containers/food/drinks/bottle/cream = 4,
-				/obj/item/reagent_containers/food/drinks/soda_cans/cola = 8,
-				/obj/item/reagent_containers/food/drinks/soda_cans/tonic = 8,
-				/obj/item/reagent_containers/food/drinks/soda_cans/sodawater = 15,
-				/obj/item/reagent_containers/food/drinks/soda_cans/sol_dry = 8,
-				/obj/item/reagent_containers/food/drinks/bottle/grenadine = 4,
-				/obj/item/reagent_containers/food/drinks/bottle/menthol = 4,
 				/obj/item/reagent_containers/food/drinks/ale = 6,
 				/obj/item/reagent_containers/food/drinks/beer = 6,
 				/obj/item/reagent_containers/food/drinks/bottle/maltliquor = 6,
@@ -45,10 +26,42 @@
 				/obj/item/reagent_containers/food/drinks/bottle/amaretto = 5,
 				/obj/item/reagent_containers/food/drinks/bottle/sake = 5,
 				/obj/item/reagent_containers/food/drinks/bottle/applejack = 5,
+			),
+		),
+
+		list(
+			"name" = "Non-Alcoholic",
+			"icon" = "bottle-water",
+			"products" = list(
+				/obj/item/reagent_containers/food/drinks/ice = 10,
+				/obj/item/reagent_containers/food/drinks/bottle/orangejuice = 4,
+				/obj/item/reagent_containers/food/drinks/bottle/tomatojuice = 4,
+				/obj/item/reagent_containers/food/drinks/bottle/limejuice = 4,
+				/obj/item/reagent_containers/food/drinks/bottle/cream = 4,
+				/obj/item/reagent_containers/food/drinks/soda_cans/cola = 8,
+				/obj/item/reagent_containers/food/drinks/soda_cans/tonic = 8,
+				/obj/item/reagent_containers/food/drinks/soda_cans/sodawater = 15,
+				/obj/item/reagent_containers/food/drinks/soda_cans/sol_dry = 8,
+				/obj/item/reagent_containers/food/drinks/bottle/grenadine = 4,
+				/obj/item/reagent_containers/food/drinks/bottle/menthol = 4,
+			),
+		),
+
+		list(
+			"name" = "Glassware",
+			"icon" = "wine-glass",
+			"products" = list(
+				/obj/item/reagent_containers/food/drinks/drinkingglass = 15,
+				/obj/item/reagent_containers/food/drinks/drinkingglass/martini_glass = 15,
+				/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass = 15,
+				/obj/item/reagent_containers/food/drinks/drinkingglass/whiskey_shot = 15,
+				/obj/item/reagent_containers/food/drinks/drinkingglass/wine_glass = 15,
+				/obj/item/reagent_containers/food/drinks/drinkingglass/pint = 15,
+				/obj/item/reagent_containers/food/drinks/flask = 3,
 				/obj/item/reagent_containers/food/drinks/bottle = 15,
-				/obj/item/reagent_containers/food/drinks/bottle/small = 15
-				)
-			)
+				/obj/item/reagent_containers/food/drinks/bottle/small = 15,
+			),
+		),
 	)
 
 	contraband = list(

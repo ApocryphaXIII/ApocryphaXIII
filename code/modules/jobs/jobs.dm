@@ -49,7 +49,8 @@ GLOBAL_LIST_INIT(police_positions, list(
 	"Police Chief",
 	"Police Sergeant",
 	"Police Officer",
-	"Emergency Dispatcher"
+	"Emergency Dispatcher",
+	"District Attorney"
 ))
 
 GLOBAL_LIST_INIT(national_security_positions, list(
@@ -103,7 +104,7 @@ GLOBAL_LIST_INIT(gang_positions, list(
 ))
 
 GLOBAL_LIST_INIT(painted_positions, list(
-    "Painted City Councillor",
+	"Painted City Councillor",
 	"Painted City Keeper",
 	"Painted City Truthcatcher",
 	"Painted City Warder",
@@ -111,7 +112,7 @@ GLOBAL_LIST_INIT(painted_positions, list(
 ))
 
 GLOBAL_LIST_INIT(amberglade_positions, list(
-    "Amberglade Councillor",
+	"Amberglade Councillor",
 	"Amberglade Keeper",
 	"Amberglade Truthcatcher",
 	"Amberglade Warder",
@@ -119,7 +120,7 @@ GLOBAL_LIST_INIT(amberglade_positions, list(
 ))
 
 GLOBAL_LIST_INIT(spiral_positions, list(
-    "Endron Branch Lead",
+	"Endron Branch Lead",
 	"Endron Executive",
 	"Endron Internal Affairs Agent",
 	"Endron Chief of Security",
@@ -212,7 +213,7 @@ GLOBAL_PROTECT(exp_specialmap)
 	var/static/regex/chef_expand = new("chef")
 	var/static/regex/borg_expand = new("(?<!cy)borg")
 
-	job = lowertext(job)
+	job = LOWER_TEXT(job)
 	job = cap_expand.Replace(job, "captain")
 	job = cmo_expand.Replace(job, "chief medical officer")
 	job = hos_expand.Replace(job, "head of security")

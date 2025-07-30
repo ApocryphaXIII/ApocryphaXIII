@@ -34,6 +34,8 @@
 	var/obj/item/clothing/head = null
 
 	///only used by humans
+	var/obj/item/wear_id = null
+	///only used by humans
 	var/obj/item/clothing/gloves = null
 	///only used by humans.
 	var/obj/item/clothing/shoes/shoes = null
@@ -124,10 +126,12 @@
 	var/celerity_visual = FALSE
 	var/potential = 0
 
+	COOLDOWN_DECLARE(frenzy_bite_cooldown)
+	COOLDOWN_DECLARE(frenzy_attack_cooldown)
 	var/in_frenzy = FALSE
 	var/frenzy_hardness = 6
 	var/last_frenzy_check = 0
-	var/atom/frenzy_target = null
+	var/mob/living/frenzy_target = null
 	var/last_experience = 0
 
 	var/last_rage_hit = 0

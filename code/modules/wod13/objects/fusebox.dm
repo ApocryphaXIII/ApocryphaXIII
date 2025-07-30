@@ -1,3 +1,4 @@
+// The way this completely bypasses the entire power system is so strange
 /obj/fusebox
 	name = "fuse box"
 	desc = "Power the controlled area with pure electricity."
@@ -8,29 +9,41 @@
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	pixel_y = 32
+
+	//Damage on the fusebox
 	var/damaged = 0
+	//If our shit is open/closed. bool
+	var/open = FALSE
+	//Repairing var for the loop
 	var/repairing = FALSE
 
-/obj/fusebox/proc/check_damage(mob/living/user)
-	if(damaged > 100 && icon_state != "fusebox_open")
+/obj/fusebox/update_icon(updates)
+	. = ..()
+	if(damaged > 100)
 		icon_state = "fusebox_open"
-		var/area/A = get_area(src)
-		A.requires_power = TRUE
-		A.fire_controled = FALSE
-		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
-		s.set_up(5, 1, get_turf(src))
-		s.start()
-		for(var/obj/machinery/light/L in A)
+	else
+		icon_state = "fusebox"
+
+/obj/fusebox/proc/check_damage(mob/living/user)
+	if(damaged > 100 && !open)
+		open = TRUE
+		var/area/power_area = get_area(src)
+		power_area.requires_power = TRUE
+		power_area.fire_controled = FALSE
+		var/datum/effect_system/spark_spread/local_spark = new /datum/effect_system/spark_spread
+		local_spark.set_up(5, 1, get_turf(src))
+		local_spark.start()
+		for(var/obj/machinery/light/L in power_area)
 			L.update(FALSE)
 		playsound(loc, 'code/modules/wod13/sounds/explode.ogg', 100, TRUE)
-		if(user)
-			user.electrocute_act(50, src, siemens_coeff = 1, flags = NONE)
+		user?.electrocute_act(50, src, siemens_coeff = 1, flags = NONE)
+	update_icon()
 
 /obj/fusebox/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/wire_cutters))
+	if(I.tool_behaviour == TOOL_WIRECUTTER)
 		if(!repairing)
 			repairing = TRUE
-			if(do_after(user, 100, src))
+			if(do_after(user, 10 SECONDS, src))
 				icon_state = "fusebox"
 				damaged = 0
 				playsound(get_turf(src),'code/modules/wod13/sounds/fix.ogg', 75, FALSE)

@@ -79,12 +79,14 @@ VENTORY!
 	screen_max_rows = 4
 
 /datum/component/storage/concrete/vtm/car
+	max_w_class = WEIGHT_CLASS_HUGE
 	screen_max_columns = 7
 	screen_max_rows = 9
 
 /datum/component/storage/concrete/vtm/car/track
-	screen_max_columns = 12
-	screen_max_rows = 12
+	max_w_class = WEIGHT_CLASS_GIGANTIC
+	screen_max_columns = 13
+	screen_max_rows = 9
 
 /datum/component/storage/concrete/vtm/sheathe
 	screen_max_columns = 2
@@ -105,7 +107,7 @@ VENTORY!
 		'sound/effects/rustle5.ogg',
 	)
 	/// Exactly what it sounds like, this makes it use the new RE4-like inventory system
-	var/grid = FALSE
+	var/grid = TRUE
 	var/static/grid_box_size
 	var/static/list/mutable_appearance/underlay_appearances_by_size = list()
 	var/list/grid_coordinates_to_item
@@ -116,11 +118,12 @@ VENTORY!
 /obj/item/storage/ComponentInitialize() //backpacks are smaller but hold larger things
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	// ! THESE SHOULD BE ARGS YOU PASS INTO ADDCOMPONENT
 	STR.max_w_class = WEIGHT_CLASS_HUGE
 	STR.max_items = 40 //max grid
 	STR.max_combined_w_class = 100
 
-/datum/component/storage/Initialize(datum/component/storage/concrete/master)
+/datum/component/storage/Initialize(datum/component/storage/concrete/master, _screen_max_columns, _screen_max_rows)
 	if(!grid_box_size)
 		grid_box_size = world.icon_size
 	. = ..()
@@ -1123,3 +1126,19 @@ VENTORY!
 /obj/item/gun/energy/taser
 	grid_width = 2 GRID_BOXES
 	grid_height = 1 GRID_BOXES
+
+/obj/item/gun/ballistic/automatic/vampire/mp7
+	grid_width = 2 GRID_BOXES
+	grid_height = 2 GRID_BOXES
+
+/obj/item/ammo_box/magazine/vamp46mp7
+	grid_width = 1 GRID_BOXES
+	grid_height = 2 GRID_BOXES
+
+/obj/item/gun/ballistic/automatic/vampire/PSG1
+	grid_width = 8 GRID_BOXES
+	grid_height = 2 GRID_BOXES
+
+/obj/item/ammo_box/magazine/vamp762x51PSG1
+	grid_width = 1 GRID_BOXES
+	grid_height = 2 GRID_BOXES

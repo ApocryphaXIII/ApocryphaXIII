@@ -136,10 +136,6 @@
 	icon_state = "rich-window"
 	window = /obj/structure/window/fulltile
 
-/turf/closed/wall/vampwall/rich/low/window/reinforced
-	icon_state = "rich-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
-
 /turf/closed/wall/vampwall/junk
 	name = "junk brick wall"
 	desc = "A huge chunk of dirty bricks used to separate rooms."
@@ -186,10 +182,6 @@
 	icon_state = "market-window"
 	window = /obj/structure/window/fulltile
 
-/turf/closed/wall/vampwall/market/low/window/reinforced
-	icon_state = "market-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
-
 /turf/closed/wall/vampwall/old
 	name = "old brick wall"
 	desc = "A huge chunk of old bricks used to separate rooms."
@@ -205,10 +197,6 @@
 /turf/closed/wall/vampwall/old/low/window
 	icon_state = "old-window"
 	window = /obj/structure/window/fulltile
-
-/turf/closed/wall/vampwall/old/low/window/reinforced
-	icon_state = "old-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
 
 /turf/closed/wall/vampwall/painted
 	name = "painted brick wall"
@@ -226,10 +214,6 @@
 	icon_state = "painted-window"
 	window = /obj/structure/window/fulltile
 
-/turf/closed/wall/vampwall/painted/low/window/reinforced
-	icon_state = "painted-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
-
 /turf/closed/wall/vampwall/rich/old
 	name = "old rich-looking wall"
 	desc = "A huge chunk of old bricks used to separate rooms."
@@ -245,10 +229,6 @@
 /turf/closed/wall/vampwall/rich/old/low/window
 	icon_state = "theater-window"
 	window = /obj/structure/window/fulltile
-
-/turf/closed/wall/vampwall/rich/old/low/window/reinforced
-	icon_state = "theater-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
 
 /turf/closed/wall/vampwall/brick
 	name = "brick wall"
@@ -377,13 +357,13 @@
 
 //TURFS
 
-/obj/effect/decal/asphalt
+/obj/effect/turf_decal/asphalt
 	name = "asphalt"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "decal1"
 	mouse_opacity = 0
 
-/obj/effect/decal/asphalt/Initialize()
+/obj/effect/turf_decal/asphalt/Initialize()
 	..()
 	icon_state = "decal[rand(1, 24)]"
 	update_appearance()
@@ -400,16 +380,17 @@
 	alpha = 200
 	mouse_opacity = 0
 
-/obj/effect/decal/asphaltline
+/obj/effect/turf_decal/asphaltline
 	name = "asphalt"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "line"
 	mouse_opacity = 0
+	layer = TURF_DECAL_LAYER
 
-/obj/effect/decal/asphaltline/alt
+/obj/effect/turf_decal/asphaltline/alt
 	icon_state = "line_alt"
 
-/obj/effect/decal/asphaltline/Initialize()
+/obj/effect/turf_decal/asphaltline/Initialize()
 	..()
 	icon_state = "[initial(icon_state)][rand(1, 3)]"
 	update_appearance()
@@ -419,13 +400,13 @@
 			if(V.upper)
 				icon_state = "[initial(icon_state)][rand(1, 3)]-snow"
 
-/obj/effect/decal/crosswalk
+/obj/effect/turf_decal/crosswalk
 	name = "asphalt"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "crosswalk1"
 	mouse_opacity = 0
 
-/obj/effect/decal/crosswalk/Initialize()
+/obj/effect/turf_decal/crosswalk/Initialize()
 	..()
 	icon_state = "crosswalk[rand(1, 3)]"
 	update_appearance()
@@ -462,7 +443,7 @@
 		icon_state = "asphalt[rand(1, 3)]"
 		update_appearance()
 	if(prob(25))
-		new /obj/effect/decal/asphalt(src)
+		new /obj/effect/turf_decal/asphalt(src)
 	set_light(1, 0.5, "#a4b7ff")
 
 /turf/open/floor/plating/asphalt/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
@@ -471,7 +452,7 @@
 /turf/open/floor/plating/asphalt/ex_act(severity, target)
 	contents_explosion(severity, target)
 
-/obj/effect/decal/stock
+/obj/effect/turf_decal/stock
 	name = "stock"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "stock"
@@ -574,13 +555,13 @@
 /turf/open/floor/plating/roofwalk/cobblestones
 	name = "cobblestones"
 
-/obj/effect/decal/bordur
+/obj/effect/turf_decal/bordur
 	name = "sidewalk"
 	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "border"
 	mouse_opacity = 0
 
-/obj/effect/decal/bordur/Initialize()
+/obj/effect/turf_decal/bordur/Initialize()
 	. = ..()
 	if(GLOB.winter)
 		if(istype(get_area(src), /area/vtm))
@@ -588,7 +569,7 @@
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
 
-/obj/effect/decal/bordur/corner
+/obj/effect/turf_decal/bordur/corner
 	icon_state = "border_corner"
 
 //OTHER TURFS
@@ -596,7 +577,7 @@
 /turf/open/floor/plating/parquetry
 	gender = PLURAL
 	name = "parquetry"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "parquet"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -648,7 +629,7 @@
 /turf/open/floor/plating/vampgrass
 	gender = PLURAL
 	name = "grass"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "grass1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -710,10 +691,12 @@
 				barefootstep = FOOTSTEP_SNOW
 				heavyfootstep = FOOTSTEP_SNOW
 
+/turf/open/floor/plating/gutfloor
+
 /turf/open/floor/plating/vampcarpet
 	gender = PLURAL
 	name = "carpet"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "carpet_black"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -726,7 +709,7 @@
 /turf/open/floor/plating/vampdirt
 	gender = PLURAL
 	name = "dirt"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "dirt"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -804,7 +787,7 @@
 /turf/open/floor/plating/vampplating
 	gender = PLURAL
 	name = "plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "plating"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -823,7 +806,7 @@
 /turf/open/floor/plating/rough
 	gender = PLURAL
 	name = "rough floor"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "rough"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -834,6 +817,7 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/floor/plating/rough/cave
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "cave1"
 
 /turf/open/floor/plating/rough/cave/Initialize()
@@ -974,7 +958,7 @@
 /turf/open/floor/plating/church
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "church1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -991,7 +975,7 @@
 /turf/open/floor/plating/saint
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "saint1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1146,7 +1130,7 @@
 /turf/open/floor/plating/vampwood
 	gender = PLURAL
 	name = "wood"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "bwood"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1350,8 +1334,11 @@
 /turf/open/floor/plating/vampcanal/Enter(atom/movable/mover, atom/oldloc)
 	. = ..()
 	if(istype(mover, /mob/living/carbon/human))
-		if(prob(10))
-			new /mob/living/simple_animal/pet/rat(oldloc)
+		if(prob(0.5))
+			var/cap = CONFIG_GET(number/ratcap)
+			if(LAZYLEN(SSmobs.cheeserats) >= cap)
+				return
+			SSmobs.cheeserats += new /mob/living/simple_animal/mouse(oldloc)
 
 /turf/open/floor/plating/vampcanal/Initialize()
 	..()
@@ -1373,8 +1360,11 @@
 /turf/open/floor/plating/vampcanalplating/Enter(atom/movable/mover, atom/oldloc)
 	. = ..()
 	if(istype(mover, /mob/living/carbon/human))
-		if(prob(10))
-			new /mob/living/simple_animal/pet/rat(oldloc)
+		if(prob(0.5))
+			var/cap = CONFIG_GET(number/ratcap)
+			if(LAZYLEN(SSmobs.cheeserats) >= cap)
+				return
+			SSmobs.cheeserats += new /mob/living/simple_animal/mouse(oldloc)
 
 /turf/open/floor/plating/vampcanal/Initialize()
 	..()
@@ -1389,7 +1379,7 @@
 /turf/open/floor/plating/bacotell
 	gender = PLURAL
 	name = "plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "bacotell"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1402,7 +1392,7 @@
 /turf/open/floor/plating/gummaguts
 	gender = PLURAL
 	name = "plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "gummaguts"
 	flags_1 = NONE
 	attachment_holes = FALSE

@@ -25,7 +25,7 @@
 	desc = "Contains wirecutters, lamps and other stuff to restore light in the area."
 	cost = 50
 	contains = list(
-		/obj/item/wire_cutters,
+		/obj/item/wirecutters,
 		/obj/item/storage/box/lights/mixed,
 	)
 	crate_name = "weapon crate"
@@ -283,6 +283,27 @@
 	contains = list(/obj/item/ammo_box/vampire/c9mm = 2)
 	crate_name = "ammo crate"
 
+/datum/supply_pack/vampire/ammo762x51
+	name = "Ammo (7.62x51mm)"
+	desc = "Contains a box of 7.62x51mm ammunition."
+	cost = 2000
+	contains = list(/obj/item/ammo_box/vampire/c762x51mm)
+	crate_name = "ammo crate"
+
+/datum/supply_pack/vampire/ammo762x51/silver
+	name = "Ammo (7.62x51mm, Silver)"
+	desc = "Contains a box of silver 7.62x51mm ammunition."
+	cost = 4500
+	contains = list(/obj/item/ammo_box/vampire/c762x51mm/silver)
+	crate_name = "ammo crate"
+
+/datum/supply_pack/vampire/ammo762x51/incendiary
+	name = "Ammo (7.62x51mm, incendiary)"
+	desc = "Contains a box of incendiary 7.62x51mm ammunition."
+	cost = 5000
+	contains = list(/obj/item/ammo_box/vampire/c762x51mm/incendiary)
+	crate_name = "ammo crate"
+
 /datum/supply_pack/vampire/ammo12g
 	name = "Ammo (12g, slug)"
 	desc = "Contains a box of 12 gauge shotgun slugs."
@@ -499,60 +520,6 @@
 	cost = 4000
 	contains = list(/obj/structure/drill)
 	crate_name = "drill crate"
-
-/obj/item/stack/dollar
-	name = "dollars"
-	desc = "Wow! With enough of these, you could buy a lot! ...Pssh, yeah right."
-	singular_name = "dollar"
-	icon_state = "money1"
-	icon = 'code/modules/wod13/items.dmi'
-	lefthand_file = null
-	righthand_file = null
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
-	w_class = WEIGHT_CLASS_TINY
-	max_amount = 1000
-	merge_type = /obj/item/stack/dollar
-
-/obj/item/stack/dollar/Initialize(mapload, new_amount, merge = TRUE, list/mat_override=null, mat_amt=1)
-	. = ..()
-	update_appearance()
-
-/obj/item/stack/dollar/update_icon_state()
-	. = ..()
-	var/amount = get_amount()
-	switch(amount)
-		if(100 to INFINITY)
-			icon_state = "money3"
-		if(50 to 100)
-			icon_state = "money2"
-		if(1 to 50)
-			icon_state = "money1"
-		else
-			icon_state = "money"
-
-/obj/item/stack/dollar/five
-	amount = 5
-
-/obj/item/stack/dollar/ten
-	amount = 10
-
-/obj/item/stack/dollar/fifty
-	amount = 50
-
-/obj/item/stack/dollar/hundred
-	amount = 100
-
-/obj/item/stack/dollar/thousand
-	amount = 1000
-
-/obj/item/stack/dollar/rand
-	amount = 1.3
-
-/obj/item/stack/dollar/rand/Initialize(mapload, new_amount, merge = TRUE, list/mat_override=null, mat_amt=1)
-	. = ..()
-	if(amount == 1.3)
-		amount = rand(5, 30)
-		update_appearance()
 
 /obj/item/cargo_box
 	name = "cargo box"

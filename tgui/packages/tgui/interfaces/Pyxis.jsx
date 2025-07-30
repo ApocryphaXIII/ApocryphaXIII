@@ -33,7 +33,7 @@ const ICONS = {
   categories: {
     'Controlled Substances': 'lock',
     'Medical Supplies': 'heart',
-    'Medications': 'pills',
+    Medications: 'pills',
     'Staff Equipment': 'user-md',
     'Cleaning Supplies': 'spray-can',
     'Office Supplies': 'pencil-alt',
@@ -88,7 +88,11 @@ const BORDER_STYLES = {
 
 // Base style generators
 const createButtonStyle = (selected, disabled) => ({
-  backgroundColor: selected ? COLORS.lightBlue : disabled ? '#f0f0f0' : COLORS.controlBg,
+  backgroundColor: selected
+    ? COLORS.lightBlue
+    : disabled
+      ? '#f0f0f0'
+      : COLORS.controlBg,
   border: `1px solid ${COLORS.controlBorder}`,
   borderRadius: '3px',
   color: selected ? COLORS.black : disabled ? COLORS.darkGrey : COLORS.black,
@@ -96,7 +100,9 @@ const createButtonStyle = (selected, disabled) => ({
   margin: '1px',
   fontWeight: selected ? 'bold' : 'normal',
   cursor: disabled ? 'not-allowed' : 'pointer',
-  boxShadow: selected ? 'inset 1px 1px 2px rgba(0,0,0,0.2)' : '1px 1px 1px rgba(0,0,0,0.1)',
+  boxShadow: selected
+    ? 'inset 1px 1px 2px rgba(0,0,0,0.2)'
+    : '1px 1px 1px rgba(0,0,0,0.1)',
 });
 
 const createWindowStyle = (extraStyle = {}) => ({
@@ -110,7 +116,15 @@ const createWindowStyle = (extraStyle = {}) => ({
 });
 
 // Core components
-const XPButton = ({ icon, content, selected, disabled, onClick, style, ...props }) => (
+const XPButton = ({
+  icon,
+  content,
+  selected,
+  disabled,
+  onClick,
+  style,
+  ...props
+}) => (
   <Button
     icon={icon}
     content={content}
@@ -144,13 +158,16 @@ const XPInput = ({ value, placeholder, onChange, ...props }) => (
 
 const XPWindow = ({ title, icon, children, style, ...props }) => (
   <Box style={createWindowStyle(style)} {...props}>
-    <Flex align="center" style={{
-      background: `linear-gradient(to right, ${COLORS.darkBlue}, #a6caf0)`,
-      color: COLORS.white,
-      padding: '2px 8px',
-      height: '22px',
-      fontWeight: 'bold',
-    }}>
+    <Flex
+      align="center"
+      style={{
+        background: `linear-gradient(to right, ${COLORS.darkBlue}, #a6caf0)`,
+        color: COLORS.white,
+        padding: '2px 8px',
+        height: '22px',
+        fontWeight: 'bold',
+      }}
+    >
       <Flex.Item>
         {icon && <Icon name={icon} mr={1} />}
         {title}
@@ -161,33 +178,43 @@ const XPWindow = ({ title, icon, children, style, ...props }) => (
 );
 
 const XPNotice = ({ icon, children, style, ...props }) => (
-  <Box style={{
-    background: COLORS.controlBg,
-    border: `1px solid ${COLORS.controlBorder}`,
-    borderLeft: `4px solid ${COLORS.blue}`,
-    ...BORDER_STYLES.outset,
-    padding: '8px',
-    marginBottom: '8px',
-    borderRadius: '0 3px 3px 0',
-    ...style,
-  }} {...props}>
+  <Box
+    style={{
+      background: COLORS.controlBg,
+      border: `1px solid ${COLORS.controlBorder}`,
+      borderLeft: `4px solid ${COLORS.blue}`,
+      ...BORDER_STYLES.outset,
+      padding: '8px',
+      marginBottom: '8px',
+      borderRadius: '0 3px 3px 0',
+      ...style,
+    }}
+    {...props}
+  >
     <Flex align="center">
-      {icon && <Flex.Item mr={1}><Icon name={icon} /></Flex.Item>}
+      {icon && (
+        <Flex.Item mr={1}>
+          <Icon name={icon} />
+        </Flex.Item>
+      )}
       <Flex.Item grow={1}>{children}</Flex.Item>
     </Flex>
   </Box>
 );
 
 const ContentBox = ({ children, style, ...props }) => (
-  <Box style={{
-    backgroundColor: COLORS.paperWhite,
-    borderRadius: '2px',
-    overflowY: 'auto',
-    padding: '6px',
-    border: '1px solid #c0c0c0',
-    ...BORDER_STYLES.inset,
-    ...style,
-  }} {...props}>
+  <Box
+    style={{
+      backgroundColor: COLORS.paperWhite,
+      borderRadius: '2px',
+      overflowY: 'auto',
+      padding: '6px',
+      border: '1px solid #c0c0c0',
+      ...BORDER_STYLES.inset,
+      ...style,
+    }}
+    {...props}
+  >
     {children}
   </Box>
 );
@@ -196,19 +223,28 @@ const ContentBox = ({ children, style, ...props }) => (
 const ItemIcon = ({ icon }) => {
   if (!icon) return null;
   return (
-    <Box style={{
-      width: '32px', height: '32px', display: 'flex', justifyContent: 'center',
-      alignItems: 'center', margin: '2px', backgroundColor: COLORS.medBackground,
-      border: `1px solid ${COLORS.controlBorder}`,
-      ...BORDER_STYLES.outset,
-      borderRadius: '3px',
-    }}>
+    <Box
+      style={{
+        width: '32px',
+        height: '32px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: '2px',
+        backgroundColor: COLORS.medBackground,
+        border: `1px solid ${COLORS.controlBorder}`,
+        ...BORDER_STYLES.outset,
+        borderRadius: '3px',
+      }}
+    >
       {typeof icon === 'string' && icon.length > 0 ? (
         <Box
           as="img"
           src={`data:image/png;base64,${icon}`}
           style={{ width: '100%', height: '100%', 'object-fit': 'contain' }}
-          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+          }}
         />
       ) : (
         <Icon name="prescription-bottle-alt" size={1.5} />
@@ -220,22 +256,35 @@ const ItemIcon = ({ icon }) => {
 // Login component
 const PyxisLogin = ({ messages }) => {
   const { act } = useBackend();
-  const [showMessages, setShowMessages] = useState(safe.array(messages).length > 0);
+  const [showMessages, setShowMessages] = useState(
+    safe.array(messages).length > 0,
+  );
 
   useEffect(() => {
     if (safe.array(messages).length > 0) setShowMessages(true);
   }, [messages]);
 
   return (
-    <Box style={{ height: '100%', background: COLORS.controlBg, padding: '20px' }}>
+    <Box
+      style={{ height: '100%', background: COLORS.controlBg, padding: '20px' }}
+    >
       <Box mb={2}>
         <XPWindow title="Pyxis MedStation" icon="laptop-medical">
-          <Box p={1} style={{
-            background: `linear-gradient(to right, #356aa0, #9dc9ed)`,
-            color: COLORS.white, textAlign: 'center', padding: '10px',
-          }}>
-            <Box fontSize="18px" fontWeight="bold" mb={1} color={COLORS.white}>St. John's Community Clinic</Box>
-            <Box fontSize="12px" color={COLORS.white}>Automated Medication &amp; Supply Dispensing</Box>
+          <Box
+            p={1}
+            style={{
+              background: `linear-gradient(to right, #356aa0, #9dc9ed)`,
+              color: COLORS.white,
+              textAlign: 'center',
+              padding: '10px',
+            }}
+          >
+            <Box fontSize="18px" fontWeight="bold" mb={1} color={COLORS.white}>
+              St. John's Community Clinic
+            </Box>
+            <Box fontSize="12px" color={COLORS.white}>
+              Automated Medication &amp; Supply Dispensing
+            </Box>
           </Box>
         </XPWindow>
       </Box>
@@ -244,22 +293,35 @@ const PyxisLogin = ({ messages }) => {
         <Box p={2}>
           <Flex direction="column" align="center">
             <Flex.Item mb={4}>
-              <Icon name="first-aid" size={6} style={{
-                color: '#cc3333', background: COLORS.paperWhite,
-                border: '1px solid #e6e6e6', borderRadius: '50%',
-                padding: '15px',
-              }} />
+              <Icon
+                name="first-aid"
+                size={6}
+                style={{
+                  color: '#cc3333',
+                  background: COLORS.paperWhite,
+                  border: '1px solid #e6e6e6',
+                  borderRadius: '50%',
+                  padding: '15px',
+                }}
+              />
             </Flex.Item>
             <Flex.Item mb={3} width="100%">
               <XPNotice icon="info-circle">
-                <Box color={COLORS.black}>Please swipe or scan your ID card to access the system. This terminal is for authorized clinical staff only.</Box>
+                <Box color={COLORS.black}>
+                  Please swipe or scan your ID card to access the system. This
+                  terminal is for authorized clinical staff only.
+                </Box>
               </XPNotice>
             </Flex.Item>
             <Flex.Item mb={4} width="100%">
-              <Box style={{
-                border: `1px solid ${COLORS.controlBorder}`,
-                padding: '20px', backgroundColor: COLORS.medBackground, textAlign: 'center',
-              }}>
+              <Box
+                style={{
+                  border: `1px solid ${COLORS.controlBorder}`,
+                  padding: '20px',
+                  backgroundColor: COLORS.medBackground,
+                  textAlign: 'center',
+                }}
+              >
                 <XPButton
                   icon="id-card"
                   content="Scan ID Card"
@@ -279,7 +341,10 @@ const PyxisLogin = ({ messages }) => {
       </XPWindow>
 
       <XPNotice icon="shield-alt">
-        <Box textAlign="center" color={COLORS.black}>This system is for authorized clinical use only. All transactions are logged.</Box>
+        <Box textAlign="center" color={COLORS.black}>
+          This system is for authorized clinical use only. All transactions are
+          logged.
+        </Box>
       </XPNotice>
 
       {showMessages && safe.array(messages).length > 0 && (
@@ -287,18 +352,28 @@ const PyxisLogin = ({ messages }) => {
           position="absolute"
           top="50%"
           left="50%"
-          style={{ transform: 'translate(-50%, -50%)', 'z-index': 10, width: '400px' }}
+          style={{
+            transform: 'translate(-50%, -50%)',
+            'z-index': 10,
+            width: '400px',
+          }}
         >
           <XPWindow title="System Messages" icon="comment">
             <Box p={1} color={COLORS.black}>
               {safe.array(messages).map((msg, i) => (
-                <Box key={i} mb={1} color={COLORS.black}>{safe.string(msg)}</Box>
+                <Box key={i} mb={1} color={COLORS.black}>
+                  {safe.string(msg)}
+                </Box>
               ))}
               <Box mt={2} textAlign="right">
-                <XPButton icon="times" content="Close" onClick={() => {
-                  setShowMessages(false);
-                  act('acknowledge_messages');
-                }} />
+                <XPButton
+                  icon="times"
+                  content="Close"
+                  onClick={() => {
+                    setShowMessages(false);
+                    act('acknowledge_messages');
+                  }}
+                />
               </Box>
             </Box>
           </XPWindow>
@@ -312,15 +387,24 @@ const PyxisLogin = ({ messages }) => {
 export const Pyxis = () => {
   const { act, data } = useBackend();
   const {
-    logged_in = false, user_name = '', user_job = '', messages = [],
-    emergency_mode = false, reminder = '', available_tabs = [], categories = [],
+    logged_in = false,
+    user_name = '',
+    user_job = '',
+    messages = [],
+    emergency_mode = false,
+    reminder = '',
+    available_tabs = [],
+    categories = [],
     selected_category = '',
   } = data;
 
   if (!logged_in) {
     return (
       <Window width={471} height={675} title="Pyxis MedStation" theme="winxp">
-        <Window.Content scrollable={false} style={{ background: COLORS.controlBg }}>
+        <Window.Content
+          scrollable={false}
+          style={{ background: COLORS.controlBg }}
+        >
           <PyxisLogin messages={messages} />
         </Window.Content>
       </Window>
@@ -328,7 +412,9 @@ export const Pyxis = () => {
   }
 
   const [activeTab, setActiveTab] = useLocalState('tab', 'requisition');
-  const [messageModalOpen, setMessageModalOpen] = useState(safe.array(messages).length > 0);
+  const [messageModalOpen, setMessageModalOpen] = useState(
+    safe.array(messages).length > 0,
+  );
 
   useEffect(() => {
     if (logged_in && !selected_category && safe.array(categories).length > 0) {
@@ -349,18 +435,28 @@ export const Pyxis = () => {
 
   return (
     <Window width={1020} height={855} title="Pyxis MedStation" theme="winxp">
-      <Window.Content style={{
-        'background-color': COLORS.controlBg, color: COLORS.black,
-        overflow: 'hidden', height: '100%',
-      }}>
+      <Window.Content
+        style={{
+          'background-color': COLORS.controlBg,
+          color: COLORS.black,
+          overflow: 'hidden',
+          height: '100%',
+        }}
+      >
         <Flex direction="column" height="100%">
           <Flex.Item shrink={0}>
-            <XPWindow title={`Pyxis MedStation - ${user_name} (${user_job})`} icon="laptop-medical">
+            <XPWindow
+              title={`Pyxis MedStation - ${user_name} (${user_job})`}
+              icon="laptop-medical"
+            >
               <Flex align="center" wrap="wrap">
                 <Flex.Item grow={1}>
                   <Flex align="center">
                     {safe.array(available_tabs).map((tab) => (
-                      <Flex.Item key={tab.key} ml={tab.key === 'requisition' ? 0 : 1}>
+                      <Flex.Item
+                        key={tab.key}
+                        ml={tab.key === 'requisition' ? 0 : 1}
+                      >
                         <XPButton
                           icon={ICONS.tabs[tab.key] || 'question'}
                           content={tab.label}
@@ -371,7 +467,14 @@ export const Pyxis = () => {
                     ))}
                     {reminder && (
                       <Flex.Item ml={1}>
-                        <Box opacity={0.8} italic fontSize="11px" color={COLORS.black}>{reminder}</Box>
+                        <Box
+                          opacity={0.8}
+                          italic
+                          fontSize="11px"
+                          color={COLORS.black}
+                        >
+                          {reminder}
+                        </Box>
                       </Flex.Item>
                     )}
                   </Flex>
@@ -387,14 +490,22 @@ export const Pyxis = () => {
                           fontSize="14px"
                           bold
                           textAlign="center"
-                          style={{ border: '1px solid #8b0000', borderRadius: '3px' }}
+                          style={{
+                            border: '1px solid #8b0000',
+                            borderRadius: '3px',
+                          }}
                         >
-                          <Icon name="exclamation-triangle" mr={1} />EMERGENCY MODE
+                          <Icon name="exclamation-triangle" mr={1} />
+                          EMERGENCY MODE
                         </Box>
                       </Flex.Item>
                     )}
                     <Flex.Item>
-                      <XPButton icon="sign-out-alt" content="Logout" onClick={() => act('logout')} />
+                      <XPButton
+                        icon="sign-out-alt"
+                        content="Logout"
+                        onClick={() => act('logout')}
+                      />
                     </Flex.Item>
                   </Flex>
                 </Flex.Item>
@@ -417,18 +528,28 @@ export const Pyxis = () => {
             position="absolute"
             top="50%"
             left="50%"
-            style={{ transform: 'translate(-50%, -50%)', 'z-index': 10, width: '400px' }}
+            style={{
+              transform: 'translate(-50%, -50%)',
+              'z-index': 10,
+              width: '400px',
+            }}
           >
             <XPWindow title="System Messages" icon="comment">
               <Box p={1} color={COLORS.black}>
                 {safe.array(messages).map((msg, i) => (
-                  <Box key={i} mb={1} color={COLORS.black}>{safe.string(msg)}</Box>
+                  <Box key={i} mb={1} color={COLORS.black}>
+                    {safe.string(msg)}
+                  </Box>
                 ))}
                 <Box mt={2} textAlign="right">
-                  <XPButton icon="times" content="Close" onClick={() => {
-                    setMessageModalOpen(false);
-                    act('acknowledge_messages');
-                  }} />
+                  <XPButton
+                    icon="times"
+                    content="Close"
+                    onClick={() => {
+                      setMessageModalOpen(false);
+                      act('acknowledge_messages');
+                    }}
+                  />
                 </Box>
               </Box>
             </XPWindow>
@@ -443,22 +564,34 @@ export const Pyxis = () => {
 const PyxisRequisition = () => {
   const { act, data } = useBackend();
   const {
-    categories = [], selected_category = '', items = [], cart = [],
-    category_access = false, reasons = [], selected_reason = '',
-    notes = '', patient_name = '', category_overrides = {},
-    category_access_override = false, can_override = false,
+    categories = [],
+    selected_category = '',
+    items = [],
+    cart = [],
+    category_access = false,
+    reasons = [],
+    selected_reason = '',
+    notes = '',
+    patient_name = '',
+    category_overrides = {},
+    category_access_override = false,
+    can_override = false,
     dispense_disabled = false,
   } = data;
 
   const [overrideOpen, setOverrideOpen] = useLocalState('override', false);
-  const [overrideData, setOverrideData] = useState({ physician: '', reason: '' });
+  const [overrideData, setOverrideData] = useState({
+    physician: '',
+    reason: '',
+  });
 
   return (
     <Flex direction="column" height="100%">
       <Flex.Item shrink={0}>
         <XPWindow title="Categories" icon="folder">
           <Flex wrap="wrap" justify="flex-start">
-            {safe.array(categories)
+            {safe
+              .array(categories)
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((category) => (
                 <Flex.Item key={category.name} m={0.5}>
@@ -466,7 +599,9 @@ const PyxisRequisition = () => {
                     icon={ICONS.categories[category.name] || 'box'}
                     content={category.name}
                     selected={category.name === selected_category}
-                    onClick={() => act('select_category', { category: category.name })}
+                    onClick={() =>
+                      act('select_category', { category: category.name })
+                    }
                   />
                 </Flex.Item>
               ))}
@@ -480,46 +615,93 @@ const PyxisRequisition = () => {
             <XPWindow title={selected_category || 'None Selected'} icon="pills">
               <ContentBox style={{ height: '450px' }}>
                 {/* Access Notice */}
-                {!(safe.bool(category_access) || safe.bool(category_access_override)) && (
+                {!(
+                  safe.bool(category_access) ||
+                  safe.bool(category_access_override)
+                ) && (
                   <XPNotice icon="lock">
                     <Flex align="center">
-                      <Flex.Item>Access to this category is restricted.</Flex.Item>
+                      <Flex.Item>
+                        Access to this category is restricted.
+                      </Flex.Item>
                       <Flex.Item grow={1} />
                       <Flex.Item>
-                        {safe.bool(can_override) && <XPButton icon="key" content="Override" onClick={() => setOverrideOpen(true)} />}
+                        {safe.bool(can_override) && (
+                          <XPButton
+                            icon="key"
+                            content="Override"
+                            onClick={() => setOverrideOpen(true)}
+                          />
+                        )}
                       </Flex.Item>
                     </Flex>
                   </XPNotice>
                 )}
 
-                {safe.bool(category_access_override) && category_overrides[selected_category] && (
-                  <XPNotice icon="key" mb={1}>
-                    <Box>
-                      Access override active. Authorized by: <b>{safe.string(category_overrides[selected_category].physician)}</b>
-                      <Box color={COLORS.darkGrey} fontSize="11px">Reason: {safe.string(category_overrides[selected_category].reason)}</Box>
-                    </Box>
-                  </XPNotice>
-                )}
+                {safe.bool(category_access_override) &&
+                  category_overrides[selected_category] && (
+                    <XPNotice icon="key" mb={1}>
+                      <Box>
+                        Access override active. Authorized by:{' '}
+                        <b>
+                          {safe.string(
+                            category_overrides[selected_category].physician,
+                          )}
+                        </b>
+                        <Box color={COLORS.darkGrey} fontSize="11px">
+                          Reason:{' '}
+                          {safe.string(
+                            category_overrides[selected_category].reason,
+                          )}
+                        </Box>
+                      </Box>
+                    </XPNotice>
+                  )}
 
                 {/* Items Table */}
                 <Table>
                   <Table.Row header>
-                    <Table.Cell style={{ fontWeight: 'bold', backgroundColor: COLORS.controlBg, padding: '4px 8px' }}>
+                    <Table.Cell
+                      style={{
+                        fontWeight: 'bold',
+                        backgroundColor: COLORS.controlBg,
+                        padding: '4px 8px',
+                      }}
+                    >
                       Item
                     </Table.Cell>
-                    <Table.Cell collapsing style={{ fontWeight: 'bold', backgroundColor: COLORS.controlBg, padding: '4px 8px', textAlign: 'center' }}>
+                    <Table.Cell
+                      collapsing
+                      style={{
+                        fontWeight: 'bold',
+                        backgroundColor: COLORS.controlBg,
+                        padding: '4px 8px',
+                        textAlign: 'center',
+                      }}
+                    >
                       Stock
                     </Table.Cell>
-                    <Table.Cell collapsing style={{ fontWeight: 'bold', backgroundColor: COLORS.controlBg, padding: '4px 8px', textAlign: 'center' }}>
+                    <Table.Cell
+                      collapsing
+                      style={{
+                        fontWeight: 'bold',
+                        backgroundColor: COLORS.controlBg,
+                        padding: '4px 8px',
+                        textAlign: 'center',
+                      }}
+                    >
                       Action
                     </Table.Cell>
                   </Table.Row>
                   {safe.array(items).length === 0 ? (
                     <Table.Row>
-                      <Table.Cell colSpan={3} textAlign="center">No items in this category.</Table.Cell>
+                      <Table.Cell colSpan={3} textAlign="center">
+                        No items in this category.
+                      </Table.Cell>
                     </Table.Row>
                   ) : (
-                    safe.array(items)
+                    safe
+                      .array(items)
                       .sort((a, b) => a.name.localeCompare(b.name))
                       .map((item, i) => (
                         <Table.Row key={i} className="candystripe">
@@ -529,15 +711,29 @@ const PyxisRequisition = () => {
                               <Flex.Item>{item.name}</Flex.Item>
                             </Flex>
                           </Table.Cell>
-                          <Table.Cell collapsing textAlign="center" style={{ verticalAlign: 'middle' }}>
-                            <Box color={getStockColor(item.stock)} fontWeight="bold">{item.stock}</Box>
+                          <Table.Cell
+                            collapsing
+                            textAlign="center"
+                            style={{ verticalAlign: 'middle' }}
+                          >
+                            <Box
+                              color={getStockColor(item.stock)}
+                              fontWeight="bold"
+                            >
+                              {item.stock}
+                            </Box>
                           </Table.Cell>
-                          <Table.Cell collapsing style={{ verticalAlign: 'middle' }}>
+                          <Table.Cell
+                            collapsing
+                            style={{ verticalAlign: 'middle' }}
+                          >
                             <XPButton
                               icon="plus"
                               content="Add"
                               disabled={item.disabled}
-                              onClick={() => act('add_to_cart', { id: item.id || (i + 1) })}
+                              onClick={() =>
+                                act('add_to_cart', { id: item.id || i + 1 })
+                              }
                             />
                           </Table.Cell>
                         </Table.Row>
@@ -561,10 +757,13 @@ const PyxisRequisition = () => {
                       </Table.Row>
                       {safe.array(cart).length === 0 ? (
                         <Table.Row>
-                          <Table.Cell colSpan={3} textAlign="center">Cart is empty</Table.Cell>
+                          <Table.Cell colSpan={3} textAlign="center">
+                            Cart is empty
+                          </Table.Cell>
                         </Table.Row>
                       ) : (
-                        safe.array(cart)
+                        safe
+                          .array(cart)
                           .sort((a, b) => a.name.localeCompare(b.name))
                           .map((item, i) => (
                             <Table.Row key={i} className="candystripe">
@@ -574,9 +773,18 @@ const PyxisRequisition = () => {
                                   <Flex.Item>{item.name}</Flex.Item>
                                 </Flex>
                               </Table.Cell>
-                              <Table.Cell textAlign="center">{item.amount}</Table.Cell>
+                              <Table.Cell textAlign="center">
+                                {item.amount}
+                              </Table.Cell>
                               <Table.Cell>
-                                <XPButton icon="minus" onClick={() => act('remove_from_cart', { id: item.id || (i + 1) })} />
+                                <XPButton
+                                  icon="minus"
+                                  onClick={() =>
+                                    act('remove_from_cart', {
+                                      id: item.id || i + 1,
+                                    })
+                                  }
+                                />
                               </Table.Cell>
                             </Table.Row>
                           ))
@@ -609,7 +817,9 @@ const PyxisRequisition = () => {
                   <XPInput
                     placeholder="Enter patient name"
                     value={patient_name}
-                    onChange={(e, value) => act('set_patient_name', { name: value })}
+                    onChange={(e, value) =>
+                      act('set_patient_name', { name: value })
+                    }
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Notes">
@@ -636,13 +846,18 @@ const PyxisRequisition = () => {
               </Box>
             </Flex.Item>
             <Flex.Item basis="70%" grow={1}>
-              <Box mb={1} fontWeight="bold">Reason:</Box>
-              <ContentBox style={{
-                maxHeight: '100px',
-                backgroundColor: COLORS.medBackground
-              }}>
+              <Box mb={1} fontWeight="bold">
+                Reason:
+              </Box>
+              <ContentBox
+                style={{
+                  maxHeight: '100px',
+                  backgroundColor: COLORS.medBackground,
+                }}
+              >
                 <Flex wrap="wrap" justify="flex-start">
-                  {safe.array(reasons)
+                  {safe
+                    .array(reasons)
                     .sort((a, b) => a.localeCompare(b))
                     .map((reason) => (
                       <Flex.Item key={reason} m={0.5} shrink={0}>
@@ -650,7 +865,11 @@ const PyxisRequisition = () => {
                           content={reason}
                           selected={reason === selected_reason}
                           onClick={() => act('select_reason', { reason })}
-                          style={{ maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis' }}
+                          style={{
+                            maxWidth: '200px',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                          }}
                         />
                       </Flex.Item>
                     ))}
@@ -666,24 +885,34 @@ const PyxisRequisition = () => {
           position="absolute"
           top="50%"
           left="50%"
-          style={{ transform: 'translate(-50%, -50%)', 'z-index': 10, width: '400px' }}
+          style={{
+            transform: 'translate(-50%, -50%)',
+            'z-index': 10,
+            width: '400px',
+          }}
         >
           <XPWindow title="Access Override" icon="shield-alt">
             <Box p={1} color={COLORS.black}>
-              <Box mb={2}>Enter authorizing physician name and reason for access override:</Box>
+              <Box mb={2}>
+                Enter authorizing physician name and reason for access override:
+              </Box>
               <LabeledList>
                 <LabeledList.Item label="Physician">
                   <XPInput
                     placeholder="Authorizing physician"
                     value={overrideData.physician}
-                    onChange={(e, value) => setOverrideData({ ...overrideData, physician: value })}
+                    onChange={(e, value) =>
+                      setOverrideData({ ...overrideData, physician: value })
+                    }
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Reason">
                   <XPInput
                     placeholder="Reason for override"
                     value={overrideData.reason}
-                    onChange={(e, value) => setOverrideData({ ...overrideData, reason: value })}
+                    onChange={(e, value) =>
+                      setOverrideData({ ...overrideData, reason: value })
+                    }
                   />
                 </LabeledList.Item>
                 <LabeledList.Item label="Category">
@@ -691,7 +920,11 @@ const PyxisRequisition = () => {
                 </LabeledList.Item>
               </LabeledList>
               <Box mt={2} textAlign="right">
-                <XPButton icon="times" content="Cancel" onClick={() => setOverrideOpen(false)} />
+                <XPButton
+                  icon="times"
+                  content="Cancel"
+                  onClick={() => setOverrideOpen(false)}
+                />
                 <XPButton
                   icon="check"
                   content="Confirm"
@@ -723,7 +956,7 @@ const formatLogDetails = (details) => {
     const parts = details.split(' - ');
     let formatted = '';
 
-    parts.forEach(part => {
+    parts.forEach((part) => {
       if (part.includes('patient:')) {
         const patient = part.split('patient: ')[1];
         formatted += `Patient: ${patient}\n`;
@@ -758,8 +991,12 @@ const LogEntry = ({ entry, index }) => {
 
   // Extract user name and job from the user field
   const userInfo = safe.string(entry?.user) || 'System';
-  const userName = userInfo.includes('(') ? userInfo.split('(')[0].trim() : userInfo;
-  const userJob = userInfo.includes('(') ? userInfo.split('(')[1].replace(')', '').trim() : '';
+  const userName = userInfo.includes('(')
+    ? userInfo.split('(')[0].trim()
+    : userInfo;
+  const userJob = userInfo.includes('(')
+    ? userInfo.split('(')[1].replace(')', '').trim()
+    : '';
 
   return (
     <Box
@@ -812,10 +1049,26 @@ const LogEntry = ({ entry, index }) => {
               overflow: 'hidden',
             }}
           >
-            <Box style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <Box
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+              }}
+            >
               <Icon name={typeStyle.icon} mr={1} />
-              <Box style={{ wordBreak: 'normal', textAlign: 'center', whiteSpace: 'normal' }}>
-                {(safe.string(entry?.type).toUpperCase() || 'UNKNOWN').replace('_', ' ')}
+              <Box
+                style={{
+                  wordBreak: 'normal',
+                  textAlign: 'center',
+                  whiteSpace: 'normal',
+                }}
+              >
+                {(safe.string(entry?.type).toUpperCase() || 'UNKNOWN').replace(
+                  '_',
+                  ' ',
+                )}
               </Box>
             </Box>
           </Box>
@@ -839,14 +1092,37 @@ const LogEntry = ({ entry, index }) => {
               overflow: 'hidden',
             }}
           >
-            <Box style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <Box
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+              }}
+            >
               <Icon name="user" mr={1} size={0.8} />
-              <Box fontWeight="bold" style={{ wordBreak: 'normal', textAlign: 'center', whiteSpace: 'normal' }}>
+              <Box
+                fontWeight="bold"
+                style={{
+                  wordBreak: 'normal',
+                  textAlign: 'center',
+                  whiteSpace: 'normal',
+                }}
+              >
                 {userName}
               </Box>
             </Box>
             {userJob && (
-              <Box fontSize="9px" color={COLORS.darkGrey} mt={0.5} style={{ wordBreak: 'normal', textAlign: 'center', whiteSpace: 'normal' }}>
+              <Box
+                fontSize="9px"
+                color={COLORS.darkGrey}
+                mt={0.5}
+                style={{
+                  wordBreak: 'normal',
+                  textAlign: 'center',
+                  whiteSpace: 'normal',
+                }}
+              >
                 {userJob}
               </Box>
             )}
@@ -928,15 +1204,18 @@ const PyxisLogs = () => {
   const { logs = {} } = data;
   const allLogs = safe.array(logs.all || []);
 
-    return (
+  return (
     <XPWindow title="System Activity Log" icon="clipboard-list">
       <ContentBox style={{ height: '700px', padding: '4px' }}>
         {allLogs.length === 0 ? (
-          <XPNotice icon="clipboard-list" style={{
-            textAlign: 'center',
-            marginTop: '50px',
-            border: `2px dashed ${COLORS.controlBorder}`,
-          }}>
+          <XPNotice
+            icon="clipboard-list"
+            style={{
+              textAlign: 'center',
+              marginTop: '50px',
+              border: `2px dashed ${COLORS.controlBorder}`,
+            }}
+          >
             <Box fontSize="16px" fontWeight="bold" mb={1}>
               No System Logs Available
             </Box>
@@ -966,15 +1245,17 @@ const PyxisRestock = () => {
       <ContentBox mb={2} p={1}>
         <LabeledList>
           <LabeledList.Item label="Available Funds">
-            <Box inline bold>${stored_money}</Box>
+            <Box inline bold>
+              ${stored_money}
+            </Box>
           </LabeledList.Item>
         </LabeledList>
       </ContentBox>
 
       <XPNotice icon="info-circle" mb={2}>
         The restock system calculates costs based on the base price per unit.
-        Restocking adds up to 5 units per transaction (to a maximum stock level of 15).
-        A 10% bulk discount is applied when restocking 5 or more units.
+        Restocking adds up to 5 units per transaction (to a maximum stock level
+        of 15). A 10% bulk discount is applied when restocking 5 or more units.
       </XPNotice>
 
       <ContentBox style={{ height: '600px' }}>
@@ -988,7 +1269,9 @@ const PyxisRestock = () => {
           </Table.Row>
           {restock_items.length === 0 ? (
             <Table.Row>
-              <Table.Cell colSpan={5} textAlign="center">No items need restocking</Table.Cell>
+              <Table.Cell colSpan={5} textAlign="center">
+                No items need restocking
+              </Table.Cell>
             </Table.Row>
           ) : (
             restock_items
@@ -1002,9 +1285,13 @@ const PyxisRestock = () => {
                     </Flex>
                   </Table.Cell>
                   <Table.Cell textAlign="center">
-                    <Box color={getStockColor(item.stock)} fontWeight="bold">{item.stock}</Box>
+                    <Box color={getStockColor(item.stock)} fontWeight="bold">
+                      {item.stock}
+                    </Box>
                   </Table.Cell>
-                  <Table.Cell textAlign="right">${item.base_cost}/unit</Table.Cell>
+                  <Table.Cell textAlign="right">
+                    ${item.base_cost}/unit
+                  </Table.Cell>
                   <Table.Cell textAlign="right">${item.cost}</Table.Cell>
                   <Table.Cell>
                     <XPButton
@@ -1034,10 +1321,16 @@ const PyxisAdmin = () => {
           <LabeledList.Item label="Emergency Mode">
             <Box>
               <XPButton
-                icon={safe.bool(emergency_mode) ? "lock-open" : "lock"}
-                content={safe.bool(emergency_mode) ? "Deactivate Emergency Mode" : "Activate Emergency Mode"}
+                icon={safe.bool(emergency_mode) ? 'lock-open' : 'lock'}
+                content={
+                  safe.bool(emergency_mode)
+                    ? 'Deactivate Emergency Mode'
+                    : 'Activate Emergency Mode'
+                }
                 style={{
-                  backgroundColor: safe.bool(emergency_mode) ? COLORS.red : COLORS.green,
+                  backgroundColor: safe.bool(emergency_mode)
+                    ? COLORS.red
+                    : COLORS.green,
                   border: `1px solid ${COLORS.controlBorder}`,
                   padding: '6px 12px',
                   fontWeight: 'bold',

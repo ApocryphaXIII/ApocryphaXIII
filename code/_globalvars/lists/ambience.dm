@@ -86,19 +86,11 @@ GLOBAL_LIST_INIT(creepy_ambience,list(
 	'sound/hallucinations/turn_around2.ogg', 'sound/hallucinations/veryfar_noise.ogg',
 	'sound/hallucinations/wail.ogg'))
 
-#define AMBIENCE_CITY "city"
-#define AMBIENCE_BEACH "beach"
-#define AMBIENCE_NATURE "nature"
-#define AMBIENCE_SEWER "sewer"
-#define AMBIENCE_INTERIOR "interior"
-#define AMBIENCE_PRINCE "prince"
-
 GLOBAL_LIST_INIT(city_ambience,list('code/modules/wod13/sounds/street.ogg', 'code/modules/wod13/sounds/street2.ogg'))
 GLOBAL_LIST_INIT(beach_ambience,list('code/modules/wod13/sounds/beach.ogg'))
 GLOBAL_LIST_INIT(nature_ambience,list('code/modules/wod13/sounds/nature.ogg'))
 GLOBAL_LIST_INIT(sewer_ambience,list('code/modules/wod13/sounds/canalization.ogg'))
-GLOBAL_LIST_INIT(interior_ambience,list('code/modules/wod13/sounds/interior.ogg'))
-GLOBAL_LIST_INIT(prince_ambience,list('code/modules/wod13/sounds/prince.ogg'))
+GLOBAL_LIST_INIT(interior_office,list('code/modules/wod13/sounds/interior.ogg'))
 
 GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_GENERIC = GLOB.generic_ambience,
@@ -118,6 +110,16 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_BEACH = GLOB.beach_ambience,
 	AMBIENCE_NATURE = GLOB.nature_ambience,
 	AMBIENCE_SEWER = GLOB.sewer_ambience,
-	AMBIENCE_INTERIOR = GLOB.interior_ambience,
-	AMBIENCE_PRINCE = GLOB.prince_ambience
+	AMBIENCE_OFFICE = GLOB.interior_office
+	))
+
+GLOBAL_LIST_INIT(music_assoc,list(
+	MUSIC_CITY = list('sound/musictracks/downtown.ogg', 'sound/musictracks/downtown_alt.ogg', 'sound/musictracks/what_comes_next.ogg'),
+	MUSIC_FOREST = list('sound/musictracks/night_ambience.ogg', 'sound/musictracks/for_my_clan.ogg'),
+	MUSIC_CHURCH = list('sound/musictracks/hahihaho.ogg'),
+	MUSIC_PRINCE = list('sound/musictracks/prince.ogg'),
+	MUSIC_BAR = list('sound/musictracks/naive.ogg'),
+	MUSIC_HOLLYWOOD = list('sound/musictracks/hollywood.ogg', 'sound/musictracks/open_season.ogg', 'sound/musictracks/is_it_all_worth_it.ogg'),
+	MUSIC_SANTAMONICA = list('sound/musictracks/santamonica.ogg'),
+	MUSIC_SAFE = list('sound/musictracks/volition.ogg', 'sound/musictracks/safe_room.ogg')
 	))

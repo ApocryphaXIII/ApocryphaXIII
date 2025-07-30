@@ -314,17 +314,35 @@
 	icon_state = "paper_shreds"
 
 /obj/effect/decal/cleanable/garbage
-	name = "decomposing garbage"
-	desc = "A split open garbage bag, its stinking content seems to be partially liquified. Yuck!"
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "garbage"
+	name = "trash bag"
+	desc = "Holds garbage inside."
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "garbage1"
 	layer = OBJ_LAYER //To display the decal over wires.
 	beauty = -150
 	clean_type = CLEAN_TYPE_HARD_DECAL
 
 /obj/effect/decal/cleanable/garbage/Initialize()
 	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_SLUDGE, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 15)
+	icon_state = "garbage[rand(1, 6)]"
+
+/obj/structure/trashbag
+	name = "trash bags"
+	desc = "Enough trashbags to block your way."
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "garbage1"
+	layer = OBJ_LAYER //To display the decal over wires.
+	density = TRUE
+	anchored = TRUE
+
+/obj/structure/trashbag/Initialize()
+	. = ..()
+	icon_state = "garbage[rand(7, 9)]"
+
+/obj/structure/trashbag/Destroy()
+	new /obj/effect/spawner/random/trash/garbage(loc)
+	return ..()
+
 
 /obj/effect/decal/cleanable/feet_trail
 	name = "trails"
@@ -379,3 +397,36 @@
 						var/obj/effect/decal/cleanable/car_trail/trail = new(src)
 						trail.dir = Obj.dir
 	*/
+
+/obj/effect/decal/cleanable/trash
+	name = "trash"
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "trash1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/trash/Initialize()
+	. = ..()
+	icon_state = "trash[rand(1, 30)]"
+
+/obj/effect/decal/cleanable/litter
+	name = "litter"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "paper1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/litter/Initialize()
+	. = ..()
+	icon_state = "paper[rand(1, 6)]"
+
+/obj/effect/decal/cleanable/cardboard
+	name = "cardboard"
+	icon = 'code/modules/wod13/tiles.dmi'
+	icon_state = "cardboard1"
+	clean_type = CLEAN_TYPE_HARD_DECAL
+
+/obj/effect/decal/cleanable/cardboard/Initialize()
+	. = ..()
+	icon_state = "cardboard[rand(1, 5)]"
+	var/matrix/M = matrix()
+	M.Turn(rand(0, 360))
+	transform = M

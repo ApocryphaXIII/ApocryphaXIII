@@ -1,9 +1,17 @@
 import { map, sortBy } from 'common/collections';
+import { vecLength, vecSubtract } from 'common/vector';
+import {
+  Box,
+  Button,
+  Icon,
+  LabeledList,
+  Section,
+  Table,
+} from 'tgui-core/components';
 import { flow } from 'tgui-core/fp';
 import { clamp } from 'tgui-core/math';
-import { vecLength, vecSubtract } from 'common/vector';
+
 import { useBackend } from '../backend';
-import { Box, Button, Icon, LabeledList, Section, Table } from 'tgui-core/components';
 import { Window } from '../layouts';
 
 const coordsToVec = (coords) => map(parseFloat)(coords.split(', '));

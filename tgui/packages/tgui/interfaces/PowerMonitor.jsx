@@ -1,7 +1,4 @@
 import { map, sortBy } from 'common/collections';
-import { flow } from 'tgui-core/fp';
-import { toFixed } from 'tgui-core/math';
-import { useBackend, useLocalState } from '../backend';
 import {
   Box,
   Button,
@@ -14,6 +11,10 @@ import {
   Section,
   Table,
 } from 'tgui-core/components';
+import { flow } from 'tgui-core/fp';
+import { toFixed } from 'tgui-core/math';
+
+import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
 
 const PEAK_DRAW = 500000;
@@ -36,10 +37,7 @@ export const PowerMonitor = () => {
 export const PowerMonitorContent = (props) => {
   const { data } = useBackend();
   const { history } = data;
-  const [sortByField, setSortByField] = useLocalState(
-    'sortByField',
-    null,
-  );
+  const [sortByField, setSortByField] = useLocalState('sortByField', null);
   const supply = history.supply[history.supply.length - 1] || 0;
   const demand = history.demand[history.demand.length - 1] || 0;
   const supplyData = history.supply.map((value, i) => [i, value]);

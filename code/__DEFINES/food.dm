@@ -14,6 +14,7 @@
 #define BREAKFAST	(1<<13)
 #define CLOTH 		(1<<14)
 #define GORE 		(1<<15)
+#define SANGUINE		(1<<16)
 
 #define DRINK_NICE	1
 #define DRINK_GOOD	2
@@ -23,6 +24,8 @@
 
 #define FOOD_IN_CONTAINER (1<<0)
 #define FOOD_FINGER_FOOD (1<<1)
+//Food has state to swap to upon first bite
+#define FOOD_BITE_SPRITE (1<<2)
 
 #define STOP_SERVING_BREAKFAST (15 MINUTES)
 

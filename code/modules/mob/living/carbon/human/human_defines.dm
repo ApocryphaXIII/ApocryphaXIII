@@ -52,7 +52,6 @@
 	var/obj/item/clothing/wear_suit = null
 	var/obj/item/clothing/w_uniform = null
 	var/obj/item/belt = null
-	var/obj/item/wear_id = null
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
 	var/obj/item/s_store = null
@@ -70,7 +69,7 @@
 	var/lastpuke = 0
 	var/last_fire_update
 	var/account_id
-	var/bank_id
+	var/bank_pin
 
 	var/hardcore_survival_score = 0
 	/// For agendered spessmen, which body type to use
@@ -86,7 +85,7 @@
 	var/heat_exposure_stacks = 0
 
 	//Shitty VtM vars I'm moving here so they're not strewn around the codebase
-	var/datum/vampireclane/clane
+	var/datum/vampire_clan/clan
 	var/datum/morality/morality_path
 
 	var/last_repainted_mark

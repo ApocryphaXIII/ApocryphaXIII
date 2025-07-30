@@ -1,8 +1,8 @@
-/datum/vampireclane/tzimisce
+/datum/vampire_clan/tzimisce
 	name = CLAN_TZIMISCE
 	desc = "If someone were to call a Tzimisce inhuman and sadistic, the Tzimisce would probably commend them for their perspicacity, and then demonstrate that their mortal definition of sadism was laughably inadequate. The Tzimisce have left the human condition behind gladly, and now focus on transcending the limitations of the vampiric state. At a casual glance or a brief conversation, a Tzimisce appears to be one of the more pleasant vampires. Polite, intelligent, and inquisitive, they seem a stark contrast to the howling Sabbat mobs or even the apparently more humane Brujah or Nosferatu. However, upon closer inspection, it becomes clear that this is merely a mask hiding something alien and monstrous."
 	curse = "Grounded to material domain."
-	clane_disciplines = list(
+	clan_disciplines = list(
 		/datum/discipline/auspex,
 		/datum/discipline/animalism,
 		/datum/discipline/vicissitude
@@ -37,7 +37,7 @@
 	die_with_shapeshifted_form = FALSE
 	shapeshift_type = /mob/living/simple_animal/hostile/bloodcrawler
 
-/datum/vampireclane/tzimisce/post_gain(mob/living/carbon/human/H)
+/datum/vampire_clan/tzimisce/post_gain(mob/living/carbon/human/H)
 	..()
 	var/obj/item/ground_heir/heirloom = new(get_turf(H))
 	var/list/slots = list(
@@ -310,7 +310,7 @@
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	maxbodytemp = 1500
-	faction = list("Tzimisce")
+	faction = list(CLAN_TZIMISCE)
 	bloodquality = BLOOD_QUALITY_LOW
 	bloodpool = 2
 	maxbloodpool = 2
@@ -337,7 +337,7 @@
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	status_flags = CANPUSH
-	faction = list("Tzimisce")
+	faction = list(CLAN_TZIMISCE)
 	bloodquality = BLOOD_QUALITY_LOW
 	bloodpool = 5
 	maxbloodpool = 5
@@ -363,13 +363,13 @@
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
-	faction = list("Tzimisce")
+	faction = list(CLAN_TZIMISCE)
 	bloodquality = BLOOD_QUALITY_LOW
 	bloodpool = 7
 	maxbloodpool = 7
 
 /mob/living/simple_animal/hostile/gargoyle
-	name = "Gargoyle"
+	name = CLAN_GARGOYLE
 	desc = "Stone-skinned..."
 	icon = 'code/modules/wod13/32x48.dmi'
 	icon_state = "gargoyle_m"
@@ -395,7 +395,7 @@
 	dextrous = TRUE
 	held_items = list(null, null)
 	possible_a_intents = list(INTENT_HELP, INTENT_GRAB, INTENT_DISARM, INTENT_HARM)
-	faction = list("Tremere")
+	faction = list(CLAN_TREMERE)
 
 /mob/living/simple_animal/hostile/gargoyle/proc/gain_sentience()
 	set waitfor = FALSE

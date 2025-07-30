@@ -16,7 +16,7 @@
 /obj/clinic_machine
 	name = "clinic machine"
 	desc = "A medical facility machine."
-	icon = 'code/modules/wod13/props.dmi'
+	icon = 'modular_tfn/icons/vendors_shops.dmi'
 	density = TRUE
 	anchored = TRUE
 
@@ -205,11 +205,11 @@
 
 // Handles money deposits
 /obj/clinic_machine/pyxis/proc/handle_money_deposit(obj/item/stack/dollar/dollars, mob/user)
-	stored_money += dollars.amount
-	add_message("[dollars.amount] dollars added to MedStation account. Current balance: [stored_money] dollars.")
+	stored_money += dollars.get_item_credit_value()
+	add_message("[dollars.get_item_credit_value()] dollars added to MedStation account. Current balance: [stored_money] dollars.")
 	playsound(src, PYXIS_SOUND_MONEY, 30, TRUE)
 
-	log_transaction("deposit", list("amount" = dollars.amount, "balance" = stored_money))
+	log_transaction("deposit", list("amount" = dollars.get_item_credit_value(), "balance" = stored_money))
 	qdel(dollars)
 	ui_interact(user)
 

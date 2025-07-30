@@ -3,6 +3,7 @@
 	id = "ghoul"
 	default_color = "FFFFFF"
 	toxic_food = RAW
+	liked_food = SANGUINE
 	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, HAS_FLESH, HAS_BONE)
 	inherent_traits = list(TRAIT_ADVANCEDTOOLUSER, TRAIT_VIRUSIMMUNE, TRAIT_NOCRITDAMAGE)
 	use_skintones = TRUE
@@ -58,9 +59,9 @@
 		dat += "<BR>"
 		if(G.master)
 			dat += "My Regnant is [G.master.real_name], I should obey their wants.<BR>"
-			if(G.master.clane)
-				if(G.master.clane.name != "Caitiff")
-					dat += "Regnant's clan is [G.master.clane], maybe I can try some of it's disciplines..."
+			if(G.master.clan)
+				if(G.master.clan.name != CLAN_NONE)
+					dat += "Regnant's clan is [G.master.clan], maybe I can try some of it's disciplines..."
 		if(host.mind.special_role)
 			for(var/datum/antagonist/A in host.mind.antag_datums)
 				if(A.objectives)
@@ -109,9 +110,9 @@
 			dat += "<b>I know some other of my kind in this city. Need to check my phone, there definetely should be:</b><BR>"
 			for(var/i in host.knowscontacts)
 				dat += "-[i] contact<BR>"
-		for(var/datum/vtm_bank_account/account in GLOB.bank_account_list)
-			if(host.bank_id == account.bank_id)
-				dat += "<b>My bank account code is: [account.code]</b><BR>"
+		var/datum/bank_account/account = host.account_id ? SSeconomy.bank_accounts_by_id["[host.account_id]"] : null
+		if(account)
+			dat += "<b>My bank pin is: [account.bank_pin]</b><BR>"
 		host << browse(HTML_SKELETON(dat), "window=vampire;size=400x450;border=1;can_resize=1;can_minimize=0")
 		onclose(host, "ghoul", src)
 

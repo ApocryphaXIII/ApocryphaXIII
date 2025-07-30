@@ -41,6 +41,27 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	/// The category the product was in, if any.
 	/// Sourced directly from product_categories.
 	var/category
+	var/icon_dimension
+
+/datum/data/vending_product/New(name = "product", path, price, amount = -1)
+	src.name = name
+	src.product_path = path
+	src.custom_price = price
+	src.amount = amount
+
+	var/atom/item = product_path
+	if(!item)
+		CRASH("Retail product equipment path of [product_path] is not a valid path!")
+
+	if(!price)
+		src.custom_price = item.custom_price
+
+	var/icon_file = initial(item.icon)
+	var/icon_state = initial(item.icon_state)
+	var/icon/temp_icon = icon(icon_file, icon_state, SOUTH)
+	icon_dimension = "[temp_icon.Width()]x[temp_icon.Height()]"
+	qdel(temp_icon)
+
 
 /**
  * # vending machines
@@ -113,17 +134,18 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	  */
 	var/list/premium 	= list()
 
-	///String of slogans separated by semicolons, optional
-	var/product_slogans = ""
-	///String of small ad messages in the vending screen - random chance
-	var/product_ads = ""
-
 	var/list/product_records = list()
 	var/list/hidden_records = list()
 	var/list/coin_records = list()
-	var/list/slogan_list = list()
+
+	///String of slogans separated by semicolons, optional
+	var/product_slogans = ""
 	///Small ad messages in the vending screen - random chance of popping up whenever you open it
 	var/list/small_ads = list()
+	///String of small ad messages in the vending screen - random chance
+	var/product_ads = ""
+	var/list/slogan_list = list()
+
 	///Message sent post vend (Thank you for shopping!)
 	var/vend_reply
 	///Last world tick we sent a vent reply
@@ -132,6 +154,9 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/last_slogan = 0
 	///How many ticks until we can send another
 	var/slogan_delay = 6000
+	//Stop spouting those godawful pitches!
+	var/shut_up = 0
+
 	///Icon when vending an item to the user
 	var/icon_vend
 	///Icon to flash when user is denied a vend
@@ -142,22 +167,18 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/shoot_inventory = 0
 	///How likely this is to happen (prob 100) per second
 	var/shoot_inventory_chance = 1
-	//Stop spouting those godawful pitches!
-	var/shut_up = 0
 	///can we access the hidden inventory?
 	var/extended_inventory = 0
 	///Are we checking the users ID
 	var/scan_id = 1
-	///Coins that we accept?
-	var/obj/item/coin/coin
-	///Bills we accept?
-	var/obj/item/stack/spacecash/bill
 	///Default price of items if not overridden
 	var/default_price = 25
 	///Default price of premium items if not overridden
 	var/extra_price = 50
 	///Whether our age check is currently functional
 	var/age_restrictions = TRUE
+	/// How much physical cash does this vending machine have?
+	var/cash_contained = 0
 	/**
 	  * Is this item on station or not
 	  *
@@ -166,6 +187,12 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/onstation = TRUE //if it doesn't originate from off-station during mapload, everything is free
 	///A variable to change on a per instance basis on the map that allows the instance to force cost and ID requirements
 	var/onstation_override = FALSE //change this on the object on the map to override the onstation check. DO NOT APPLY THIS GLOBALLY.
+	/**
+	 * If this is set to TRUE, all products sold by the vending machine are free (cost nothing).
+	 * If unset, this will get automatically set to TRUE during init if the machine originates from off-station during mapload.
+	 * Defaults to null, set it to TRUE or FALSE explicitly on a per-machine basis if you want to force it to be a certain value.
+	 */
+	var/all_products_free
 
 	///ID's that can load this vending machine wtih refills
 	var/list/canload_access_list
@@ -230,8 +257,6 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 
 /obj/machinery/vending/Destroy()
 	QDEL_NULL(wires)
-	QDEL_NULL(coin)
-	QDEL_NULL(bill)
 	QDEL_NULL(Radio)
 	return ..()
 
@@ -338,16 +363,14 @@ GLOBAL_LIST_EMPTY(vending_products)
 			amount = 0
 
 		var/atom/temp = typepath
-		var/datum/data/vending_product/R = new /datum/data/vending_product()
+		var/datum/data/vending_product/R = new /datum/data/vending_product(initial(temp.name), typepath)
 		GLOB.vending_products[typepath] = 1
-		R.name = initial(temp.name)
-		R.product_path = typepath
 		if(!start_empty)
 			R.amount = amount
 		R.max_amount = amount
 		///Prices of vending machines are all increased uniformly.
 		R.custom_price = round(initial(temp.custom_price) * SSeconomy.inflation_value())
-		R.custom_premium_price = round(initial(temp.custom_premium_price) * SSeconomy.inflation_value())
+		R.custom_premium_price = round(initial(temp.custom_premium_price))
 		R.age_restricted = initial(temp.age_restricted)
 		R.colorable = !!(initial(temp.greyscale_config) && initial(temp.greyscale_colors) && (initial(temp.flags_1) & IS_PLAYER_COLORABLE_1))
 		R.category = product_to_category[typepath]
@@ -853,9 +876,10 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/ui_static_data(mob/user)
 	var/list/data = list()
 	data["onstation"] = onstation
+	data["all_products_free"] = all_products_free
 	data["department"] = payment_department
-	data["jobDiscount"] = 0.2
 	data["product_records"] = list()
+	data["displayed_currency_name"] = "$"
 
 	var/list/categories = list()
 
@@ -918,20 +942,27 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/ui_data(mob/user)
 	. = list()
-	var/obj/item/card/id/C
-	if(isliving(user))
-		var/mob/living/L = user
-		C = L.get_idcard(TRUE)
-	if(C?.registered_account)
-		.["user"] = list()
-		.["user"]["name"] = C.registered_account.account_holder
-		.["user"]["cash"] = C.registered_account.account_balance
-		if(C.registered_account.account_job)
-			.["user"]["job"] = C.registered_account.account_job.title
-			.["user"]["department"] = C.registered_account.account_job.paycheck_department
-		else
-			.["user"]["job"] = "No Job"
-			.["user"]["department"] = "No Department"
+	.["user"] = list()
+	.["user"]["money"] = 0
+	.["user"]["is_card"] = 0
+
+	var/list/held_items = list()
+	if(user.get_active_held_item())
+		held_items += user.get_active_held_item()
+	if(user.get_inactive_held_item())
+		held_items += user.get_inactive_held_item()
+
+	for(var/obj/item/held_item in held_items)
+		if(is_creditcard(held_item))
+			.["user"]["is_card"] = 1
+			.["user"]["payment_item"] = REF(held_item)
+			break
+		if(iscash(held_item))
+			var/obj/item/money = held_item
+			.["user"]["money"] = money.get_item_credit_value()
+			.["user"]["payment_item"] = REF(held_item)
+			break
+
 	.["stock"] = list()
 	for (var/datum/data/vending_product/product_record in product_records + coin_records + hidden_records)
 		var/list/product_data = list(
@@ -984,7 +1015,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			allowed_configs += "[initial(item.greyscale_config_inhand_right)]"
 
 	var/datum/greyscale_modify_menu/menu = new(
-		src, usr, allowed_configs, CALLBACK(src, .proc/vend_greyscale, params),
+		src, usr, allowed_configs, CALLBACK(src, PROC_REF(vend_greyscale), params),
 		starting_icon_state=initial(fake_atom.icon_state),
 		starting_config=initial(fake_atom.greyscale_config),
 		starting_colors=initial(fake_atom.greyscale_colors)
@@ -1000,6 +1031,9 @@ GLOBAL_LIST_EMPTY(vending_products)
 	. = TRUE
 	if(!can_vend(usr))
 		return
+	if(!isliving(usr))
+		return
+	var/mob/living/user = usr
 	vend_ready = FALSE //One thing at a time!!
 	var/datum/data/vending_product/R = locate(params["ref"])
 	var/list/record_to_check = product_records + coin_records
@@ -1024,50 +1058,44 @@ GLOBAL_LIST_EMPTY(vending_products)
 		flick(icon_deny,src)
 		vend_ready = TRUE
 		return
-	if(onstation)
-		var/obj/item/card/id/C
-		if(isliving(usr))
-			var/mob/living/L = usr
-			C = L.get_idcard(TRUE)
-		if(!C)
-			say("No card found.")
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
-		else if (!C.registered_account)
-			say("No account found.")
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
-		else if(!C.registered_account.account_job)
-			say("Departmental accounts have been blacklisted from personal expenses due to embezzlement.")
-			flick(icon_deny, src)
-			vend_ready = TRUE
-			return
-		else if(age_restrictions && R.age_restricted && (!C.registered_age || C.registered_age < AGE_MINOR))
-			say("You are not of legal age to purchase [R.name].")
-			if(!(usr in GLOB.narcd_underages))
-				Radio.set_frequency(FREQ_SECURITY)
-				Radio.talk_into(src, "SECURITY ALERT: Underaged crewmember [usr] recorded attempting to purchase [R.name] in [get_area(src)]. Please watch for substance abuse.", FREQ_SECURITY)
-				GLOB.narcd_underages += usr
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
-		var/datum/bank_account/account = C.registered_account
-		if(account.account_job && account.account_job.paycheck_department == payment_department)
-			price_to_use = max(round(price_to_use * VENDING_DISCOUNT), 1) //No longer free, but signifigantly cheaper.
+
+	var/obj/item/held_item = locate(params["payment_item"]) in user
+	if(!held_item)
+		to_chat(usr, span_alert("Error: Payment method not found!"))
+		return
+
+	if(!all_products_free)
 		if(coin_records.Find(R) || hidden_records.Find(R))
 			price_to_use = R.custom_premium_price ? R.custom_premium_price : extra_price
-		if(price_to_use && !account.adjust_money(-price_to_use))
-			say("You do not possess the funds to purchase [R.name].")
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
-		var/datum/bank_account/D = SSeconomy.get_dep_account(payment_department)
-		if(D)
-			D.adjust_money(price_to_use)
-			SSblackbox.record_feedback("amount", "vending_spent", price_to_use)
-			log_econ("[price_to_use] credits were inserted into [src] by [D.account_holder] to buy [R].")
+
+		if(is_creditcard(held_item))
+			var/obj/item/card/credit/creditcard = held_item
+			var/datum/bank_account/used_account = creditcard.registered_account
+			if(!used_account)
+				to_chat(user, span_alert("The [creditcard] has no linked account."))
+				flick(icon_deny,src)
+				return
+			if(!used_account.check_pin(user, price_to_use, creditcard))
+				flick(icon_deny,src)
+				return
+			if(!used_account.adjust_money(price_to_use))
+				to_chat(user, span_alert("The transaction is declined - Insufficient funds."))
+				flick(icon_deny,src)
+				return
+			//used_account.process_credit_fraud(user, product.price)
+			var/datum/bank_account/D = SSeconomy.get_dep_account(payment_department)
+			if(D)
+				D.adjust_money(price_to_use)
+
+		if(iscash(held_item))
+			if(!held_item.use(price_to_use))
+				to_chat(user, span_alert("You don't have enough money in your hand."))
+				flick(icon_deny,src)
+				return
+			cash_contained += price_to_use
+
+		SSblackbox.record_feedback("amount", "vending_spent", price_to_use)
+
 	if(last_shopper != usr || purchase_message_cooldown < world.time)
 		say("Thank you for shopping with [src]!")
 		purchase_message_cooldown = world.time + 5 SECONDS
@@ -1230,12 +1258,13 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/custom/compartmentLoadAccessCheck(mob/user)
 	. = FALSE
-	if(!isliving(user))
-		return FALSE
-	var/mob/living/L = user
-	var/obj/item/card/id/C = L.get_idcard(FALSE)
-	if(C?.registered_account && C.registered_account == private_a)
-		return TRUE
+	var/mob/living/carbon/human/H
+	var/obj/item/card/credit/C
+	if(ishuman(user))
+		H = user
+		C = H.get_creditcard(FALSE)
+		if(C?.registered_account && C.registered_account == private_a)
+			return TRUE
 
 /obj/machinery/vending/custom/canLoadItem(obj/item/I, mob/user)
 	. = FALSE
@@ -1285,10 +1314,10 @@ GLOBAL_LIST_EMPTY(vending_products)
 			var/N = params["item"]
 			var/obj/S
 			vend_ready = FALSE
-			var/obj/item/card/id/C
+			var/obj/item/card/credit/C
 			if(isliving(usr))
 				var/mob/living/L = usr
-				C = L.get_idcard(TRUE)
+				C = L.get_creditcard()
 			if(!C)
 				say("No card found.")
 				flick(icon_deny,src)
@@ -1338,7 +1367,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/custom/attackby(obj/item/I, mob/user, params)
 	if(!private_a && isliving(user))
 		var/mob/living/L = user
-		var/obj/item/card/id/C = L.get_idcard(TRUE)
+		var/obj/item/card/credit/C = L.get_creditcard(TRUE)
 		if(C?.registered_account)
 			private_a = C.registered_account
 			say("\The [src] has been linked to [C].")

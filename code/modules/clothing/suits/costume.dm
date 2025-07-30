@@ -77,7 +77,7 @@
 	icon_state = "judge"
 	inhand_icon_state = "judge"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	allowed = list(/obj/item/storage/fancy/cigarettes, /obj/item/stack/spacecash)
+	allowed = list(/obj/item/storage/fancy/cigarettes, /obj/item/stack/dollar)
 
 /obj/item/clothing/suit/syndicatefake
 	name = "black and red space suit replica"

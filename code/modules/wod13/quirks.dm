@@ -65,7 +65,7 @@ Dancer
 	gain_text = "<span class='notice'>You feel more experienced in love.</span>"
 	lose_text = "<span class='warning'>You feel more clueless in love.</span>"
 	allowed_species = list("Vampire", "Kuei-Jin")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/quirk/tough_flesh
 	name = "Tough Flesh"
@@ -97,7 +97,7 @@ Dancer
 	gain_text = "<span class='warning'>You feel anxious about the way you feed.</span>"
 	lose_text = "<span class='warning'>You can feed normal again.</span>"
 	allowed_species = list("Vampire", "Kuei-Jin")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/quirk/lazy
 	name = "Lazy"
@@ -173,7 +173,7 @@ Dancer
 
 /datum/quirk/frenetic_aura/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
-	H.clane.frenzymod += 1
+	H.clan.frenzymod += 1
 
 /datum/quirk/blush_of_health
 	name = "Blush of Health"
@@ -232,13 +232,13 @@ Dancer
 	if(!ishuman(quirk_holder))
 		return
 	var/mob/living/carbon/human/debtor = quirk_holder
-	for(var/datum/vtm_bank_account/account as anything in GLOB.bank_account_list)
-		if(debtor.bank_id != account.bank_id)
+	for(var/datum/bank_account/account as anything in GLOB.bank_account_list)
+		if(debtor.account_id != account.account_id)
 			continue
-		if(debtor.clane?.name == CLAN_VENTRUE)
-			account.balance = 5 // Extra loss of dignitas.
+		if(debtor.clan?.name == CLAN_VENTRUE)
+			account.account_balance = 5 // Extra loss of dignitas.
 		else
-			account.balance = floor(account.balance * 0.5)
+			account.account_balance = floor(account.account_balance * 0.5)
 		break
 
 /datum/quirk/messy_eater
@@ -249,7 +249,7 @@ Dancer
 	gain_text = "<span class='warning'>Your fangs feel awkward in your mouth.</span>"
 	lose_text = "<span class='notice'>You fangs feel comfortable in your mouth.</span>"
 	allowed_species = list("Vampire","Kuei-Jin")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/quirk/animal_repulsion
 	name = "Animal Repulsion"
@@ -314,7 +314,7 @@ Dancer
 	gain_text = "<span class='warning'>You have a craving for liver.</span>"
 	lose_text = "<span class='notice'>Your craving subsides...</span>"
 	allowed_species = list("Vampire")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/action/fly_upper
 	name = "Fly Up"
@@ -542,7 +542,7 @@ Dancer
 
 /datum/quirk/german
 	name = "German"
-	desc = "You know the German language, FUR DAR FATERLAND!"
+	desc = "You know the German language."
 	value = 1
 
 /datum/quirk/german/add()
@@ -551,7 +551,7 @@ Dancer
 
 /datum/quirk/latin
 	name = "Latin"
-	desc = "You know the ancient holy language OF THE ROMANS AND THE CLERGY!!"
+	desc = "You know the ancient Latin language."
 	value = 1
 
 /datum/quirk/latin/add()
@@ -560,7 +560,7 @@ Dancer
 
 /datum/quirk/hebrew
 	name = "Hebrew"
-	desc = "You know the language of the ancient Hebrews!"
+	desc = "You know the ancient Hebrew language."
 	value = 1
 
 /datum/quirk/hebrew/add()
@@ -642,7 +642,7 @@ Dancer
 	gain_text = "<span class='notice'>You feel necroresistant.</span>"
 	lose_text = "<span class='notice'>You don't want necrophilia anymore.</span>"
 	allowed_species = list("Vampire")
-	excluded_clans = list("Nagaraja")
+	excluded_clans = list(CLAN_NAGARAJA)
 
 /datum/quirk/charmer
 	name = "Abnormal Charmer"
@@ -652,6 +652,24 @@ Dancer
 	gain_text = "<span class='notice'>You feel charismatic.</span>"
 	lose_text = "<span class='notice'>You don't feel charismatic anymore.</span>"
 	allowed_species = list("Vampire", "Kuei-Jin")
+
+/datum/quirk/unbonding
+	name = "Unbonding"
+	desc = "Your vitae, for one reason or another, doesn't produce blood bonds with anybody."
+	value = -1
+	mob_trait = TRAIT_UNBONDING
+	gain_text = "<span class='notice'>Your blood feels vacant.</span>"
+	lose_text = "<span class='notice'>You feel like something that was missing just came back to you.</span>"
+	allowed_species = list("Vampire")
+
+/datum/quirk/permafangs
+	name = "Permanent Fangs"
+	desc = "Your fangs do not retract, making it impossible for you to hide your true nature. While some mortals may think you’ve had your teeth filed or are wearing prosthetics, sooner or later you’re going to run into someone who knows what you truly are."
+	value = 0
+	mob_trait = TRAIT_PERMAFANGS
+	gain_text = "<span class='notice'>Your fangs become stuck.</span>"
+	lose_text = "<span class='notice'>You feel your fangs retract again.</span>"
+	allowed_species = list("Vampire")
 
 /datum/quirk/diablerist
 	name = "Diablerist"

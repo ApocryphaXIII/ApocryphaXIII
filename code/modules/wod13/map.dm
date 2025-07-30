@@ -1,60 +1,7 @@
+//Pretty sure this does not need to exist
 /obj/damap
 	icon = 'code/modules/wod13/map.dmi'
 	icon_state = "map"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/supply
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "supply"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/church
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "church"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/graveyard
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "graveyard"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/hotel
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "hotel"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/tower
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "tower"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/clean
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "clean"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/theatre
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "theatre"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/bar
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "bar"
-	plane = GAME_PLANE
-	layer = ABOVE_NORMAL_TURF_LAYER
-
-/obj/damap/hospital
-	icon = 'code/modules/wod13/disciplines.dmi'
-	icon_state = "hospital"
 	plane = GAME_PLANE
 	layer = ABOVE_NORMAL_TURF_LAYER
 
@@ -70,6 +17,17 @@
 
 /obj/structure/vampmap/attack_hand(mob/user)
 	. = ..()
+	var/static/list/map_icons = list(
+		"supply" = "Railway Station",
+		"church" = "Church",
+		"graveyard" = "City Graveyard",
+		"hotel" = "Hotel",
+		"tower" = "Millenium Tower",
+		"clean" = "Cleaning Services",
+		"theatre" = "National Theatre",
+		"bar" = "Bar",
+		"hospital" = "City Hospital"
+	)
 	var/dat = {"
 			<style type="text/css">
 
@@ -80,15 +38,6 @@
 			</style>
 			"}
 	var/obj/damap/DAMAP = new(user)
-	var/obj/damap/supply/SU = new(user)
-	var/obj/damap/church/CH = new(user)
-	var/obj/damap/graveyard/GR = new(user)
-	var/obj/damap/hotel/HO = new(user)
-	var/obj/damap/tower/TO = new(user)
-	var/obj/damap/clean/CL = new(user)
-	var/obj/damap/theatre/TH = new(user)
-	var/obj/damap/bar/BA = new(user)
-	var/obj/damap/hospital/HS = new(user)
 	var/obj/effect/overlay/AM = new(DAMAP)
 	AM.icon = 'code/modules/wod13/disciplines.dmi'
 	AM.icon_state = "target"
@@ -97,29 +46,13 @@
 	AM.pixel_y = y-4
 	DAMAP.overlays |= AM
 	dat += "<center>[icon2html(getFlatIcon(DAMAP), user)]</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(SU), user)] - Railway Station;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(CH), user)] - Church;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(GR), user)] - City Graveyard;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(HO), user)] - Hotel;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(TO), user)] - Millenium Tower;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(CL), user)] - Cleaning Services;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(TH), user)] - National Theatre;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(BA), user)] - Bar;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(HS), user)] - City Hospital.</center>"
+	for(var/building_iconstate as anything in map_icons)
+		var/icon/building_icon = new('code/modules/wod13/disciplines.dmi', building_iconstate)
+		dat += "<center>[icon2html(building_icon, user)] - [map_icons[building_iconstate]];</center><BR>"
+		qdel(building_icon)
 	user << browse(dat, "window=map;size=400x600;border=1;can_resize=0;can_minimize=0")
 	onclose(user, "map", src)
 	qdel(DAMAP)
-	qdel(AM)
-	qdel(SU)
-	qdel(CH)
-	qdel(GR)
-	qdel(HO)
-	qdel(TO)
-	qdel(CL)
-	qdel(TH)
-	qdel(BA)
-	qdel(HS)
-
 
 /obj/effect/mob_spawn/human/citizen
 	name = "just a civilian"
@@ -361,7 +294,7 @@
 	l_pocket = /obj/item/vamp/phone
 	r_pocket = /obj/item/vamp/keys/camarilla
 	back = /obj/item/storage/backpack/satchel
-	backpack_contents = list(/obj/item/flashlight=1, /obj/item/vamp/creditcard=1,/obj/item/food/vampire/donut=5,/obj/item/card/id/chunk=1)
+	backpack_contents = list(/obj/item/flashlight=1, /obj/item/card/credit=1,/obj/item/food/vampire/donut=5,/obj/item/card/id/chunk=1)
 
 /obj/item/card/id/chunk
 	name = "Millenium Tower Security ID"

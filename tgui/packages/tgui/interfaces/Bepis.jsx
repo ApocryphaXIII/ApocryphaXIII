@@ -1,12 +1,13 @@
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
-  Stack,
   LabeledList,
   NumberInput,
   Section,
+  Stack,
 } from 'tgui-core/components';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const Bepis = (props) => {
@@ -44,7 +45,7 @@ export const Bepis = (props) => {
             }
           >
             Console is currently being operated by{' '}
-            {data.account_owner ? data.account_owner : 'no one'}.
+            {data.account_holder ? data.account_holder : 'no one'}.
           </Section>
           <Stack>
             <Stack.Item basis="60%">

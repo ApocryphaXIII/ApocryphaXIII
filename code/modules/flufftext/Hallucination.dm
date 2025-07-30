@@ -65,7 +65,7 @@ GLOBAL_LIST_INIT(malk_hallucinations, list(
 
 	if(has_quirk(/datum/quirk/derangement))
 		var/mob/living/carbon/human/H = src
-		var/datum/vampireclane/malkavian/malk = H.clane
+		var/datum/vampire_clan/malkavian/malk = H.clan
 
 		if(!malk)
 			halpick = pickweight(GLOB.malk_hallucinations)
@@ -1593,7 +1593,7 @@ GLOBAL_LIST_INIT(malk_hallucinations, list(
 	. = ..()
 	to_chat(target, span_notice("gangstalker"))
 	var/obj/gangstalker_source_obj
-	for(var/obj/manholedown/manhawl in orange(8, target))
+	for(var/obj/structure/ladder/manhole/down/manhawl in orange(8, target))
 		gangstalker_source_obj = manhawl
 		break
 	gangstalker_source = get_turf(gangstalker_source_obj)

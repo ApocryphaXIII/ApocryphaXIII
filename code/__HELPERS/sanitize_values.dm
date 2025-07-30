@@ -65,7 +65,7 @@
 				return default
 	return default
 
-/proc/sanitize_hexcolor(color, desired_format = 6, include_crunch = TRUE, default)
+/proc/sanitize_hexcolor(color, desired_format = DEFAULT_HEX_COLOR_LEN, include_crunch = TRUE, default)
 	var/crunch = include_crunch ? "#" : ""
 	if(!istext(color))
 		color = ""
@@ -87,7 +87,7 @@
 			if(97 to 102)		//letters a to f
 				. += char
 			if(65 to 70)		//letters A to F
-				char = lowertext(char)
+				char = LOWER_TEXT(char)
 				. += char
 			else
 				break

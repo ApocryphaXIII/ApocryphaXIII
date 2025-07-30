@@ -1,8 +1,8 @@
-/datum/vampireclane/lasombra
+/datum/vampire_clan/lasombra
 	name = CLAN_LASOMBRA
 	desc = "The Lasombra exist for their own success, fighting for personal victories rather than solely for a crown to wear or a throne to sit upon. They believe that might makes right, and are willing to sacrifice anything to achieve their goals. A clan that uses spirituality as a tool rather than seeking honest enlightenment, their fickle loyalties are currently highlighted by half their clan's defection from the Sabbat."
 	curse = "Technology refuse."
-	clane_disciplines = list(
+	clan_disciplines = list(
 		/datum/discipline/potence,
 		/datum/discipline/dominate,
 		/datum/discipline/obtenebration
@@ -13,12 +13,12 @@
 	whitelisted = FALSE
 	clan_keys = /obj/item/vamp/keys/lasombra
 
-/datum/vampireclane/lasombra/post_gain(mob/living/carbon/human/H)
+/datum/vampire_clan/lasombra/post_gain(mob/living/carbon/human/H)
 	..()
 	var/obj/item/organ/eyes/night_vision/NV = new()
 	NV.Insert(H, TRUE, FALSE)
 	H.vis_flags |= VIS_HIDE
-	H.faction |= "Lasombra"
+	H.faction |= CLAN_LASOMBRA
 
 /mob/living/simple_animal/hostile/biter/lasombra /// moved here from tzimisce.dm, as per request. not used anywhere.
 	name = "shadow abomination"
@@ -31,7 +31,7 @@
 	health = 100
 	bloodpool = 0
 	maxbloodpool = 0
-	faction = list("Lasombra")
+	faction = list(CLAN_LASOMBRA)
 
 /mob/living/simple_animal/hostile/biter/lasombra/better
 	icon_state = "shadow2"

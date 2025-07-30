@@ -240,7 +240,14 @@
 							"Clan Tzimisce" = GLOB.tzimisce_positions,
 							"Law Enforcement" = GLOB.police_positions + GLOB.national_security_positions,
 							"Warehouse" = GLOB.warehouse_positions,
-							"Triad" = GLOB.gang_positions)
+							"Triad" = GLOB.gang_positions,
+							"Unaligned" = GLOB.citizen_positions,
+							"City Services" = GLOB.services_positions,
+							"St Johns" = GLOB.clinic_positions,
+							"Church" = GLOB.church_positions,
+							"Painted City" = GLOB.painted_positions,
+							"Amberglade" = GLOB.amberglade_positions,
+							"Endron" = GLOB.spiral_positions)
 		for(var/department in job_lists)
 			output += "<div class='column'><label class='rolegroup [ckey(department)]'><input type='checkbox' name='[department]' class='hidden' [usr.client.prefs.tgui_fancy ? " onClick='toggle_checkboxes(this, \"_com\")'" : ""]>[department]</label><div class='content'>"
 			break_counter = 0
@@ -435,7 +442,7 @@
 	duration = text2num(duration)
 	if (!(interval in list("SECOND", "MINUTE", "HOUR", "DAY", "WEEK", "MONTH", "YEAR")))
 		interval = "MINUTE"
-	var/time_message = "[duration] [lowertext(interval)]" //no DisplayTimeText because our duration is of variable interval type
+	var/time_message = "[duration] [LOWER_TEXT(interval)]" //no DisplayTimeText because our duration is of variable interval type
 	if(duration > 1) //pluralize the interval if necessary
 		time_message += "s"
 	var/note_reason = "Banned from [roles_to_ban[1] == "Server" ? "the server" : " Roles: [roles_to_ban.Join(", ")]"] [isnull(duration) ? "permanently" : "for [time_message]"] - [reason]"

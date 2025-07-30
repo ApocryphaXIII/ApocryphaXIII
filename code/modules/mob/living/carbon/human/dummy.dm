@@ -59,3 +59,16 @@ GLOBAL_LIST_EMPTY(dummy_mob_list)
 	if(istype(D))
 		D.wipe_state()
 		D.in_use = FALSE
+
+/// Provides a dummy for unit_tests that functions like a normal human, but with a standardized appearance
+/// Copies the stock dna setup from the dummy/consistent type
+/mob/living/carbon/human/consistent
+
+/*
+/mob/living/carbon/human/consistent/setup_human_dna()
+	//create_consistent_human_dna(src)
+	//fully_replace_character_name(real_name, "John Doe")
+
+/mob/living/carbon/human/consistent/domutcheck()
+	return // We skipped adding any mutations so this runtimes
+*/

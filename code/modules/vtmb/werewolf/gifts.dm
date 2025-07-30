@@ -238,11 +238,11 @@
 	. = ..()
 	if(allowed_to_proceed)
 		if(HAS_TRAIT(owner, TRAIT_SCENTTRUEFORM))
-			REMOVE_TRAIT(owner, TRAIT_SCENTTRUEFORM, src)
+			REMOVE_TRAIT(owner, TRAIT_SCENTTRUEFORM, REF(src))
 			to_chat(owner, "<span class='notice'>You allow the essence of the spirit to leave your senses.</span>")
 
 		else
-			ADD_TRAIT(owner, TRAIT_SCENTTRUEFORM, src)
+			ADD_TRAIT(owner, TRAIT_SCENTTRUEFORM, REF(src))
 			to_chat(owner, "<span class='notice'>Your nose gains a clarity for the supernal around you...</span>")
 
 
@@ -290,7 +290,7 @@
 				var/mob/living/carbon/human/vampire = target
 				if ((vampire.morality_path?.score < 7) || vampire.client?.prefs?.is_enlightened)
 					is_wyrm = 1
-				if ((vampire.clane?.name == "Baali") || ( (vampire.client?.prefs?.is_enlightened && (vampire.morality_path?.score > 7)) || (!vampire.client?.prefs?.is_enlightened && (vampire.morality_path?.score < 4)) ))
+				if ((vampire.clan?.name == CLAN_BAALI) || ( (vampire.client?.prefs?.is_enlightened && (vampire.morality_path?.score > 7)) || (!vampire.client?.prefs?.is_enlightened && (vampire.morality_path?.score < 4)) ))
 					is_wyrm = 1
 			if (isgarou(target) || iswerewolf(target))
 				var/mob/living/carbon/wolf = target

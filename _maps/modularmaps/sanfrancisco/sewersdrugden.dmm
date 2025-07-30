@@ -1,8 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "br" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/effect/decal/pallet,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/structure/closet/crate/large,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
@@ -23,7 +23,7 @@
 /area/vtm/sewer)
 "is" = (
 /obj/effect/decal/pallet,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/structure/closet/crate/large,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
@@ -32,7 +32,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "mv" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "mW" = (
@@ -43,7 +43,7 @@
 /turf/closed/wall/vampwall,
 /area/vtm/sewer)
 "no" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "nU" = (
@@ -113,7 +113,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "ub" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /obj/item/stack/dollar,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
@@ -138,7 +138,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "CL" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "Et" = (
@@ -217,7 +217,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "PB" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/item/stack/dollar,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
@@ -270,7 +270,7 @@
 /obj/item/storage/pill_bottle/ephedrine,
 /obj/item/storage/pill_bottle/ephedrine,
 /obj/structure/table,
-/obj/item/vtm_artifact/rand,
+/obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "YS" = (

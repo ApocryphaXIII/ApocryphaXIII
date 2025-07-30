@@ -1,6 +1,7 @@
 import { sortBy } from 'common/collections';
-import { useBackend } from '../backend';
 import { Box, Flex, ProgressBar, Section, Table } from 'tgui-core/components';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 const JOB_REPORT_MENU_FAIL_REASON_TRACKING_DISABLED = 1;
@@ -10,7 +11,9 @@ const sortByPlaytime = sortBy(([_, playtime]) => -playtime);
 
 const PlaytimeSection = (props) => {
   const { playtimes } = props;
-  const sortedPlaytimes = Object.entries(playtimes).sort((a, b) => a.playtime - b.playtime)
+  const sortedPlaytimes = Object.entries(playtimes).sort(
+    (a, b) => a.playtime - b.playtime,
+  );
   const mostPlayed = sortedPlaytimes[0][1];
 
   return (

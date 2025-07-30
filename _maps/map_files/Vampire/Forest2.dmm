@@ -12,7 +12,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "m" = (
-/obj/manholedown,
+/obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "n" = (
@@ -24,8 +24,8 @@
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "r" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
 	dir = 9;
 	icon_state = "border"
 	},
@@ -48,7 +48,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "x" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -68,11 +68,11 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "G" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 10
 	},
 /turf/open/floor/plating/sidewalk/poor,
@@ -102,7 +102,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "P" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "R" = (
@@ -118,18 +118,18 @@
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "Y" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "Z" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 

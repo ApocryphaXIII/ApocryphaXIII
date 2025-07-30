@@ -1,6 +1,3 @@
-//wip wip wup
-GLOBAL_LIST_EMPTY(las_mirrors)
-
 /obj/structure/mirror
 	name = "mirror"
 	desc = "Mirror mirror on the wall, who's the most robust of them all?"
@@ -18,37 +15,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 
 /obj/structure/mirror/Initialize(mapload)
 	. = ..()
-	var/unique_number = ""
-	if(length(GLOB.las_mirrors))
-		unique_number = "[length(GLOB.las_mirrors)+1]"
-	else
-		unique_number = "1"
-	if(istype(get_area(src), /area/vtm))
-		var/area/A = get_area(src)
-		if(A)
-			name = "mirror ([A.name] [unique_number])"
-			GLOB.las_mirrors += src
 	if(icon_state == "mirror_broke" && !broken)
 		atom_break(null, mapload)
 
 /obj/structure/mirror/Crossed(atom/movable/AM)
 	. = ..()
-//	if(ishuman(AM) && ref)
-//		var/mob/living/carbon/human/H = AM
-//		if(H.clane)
-//			if(H.clane.name == "Lasombra")
-//				var/obj/effect/reflection/reflection = ref.resolve()
-//				if(istype(reflection))
-//					qdel(reflection)
-//					ref = null
 	if(!ref)
 		var/obj/effect/reflection/reflection = new(src.loc)
 		reflection.setup_visuals(src)
 		ref = WEAKREF(reflection)
-
-/obj/structure/mirror/Destroy()
-	. = ..()
-	GLOB.las_mirrors -= src
 
 /obj/structure/mirror/attack_hand(mob/user)
 	. = ..()
@@ -61,8 +36,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 		var/mob/living/carbon/human/H = user
 
 		//Sorry, you can't see yourself in front of the mirror!
-		if(H.clane)
-			if(H.clane.name == "Lasombra")
+		if(H.clan)
+			if(H.clan.name == CLAN_LASOMBRA)
 				return
 
 		//see code/modules/mob/dead/new_player/preferences.dm at approx line 545 for comments!

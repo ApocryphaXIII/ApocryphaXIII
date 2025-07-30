@@ -54,17 +54,17 @@
 	},
 /area/vtm/interior/penumbra)
 "ax" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/old{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "aF" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "aH" = (
@@ -80,13 +80,13 @@
 	},
 /area/vtm/interior/penumbra)
 "aN" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "aP" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
@@ -129,7 +129,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "bi" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/old{
 	umbra = 1
 	},
@@ -143,7 +143,7 @@
 	},
 /area/vtm/interior/penumbra)
 "bx" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/grass/fakebasalt{
 	umbra = 1
 	},
@@ -238,7 +238,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "cC" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -251,11 +251,11 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "cI" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -322,7 +322,7 @@
 	dir = 8;
 	icon_state = "wood-1"
 	},
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
@@ -337,7 +337,7 @@
 /obj/structure/trad{
 	pixel_y = 32
 	},
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
@@ -408,14 +408,14 @@
 	},
 /area/vtm/interior/penumbra)
 "eo" = (
-/obj/effect/decal/litter,
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/litter,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "es" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/rough{
 	umbra = 1
 	},
@@ -538,7 +538,7 @@
 	},
 /area/vtm/interior/penumbra)
 "fb" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 10;
 	icon_state = "border"
 	},
@@ -547,7 +547,7 @@
 	},
 /area/vtm/interior/penumbra)
 "fc" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 5;
 	icon_state = "border"
 	},
@@ -556,15 +556,15 @@
 	},
 /area/vtm/interior/penumbra)
 "fe" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 1;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "fg" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/grass/fakebasalt{
 	umbra = 1
 	},
@@ -589,7 +589,7 @@
 	},
 /area/vtm/interior/penumbra)
 "ga" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -643,7 +643,7 @@
 	},
 /area/vtm/interior/penumbra)
 "gD" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -653,7 +653,7 @@
 	},
 /area/vtm/interior/penumbra)
 "gQ" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -663,7 +663,7 @@
 	dir = 4;
 	icon_state = "fence_corner"
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
@@ -698,9 +698,9 @@
 	},
 /area/vtm/interior/penumbra)
 "hi" = (
-/obj/effect/decal/bordur,
-/obj/effect/decal/trash,
-/obj/effect/decal/litter,
+/obj/effect/turf_decal/bordur,
+/obj/effect/decal/cleanable/trash,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -719,7 +719,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "hu" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 9;
 	icon_state = "border"
 	},
@@ -736,11 +736,11 @@
 	},
 /area/vtm/interior/penumbra)
 "hz" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 8;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "hG" = (
@@ -787,7 +787,7 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "ii" = (
-/obj/structure/anarchsign,
+/obj/structure/sign/city/anarch,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "ik" = (
@@ -835,7 +835,7 @@
 	},
 /area/vtm/interior/penumbra)
 "iV" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/rough/cave{
 	umbra = 1
 	},
@@ -848,11 +848,11 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "je" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
@@ -895,7 +895,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "jA" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -944,7 +944,7 @@
 /area/vtm/interior/penumbra)
 "jO" = (
 /obj/item/chair/stool/bar,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "jR" = (
@@ -995,13 +995,13 @@
 /area/vtm/interior/penumbra)
 "ks" = (
 /obj/item/chair/stool/bar,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/carpet{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "kE" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
@@ -1010,11 +1010,11 @@
 	},
 /area/vtm/interior/penumbra)
 "kO" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -1025,11 +1025,11 @@
 /area/vtm/interior/penumbra)
 "kV" = (
 /obj/structure/vampdoor/simple,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
@@ -1059,14 +1059,14 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "lm" = (
-/obj/effect/decal/trash,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/trash,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalk/poor{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "ln" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampdirt{
 	umbra = 1
 	},
@@ -1133,8 +1133,8 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "lW" = (
-/obj/effect/decal/bordur,
-/obj/structure/trashbag,
+/obj/effect/turf_decal/bordur,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -1150,7 +1150,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "mz" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /obj/item/clothing/glasses/regular/hipster{
 	anchored = 1
 	},
@@ -1174,7 +1174,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "mS" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampwood{
 	umbra = 1
 	},
@@ -1186,7 +1186,7 @@
 	},
 /area/vtm/interior/penumbra)
 "nb" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /obj/item/clothing/glasses/regular/circle{
 	anchored = 1
 	},
@@ -1195,7 +1195,7 @@
 	},
 /area/vtm/interior/penumbra)
 "nm" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 6;
 	icon_state = "border"
 	},
@@ -1208,11 +1208,11 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "nw" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/old{
 	umbra = 1
 	},
@@ -1244,8 +1244,8 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "oe" = (
-/obj/effect/decal/trash,
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/rough/cave{
 	umbra = 1
 	},
@@ -1275,7 +1275,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "oO" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
@@ -1300,7 +1300,7 @@
 	},
 /area/vtm/interior/penumbra)
 "oY" = (
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	pixel_x = 12
 	},
 /turf/closed/wall/vampwall/market{
@@ -1451,7 +1451,7 @@
 	},
 /area/vtm/interior/penumbra)
 "rb" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
@@ -1466,7 +1466,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "re" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/vampwood{
 	umbra = 1
 	},
@@ -1489,7 +1489,7 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "rm" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/sidewalk/poor{
 	umbra = 1
 	},
@@ -1511,7 +1511,7 @@
 "rL" = (
 /obj/structure/vampmap,
 /obj/structure/lamppost/sidewalk,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -1520,7 +1520,7 @@
 	},
 /area/vtm/interior/penumbra)
 "rN" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/structure/vampmap,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
@@ -1543,7 +1543,7 @@
 /area/vtm/interior/penumbra)
 "sb" = (
 /obj/structure/vampfence/rich,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
@@ -1553,7 +1553,7 @@
 /area/vtm/interior/penumbra)
 "se" = (
 /obj/structure/vampfence/rich,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
@@ -1585,7 +1585,7 @@
 	dir = 8;
 	icon_state = "fence_corner"
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
@@ -1619,8 +1619,8 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "sH" = (
-/obj/effect/decal/litter,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/litter,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -1687,7 +1687,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "tc" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -1696,7 +1696,7 @@
 	},
 /area/vtm/interior/penumbra)
 "tg" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/penumbra)
 "tl" = (
@@ -1732,7 +1732,7 @@
 	},
 /area/vtm/interior/penumbra)
 "tI" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 1;
 	icon_state = "chinese1"
 	},
@@ -1756,7 +1756,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "ua" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk/poor{
 	umbra = 1
 	},
@@ -1769,7 +1769,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "ug" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -1803,40 +1803,26 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "uA" = (
-/obj/structure/trashbag{
-	pixel_x = 6;
-	pixel_y = -12
-	},
-/obj/structure/trashbag{
-	pixel_x = -8;
-	pixel_y = -10
-	},
-/obj/structure/trashbag{
-	pixel_x = 10;
-	pixel_y = 3
-	},
-/obj/structure/trashbag{
-	pixel_y = -13
-	},
-/obj/structure/trashbag{
-	pixel_x = -9;
-	pixel_y = 8
-	},
+/obj/effect/decal/cleanable/garbage,
+/obj/effect/decal/cleanable/garbage,
+/obj/effect/decal/cleanable/garbage,
+/obj/effect/decal/cleanable/garbage,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampdirt{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "uK" = (
-/obj/police_department{
+/obj/structure/sign/city/police_department{
 	dir = 4;
 	icon_state = "police"
 	},
-/obj/structure/trashcan,
-/obj/structure/trashbag,
+/obj/structure/closet/crate/dumpster,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "uM" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/rough/cave{
 	umbra = 1
 	},
@@ -1862,7 +1848,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "va" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/carpet{
 	umbra = 1
 	},
@@ -1961,13 +1947,13 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "vA" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "vC" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/carpet{
 	umbra = 1
 	},
@@ -2021,7 +2007,7 @@
 	amount = 1000;
 	anchored = 1
 	},
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -2044,7 +2030,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "wr" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "wt" = (
@@ -2055,11 +2041,11 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "ww" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "wy" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -2093,8 +2079,8 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "wS" = (
-/obj/police_department,
-/obj/structure/trashcan,
+/obj/structure/sign/city/police_department,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "wW" = (
@@ -2141,7 +2127,7 @@
 	},
 /area/vtm/interior/penumbra)
 "xm" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plasteel/stairs{
 	umbra = 1
 	},
@@ -2181,7 +2167,7 @@
 	},
 /area/vtm/interior/penumbra)
 "xV" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -2212,7 +2198,7 @@
 	dir = 1;
 	pixel_y = 6
 	},
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
@@ -2310,7 +2296,7 @@
 /area/vtm/interior/penumbra)
 "zk" = (
 /obj/structure/stalagmite,
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/rough/cave{
 	umbra = 1
 	},
@@ -2333,7 +2319,7 @@
 /obj/structure/trad{
 	pixel_y = 32
 	},
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
@@ -2353,7 +2339,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "zT" = (
-/obj/effect/decal/asphaltline,
+/obj/effect/turf_decal/asphaltline,
 /turf/open/floor/plating/asphalt{
 	umbra = 1
 	},
@@ -2384,7 +2370,7 @@
 /area/vtm/interior/penumbra)
 "Ag" = (
 /obj/effect/decal/pallet,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampdirt{
 	umbra = 1
 	},
@@ -2525,7 +2511,7 @@
 	},
 /area/vtm/interior/penumbra)
 "BP" = (
-/obj/structure/milleniumsign{
+/obj/structure/sign/city/millenium{
 	pixel_y = 32
 	},
 /turf/open/floor/plating/umbra,
@@ -2541,7 +2527,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "Ca" = (
-/obj/structure/milleniumsign{
+/obj/structure/sign/city/millenium{
 	dir = 1;
 	icon_state = "millenium";
 	pixel_y = 32
@@ -2603,12 +2589,12 @@
 	amount = 1000;
 	anchored = 1
 	},
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "CM" = (
 /obj/structure/table,
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -2633,8 +2619,8 @@
 /obj/structure/chair/comfy/black{
 	dir = 1
 	},
-/obj/effect/decal/litter,
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/litter,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
@@ -2648,7 +2634,7 @@
 /area/vtm/interior/penumbra)
 "De" = (
 /obj/structure/table,
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampplating/mono{
 	umbra = 1
 	},
@@ -2670,7 +2656,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Ds" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/parquetry/old{
 	umbra = 1
 	},
@@ -2722,7 +2708,7 @@
 	},
 /area/vtm/interior/penumbra)
 "DT" = (
-/turf/closed/wall/vampwall/market/low/window/reinforced{
+/turf/closed/wall/vampwall/market/low/window{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
@@ -2784,7 +2770,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "EB" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
@@ -2802,7 +2788,7 @@
 	},
 /area/vtm/interior/penumbra)
 "EL" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/parquetry/old{
 	umbra = 1
 	},
@@ -2835,7 +2821,7 @@
 /area/vtm/interior/penumbra)
 "Fa" = (
 /obj/structure/table,
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
@@ -2860,7 +2846,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "Fj" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/structure/chair/greyscale,
 /turf/open/floor/plating/rough{
 	umbra = 1
@@ -2922,17 +2908,17 @@
 	},
 /area/vtm/interior/penumbra)
 "Gi" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalk/poor{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "Gj" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -2941,14 +2927,14 @@
 	},
 /area/vtm/interior/penumbra)
 "Gm" = (
-/obj/effect/decal/litter,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/litter,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "Gp" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
@@ -3024,7 +3010,7 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "GS" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/penumbra)
 "GT" = (
@@ -3152,7 +3138,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Is" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/vampdirt{
 	umbra = 1
 	},
@@ -3252,7 +3238,7 @@
 /area/vtm/interior/penumbra)
 "JI" = (
 /obj/effect/turf_decal/siding/white,
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/structure/barrels/rand,
 /turf/open/floor/plating/rough{
 	umbra = 1
@@ -3293,7 +3279,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "JU" = (
-/obj/structure/chinesesign/alt{
+/obj/structure/sign/city/chinese/alt{
 	dir = 4;
 	icon_state = "chinese2"
 	},
@@ -3349,14 +3335,14 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/penumbra)
 "Ks" = (
-/obj/effect/decal/trash,
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/trash,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk/poor{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "Kt" = (
-/obj/effect/decal/asphaltline/alt{
+/obj/effect/turf_decal/asphaltline/alt{
 	dir = 8;
 	icon_state = "line_alt"
 	},
@@ -3365,7 +3351,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Kw" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/item/chair/wood,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
@@ -3406,7 +3392,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Ld" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/item/candle/infinite,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/penumbra)
@@ -3452,7 +3438,7 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "LC" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/vampdirt{
 	umbra = 1
 	},
@@ -3488,8 +3474,8 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "LT" = (
-/obj/effect/decal/litter,
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/litter,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
@@ -3538,7 +3524,7 @@
 	dir = 1;
 	icon_state = "fence_corner"
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
@@ -3570,7 +3556,7 @@
 	},
 /area/vtm/interior/penumbra)
 "MO" = (
-/obj/effect/decal/asphaltline,
+/obj/effect/turf_decal/asphaltline,
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior/penumbra)
 "MP" = (
@@ -3609,7 +3595,7 @@
 	dir = 8;
 	icon_state = "wood-1"
 	},
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalk/poor{
 	umbra = 1
 	},
@@ -3633,7 +3619,7 @@
 	},
 /area/vtm/interior/penumbra)
 "NT" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/effect/decal/graffiti,
 /turf/open/floor/plating/vampcanal{
 	umbra = 1
@@ -3691,7 +3677,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Pd" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -3744,13 +3730,13 @@
 /area/vtm/interior/penumbra)
 "Py" = (
 /obj/structure/chair/stool,
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "Pz" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/structure/barrels/rand,
 /turf/open/floor/plating/rough/cave{
 	umbra = 1
@@ -3761,13 +3747,13 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "PC" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "PE" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/structure/chair/greyscale{
 	dir = 4
 	},
@@ -3812,13 +3798,13 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "Qo" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "Qz" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/rough/cave{
 	umbra = 1
 	},
@@ -3837,7 +3823,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "QY" = (
-/obj/effect/decal/bordur,
+/obj/effect/turf_decal/bordur,
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/vampdirt{
 	umbra = 1
@@ -3893,11 +3879,11 @@
 	},
 /area/vtm/interior/penumbra)
 "RL" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
@@ -3919,18 +3905,18 @@
 	},
 /area/vtm/interior/penumbra)
 "Sc" = (
-/obj/effect/decal/trash,
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/trash,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "Sd" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 4;
 	icon_state = "border"
 	},
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -3953,7 +3939,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Sm" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /obj/structure/chair/greyscale{
 	dir = 1
 	},
@@ -4021,7 +4007,7 @@
 	},
 /area/vtm/interior/penumbra)
 "SW" = (
-/obj/structure/chinesesign{
+/obj/structure/sign/city/chinese{
 	dir = 1;
 	pixel_x = -12
 	},
@@ -4030,7 +4016,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Tl" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -4055,7 +4041,7 @@
 /turf/open/floor/plating/umbra,
 /area/vtm/interior/penumbra)
 "Tu" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/sidewalkalt{
 	umbra = 1
 	},
@@ -4084,7 +4070,7 @@
 /area/vtm/interior/penumbra)
 "TL" = (
 /obj/item/food/grown/watermelon,
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
@@ -4142,7 +4128,7 @@
 /area/vtm/interior/penumbra)
 "Un" = (
 /obj/structure/vampfence/corner/rich,
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
@@ -4218,7 +4204,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "Vb" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/vampcanal{
 	umbra = 1
 	},
@@ -4239,7 +4225,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "Vl" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -4249,8 +4235,8 @@
 	},
 /area/vtm/interior/penumbra)
 "Vq" = (
-/obj/structure/strip_club,
-/obj/structure/trashcan,
+/obj/structure/sign/city/strip_club,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/sidewalk{
 	umbra = 1
 	},
@@ -4320,7 +4306,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "Wg" = (
-/obj/structure/trashcan,
+/obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/sidewalk{
 	umbra = 1
 	},
@@ -4341,13 +4327,13 @@
 	},
 /area/vtm/interior/penumbra)
 "Wq" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 8;
 	icon_state = "border"
 	},
-/obj/effect/decal/litter,
-/obj/effect/decal/trash,
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/litter,
+/obj/effect/decal/cleanable/trash,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -4369,8 +4355,8 @@
 	},
 /area/vtm/interior/penumbra)
 "WJ" = (
-/obj/effect/decal/trash,
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/trash,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk/rich{
 	umbra = 1
 	},
@@ -4402,7 +4388,7 @@
 	pixel_x = -8;
 	pixel_y = -4
 	},
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
@@ -4422,7 +4408,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/interior/penumbra)
 "Xm" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/sidewalk/poor{
 	umbra = 1
 	},
@@ -4476,13 +4462,13 @@
 	},
 /area/vtm/interior/penumbra)
 "XJ" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/vampcanalplating{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
 "XK" = (
-/obj/effect/decal/trash,
+/obj/effect/decal/cleanable/trash,
 /obj/structure/closet/crate/large,
 /obj/machinery/light/red{
 	pixel_y = 32
@@ -4492,7 +4478,7 @@
 	},
 /area/vtm/interior/penumbra)
 "XL" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampcanal{
 	umbra = 1
 	},
@@ -4565,7 +4551,7 @@
 	},
 /area/vtm/interior/penumbra)
 "YI" = (
-/obj/effect/decal/litter,
+/obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/vampcanal{
 	umbra = 1
 	},
@@ -4581,7 +4567,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "YN" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -4639,7 +4625,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Zt" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/rough{
 	umbra = 1
 	},
@@ -4651,7 +4637,7 @@
 	},
 /area/vtm/interior/penumbra)
 "Zw" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -4661,7 +4647,7 @@
 	},
 /area/vtm/interior/penumbra)
 "ZC" = (
-/obj/structure/trashbag,
+/obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/concrete{
 	umbra = 1
 	},
@@ -4677,7 +4663,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/penumbra)
 "ZG" = (
-/obj/effect/decal/bordur{
+/obj/effect/turf_decal/bordur{
 	dir = 1;
 	icon_state = "border"
 	},
@@ -4709,7 +4695,7 @@
 	},
 /area/vtm/interior/penumbra)
 "ZX" = (
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /obj/structure/cable/layer1,
 /turf/open/floor/plating/rough{
 	umbra = 1
@@ -4720,7 +4706,7 @@
 	dir = 4;
 	icon_state = "siding_line"
 	},
-/obj/effect/decal/cardboard,
+/obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/rough{
 	umbra = 1
 	},

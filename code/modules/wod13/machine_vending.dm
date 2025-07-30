@@ -44,7 +44,7 @@
 		new /datum/data/mining_equipment("Silver Pickaxe",				/obj/item/pickaxe/silver,											1000),
 		new /datum/data/mining_equipment("Mining Conscription Kit",		/obj/item/storage/backpack/duffelbag/mining_conscript,				1500),
 		new /datum/data/mining_equipment("Jetpack Upgrade",				/obj/item/jetpack/suit,										2000),
-		new /datum/data/mining_equipment("Space Cash",					/obj/item/stack/spacecash/c1000,									2000),
+		new /datum/data/mining_equipment("Space Cash",					/obj/item/stack/dollar/thousand,									2000),
 		new /datum/data/mining_equipment("Mining Hardsuit",				/obj/item/clothing/suit/space/hardsuit/mining,						2000),
 		new /datum/data/mining_equipment("Diamond Pickaxe",				/obj/item/pickaxe/diamond,											2000),
 		new /datum/data/mining_equipment("Super Resonator",				/obj/item/resonator/upgraded,										2500),
@@ -68,27 +68,27 @@
 	)
 
 /datum/data/mining_equipment
-	var/equipment_name = "generic"
-	var/equipment_path = null
+	var/product_path = null
 	var/cost = 0
 
 /datum/data/mining_equipment/New(name, path, cost)
-	src.equipment_name = name
-	src.equipment_path = path
+	src.name = name
+	src.product_path = path
 	src.cost = cost
 
 /obj/machinery/mineral/equipment_vendor/Initialize()
 	. = ..()
 	if(owner_needed == TRUE)
+		//Im 99% sure this can be a locate instead.
 		for(var/mob/living/carbon/human/npc/NPC in range(2, src))
-			if(NPC)	//PSEUDO_M come back to fix this
-				my_owner = NPC
+			my_owner = NPC
+			break
 	build_inventory()
 
 /obj/machinery/mineral/equipment_vendor/proc/build_inventory()
 	for(var/p in prize_list)
 		var/datum/data/mining_equipment/M = p
-		GLOB.vending_products[M.equipment_path] = 1
+		GLOB.vending_products[M.product_path] = 1
 
 /obj/machinery/mineral/equipment_vendor/update_icon_state()
 	. = ..()
@@ -120,8 +120,8 @@
 	.["product_records"] = list()
 	for(var/datum/data/mining_equipment/prize in prize_list)
 		var/list/product_data = list(
-			path = replacetext(replacetext("[prize.equipment_path]", "/obj/item/", ""), "/", "-"),
-			name = prize.equipment_name,
+			path = replacetext(replacetext("[prize.product_path]", "/obj/item/", ""), "/", "-"),
+			name = prize.name,
 			price = prize.cost,
 			ref = REF(prize)
 		)
@@ -156,13 +156,13 @@
 				flick(icon_deny, src)
 				return
 			if(prize.cost > points)
-				to_chat(usr, "<span class='alert'>Error: Insufficient points for [prize.equipment_name]!</span>")
+				to_chat(usr, "<span class='alert'>Error: Insufficient points for [prize.name]!</span>")
 				flick(icon_deny, src)
 				return
 			points -= prize.cost
-			to_chat(usr, "<span class='notice'>[src] clanks to life briefly before vending [prize.equipment_name]!</span>")
-			new prize.equipment_path(loc)
-			SSblackbox.record_feedback("nested tally", "mining_equipment_bought", 1, list("[type]", "[prize.equipment_path]"))
+			to_chat(usr, "<span class='notice'>[src] clanks to life briefly before vending [prize.name]!</span>")
+			new prize.product_path(loc)
+			SSblackbox.record_feedback("nested tally", "mining_equipment_bought", 1, list("[type]", "[prize.product_path]"))
 			. = TRUE
 
 /obj/machinery/mineral/equipment_vendor/fastfood/attackby(obj/item/I, mob/user, params)
@@ -178,7 +178,7 @@
 		return
 	if(istype(I, /obj/item/stack/dollar))
 		var/obj/item/stack/dollar/D = I
-		points = points+D.amount
+		points = points + D.get_item_credit_value()
 		qdel(D)
 		return
 	if(default_deconstruction_screwdriver(user, "mining-open", "mining", I))
@@ -190,7 +190,7 @@
 /obj/machinery/mineral/equipment_vendor/restricted
 	name = "Requisitions"
 	desc = "A requisitions form waiting for any of the employees here to fill out for frivolous and mismanaged goodies."
-	icon = 'code/modules/wod13/props.dmi'
+	icon = 'modular_tfn/icons/vendors_shops.dmi'
 	icon_state = "menu"
 	icon_deny = "menu"
 	prize_list = list()
@@ -274,11 +274,15 @@
 		new /datum/data/mining_equipment("Colt M1911 magazine", /obj/item/ammo_box/magazine/vamp45acp, 10),
 		new /datum/data/mining_equipment("AUG Magazines", /obj/item/ammo_box/magazine/vampaug, 10),
 		new /datum/data/mining_equipment("AR-15 Magazines", /obj/item/ammo_box/magazine/vamp556, 10),
+		new /datum/data/mining_equipment("50. Ammo box", /obj/item/ammo_box/vampire/c50, 50),
 		new /datum/data/mining_equipment("desert eagle magazine", /obj/item/ammo_box/magazine/m44, 10),
 		new /datum/data/mining_equipment("Glock19 magazine", /obj/item/ammo_box/magazine/glock9mm, 10),
 		new /datum/data/mining_equipment("IFAK", /obj/item/storage/firstaid/ifak, 15),
 		new /datum/data/mining_equipment("12ga buckshot", /obj/item/ammo_box/vampire/c12g/buck, 15),
 		new /datum/data/mining_equipment("mp5 magazine", /obj/item/ammo_box/magazine/vamp9mp5, 20),
+		new /datum/data/mining_equipment("4.6mm ammo box", /obj/item/ammo_box/vampire/c46mm, 40),
+		new /datum/data/mining_equipment("mp7 magazine", /obj/item/ammo_box/magazine/vamp46mp7, 20),
+		new /datum/data/mining_equipment("PSG1 magazine", /obj/item/ammo_box/magazine/vamp762x51PSG1, 35),
 		new /datum/data/mining_equipment("guerrilla gloves", /obj/item/clothing/gloves/tackler/combat/insulated, 20),
 		new /datum/data/mining_equipment("binoculars", /obj/item/binoculars, 25),
 		new /datum/data/mining_equipment("Glock19", /obj/item/gun/ballistic/automatic/vampire/glock19, 25),
@@ -288,9 +292,11 @@
 		new /datum/data/mining_equipment("PD Radio", /obj/item/p25radio/police, 50),
 		new /datum/data/mining_equipment("shotgun", /obj/item/gun/ballistic/shotgun/vampire, 50),
 		new /datum/data/mining_equipment("submachine gun", /obj/item/gun/ballistic/automatic/vampire/mp5, 100),
+		new /datum/data/mining_equipment("AP submachine gun", /obj/item/gun/ballistic/automatic/vampire/mp7, 100),
 		new /datum/data/mining_equipment("assault rifle", /obj/item/gun/ballistic/automatic/vampire/ar15, 125),
 		new /datum/data/mining_equipment("SPAS15", /obj/item/gun/ballistic/automatic/vampire/autoshotgun, 200),
 		new /datum/data/mining_equipment("sniper rifle", /obj/item/gun/ballistic/automatic/vampire/sniper, 300),
+		new /datum/data/mining_equipment("semi auto sniper rifle", /obj/item/gun/ballistic/automatic/vampire/PSG1, 350),
 	)	//PSEUDO_M todo: add .50 ammo to this list
 
 /obj/machinery/mineral/equipment_vendor/proc/RedeemVoucher(obj/item/mining_voucher/voucher, mob/redeemer)
@@ -364,24 +370,8 @@
 
 /obj/item/card/mining_point_card
 	name = "mining points card"
-	desc = "A small card preloaded with mining points. Swipe your ID card over it to transfer the points, then discard."
+	desc = "A small card preloaded with mining points."
 	icon_state = "data_1"
-	var/points = 500
-
-/obj/item/card/mining_point_card/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/card/id))
-		if(points)
-			var/obj/item/card/id/C = I
-			C.mining_points += points
-			to_chat(user, "<span class='info'>You transfer [points] points to [C].</span>")
-			points = 0
-		else
-			to_chat(user, "<span class='alert'>There's no points left on [src].</span>")
-	..()
-
-/obj/item/card/mining_point_card/examine(mob/user)
-	..()
-	to_chat(user, "<span class='alert'>There's [points] point\s on the card.</span>")
 
 ///Conscript kit
 /obj/item/card/mining_access_card

@@ -847,7 +847,7 @@
 /turf/open/floor/plating/toilet
 	gender = PLURAL
 	name = "plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "toilet1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -861,10 +861,18 @@
 	..()
 	icon_state = "toilet[rand(1, 9)]"
 
+/turf/open/floor/plating/toilet/clinic
+	icon = 'modular_zapoc/tiles.dmi'
+	icon_state = "clinic1"
+
+/turf/open/floor/plating/toilet/clinic/Initialize()
+	..()
+	icon_state = "clinic[rand(1, 9)]"
+
 /turf/open/floor/plating/industrial
 	gender = PLURAL
 	name = "plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "industrial1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -878,10 +886,18 @@
 	..()
 	icon_state = "industrial[rand(1, 9)]"
 
+/turf/open/floor/plating/industrial/factory
+	icon = 'modular_zapoc/tiles.dmi'
+	icon_state = "factory1"
+
+/turf/open/floor/plating/industrial/factory/Initialize()
+	..()
+	icon_state = "factory[rand(1, 9)]"
+
 /turf/open/floor/plating/circled
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "circle1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -890,10 +906,6 @@
 	barefootstep = FOOTSTEP_PARKET
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
-
-/turf/open/floor/plating/circled/Initialize()
-	..()
-	icon_state = "circle[rand(1, 8)]"
 
 /turf/open/floor/plating/woodrough
 	gender = PLURAL

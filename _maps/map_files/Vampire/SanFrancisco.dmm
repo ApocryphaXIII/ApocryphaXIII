@@ -6785,7 +6785,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/chantry)
 "bCg" = (
-/obj/effect/mob_spawn/human/skeleton,
+/obj/effect/decal/remains/human,
 /turf/open/floor/plating/stone,
 /area/vtm/forest)
 "bCt" = (
@@ -49212,6 +49212,9 @@
 /obj/effect/bump_teleporter{
 	id = 69;
 	id_target = 96
+	},
+/obj/structure/fluff/tv{
+	pixel_y = 12
 	},
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/techshop)

@@ -1,0 +1,5 @@
+author: "dwinters99"
+delete-after: True
+changes:
+  - bugfix: "Techshop TV returned to it's rightful place"
+  - bugfix: "Corpses in the forest cave are corporeal once more"

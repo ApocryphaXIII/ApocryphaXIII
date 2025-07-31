@@ -38,6 +38,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 		//Sorry, you can't see yourself in front of the mirror!
 		if(H.clan)
 			if(H.clan.name == CLAN_LASOMBRA)
+				to_chat(user, "<span class='warning'>Nothing. Maybe it's time to commission a portrait?</span>")
 				return
 
 		//see code/modules/mob/dead/new_player/preferences.dm at approx line 545 for comments!

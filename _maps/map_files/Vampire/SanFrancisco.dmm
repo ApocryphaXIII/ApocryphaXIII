@@ -17518,9 +17518,6 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/baali)
-"elF" = (
-/turf/open/floor/carpet/vamp/redsilver,
-/area/vtm/financialdistrict)
 "elI" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk/rich,
@@ -194594,7 +194591,7 @@ cif
 pVL
 lld
 nhT
-elF
+wbX
 wbX
 dmU
 wbX
@@ -194852,7 +194849,7 @@ pVL
 lld
 nhT
 wbX
-elF
+wbX
 dmU
 wbX
 wbX
@@ -195365,7 +195362,7 @@ noM
 wYw
 lld
 fhm
-elF
+wbX
 wbX
 dmU
 wbX
@@ -195622,7 +195619,7 @@ noM
 wYw
 wQw
 wIE
-elF
+wbX
 wbX
 dmU
 wbX

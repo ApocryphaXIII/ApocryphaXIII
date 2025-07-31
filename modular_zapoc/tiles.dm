@@ -23,6 +23,32 @@
 
 /turf/open/floor/plating/vampplating/stone
 
+//stairs!!!
+
+/turf/open/floor/plating/vampplating/stairs
+	icon_state = "stairs"
+
+/turf/open/floor/plating/vampplating/stairs/left
+	icon_state = "stairs-l"
+
+/turf/open/floor/plating/vampplating/stairs/middle
+	icon_state = "stairs-m"
+
+/turf/open/floor/plating/vampplating/stairs/right
+	icon_state = "stairs-r"
+
+/turf/open/floor/plating/vampplating/stairs/black
+	icon_state = "stairs_black"
+
+/turf/open/floor/plating/vampplating/stairs/black/left
+	icon_state = "stairs_black-l"
+
+/turf/open/floor/plating/vampplating/stairs/black/middle
+	icon_state = "stairs_black-m"
+
+/turf/open/floor/plating/vampplating/stairs/black/right
+	icon_state = "stairs_black-r"
+
 /turf/open/floor/plating/rough
 	icon = 'modular_zapoc/tiles.dmi'
 

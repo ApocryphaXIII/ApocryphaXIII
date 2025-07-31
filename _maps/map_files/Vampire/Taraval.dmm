@@ -178,7 +178,9 @@
 /area/space)
 "bG" = (
 /obj/item/kirbyplants/random,
-/obj/machinery/light,
+/obj/machinery/light{
+	pixel_y = 30
+	},
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "bM" = (
@@ -247,19 +249,6 @@
 /obj/item/clothing/mask/surgical,
 /obj/item/storage/box/gloves,
 /turf/open/floor/plating/concrete,
-/area/space)
-"ci" = (
-/obj/effect/turf_decal/siding/white{
-	dir = 1;
-	color = "#636363"
-	},
-/obj/structure/vampdoor/police{
-	color = "#466a72";
-	lockpick_difficulty = 18
-	},
-/turf/open/floor/plating/toilet{
-	color = "#636363"
-	},
 /area/space)
 "cj" = (
 /obj/effect/landmark/start{
@@ -1167,14 +1156,6 @@
 /obj/structure/roofstuff/alt3,
 /turf/open/floor/plating/roofwalk,
 /area/space)
-"jT" = (
-/obj/structure/bodycontainer/morgue{
-	dir = 8
-	},
-/turf/open/floor/plating/toilet{
-	color = "#636363"
-	},
-/area/space)
 "jV" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 1
@@ -1453,14 +1434,6 @@
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
-/area/space)
-"mo" = (
-/obj/effect/turf_decal/siding/white{
-	dir = 8
-	},
-/obj/structure/table,
-/obj/machinery/recharger,
-/turf/closed/wall/vampwall/market/low,
 /area/space)
 "mt" = (
 /turf/closed/wall/vampwall/bar/low/window,
@@ -3302,10 +3275,11 @@
 /turf/open/floor/plating/rough,
 /area/space)
 "DE" = (
-/obj/structure/sign/city/police_department{
-	pixel_x = -8
+/obj/item/kirbyplants/random,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
 	},
-/turf/open/floor/plating/parquetry/old,
+/turf/open/floor/plating/concrete,
 /area/space)
 "DK" = (
 /obj/structure/extinguisher_cabinet{
@@ -3359,12 +3333,6 @@
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/poor,
-/area/space)
-"DY" = (
-/obj/structure/chair/sofa/corp/right{
-	dir = 8
-	},
-/turf/open/floor/plating/parquetry/old,
 /area/space)
 "Eb" = (
 /obj/structure/bed/dogbed,
@@ -3593,7 +3561,7 @@
 	},
 /obj/effect/decal/cleanable/cobweb,
 /mob/living/simple_animal/hostile/cockroach{
-	name = "Arnold Palmer"
+	name = "Kafka"
 	},
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plating/rough,
@@ -4001,15 +3969,6 @@
 /obj/structure/dresser,
 /turf/open/floor/carpet/black,
 /area/space)
-"JE" = (
-/obj/effect/turf_decal/siding/white{
-	dir = 1
-	},
-/obj/structure/vampdoor/police{
-	dir = 1
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/space)
 "JP" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 4
@@ -4254,7 +4213,9 @@
 /area/space)
 "LQ" = (
 /obj/structure/chair/comfy/brown,
-/obj/machinery/light,
+/obj/machinery/light{
+	pixel_y = 30
+	},
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "LR" = (
@@ -5798,14 +5759,6 @@
 	},
 /obj/effect/decal/graffiti/large,
 /turf/open/floor/plating/vampgrass,
-/area/space)
-"Yu" = (
-/obj/structure/fluff/paper/stack{
-	dir = 1
-	},
-/turf/open/floor/plating/toilet{
-	color = "#636363"
-	},
 /area/space)
 "Yv" = (
 /obj/effect/turf_decal/crosswalk{
@@ -14761,14 +14714,14 @@ cf
 Cm
 QR
 vC
-Hr
-Hr
+sJ
+sJ
 cE
 qI
 rs
 CE
 vC
-Hr
+sJ
 vC
 He
 XQ
@@ -14863,14 +14816,14 @@ NX
 RU
 Lx
 vC
-Hr
-Hr
+sJ
+sJ
 Os
 ol
 Kz
 ru
 vC
-Hr
+sJ
 vC
 He
 XQ
@@ -14965,14 +14918,14 @@ zD
 Lx
 at
 vC
-Hr
-Hr
+sJ
+sJ
 vC
 ta
 nk
 Rg
 vC
-Hr
+sJ
 vC
 He
 XQ
@@ -15067,14 +15020,14 @@ vC
 vC
 vC
 vC
-Hr
-Hr
+sJ
+sJ
 vC
 vC
 vC
 vC
 vC
-Hr
+sJ
 vC
 He
 XQ
@@ -15165,18 +15118,18 @@ Hr
 Hr
 sJ
 sJ
-Hr
-Hr
-Hr
-Hr
-Hr
-Hr
-Hr
-Hr
-Hr
-Hr
-Hr
-Hr
+sJ
+sJ
+sJ
+sJ
+sJ
+sJ
+sJ
+sJ
+sJ
+sJ
+sJ
+sJ
 vC
 He
 XQ
@@ -15278,7 +15231,7 @@ Hr
 Hr
 Hr
 Hr
-Hr
+sJ
 vC
 He
 XQ
@@ -15380,7 +15333,7 @@ Hr
 Hr
 Hr
 Hr
-Hr
+sJ
 vC
 vC
 vC
@@ -15482,9 +15435,9 @@ Hr
 Hr
 Hr
 Hr
-Hr
-Hr
-Hr
+sJ
+sJ
+sJ
 sJ
 sJ
 sJ
@@ -22449,17 +22402,17 @@ Kp
 rs
 rs
 rs
-aE
-JE
-XQ
-XQ
-vC
-vC
-vC
-vC
-vC
-vC
-vC
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
 rs
 rs
 Kp
@@ -22551,17 +22504,17 @@ Kp
 rs
 rs
 rs
-jT
-vC
-DE
-XQ
-ci
-aE
-oc
-Ax
-PI
-qg
-vC
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
 rs
 rs
 Kp
@@ -22653,17 +22606,17 @@ Kp
 rs
 rs
 rs
-vC
-vC
-qo
-mo
-vC
-Og
-KE
-aE
-OT
-EC
-vC
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
 rs
 rs
 Kp
@@ -22755,17 +22708,17 @@ Kp
 rs
 rs
 rs
-vC
-Gx
-Kk
-aE
-wg
-aE
-XY
-EX
-PI
-Uy
-vC
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
 rs
 rs
 Kp
@@ -22857,17 +22810,17 @@ Kp
 rs
 rs
 rs
-vC
-ln
-SM
-Yu
-vC
-ap
-zL
-YP
-OT
-iy
-vC
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
 rs
 rs
 Kp
@@ -22959,17 +22912,17 @@ Kp
 rs
 rs
 rs
-vC
-vC
-vC
-vC
-vC
-vC
-vC
-vC
-vC
-vC
-vC
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
+rs
 rs
 rs
 Kp
@@ -24960,15 +24913,15 @@ hH
 hH
 hH
 hH
-hH
 vC
 qg
+aE
 PI
 aE
 oc
 Ax
 vC
-ei
+DE
 Cm
 Cm
 mb
@@ -25062,9 +25015,9 @@ hH
 hH
 hH
 hH
-hH
 vC
 EC
+aE
 OT
 Og
 KE
@@ -25164,9 +25117,9 @@ hH
 hH
 hH
 hH
-hH
 vC
 Uy
+aE
 PI
 aE
 XY
@@ -25266,9 +25219,9 @@ hH
 hH
 hH
 hH
-hH
 vC
 iy
+aE
 OT
 ap
 zL
@@ -25368,7 +25321,7 @@ hH
 hH
 hH
 hH
-hH
+vC
 vC
 vC
 vC
@@ -34953,8 +34906,8 @@ kj
 (85,1,3) = {"
 vC
 bG
-DY
-Uw
+XQ
+XQ
 XQ
 Ei
 vC
@@ -45362,8 +45315,8 @@ kj
 kj
 kj
 kj
-kj
 jh
+xg
 xg
 xg
 xg
@@ -45464,8 +45417,8 @@ kj
 kj
 kj
 kj
-kj
 FB
+Dr
 Dr
 Dr
 Dr
@@ -45566,8 +45519,8 @@ kj
 kj
 kj
 kj
-kj
 FB
+Dr
 nX
 Dr
 Dr
@@ -45668,8 +45621,8 @@ kj
 kj
 kj
 kj
-kj
 FB
+Dr
 Dr
 Dr
 Dr
@@ -45770,7 +45723,6 @@ kj
 kj
 kj
 kj
-kj
 Kj
 du
 du
@@ -45778,10 +45730,11 @@ du
 du
 du
 du
-du
-du
-du
 mM
+Dr
+Dr
+Dr
+Dr
 Dr
 Dr
 Dr
@@ -45879,11 +45832,11 @@ kj
 kj
 kj
 kj
-kj
-kj
-kj
-kj
-FB
+Kj
+du
+du
+du
+mM
 Dr
 Dr
 Dr
@@ -45982,7 +45935,7 @@ kj
 kj
 kj
 kj
-Dr
+kj
 kj
 kj
 FB

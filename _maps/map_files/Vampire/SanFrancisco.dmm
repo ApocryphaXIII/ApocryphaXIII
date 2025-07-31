@@ -2843,7 +2843,7 @@
 /area/vtm/sewer)
 "aHy" = (
 /obj/structure/chair/sofa/corp/right,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "aHA" = (
 /obj/structure/railing{
@@ -2995,7 +2995,7 @@
 /obj/structure/chair/sofa/corp/right{
 	color = "#50C878"
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "aIL" = (
 /obj/structure/table,
@@ -8330,7 +8330,7 @@
 /obj/structure/chair/sofa/corp/left{
 	dir = 8
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "caN" = (
 /obj/structure/table,
@@ -12018,7 +12018,7 @@
 /area/vtm/interior/shop)
 "cRC" = (
 /obj/structure/table/wood,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "cRG" = (
 /obj/effect/decal/gut_floor,
@@ -12904,7 +12904,7 @@
 	color = "#50C878";
 	dir = 1
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "der" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -16371,7 +16371,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "dWG" = (
 /obj/structure/chair/wood/wings{
@@ -16517,7 +16517,7 @@
 /obj/structure/chair/sofa/corp/right{
 	dir = 8
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "dYt" = (
 /obj/effect/turf_decal/bordur{
@@ -24188,7 +24188,7 @@
 /area/vtm/graveyard)
 "fTQ" = (
 /obj/structure/fluff/hedge,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "fUd" = (
 /obj/structure/coclock,
@@ -25563,7 +25563,7 @@
 /obj/structure/chair/sofa/corp{
 	dir = 1
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "glU" = (
 /obj/structure/table,
@@ -27013,7 +27013,7 @@
 "gEZ" = (
 /obj/structure/fluff/hedge,
 /obj/structure/railing,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "gFf" = (
 /obj/structure/closet/crate/freezer/fridge,
@@ -27098,7 +27098,7 @@
 "gGf" = (
 /obj/structure/table/wood,
 /obj/vampire_computer,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/anarch/garage)
 "gGj" = (
 /obj/effect/turf_decal/siding/white{
@@ -33261,7 +33261,7 @@
 /obj/structure/chair/sofa/corp/corner{
 	dir = 8
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "iiF" = (
 /obj/structure/bed,
@@ -33695,7 +33695,7 @@
 /area/vtm/interior/tzimisce_manor)
 "ipA" = (
 /obj/structure/table/wood/fancy/blue,
-/turf/open/floor/carpet/blue,
+/turf/open/floor/carpet/vamp/bluesilver,
 /area/vtm/clinic)
 "ipD" = (
 /obj/effect/decal/cleanable/trash,
@@ -43370,7 +43370,7 @@
 /obj/structure/chair/sofa/corp/left{
 	color = "#50C878"
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "kMl" = (
 /obj/structure/table/wood,
@@ -44871,7 +44871,7 @@
 /area/vtm/interior/police)
 "ler" = (
 /obj/effect/turf_decal/siding/thinplating/dark,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "leC" = (
 /obj/structure/janitorialcart,
@@ -58864,7 +58864,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 4
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "owj" = (
 /obj/structure/lamppost/three{
@@ -64149,7 +64149,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "pHA" = (
 /obj/effect/decal/pallet,
@@ -65693,13 +65693,6 @@
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
-"qay" = (
-/obj/structure/chair/comfy/black{
-	dir = 4;
-	color = "#CD5C5C"
-	},
-/turf/open/floor/carpet/blue,
-/area/vtm/clinic)
 "qaF" = (
 /turf/closed/wall/vampwall/rich/old,
 /area/vtm/interior/cog/caern)
@@ -75410,7 +75403,7 @@
 /obj/machinery/light{
 	pixel_y = 32
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "smK" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -79799,7 +79792,7 @@
 /area/vtm/clinic/haven)
 "trk" = (
 /obj/structure/table/wood,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "trn" = (
 /obj/item/flashlight/lantern,
@@ -79937,7 +79930,7 @@
 /obj/structure/table/wood,
 /obj/item/paper_bin,
 /obj/item/pen,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/anarch/garage)
 "tsD" = (
 /obj/structure/vampdoor/supply{
@@ -82044,7 +82037,7 @@
 "tVu" = (
 /obj/structure/table/wood,
 /obj/item/toy/cards/deck,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "tVx" = (
 /obj/structure/chair/comfy/shuttle{
@@ -84467,7 +84460,7 @@
 /area/vtm/interior/millennium_tower/f4)
 "uBj" = (
 /obj/structure/chair/sofa/corp,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "uBn" = (
 /obj/structure/table/wood,
@@ -84948,7 +84941,7 @@
 	color = "#50C878";
 	dir = 1
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "uIl" = (
 /turf/open/openspace,
@@ -85131,13 +85124,6 @@
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/jazzclub)
-"uKN" = (
-/obj/structure/chair/comfy/black{
-	dir = 8;
-	color = "#CD5C5C"
-	},
-/turf/open/floor/carpet/blue,
-/area/vtm/clinic)
 "uLj" = (
 /obj/item/toy/crayon/red{
 	pixel_x = -8;
@@ -86024,7 +86010,7 @@
 	dir = 4;
 	pixel_y = -27
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "uYp" = (
 /obj/structure/toilet{
@@ -86218,7 +86204,7 @@
 	pixel_x = 16
 	},
 /obj/structure/chair/sofa/corp/corner,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "vaI" = (
 /obj/effect/turf_decal/weather/sand{
@@ -89009,7 +88995,7 @@
 	dir = 1;
 	pixel_y = 12
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "vJi" = (
 /obj/structure/barrels{
@@ -94445,7 +94431,7 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/church/interior/haven)
 "wZM" = (
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "wZQ" = (
 /obj/structure/chair/sofa/corp/left{
@@ -97731,7 +97717,7 @@
 /area/vtm/interior/millennium_tower/ventrue)
 "xNs" = (
 /obj/effect/decal/cleanable/litter,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/anarch/garage)
 "xNv" = (
 /obj/effect/decal/cleanable/litter,
@@ -98613,7 +98599,7 @@
 /obj/structure/chair/sofa/corp/right{
 	dir = 1
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "xZi" = (
 /obj/effect/decal/cleanable/trash,
@@ -99030,7 +99016,7 @@
 /area/vtm/interior)
 "yeP" = (
 /obj/structure/chair/office,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/anarch/garage)
 "yeU" = (
 /obj/structure/table/wood,
@@ -99466,7 +99452,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
 "ykl" = (
 /obj/structure/sink{
@@ -199110,7 +199096,7 @@ fvQ
 vvM
 vvM
 cEr
-qay
+vDW
 pkx
 pkx
 pkx
@@ -199624,7 +199610,7 @@ kCX
 rpz
 vvM
 kCX
-uKN
+hMU
 pkx
 pkx
 pkx

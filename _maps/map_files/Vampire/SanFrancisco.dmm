@@ -17511,6 +17511,9 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/baali)
+"elF" = (
+/turf/open/floor/carpet/vamp/redsilver,
+/area/vtm/financialdistrict)
 "elI" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk/rich,
@@ -21860,7 +21863,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 4
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "foI" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -36341,7 +36344,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "iUS" = (
 /obj/structure/flora/ausbushes/lavendergrass{
@@ -50277,7 +50280,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "mwc" = (
 /obj/structure/vampdoor/wood/old{
@@ -64382,7 +64385,7 @@
 	pixel_y = 30
 	},
 /obj/machinery/vending/boozeomat/all_access,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "pJv" = (
 /obj/structure/table/wood,
@@ -69773,7 +69776,7 @@
 "qWr" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/siding/wideplating/dark,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "qWs" = (
 /obj/effect/landmark/start{
@@ -71764,7 +71767,7 @@
 /area/vtm/hotel)
 "ruT" = (
 /obj/effect/turf_decal/siding/wideplating/dark/corner,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "ruU" = (
 /obj/structure/vampfence/rich{
@@ -74295,7 +74298,7 @@
 	dir = 1;
 	pixel_y = -7
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "rZr" = (
 /obj/structure/barrels/rand,
@@ -80539,7 +80542,7 @@
 	dir = 8
 	},
 /obj/structure/table/wood,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "tCT" = (
 /turf/open/floor/plating/parquetry/old,
@@ -83876,7 +83879,7 @@
 	dir = 8;
 	light_color = "#6488EA"
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "uwu" = (
 /obj/item/candle/infinite,
@@ -85182,7 +85185,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 6
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "uOh" = (
 /obj/structure/flora/ausbushes/ppflowers,
@@ -85822,7 +85825,7 @@
 	dir = 6
 	},
 /obj/structure/table/wood/fancy/black,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "uWp" = (
 /obj/structure/vampdoor/wood/pentex,
@@ -89287,6 +89290,9 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/millennium_tower/ventrue)
+"vMk" = (
+/turf/open/floor/carpet/vamp/redsilver,
+/area/vtm/jazzclub)
 "vMo" = (
 /obj/structure/railing{
 	dir = 1;
@@ -90599,7 +90605,7 @@
 /obj/structure/chair/comfy{
 	dir = 1
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "wbU" = (
 /obj/generator,
@@ -91796,7 +91802,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 5
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "wrI" = (
 /obj/structure/small_vamprocks,
@@ -95649,7 +95655,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 9
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "xpH" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -96107,7 +96113,7 @@
 /area/vtm/interior/chantry)
 "xvU" = (
 /obj/structure/curtain/bounty,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "xvX" = (
 /obj/effect/turf_decal/siding/wood,
@@ -97498,6 +97504,12 @@
 	},
 /turf/open/floor/carpet,
 /area/vtm/pacificheights/forest)
+"xLG" = (
+/obj/effect/turf_decal/asphaltline{
+	dir = 8
+	},
+/turf/open/floor/carpet/vamp/redsilver,
+/area/vtm/financialdistrict)
 "xLK" = (
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/sidewalk/rich,
@@ -194563,9 +194575,9 @@ cif
 pVL
 lld
 nhT
-wbX
-wbX
-dmU
+elF
+elF
+xLG
 wbX
 wbX
 wcJ
@@ -194578,10 +194590,10 @@ sBJ
 tCE
 qZc
 mvX
-rBR
+vMk
 xvU
-rBR
-rBR
+vMk
+vMk
 qWr
 dKu
 lao
@@ -194820,9 +194832,9 @@ cif
 pVL
 lld
 nhT
-wbX
-wbX
-dmU
+elF
+elF
+xLG
 wbX
 wbX
 wcJ
@@ -194835,10 +194847,10 @@ sBJ
 tCE
 bfs
 mvX
-rBR
+vMk
 xvU
-rBR
-rBR
+vMk
+vMk
 wbT
 wsc
 xyy
@@ -195077,9 +195089,9 @@ yhp
 yhp
 lld
 nhT
-wbX
-wbX
-dmU
+elF
+elF
+xLG
 wbX
 wbX
 wcJ
@@ -195334,9 +195346,9 @@ noM
 wYw
 lld
 fhm
-wbX
-wbX
-dmU
+elF
+elF
+xLG
 wbX
 wbX
 wcJ
@@ -195591,9 +195603,9 @@ noM
 wYw
 wQw
 wIE
-wbX
-wbX
-dmU
+elF
+elF
+xLG
 wbX
 wbX
 wcJ

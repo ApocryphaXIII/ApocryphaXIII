@@ -10,6 +10,8 @@
 
 /turf/open/floor/plating/vampcarpet
 	icon = 'modular_zapoc/tiles.dmi'
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_CARPET
 
 /turf/open/floor/plating/vampdirt
 	icon = 'modular_zapoc/tiles.dmi'

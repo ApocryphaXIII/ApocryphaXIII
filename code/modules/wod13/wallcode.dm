@@ -577,7 +577,7 @@
 /turf/open/floor/plating/parquetry
 	gender = PLURAL
 	name = "parquetry"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "parquet"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -629,7 +629,7 @@
 /turf/open/floor/plating/vampgrass
 	gender = PLURAL
 	name = "grass"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "grass1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -696,7 +696,7 @@
 /turf/open/floor/plating/vampcarpet
 	gender = PLURAL
 	name = "carpet"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "carpet_black"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -709,7 +709,7 @@
 /turf/open/floor/plating/vampdirt
 	gender = PLURAL
 	name = "dirt"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "dirt"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -787,7 +787,7 @@
 /turf/open/floor/plating/vampplating
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "plating"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -806,7 +806,7 @@
 /turf/open/floor/plating/rough
 	gender = PLURAL
 	name = "rough floor"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "rough"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -891,10 +891,6 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/plating/circled/Initialize()
-	..()
-	icon_state = "circle[rand(1, 8)]"
-
 /turf/open/floor/plating/woodrough
 	gender = PLURAL
 	name = "wood flooring"
@@ -958,7 +954,7 @@
 /turf/open/floor/plating/church
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "church1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -975,7 +971,7 @@
 /turf/open/floor/plating/saint
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "saint1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1130,7 +1126,7 @@
 /turf/open/floor/plating/vampwood
 	gender = PLURAL
 	name = "wood"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "bwood"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1379,7 +1375,7 @@
 /turf/open/floor/plating/bacotell
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "bacotell"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1392,7 +1388,7 @@
 /turf/open/floor/plating/gummaguts
 	gender = PLURAL
 	name = "plating"
-	icon = 'modular_zapoc/tiles.dmi'
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "gummaguts"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1401,9 +1397,3 @@
 	barefootstep = FOOTSTEP_TROTUAR
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
-
-//solving anime in a messy way.
-
-/turf/open/floor/plating/Initialize()
-	..()
-	base_icon_state = icon_state

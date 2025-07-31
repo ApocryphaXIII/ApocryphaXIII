@@ -7032,7 +7032,7 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/wirecutters,
 /obj/structure/table/wood/fancy/red,
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "bIE" = (
 /obj/structure/chair/wood/wings{
@@ -11189,7 +11189,7 @@
 "cHq" = (
 /obj/structure/table/wood/fancy/red,
 /obj/item/soapstone,
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "cHv" = (
 /obj/structure/coclock,
@@ -17237,7 +17237,7 @@
 "eiH" = (
 /obj/structure/table/wood/fancy/red,
 /obj/machinery/fax/tremere,
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "eiK" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
@@ -19868,7 +19868,7 @@
 /area/vtm/interior/millennium_tower)
 "eTa" = (
 /obj/structure/ladder/manhole/up,
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "eTd" = (
 /obj/structure/table/wood,
@@ -22992,7 +22992,7 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "fEX" = (
 /obj/structure/table,
@@ -34433,11 +34433,6 @@
 /obj/effect/turf_decal/caution/red,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/forest)
-"izG" = (
-/obj/structure/table/wood/fancy/red,
-/obj/item/flashlight/lamp/green,
-/turf/open/floor/carpet/lone,
-/area/vtm/interior/chantry)
 "izH" = (
 /obj/structure/curtain/cloth/fancy/mechanical/luxurious{
 	id = 1975
@@ -36863,7 +36858,7 @@
 /obj/structure/coclock,
 /obj/item/ammo_box/vampire/arrows,
 /obj/item/gun/ballistic/shotgun/toy/crossbow/vampire,
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "jfo" = (
 /obj/effect/decal/gut_floor,
@@ -42288,7 +42283,7 @@
 /mob/living/carbon/human/npc/shop{
 	resistant_to_disciplines = 1
 	},
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "kwH" = (
 /obj/structure/glowshroom/single,
@@ -45719,7 +45714,7 @@
 /obj/machinery/light/prince{
 	pixel_y = 32
 	},
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "lqp" = (
 /turf/closed/wall/vampwall/painted,
@@ -48065,7 +48060,7 @@
 /obj/machinery/light/prince{
 	dir = 8
 	},
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "lUl" = (
 /turf/open/floor/carpet/vamp/greengold,
@@ -71235,7 +71230,7 @@
 /obj/structure/table/wood/fancy/red,
 /obj/item/storage/bag/books,
 /obj/item/folder,
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "rpz" = (
 /obj/structure/closet/crate/bin,
@@ -75977,7 +75972,7 @@
 /obj/structure/sign/painting/library{
 	pixel_y = 32
 	},
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "sth" = (
 /obj/structure/table/wood,
@@ -78446,9 +78441,6 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
-"tbG" = (
-/turf/open/floor/carpet/lone,
-/area/vtm/interior/chantry)
 "tbM" = (
 /obj/structure/vampipe{
 	icon_state = "piping31";
@@ -79992,7 +79984,7 @@
 /area/vtm/interior/endron_facility)
 "ttP" = (
 /obj/item/kirbyplants/random,
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "ttS" = (
 /turf/open/floor/plating/rough,
@@ -84281,7 +84273,7 @@
 /obj/machinery/light/prince{
 	pixel_y = 32
 	},
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "uzI" = (
 /obj/effect/decal/wallpaper/blue,
@@ -91458,10 +91450,6 @@
 "wod" = (
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/trujah)
-"woi" = (
-/obj/structure/chair/office,
-/turf/open/floor/carpet/lone,
-/area/vtm/interior/chantry)
 "wok" = (
 /obj/machinery/light{
 	pixel_y = 32
@@ -92599,7 +92587,7 @@
 /obj/machinery/light/prince{
 	dir = 8
 	},
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "wCL" = (
 /obj/structure/curtain/cloth/fancy,
@@ -98314,7 +98302,7 @@
 /area/vtm/fishermanswharf)
 "xVY" = (
 /obj/machinery/libraryscanner,
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "xWa" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -98837,7 +98825,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
-/turf/open/floor/carpet/lone,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "ycz" = (
 /obj/effect/turf_decal/siding/white{
@@ -210988,8 +210976,8 @@ hoA
 maD
 juk
 xtG
-tbG
-tbG
+pkd
+pkd
 kwF
 jYn
 lJY
@@ -211246,8 +211234,8 @@ hoA
 juk
 xtG
 std
-tbG
-woi
+pkd
+fnR
 otl
 hoA
 hoA
@@ -211503,8 +211491,8 @@ mmE
 jHi
 xtG
 lqn
-tbG
-tbG
+pkd
+pkd
 kqn
 hoA
 hoA
@@ -211760,8 +211748,8 @@ hoA
 hoA
 xtG
 ycw
-tbG
-tbG
+pkd
+pkd
 jHi
 jHi
 jHi
@@ -212016,9 +212004,9 @@ hoA
 qvM
 hoA
 qgR
-tbG
-tbG
-tbG
+pkd
+pkd
+pkd
 jHi
 vNb
 sxJ
@@ -212270,7 +212258,7 @@ jNs
 jNs
 xtG
 xVY
-tbG
+pkd
 eiH
 xtG
 ttP
@@ -212527,7 +212515,7 @@ jNs
 rIk
 xtG
 uzv
-tbG
+pkd
 bIh
 jHi
 jHi
@@ -213040,7 +213028,7 @@ jNs
 jNs
 pAN
 xtG
-izG
+duk
 wCK
 rpy
 jHi

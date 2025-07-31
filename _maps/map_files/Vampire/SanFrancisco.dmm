@@ -3761,7 +3761,7 @@
 	dir = 8;
 	pixel_x = 16
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "aTd" = (
 /obj/item/kirbyplants/random,
@@ -7450,7 +7450,7 @@
 /obj/item/masquerade_contract,
 /obj/item/stack/dollar/hundred,
 /obj/item/stack/dollar/hundred,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "bLk" = (
 /obj/structure/table/wood,
@@ -16922,7 +16922,7 @@
 	alpha = 225;
 	dir = 4
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/jazzclub)
 "edW" = (
 /obj/effect/turf_decal/bordur{
@@ -18601,7 +18601,7 @@
 /obj/structure/table/wood,
 /obj/item/folder/documents,
 /obj/item/documents,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "eAh" = (
 /obj/effect/decal/rugs{
@@ -34127,9 +34127,6 @@
 /obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampcanal,
 /area/vtm/sewer)
-"isG" = (
-/turf/open/floor/carpet/green,
-/area/vtm/interior/millennium_tower)
 "isI" = (
 /obj/effect/landmark/start/giovanni,
 /turf/open/floor/plating/parquetry/old,
@@ -40301,7 +40298,7 @@
 /obj/structure/chair/sofa/corp{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "jRG" = (
 /obj/structure/chair/office{
@@ -44442,7 +44439,7 @@
 /obj/structure/chair/sofa/corp/right{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "kWa" = (
 /obj/structure/chair/sofa/corp/right{
@@ -51805,7 +51802,7 @@
 /area/vtm/anarch)
 "mNC" = (
 /obj/structure/curtain/cloth/fancy,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "mNI" = (
 /obj/effect/decal/cleanable/trash,
@@ -61158,7 +61155,7 @@
 	light_color = "#000080"
 	},
 /obj/structure/curtain/cloth/fancy,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "oVh" = (
 /obj/effect/turf_decal/siding/wood,
@@ -62657,7 +62654,7 @@
 /obj/structure/chair/sofa/corp/corner{
 	dir = 8
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/jazzclub)
 "poJ" = (
 /obj/effect/turf_decal/bordur,
@@ -65975,7 +65972,7 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass/martini_glass,
 /obj/item/reagent_containers/food/drinks/drinkingglass/martini_glass,
 /obj/item/reagent_containers/food/drinks/bottle/wine,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/jazzclub)
 "qcp" = (
 /obj/structure/table/wood,
@@ -70710,7 +70707,7 @@
 /obj/item/stamp{
 	pixel_x = 12
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "riq" = (
 /obj/structure/table/wood/fancy/black,
@@ -71175,7 +71172,7 @@
 "ror" = (
 /obj/structure/table/wood/fancy/red,
 /obj/structure/curtain/cloth/fancy,
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "ros" = (
 /obj/item/kirbyplants/random,
@@ -75272,7 +75269,7 @@
 /obj/item/reagent_containers/blood,
 /obj/item/reagent_containers/blood/elite,
 /obj/item/reagent_containers/blood/elite,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "slV" = (
 /obj/structure/chair/sofa/corp/right{
@@ -76915,7 +76912,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "sGG" = (
 /obj/structure/table/reinforced,
@@ -76936,7 +76933,7 @@
 /obj/vampire_computer{
 	owner = "Clerk"
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "sGT" = (
 /obj/structure/vampfence/rich{
@@ -79558,7 +79555,7 @@
 /obj/structure/chair/sofa/corp/left{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "trk" = (
 /obj/structure/table/wood,
@@ -82415,7 +82412,7 @@
 /obj/structure/chair/comfy{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "udg" = (
 /obj/machinery/light/small{
@@ -83140,7 +83137,7 @@
 /obj/structure/chair/sofa/corp/right{
 	dir = 8
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/jazzclub)
 "una" = (
 /obj/effect/decal/pallet{
@@ -86676,7 +86673,7 @@
 /obj/structure/chair/sofa/corp/corner{
 	dir = 1
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/jazzclub)
 "vfs" = (
 /obj/effect/turf_decal/bordur{
@@ -87452,7 +87449,7 @@
 /obj/structure/chair/sofa/corp{
 	dir = 1
 	},
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/jazzclub)
 "vpj" = (
 /obj/effect/decal/cleanable/trash,
@@ -88700,7 +88697,7 @@
 "vEx" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/clerk,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "vEB" = (
 /turf/closed/wall/vampwall/rich/old,
@@ -90313,7 +90310,7 @@
 /area/vtm/forest)
 "vYe" = (
 /obj/structure/curtain/bounty,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "vYq" = (
 /obj/machinery/light{
@@ -98623,7 +98620,7 @@
 /obj/structure/chair/comfy{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "xZi" = (
 /obj/effect/decal/cleanable/trash,
@@ -98878,7 +98875,7 @@
 /area/vtm/sewer)
 "ycT" = (
 /obj/structure/closet/cabinet,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "ydf" = (
 /obj/machinery/light/small{
@@ -99095,7 +99092,7 @@
 /area/vtm/northbeach)
 "yfx" = (
 /obj/machinery/photocopier,
-/turf/open/floor/carpet/green,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/millennium_tower)
 "yfy" = (
 /turf/closed/wall/vampwall/bar/low/window,
@@ -198685,7 +198682,7 @@ yhp
 yhp
 qLG
 vYe
-yhp
+ueO
 oZm
 ocR
 jGX
@@ -198940,8 +198937,8 @@ yhp
 yhp
 qLG
 ycT
-isG
-isG
+ueO
+ueO
 bLj
 oZm
 din
@@ -199197,7 +199194,7 @@ rXD
 mfQ
 qLG
 slQ
-isG
+ueO
 aTa
 ezZ
 oZm

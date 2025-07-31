@@ -2879,7 +2879,7 @@
 /obj/underplate/stuff{
 	pixel_y = 8
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/shop)
 "aHU" = (
 /obj/structure/table/wood,
@@ -2913,9 +2913,6 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/laundromat)
-"aIo" = (
-/turf/open/floor/carpet,
-/area/vtm/interior/shop)
 "aIr" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -13134,10 +13131,6 @@
 /obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/fishermanswharf)
-"dgC" = (
-/obj/effect/turf_decal/siding/white,
-/turf/open/floor/carpet,
-/area/vtm/interior/bianchiBank)
 "dgL" = (
 /obj/structure/table,
 /obj/item/clothing/suit/apron/surgical,
@@ -14765,9 +14758,6 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/fishermanswharf/lower)
-"dAN" = (
-/turf/open/floor/carpet,
-/area/vtm/interior/bianchiBank)
 "dAP" = (
 /obj/effect/decal/wallpaper/grey/low,
 /turf/closed/wall/vampwall/market/low/window,
@@ -28585,7 +28575,7 @@
 /area/vtm/financialdistrict)
 "gXh" = (
 /obj/item/kirbyplants/random,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/shop)
 "gXq" = (
 /obj/structure/lamppost/one{
@@ -29569,7 +29559,7 @@
 /obj/structure/chair/wood/wings{
 	dir = 4
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/shop)
 "hlw" = (
 /obj/effect/turf_decal/bordur{
@@ -36049,7 +36039,7 @@
 /area/vtm/jazzclub)
 "iVj" = (
 /obj/structure/vampdoor/glass,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/shop)
 "iVl" = (
 /obj/effect/turf_decal/bordur,
@@ -51742,7 +51732,7 @@
 /obj/structure/sign/city/order{
 	pixel_y = 26
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/shop)
 "mQg" = (
 /obj/machinery/light/small{
@@ -59369,7 +59359,7 @@
 	lockpick_difficulty = 20;
 	name = "bank management door"
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/bianchiBank)
 "oBy" = (
 /obj/effect/turf_decal/bordur{
@@ -64770,6 +64760,10 @@
 /obj/effect/landmark/npcactivity,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/fishermanswharf/lower)
+"pOi" = (
+/obj/structure/stairs/north,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior/bianchiBank)
 "pOm" = (
 /obj/structure/chair/wood/wings{
 	dir = 4
@@ -78463,7 +78457,7 @@
 	pixel_y = 10
 	},
 /obj/item/food/vampire/pizza,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/vamp,
 /area/vtm/interior/shop)
 "tbT" = (
 /obj/structure/rack,
@@ -181404,7 +181398,7 @@ iCo
 eZY
 raa
 xNw
-aIo
+aPq
 hlt
 hlt
 gXh
@@ -181664,7 +181658,7 @@ dQz
 mQe
 aHT
 tbS
-aIo
+aPq
 iCo
 lIO
 kNt
@@ -181918,10 +181912,10 @@ iCo
 rMM
 raa
 lFF
-aIo
-aIo
-aIo
-aIo
+aPq
+aPq
+aPq
+aPq
 iVj
 lIO
 kNt
@@ -182178,7 +182172,7 @@ iCo
 kmD
 ibc
 xcT
-aIo
+aPq
 jhG
 lIO
 kNt
@@ -182435,7 +182429,7 @@ vzi
 raa
 raa
 iaj
-aIo
+aPq
 iCo
 jnF
 gYt
@@ -185516,10 +185510,10 @@ lro
 uIl
 uIl
 lro
-tjZ
+pOi
 oBv
-dAN
-dgC
+cEC
+hWm
 uIl
 uIl
 uIl
@@ -185773,10 +185767,10 @@ lro
 uIl
 uIl
 lro
-tjZ
+pOi
 oBv
-dAN
-dgC
+cEC
+hWm
 uIl
 uIl
 uIl

@@ -262,6 +262,8 @@
 	var/tm_info = GLOB.revdata.GetTestMergeInfo()
 	if(motd || tm_info)
 		motd = motd ? "[motd]<br>[tm_info]" : tm_info
+
+	GLOB.join_tos = file2text("config/tos.txt")
 /*
 Policy file should be a json file with a single object.
 Value is raw html.

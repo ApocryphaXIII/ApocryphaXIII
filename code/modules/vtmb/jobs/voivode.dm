@@ -35,7 +35,7 @@
 	suit = /obj/item/clothing/suit/vampire/trench/voivode
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	l_pocket = /obj/item/vamp/phone/voivode
-	backpack_contents = list(/obj/item/vamp/keys/voivodate=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit/elder=1)
+	backpack_contents = list(/obj/item/vamp/keys/voivodate/master=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit/elder=1)
 
 /obj/effect/landmark/start/voivode
 	name = "Voivode"

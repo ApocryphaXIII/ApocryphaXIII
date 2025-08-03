@@ -35,7 +35,7 @@
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	l_pocket = /obj/item/vamp/phone/zadruga
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/voivodate=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
+	backpack_contents = list(/obj/item/vamp/keys/voivodate/master=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
 
 /obj/effect/landmark/start/zadruga
 	name = "Zadruga"

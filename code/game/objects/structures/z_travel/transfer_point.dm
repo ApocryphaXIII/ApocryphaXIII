@@ -27,13 +27,14 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 				T.exit = src
 				GLOB.unallocted_transfer_points -= src
 				break
-	//RegisterSignal(loc, COMSIG_ATOM_ENTERED, PROC_REF(entered_turf))
+	RegisterSignal(loc, COMSIG_ATOM_ENTERED, PROC_REF(entered_turf))
 
 /obj/transfer_point_vamp/Bumped(atom/movable/arrived)
 	transfer_atom(arrived)
 
-//New TG code changes the arg order for this.
-/obj/transfer_point_vamp/proc/entered_turf(atom/old_loc, atom/movable/arrived)
+/obj/transfer_point_vamp/proc/entered_turf(atom/source, atom/movable/arrived, atom/old_loc)
+	if(locate(/obj/transfer_point_vamp) in old_loc)
+		return
 	transfer_atom(arrived)
 
 /obj/transfer_point_vamp/proc/transfer_atom(atom/movable/arrived)

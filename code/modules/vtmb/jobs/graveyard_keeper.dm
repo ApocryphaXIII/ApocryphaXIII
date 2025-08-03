@@ -3,8 +3,8 @@
 	title = "Graveyard Keeper"
 	department_head = list("Seneschal")
 	faction = "Vampire"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "the Camarilla or the Anarchs"
 	selection_color = "#e3e3e3"
 	exp_type_department = EXP_TYPE_SERVICES

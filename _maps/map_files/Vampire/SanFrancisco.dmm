@@ -40501,7 +40501,7 @@
 /area/vtm/interior)
 "jUk" = (
 /obj/structure/stairs/north,
-/turf/open/openspace,
+/turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/voivodate/sanctum)
 "jUq" = (
 /turf/open/floor/plating/parquetry/old,

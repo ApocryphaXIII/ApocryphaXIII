@@ -1234,7 +1234,7 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "GJ" = (
-/turf/open/space/basic,
+/turf/cordon,
 /area/space)
 "GM" = (
 /obj/structure/table,
@@ -4443,41 +4443,76 @@ GF
 (1,1,2) = {"
 GJ
 GJ
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-MS
-sb
-sb
-sb
-sb
-sb
-sb
-sb
-sb
-sb
-qV
-qV
-qV
-qV
-qV
-sb
-sb
-sb
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 "}
 (2,1,2) = {"
 GJ
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+MS
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+qV
+qV
+qV
+qV
+qV
+sb
+sb
+sb
+GJ
+"}
+(3,1,2) = {"
 GJ
 MS
 iH
@@ -4511,9 +4546,9 @@ HJ
 KU
 Ct
 sb
-"}
-(3,1,2) = {"
 GJ
+"}
+(4,1,2) = {"
 GJ
 MS
 iH
@@ -4547,9 +4582,9 @@ ik
 KU
 rF
 sb
-"}
-(4,1,2) = {"
 GJ
+"}
+(5,1,2) = {"
 GJ
 MS
 iH
@@ -4583,9 +4618,9 @@ ik
 KU
 eQ
 sb
-"}
-(5,1,2) = {"
 GJ
+"}
+(6,1,2) = {"
 GJ
 MS
 MS
@@ -4619,45 +4654,45 @@ ik
 KU
 eQ
 sb
-"}
-(6,1,2) = {"
 GJ
-GJ
-MS
-eQ
-eQ
-eQ
-eQ
-MS
-nY
-Nx
-Ys
-Ys
-Ys
-Ys
-Ys
-Ys
-MS
-oJ
-oJ
-oJ
-oJ
-oJ
-oJ
-sb
-eQ
-XJ
-ik
-ik
-VQ
-ik
-ik
-KU
-eQ
-sb
 "}
 (7,1,2) = {"
 GJ
+MS
+eQ
+eQ
+eQ
+eQ
+MS
+nY
+Nx
+Ys
+Ys
+Ys
+Ys
+Ys
+Ys
+MS
+oJ
+oJ
+oJ
+oJ
+oJ
+oJ
+sb
+eQ
+XJ
+ik
+ik
+VQ
+ik
+ik
+KU
+eQ
+sb
+GJ
+"}
+(8,1,2) = {"
 GJ
 MS
 eQ
@@ -4691,9 +4726,9 @@ ik
 KU
 eQ
 sb
-"}
-(8,1,2) = {"
 GJ
+"}
+(9,1,2) = {"
 GJ
 MS
 eQ
@@ -4727,9 +4762,9 @@ rW
 cZ
 QS
 qV
-"}
-(9,1,2) = {"
 GJ
+"}
+(10,1,2) = {"
 GJ
 MS
 eQ
@@ -4763,9 +4798,9 @@ ik
 kX
 ik
 qV
-"}
-(10,1,2) = {"
 GJ
+"}
+(11,1,2) = {"
 GJ
 MS
 eQ
@@ -4799,9 +4834,9 @@ ik
 kX
 hi
 qV
-"}
-(11,1,2) = {"
 GJ
+"}
+(12,1,2) = {"
 GJ
 MS
 eQ
@@ -4835,9 +4870,9 @@ ik
 kX
 ik
 qV
-"}
-(12,1,2) = {"
 GJ
+"}
+(13,1,2) = {"
 GJ
 MS
 eQ
@@ -4871,9 +4906,9 @@ rW
 sk
 Zc
 qV
-"}
-(13,1,2) = {"
 GJ
+"}
+(14,1,2) = {"
 GJ
 MS
 eQ
@@ -4907,9 +4942,9 @@ ik
 KU
 nq
 qV
-"}
-(14,1,2) = {"
 GJ
+"}
+(15,1,2) = {"
 GJ
 MS
 eQ
@@ -4943,9 +4978,9 @@ ik
 KU
 eQ
 ID
-"}
-(15,1,2) = {"
 GJ
+"}
+(16,1,2) = {"
 GJ
 MS
 eQ
@@ -4979,9 +5014,9 @@ ik
 KU
 eQ
 ID
-"}
-(16,1,2) = {"
 GJ
+"}
+(17,1,2) = {"
 GJ
 MS
 eQ
@@ -5015,9 +5050,9 @@ ik
 KU
 eQ
 ID
-"}
-(17,1,2) = {"
 GJ
+"}
+(18,1,2) = {"
 GJ
 MS
 eQ
@@ -5051,9 +5086,9 @@ ik
 KU
 eQ
 ID
-"}
-(18,1,2) = {"
 GJ
+"}
+(19,1,2) = {"
 GJ
 MS
 eQ
@@ -5087,9 +5122,9 @@ HJ
 KU
 eQ
 ID
-"}
-(19,1,2) = {"
 GJ
+"}
+(20,1,2) = {"
 GJ
 MS
 eQ
@@ -5123,9 +5158,9 @@ ik
 KU
 eQ
 ID
-"}
-(20,1,2) = {"
 GJ
+"}
+(21,1,2) = {"
 GJ
 MS
 eQ
@@ -5159,45 +5194,45 @@ ik
 KU
 eQ
 ID
-"}
-(21,1,2) = {"
 GJ
-GJ
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-nY
-nY
-Ys
-Ys
-Ys
-Ys
-Ys
-Ys
-MS
-oJ
-oJ
-oJ
-md
-md
-md
-md
-eQ
-XJ
-ik
-ik
-VQ
-ik
-ik
-KU
-eQ
-ID
 "}
 (22,1,2) = {"
 GJ
+MS
+eQ
+eQ
+eQ
+eQ
+eQ
+nY
+nY
+Ys
+Ys
+Ys
+Ys
+Ys
+Ys
+MS
+oJ
+oJ
+oJ
+md
+md
+md
+md
+eQ
+XJ
+ik
+ik
+VQ
+ik
+ik
+KU
+eQ
+ID
+GJ
+"}
+(23,1,2) = {"
 GJ
 MS
 eQ
@@ -5231,9 +5266,9 @@ ik
 KU
 eQ
 ID
-"}
-(23,1,2) = {"
 GJ
+"}
+(24,1,2) = {"
 GJ
 MS
 MS
@@ -5267,9 +5302,9 @@ ik
 KU
 eQ
 ID
-"}
-(24,1,2) = {"
 GJ
+"}
+(25,1,2) = {"
 GJ
 MS
 eQ
@@ -5303,9 +5338,9 @@ rW
 HO
 eQ
 ID
-"}
-(25,1,2) = {"
 GJ
+"}
+(26,1,2) = {"
 GJ
 MS
 eQ
@@ -5339,9 +5374,9 @@ ik
 KU
 eQ
 ID
-"}
-(26,1,2) = {"
 GJ
+"}
+(27,1,2) = {"
 GJ
 MS
 eQ
@@ -5375,9 +5410,9 @@ ik
 Dr
 AU
 ID
-"}
-(27,1,2) = {"
 GJ
+"}
+(28,1,2) = {"
 GJ
 MS
 eQ
@@ -5411,9 +5446,9 @@ ik
 ik
 ik
 qV
-"}
-(28,1,2) = {"
 GJ
+"}
+(29,1,2) = {"
 GJ
 MS
 eQ
@@ -5447,9 +5482,9 @@ ik
 ik
 ik
 qV
-"}
-(29,1,2) = {"
 GJ
+"}
+(30,1,2) = {"
 GJ
 MS
 eQ
@@ -5483,9 +5518,9 @@ ik
 ik
 ik
 qV
-"}
-(30,1,2) = {"
 GJ
+"}
+(31,1,2) = {"
 GJ
 MS
 eQ
@@ -5519,9 +5554,9 @@ ik
 ik
 ik
 qV
-"}
-(31,1,2) = {"
 GJ
+"}
+(32,1,2) = {"
 GJ
 MS
 eQ
@@ -5555,46 +5590,10 @@ ik
 ik
 ik
 qV
-"}
-(32,1,2) = {"
 GJ
-GJ
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-XJ
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-Hb
-eR
-Ys
-Ys
-Ys
-Ys
-Ys
-eR
-cf
-ty
-ik
-ik
-VQ
-ik
-ik
-ik
-ik
-qV
 "}
 (33,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -5610,13 +5609,13 @@ ik
 ik
 ik
 Hb
-EY
+eR
 Ys
 Ys
 Ys
 Ys
 Ys
-EY
+eR
 cf
 ty
 ik
@@ -5627,9 +5626,45 @@ ik
 ik
 ik
 qV
+GJ
 "}
 (34,1,2) = {"
 GJ
+MS
+eQ
+eQ
+eQ
+eQ
+eQ
+XJ
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+Hb
+EY
+Ys
+Ys
+Ys
+Ys
+Ys
+EY
+cf
+ty
+ik
+ik
+VQ
+ik
+ik
+ik
+ik
+qV
+GJ
+"}
+(35,1,2) = {"
 GJ
 MS
 eQ
@@ -5663,9 +5698,9 @@ ik
 ik
 ik
 qV
-"}
-(35,1,2) = {"
 GJ
+"}
+(36,1,2) = {"
 GJ
 MS
 eQ
@@ -5699,9 +5734,9 @@ ik
 so
 gS
 qV
-"}
-(36,1,2) = {"
 GJ
+"}
+(37,1,2) = {"
 GJ
 MS
 eQ
@@ -5735,46 +5770,10 @@ Ak
 cZ
 QS
 qV
-"}
-(37,1,2) = {"
 GJ
-GJ
-MS
-Hd
-Hd
-Hd
-Hd
-Hd
-Hd
-Hd
-Hd
-Hd
-Hd
-XJ
-ik
-ik
-ov
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ik
-ov
-ik
-ik
-VQ
-ik
-ik
-ov
-ik
-qV
 "}
 (38,1,2) = {"
 GJ
-GJ
 MS
 Hd
 Hd
@@ -5790,14 +5789,14 @@ XJ
 ik
 ik
 ov
-Qi
-Qi
-Qi
-Qi
-Qi
-Qi
-Qi
-Qi
+ik
+ik
+ik
+ik
+ik
+ik
+ik
+ik
 ov
 ik
 ik
@@ -5805,11 +5804,47 @@ VQ
 ik
 ik
 ov
-Qi
+ik
 qV
+GJ
 "}
 (39,1,2) = {"
 GJ
+MS
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+Hd
+XJ
+ik
+ik
+ov
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+ov
+ik
+ik
+VQ
+ik
+ik
+ov
+Qi
+qV
+GJ
+"}
+(40,1,2) = {"
 GJ
 MS
 eQ
@@ -5843,9 +5878,9 @@ ik
 ov
 ik
 qV
-"}
-(40,1,2) = {"
 GJ
+"}
+(41,1,2) = {"
 GJ
 MS
 eQ
@@ -5879,9 +5914,9 @@ rW
 sk
 Zc
 qV
-"}
-(41,1,2) = {"
 GJ
+"}
+(42,1,2) = {"
 GJ
 MS
 eQ
@@ -5915,46 +5950,10 @@ ik
 KU
 nq
 qV
-"}
-(42,1,2) = {"
 GJ
-GJ
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-Hd
-Hd
-XJ
-ik
-ik
-Hb
-MS
-MS
-eR
-eR
-eR
-MS
-MS
-cf
-ty
-ik
-ik
-VQ
-ik
-ik
-KU
-eQ
-XM
 "}
 (43,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -5971,11 +5970,11 @@ ik
 ik
 Hb
 MS
-Ys
-Ys
-Ys
-Ys
-Ys
+MS
+eR
+eR
+eR
+MS
 MS
 cf
 ty
@@ -5987,10 +5986,10 @@ ik
 KU
 eQ
 XM
+GJ
 "}
 (44,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -6023,10 +6022,10 @@ ik
 KU
 eQ
 XM
+GJ
 "}
 (45,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -6059,10 +6058,10 @@ ik
 KU
 eQ
 XM
+GJ
 "}
 (46,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -6095,10 +6094,10 @@ ik
 KU
 eQ
 XM
+GJ
 "}
 (47,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -6131,9 +6130,45 @@ ik
 KU
 eQ
 XM
+GJ
 "}
 (48,1,2) = {"
 GJ
+MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
+ik
+ik
+Hb
+MS
+Ys
+Ys
+Ys
+Ys
+Ys
+MS
+cf
+ty
+ik
+ik
+VQ
+ik
+ik
+KU
+eQ
+XM
+GJ
+"}
+(49,1,2) = {"
 GJ
 MS
 eQ
@@ -6167,9 +6202,9 @@ ik
 KU
 eQ
 XM
-"}
-(49,1,2) = {"
 GJ
+"}
+(50,1,2) = {"
 GJ
 MS
 eQ
@@ -6203,9 +6238,9 @@ ik
 KU
 Ct
 XM
-"}
-(50,1,2) = {"
 GJ
+"}
+(51,1,2) = {"
 GJ
 MS
 eQ
@@ -6239,9 +6274,9 @@ ik
 KU
 eQ
 XM
-"}
-(51,1,2) = {"
 GJ
+"}
+(52,1,2) = {"
 GJ
 MS
 eQ
@@ -6275,9 +6310,9 @@ HJ
 KU
 eQ
 XM
-"}
-(52,1,2) = {"
 GJ
+"}
+(53,1,2) = {"
 GJ
 MS
 eQ
@@ -6311,46 +6346,10 @@ ik
 KU
 eQ
 XM
-"}
-(53,1,2) = {"
 GJ
-GJ
-MS
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-eQ
-Hd
-Hd
-XJ
-ik
-ik
-Hb
-MS
-Ys
-Ys
-Ys
-Ys
-Ys
-MS
-cf
-ty
-ik
-ik
-VQ
-ik
-ik
-KU
-eQ
-XM
 "}
 (54,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -6383,10 +6382,10 @@ ik
 KU
 eQ
 XM
+GJ
 "}
 (55,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -6419,10 +6418,10 @@ ik
 KU
 eQ
 XM
+GJ
 "}
 (56,1,2) = {"
 GJ
-GJ
 MS
 eQ
 eQ
@@ -6455,9 +6454,45 @@ ik
 KU
 eQ
 XM
+GJ
 "}
 (57,1,2) = {"
 GJ
+MS
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+Hd
+Hd
+XJ
+ik
+ik
+Hb
+MS
+Ys
+Ys
+Ys
+Ys
+Ys
+MS
+cf
+ty
+ik
+ik
+VQ
+ik
+ik
+KU
+eQ
+XM
+GJ
+"}
+(58,1,2) = {"
 GJ
 MS
 eQ
@@ -6491,9 +6526,9 @@ ik
 KU
 eQ
 XM
-"}
-(58,1,2) = {"
 GJ
+"}
+(59,1,2) = {"
 GJ
 MS
 eQ
@@ -6527,9 +6562,9 @@ ik
 KU
 eQ
 XM
-"}
-(59,1,2) = {"
 GJ
+"}
+(60,1,2) = {"
 GJ
 MS
 eQ
@@ -6563,9 +6598,9 @@ ik
 KU
 Ct
 XM
-"}
-(60,1,2) = {"
 GJ
+"}
+(61,1,2) = {"
 GJ
 MS
 eQ
@@ -6599,9 +6634,9 @@ ik
 KU
 eQ
 XM
-"}
-(61,1,2) = {"
 GJ
+"}
+(62,1,2) = {"
 GJ
 MS
 eQ
@@ -6635,9 +6670,9 @@ ik
 KU
 eQ
 XM
-"}
-(62,1,2) = {"
 GJ
+"}
+(63,1,2) = {"
 GJ
 MS
 eQ
@@ -6671,9 +6706,9 @@ rW
 HO
 eQ
 XM
-"}
-(63,1,2) = {"
 GJ
+"}
+(64,1,2) = {"
 GJ
 MS
 eQ
@@ -6707,9 +6742,9 @@ ik
 KU
 Ko
 XM
-"}
-(64,1,2) = {"
 GJ
+"}
+(65,1,2) = {"
 GJ
 MS
 MS
@@ -6743,41 +6778,6 @@ qV
 xh
 XM
 XM
-"}
-(65,1,2) = {"
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
 GJ
 "}
 (66,1,2) = {"

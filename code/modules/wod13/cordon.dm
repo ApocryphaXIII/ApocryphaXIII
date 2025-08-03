@@ -46,11 +46,13 @@
 /turf/cordon/Adjacent(atom/neighbor, atom/target, atom/movable/mover)
 	return FALSE
 
+/*
 /turf/cordon/Bumped(atom/movable/bumped_atom)
 	. = ..()
 
-	//if(HAS_TRAIT(bumped_atom, TRAIT_FREE_HYPERSPACE_SOFTCORDON_MOVEMENT)) //we could feasibly reach the border, so just don't
-	//	dump_in_space(bumped_atom)
+	if(HAS_TRAIT(bumped_atom, TRAIT_FREE_HYPERSPACE_SOFTCORDON_MOVEMENT)) //we could feasibly reach the border, so just don't
+		dump_in_space(bumped_atom)
+*/
 
 /// Area used in conjunction with the cordon turf to create a fully functioning world border.
 /area/misc/cordon

@@ -190,6 +190,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 	seer = M
 	add_hud_to(seer)
 
+//penis
 /datum/atom_hud/alternate_appearance/basic/the_word
 
 /datum/atom_hud/alternate_appearance/basic/the_word/New()

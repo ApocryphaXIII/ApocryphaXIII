@@ -1,9 +1,4 @@
-// Cellular Emporium -
-// The place where imbueds go to purchase biological weaponry.
 /datum/imbued_menu
-	/// The name of the emporium - why does it need a name? Dunno
-	var/name = "imbued edge menu"
-	/// The imbued who owns this emporium
 	var/datum/antagonist/imbued/imbued
 
 /datum/imbued_menu/New(my_imbued)
@@ -25,18 +20,18 @@
 /datum/imbued_menu/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "ImbuedMenu", name)
+		ui = new(user, src, "ImbuedMenu", "imbued edge menu")
 		ui.open()
 
 /datum/imbued_menu/ui_static_data(mob/user)
 	var/list/data = list()
-/*
+
 	var/static/list/abilities
 	if(isnull(abilities))
 		abilities = list()
-		for(var/datum/action/imbued/ability_path as anything in imbued.all_powers)
+		for(var/datum/action/imbued_edge/ability_path as anything in imbued.all_powers)
 
-			var/dna_cost = initial(ability_path.dna_cost)
+			var/dna_cost = initial(ability_path.edge_dots)
 
 			if(dna_cost < 0) // 0 = free, but negatives are invalid
 				continue
@@ -47,28 +42,25 @@
 			ability_data["path"] = ability_path
 			ability_data["helptext"] = initial(ability_path.helptext)
 			ability_data["genetic_point_required"] = dna_cost
-			ability_data["absorbs_required"] = initial(ability_path.req_absorbs) // compares against imbued true_absorbs
-			ability_data["dna_required"] = initial(ability_path.req_dna) // compares against imbued absorbed_count
+			//ability_data["absorbs_required"] = initial(ability_path.req_absorbs) // compares against imbued true_absorbs
+			//ability_data["dna_required"] = initial(ability_path.req_dna) // compares against imbued absorbed_count
 
 			abilities += list(ability_data)
 
 		// Sorts abilities alphabetically by default
-		sortTim(abilities, /proc/cmp_assoc_list_name)
+		//sortTim(abilities, /proc/cmp_assoc_list_name)
 
 	data["abilities"] = abilities
-*/
 	return data
 
 /datum/imbued_menu/ui_data(mob/user)
 	var/list/data = list()
 
-/*
 	data["can_readapt"] = imbued.can_respec
-	data["owned_abilities"] = assoc_to_keys(imbued.purchased_powers)
-	data["genetic_points_count"] = imbued.genetic_points
-	data["absorb_count"] = imbued.true_absorbs
-	data["dna_count"] = imbued.absorbed_count
-*/
+	//data["owned_abilities"] = assoc_to_keys(imbued.purchased_powers)
+	data["xp"] = imbued?.owner?.current?:client?:prefs?:player_experience
+	//data["absorb_count"] = imbued.true_absorbs
+	//data["dna_count"] = imbued.absorbed_count
 
 	return data
 
@@ -76,7 +68,6 @@
 	. = ..()
 	if(.)
 		return
-/*
 	switch(action)
 		if("readapt")
 			if(imbued.can_respec)
@@ -85,7 +76,6 @@
 		if("evolve")
 			// purchase_power sanity checks stuff like typepath, DNA, and absorbs for us.
 			imbued.purchase_power(text2path(params["path"]))
-*/
 
 	return TRUE
 

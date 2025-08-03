@@ -8,6 +8,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	var/tool_speed = 50
 	var/remaining_uses = 3
+	var/chisel_type = /obj/structure/chisel_message
 
 /obj/item/soapstone/Initialize(mapload)
 	. = ..()
@@ -60,7 +61,7 @@
 		if(!locate(/obj/structure/chisel_message) in T)
 			user.visible_message("<span class='notice'>[user] leaves a message for future spacemen!</span>", "<span class='notice'>You engrave a message into [T]!</span>", "<span class='hear'>You hear a chipping sound.</span>")
 			playsound(loc, 'sound/items/gavel.ogg', 50, TRUE, -1)
-			var/obj/structure/chisel_message/M = new(T)
+			var/obj/structure/chisel_message/M = new chisel_type(T)
 			M.register(user, message)
 			remove_use()
 

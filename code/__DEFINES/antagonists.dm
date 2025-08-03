@@ -61,11 +61,6 @@
 #define CONTRACT_UPLINK_PAGE_CONTRACTS "CONTRACTS"
 #define CONTRACT_UPLINK_PAGE_HUB "HUB"
 
-/// Checks if the given mob is a imbued
-#define IS_IMBUED(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/imbued))
-/// Imbued abilities with XP cost = this are innately given to all imbued
-#define IMBUED_POWER_INNATE -1
-
 ///It is faster as a macro than a proc
 #define IS_HERETIC(mob) (mob.mind?.has_antag_datum(/datum/antagonist/heretic))
 #define IS_HERETIC_MONSTER(mob) (mob.mind?.has_antag_datum(/datum/antagonist/heretic_monster))

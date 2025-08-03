@@ -1,4 +1,9 @@
-#warn file needs to be renamed and moved to the define folder.
+/// Checks if the given mob is a imbued
+#define IS_IMBUED(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/imbued))
+
+// Imbued trait source
+#define IMBUED_TRAIT "imbued_trait"
+
 #define VIRTUE_ZEAL "zeal"
 #define VIRTUE_MERCY "mercy"
 #define VIRTUE_VISION "vision"
@@ -24,3 +29,6 @@
 #define EDGE_XP_COST 20
 
 #define EDGES_PER_CREED 5
+
+/// Imbued abilities with XP cost = this are innately given to all imbued
+#define IMBUED_POWER_INNATE -1

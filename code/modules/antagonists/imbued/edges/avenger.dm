@@ -19,7 +19,7 @@
 
 /obj/item/melee/imbued_cleave/Initialize(mapload)
 	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)
+	ADD_TRAIT(src, TRAIT_NODROP, IMBUED_TRAIT)
 
 /datum/action/imbued_edge/impact
 	name = "Impact"
@@ -27,21 +27,26 @@
 	edge_dots = 1
 
 /datum/action/imbued_edge/trail
+	name = "Trail"
 	related_creed = CREED_AVENGER
 	edge_dots = 2
 
 /datum/action/imbued_edge/smoulder
+	name = "Smoulder"
 	related_creed = CREED_AVENGER
 	edge_dots = 3
 
 /datum/action/imbued_edge/firewalk
+	name = "Firewalk"
 	related_creed = CREED_AVENGER
 	edge_dots = 4
 
 /datum/action/imbued_edge/surge
+	name = "Surge"
 	related_creed = CREED_AVENGER
 	edge_dots = 4
 
 /datum/action/imbued_edge/smite
+	name = "Smite"
 	related_creed = CREED_AVENGER
 	edge_dots = 5

@@ -221,6 +221,10 @@
 	return TRUE
 
 #warn TODO: Move
+/obj/item/soapstone/the_word
+	item_flags = DROPDEL | ABSTRACT | HAND_ITEM
+	chisel_type = /obj/structure/chisel_message/the_word
+
 /obj/structure/chisel_message/the_word
 
 /obj/structure/chisel_message/the_word/Initialize(mapload)

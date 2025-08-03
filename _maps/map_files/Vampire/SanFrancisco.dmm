@@ -7421,8 +7421,8 @@
 /obj/structure/vampdoor/wood/theatre{
 	dir = 4
 	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/theatre)
+/turf/open/floor/plating/parquetry,
+/area/vtm/interior/millennium_tower/ventrue)
 "bNb" = (
 /obj/effect/landmark/start/garou/glade/council,
 /turf/open/floor/plating/vampgrass,
@@ -10239,11 +10239,21 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/jazzclub)
 "cwi" = (
-/obj/matrix{
-	alpha = 0
+/obj/structure/vampdoor/wood{
+	dir = 8;
+	lock_id = "ventrue";
+	locked = 1;
+	lockpick_difficulty = 8;
+	name = "Ventrue Office"
 	},
-/turf/closed/wall/vampwall/rich,
-/area/vtm)
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 8
+	},
+/turf/open/floor/carpet/purple,
+/area/vtm/interior/millennium_tower/ventrue)
 "cwm" = (
 /obj/structure/fence/corner,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -28991,6 +29001,7 @@
 	name = "board room"
 	},
 /obj/effect/turf_decal/siding/thinplating/dark,
+/turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
 "hdN" = (
 /obj/structure/filingcabinet/security,
@@ -37381,11 +37392,7 @@
 	name = "old note";
 	desc = "Old and crumpled."
 	},
-/obj/item/vamp/keys{
-	accesslocks = list("manormalk1");
-	pixel_x = 4;
-	pixel_y = 12
-	},
+/obj/item/vamp/keys/voivodate/master,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/voivodate/sanctum)
 "jiR" = (
@@ -57511,11 +57518,11 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/bianchiBank)
 "odA" = (
-/obj/matrix{
-	alpha = 0
+/obj/machinery/light/prince{
+	dir = 8
 	},
-/turf/open/space/basic,
-/area/vtm)
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/voivodate)
 "odD" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/parquetry/old,
@@ -60262,11 +60269,8 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/giovanni)
 "oJV" = (
-/obj/structure/vampdoor/reinf{
-	dir = 4;
-	locked = 1;
-	lockpick_difficulty = 12;
-	lock_id = list("manormalk1", "seer_voivodate")
+/obj/structure/vampdoor/reinf/voivodate{
+	dir = 4
 	},
 /turf/open/floor/plating/stone,
 /area/vtm/interior/voivodate/sanctum)
@@ -74431,6 +74435,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
+/turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
 "sbK" = (
 /obj/structure/vampdoor/children_of_gaia{
@@ -75860,6 +75865,7 @@
 	lockpick_difficulty = 14;
 	name = "board room"
 	},
+/turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
 "sun" = (
 /obj/structure/methlab,
@@ -83379,6 +83385,7 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 8
 	},
+/turf/open/floor/carpet/purple,
 /area/vtm/interior/millennium_tower/ventrue)
 "usr" = (
 /obj/item/spine,
@@ -85425,6 +85432,7 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 4
 	},
+/turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
 "uUI" = (
 /obj/structure/flora/rock/jungle,
@@ -86835,6 +86843,7 @@
 	lockpick_difficulty = 8;
 	name = "Ventrue Office"
 	},
+/turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
 "vlG" = (
 /obj/structure/table/wood,
@@ -256941,12 +256950,12 @@ ntq
 rtk
 rtk
 iNI
-raj
+cwi
 rtk
 rtk
 rtk
 iNI
-raj
+cwi
 rtk
 iNI
 wYX
@@ -468283,11 +468292,11 @@ dvN
 mvp
 mvp
 mvp
+twn
 eKC
 eKC
 eKC
 twn
-cwi
 mvp
 mvp
 dvN
@@ -470579,7 +470588,7 @@ daL
 vjf
 sfq
 hmr
-nWs
+odA
 mHc
 daL
 ajV
@@ -479342,7 +479351,7 @@ onS
 nkL
 nkL
 nkL
-odA
+twn
 mvp
 dhc
 dhc
@@ -479599,7 +479608,7 @@ rwD
 vQV
 vQV
 vQV
-odA
+eKC
 mvp
 dhc
 dhc
@@ -479856,7 +479865,7 @@ cnd
 cnd
 cnd
 cnd
-odA
+eKC
 mvp
 dhc
 dhc
@@ -480113,7 +480122,7 @@ kej
 kej
 kej
 kej
-odA
+eKC
 mvp
 dhc
 dhc
@@ -480370,7 +480379,7 @@ nkL
 nkL
 nkL
 nkL
-odA
+twn
 mvp
 dhc
 dhc

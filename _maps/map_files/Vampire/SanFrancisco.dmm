@@ -19461,7 +19461,7 @@
 "eOQ" = (
 /obj/structure/railing,
 /turf/open/floor/plating/parquetry/rich,
-/area/vtm/jazzclub)
+/area/vtm/interior/theatre)
 "eOR" = (
 /obj/effect/turf_decal/caution/stand_clear/red{
 	dir = 8
@@ -28828,6 +28828,7 @@
 /obj/structure/vampdoor/wood/jazz_club{
 	dir = 4
 	},
+/turf/open/floor/plating/industrial/factory,
 /area/vtm/jazzclub)
 "hbc" = (
 /obj/effect/turf_decal/bordur{
@@ -60116,6 +60117,7 @@
 	lockpick_difficulty = 14;
 	name = "board room"
 	},
+/turf/open/floor/plating/industrial/factory,
 /area/vtm/jazzclub)
 "oKF" = (
 /obj/structure/table/wood,

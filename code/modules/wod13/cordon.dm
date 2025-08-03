@@ -65,7 +65,7 @@
 	. = ..()
 	for(var/mob/living/enterer as anything in arrived.get_all_contents_type(/mob/living))
 		to_chat(enterer, span_userdanger("This was a bad idea..."))
-		enterer.dust(TRUE, FALSE, TRUE)
+		enterer.move_to_error_room()
 
 /// This type of cordon will block ghosts from passing through it. Useful for stuff like Away Missions, where you feasibly want to block ghosts from entering to keep a certain map section a secret.
 /turf/cordon/secret

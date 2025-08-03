@@ -1,0 +1,58 @@
+Welcome to Apocrypha.
+<br><br>
+Please read our terms of service/privacy policy.
+<br><br>
+<i>If you have already agreed and are seeing this message, it means our terms of service have changed.  You will need to agree to these new terms of service to continue playing.</i>
+<br><br>
+In compliance with the EU's GDPR (General Data Protection Regulation), we require your consent in order to process and log your account information.
+
+<h1>Data Collection</h1>
+<h2>Real World Verification</h2>
+Apocrypha is an adult environment with heavy themes of violence, drug use, and sex. To keep this environment safe for adults, and to prevent harm to underage persons, we require a real life age verification check. Users under the legal age of consent in the United States (18 years of age) are not permitted to use or interact with Apocrypha's services or community. Upon application to the server you are required to provide photographic evidence of real world ID, which is logged as a collation of "Date of Birth," "Governing Authority that Issued the ID," and "CKEY", alongside a direct link to the person's age verification application. Images of users' real life ID are never stored by Apocrypha staff, and are removed as soon as the relevant information has been recorded.
+<br>
+Users who apply via prior age verification elsewhere are required to supply the above mentioned identifying information themselves, and must have said verification validated by a member of staff. This information is appended with a note of what server has provided the verification.
+
+<h2>Real World Data Storage</h2>
+By submitting for verification and using the services provided by Apocrypha, you agree to the storage of collected Real World Identifying Information. This data is accessible by Apocrypha Administrators, Head Administrators, Host, and Server Lead, with the server taking effort to keep said data protected and private. This data, currently, is being stored on Discord chat services, but may be moved to another platform or database.
+
+<h2>Data Processing/Control</h2>
+In order to provide services and establish client connections, your IP address, CKEY, and CID are logged upon joining the server. As part of our administrative guidelines, as well as to ensure appropriate behaviour in line with our server rules, we also securely log details regarding your play period (chat logs, player inputs, connection time, notes, BYOND client details, and persistent user ID). This data is accessible to server staff in performance of these functions.  Where permitted by technical considerations, this data is encrypted both at rest and in transit.
+
+<h2>Data Sharing</h2>
+Your information may be shared with third parties in order to prevent fraud, protect the interests of yourself or other users, or to comply with lawful requests from government institutions. In these situations, the minimum amount of information required for these purposes will be shared.
+<br>
+In terms of Real World Identifying Information described above (Date of Birth, CKEY, and the Issuing Government Body), may be shared with partnered services through legitimate requests for help verifying a user's age. This is to both ensure the safety adults utilizing Apocrypha's services, and to prevent harm to minors otherwise trying to illegitimately utilize adult services.
+
+<h2>Data Profiling</h2>
+In order to provide our users with a controlled play experience, we make use of profiling methods performed by server staff and automated systems. This profiling consists of logging problematic behaviors (via the notes and ban system) to better facilitate administrative decisions. Profiled data is used to inform administrative actions and serves as a predictor/record of player behaviour.
+<br>
+End-user details regarding your BYOND client configuration, system configuration, browser settings, and operating system may be persistently catalogued in the interests of preventing fraudulent activity (user impersonation). Additionally, data collected by Apocrypha staff in the Discord service may be used for the purposes of identifying users across services.
+
+<h2>Cookies</h2>
+Cookies are used to uniquely identify your account, to save your chat preferences, and to prevent user impersonation. Due to application constraints and security considerations, we are unable to serve users who don't accept cookies.
+
+<h1>Consent</h1>
+<h2>Data Transfer Out of Country</h2>
+You consent to the aforementioned information being transferred outside of your resident country to be held on Apocrypha's servers. Though measures are taken to ensure client data is protected, data protection standards in the server owner's resident country (United States), as well as in the server box's resident country (Germany), may differ from the level of protection afforded in your own country.
+
+<h2>Why Out of Country?</h2>
+The physical location Apocrypha's server box is in a data center in Germany. Your data may be processed by third parties as it transmitted to user and administrator clients out of country. Real World Identifying Information may need to be transferred out of country to be given over to government institutions via legal requests.
+
+<h2>Right to Erasure</h2>
+You recognize that, due to the nature of the information collected, collected data may be retained indefinitely for the purposes of preventing fraudulent activity from occurring. Such fraudulent activity includes, but is not limited to: falsification of personal information, falsification of login credentials, and falsification of hardware details for ban avoidance purposes. This data includes, but is not limited to, game logs, IP and hardware information, as well as login information.
+<br>
+In terms of Real World Identifying Information, you acknowledge that your data may be held indefinitely. Confirmation of your age verification data will be held and may be shared with partnered services.
+
+<h2>Right to Withdraw Consent/Request Information</h2>
+You recognize that you are able to withdraw your consent at any time and optionally request your personal information. You understand that in order to request this information you must reasonably prove that you are a resident of an EU country. In doing so, you acknowledge that you forfeit the ability to access any services offered by Paradise station in the future whatsoever after the date of disclosure. Furthermore, you acknowledge that failure to provide consent or withdrawal of consent, irrespective of information requests, will result in a cessation of services.
+<br>
+Requests for real world identifying information, saved character, personal game statistics, and game preference data will not result in forfeiture of access to the service.
+<br>
+You may withdraw your consent at any time by re-opening the Terms of Service in-game via the OOC tab and selecting "Withdraw consent."
+
+<h2>Age</h2>
+Your age is logged to ensure the patronage of Apocrypha stays exclusive to adult persons. This service is intended only for users 18 years and above.
+<br>
+
+<h2>License</h2>
+Apocrypha Server runs a version of the SS13 game named "Apocrypha." To download our code, click the "Github" button in game, then use "clone or download." The exact code for the specific round you are playing can be found by using the "Get Revision Info" verb in the OOC tab.

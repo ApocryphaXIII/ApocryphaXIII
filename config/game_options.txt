@@ -549,14 +549,21 @@ ROUNDSTART_TRAITS
 ## Uncomment to disable human moods.
 DISABLE_HUMAN_MOOD
 
-## Enable night shifts ##
+## Enable night shifts. CURRENTLY BROKEN ##
 #ENABLE_NIGHT_SHIFTS
+
+## Sets shift time to server time at roundstart. Overridden by RANDOMIZE_SHIFT_TIME or SHIFT_TIME_START##
+#SHIFT_TIME_REALTIME
 
 ## Enable randomized shift start times##
 #RANDOMIZE_SHIFT_TIME
 
-## Sets shift time to server time at roundstart. Overridden by RANDOMIZE_SHIFT_TIME ##
-SHIFT_TIME_REALTIME
+## Number between 0 to 24. Time in hoours shift time is set to at round start##
+#SHIFT_TIME_START 19
+
+## In deciseconds
+#TIME_UNTILL_DAY 198000
+#TIME_UNTILL_ROUNDEND 216000
 
 ## A cap on how many monkeys may be created via monkey cubes
 MONKEYCAP 64

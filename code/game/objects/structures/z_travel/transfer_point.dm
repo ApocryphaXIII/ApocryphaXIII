@@ -30,7 +30,6 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	RegisterSignal(loc, COMSIG_ATOM_ENTERED, PROC_REF(entered_turf))
 
 /obj/transfer_point_vamp/Bumped(atom/movable/arrived)
-	. = ..()
 	transfer_atom(arrived)
 
 //New TG code changes the arg order for this.

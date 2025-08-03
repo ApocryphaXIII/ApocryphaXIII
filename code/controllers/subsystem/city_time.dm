@@ -1,36 +1,29 @@
 SUBSYSTEM_DEF(city_time)
 	name = "City Time"
 	init_order = INIT_ORDER_DEFAULT
-	wait = 200
+	wait = 15 SECONDS
 	priority = FIRE_PRIORITY_DEFAULT
 
-	var/hour = 21
-	var/minutes = 0
+	var/first_warning = FALSE
+	var/second_warning = FALSE
+	var/time_till_daytime = 5.5 HOURS
+	var/daytime_started = FALSE
 
-	var/timeofnight = "21:00"
+	var/time_till_roundend = 6.5 HOURS
+	var/roundend_started = FALSE
 
-/proc/get_next_hour(number)
-	if(number == 23)
-		return 0
-	else
-		return number+1
+	var/last_xp_drop = 0
+	/// Time between xp drops in INGAME time
+	var/time_between_xp_drops = 1 HOURS
 
-/proc/get_watch_number(number)
-	if(number < 10)
-		return "0[number]"
-	else
-		return "[number]"
+/datum/controller/subsystem/city_time/Initialize(start_timeofday)
+	. = ..()
+	time_till_daytime = CONFIG_GET(number/time_till_day)
+	time_till_roundend = CONFIG_GET(number/time_till_roundend)
 
 /datum/controller/subsystem/city_time/fire()
-	if(minutes == 59)
-		minutes = 0
-		hour =  get_next_hour(hour)
-	else
-		minutes = max(0, minutes+1)
-
-	timeofnight = "[get_watch_number(hour)]:[get_watch_number(minutes)]"
-	// TFN EDIT REFACTOR START
-	if(minutes == 0)
+	if(last_xp_drop + time_between_xp_drops < station_time_passed())
+		last_xp_drop = station_time_passed()
 		for(var/mob/living/carbon/werewolf/W in GLOB.player_list)
 			if(W?.stat != DEAD && W?.key)
 				var/datum/preferences/char_sheet = GLOB.preferences_datums[ckey(W.key)]
@@ -64,23 +57,34 @@ SUBSYSTEM_DEF(city_time)
 					char_sheet.save_preferences()
 					char_sheet.save_character()
 
-	if(hour == 5 && minutes == 30)
+	if(station_time_passed() > time_till_daytime - 30 MINUTES && !first_warning)
+		first_warning = TRUE
 		to_chat(world, "<span class='ghostalert'>The night is ending...</span>")
 
-	if(hour == 5 && minutes == 45)
+	if(station_time_passed() > time_till_daytime - 15 MINUTES && !second_warning)
+		second_warning = TRUE
 		to_chat(world, "<span class='ghostalert'>First rays of the sun illuminate the sky...</span>")
 
-	if(hour == 6 && minutes == 0)
+	if(station_time_passed() > time_till_daytime && !daytime_started)
+		daytime_started = TRUE
 		to_chat(world, "<span class='ghostalert'>THE NIGHT IS OVER.</span>")
+
+	if(station_time_passed() > time_till_roundend && !roundend_started)
+		roundend_started = TRUE
 		SSticker.force_ending = 1
 		SSticker.current_state = GAME_STATE_FINISHED
 		toggle_ooc(TRUE) // Turn it on
 		toggle_dooc(TRUE)
 		SSticker.declare_completion(SSticker.force_ending)
 		Master.SetRunLevel(RUNLEVEL_POSTGAME)
+
+	if(daytime_started)
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			var/area/vtm/V = get_area(H)
-			if(iskindred(H) && V.upper)
-				H.death()
-			if(iscathayan(H) && V.upper)
-				H.death()
+			if(!istype(V) || !V?.upper)
+				continue
+			if(iskindred(H) || iscathayan(H))
+				if(((H.morality_path.score >= 10) && (H.morality_path.alignment == MORALITY_HUMANITY)))
+					continue
+				to_chat(H, span_danger("THE SUN SEARS YOUR FLESH"))
+				H.apply_damage(50, BURN)

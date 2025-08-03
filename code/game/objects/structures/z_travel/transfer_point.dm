@@ -61,7 +61,7 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 
 /obj/transfer_point_vamp/voivodate
 	name = "voivodate transfer point"
-	density = 0
+	density = 1
 	id = "estate_1"
 
 /obj/transfer_point_vamp/voivodate/one

@@ -86,7 +86,7 @@
 #define EXP_TYPE_SERVICES   "City Services"
 #define EXP_TYPE_CLINIC   "St. John's Clinic"
 #define EXP_TYPE_GIOVANNI   "Giovanni Family"
-#define EXP_TYPE_TZIMISCE   "Tzimisce Mansion"
+#define EXP_TYPE_VOIVODATE   "Voivodate"
 #define EXP_TYPE_WAREHOUSE      "Warehouse"
 #define EXP_TYPE_NATIONAL_SECURITY      "National Security"
 #define EXP_TYPE_PAINTED_CITY      "Sept of the Painted City"

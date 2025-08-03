@@ -394,9 +394,9 @@
 	set desc="Set time for round to end"
 	set name="Set End Time"
 
-	var/newtime = input("Set a new time for round to end in seconds","Set End Time",round(SScity_time.time_till_roundend/10)) as num|null
+	var/newtime = input("Set a new time for round to end in minutes","Set End Time",round(SScity_time.time_till_roundend/600)) as num|null
 	if(newtime)
-		SScity_time.time_till_roundend = newtime*10
+		SScity_time.time_till_roundend = newtime*600
 		log_admin("[key_name(usr)] set end time.")
 		message_admins("[key_name_admin(usr)] has set end time to [SScity_time.time_till_roundend]/[DisplayTimeText(SScity_time.time_till_roundend)].")
 
@@ -405,9 +405,9 @@
 	set desc="Set time for day to start"
 	set name="Set Day Time"
 
-	var/newtime = input("Set a new time for daytime to start in seconds","Set End Time",round(SScity_time.time_till_daytime/10)) as num|null
+	var/newtime = input("Set a new time for daytime to start in minutes","Set End Time",round(SScity_time.time_till_daytime/600)) as num|null
 	if(newtime)
-		SScity_time.time_till_daytime = newtime*10
+		SScity_time.time_till_daytime = newtime*600
 		log_admin("[key_name(usr)] set day time.")
 		message_admins("[key_name_admin(usr)] has set day time to [SScity_time.time_till_daytime]/[DisplayTimeText(SScity_time.time_till_daytime)].")
 

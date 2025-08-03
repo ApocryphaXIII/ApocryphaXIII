@@ -11,6 +11,7 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	var/obj/transfer_point_vamp/exit
 	var/id = "unallocated"
+	var/one_way = FALSE
 	COOLDOWN_DECLARE(tele_cooldown)
 
 /obj/transfer_point_vamp/Initialize()
@@ -37,12 +38,15 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	transfer_atom(arrived)
 
 /obj/transfer_point_vamp/proc/transfer_atom(atom/movable/arrived)
-	if(!exit || !COOLDOWN_FINISHED(src, tele_cooldown))
+	if(!exit || one_way || !COOLDOWN_FINISHED(src, tele_cooldown))
 		return
 	COOLDOWN_START(src, tele_cooldown, 0.25 SECONDS)
 	COOLDOWN_START(exit, tele_cooldown, 0.25 SECONDS)
 	var/turf/T = get_step(exit, get_dir(arrived, src))
-	arrived.forceMove(T)
+	if(T && !T.density)
+		arrived.forceMove(T)
+	else
+		arrived.forceMove(get_turf(exit))
 
 /obj/transfer_point_vamp/backrooms
 	id = "backrooms"
@@ -50,6 +54,7 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 
 /obj/transfer_point_vamp/backrooms/map
 	density = 0
+	one_way = TRUE
 
 /obj/transfer_point_vamp/umbral
 	name = "portal"

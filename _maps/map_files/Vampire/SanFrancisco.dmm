@@ -3092,6 +3092,12 @@
 	},
 /turf/open/floor/carpet/vamp/purplegold,
 /area/vtm/cabaret)
+"aKt" = (
+/obj/machinery/light/prince{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/voivodate)
 "aKu" = (
 /obj/effect/decal/wallpaper/stone,
 /turf/closed/wall/vampwall/city,
@@ -3350,11 +3356,7 @@
 /obj/effect/turf_decal/bordur/corner{
 	dir = 8
 	},
-/obj/structure/vampfence/rich{
-	alpha = 155;
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/vampfence/rich,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm)
 "aNd" = (
@@ -12512,22 +12514,6 @@
 "cYW" = (
 /turf/open/floor/plating/toilet/clinic,
 /area/vtm/interior)
-"cYX" = (
-/obj/structure/vampdoor/wood{
-	dir = 8;
-	lock_id = "ventrue";
-	locked = 1;
-	lockpick_difficulty = 8;
-	name = "Ventrue Office"
-	},
-/obj/effect/turf_decal/siding/wideplating/dark{
-	dir = 4
-	},
-/obj/effect/turf_decal/siding/wideplating/dark{
-	dir = 8
-	},
-/turf/open/floor/carpet/purple,
-/area/vtm/interior/millennium_tower/ventrue)
 "cZf" = (
 /obj/item/dice/fudge,
 /turf/open/floor/carpet/vamp/greengold,
@@ -13658,7 +13644,6 @@
 	dir = 1
 	},
 /obj/structure/vampfence/rich{
-	alpha = 155;
 	dir = 4;
 	pixel_y = 16
 	},
@@ -25001,11 +24986,7 @@
 /obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
-/obj/structure/vampfence/rich{
-	alpha = 155;
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/vampfence/rich,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm)
 "gge" = (
@@ -43605,6 +43586,10 @@
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior/police)
+"kKM" = (
+/mob/living/simple_animal/pet/penguin/emperor/shamebrero,
+/turf/open/floor/carpet,
+/area/space)
 "kKN" = (
 /obj/structure/vampdoor/wood,
 /turf/open/floor/plating/parquetry/old,
@@ -53078,7 +53063,6 @@
 /area/vtm/interior/voivodate/sanctum)
 "ney" = (
 /obj/structure/vampfence/rich{
-	alpha = 155;
 	dir = 4;
 	pixel_y = 0
 	},
@@ -53187,12 +53171,6 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/chinatown)
-"nfB" = (
-/obj/machinery/light/prince{
-	dir = 8
-	},
-/turf/open/floor/plating/vampplating/mono,
-/area/vtm/interior/voivodate)
 "nfL" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -55378,11 +55356,7 @@
 /obj/effect/turf_decal/bordur{
 	dir = 4
 	},
-/obj/structure/vampfence/rich{
-	alpha = 155;
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/vampfence/rich,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm)
 "nFi" = (
@@ -57089,10 +57063,6 @@
 /obj/item/paper,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
-"nYF" = (
-/mob/living/simple_animal/pet/penguin/emperor/shamebrero,
-/turf/open/floor/carpet,
-/area/space)
 "nYH" = (
 /obj/structure/table,
 /turf/open/floor/plating/parquetry,
@@ -58532,11 +58502,7 @@
 /obj/effect/turf_decal/bordur{
 	dir = 8
 	},
-/obj/structure/vampfence/rich{
-	alpha = 155;
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/vampfence/rich,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm)
 "opP" = (
@@ -58805,7 +58771,6 @@
 /area/vtm/sewer/nosferatu_warren)
 "otr" = (
 /obj/structure/vampfence/rich{
-	alpha = 155;
 	dir = 4;
 	pixel_y = 0
 	},
@@ -61059,10 +61024,6 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/vtm/church/interior/haven)
-"oSS" = (
-/obj/effect/decal/shadow,
-/turf/closed/wall/vampwall/rock,
-/area/vtm/interior/voivodate/sanctum)
 "oSW" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 10
@@ -65719,6 +65680,12 @@
 /obj/effect/decal/wallpaper/blue,
 /turf/closed/wall/vampwall/rich/old,
 /area/vtm/cabaret/basement)
+"pZm" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/vampfence/rich,
+/turf/open/floor/plating/vampgrass,
+/area/vtm)
 "pZp" = (
 /obj/structure/chair/sofa/old/left,
 /turf/open/floor/plating/rough/cave,
@@ -72562,6 +72529,22 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
+"rGV" = (
+/obj/structure/vampdoor/wood{
+	dir = 8;
+	lock_id = "ventrue";
+	locked = 1;
+	lockpick_difficulty = 8;
+	name = "Ventrue Office"
+	},
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 8
+	},
+/turf/open/floor/carpet/purple,
+/area/vtm/interior/millennium_tower/ventrue)
 "rGX" = (
 /obj/structure/railing/metal/corner,
 /turf/open/floor/plating/toilet/clinic,
@@ -83393,7 +83376,6 @@
 /area/vtm/church/interior/haven)
 "usm" = (
 /obj/structure/vampfence/rich{
-	alpha = 155;
 	dir = 4;
 	pixel_y = 0
 	},
@@ -89898,6 +89880,10 @@
 /obj/machinery/griddle,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior)
+"vVx" = (
+/obj/effect/decal/shadow,
+/turf/closed/wall/vampwall/rock,
+/area/vtm/interior/voivodate/sanctum)
 "vVV" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -96497,12 +96483,6 @@
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/clinic)
-"xCn" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/lavendergrass,
-/obj/structure/vampfence/rich,
-/turf/open/floor/plating/vampgrass,
-/area/vtm)
 "xCr" = (
 /obj/effect/landmark/start/giovanni,
 /obj/structure/railing,
@@ -98744,7 +98724,6 @@
 	dir = 8
 	},
 /obj/structure/vampfence/rich{
-	alpha = 155;
 	dir = 4;
 	pixel_y = 0
 	},
@@ -256983,12 +256962,12 @@ ntq
 rtk
 rtk
 iNI
-cYX
+rGV
 rtk
 rtk
 rtk
 iNI
-cYX
+rGV
 rtk
 iNI
 wYX
@@ -410484,7 +410463,7 @@ odA
 vww
 vww
 vww
-oSS
+vVx
 aLS
 ydB
 lHN
@@ -470621,7 +470600,7 @@ daL
 vjf
 sfq
 hmr
-nfB
+aKt
 mHc
 daL
 ajV
@@ -478838,7 +478817,7 @@ mlN
 bQM
 bQM
 bQM
-xCn
+pZm
 bQM
 cwi
 cwi
@@ -478846,8 +478825,8 @@ bQM
 bQM
 cwi
 bQM
-xCn
-xCn
+pZm
+pZm
 bQM
 cwi
 bQM
@@ -548835,7 +548814,7 @@ sAo
 dhc
 sAo
 fRh
-nYF
+kKM
 fRh
 sAo
 dhc

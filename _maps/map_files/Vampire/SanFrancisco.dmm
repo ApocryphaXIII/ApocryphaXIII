@@ -58426,6 +58426,7 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry/basement)
 "oow" = (
+/obj/structure/curtain/bounty,
 /turf/closed/wall/vampwall/old/low/window,
 /area/vtm/interior/voivodate)
 "ooH" = (
@@ -76799,6 +76800,11 @@
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
+"sGa" = (
+/obj/effect/decal/wallpaper/paper/darkred/low,
+/obj/structure/curtain/bounty,
+/turf/closed/wall/vampwall/old/low/window,
+/area/vtm/interior/voivodate)
 "sGe" = (
 /obj/structure/table/wood/fancy/red,
 /obj/item/newspaper,
@@ -471898,7 +471904,7 @@ rUT
 uoM
 vus
 vus
-pLO
+sGa
 xox
 sjX
 aAw
@@ -472155,7 +472161,7 @@ vZX
 iQb
 vus
 vus
-pLO
+sGa
 jlZ
 iIu
 uLU
@@ -472412,7 +472418,7 @@ eoi
 vus
 vus
 vus
-pLO
+sGa
 nkm
 irX
 nWs
@@ -473948,7 +473954,7 @@ pFS
 jLk
 nzj
 oIl
-hQo
+oow
 iQz
 iQz
 iQz
@@ -474205,7 +474211,7 @@ pFS
 jLk
 oKH
 oIl
-hQo
+oow
 iQz
 iQz
 iQz
@@ -474719,7 +474725,7 @@ pFS
 jLk
 pnm
 oIl
-hQo
+oow
 iQz
 iQz
 iQz
@@ -474976,7 +474982,7 @@ pFS
 jLk
 nzj
 oIl
-hQo
+oow
 iQz
 iQz
 iQz
@@ -478062,13 +478068,13 @@ ajV
 ajV
 daL
 daL
-hQo
-hQo
-hQo
+oow
+oow
+oow
 daL
-hQo
-hQo
-hQo
+oow
+oow
+oow
 daL
 daL
 daL
@@ -512620,7 +512626,7 @@ dhc
 dhc
 dhc
 nYS
-kfi
+tyL
 tyL
 tyL
 tyL
@@ -513407,7 +513413,7 @@ tyL
 tyL
 tyL
 tyL
-tyL
+sDZ
 sDZ
 sDZ
 sDZ

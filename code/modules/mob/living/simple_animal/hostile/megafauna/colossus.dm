@@ -142,6 +142,8 @@
 		if(H.mind)
 			if(istype(H.mind.martial_art, /datum/martial_art/the_sleeping_carp))
 				. = TRUE
+		if (is_species(H, /datum/species/golem/sand))
+			. = TRUE
 
 /mob/living/simple_animal/hostile/megafauna/colossus/proc/alternating_dir_shots()
 	ranged_cooldown = world.time + 40
@@ -627,6 +629,7 @@
 			if(ishuman(i))
 				var/mob/living/carbon/human/H = i
 				if(H.stat == DEAD)
+					H.set_species(/datum/species/shadow, 1)
 					H.regenerate_limbs()
 					H.regenerate_organs()
 					H.revive(full_heal = TRUE, admin_revive = FALSE)

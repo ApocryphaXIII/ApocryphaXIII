@@ -30,7 +30,7 @@
 /obj/item/organ/zombie_infection/Remove(mob/living/carbon/M, special = 0)
 	. = ..()
 	STOP_PROCESSING(SSobj, src)
-	if(old_species)
+	if(iszombie(M) && old_species)
 		M.set_species(old_species)
 	if(timer_id)
 		deltimer(timer_id)
@@ -47,7 +47,7 @@
 		Remove(owner)
 	if(owner.mob_biotypes & MOB_MINERAL)//does not process in inorganic things
 		return
-	if (causes_damage && owner.stat != DEAD)
+	if (causes_damage && !iszombie(owner) && owner.stat != DEAD)
 		owner.adjustToxLoss(0.5 * delta_time)
 		if(DT_PROB(5, delta_time))
 			to_chat(owner, "<span class='danger'>You feel sick...</span>")
@@ -59,9 +59,10 @@
 		return
 	if(!owner.getorgan(/obj/item/organ/brain))
 		return
-	to_chat(owner, "<span class='cultlarge'>You can feel your heart stopping, but something isn't right... \
-	life has not abandoned your broken form. You can only feel a deep and immutable hunger that \
-	not even death can stop, you will rise again!</span>")
+	if(!iszombie(owner))
+		to_chat(owner, "<span class='cultlarge'>You can feel your heart stopping, but something isn't right... \
+		life has not abandoned your broken form. You can only feel a deep and immutable hunger that \
+		not even death can stop, you will rise again!</span>")
 	var/revive_time = rand(revive_time_min, revive_time_max)
 	var/flags = TIMER_STOPPABLE
 	timer_id = addtimer(CALLBACK(src, PROC_REF(zombify)), revive_time, flags)
@@ -72,7 +73,9 @@
 	if(!converts_living && owner.stat != DEAD)
 		return
 
-	old_species = owner.dna.species.type
+	if(!iszombie(owner))
+		old_species = owner.dna.species.type
+		owner.set_species(/datum/species/zombie/infectious)
 
 	var/stand_up = (owner.stat == DEAD) || (owner.stat == UNCONSCIOUS)
 

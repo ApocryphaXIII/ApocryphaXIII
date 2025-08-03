@@ -178,6 +178,7 @@
 #define TRAIT_WARM_AURA			"warm_aura"
 #define TRAIT_FRENETIC_AURA		"frenetic_aura"
 #define TRAIT_UNBONDABLE		"unbondable"
+#define TRAIT_DEFICIENT_VITAE   "deficient_vitae"
 #define TRAIT_BLUSH_OF_HEALTH	"blush_of_health"
 #define TRAIT_POTENT_BLOOD		"potent_blood"
 #define TRAIT_CAN_EAT			"can_eat" // this is for kindred. not normal people. normal people do not need this flag.
@@ -193,6 +194,8 @@
 #define TRAIT_DIABLERIE			"diablerie"
 #define TRAIT_GULLET			"gullet"
 #define TRAIT_CHARMER			"charmer"
+#define TRAIT_UNBONDING         "unbonding"
+#define TRAIT_PERMAFANGS        "permafangs"
 #define TRAIT_ORGANOVORE		"organovore"
 #define TRAIT_SALUBRI_EYE_OPEN	"eye_open" //This is for Salubri Stuff in regards to oepning and closing it
 #define TRAIT_SALUBRI_EYE		"salubri_eye" //This is for whhen you want to like actually know if you have the eye or not
@@ -292,6 +295,7 @@
 #define TRAIT_AGEUSIA			"ageusia"
 #define TRAIT_HEAVY_SLEEPER		"heavy_sleeper"
 #define TRAIT_NIGHT_VISION		"night_vision"
+#define TRAIT_ALT_NIGHT_VISION  "alt_night_vision"
 #define TRAIT_LIGHT_STEP		"light_step"
 #define TRAIT_SPIRITUAL			"spiritual"
 #define TRAIT_FAN_CLOWN			"fan_clown"

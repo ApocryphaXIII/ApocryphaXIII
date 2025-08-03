@@ -389,6 +389,7 @@
 	outfit = /datum/outfit/job/miner/equipped
 
 /obj/effect/mob_spawn/human/plasmaman
+	mob_species = /datum/species/plasmaman
 	outfit = /datum/outfit/plasmaman
 
 /obj/effect/mob_spawn/human/bartender
@@ -459,16 +460,19 @@
 /obj/effect/mob_spawn/human/skeleton
 	name = "skeletal remains"
 	mob_name = "skeleton"
+	mob_species = /datum/species/skeleton
 	mob_gender = NEUTER
 
 /obj/effect/mob_spawn/human/zombie
 	name = "rotting corpse"
 	mob_name = "zombie"
+	mob_species = /datum/species/zombie
 	assignedrole = "Zombie"
 
 /obj/effect/mob_spawn/human/abductor
 	name = "abductor"
 	mob_name = "alien"
+	mob_species = /datum/species/abductor
 	outfit = /datum/outfit/abductorcorpse
 
 /datum/outfit/abductorcorpse

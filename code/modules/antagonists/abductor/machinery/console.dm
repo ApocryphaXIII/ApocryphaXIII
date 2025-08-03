@@ -56,7 +56,9 @@
 			TeleporterSend()
 
 /obj/machinery/abductor/console/ui_status(mob/user)
-	return UI_CLOSE
+	if(!isabductor(user) && !isobserver(user))
+		return UI_CLOSE
+	return ..()
 
 /obj/machinery/abductor/console/ui_state(mob/user)
 	return GLOB.physical_state

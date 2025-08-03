@@ -706,8 +706,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "Hair Color: <a href='byond://?_src_=prefs;preference=werewolf_hair_color;task=input'>[werewolf_hair_color]</a><BR>"
 				dat += "Eyes: <a href='byond://?_src_=prefs;preference=werewolf_eye_color;task=input'>[werewolf_eye_color]</a><BR>"
 			if(pref_species.name == "Vampire")
-				dat += "<h2>[make_font_cool("CLANE")]</h2>"
-				dat += "<b>Clane/Bloodline:</b> <a href='byond://?_src_=prefs;preference=clan;task=input'>[clan.name]</a><BR>"
+				dat += "<h2>[make_font_cool("CLAN")]</h2>"
+				dat += "<b>Clan/Bloodline:</b> <a href='byond://?_src_=prefs;preference=clan;task=input'>[clan.name]</a><BR>"
 				if(clan.name == CLAN_MALKAVIAN)
 					dat+="<b>Degree of Derangement:</b> <a href ='byond://?_src_=prefs;preference=derangement;task=input'>[derangement == TRUE ? "Insanity" : "Madness"]</a><BR>"
 				dat += "<b>Description:</b> [clan.desc]<BR>"
@@ -938,6 +938,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<span style='border: 1px solid #161616; background-color: [features["mcolor"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=mutant_color;task=input'>Change</a><BR>"
 
 				mutant_colors = TRUE
+
+			if(istype(pref_species, /datum/species/ethereal)) //not the best thing to do tbf but I dont know whats better.
+
+				if(!use_skintones)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Ethereal Color</h3>"
+
+				dat += "<span style='border: 1px solid #161616; background-color: [features["ethcolor"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=color_ethereal;task=input'>Change</a><BR>"
+
 
 			if((EYECOLOR in pref_species.species_traits) && !(NOEYESPRITES in pref_species.species_traits))
 
@@ -2530,7 +2540,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						else
 							available_clans[V.name] += GLOB.vampire_clan_list[i]
 						qdel(V)
-					var/result = tgui_input_list(user, "Select a clan", "Clane Selection", sort_list(available_clans))
+					var/result = tgui_input_list(user, "Select a clan", "Clan Selection", sort_list(available_clans))
 					if(result)
 						var/newtype = GLOB.vampire_clan_list[result]
 						clan = new newtype()

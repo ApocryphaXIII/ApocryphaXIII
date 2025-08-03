@@ -27,10 +27,12 @@
 	icon_state = "pirate"
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|ARMS
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/costume/pirate/armored
 	strip_delay = 40
 	equip_delay_other = 20
+	species_exception = null
 
 /obj/item/clothing/suit/costume/pirate/captain
 	name = "pirate captain coat"
@@ -41,6 +43,7 @@
 /obj/item/clothing/suit/costume/pirate/captain/armored
 	strip_delay = 40
 	equip_delay_other = 20
+	species_exception = null
 
 /obj/item/clothing/suit/costume/cyborg_suit
 	name = "cyborg suit"
@@ -152,6 +155,7 @@
 	desc = "Your classic, non-racist poncho."
 	icon_state = "classicponcho"
 	inhand_icon_state = null
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/costume/poncho/green
 	name = "green poncho"
@@ -364,6 +368,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET
 	allowed = list()
 	hoodtype = /obj/item/clothing/head/hooded/human_head
+	species_exception = list(/datum/species/golem) //Finally, flesh
 
 /obj/item/clothing/head/hooded/human_head
 	name = "bloated human head"
@@ -508,6 +513,7 @@
 	greyscale_config_worn = /datum/greyscale_config/hawaiian_shirt/worn
 	greyscale_colors = "#313B82#CCCFF0"
 	flags_1 = IS_PLAYER_COLORABLE_1
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/costume/football_armor
 	name = "football protective gear"

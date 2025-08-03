@@ -107,7 +107,7 @@
 	RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(checkObstacle))
 	playsound(user, 'sound/weapons/thudswoosh.ogg', 40, TRUE, -1)
 
-	var/leap_word = "leap"
+	var/leap_word = isfelinid(user) ? "pounce" : "leap" //If cat, "pounce" instead of "leap".
 	if(can_see(user, A, 7))
 		user.visible_message("<span class='warning'>[user] [leap_word]s at [A]!</span>", "<span class='danger'>You [leap_word] at [A]!</span>")
 	else
@@ -155,7 +155,7 @@
 	var/mob/living/carbon/target = hit
 	var/mob/living/carbon/human/T = target
 	var/mob/living/carbon/human/S = user
-	var/tackle_word = "tackle"
+	var/tackle_word = isfelinid(user) ? "pounce" : "tackle" //If cat, "pounce" instead of "tackle".
 
 	var/roll = rollTackle(target)
 	tackling = FALSE
@@ -281,6 +281,12 @@
 			defense_mod += 5
 		if(T.is_holding_item_of_type(/obj/item/shield))
 			defense_mod += 2
+
+		if(islizard(T))
+			if(!T.getorganslot(ORGAN_SLOT_TAIL)) // lizards without tails are off-balance
+				defense_mod -= 1
+			else if(T.dna.species.is_wagging_tail()) // lizard tail wagging is robust and can swat away assailants!
+				defense_mod += 1
 
 	// OF-FENSE
 	var/mob/living/carbon/sacker = parent

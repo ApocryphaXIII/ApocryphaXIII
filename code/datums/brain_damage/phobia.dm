@@ -12,6 +12,7 @@
 	var/list/trigger_mobs
 	var/list/trigger_objs //also checked in mob equipment
 	var/list/trigger_turfs
+	var/list/trigger_species
 
 /datum/brain_trauma/mild/phobia/New(new_phobia_type)
 	if(new_phobia_type)
@@ -27,6 +28,7 @@
 	trigger_mobs = SStraumas.phobia_mobs[phobia_type]
 	trigger_objs = SStraumas.phobia_objs[phobia_type]
 	trigger_turfs = SStraumas.phobia_turfs[phobia_type]
+	trigger_species = SStraumas.phobia_species[phobia_type]
 	..()
 
 /datum/brain_trauma/mild/phobia/on_life()
@@ -58,11 +60,18 @@
 					return
 
 		seen_atoms -= owner //make sure they aren't afraid of themselves.
-		if(LAZYLEN(trigger_mobs))
+		if(LAZYLEN(trigger_mobs) || LAZYLEN(trigger_species))
 			for(var/mob/M in seen_atoms)
 				if(is_type_in_typecache(M, trigger_mobs))
 					freak_out(M)
 					return
+
+				else if(ishuman(M)) //check their species
+					var/mob/living/carbon/human/H = M
+
+					if(LAZYLEN(trigger_species) && H.dna && H.dna.species && is_type_in_typecache(H.dna.species, trigger_species))
+						freak_out(H)
+						return
 
 /datum/brain_trauma/mild/phobia/handle_hearing(datum/source, list/hearing_args)
 	if(!owner.can_hear() || world.time < next_scare) //words can't trigger you if you can't hear them *taps head*

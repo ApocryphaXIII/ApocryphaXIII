@@ -31,6 +31,9 @@
 /datum/tgui_say/proc/start_thinking()
 	if(!window_open || !client.typing_indicators)
 		return FALSE
+	/// Special exemptions
+	if(isabductor(client.mob))
+		return FALSE
 	client.mob.thinking_IC = TRUE
 	client.mob.create_thinking_indicator()
 

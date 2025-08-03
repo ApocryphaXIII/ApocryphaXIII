@@ -157,13 +157,19 @@
 
 /obj/structure/spawner/nether/examine(mob/user)
 	. = ..()
-	. += "A direct link to another dimension full of creatures not very happy to see you. <span class='warning'>Entering the link would be a very bad idea.</span>"
+	if(isskeleton(user) || iszombie(user))
+		. += "A direct link to another dimension full of creatures very happy to see you. <span class='nicegreen'>You can see your house from here!</span>"
+	else
+		. += "A direct link to another dimension full of creatures not very happy to see you. <span class='warning'>Entering the link would be a very bad idea.</span>"
 
 /obj/structure/spawner/nether/attack_hand(mob/user)
 	. = ..()
-	user.visible_message("<span class='warning'>[user] is violently pulled into the link!</span>", \
-						"<span class='userdanger'>Touching the portal, you are quickly pulled through into a world of unimaginable horror!</span>")
-	contents.Add(user)
+	if(isskeleton(user) || iszombie(user))
+		to_chat(user, "<span class='notice'>You don't feel like going home yet...</span>")
+	else
+		user.visible_message("<span class='warning'>[user] is violently pulled into the link!</span>", \
+							"<span class='userdanger'>Touching the portal, you are quickly pulled through into a world of unimaginable horror!</span>")
+		contents.Add(user)
 
 /obj/structure/spawner/nether/process(delta_time)
 	for(var/mob/living/M in contents)

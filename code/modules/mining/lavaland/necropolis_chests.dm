@@ -614,6 +614,34 @@
 	reagent_state = LIQUID
 	color = "#FFEBEB"
 
+/datum/reagent/flightpotion/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message = TRUE)
+	. = ..()
+	if(iscarbon(exposed_mob) && exposed_mob.stat != DEAD)
+		var/mob/living/carbon/exposed_carbon = exposed_mob
+		var/holycheck = ishumanbasic(exposed_carbon)
+		if(reac_volume < 5 || !(holycheck || islizard(exposed_carbon) || (ismoth(exposed_carbon) && exposed_carbon.dna.features["moth_wings"] != "Burnt Off"))) // implying xenohumans are holy //as with all things,
+			if((methods & INGEST) && show_message)
+				to_chat(exposed_carbon, "<span class='notice'><i>You feel nothing but a terrible aftertaste.</i></span>")
+			return
+		if(exposed_carbon.dna.species.has_innate_wings)
+			to_chat(exposed_carbon, "<span class='userdanger'>A terrible pain travels down your back as your wings change shape!</span>")
+			if(!exposed_carbon.dna.features["original_moth_wings"]) //Stores their wings for later possible reconstruction
+				exposed_carbon.dna.features["original_moth_wings"] = exposed_carbon.dna.features["moth_wings"]
+			exposed_carbon.dna.features["moth_wings"] = "None"
+			if(!exposed_carbon.dna.features["original_moth_antennae"]) //Stores their antennae type as well
+				exposed_carbon.dna.features["original_moth_antennae"] = exposed_carbon.dna.features["moth_antennae"]
+			exposed_carbon.dna.features["moth_antennae"] = "Regal"
+		else
+			to_chat(exposed_carbon, "<span class='userdanger'>A terrible pain travels down your back as wings burst out!</span>")
+		exposed_carbon.dna.species.GiveSpeciesFlight(exposed_carbon)
+		if(holycheck)
+			to_chat(exposed_carbon, "<span class='notice'>You feel blessed!</span>")
+			ADD_TRAIT(exposed_carbon, TRAIT_HOLY, SPECIES_TRAIT)
+		playsound(exposed_carbon.loc, 'sound/items/poster_ripped.ogg', 50, TRUE, -1)
+		exposed_carbon.adjustBruteLoss(20)
+		exposed_carbon.emote("scream")
+
+
 /obj/item/jacobs_ladder
 	name = "jacob's ladder"
 	desc = "A celestial ladder that violates the laws of physics."
@@ -913,8 +941,10 @@
 			to_chat(user, "<span class='danger'>Your appearance morphs to that of a very small humanoid ash dragon! You get to look like a freak without the cool abilities.</span>")
 			H.dna.features = list("mcolor" = "#A02720", "tail_lizard" = "Dark Tiger", "tail_human" = "None", "snout" = "Sharp", "horns" = "Curled", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "Long", "body_markings" = "Dark Tiger Body", "legs" = "Digitigrade Legs")
 			H.eye_color = "#fee5a3"
+			H.set_species(/datum/species/lizard)
 		if(2)
 			to_chat(user, "<span class='danger'>Your flesh begins to melt! Miraculously, you seem fine otherwise.</span>")
+			H.set_species(/datum/species/skeleton)
 		if(3)
 			to_chat(user, "<span class='danger'>Power courses through you! You can now shift your form at will.</span>")
 			if(user.mind)

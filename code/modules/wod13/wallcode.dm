@@ -136,10 +136,6 @@
 	icon_state = "rich-window"
 	window = /obj/structure/window/fulltile
 
-/turf/closed/wall/vampwall/rich/low/window/reinforced
-	icon_state = "rich-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
-
 /turf/closed/wall/vampwall/junk
 	name = "junk brick wall"
 	desc = "A huge chunk of dirty bricks used to separate rooms."
@@ -186,10 +182,6 @@
 	icon_state = "market-window"
 	window = /obj/structure/window/fulltile
 
-/turf/closed/wall/vampwall/market/low/window/reinforced
-	icon_state = "market-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
-
 /turf/closed/wall/vampwall/old
 	name = "old brick wall"
 	desc = "A huge chunk of old bricks used to separate rooms."
@@ -205,10 +197,6 @@
 /turf/closed/wall/vampwall/old/low/window
 	icon_state = "old-window"
 	window = /obj/structure/window/fulltile
-
-/turf/closed/wall/vampwall/old/low/window/reinforced
-	icon_state = "old-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
 
 /turf/closed/wall/vampwall/painted
 	name = "painted brick wall"
@@ -226,10 +214,6 @@
 	icon_state = "painted-window"
 	window = /obj/structure/window/fulltile
 
-/turf/closed/wall/vampwall/painted/low/window/reinforced
-	icon_state = "painted-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
-
 /turf/closed/wall/vampwall/rich/old
 	name = "old rich-looking wall"
 	desc = "A huge chunk of old bricks used to separate rooms."
@@ -245,10 +229,6 @@
 /turf/closed/wall/vampwall/rich/old/low/window
 	icon_state = "theater-window"
 	window = /obj/structure/window/fulltile
-
-/turf/closed/wall/vampwall/rich/old/low/window/reinforced
-	icon_state = "theater-reinforced"
-	window = /obj/structure/window/reinforced/fulltile/indestructable
 
 /turf/closed/wall/vampwall/brick
 	name = "brick wall"
@@ -597,7 +577,7 @@
 /turf/open/floor/plating/parquetry
 	gender = PLURAL
 	name = "parquetry"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "parquet"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -649,7 +629,7 @@
 /turf/open/floor/plating/vampgrass
 	gender = PLURAL
 	name = "grass"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "grass1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -711,10 +691,12 @@
 				barefootstep = FOOTSTEP_SNOW
 				heavyfootstep = FOOTSTEP_SNOW
 
+/turf/open/floor/plating/gutfloor
+
 /turf/open/floor/plating/vampcarpet
 	gender = PLURAL
 	name = "carpet"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "carpet_black"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -727,7 +709,7 @@
 /turf/open/floor/plating/vampdirt
 	gender = PLURAL
 	name = "dirt"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "dirt"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -805,7 +787,7 @@
 /turf/open/floor/plating/vampplating
 	gender = PLURAL
 	name = "plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "plating"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -824,7 +806,7 @@
 /turf/open/floor/plating/rough
 	gender = PLURAL
 	name = "rough floor"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "rough"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -835,6 +817,7 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/floor/plating/rough/cave
+	icon = 'code/modules/wod13/tiles.dmi'
 	icon_state = "cave1"
 
 /turf/open/floor/plating/rough/cave/Initialize()
@@ -975,7 +958,7 @@
 /turf/open/floor/plating/church
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "church1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -992,7 +975,7 @@
 /turf/open/floor/plating/saint
 	gender = PLURAL
 	name = "fancy plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "saint1"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1147,7 +1130,7 @@
 /turf/open/floor/plating/vampwood
 	gender = PLURAL
 	name = "wood"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "bwood"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1396,7 +1379,7 @@
 /turf/open/floor/plating/bacotell
 	gender = PLURAL
 	name = "plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "bacotell"
 	flags_1 = NONE
 	attachment_holes = FALSE
@@ -1409,7 +1392,7 @@
 /turf/open/floor/plating/gummaguts
 	gender = PLURAL
 	name = "plating"
-	icon = 'code/modules/wod13/tiles.dmi'
+	icon = 'modular_zapoc/tiles.dmi'
 	icon_state = "gummaguts"
 	flags_1 = NONE
 	attachment_holes = FALSE

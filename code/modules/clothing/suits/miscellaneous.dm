@@ -52,6 +52,7 @@
 	icon_state = "pirate"
 	inhand_icon_state = "pirate"
 	allowed = list(/obj/item/melee/transforming/energy/sword/pirate, /obj/item/clothing/glasses/eyepatch, /obj/item/reagent_containers/food/drinks/bottle/rum)
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/pirate/captain
 	name = "pirate captain coat"
@@ -95,6 +96,7 @@
 	icon_state = "overalls"
 	inhand_icon_state = "overalls"
 	body_parts_covered = CHEST|GROIN|LEGS
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/apron/purple_bartender
 	name = "purple bartender apron"
@@ -210,6 +212,7 @@
 	desc = "Your classic, non-racist poncho."
 	icon_state = "classicponcho"
 	inhand_icon_state = "classicponcho"
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/poncho/green
 	name = "green poncho"
@@ -319,6 +322,8 @@
 	allowed = list()
 	actions_types = list(/datum/action/item_action/toggle_human_head)
 	hoodtype = /obj/item/clothing/head/hooded/human_head
+	species_exception = list(/datum/species/golem) //Finally, flesh
+
 
 /obj/item/clothing/head/hooded/human_head
 	name = "bloated human head"
@@ -364,12 +369,14 @@
 	desc = "A worn out, curiously comfortable t-shirt with a picture of Ian. You wouldn't go so far as to say it feels like being hugged when you wear it, but it's pretty close. Good for sleeping in."
 	icon_state = "ianshirt"
 	inhand_icon_state = "ianshirt"
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/nerdshirt
 	name = "gamer shirt"
 	desc = "A baggy shirt with vintage game character Phanic the Weasel. Why would anyone wear this?"
 	icon_state = "nerdshirt"
 	inhand_icon_state = "nerdshirt"
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/vapeshirt //wearing this is asking to get beat.
 	name = "Vape Naysh shirt"
@@ -392,6 +399,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/jacket/leather
 	name = "leather jacket"
@@ -401,6 +409,7 @@
 	resistance_flags = NONE
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	allowed = list(/obj/item/flashlight, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/revolver, /obj/item/gun/ballistic/revolver/detective, /obj/item/radio)
+	species_exception = list(/datum/species/golem/bone) //bad to the bone
 
 /obj/item/clothing/suit/jacket/leather/overcoat
 	name = "leather overcoat"
@@ -415,6 +424,7 @@
 	icon_state = "pufferjacket"
 	inhand_icon_state = "hostrench"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 50, RAD = 0, FIRE = 0, ACID = 0)
+	species_exception = list(/datum/species/golem/bone)
 
 /obj/item/clothing/suit/jacket/puffer/vest
 	name = "puffer vest"
@@ -437,24 +447,28 @@
 	desc = "A classic brown letterman jacket. Looks pretty hot and heavy."
 	icon_state = "letterman"
 	inhand_icon_state = "letterman"
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/jacket/letterman_red
 	name = "red letterman jacket"
 	desc = "A letterman jacket in a sick red color. Radical."
 	icon_state = "letterman_red"
 	inhand_icon_state = "letterman_red"
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/jacket/letterman_syndie
 	name = "red letterman jacket"
 	desc = "Whoa, it even has a cool S on its back!"
 	icon_state = "letterman_s"
 	inhand_icon_state = "letterman_s"
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/jacket/letterman_nanotrasen
 	name = "blue letterman jacket"
 	desc = "A blue letterman jacket with a proud Nanotrasen N on the back. The tag says that it was made in Space China."
 	icon_state = "letterman_n"
 	inhand_icon_state = "letterman_n"
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/dracula
 	name = "dracula coat"
@@ -505,6 +519,7 @@
 	attack_verb_continuous = list("warns", "cautions", "smashes")
 	attack_verb_simple = list("warn", "caution", "smash")
 	armor = list(MELEE = 5, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0)
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/changshan_red
 	name = "red changshan"
@@ -606,6 +621,7 @@
 	allowed = list(/obj/item/analyzer, /obj/item/stack/medical, /obj/item/dnainjector, /obj/item/reagent_containers/dropper, /obj/item/reagent_containers/syringe, /obj/item/reagent_containers/hypospray, /obj/item/healthanalyzer, /obj/item/flashlight/pen, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/glass/beaker, /obj/item/reagent_containers/pill, /obj/item/storage/pill_bottle, /obj/item/paper, /obj/item/melee/classic_baton/telescopic, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter)
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 10, BIO = 0, RAD = 0, FIRE = 0, ACID = 0)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/science
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/head/hooded/winterhood/science
 	icon_state = "winterhood_science"
@@ -618,6 +634,7 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 20, FIRE = 30, ACID = 45)
 	allowed = list(/obj/item/flashlight, /obj/item/t_scanner, /obj/item/construction/rcd, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/engineering
+	species_exception = list(/datum/species/golem/uranium)
 
 /obj/item/clothing/head/hooded/winterhood/engineering
 	icon_state = "winterhood_engineer"
@@ -731,6 +748,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	flags_inv = HIDEGLOVES|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	alternate_worn_layer = UNDER_HEAD_LAYER
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/ghost_sheet/spooky
 	name = "spooky ghost"
@@ -780,6 +798,7 @@
 	desc = "A cool shirt for chilling on the beach."
 	icon_state = "hawaiian_blue"
 	inhand_icon_state = "hawaiian_blue"
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/yakuza
 	name = "tojo clan jacket"

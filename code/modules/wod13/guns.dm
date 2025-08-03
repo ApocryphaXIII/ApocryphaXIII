@@ -411,6 +411,38 @@
 	fire_sound = 'code/modules/wod13/sounds/mp5.ogg'
 	cost = 200
 
+/obj/item/ammo_box/magazine/vamp46mp7
+	name = "mp7 magazine (4.6mm)"
+	icon = 'code/modules/wod13/ammo.dmi'
+//	lefthand_file = 'code/modules/wod13/righthand.dmi'
+//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	worn_icon = 'code/modules/wod13/worn.dmi'
+	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	icon_state = "mp7"
+	ammo_type = /obj/item/ammo_casing/vampire/c46mm
+	caliber = CALIBER_46
+	max_ammo = 40
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+/obj/item/gun/ballistic/automatic/vampire/mp7
+	name = "\improper HK MP7"
+	desc = "A lightweight, burst-fire submachine gun. Uses 4.6mm."
+	icon_state = "mp7"
+	icon = 'code/modules/wod13/48x32weapons.dmi'
+	inhand_icon_state = "mp7"
+	worn_icon_state = "mp7"
+	mag_type = /obj/item/ammo_box/magazine/vamp46mp7
+	burst_size = 4
+	spread = 2
+	recoil = 1
+	fire_delay = 1
+	bolt_type = BOLT_TYPE_LOCKING
+	show_bolt_icon = FALSE
+	mag_display = TRUE
+	rack_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+	fire_sound = 'code/modules/wod13/sounds/mp5.ogg'
+	cost = 250
+
 /obj/item/ammo_box/magazine/vamp556
 	name = "carbine magazine (5.56mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
@@ -609,6 +641,46 @@
 	actions_types = list()
 	masquerade_violating = TRUE
 	cost = 250
+
+
+/obj/item/gun/ballistic/automatic/vampire/PSG1
+	name = "\improper HK PSG1"
+	desc = "A semi-automatic rifle that shoots 7.62 NATO and packs a solid punch, Most often used by Police Snipers '."
+	icon = 'code/modules/wod13/48x32weapons.dmi'
+	icon_state = "PSG1"
+	inhand_icon_state = "PSG1"
+	worn_icon_state = "PSG1"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_MEDIUM
+	mag_type = /obj/item/ammo_box/magazine/vamp762x51PSG1
+	fire_delay = 3
+	burst_size = 1
+	recoil = 4
+	zoomable = TRUE
+	zoom_amt = 4 //It's known for having a shitty scope
+	zoom_out_amt =  1
+	bolt_type = BOLT_TYPE_LOCKING
+	show_bolt_icon = TRUE
+	mag_display = TRUE
+	fire_sound = 'code/modules/wod13/sounds/sniper.ogg'
+	masquerade_violating = TRUE
+	projectile_damage_multiplier = 1.5 //This is the Semi-Auto Sniper with a fairly lengthy barrel
+	cost = 300
+
+/obj/item/ammo_box/magazine/vamp762x51PSG1
+	name = "PSG1 magazine (7.62x51mm)"
+	desc = "A magazine for the PSG1 loaded in 7.62 NATO."
+	icon = 'code/modules/wod13/ammo.dmi'
+	//lefthand_file = 'code/modules/wod13/righthand.dmi'
+	//righthand_file = 'code/modules/wod13/lefthand.dmi'
+	worn_icon = 'code/modules/wod13/worn.dmi'
+	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	icon_state = "PSG1"
+	ammo_type = /obj/item/ammo_casing/vampire/c762x51mm
+	caliber = CALIBER_762
+	max_ammo = 10
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
 
 /obj/item/ammo_box/magazine/internal/vampshotgun
 	name = "shotgun internal magazine"

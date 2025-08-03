@@ -4,6 +4,7 @@
 #define SCANGATE_DISEASE 		"Disease"
 #define SCANGATE_GUNS 			"Guns"
 #define SCANGATE_WANTED			"Wanted"
+#define SCANGATE_SPECIES		"Species"
 #define SCANGATE_NUTRITION		"Nutrition"
 
 #define SCANGATE_HUMAN			"human"
@@ -116,6 +117,34 @@
 				var/mob/living/carbon/C = M
 				if(get_disease_severity_value(C.check_virus()) >= get_disease_severity_value(disease_threshold))
 					beep = TRUE
+		if(SCANGATE_SPECIES)
+			if(ishuman(M))
+				var/mob/living/carbon/human/H = M
+				var/datum/species/scan_species = /datum/species/human
+				switch(detect_species)
+					if(SCANGATE_LIZARD)
+						scan_species = /datum/species/lizard
+					if(SCANGATE_FLY)
+						scan_species = /datum/species/fly
+					if(SCANGATE_FELINID)
+						scan_species = /datum/species/human/felinid
+					if(SCANGATE_PLASMAMAN)
+						scan_species = /datum/species/plasmaman
+					if(SCANGATE_MOTH)
+						scan_species = /datum/species/moth
+					if(SCANGATE_JELLY)
+						scan_species = /datum/species/jelly
+					if(SCANGATE_POD)
+						scan_species = /datum/species/pod
+					if(SCANGATE_GOLEM)
+						scan_species = /datum/species/golem
+					if(SCANGATE_ZOMBIE)
+						scan_species = /datum/species/zombie
+				if(is_species(H, scan_species))
+					beep = TRUE
+				if(detect_species == SCANGATE_ZOMBIE) //Can detect dormant zombies
+					if(H.getorganslot(ORGAN_SLOT_ZOMBIE))
+						beep = TRUE
 		if(SCANGATE_GUNS)
 			for(var/I in M.get_contents())
 				if(istype(I, /obj/item/gun))
@@ -216,6 +245,7 @@
 #undef SCANGATE_DISEASE
 #undef SCANGATE_GUNS
 #undef SCANGATE_WANTED
+#undef SCANGATE_SPECIES
 #undef SCANGATE_NUTRITION
 
 #undef SCANGATE_HUMAN

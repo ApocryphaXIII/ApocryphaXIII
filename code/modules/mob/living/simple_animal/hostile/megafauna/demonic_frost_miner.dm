@@ -302,6 +302,7 @@ Difficulty: Extremely Hard
 	var/turf/T = find_safe_turf()
 	user.forceMove(T)
 	user.revive(full_heal = TRUE, admin_revive = TRUE)
+	user.set_species(/datum/species/shadow)
 	to_chat(user, "<span class='notice'>You blink and find yourself in [get_area_name(T)]... feeling a bit darker.</span>")
 	clone.dust()
 	qdel(src)

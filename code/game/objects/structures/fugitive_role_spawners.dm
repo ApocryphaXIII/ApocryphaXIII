@@ -61,3 +61,6 @@
 
 /obj/effect/mob_spawn/human/fugitive/bounty/hook
 	outfit = /datum/outfit/bountyhook
+
+/obj/effect/mob_spawn/human/fugitive/bounty/synth
+	outfit = /datum/outfit/bountysynth

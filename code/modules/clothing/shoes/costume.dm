@@ -46,6 +46,7 @@
 	icon_state = "cookflops"
 	inhand_icon_state = "cookflops"
 	can_be_tied = FALSE
+	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/shoes/jackbros
 	name = "frosty boots"

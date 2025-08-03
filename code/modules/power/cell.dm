@@ -146,6 +146,34 @@
 				if(prob(25))
 					corrupt()
 
+/obj/item/stock_parts/cell/attack_self(mob/user)
+	if(isethereal(user))
+		var/mob/living/carbon/human/H = user
+		var/datum/species/ethereal/E = H.dna.species
+		var/charge_limit = ETHEREAL_CHARGE_DANGEROUS - CELL_POWER_GAIN
+		if(E.drain_time > world.time)
+			return
+		if(charge < CELL_POWER_DRAIN)
+			to_chat(H, "<span class='warning'>[src] doesn't have enough power!</span>")
+			return
+		var/obj/item/organ/stomach/ethereal/stomach = H.getorganslot(ORGAN_SLOT_STOMACH)
+		if(stomach.crystal_charge > charge_limit)
+			to_chat(H, "<span class='warning'>Your charge is full!</span>")
+			return
+		to_chat(H, "<span class='notice'>You begin clumsily channeling power from [src] into your body.</span>")
+		E.drain_time = world.time + CELL_DRAIN_TIME
+		if(do_after(user, CELL_DRAIN_TIME, target = src))
+			if((charge < CELL_POWER_DRAIN) || (stomach.crystal_charge > charge_limit))
+				return
+			if(istype(stomach))
+				to_chat(H, "<span class='notice'>You receive some charge from [src], wasting some in the process.</span>")
+				stomach.adjust_charge(CELL_POWER_GAIN)
+				charge -= CELL_POWER_DRAIN //you waste way more than you receive, so that ethereals cant just steal one cell and forget about hunger
+			else
+				to_chat(H, "<span class='warning'>You can't receive charge from [src]!</span>")
+		return
+
+
 /obj/item/stock_parts/cell/blob_act(obj/structure/blob/B)
 	SSexplosions.high_mov_atom += src
 

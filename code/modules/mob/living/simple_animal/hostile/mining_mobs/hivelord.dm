@@ -280,6 +280,7 @@
 	mob_name = "ashen skeleton"
 	mob_gender = NEUTER
 	husk = FALSE
+	mob_species = /datum/species/skeleton
 	mob_color = "#454545"
 
 //Legion infested mobs
@@ -292,11 +293,18 @@
 	var/type = pickweight(list("Miner" = 66, "Ashwalker" = 10, "Golem" = 10,"Clown" = 10, pick(list("Shadow", "YeOlde","Operative", "Cultist")) = 4))
 	switch(type)
 		if("Miner")
-			uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
-			if (prob(4))
-				belt = pickweight(list(/obj/item/storage/belt/mining = 2, /obj/item/storage/belt/mining/alt = 2))
-			else if(prob(10))
-				belt = pickweight(list(/obj/item/pickaxe = 8, /obj/item/pickaxe/mini = 4, /obj/item/pickaxe/silver = 2, /obj/item/pickaxe/diamond = 1))
+			mob_species = pickweight(list(/datum/species/human = 70, /datum/species/lizard = 26, /datum/species/fly = 2, /datum/species/plasmaman = 2))
+			if(mob_species == /datum/species/plasmaman)
+				uniform = /obj/item/clothing/under/plasmaman
+				head = /obj/item/clothing/head/helmet/space/plasmaman
+			else
+				uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
+				if (prob(4))
+					belt = pickweight(list(/obj/item/storage/belt/mining = 2, /obj/item/storage/belt/mining/alt = 2))
+				else if(prob(10))
+					belt = pickweight(list(/obj/item/pickaxe = 8, /obj/item/pickaxe/mini = 4, /obj/item/pickaxe/silver = 2, /obj/item/pickaxe/diamond = 1))
+			if(mob_species != /datum/species/lizard)
+				shoes = /obj/item/clothing/shoes/workboots/mining
 			gloves = /obj/item/clothing/gloves/color/black
 			mask = /obj/item/clothing/mask/gas/explorer
 			if(prob(20))
@@ -306,6 +314,7 @@
 			if(prob(10))
 				l_pocket = pickweight(list(/obj/item/stack/dollar/thousand = 7, /obj/item/reagent_containers/hypospray/medipen/survival = 2, /obj/item/borg/upgrade/modkit/cooldown = 1 ))
 		if("Ashwalker")
+			mob_species = /datum/species/lizard/ashwalker
 			uniform = /obj/item/clothing/under/costume/gladiator/ash_walker
 			if(prob(95))
 				head = /obj/item/clothing/head/helmet/gladiator
@@ -335,6 +344,7 @@
 			if(prob(10))
 				r_pocket = /obj/item/implanter/sad_trombone
 		if("Golem")
+			mob_species = pick(list(/datum/species/golem/adamantine, /datum/species/golem/plasma, /datum/species/golem/diamond, /datum/species/golem/gold, /datum/species/golem/silver, /datum/species/golem/plasteel, /datum/species/golem/titanium, /datum/species/golem/plastitanium))
 			if(prob(30))
 				glasses = pickweight(list(/obj/item/clothing/glasses/meson = 2, /obj/item/clothing/glasses/hud/health = 2, /obj/item/clothing/glasses/hud/diagnostic =2, /obj/item/clothing/glasses/science = 2, /obj/item/clothing/glasses/welding = 2, /obj/item/clothing/glasses/night = 1))
 			if(prob(10))
@@ -360,6 +370,7 @@
 			id_job = "Operative"
 			outfit = /datum/outfit/syndicatecommandocorpse
 		if("Shadow")
+			mob_species = /datum/species/shadow
 			r_pocket = /obj/item/reagent_containers/pill/shadowtoxin
 			neck = /obj/item/clothing/accessory/medal/plasma/nobel_science
 			uniform = /obj/item/clothing/under/color/black

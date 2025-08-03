@@ -91,6 +91,15 @@
 	metabolization_rate = 0.05
 	taste_description = "salt"
 
+/datum/reagent/gunpowder/on_mob_life(mob/living/carbon/M)
+	. = TRUE
+	..()
+	if(!isplasmaman(M))
+		return
+	M.set_drugginess(15)
+	if(M.hallucination < volume)
+		M.hallucination += 5
+
 /datum/reagent/gunpowder/on_ex_act()
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect_system/reagents_explosion/e = new()
@@ -260,6 +269,17 @@
 	reagent_state = LIQUID
 	color = "#CAFF43"
 	taste_description = "jelly"
+
+/datum/reagent/teslium/energized_jelly/on_mob_life(mob/living/carbon/M)
+	if(isjellyperson(M))
+		shock_timer = 0 //immune to shocks
+		M.AdjustAllImmobility(-40)
+		M.adjustStaminaLoss(-2, 0)
+		if(isluminescent(M))
+			var/mob/living/carbon/human/H = M
+			var/datum/species/jelly/luminescent/L = H.dna.species
+			L.extract_cooldown = max(0, L.extract_cooldown - 20)
+	..()
 
 /datum/reagent/firefighting_foam
 	name = "Firefighting Foam"

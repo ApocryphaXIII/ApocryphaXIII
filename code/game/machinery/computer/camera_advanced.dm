@@ -116,7 +116,9 @@
 	return can_interact(user)
 
 /obj/machinery/computer/camera_advanced/abductor/can_use(mob/user)
-	return FALSE
+	if(!isabductor(user))
+		return FALSE
+	return ..()
 
 /obj/machinery/computer/camera_advanced/attack_hand(mob/user)
 	. = ..()

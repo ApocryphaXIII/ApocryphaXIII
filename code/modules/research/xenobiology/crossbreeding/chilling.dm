@@ -289,6 +289,8 @@ Chilling extracts:
 /obj/item/slimecross/chilling/black/do_effect(mob/user)
 	if(ishuman(user))
 		user.visible_message("<span class='notice'>[src] crystallizes along [user]'s skin, turning into metallic scales!</span>")
+		var/mob/living/carbon/human/H = user
+		H.set_species(/datum/species/golem/random)
 	..()
 
 /obj/item/slimecross/chilling/lightpink

@@ -1,0 +1,3 @@
+/obj/transfer_point_vamp:
+  banned_neighbors:
+  - /obj/transfer_point_vamp

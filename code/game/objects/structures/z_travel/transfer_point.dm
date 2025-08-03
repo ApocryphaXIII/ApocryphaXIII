@@ -11,6 +11,7 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	var/obj/transfer_point_vamp/exit
 	var/id = "unallocated"
+	COOLDOWN_DECLARE(tele_cooldown)
 
 /obj/transfer_point_vamp/Initialize()
 	. = ..()
@@ -25,6 +26,23 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 				T.exit = src
 				GLOB.unallocted_transfer_points -= src
 				break
+	RegisterSignal(loc, COMSIG_ATOM_ENTERED, PROC_REF(entered_turf))
+
+/obj/transfer_point_vamp/Bumped(atom/movable/arrived)
+	. = ..()
+	transfer_atom(arrived)
+
+//New TG code changes the arg order for this.
+/obj/transfer_point_vamp/proc/entered_turf(atom/old_loc, atom/movable/arrived)
+	transfer_atom(arrived)
+
+/obj/transfer_point_vamp/proc/transfer_atom(atom/movable/arrived)
+	if(!exit || !COOLDOWN_FINISHED(src, tele_cooldown))
+		return
+	COOLDOWN_START(src, tele_cooldown, 0.25 SECONDS)
+	COOLDOWN_START(exit, tele_cooldown, 0.25 SECONDS)
+	var/turf/T = get_step(exit, get_dir(arrived, src))
+	arrived.forceMove(T)
 
 /obj/transfer_point_vamp/backrooms
 	id = "backrooms"
@@ -54,7 +72,3 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	. = ..()
 	playsound(get_turf(AM), 'code/modules/wod13/sounds/portal_enter.ogg', 75, FALSE)
 
-/obj/transfer_point_vamp/Bumped(atom/movable/AM)
-	. = ..()
-	var/turf/T = get_step(exit, get_dir(AM, src))
-	AM.forceMove(T)

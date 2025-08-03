@@ -615,6 +615,7 @@ SUBSYSTEM_DEF(carpool)
 				dam = round(dam/2)
 			driver.apply_damage(prev_speed, BRUTE, BODY_ZONE_CHEST)
 		get_damage(dam)
+	A.Bumped(src)
 	return
 
 /obj/vampire_car/retro

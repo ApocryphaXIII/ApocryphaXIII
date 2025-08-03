@@ -16961,7 +16961,7 @@
 "edP" = (
 /obj/vampire_car/limousine{
 	dir = 1;
-	access = "tzimisce"
+	access = list("seer_voivodate")
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -20882,6 +20882,10 @@
 /mob/living/simple_animal/pet/cat/vampire,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/community)
+"ffj" = (
+/obj/structure/chair/pew/left,
+/turf/open/floor/plating/sidewalkalt,
+/area/vtm)
 "ffs" = (
 /obj/machinery/shower{
 	dir = 8;
@@ -37027,6 +37031,10 @@
 /obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/fishermanswharf)
+"jeq" = (
+/obj/structure/chair/pew/right,
+/turf/open/floor/plating/sidewalkalt,
+/area/vtm)
 "jev" = (
 /obj/structure/table,
 /turf/open/floor/plating/toilet,
@@ -45697,7 +45705,7 @@
 	},
 /obj/vampire_car/retro/rand{
 	dir = 1;
-	access = "tzimisce"
+	access = list("voivodate_citizen")
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -52961,7 +52969,11 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/museum)
 "ncZ" = (
-/turf/open/space/basic,
+/obj/effect/turf_decal/bordur{
+	dir = 6
+	},
+/obj/structure/chair/pew/right,
+/turf/open/floor/plating/sidewalkalt,
 /area/vtm)
 "nda" = (
 /obj/effect/turf_decal/bordur{
@@ -57513,8 +57525,9 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/bianchiBank)
 "odA" = (
-/turf/open/space/basic,
-/area/vtm/interior/voivodate/sanctum)
+/obj/structure/chair/pew,
+/turf/open/floor/plating/sidewalkalt,
+/area/vtm)
 "odD" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/parquetry/old,
@@ -77391,6 +77404,13 @@
 /obj/elevator_door,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower/f3)
+"sQw" = (
+/obj/effect/turf_decal/bordur{
+	dir = 10
+	},
+/obj/structure/chair/pew/left,
+/turf/open/floor/plating/sidewalkalt,
+/area/vtm)
 "sQC" = (
 /obj/effect/decal/wallpaper/paper/darkred,
 /obj/machinery/light/small,
@@ -85273,7 +85293,7 @@
 /obj/machinery/light/prince{
 	pixel_y = 32
 	},
-/obj/item/melee/vampirearms/knife,
+/obj/item/kitchen/knife,
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/voivodate)
 "uSI" = (
@@ -401457,15 +401477,15 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
 dhc
 oaj
 qIK
@@ -401713,17 +401733,17 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
 oaj
 qIK
 fWT
@@ -401969,8 +401989,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 vww
@@ -401978,9 +401998,9 @@ vww
 vww
 vww
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 oaj
 qIK
 izE
@@ -402225,8 +402245,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 nMQ
@@ -402236,8 +402256,8 @@ qie
 ydB
 vww
 vww
-odA
-odA
+dhc
+dhc
 oaj
 qIK
 mMO
@@ -402481,8 +402501,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 dZN
@@ -402494,7 +402514,7 @@ mMj
 dZN
 vww
 vww
-odA
+dhc
 izE
 izE
 wbb
@@ -402738,8 +402758,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 dZN
 mMj
@@ -402751,9 +402771,9 @@ qie
 mMj
 dZN
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 izE
 izE
 oJV
@@ -402995,8 +403015,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 lsN
 mMj
@@ -403252,8 +403272,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 uin
 tMb
@@ -403509,8 +403529,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 ujR
 qac
@@ -403766,8 +403786,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 uin
 rwy
@@ -404023,8 +404043,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 koe
 mMj
@@ -404280,8 +404300,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 ydB
 iNP
@@ -404293,9 +404313,9 @@ qie
 mMj
 dZN
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 izE
 izE
 sfw
@@ -404537,8 +404557,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 mMj
@@ -404794,9 +404814,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 vww
 dZN
@@ -404806,7 +404826,7 @@ dZN
 dZN
 vww
 vww
-odA
+dhc
 izE
 jUk
 ePM
@@ -405052,9 +405072,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 vww
 vww
@@ -405062,8 +405082,8 @@ vww
 vww
 vww
 vww
-odA
-odA
+dhc
+dhc
 izE
 jUk
 duL
@@ -405310,17 +405330,17 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
 izE
 izE
 izE
@@ -405568,16 +405588,16 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
 vww
 vww
 vww
@@ -405826,11 +405846,11 @@ dhc
 dhc
 dhc
 dhc
-vww
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
 vww
 vww
 vww
@@ -406086,7 +406106,7 @@ dhc
 dhc
 dhc
 dhc
-odA
+dhc
 vww
 vww
 glL
@@ -406343,7 +406363,7 @@ dhc
 dhc
 dhc
 dhc
-odA
+dhc
 vww
 nGK
 dZN
@@ -406600,7 +406620,7 @@ dhc
 dhc
 dhc
 dhc
-odA
+dhc
 vww
 qDZ
 iLL
@@ -406857,7 +406877,7 @@ dhc
 dhc
 dhc
 dhc
-odA
+dhc
 vww
 nHa
 dZN
@@ -407114,7 +407134,7 @@ dhc
 dhc
 dhc
 dhc
-odA
+dhc
 vww
 dZN
 dZN
@@ -407133,8 +407153,8 @@ rNj
 vww
 vww
 vww
-odA
-odA
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -407371,7 +407391,7 @@ dhc
 dhc
 dhc
 dhc
-odA
+dhc
 vww
 aWN
 jbR
@@ -407390,8 +407410,8 @@ xPe
 xPe
 xPe
 vww
-odA
-odA
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -407628,7 +407648,7 @@ dhc
 dhc
 dhc
 dhc
-odA
+dhc
 vww
 vww
 dZN
@@ -407647,8 +407667,8 @@ pjh
 pjh
 pjh
 vww
-odA
-odA
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -407885,7 +407905,7 @@ dhc
 dhc
 dhc
 dhc
-odA
+dhc
 vww
 vww
 vww
@@ -407904,8 +407924,8 @@ pjh
 pjh
 pjh
 vww
-odA
-odA
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -408143,11 +408163,11 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
 vww
 ubg
 vww
@@ -408161,8 +408181,8 @@ pjh
 pjh
 pjh
 vww
-odA
-odA
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -408401,10 +408421,10 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
 vww
 vww
 vww
@@ -408418,8 +408438,8 @@ pjh
 pjh
 pjh
 vww
-odA
-odA
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -408659,10 +408679,10 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
 vww
 bFM
 xag
@@ -408675,8 +408695,8 @@ xPe
 xPe
 vww
 vww
-odA
-odA
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -408916,10 +408936,10 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
 vww
 vww
 otb
@@ -408931,9 +408951,9 @@ qsp
 qpU
 vww
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -409173,11 +409193,11 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
 vww
 aLS
 rNj
@@ -409187,10 +409207,10 @@ bOB
 igR
 qpU
 vww
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -409430,9 +409450,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 vww
 vww
@@ -409445,9 +409465,9 @@ uin
 vww
 vww
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -409687,9 +409707,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 hGt
 hGt
@@ -409702,9 +409722,9 @@ hGt
 hGt
 hGt
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -409944,9 +409964,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 vww
 vww
@@ -409959,9 +409979,9 @@ uin
 vww
 vww
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -410201,11 +410221,11 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
 vww
 otb
 igR
@@ -410215,10 +410235,10 @@ kyI
 ydB
 rNj
 vww
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -410458,8 +410478,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 vww
@@ -410473,9 +410493,9 @@ cCA
 rNj
 vww
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -410715,8 +410735,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 uin
 cGs
@@ -410730,9 +410750,9 @@ cGs
 rNj
 rNj
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -410972,8 +410992,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 qFx
@@ -410987,9 +411007,9 @@ kLh
 cGs
 igR
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -411229,9 +411249,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 kyI
 ari
@@ -411244,9 +411264,9 @@ tTJ
 kLh
 xag
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -411486,9 +411506,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 otb
 uEl
@@ -411501,9 +411521,9 @@ ifT
 muZ
 kyI
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -411743,8 +411763,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 otb
@@ -411758,9 +411778,9 @@ ifT
 muZ
 kyI
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -412000,8 +412020,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 uin
 cGs
@@ -412015,9 +412035,9 @@ ifT
 muZ
 cGs
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -412257,8 +412277,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 otb
@@ -412272,9 +412292,9 @@ ifT
 muZ
 aLS
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -412514,9 +412534,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 otb
 uEl
@@ -412529,9 +412549,9 @@ ifT
 muZ
 aLS
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -412771,9 +412791,9 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
+dhc
+dhc
+dhc
 vww
 aLS
 iwe
@@ -412786,9 +412806,9 @@ bTt
 fMl
 cGs
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -413028,8 +413048,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 aLS
@@ -413043,9 +413063,9 @@ fMl
 xag
 igR
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -413285,8 +413305,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 uin
 cGs
@@ -413300,9 +413320,9 @@ cGs
 qpU
 rNj
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -413542,8 +413562,8 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
+dhc
+dhc
 vww
 vww
 vww
@@ -413557,9 +413577,9 @@ ydB
 ydB
 vww
 vww
-odA
-odA
-odA
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -413799,10 +413819,10 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
 vww
 vww
 kyI
@@ -413813,10 +413833,10 @@ cCA
 rNj
 vww
 vww
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -414056,11 +414076,11 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
 vww
 vww
 vww
@@ -414069,11 +414089,11 @@ vww
 vww
 vww
 vww
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -414313,24 +414333,24 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -414570,24 +414590,24 @@ dhc
 dhc
 dhc
 dhc
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
-odA
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
+dhc
 dhc
 dhc
 dhc
@@ -474722,7 +474742,7 @@ rHW
 qWV
 tIL
 sci
-rHW
+ffj
 xMZ
 clY
 clY
@@ -474979,7 +474999,7 @@ rHW
 nVu
 sVT
 kVh
-rHW
+odA
 xMZ
 clY
 clY
@@ -475236,7 +475256,7 @@ rHW
 odZ
 tIL
 vSy
-rPW
+ncZ
 gOb
 clY
 clY
@@ -477035,7 +477055,7 @@ rHW
 qWV
 tIL
 sci
-bXu
+sQw
 tgU
 tgU
 tgU
@@ -477292,7 +477312,7 @@ rHW
 nVu
 sVT
 kVh
-rHW
+odA
 rHW
 rHW
 rHW
@@ -477549,7 +477569,7 @@ rHW
 odZ
 tIL
 vSy
-rHW
+jeq
 rHW
 rHW
 rHW
@@ -533029,35 +533049,35 @@ dhc
 dhc
 dhc
 dhc
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
 dhc
 dhc
 dhc
@@ -533285,6 +533305,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -533312,13 +533334,11 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
+dvN
+dvN
+dvN
+dvN
 dhc
 dhc
 dhc
@@ -533541,6 +533561,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -533573,23 +533595,21 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ncZ
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
+dvN
+dvN
+dvN
+dhc
+mvp
+mvp
+mvp
+mvp
+mvp
+mvp
+mvp
+mvp
+mvp
+dvN
 dhc
 dhc
 dhc
@@ -533797,6 +533817,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -533833,22 +533855,20 @@ ntq
 ntq
 ntq
 ntq
+dvN
+dvN
+mvp
+mvp
+mvp
 ntq
 ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+mvp
+mvp
+dvN
+dvN
 dhc
 dhc
 dhc
@@ -534053,6 +534073,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -534091,6 +534113,9 @@ ntq
 ntq
 ntq
 ntq
+mvp
+mvp
+mvp
 ntq
 ntq
 ntq
@@ -534098,14 +534123,9 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+mvp
+mvp
+dvN
 dhc
 dhc
 dhc
@@ -534310,6 +534330,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -534361,8 +534382,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -534566,6 +534586,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -534617,9 +534639,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -534823,6 +534843,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -534875,8 +534896,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -535080,6 +535100,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -535132,8 +535153,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -535337,6 +535357,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -535389,8 +535410,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -535593,8 +535613,8 @@ dhc
 dhc
 dhc
 dhc
-ntq
-ntq
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -535647,7 +535667,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -535850,7 +535870,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -535904,7 +535924,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -536107,7 +536127,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -536161,7 +536181,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -536364,7 +536384,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -536418,7 +536438,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -536621,7 +536641,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -536675,7 +536695,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -536878,7 +536898,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -536932,7 +536952,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -537135,7 +537155,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -537189,7 +537209,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -537392,7 +537412,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -537446,7 +537466,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -537649,7 +537669,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -537703,7 +537723,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -537906,7 +537926,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -537960,7 +537980,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -538163,7 +538183,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -538217,7 +538237,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -538420,7 +538440,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -538474,7 +538494,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -538677,7 +538697,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -538731,8 +538751,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
+dvN
 dhc
 dhc
 dhc
@@ -538934,7 +538954,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -538989,7 +539009,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -539191,7 +539211,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -539246,7 +539266,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -539448,7 +539468,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -539503,7 +539523,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -539705,7 +539725,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -539760,7 +539780,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -539962,7 +539982,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -540017,8 +540037,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
+dvN
 dhc
 dhc
 dhc
@@ -540219,7 +540239,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -540275,7 +540295,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -540476,7 +540496,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -540532,7 +540552,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -540733,7 +540753,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -540789,7 +540809,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -540990,7 +541010,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -541046,7 +541066,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -541247,7 +541267,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -541303,7 +541323,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -541504,7 +541524,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -541560,8 +541580,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
+dvN
 dhc
 dhc
 "}
@@ -541761,7 +541781,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -541818,7 +541838,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 "}
@@ -542018,7 +542038,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -542075,7 +542095,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 "}
@@ -542275,7 +542295,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -542332,7 +542352,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 "}
@@ -542532,7 +542552,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -542589,7 +542609,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 "}
@@ -542789,7 +542809,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -542845,8 +542865,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
+dvN
 dhc
 dhc
 "}
@@ -543046,7 +543066,7 @@ dhc
 dhc
 dhc
 dhc
-ntq
+dvN
 ntq
 ntq
 ntq
@@ -543102,7 +543122,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -543303,8 +543323,8 @@ dhc
 dhc
 dhc
 dhc
-ntq
-ntq
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -543359,7 +543379,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -543561,8 +543581,8 @@ dhc
 dhc
 dhc
 dhc
-ntq
-ntq
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -543616,7 +543636,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -543819,6 +543839,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -543871,9 +543893,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -544076,6 +544096,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -544127,10 +544149,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
+mvp
+dvN
 dhc
 dhc
 dhc
@@ -544334,6 +544354,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -544384,9 +544406,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+mvp
 dhc
 dhc
 dhc
@@ -544592,6 +544612,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -544641,9 +544662,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+mvp
+mvp
 dhc
 dhc
 dhc
@@ -544849,6 +544869,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -544899,8 +544920,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+mvp
 dhc
 dhc
 dhc
@@ -545106,6 +545126,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -545156,8 +545177,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+mvp
 dhc
 dhc
 dhc
@@ -545363,6 +545383,7 @@ dhc
 dhc
 dhc
 dhc
+mvp
 ntq
 ntq
 ntq
@@ -545413,8 +545434,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+mvp
 dhc
 dhc
 dhc
@@ -545620,6 +545640,8 @@ dhc
 dhc
 dhc
 dhc
+mvp
+mvp
 ntq
 ntq
 ntq
@@ -545669,9 +545691,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+mvp
 dhc
 dhc
 dhc
@@ -545877,6 +545897,9 @@ dhc
 dhc
 dhc
 dhc
+mvp
+mvp
+mvp
 ntq
 ntq
 ntq
@@ -545925,10 +545948,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
+mvp
 dhc
 dhc
 dhc
@@ -546134,6 +546154,7 @@ dhc
 dhc
 dhc
 dhc
+mvp
 ntq
 ntq
 ntq
@@ -546183,9 +546204,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+mvp
+mvp
 dhc
 dhc
 dhc
@@ -546389,6 +546409,9 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
+mvp
 ntq
 ntq
 ntq
@@ -546439,13 +546462,10 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+mvp
+dvN
+dvN
+dvN
 dhc
 "}
 (211,1,7) = {"
@@ -546646,6 +546666,9 @@ dhc
 dhc
 dhc
 dhc
+dvN
+ntq
+mvp
 ntq
 ntq
 ntq
@@ -546696,14 +546719,11 @@ ntq
 ntq
 ntq
 ntq
+mvp
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
+dvN
 "}
 (212,1,7) = {"
 dhc
@@ -546902,6 +546922,10 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
+ntq
+mvp
 ntq
 ntq
 ntq
@@ -546956,11 +546980,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
 "}
 (213,1,7) = {"
 dhc
@@ -547158,6 +547178,11 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
+ntq
+ntq
+mvp
 ntq
 ntq
 ntq
@@ -547212,12 +547237,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
 "}
 (214,1,7) = {"
 dhc
@@ -547415,6 +547435,13 @@ dhc
 dhc
 dhc
 dhc
+dvN
+ntq
+ntq
+ntq
+mvp
+mvp
+mvp
 ntq
 ntq
 ntq
@@ -547467,14 +547494,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
 "}
 (215,1,7) = {"
 dhc
@@ -547672,6 +547692,12 @@ dhc
 dhc
 dhc
 dhc
+dvN
+ntq
+ntq
+ntq
+mvp
+mvp
 ntq
 ntq
 ntq
@@ -547725,13 +547751,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
 "}
 (216,1,7) = {"
 dhc
@@ -547929,6 +547949,11 @@ dhc
 dhc
 dhc
 dhc
+dvN
+ntq
+ntq
+ntq
+mvp
 ntq
 ntq
 ntq
@@ -547983,12 +548008,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
 "}
 (217,1,7) = {"
 dhc
@@ -548186,6 +548206,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -548244,8 +548265,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (218,1,7) = {"
 dhc
@@ -548443,6 +548463,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -548501,8 +548522,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (219,1,7) = {"
 dhc
@@ -548700,6 +548720,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -548758,8 +548779,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (220,1,7) = {"
 dhc
@@ -548957,6 +548977,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -549015,8 +549036,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (221,1,7) = {"
 dhc
@@ -549214,6 +549234,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -549272,8 +549293,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (222,1,7) = {"
 dhc
@@ -549471,6 +549491,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -549529,8 +549550,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (223,1,7) = {"
 dhc
@@ -549728,6 +549748,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -549786,8 +549807,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (224,1,7) = {"
 dhc
@@ -549985,6 +550005,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -550043,8 +550064,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (225,1,7) = {"
 dhc
@@ -550242,6 +550262,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -550300,8 +550321,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (226,1,7) = {"
 dhc
@@ -550499,6 +550519,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -550557,8 +550578,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (227,1,7) = {"
 dhc
@@ -550756,6 +550776,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -550813,9 +550835,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+dvN
 "}
 (228,1,7) = {"
 dhc
@@ -551014,6 +551034,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -551071,8 +551092,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (229,1,7) = {"
 dhc
@@ -551271,6 +551291,8 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
 ntq
 ntq
 ntq
@@ -551327,9 +551349,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+dvN
 "}
 (230,1,7) = {"
 dhc
@@ -551529,6 +551549,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -551585,8 +551606,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (231,1,7) = {"
 dhc
@@ -551786,6 +551806,36 @@ dhc
 dhc
 dhc
 dhc
+dvN
+dvN
+dvN
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+ntq
+mvp
+ntq
+ntq
+ntq
+ntq
+mvp
 ntq
 ntq
 ntq
@@ -551813,37 +551863,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
 "}
 (232,1,7) = {"
 dhc
@@ -552045,6 +552065,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -552099,8 +552120,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (233,1,7) = {"
 dhc
@@ -552302,6 +552322,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -552356,8 +552377,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (234,1,7) = {"
 dhc
@@ -552559,6 +552579,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -552613,8 +552634,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (235,1,7) = {"
 dhc
@@ -552816,6 +552836,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -552870,8 +552891,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 "}
 (236,1,7) = {"
 dhc
@@ -553073,6 +553093,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -553126,9 +553147,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+dvN
+dvN
 "}
 (237,1,7) = {"
 dhc
@@ -553330,6 +553350,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -553382,9 +553403,8 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
+dvN
+dvN
 dhc
 "}
 (238,1,7) = {"
@@ -553587,6 +553607,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -553637,10 +553658,9 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
+dvN
+dvN
+dvN
 dhc
 dhc
 "}
@@ -553844,6 +553864,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -553894,8 +553915,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -554101,6 +554121,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -554151,8 +554172,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -554358,6 +554378,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -554408,8 +554429,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -554615,6 +554635,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -554665,8 +554686,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -554872,6 +554892,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -554922,8 +554943,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -555129,6 +555149,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -555179,8 +555200,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -555386,6 +555406,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -555436,8 +555457,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -555643,6 +555663,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -555693,8 +555714,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -555900,6 +555920,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -555950,8 +555971,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -556157,6 +556177,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -556207,8 +556228,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -556414,6 +556434,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -556464,8 +556485,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -556671,6 +556691,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -556721,8 +556742,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -556928,6 +556948,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -556978,8 +556999,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -557185,6 +557205,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -557235,8 +557256,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -557442,6 +557462,7 @@ dhc
 dhc
 dhc
 dhc
+dvN
 ntq
 ntq
 ntq
@@ -557492,8 +557513,7 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
+dvN
 dhc
 dhc
 dhc
@@ -557699,58 +557719,58 @@ dhc
 dhc
 dhc
 dhc
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
+dvN
 dhc
 dhc
 dhc

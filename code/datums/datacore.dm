@@ -146,7 +146,7 @@
 		"Tremere",
 		"Anarch",
 		"Giovanni",
-		"Clan Tzimisce",
+		"Seer's Voivodate",
 		"Law Enforcement",
 		"Warehouse",
 		"Triad"

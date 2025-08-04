@@ -16958,13 +16958,6 @@
 	},
 /turf/closed/wall/vampwall,
 /area/vtm/sewer)
-"edP" = (
-/obj/vampire_car/limousine{
-	dir = 1;
-	access = list("seer_voivodate")
-	},
-/turf/open/floor/plating/asphalt,
-/area/vtm)
 "edW" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -45174,6 +45167,12 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
+"les" = (
+/obj/vampire_car/limousine/voivodate{
+	dir = 1
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm)
 "leC" = (
 /obj/structure/janitorialcart,
 /obj/item/mop,
@@ -45699,16 +45698,6 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
-"llP" = (
-/obj/effect/turf_decal/asphaltline/alt{
-	pixel_x = -14
-	},
-/obj/vampire_car/retro/rand{
-	dir = 1;
-	access = list("voivodate_citizen")
-	},
-/turf/open/floor/plating/asphalt,
-/area/vtm)
 "llQ" = (
 /obj/structure/railing{
 	layer = 4
@@ -74686,6 +74675,12 @@
 "seL" = (
 /turf/closed/wall/vampwall/bar/low,
 /area/vtm/interior/penumbra/enoch)
+"seQ" = (
+/obj/vampire_car/retro/rand/voivodate{
+	dir = 1
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm)
 "seV" = (
 /obj/structure/chair/plastic{
 	dir = 4;
@@ -97414,6 +97409,15 @@
 /obj/effect/landmark/start/harpy,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower)
+"xMu" = (
+/obj/effect/turf_decal/asphaltline/alt{
+	pixel_x = -14
+	},
+/obj/vampire_car/retro/rand/voivodate{
+	dir = 1
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm)
 "xMx" = (
 /obj/machinery/light/small/red{
 	dir = 4;
@@ -470894,7 +470898,7 @@ ajV
 dnV
 nkL
 jAx
-wCt
+xMu
 cnd
 bLr
 nkL
@@ -471408,7 +471412,7 @@ vhj
 dnV
 nkL
 jAx
-llP
+wCt
 cnd
 bLr
 nkL
@@ -471665,7 +471669,7 @@ tCd
 dnV
 nkL
 gCd
-cnd
+seQ
 cnd
 bLr
 nkL
@@ -471922,7 +471926,7 @@ tCd
 dnV
 nkL
 jAx
-llP
+wCt
 cnd
 rwD
 vQV
@@ -472693,8 +472697,8 @@ moX
 dnV
 nkL
 gCd
+les
 cnd
-edP
 bLr
 nkL
 nkL
@@ -533828,12 +533832,12 @@ dvN
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -534085,12 +534089,12 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -534342,12 +534346,12 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -534597,14 +534601,14 @@ dvN
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -534853,15 +534857,15 @@ dvN
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -535110,15 +535114,15 @@ dvN
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -535367,15 +535371,15 @@ dvN
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -535624,15 +535628,15 @@ dvN
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -535881,15 +535885,15 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -536138,15 +536142,15 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -536395,15 +536399,15 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq
@@ -536653,14 +536657,14 @@ ntq
 ntq
 ntq
 ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
-ntq
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
+lTQ
 ntq
 ntq
 ntq

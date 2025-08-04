@@ -29,8 +29,26 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 				break
 	//RegisterSignal(loc, COMSIG_ATOM_ENTERED, PROC_REF(entered_turf))
 
+/obj/transfer_point_vamp/Destroy()
+	GLOB.unallocted_transfer_points -= src
+	if(!QDELETED(exit))
+		QDEL_NULL(exit)
+	return ..()
+
+/obj/transfer_point_vamp/attackby(obj/item/W, mob/user, list/modifiers, list/attack_modifiers)
+	if(user && Adjacent(user))
+		transfer_atom(user)
+		return TRUE
+
 /obj/transfer_point_vamp/Bumped(atom/movable/arrived)
 	transfer_atom(arrived)
+
+/obj/transfer_point_vamp/attack_hand(mob/user, list/modifiers)
+	. = ..()
+	if(.)
+		return
+	if(Adjacent(user))
+		transfer_atom(user)
 
 /obj/transfer_point_vamp/proc/entered_turf(atom/source, atom/movable/arrived, atom/old_loc)
 	if(locate(/obj/transfer_point_vamp) in old_loc)

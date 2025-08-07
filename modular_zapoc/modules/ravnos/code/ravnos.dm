@@ -19,15 +19,6 @@
 	)
 	color = "#5e0a18"
 
-/datum/vampire_clan/ravnos/post_gain(mob/living/carbon/human/H)
+/datum/vampire_clan/ravnos/on_gain(mob/living/carbon/human/H)
 	..()
-	var/mob/living/carbon/human/ravnos = H
-	var/obj/item/passport/passport = locate() in ravnos // In pockets
-	if(!passport && ravnos.back)
-		passport = locate() in ravnos.back // In backpack
-	if(passport && passport.owner == ravnos.real_name)
-		passport.fake = TRUE
-		if(ravnos.dna?.species)
-			passport.owner = ravnos.dna.species.random_name(ravnos.gender, unique = TRUE)
-		else
-			passport.owner = random_unique_name(ravnos.gender)
+	ADD_TRAIT(H, TRAIT_ILLEGAL_IDENTITY, TRAIT_CLAN)

@@ -20,5 +20,5 @@
 	color = "#5e0a18"
 
 /datum/vampire_clan/ravnos/on_gain(mob/living/carbon/human/H)
-	..()
+	. = ..()
 	ADD_TRAIT(H, TRAIT_ILLEGAL_IDENTITY, TRAIT_CLAN)

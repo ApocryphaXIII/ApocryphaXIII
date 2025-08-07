@@ -3761,4 +3761,5 @@
 #include "modular_tfn\modules\taser_tfn13\taser_tfn13.dm"
 #include "modular_zapoc\carpets.dm"
 #include "modular_zapoc\tiles.dm"
+#include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 // END_INCLUDE

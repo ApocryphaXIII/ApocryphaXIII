@@ -1,5 +1,3 @@
-GLOBAL_LIST_EMPTY(car_list)
-
 /obj/vampire_car
 	name = "car"
 	desc = "Take me home, country roads..."
@@ -13,9 +11,13 @@ GLOBAL_LIST_EMPTY(car_list)
 
 	glide_size = 96
 
-	//atom_integrity = 100
+	var/movement_vector = 0 //0-359 degrees
+	var/speed_in_pixels = 0 // 16 pixels (turf is 2x2m) = 1 meter per 1 SECOND (process fire). Minus equals to reverse, max should be 444
+	var/last_pos = list("x" = 0, "y" = 0, "x_pix" = 0, "y_pix" = 0, "x_frwd" = 0, "y_frwd" = 0)
+
 	max_integrity = 500
 	integrity_failure = 0.25
+	var/broken = FALSE
 
 	var/last_vzhzh = 0
 
@@ -46,16 +48,11 @@ GLOBAL_LIST_EMPTY(car_list)
 
 	var/gas = 1000
 
-	var/movement_vector = 0 //0-359 degrees
-	var/speed_in_pixels = 0 // 16 pixels (turf is 2x2m) = 1 meter per 1 SECOND (process fire). Minus equals to reverse, max should be 444
-	var/last_pos = list("x" = 0, "y" = 0, "x_pix" = 0, "y_pix" = 0, "x_frwd" = 0, "y_frwd" = 0)
-
 	COOLDOWN_DECLARE(impact_delay)
 
 /obj/vampire_car/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SScarpool, src)
-	GLOB.car_list += src
 
 	AddComponent(component_type)
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -265,16 +262,21 @@ GLOBAL_LIST_EMPTY(car_list)
 		for(var/mob/living/rider in src)
 			. += span_notice("* [rider]")
 
+/obj/vampire_car/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
+	. = ..()
+	if(atom_integrity <= integrity_failure * max_integrity)
+		if(!exploded && prob(50))
+			exploded = TRUE
+			empty_car()
+			explosion(loc,0,1,3,4)
+			STOP_PROCESSING(SScarpool, src)
+
 /obj/vampire_car/atom_break(damage_flag)
 	. = ..()
 	on = FALSE
 	set_light(0)
 	color = "#919191"
-	if(!exploded && prob(50))
-		exploded = TRUE
-		empty_car()
-		explosion(loc,0,1,3,4)
-		STOP_PROCESSING(SScarpool, src)
+	broken = TRUE
 
 /*
 /obj/vampire_car/proc/take_damage(cost)

@@ -63,12 +63,12 @@
 	if(istype(owner.loc, /obj/vampire_car))
 		var/obj/vampire_car/V = owner.loc
 		if(!V.on)
-			if(V.atom_integrity == V.max_integrity)
+			if(V.get_integrity() == V.max_integrity)
 				V.on = TRUE
 				playsound(V, 'code/modules/wod13/sounds/start.ogg', 50, TRUE)
 				to_chat(owner, span_notice("You managed to start [V]'s engine."))
 				return
-			if(prob(100*(V.atom_integrity/V.max_integrity)))
+			if(prob(100*(V.get_integrity()/V.max_integrity)))
 				V.on = TRUE
 				playsound(V, 'code/modules/wod13/sounds/start.ogg', 50, TRUE)
 				to_chat(owner, span_notice("You managed to start [V]'s engine."))

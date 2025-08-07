@@ -46,7 +46,6 @@
 		playsound(get_turf(H), 'code/modules/wod13/sounds/gas_splat.ogg', 50, TRUE)
 		user.visible_message(span_warning("[user] covers [A] in something flammable!"))
 
-/*
 /obj/effect/decal/cleanable/gasoline
 	name = "gasoline"
 	desc = "I HOPE YOU DIE IN A FIRE!!!"
@@ -105,4 +104,3 @@
 		fire_act(attacked_by_hot_thing)
 		return
 	return ..()
-*/

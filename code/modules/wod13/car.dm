@@ -195,14 +195,16 @@
 				user.visible_message(span_notice("[user] repairs [src]."), \
 					span_notice("You finish repairing all the dents on [src]."))
 				color = "#ffffff"
+				broken = FALSE
 				repairing = FALSE
 				return
 			else
-				take_damage((world.time - start_time) * -2 / 5) //partial repair
+				atom_integrity = (world.time - start_time) * -2 / 5
 				playsound(src, 'code/modules/wod13/sounds/repair.ogg', 50, TRUE)
 				user.visible_message(span_notice("[user] repairs [src]."), \
 					span_notice("You repair some of the dents on [src]."))
 				color = "#ffffff"
+				broken = FALSE
 				repairing = FALSE
 				return
 		return
@@ -264,7 +266,10 @@
 
 /obj/vampire_car/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
-	if(atom_integrity <= integrity_failure * max_integrity)
+	if(prob(50) && atom_integrity <= max_integrity/2)
+		on = FALSE
+		set_light(0)
+	if(broken)
 		if(!exploded && prob(50))
 			exploded = TRUE
 			empty_car()
@@ -428,45 +433,36 @@
 			z
 		)
 		for(var/turf/T in get_line(src, check_turf_ahead))
-			if(length(T.unpassable))
-				for(var/contact in T.unpassable)
-					//make NPC move out of car's way
-					if(istype(contact, /mob/living/carbon/human/npc))
-						var/mob/living/carbon/human/npc/NPC = contact
-						if(COOLDOWN_FINISHED(NPC, car_dodge) && !HAS_TRAIT(NPC, TRAIT_INCAPACITATED))
-							var/list/dodge_direction = list(
-								SIMPLIFY_DEGREES(movement_vector + 45),
-								SIMPLIFY_DEGREES(movement_vector - 45),
-								SIMPLIFY_DEGREES(movement_vector + 90),
-								SIMPLIFY_DEGREES(movement_vector - 90),
-							)
-							for(var/angle in dodge_direction)
-								if(get_step(NPC, angle2dir(angle)).density)
-									dodge_direction.Remove(angle)
-							if(length(dodge_direction))
-								step(NPC, angle2dir(pick(dodge_direction)), NPC.total_multiplicative_slowdown())
-								COOLDOWN_START(NPC, car_dodge, 2 SECONDS)
-								if(prob(50))
-									NPC.RealisticSay(pick(NPC.socialrole.car_dodged))
+			var/list/unpassable = T.get_blocking_contents(FALSE, src)
+			if(length(unpassable))
+				for(var/mob/living/carbon/human/npc/NPC in unpassable)
+					if(COOLDOWN_FINISHED(NPC, car_dodge) && !HAS_TRAIT(NPC, TRAIT_INCAPACITATED))
+						var/list/dodge_direction = list(
+							SIMPLIFY_DEGREES(movement_vector + 45),
+							SIMPLIFY_DEGREES(movement_vector - 45),
+							SIMPLIFY_DEGREES(movement_vector + 90),
+							SIMPLIFY_DEGREES(movement_vector - 90),
+						)
+						for(var/angle in dodge_direction)
+							if(get_step(NPC, angle2dir(angle)).density)
+								dodge_direction.Remove(angle)
+						if(length(dodge_direction))
+							step(NPC, angle2dir(pick(dodge_direction)), NPC.total_multiplicative_slowdown())
+							COOLDOWN_START(NPC, car_dodge, 2 SECONDS)
+							if(prob(50))
+								NPC.RealisticSay(pick(NPC.socialrole.car_dodged))
 
 		var/turf/hit_turf
 		var/list/in_line = get_line(src, check_turf)
 		for(var/turf/T in in_line)
-			if(T)
-				var/dist_to_hit = get_dist_in_pixels(last_pos["x"]*32+last_pos["x_pix"], last_pos["y"]*32+last_pos["y_pix"], T.x*32, T.y*32)
-				if(dist_to_hit <= used_speed)
-					var/list/stuff = T.unpassable.Copy()
-					stuff -= src
-					for(var/contact in stuff)
-						if(istype(contact, /mob/living/carbon/human/npc))
-							var/mob/living/carbon/human/npc/NPC = contact
-							if(NPC.IsKnockdown())
-								stuff -= contact
-					if(length(stuff))
-						if(!hit_turf || dist_to_hit < get_dist_in_pixels(last_pos["x"]*32+last_pos["x_pix"], last_pos["y"]*32+last_pos["y_pix"], hit_turf.x*32, hit_turf.y*32))
-							hit_turf = T
+			var/dist_to_hit = get_dist_in_pixels(last_pos["x"]*32+last_pos["x_pix"], last_pos["y"]*32+last_pos["y_pix"], T.x*32, T.y*32)
+			if(dist_to_hit <= used_speed)
+				var/list/stuff = T.get_blocking_contents(FALSE, src)
+				if(length(stuff))
+					if(!hit_turf || dist_to_hit < get_dist_in_pixels(last_pos["x"]*32+last_pos["x_pix"], last_pos["y"]*32+last_pos["y_pix"], hit_turf.x*32, hit_turf.y*32))
+						hit_turf = T
 		if(hit_turf)
-			Bump(pick(hit_turf.unpassable))
+			Bump(pick(hit_turf.get_blocking_contents(FALSE, src)))
 			// to_chat(world, "I can't pass that [hit_turf] at [hit_turf.x] x [hit_turf.y] cause of [pick(hit_turf.unpassable)] FUCK")
 			// var/bearing = get_angle_raw(x, y, pixel_x, pixel_y, hit_turf.x, hit_turf.y, 0, 0)
 			var/actual_distance = get_dist_in_pixels(last_pos["x"]*32+last_pos["x_pix"], last_pos["y"]*32+last_pos["y_pix"], hit_turf.x*32, hit_turf.y*32)-32
@@ -481,16 +477,16 @@
 			if(last_pos["y"]*32+last_pos["y_pix"] < hit_turf.y*32)
 				moved_y = min((hit_turf.y*32-32)-(last_pos["y"]*32+last_pos["y_pix"]), moved_y)
 	var/turf/west_turf = get_step(src, WEST)
-	if(length(west_turf.unpassable))
+	if(west_turf.is_blocked_turf())
 		moved_x = max(-8-last_pos["x_pix"], moved_x)
 	var/turf/east_turf = get_step(src, EAST)
-	if(length(east_turf.unpassable))
+	if(east_turf.is_blocked_turf())
 		moved_x = min(8-last_pos["x_pix"], moved_x)
 	var/turf/north_turf = get_step(src, NORTH)
-	if(length(north_turf.unpassable))
+	if(north_turf.is_blocked_turf())
 		moved_y = min(8-last_pos["y_pix"], moved_y)
 	var/turf/south_turf = get_step(src, SOUTH)
-	if(length(south_turf.unpassable))
+	if(south_turf.is_blocked_turf())
 		moved_y = max(-8-last_pos["y_pix"], moved_y)
 
 	for(var/mob/living/rider in src)

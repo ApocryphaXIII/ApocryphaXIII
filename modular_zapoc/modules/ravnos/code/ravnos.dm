@@ -8,7 +8,7 @@
 		/datum/discipline/obfuscate,
 		/datum/discipline/presence
 	)
-	male_clothes = /obj/item/clothing/under/vampire/gangrel/
+	male_clothes = /obj/item/clothing/under/vampire/gangrel
 	female_clothes = /obj/item/clothing/under/vampire/gothic
 	clan_keys = /obj/item/vamp/keys/ravnos
 

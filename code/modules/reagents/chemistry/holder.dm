@@ -361,10 +361,15 @@
 
 	var/allowed_to_kindred = FALSE
 	if(iskindred(target))
-		if(methods & VAMPIRE)
+		if(HAS_TRAIT(target, TRAIT_CAN_EAT)) // ZAPOC EDIT START
 			allowed_to_kindred = TRUE
 		if(!allowed_to_kindred)
 			return
+		else
+			if(methods & VAMPIRE)
+				allowed_to_kindred = TRUE
+			if(!allowed_to_kindred)
+				return // ZAPOC EDIT END
 	if(iscathayan(target))
 		for(var/i in reagent_list)
 			if(istype(i, /datum/reagent/consumable/ethanol))

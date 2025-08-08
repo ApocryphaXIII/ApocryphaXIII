@@ -7,24 +7,24 @@
 
 
 /proc/create_unique_phone_number(exchange = 415, postfix)
-	if(!length(GLOB.subscribers_numbers_list))
-		create_subscribers_numbers()
+	var/max_num = (10 ** SUBSCRIBER_NUMBER_LENGTH) - 1
 
+	//Slightly jank santization
+	if(postfix)
+		postfix = text2num(postfix)
+		postfix = num2text(postfix, SUBSCRIBER_NUMBER_LENGTH, 10)
 	// If we have a valid phone number set and someone hasnt already taken it
-	if(postfix && (postfix in GLOB.subscribers_numbers_list))
-		GLOB.subscribers_numbers_list -= postfix
+	if(postfix && !("[exchange][postfix]" in GLOB.phone_numbers_list))
 		return "[exchange][postfix]"
 
 	// If we dont pass a postfix or cant use it, pick a random one
-	var/subscriber_code = pick(GLOB.subscribers_numbers_list)
-	GLOB.subscribers_numbers_list -= subscriber_code
-	return "[exchange][subscriber_code]"
+	var/subscriber_code
+	for(var/i in 1 to 1000)
+		subscriber_code = num2text(rand(1, max_num), SUBSCRIBER_NUMBER_LENGTH, 10)
+		if(!("[exchange][subscriber_code]" in GLOB.phone_numbers_list))
+			break
 
-/proc/create_subscribers_numbers()
-	GLOB.subscribers_numbers_list = list()
-	var/max_num = (10 ** SUBSCRIBER_NUMBER_LENGTH) - 1
-	for(var/i in 1 to max_num)
-		GLOB.subscribers_numbers_list += num2text(i, SUBSCRIBER_NUMBER_LENGTH)
+	return "[exchange][subscriber_code]"
 
 /obj/item/vamp/phone
 	name = "\improper phone"
@@ -374,7 +374,7 @@
 					for(var/i = 1 to list_length)
 						var/number = GLOB.published_numbers[i]
 						var/display_number_first = copytext(number, 1, 4)
-						var/display_number_second = copytext(number, 4, 8)
+						var/display_number_second = copytext(number, 4, 4 + SUBSCRIBER_NUMBER_LENGTH)
 						var/split_number = display_number_first + " " + display_number_second
 						var/name = GLOB.published_number_names[i]
 						to_chat(usr, "- [name]: [split_number]")
@@ -444,7 +444,7 @@
 						for(var/datum/phonehistory/PH in phone_history_list)
 							//loop through the phone_history_list searching for a phonehistory datums and display them.
 							var/display_number_first = copytext(PH.number, 1, 4)
-							var/display_number_second = copytext(PH.number, 4, 8)
+							var/display_number_second = copytext(PH.number, 4, 4 + SUBSCRIBER_NUMBER_LENGTH)
 							var/split_number = display_number_first + " " + display_number_second
 							to_chat(usr, "# [PH.call_type]: [PH.name] , [split_number] at [PH.time]")
 					else
@@ -468,7 +468,7 @@
 						to_chat(usr, "You have no call history to delete it.")
 				if("My Number")
 					var/number_first_part = copytext(number, 1, 4)
-					var/number_second_part = copytext(number, 4, 8)
+					var/number_second_part = copytext(number, 4, 4 + SUBSCRIBER_NUMBER_LENGTH)
 					to_chat(usr, number_first_part + " " + number_second_part)
 			.= TRUE
 		if("settings")

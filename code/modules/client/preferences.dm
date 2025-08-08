@@ -2209,9 +2209,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(slotlocked)
 						return
 
-					var/new_number = tgui_input_number(user, "Choose your character's phone number's subscriber code (postfix):\n([SUBSCRIBER_NUMBER_LENGTH] didgits)", "Character Preference")
-					if(new_number)
-						phone_postfix = "[num2text(new_number, SUBSCRIBER_NUMBER_LENGTH)]"
+					var/new_number = tgui_input_text(user, "Choose your character's phone number's subscriber code (postfix):\n([SUBSCRIBER_NUMBER_LENGTH] didgits)", "Character Preference", max_length = SUBSCRIBER_NUMBER_LENGTH)
+					if(!new_number)
+						return
+					if(length(new_number) != SUBSCRIBER_NUMBER_LENGTH)
+						to_chat(user, span_notice("You need a [SUBSCRIBER_NUMBER_LENGTH] didgit string!"))
+						return
+					phone_postfix = new_number
 
 				if("info_choose")
 					var/new_info_known = tgui_input_list(user, "Choose who knows your character:", "Fame", list(INFO_KNOWN_UNKNOWN, INFO_KNOWN_CLAN_ONLY, INFO_KNOWN_FACTION, INFO_KNOWN_PUBLIC))

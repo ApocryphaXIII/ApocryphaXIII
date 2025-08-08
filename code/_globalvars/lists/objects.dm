@@ -46,7 +46,6 @@ GLOBAL_LIST_EMPTY(alert_consoles)			// Station alert consoles, /obj/machinery/co
 GLOBAL_LIST_EMPTY(air_scrub_names)			// Name list of all air scrubbers
 GLOBAL_LIST_EMPTY(air_vent_names)			// Name list of all air vents
 
-GLOBAL_LIST_INIT(subscribers_numbers_list, create_subscribers_numbers())
 GLOBAL_LIST_EMPTY(phone_numbers_list)
 GLOBAL_LIST_EMPTY(phones_list)
 GLOBAL_LIST_EMPTY(published_numbers)		//Numbers that are published

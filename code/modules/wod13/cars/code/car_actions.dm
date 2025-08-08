@@ -91,33 +91,4 @@
 /datum/action/carr/exit_car/Trigger(trigger_flags)
 	if(istype(owner.loc, /obj/vampire_car))
 		var/obj/vampire_car/V = owner.loc
-		if(V.driver == owner)
-			V.driver = null
-		if(owner in V.passengers)
-			V.passengers -= owner
-		owner.forceMove(V.loc)
-
-		var/list/exit_side = list(
-			SIMPLIFY_DEGREES(V.movement_vector + 90),
-			SIMPLIFY_DEGREES(V.movement_vector - 90)
-		)
-		for(var/angle in exit_side)
-			if(get_step(owner, angle2dir(angle)).density)
-				exit_side.Remove(angle)
-		var/list/exit_alt = GLOB.alldirs.Copy()
-		for(var/dir in exit_alt)
-			if(get_step(owner, dir).density)
-				exit_alt.Remove(dir)
-		if(length(exit_side))
-			owner.Move(get_step(owner, angle2dir(pick(exit_side))))
-		else if(length(exit_alt))
-			owner.Move(get_step(owner, exit_alt))
-
-		to_chat(owner, span_notice("You exit [V]."))
-		if(owner)
-			if(owner.client)
-				owner.client.pixel_x = 0
-				owner.client.pixel_y = 0
-		playsound(V, 'code/modules/wod13/sounds/door.ogg', 50, TRUE)
-		for(var/datum/action/carr/C in owner.actions)
-			qdel(C)
+		V.empty_occupent(owner)

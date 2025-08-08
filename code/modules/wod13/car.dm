@@ -13,7 +13,7 @@
 	anchored = TRUE
 	layer = CAR_LAYER
 	density = TRUE
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
+	resistance_flags = UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	throwforce = 150
 
 	glide_size = 96
@@ -83,13 +83,7 @@
 	last_pos["y"] = y
 //	last_pos["x_pix"] = 32
 //	last_pos["y_pix"] = 32
-	switch(dir)
-		if(SOUTH)
-			movement_vector = 180
-		if(EAST)
-			movement_vector = 90
-		if(WEST)
-			movement_vector = 270
+	movement_vector = dir2angle(dir)
 	add_overlay(image(icon = src.icon, icon_state = src.icon_state, pixel_x = -32, pixel_y = -32))
 	icon_state = "empty"
 
@@ -118,11 +112,9 @@
 		user.visible_message(span_warning("[user] begins pulling someone out of [src]!"), \
 			span_warning("You begin pulling [L] out of [src]..."))
 		if(do_after(user, 5 SECONDS, src))
-			var/datum/action/carr/exit_car/C = locate() in L.actions
 			user.visible_message(span_warning("[user] has managed to get [L] out of [src]."), \
 				span_warning("You've managed to get [L] out of [src]."))
-			if(C)
-				C.Trigger()
+			empty_occupent(L)
 		else
 			to_chat(user, span_warning("You've failed to get [L] out of [src]."))
 		repairing = FALSE
@@ -246,7 +238,6 @@
 
 /obj/vampire_car/bullet_act(obj/projectile/P, def_zone, piercing_hit = FALSE)
 	. = ..()
-	take_damage(5)
 	for(var/mob/living/L in src)
 		if(prob(50))
 			L.apply_damage(P.damage, P.damage_type, pick(BODY_ZONE_HEAD, BODY_ZONE_CHEST))
@@ -301,9 +292,40 @@
 //Dump out all living from the car
 /obj/vampire_car/proc/empty_car()
 	for(var/mob/living/L in src)
-		L.forceMove(loc)
-		for(var/datum/action/carr/car_action in L.actions)
-			qdel(car_action)
+		empty_occupent(L)
+
+//Dump one guy out of the car.
+/obj/vampire_car/proc/empty_occupent(mob/living/dumpe)
+	if(driver == dumpe)
+		driver = null
+	if(dumpe in passengers)
+		passengers -= dumpe
+	dumpe.forceMove(loc)
+
+	var/list/exit_side = list(
+		SIMPLIFY_DEGREES(movement_vector + 90),
+		SIMPLIFY_DEGREES(movement_vector - 90)
+	)
+	for(var/angle in exit_side)
+		if(get_step(dumpe, angle2dir(angle)).density)
+			exit_side.Remove(angle)
+	var/list/exit_alt = GLOB.alldirs.Copy()
+	for(var/dir in exit_alt)
+		if(get_step(dumpe, dir).density)
+			exit_alt.Remove(dir)
+	if(length(exit_side))
+		dumpe.Move(get_step(dumpe, angle2dir(pick(exit_side))))
+	else if(length(exit_alt))
+		dumpe.Move(get_step(dumpe, exit_alt))
+
+	to_chat(dumpe, span_notice("You exit [src]."))
+	if(dumpe)
+		if(dumpe.client)
+			dumpe.client.pixel_x = 0
+			dumpe.client.pixel_y = 0
+	playsound(src, 'code/modules/wod13/sounds/door.ogg', 50, TRUE)
+	for(var/datum/action/carr/C in dumpe.actions)
+		qdel(C)
 
 /obj/vampire_car/Bump(atom/A)
 	. = ..()
@@ -398,7 +420,8 @@
 			return PROCESS_KILL
 
 	forceMove(locate(last_pos["x"], last_pos["y"], z))
-	new /obj/effect/temp_visual/car(loc)
+	if(on)
+		new /obj/effect/temp_visual/car(loc)
 
 	pixel_x = last_pos["x_pix"]
 	pixel_y = last_pos["y_pix"]

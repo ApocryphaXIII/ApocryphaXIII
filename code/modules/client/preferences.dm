@@ -72,6 +72,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
 	var/total_age = 30
+	var/phone_postfix = "Unset"
 	var/underwear = "Nude"				//underwear type
 	var/underwear_color = "000"			//underwear color
 	var/undershirt = "Nude"				//undershirt type
@@ -508,6 +509,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<br><b>Biological Age:</b> <a href='byond://?_src_=prefs;preference=age;task=input'>[age]</a>"
 			dat += "<br><b>Actual Age:</b> <a href='byond://?_src_=prefs;preference=total_age;task=input'>[max(age, total_age)]</a>"
+
+			dat += "<br><b>Phone Number:</b> <a href='byond://?_src_=prefs;preference=phone_postfix;task=input'>[phone_postfix]</a>"
 
 			dat += "</tr></table>"
 
@@ -2201,6 +2204,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						if (total_age < age)
 							age = total_age
 						update_preview_icon()
+
+				if("phone_postfix")
+					if(slotlocked)
+						return
+
+					var/new_number = tgui_input_number(user, "Choose your character's phone number's subscriber code (postfix):\n([SUBSCRIBER_NUMBER_LENGTH] didgits)", "Character Preference")
+					if(new_number)
+						phone_postfix = "[num2text(new_number, SUBSCRIBER_NUMBER_LENGTH)]"
 
 				if("info_choose")
 					var/new_info_known = tgui_input_list(user, "Choose who knows your character:", "Fame", list(INFO_KNOWN_UNKNOWN, INFO_KNOWN_CLAN_ONLY, INFO_KNOWN_FACTION, INFO_KNOWN_PUBLIC))

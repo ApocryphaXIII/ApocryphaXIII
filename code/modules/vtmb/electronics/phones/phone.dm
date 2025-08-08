@@ -6,26 +6,25 @@
 #define USE_JOB_TITLE 3
 
 
-/proc/create_unique_phone_number(exchange = 513)
-	if(length(GLOB.subscribers_numbers_list) < 1)
+/proc/create_unique_phone_number(exchange = 415, postfix)
+	if(!length(GLOB.subscribers_numbers_list))
 		create_subscribers_numbers()
+
+	// If we have a valid phone number set and someone hasnt already taken it
+	if(postfix && (postfix in GLOB.subscribers_numbers_list))
+		GLOB.subscribers_numbers_list -= postfix
+		return "[exchange][postfix]"
+
+	// If we dont pass a postfix or cant use it, pick a random one
 	var/subscriber_code = pick(GLOB.subscribers_numbers_list)
 	GLOB.subscribers_numbers_list -= subscriber_code
 	return "[exchange][subscriber_code]"
 
 /proc/create_subscribers_numbers()
-	for(var/i in 1 to 9999)
-		var/ii = "0000"
-		switch(i)
-			if(1 to 9)
-				ii = "000[i]"
-			if(10 to 99)
-				ii = "00[i]"
-			if(100 to 999)
-				ii = "0[i]"
-			if(1000 to 9999)
-				ii = "[i]"
-		GLOB.subscribers_numbers_list += ii
+	GLOB.subscribers_numbers_list = list()
+	var/max_num = (10 ** SUBSCRIBER_NUMBER_LENGTH) - 1
+	for(var/i in 1 to max_num)
+		GLOB.subscribers_numbers_list += num2text(i, SUBSCRIBER_NUMBER_LENGTH)
 
 /obj/item/vamp/phone
 	name = "\improper phone"
@@ -42,7 +41,7 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 
-	var/exchange_num = 513
+	var/exchange_num = 415
 	var/list/contacts = list()
 	var/blocked = FALSE
 	var/list/blocked_contacts = list()
@@ -80,7 +79,8 @@
 	if(!number || number == "")
 		if(!isnull(owner))
 			src.owner = owner.real_name
-		number = create_unique_phone_number(exchange_num)
+		var/my_number = owner?.client?.prefs?.phone_postfix
+		number = create_unique_phone_number(exchange_num, my_number)
 		GLOB.phone_numbers_list += number
 		GLOB.phones_list += src
 		if(!isnull(owner) && owner.Myself)

@@ -1,3 +1,10 @@
+/obj/effect/temp_visual/car
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "smoke"
+	layer = BELOW_MOB_LAYER
+	light_range = 1
+	duration = 0.5 SECONDS
+
 /obj/vampire_car
 	name = "car"
 	desc = "Take me home, country roads..."
@@ -52,7 +59,6 @@
 
 /obj/vampire_car/Initialize(mapload)
 	. = ..()
-	START_PROCESSING(SScarpool, src)
 
 	AddComponent(component_type)
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -267,18 +273,17 @@
 /obj/vampire_car/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
 	if(prob(50) && atom_integrity <= max_integrity/2)
-		on = FALSE
+		stop_engine()
 		set_light(0)
 	if(broken)
 		if(!exploded && prob(50))
 			exploded = TRUE
 			empty_car()
 			explosion(loc,0,1,3,4)
-			STOP_PROCESSING(SScarpool, src)
 
 /obj/vampire_car/atom_break(damage_flag)
 	. = ..()
-	on = FALSE
+	stop_engine()
 	set_light(0)
 	color = "#919191"
 	broken = TRUE
@@ -291,7 +296,7 @@
 		atom_integrity = min(max_integrity, atom_integrity-cost)
 
 	if(atom_integrity == 0)
-		on = FALSE
+		stop_engine()
 		set_light(0)
 		color = "#919191"
 		if(!exploded && prob(10))
@@ -300,7 +305,7 @@
 			explosion(loc,0,1,3,4)
 			STOP_PROCESSING(SScarpool, src)
 	else if(prob(50) && atom_integrity <= max_integrity/2)
-		on = FALSE
+		stop_engine()
 		set_light(0)
 	return
 */
@@ -403,7 +408,7 @@
 	var/used_speed = speed_in_pixels
 
 	if(gas <= 0)
-		on = FALSE
+		stop_engine()
 		if(driver)
 			to_chat(driver, span_warning("No fuel in the tank!"))
 	if(on)
@@ -412,8 +417,12 @@
 			last_vzhzh = world.time
 	if(!on || !driver)
 		speed_in_pixels = (speed_in_pixels < 0 ? -1 : 1) * max(abs(speed_in_pixels) - 15, 0)
+		if(speed_in_pixels == 0)
+			return PROCESS_KILL
 
 	forceMove(locate(last_pos["x"], last_pos["y"], z))
+	new /obj/effect/temp_visual/car(loc)
+
 	pixel_x = last_pos["x_pix"]
 	pixel_y = last_pos["y_pix"]
 	var/moved_x = round(sin(used_vector)*used_speed)
@@ -423,8 +432,8 @@
 		if(used_speed < 0)
 			true_movement_angle = SIMPLIFY_DEGREES(used_vector+180)
 
-		var/turf/check_turf = get_projected_turf(used_vector, used_speed, 36)
-		var/turf/check_turf_ahead = get_projected_turf(used_vector, used_speed, 18)
+		var/turf/check_turf = get_turf_in_angle(used_vector, src.loc, 3)
+		var/turf/check_turf_ahead = get_turf_in_angle(used_vector, src.loc, 2)
 
 		handle_npc_dodge(check_turf_ahead, used_vector)
 
@@ -470,17 +479,11 @@
 	animate(src, pixel_x = last_pos["x_pix"]+moved_x, pixel_y = last_pos["y_pix"]+moved_y, SScarpool.wait, 1)
 	update_last_pos(moved_x, moved_y)
 
-/obj/vampire_car/proc/get_projected_turf(angle, speed, divisor)
-	return locate(
-		x + sign(round(sin(angle) * speed)) * round(max(abs(round(sin(angle) * speed)), divisor) / (divisor == 36 ? 32 : 16)),
-		y + sign(round(cos(angle) * speed)) * round(max(abs(round(cos(angle) * speed)), divisor) / (divisor == 36 ? 32 : 16)),
-		z
-	)
-
 /obj/vampire_car/proc/handle_npc_dodge(turf/target, angle)
 	for(var/turf/T in get_line(src, target))
 		var/list/unpassable = T.get_blocking_contents(FALSE, src)
-		if(length(unpassable))
+		if(!length(unpassable))
+			continue
 		for(var/mob/living/carbon/human/npc/NPC in unpassable)
 			if(COOLDOWN_FINISHED(NPC, car_dodge) && !HAS_TRAIT(NPC, TRAIT_INCAPACITATED))
 				var/list/dodge_direction = list(
@@ -511,19 +514,23 @@
 					SScarpool.wait, 1)
 
 /obj/vampire_car/proc/update_last_pos(moved_x, moved_y)
+	// Step 1: Move pixel and forward positions
 	last_pos["x_frwd"] = last_pos["x_pix"] + moved_x * 2
 	last_pos["y_frwd"] = last_pos["y_pix"] + moved_y * 2
 	last_pos["x_pix"] = last_pos["x_pix"] + moved_x
 	last_pos["y_pix"] = last_pos["y_pix"] + moved_y
 
+	// Step 2: Calculate how many whole tiles we moved (if we crossed tile boundaries)
 	var/x_add = (last_pos["x_pix"] < 0 ? -1 : 1) * round((abs(last_pos["x_pix"]) + 16) / 32)
 	var/y_add = (last_pos["y_pix"] < 0 ? -1 : 1) * round((abs(last_pos["y_pix"]) + 16) / 32)
 
+	// Step 3: Subtract tile offsets to wrap pixel position into 0–31 range
 	last_pos["x_frwd"] -= x_add * 32
 	last_pos["y_frwd"] -= y_add * 32
 	last_pos["x_pix"] -= x_add * 32
 	last_pos["y_pix"] -= y_add * 32
 
+	// Step 4: Update absolute turf coordinates with clamping
 	last_pos["x"] = clamp(last_pos["x"] + x_add, 1, world.maxx)
 	last_pos["y"] = clamp(last_pos["y"] + y_add, 1, world.maxy)
 
@@ -591,3 +598,10 @@
 	var/matrix/M = matrix()
 	M.Turn(movement_vector - minus_angle)
 	transform = M
+
+/obj/vampire_car/proc/start_engine()
+	START_PROCESSING(SScarpool, src)
+	on = TRUE
+
+/obj/vampire_car/proc/stop_engine()
+	on = FALSE

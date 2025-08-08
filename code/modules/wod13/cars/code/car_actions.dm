@@ -64,12 +64,12 @@
 		var/obj/vampire_car/V = owner.loc
 		if(!V.on)
 			if(V.get_integrity() == V.max_integrity)
-				V.on = TRUE
+				V.start_engine()
 				playsound(V, 'code/modules/wod13/sounds/start.ogg', 50, TRUE)
 				to_chat(owner, span_notice("You managed to start [V]'s engine."))
 				return
 			if(prob(100*(V.get_integrity()/V.max_integrity)))
-				V.on = TRUE
+				V.start_engine()
 				playsound(V, 'code/modules/wod13/sounds/start.ogg', 50, TRUE)
 				to_chat(owner, span_notice("You managed to start [V]'s engine."))
 				return
@@ -77,7 +77,7 @@
 				to_chat(owner, span_warning("You failed to start [V]'s engine."))
 				return
 		else
-			V.on = FALSE
+			V.stop_engine()
 			playsound(V, 'code/modules/wod13/sounds/stop.ogg', 50, TRUE)
 			to_chat(owner, span_notice("You stop [V]'s engine."))
 			V.set_light(0)

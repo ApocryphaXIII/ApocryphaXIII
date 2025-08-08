@@ -422,35 +422,11 @@
 		var/true_movement_angle = used_vector
 		if(used_speed < 0)
 			true_movement_angle = SIMPLIFY_DEGREES(used_vector+180)
-		var/turf/check_turf = locate( \
-			x + (moved_x < 0 ? -1 : 1) * round(max(abs(moved_x), 36) / 32), \
-			y + (moved_y < 0 ? -1 : 1) * round(max(abs(moved_y), 36) / 32), \
-			z
-		)
-		var/turf/check_turf_ahead = locate( \
-			x + (moved_x < 0 ? -1 : 1) * round(max(abs(moved_x), 18) / 16), \
-			y + (moved_y < 0 ? -1 : 1) * round(max(abs(moved_y), 18) / 16), \
-			z
-		)
-		for(var/turf/T in get_line(src, check_turf_ahead))
-			var/list/unpassable = T.get_blocking_contents(FALSE, src)
-			if(length(unpassable))
-				for(var/mob/living/carbon/human/npc/NPC in unpassable)
-					if(COOLDOWN_FINISHED(NPC, car_dodge) && !HAS_TRAIT(NPC, TRAIT_INCAPACITATED))
-						var/list/dodge_direction = list(
-							SIMPLIFY_DEGREES(movement_vector + 45),
-							SIMPLIFY_DEGREES(movement_vector - 45),
-							SIMPLIFY_DEGREES(movement_vector + 90),
-							SIMPLIFY_DEGREES(movement_vector - 90),
-						)
-						for(var/angle in dodge_direction)
-							if(get_step(NPC, angle2dir(angle)).density)
-								dodge_direction.Remove(angle)
-						if(length(dodge_direction))
-							step(NPC, angle2dir(pick(dodge_direction)), NPC.total_multiplicative_slowdown())
-							COOLDOWN_START(NPC, car_dodge, 2 SECONDS)
-							if(prob(50))
-								NPC.RealisticSay(pick(NPC.socialrole.car_dodged))
+
+		var/turf/check_turf = get_projected_turf(used_vector, used_speed, 36)
+		var/turf/check_turf_ahead = get_projected_turf(used_vector, used_speed, 18)
+
+		handle_npc_dodge(check_turf_ahead, used_vector)
 
 		var/turf/hit_turf
 		var/list/in_line = get_line(src, check_turf)
@@ -489,6 +465,41 @@
 	if(south_turf.is_blocked_turf())
 		moved_y = max(-8-last_pos["y_pix"], moved_y)
 
+	move_car_riders(moved_x, moved_y)
+
+	animate(src, pixel_x = last_pos["x_pix"]+moved_x, pixel_y = last_pos["y_pix"]+moved_y, SScarpool.wait, 1)
+	update_last_pos(moved_x, moved_y)
+
+/obj/vampire_car/proc/get_projected_turf(angle, speed, divisor)
+	return locate(
+		x + sign(round(sin(angle) * speed)) * round(max(abs(round(sin(angle) * speed)), divisor) / (divisor == 36 ? 32 : 16)),
+		y + sign(round(cos(angle) * speed)) * round(max(abs(round(cos(angle) * speed)), divisor) / (divisor == 36 ? 32 : 16)),
+		z
+	)
+
+/obj/vampire_car/proc/handle_npc_dodge(turf/target, angle)
+	for(var/turf/T in get_line(src, target))
+		var/list/unpassable = T.get_blocking_contents(FALSE, src)
+		if(length(unpassable))
+		for(var/mob/living/carbon/human/npc/NPC in unpassable)
+			if(COOLDOWN_FINISHED(NPC, car_dodge) && !HAS_TRAIT(NPC, TRAIT_INCAPACITATED))
+				var/list/dodge_direction = list(
+					SIMPLIFY_DEGREES(angle + 45),
+					SIMPLIFY_DEGREES(angle - 45),
+					SIMPLIFY_DEGREES(angle + 90),
+					SIMPLIFY_DEGREES(angle - 90),
+				)
+				for(var/dir_angle in dodge_direction)
+					if(get_step(NPC, angle2dir(dir_angle)).density)
+						dodge_direction.Remove(dir_angle)
+				if(length(dodge_direction))
+					step(NPC, angle2dir(pick(dodge_direction)), NPC.total_multiplicative_slowdown())
+					COOLDOWN_START(NPC, car_dodge, 2 SECONDS)
+					if(prob(50))
+						NPC.RealisticSay(pick(NPC.socialrole.car_dodged))
+
+/// Moves the client cameras of living inside of the car.
+/obj/vampire_car/proc/move_car_riders(moved_x, moved_y)
 	for(var/mob/living/rider in src)
 		if(rider)
 			if(rider.client)
@@ -499,8 +510,7 @@
 					pixel_y = last_pos["y_pix"] + moved_y * 2, \
 					SScarpool.wait, 1)
 
-	animate(src, pixel_x = last_pos["x_pix"]+moved_x, pixel_y = last_pos["y_pix"]+moved_y, SScarpool.wait, 1)
-
+/obj/vampire_car/proc/update_last_pos(moved_x, moved_y)
 	last_pos["x_frwd"] = last_pos["x_pix"] + moved_x * 2
 	last_pos["y_frwd"] = last_pos["y_pix"] + moved_y * 2
 	last_pos["x_pix"] = last_pos["x_pix"] + moved_x

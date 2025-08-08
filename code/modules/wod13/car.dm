@@ -288,28 +288,6 @@
 	color = "#919191"
 	broken = TRUE
 
-/*
-/obj/vampire_car/proc/take_damage(cost)
-	if(cost > 0)
-		atom_integrity = max(0, atom_integrity-cost)
-	if(cost < 0)
-		atom_integrity = min(max_integrity, atom_integrity-cost)
-
-	if(atom_integrity == 0)
-		stop_engine()
-		set_light(0)
-		color = "#919191"
-		if(!exploded && prob(10))
-			exploded = TRUE
-			empty_car()
-			explosion(loc,0,1,3,4)
-			STOP_PROCESSING(SScarpool, src)
-	else if(prob(50) && atom_integrity <= max_integrity/2)
-		stop_engine()
-		set_light(0)
-	return
-*/
-
 /obj/vampire_car/proc/set_headlight_on(new_value)
 	if(headlight_on == new_value)
 		return
@@ -328,8 +306,7 @@
 			qdel(car_action)
 
 /obj/vampire_car/Bump(atom/A)
-	if(!A)
-		return
+	. = ..()
 	var/prev_speed = round(abs(speed_in_pixels)/8)
 	if(!prev_speed)
 		return
@@ -433,9 +410,10 @@
 			true_movement_angle = SIMPLIFY_DEGREES(used_vector+180)
 
 		var/turf/check_turf = get_turf_in_angle(used_vector, src.loc, 3)
-		var/turf/check_turf_ahead = get_turf_in_angle(used_vector, src.loc, 2)
+		// Was used for npc dodge, unsure if needed
+		//var/turf/check_turf_ahead = get_turf_in_angle(used_vector, src.loc, 2)
 
-		handle_npc_dodge(check_turf_ahead, used_vector)
+		handle_npc_dodge(check_turf, used_vector)
 
 		var/turf/hit_turf
 		var/list/in_line = get_line(src, check_turf)

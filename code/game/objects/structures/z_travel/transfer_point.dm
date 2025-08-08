@@ -95,3 +95,6 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	. = ..()
 	playsound(get_turf(AM), 'code/modules/wod13/sounds/portal_enter.ogg', 75, FALSE)
 
+
+/obj/transfer_point_vamp/debug
+	id = "debug"

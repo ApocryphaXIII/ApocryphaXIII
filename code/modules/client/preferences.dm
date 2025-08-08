@@ -2212,8 +2212,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/new_number = tgui_input_text(user, "Choose your character's phone number's subscriber code (postfix):\n([SUBSCRIBER_NUMBER_LENGTH] didgits)", "Character Preference", max_length = SUBSCRIBER_NUMBER_LENGTH)
 					if(!new_number)
 						return
-					if(length(new_number) != SUBSCRIBER_NUMBER_LENGTH)
-						to_chat(user, span_notice("You need a [SUBSCRIBER_NUMBER_LENGTH] didgit string!"))
+					new_number = text2num(new_number)
+					new_number = num2text(new_number, SUBSCRIBER_NUMBER_LENGTH, 10)
+					if(!new_number)
 						return
 					phone_postfix = new_number
 

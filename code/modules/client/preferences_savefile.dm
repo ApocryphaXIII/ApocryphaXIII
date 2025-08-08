@@ -627,7 +627,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	reason_of_death	= sanitize_text(reason_of_death)
 	torpor_count				= sanitize_integer(torpor_count, 0, 6, initial(torpor_count))
 	total_age		= sanitize_integer(total_age, 18, 1120, initial(total_age))
+
 	phone_postfix = sanitize_text(phone_postfix)
+	//Extra santiziation
+	phone_postfix = text2num(phone_postfix)
+	phone_postfix = num2text(phone_postfix, SUBSCRIBER_NUMBER_LENGTH, 10)
+
 	slotlocked			= sanitize_integer(slotlocked, 0, 1, initial(slotlocked))
 	path_score				= sanitize_integer(path_score, 0, 10, initial(path_score))
 	is_enlightened				= sanitize_integer(is_enlightened, 0, 1, initial(is_enlightened))

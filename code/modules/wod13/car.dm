@@ -22,7 +22,7 @@
 	var/speed_in_pixels = 0 // 16 pixels (turf is 2x2m) = 1 meter per 1 SECOND (process fire). Minus equals to reverse, max should be 444
 	var/last_pos = list("x" = 0, "y" = 0, "x_pix" = 0, "y_pix" = 0, "x_frwd" = 0, "y_frwd" = 0)
 
-	max_integrity = 500
+	max_integrity = 400
 	integrity_failure = 0.25
 	var/broken = FALSE
 
@@ -555,9 +555,8 @@
 
 /obj/vampire_car/proc/controlling(adjusting_speed, adjusting_turn)
 	var/drift = 1
-	if(driver)
-		if(HAS_TRAIT(driver, TRAIT_EXP_DRIVER))
-			drift = 2
+	if(driver && HAS_TRAIT(driver, TRAIT_EXP_DRIVER))
+		drift = 2
 	var/adjust_true = adjusting_turn
 	if(speed_in_pixels != 0)
 		movement_vector = SIMPLIFY_DEGREES(movement_vector+adjust_true)

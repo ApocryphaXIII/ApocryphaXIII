@@ -329,7 +329,7 @@
 
 /obj/vampire_car/Bump(atom/A)
 	. = ..()
-	var/prev_speed = round(abs(speed_in_pixels)/8)
+	var/prev_speed = round(abs(speed_in_pixels)/4)
 	if(!prev_speed)
 		return
 
@@ -371,22 +371,16 @@
 				L.client.pixel_y = 0
 	if(istype(A, /mob/living))
 		var/mob/living/L = A
-		var/dam2 = prev_speed
+		var/hit_dam = prev_speed
 		if(!HAS_TRAIT(L, TRAIT_TOUGH_FLESH))
-			dam2 = dam2*2
-		L.apply_damage(dam2, BRUTE, BODY_ZONE_CHEST)
-		var/dam = prev_speed
-		if(driver)
-			if(HAS_TRAIT(driver, TRAIT_EXP_DRIVER))
-				dam = round(dam/2)
-		take_damage(dam)
-	else
-		var/dam = prev_speed
-		if(driver)
-			if(HAS_TRAIT(driver, TRAIT_EXP_DRIVER))
-				dam = round(dam/2)
-			driver.apply_damage(prev_speed, BRUTE, BODY_ZONE_CHEST)
-		take_damage(dam)
+			hit_dam = hit_dam*2
+		L.apply_damage(hit_dam, BRUTE, BODY_ZONE_CHEST)
+	var/dam = prev_speed
+	if(driver)
+		if(HAS_TRAIT(driver, TRAIT_EXP_DRIVER))
+			dam = round(dam/2)
+		driver.apply_damage(prev_speed, BRUTE, BODY_ZONE_CHEST)
+	take_damage(dam)
 	return
 
 /obj/vampire_car/setDir(newdir)

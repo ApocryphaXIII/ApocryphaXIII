@@ -1,0 +1,4 @@
+author: "dwinters99"
+delete-after: True
+changes:
+  - qol: "Trash can be put in the source container"

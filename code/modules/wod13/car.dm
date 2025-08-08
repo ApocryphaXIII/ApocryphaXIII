@@ -365,10 +365,9 @@
 	last_pos["x_pix"] = 0
 	last_pos["y_pix"] = 0
 	for(var/mob/living/L in src)
-		if(L)
-			if(L.client)
-				L.client.pixel_x = 0
-				L.client.pixel_y = 0
+		if(L.client)
+			L.client.pixel_x = 0
+			L.client.pixel_y = 0
 	if(istype(A, /mob/living))
 		var/mob/living/L = A
 		var/hit_dam = prev_speed
@@ -410,7 +409,7 @@
 			last_vzhzh = world.time
 	if(!on || !driver)
 		speed_in_pixels = (speed_in_pixels < 0 ? -1 : 1) * max(abs(speed_in_pixels) - 15, 0)
-		if(speed_in_pixels == 0)
+		if(speed_in_pixels == 0 && !light_on)
 			return PROCESS_KILL
 
 	forceMove(locate(last_pos["x"], last_pos["y"], z))

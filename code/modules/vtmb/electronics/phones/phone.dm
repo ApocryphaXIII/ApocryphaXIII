@@ -14,7 +14,7 @@
 		postfix = text2num(postfix)
 		postfix = num2text(postfix, SUBSCRIBER_NUMBER_LENGTH, 10)
 	// If we have a valid phone number set and someone hasnt already taken it
-	if(postfix && !("[exchange][postfix]" in GLOB.phone_numbers_list))
+	if((postfix && postfix != "000000") && !("[exchange][postfix]" in GLOB.phone_numbers_list))
 		return "[exchange][postfix]"
 
 	// If we dont pass a postfix or cant use it, pick a random one
@@ -791,14 +791,14 @@
 // ANARCHS
 
 /obj/item/vamp/phone/baron
-	exchange_num = 485
+	exchange_num = 180
 	contact_networks_pre_init = list(
 		list(NETWORK_ID = ANARCH_NETWORK, OUR_ROLE = "Club Manager")
 		, list(NETWORK_ID = VAMPIRE_LEADER_NETWORK, OUR_ROLE = "Anarchy Rose Club Manager")
 		)
 
 /obj/item/vamp/phone/emissary
-	exchange_num = 485
+	exchange_num = 180
 	contact_networks_pre_init = list(
 		list(NETWORK_ID = ANARCH_NETWORK, OUR_ROLE = "Club Representative")
 		, list(NETWORK_ID = VAMPIRE_LEADER_NETWORK, OUR_ROLE = "Anarchy Rose Club Representative")
@@ -817,7 +817,7 @@
 // WAREHOUSE
 
 /obj/item/vamp/phone/dealer
-	exchange_num = 485
+	exchange_num = 180
 	contact_networks_pre_init = list(
 		list(NETWORK_ID = WAREHOUSE_NETWORK, OUR_ROLE = "Warehouse Manager")
 		, list(NETWORK_ID = VAMPIRE_LEADER_NETWORK, OUR_ROLE = "Warehouse Manager")
@@ -838,7 +838,7 @@
 // ENDRON
 
 /obj/item/vamp/phone/endron_lead
-	exchange_num = 485
+	exchange_num = 180
 	contact_networks_pre_init = list(
 		list(NETWORK_ID = ENDRON_NETWORK, OUR_ROLE = "Endron Branch Lead")
 		)

@@ -818,7 +818,7 @@
 /mob/living/simple_animal/hostile/beastmaster/rat
 	name = "rat"
 	desc = "It's a rat."
-	icon = 'code/modules/wod13/icons.dmi'
+	icon = 'icons/mob/animal.dmi' // ZAPOC EDIT CHANGE // Rats are stored here as of ZAPOC #52
 	icon_state = "rat"
 	icon_living = "rat"
 	icon_dead = "rat_dead"

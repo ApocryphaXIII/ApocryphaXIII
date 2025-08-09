@@ -1,8 +1,24 @@
 2025-08-03:
   FalloutFalcon:
   - rscadd: Privacy Policy
+  - refactor: city time rework
   PositiveEntropy, INFRARED_BARON:
   - image: Carpets, bathroom/clinic/industrial/factory tiles have all been modified!
   dwinters99:
   - bugfix: Techshop TV returned to it's rightful place
   - bugfix: Corpses in the forest cave are corporeal once more
+2025-08-04:
+  dwinters99:
+  - bugfix: Hispo form invisibility fix
+2025-08-05:
+  dwinters99:
+  - bugfix: Unduplicates hispo form button
+2025-08-07:
+  FalloutFalcon:
+  - rscadd: turf type that mimics the edges of the map.
+  dwinters99:
+  - qol: Mirrors no longer rudely ignore Lasombra vampires
+2025-08-09:
+  dwinters99:
+  - qol: Trash can be put in the source container
+  - rscadd: Clan Ravnos!

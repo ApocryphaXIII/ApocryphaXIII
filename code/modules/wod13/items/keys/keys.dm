@@ -180,17 +180,17 @@
 		"tmr"
 	)
 
-/obj/item/vamp/keys/tzimisce
-	name = "Regal keys"
+/obj/item/vamp/keys/voivodate
+	name = "Family estate keys"
 	accesslocks = list(
-		"tzimisce"
+		"voivodate_citizen"
 	)
 
-/obj/item/vamp/keys/tzimisce/manor
-	name = "Manor keys"
+/obj/item/vamp/keys/voivodate/master
+	name = "Estate master keys"
 	accesslocks = list(
-		"tzimisce",
-		"tzimiscemanor"
+		"seer_voivodate",
+		"voivodate_citizen"
 	)
 
 /obj/item/vamp/keys/setite

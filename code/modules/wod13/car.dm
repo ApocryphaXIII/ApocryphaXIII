@@ -665,6 +665,9 @@ SUBSYSTEM_DEF(carpool)
 	access = "clinic"
 	icon_state = "5"
 
+/obj/vampire_car/retro/rand/voivodate
+	access = "voivodate_citizen"
+
 /obj/vampire_car/limousine
 	icon_state = "limo"
 	max_passengers = 6
@@ -685,6 +688,9 @@ SUBSYSTEM_DEF(carpool)
 	dir = WEST
 	access = "camarilla"
 	baggage_limit = 45
+
+/obj/vampire_car/limousine/voivodate
+	access = "seer_voivodate"
 
 /obj/vampire_car/police
 	icon_state = "police"

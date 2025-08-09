@@ -3525,6 +3525,7 @@
 #include "code\modules\vtmb\jobs\swat.dm"
 #include "code\modules\vtmb\jobs\taxi.dm"
 #include "code\modules\vtmb\jobs\triad.dm"
+#include "code\modules\vtmb\jobs\voidodate_citizen.dm"
 #include "code\modules\vtmb\jobs\voivode.dm"
 #include "code\modules\vtmb\jobs\zadruga.dm"
 #include "code\modules\vtmb\jobs\anarchs\baron.dm"

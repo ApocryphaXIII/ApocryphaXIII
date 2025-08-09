@@ -251,6 +251,8 @@
 	desc = "A huge chunk of rocks separating whole territory."
 	icon_state = "rock-0"
 	base_icon_state = "rock"
+	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_MINERAL_WALLS)
+	canSmoothWith = list(SMOOTH_GROUP_MINERAL_WALLS)
 
 /turf/closed/wall/vampwall/city
 	name = "wall"

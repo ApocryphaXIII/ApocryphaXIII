@@ -10,7 +10,6 @@
 	violating_appearance = FALSE
 	male_clothes = /obj/item/clothing/under/vampire/sport
 	female_clothes = /obj/item/clothing/under/vampire/red
-	clan_keys = /obj/item/vamp/keys/tzimisce
 	is_enlightened = TRUE
 	var/obj/item/heirl
 	whitelisted = FALSE // dont ruin it

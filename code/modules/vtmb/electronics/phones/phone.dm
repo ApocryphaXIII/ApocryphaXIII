@@ -14,7 +14,7 @@
 		postfix = text2num(postfix)
 		postfix = num2text(postfix, SUBSCRIBER_NUMBER_LENGTH, 10)
 	// If we have a valid phone number set and someone hasnt already taken it
-	if((postfix && postfix != "000000") && !("[exchange][postfix]" in GLOB.phone_numbers_list))
+	if((postfix && postfix != "0000") && !("[exchange][postfix]" in GLOB.phone_numbers_list))
 		return "[exchange][postfix]"
 
 	// If we dont pass a postfix or cant use it, pick a random one

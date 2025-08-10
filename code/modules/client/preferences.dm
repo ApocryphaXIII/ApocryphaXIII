@@ -248,9 +248,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/chi_types = list()
 	var/list/chi_levels = list()
 
-	// Off by default. Opt-in.
-	var/nsfw_content_pref = FALSE
-
 	var/derangement = TRUE
 
 /datum/preferences/proc/add_experience(amount)
@@ -865,13 +862,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<BR><b>Headshot(1:1):</b> <a href='byond://?_src_=prefs;preference=headshot;task=input'>Change</a>"
 
-			dat += "<BR><b>NSFW Content:</b> <a href='byond://?_src_=prefs;preference=nsfw_content_preference'>[(nsfw_content_pref) ? "Enabled" : "Disabled"]</A>"
-			if(nsfw_content_pref)
-				if(length(flavor_text_nsfw) <= 110)
-					dat += "<BR><b>Flavor Text (NSFW):</b> [flavor_text_nsfw] <a href='byond://?_src_=prefs;preference=flavor_text_nsfw;task=input'>Change</a>"
-				else
-					dat += "<BR><b>Flavor Text (NSFW):</b> [preview_text_nsfw]... <a href='byond://?_src_=prefs;preference=flavor_text_nsfw;task=input'>Change</a>"
-				dat += "<BR><b>OOC Notes:</b> [ooc_notes] <a href='byond://?_src_=prefs;preference=ooc_notes;task=input'>Change</a>"
+			if(length(flavor_text_nsfw) <= 110)
+				dat += "<BR><b>Flavor Text (NSFW):</b> [flavor_text_nsfw] <a href='byond://?_src_=prefs;preference=flavor_text_nsfw;task=input'>Change</a>"
+			else
+				dat += "<BR><b>Flavor Text (NSFW):</b> [preview_text_nsfw]... <a href='byond://?_src_=prefs;preference=flavor_text_nsfw;task=input'>Change</a>"
+			dat += "<BR><b>OOC Notes:</b> [ooc_notes] <a href='byond://?_src_=prefs;preference=ooc_notes;task=input'>Change</a>"
 
 			// TFN EDIT ADDITION END
 			dat += "<h2>[make_font_cool("EQUIP")]</h2>"
@@ -3377,9 +3372,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				if("lover")
 					lover = !lover
-
-				if("nsfw_content_preference")
-					nsfw_content_pref = !nsfw_content_pref
 
 				if("persistent_scars")
 					persistent_scars = !persistent_scars

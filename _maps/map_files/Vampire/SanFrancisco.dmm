@@ -1508,10 +1508,10 @@
 	},
 /area/vtm/interior/millennium_tower/f4)
 "arf" = (
+/obj/structure/railing,
 /obj/structure/coclock/grandpa{
 	pixel_y = 10
 	},
-/obj/structure/railing,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/voivodate)
 "ari" = (
@@ -15546,6 +15546,12 @@
 /obj/item/reagent_containers/food/drinks/shaker{
 	pixel_x = -11;
 	pixel_y = 3
+	},
+/obj/machinery/button/curtain{
+	id = "estate_dining_hall";
+	pixel_y = 11;
+	pixel_x = 10;
+	name = "Upper Curtains"
 	},
 /turf/closed/wall/vampwall/old/low,
 /area/vtm/interior/voivodate)
@@ -31974,7 +31980,9 @@
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/millennium_tower/ventrue)
 "hQo" = (
-/obj/structure/curtain/cloth/fancy/mechanical/luxurious,
+/obj/structure/curtain/cloth/fancy/mechanical/luxurious{
+	id = "estate_foyer"
+	},
 /turf/closed/wall/vampwall/old/low/window,
 /area/vtm/interior/voivodate)
 "hQr" = (
@@ -33341,6 +33349,16 @@
 /obj/item/storage/fancy/donut_box,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
+"ihI" = (
+/obj/structure/table/wood/fancy/royalblack,
+/obj/machinery/button/curtain{
+	id = "estate_foyer";
+	pixel_x = -6;
+	pixel_y = -2;
+	name = "Curtains"
+	},
+/turf/open/floor/plating/parquetry/rich,
+/area/vtm/interior/voivodate)
 "ihN" = (
 /obj/structure/table/wood,
 /turf/open/floor/plating/parquetry/old,
@@ -64647,7 +64665,9 @@
 /area/vtm)
 "pLO" = (
 /obj/effect/decal/wallpaper/paper/darkred/low,
-/obj/structure/curtain/cloth/fancy/mechanical/luxurious,
+/obj/structure/curtain/cloth/fancy/mechanical/luxurious{
+	id = "estate_dining_hall"
+	},
 /turf/closed/wall/vampwall/old/low/window,
 /area/vtm/interior/voivodate)
 "pLQ" = (
@@ -86642,6 +86662,16 @@
 /obj/effect/gibspawner/human,
 /turf/open/floor/plating/stone,
 /area/vtm/interior/voivodate/sanctum)
+"viz" = (
+/obj/structure/table/wood/fancy/royalblack,
+/obj/machinery/button/curtain{
+	id = "estate_living_room";
+	pixel_y = -2;
+	pixel_x = 6;
+	name = "Back Curtains"
+	},
+/turf/open/floor/carpet/vamp/redsilver,
+/area/vtm/interior/voivodate)
 "viC" = (
 /obj/structure/sink{
 	pixel_y = 16
@@ -94895,6 +94925,12 @@
 	},
 /turf/open/floor/plating/vampwood,
 /area/vtm/interior/chantry)
+"xgW" = (
+/obj/structure/curtain/cloth/fancy/mechanical/luxurious{
+	id = "estate_living_room"
+	},
+/turf/closed/wall/vampwall/old/low/window,
+/area/vtm/interior/voivodate)
 "xhg" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/plating/vampcanalplating,
@@ -469363,7 +469399,7 @@ vmR
 ktK
 pNk
 bhj
-hQo
+oow
 fsE
 moX
 pFd
@@ -470648,7 +470684,7 @@ hjR
 lOY
 uai
 fyC
-hQo
+oow
 fsE
 pFd
 skK
@@ -470905,7 +470941,7 @@ hjR
 vrB
 uai
 pJu
-hQo
+oow
 fsE
 pFd
 uVC
@@ -471180,7 +471216,7 @@ nWs
 nWs
 dEJ
 tUO
-oow
+xgW
 tCd
 tCd
 tCd
@@ -471437,7 +471473,7 @@ nWs
 nWs
 rrE
 tUO
-oow
+xgW
 tCd
 ajV
 aOn
@@ -471949,9 +471985,9 @@ aAw
 nWs
 esj
 jlZ
-aJK
+nWd
 qcN
-oow
+xgW
 vws
 ajV
 aOn
@@ -472208,7 +472244,7 @@ mec
 jlZ
 aJK
 qcN
-oow
+xgW
 vws
 ajV
 ajV
@@ -472463,9 +472499,9 @@ nWs
 nWs
 esj
 jlZ
-nWd
+viz
 qcN
-oow
+xgW
 vws
 moX
 ajV
@@ -472979,7 +473015,7 @@ nWs
 nWs
 rrE
 tUO
-oow
+xgW
 ajV
 moX
 ajV
@@ -473236,7 +473272,7 @@ nWs
 nWs
 eXh
 tUO
-oow
+xgW
 tCd
 aOn
 vws
@@ -476835,7 +476871,7 @@ lMk
 lMk
 lMk
 lMk
-dQE
+ihI
 nOa
 hQo
 tgU
@@ -540048,7 +540084,7 @@ qrx
 cDP
 pNO
 pNO
-pLO
+sGa
 oqO
 oqO
 oqO
@@ -540305,7 +540341,7 @@ jHk
 uEB
 tBP
 hgA
-pLO
+sGa
 oqO
 oqO
 oqO
@@ -540562,7 +540598,7 @@ jHk
 fME
 jcQ
 wUm
-pLO
+sGa
 oqO
 oqO
 oqO

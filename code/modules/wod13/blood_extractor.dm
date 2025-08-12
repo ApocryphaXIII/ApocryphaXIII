@@ -12,30 +12,41 @@
 
 /obj/structure/bloodextractor/MouseDrop_T(mob/living/target, mob/living/user)
 	. = ..()
-	if(user.stat != CONSCIOUS || HAS_TRAIT(user, TRAIT_UI_BLOCKED) || !Adjacent(user) || !target.Adjacent(user) || !ishuman(target))
+	var/mob/living/carbon/human/H = target
+	if(user.stat != CONSCIOUS || HAS_TRAIT(user, TRAIT_UI_BLOCKED) || !Adjacent(user) || !H.Adjacent(user) || !ishuman(H))
 		return
-	if(!target.buckled)
-		to_chat(user, span_warning("You need to buckle [target] before using the extractor!"))
+	if(!H.buckled)
+		to_chat(user, span_warning("You need to buckle [H] before using [src]!"))
 		return
 	if(!COOLDOWN_FINISHED(src, last_extracted))
-		to_chat(user, span_warning("The [src] isn't ready yet!"))
+		to_chat(user, span_warning("[src] isn't ready yet!"))
 		return
 	COOLDOWN_START(src, last_extracted, 20 SECONDS)
-	if(!do_after(target, 5 SECONDS, src))
+	if(!do_after(H, 5 SECONDS, src))
 		return
-	if(iskindred(target))
-		if(target.bloodpool < 4)
-			to_chat(user, span_warning("The [src] can't find enough blood in [target]'s body!"))
+	if(iskindred(H))
+		if(H.bloodpool < 4)
+			to_chat(user, span_warning("[src] can't find enough blood in [H]'s body!"))
 			return
-		new /obj/item/reagent_containers/blood/vitae(get_turf(src))
-		target.bloodpool = max(0, target.bloodpool - 4)
+		var/obj/item/reagent_containers/blood/vitae/BV = new /obj/item/reagent_containers/blood/vitae(get_turf(src)) // ZAPOC EDIT START
+		BV.blood_type = H.dna.blood_type
+		BV.layer = (layer + 0.1)
+		BV.update_name()
+		H.bloodpool = max(0, H.bloodpool - 4)
 		return
 
-	if(target.bloodpool < 2)
-		to_chat(user, span_warning("The [src] can't find enough blood in [target]'s body!"))
+	if(H.bloodpool < 2)
+		to_chat(user, span_warning("The [src] can't find enough blood in [H]'s body!"))
 		return
-	if(HAS_TRAIT(target, TRAIT_POTENT_BLOOD))
-		new /obj/item/reagent_containers/blood/elite(get_turf(src))
+	if(HAS_TRAIT(H, TRAIT_POTENT_BLOOD))
+		var/obj/item/reagent_containers/blood/elite/BE = new /obj/item/reagent_containers/blood/elite(get_turf(src))
+		BE.blood_type = H.dna.blood_type
+		BE.layer = (layer + 0.1)
+		BE.update_name()
 	else
-		new /obj/item/reagent_containers/blood(get_turf(src))
-	target.bloodpool = max(0, target.bloodpool - 2)
+		var/obj/item/reagent_containers/blood/elite/BN = new /obj/item/reagent_containers/blood(get_turf(src))
+		BN.blood_type = H.dna.blood_type
+		BN.layer = (layer + 0.1)
+		BN.update_name() // ZAPOC EDIT END
+	H.bloodpool = max(0, H.bloodpool - 2)
+	user.visible_message("<span class='warning'>[user] connects [target] to [src] and draws some blood.")

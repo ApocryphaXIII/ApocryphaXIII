@@ -253,7 +253,8 @@
 	var/mob/living/carbon/human/H = usr // ZAPOC EDIT START
 	var/obj/item/vamp/keys/K = locate() in H // In pockets
 	if(!K && H.back)
-		K = locate() in H.back
+		if(do_after(H, 1 SECONDS, src))
+			K = locate() in H.back
 	if(!K)
 		to_chat(usr, span_warning("You need a key to lock/unlock this door!"))
 		return

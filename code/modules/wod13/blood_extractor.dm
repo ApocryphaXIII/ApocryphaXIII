@@ -47,6 +47,6 @@
 		var/obj/item/reagent_containers/blood/elite/BN = new /obj/item/reagent_containers/blood(get_turf(src))
 		BN.blood_type = H.dna.blood_type
 		BN.layer = (layer + 0.1)
-		BN.update_name() // ZAPOC EDIT END
+		BN.update_name()
 	H.bloodpool = max(0, H.bloodpool - 2)
-	user.visible_message("<span class='warning'>[user] connects [target] to [src] and draws some blood.")
+	user.visible_message("<span class='warning'>[user] connects [target] to [src] and draws some blood.") // ZAPOC EDIT END

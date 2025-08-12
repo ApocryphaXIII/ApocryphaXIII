@@ -1226,6 +1226,8 @@ GLOBAL_LIST_EMPTY(selectable_races)
 	if(HAS_TRAIT(H, TRAIT_NOHUNGER))
 		return //hunger is for BABIES
 
+	H.time_spent_stationary++	// ZAPOC EDIT ADD // Increments once/sec
+
 	//The fucking TRAIT_FAT mutation is the dumbest shit ever. It makes the code so difficult to work with
 	if(HAS_TRAIT_FROM(H, TRAIT_FAT, OBESITY))//I share your pain, past coder.
 		if(H.overeatduration < 100)
@@ -1243,7 +1245,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 			H.update_inv_wear_suit()
 
 	// nutrition decrease and satiety
-	if (H.nutrition > 0 && H.stat != DEAD && !HAS_TRAIT(H, TRAIT_NOHUNGER))
+	if (H.nutrition > 0 && H.stat != DEAD && !HAS_TRAIT(H, TRAIT_NOHUNGER) && H.time_spent_stationary <= 10) // ZAPOC EDIT CHANGE // Edit H.time_spent_stationary here to change how long one needs to stand still.
 		// THEY HUNGER
 		var/hunger_rate = HUNGER_FACTOR
 		var/datum/component/mood/mood = H.GetComponent(/datum/component/mood)

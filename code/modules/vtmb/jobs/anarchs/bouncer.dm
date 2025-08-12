@@ -21,10 +21,10 @@
 	display_order = JOB_DISPLAY_ORDER_BRUISER
 	known_contacts = list("Baron","Bouncer","Emissary","Sweeper")
 	allowed_species = list("Vampire", "Ghoul")
-	allowed_bloodlines = list(CLAN_DAUGHTERS_OF_CACOPHONY, CLAN_TRUE_BRUJAH, CLAN_BRUJAH, CLAN_NOSFERATU, CLAN_GANGREL, CLAN_TOREADOR, CLAN_TREMERE, CLAN_MALKAVIAN, CLAN_BANU_HAQIM, CLAN_TZIMISCE, CLAN_NONE, CLAN_VENTRUE, CLAN_LASOMBRA, CLAN_GARGOYLE, CLAN_KIASYD, CLAN_CAPPADOCIAN, CLAN_SETITES, CLAN_SALUBRI, CLAN_NAGARAJA, CLAN_SALUBRI_WARRIOR)
+	allowed_bloodlines = list(CLAN_ALL) //Apoc Edit
 	species_slots = list("Ghoul" = 3, "Vampire" = 50)
 
-	v_duty = "You are the enforcer of the Anarchs. The baron is always in need of muscle power. Enforce the Traditions - in the anarch way."
+	v_duty = "You are the enforcer of the Anarchs. The baron is always in need of muscle power. Try not to start an unnecessary war with the Camarilla." //Apoc Edit
 	minimal_masquerade = 2
 	experience_addition = 15
 
@@ -46,3 +46,37 @@
 /obj/effect/landmark/start/bruiser
 	name = "Bruiser"
 	icon_state = "Bouncer"
+
+//Apoc addition start
+//This is a bandaid job until the real jobenning with the remap. Remove when that happens.
+
+/datum/job/vamp/bruiser/barkeep
+	title = "Barkeep"
+	department_head = list("Baron")
+	total_positions = 2
+	spawn_positions = 2
+	allowed_species = list("Human", "Ghoul")
+	display_order = JOB_DISPLAY_ORDER_BARKEEP
+
+	v_duty = "You are a human within the Anarchs. If you aren't a ghoul you'll likely rouse suspicion if you don't have connections or protection. Keep your head down, don't rat on your community."
+
+/datum/outfit/job/bruiser/barkeep
+	name = "Barkeep"
+	jobtype = /datum/job/vamp/bruiser/barkeep
+
+	ears = /obj/item/p25radio
+	id = /obj/item/card/id/bruiser/barkeep
+	uniform = /obj/item/clothing/under/vampire/bouncer
+	suit = /obj/item/clothing/suit/vampire/jacket
+	shoes = /obj/item/clothing/shoes/vampire/jackboots
+	r_pocket = /obj/item/vamp/keys/anarch
+	l_pocket = /obj/item/vamp/phone/bruiser
+	r_hand = /obj/item/melee/vampirearms/baseball
+	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/vamp/keys/hack=1, /obj/item/card/credit=1)
+
+
+/obj/effect/landmark/start/barkeep
+	name = "Barkeep"
+	icon_state = "Bouncer"
+
+//Apoc addition end

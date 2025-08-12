@@ -181,6 +181,10 @@
 	worn_icon_state = "bruiser_badge"
 	registered_name_is_public = FALSE
 
+//Apoc addition
+/obj/item/card/id/bruiser/barkeep
+	name = "barkeep's badge"
+
 /obj/item/card/id/sweeper
 	name = "sweeper badge"
 	id_type_name = "sweeper badge"

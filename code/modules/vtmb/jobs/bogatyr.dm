@@ -3,6 +3,7 @@
 	title = "Bogatyr"
 	department_head = list("Voivode")
 	faction = "Vampire"
+	//Apoc Edit
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = " the Laws of Hospitality"
@@ -15,16 +16,17 @@
 	paycheck = PAYCHECK_EASY
 	paycheck_department = ACCOUNT_SRV
 	display_order = JOB_DISPLAY_ORDER_BOGATYR
-	exp_type_department = EXP_TYPE_VOIVODATE
+	exp_type_department = EXP_TYPE_VOIVODATE //Apoc Edit
 
 	allowed_species = list("Vampire")
-	allowed_bloodlines = list(CLAN_TZIMISCE, CLAN_MALKAVIAN, CLAN_TOREADOR, CLAN_OLD_TZIMISCE)
+	allowed_bloodlines = list(CLAN_TZIMISCE, CLAN_MALKAVIAN, CLAN_TOREADOR, CLAN_OLD_TZIMISCE) //Apoc Edit
 	minimal_generation = 13	//Uncomment when players get exp enough
 
+	//Apoc Edit
 	v_duty = "You bare the name of the warriors that guarded ancient Dragons, to be a Bogatyr is to serve the Voivodes and the Seer Voivodate. Protect your family and the Sarcophagus of the Voivode-in-Waiting."
 	experience_addition = 15
 	minimal_masquerade = 2
-	known_contacts = list("Prince", "Baron", "Sheriff", "Emissary", "Seneschal", "Zadruga", "Bogatyr Captain")
+	known_contacts = list("Prince", "Baron", "Sheriff", "Emissary", "Seneschal", "Zadruga", "Bogatyr Captain") //Apoc Edit
 
 /datum/outfit/job/bogatyr/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -38,13 +40,16 @@
 	id = /obj/item/card/id/bogatyr
 	uniform = /obj/item/clothing/under/vampire/bogatyr
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
+// Apoc Edit belt = /obj/item/storage/belt/vampire/sheathe/longsword
 	l_pocket = /obj/item/vamp/phone/bogatyr
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/voivodate/master=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
+
+	backpack_contents = list(/obj/item/vamp/keys/voivodate/master=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1) //Apoc Edit
 
 /obj/effect/landmark/start/bogatyr
 	name = "Bogatyr"
 
+//Apoc Addition Start
 /datum/job/vamp/bogatyr/captain
 	title = "Bogatyr Captain"
 	total_positions = 2
@@ -62,3 +67,4 @@
 
 /obj/effect/landmark/start/bogatyr/captain
 	name = "Bogatyr Captain"
+//Apoc Edit End

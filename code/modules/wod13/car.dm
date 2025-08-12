@@ -665,6 +665,7 @@ SUBSYSTEM_DEF(carpool)
 	access = "clinic"
 	icon_state = "5"
 
+//Apoc Addition
 /obj/vampire_car/retro/rand/voivodate
 	access = "voivodate_citizen"
 
@@ -689,6 +690,7 @@ SUBSYSTEM_DEF(carpool)
 	access = "camarilla"
 	baggage_limit = 45
 
+//Apoc Addition
 /obj/vampire_car/limousine/voivodate
 	access = "seer_voivodate"
 

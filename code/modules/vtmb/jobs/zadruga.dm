@@ -14,13 +14,13 @@
 	paycheck = PAYCHECK_EASY
 	paycheck_department = ACCOUNT_SRV
 	display_order = JOB_DISPLAY_ORDER_ZADRUGA
-	exp_type_department = EXP_TYPE_VOIVODATE
+	exp_type_department = EXP_TYPE_VOIVODATE //Apoc Edit
 
 	allowed_species = list("Ghoul")
-	duty = "You were born in servitude to the Master of the Manor: your parents served the Voivode, as did their parents. Now, you carry their blood, and with it their responsibilities."
+	duty = "You were born in servitude to the Master of the Manor: your parents served the Voivode, as did their parents. Now, you carry their blood, and with it their responsibilities." //Apoc Edit
 	experience_addition = 20
 	minimal_masquerade = 2
-	known_contacts = list("Prince", "Baron", "Sheriff", "Emissary", "Seneschal", "Bogatyr", "Bogatyr Captain")
+	known_contacts = list("Prince", "Baron", "Sheriff", "Emissary", "Seneschal", "Bogatyr", "Bogatyr Captain") //Apoc Edit
 
 
 
@@ -35,7 +35,7 @@
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	l_pocket = /obj/item/vamp/phone/zadruga
 	r_pocket = /obj/item/cockclock
-	backpack_contents = list(/obj/item/vamp/keys/voivodate/master=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1)
+	backpack_contents = list(/obj/item/vamp/keys/voivodate/master=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1) //Apoc Edit
 
 /obj/effect/landmark/start/zadruga
 	name = "Zadruga"

@@ -113,6 +113,7 @@
 	burnable = TRUE
 	lockpick_difficulty = 4
 
+//Apoc Addition Start
 /obj/structure/vampdoor/reinf/voivodate
 	lock_id = "seer_voivodate"
 	locked = TRUE
@@ -128,3 +129,4 @@
 
 /obj/structure/vampdoor/reinf/voivodate_citizen/unlocked
 	locked = FALSE
+//Apoc Addition End

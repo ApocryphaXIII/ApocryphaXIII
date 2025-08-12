@@ -769,7 +769,7 @@
 		list(NETWORK_ID = GIOVANNI_NETWORK, OUR_ROLE = "Bank Employee")
 		)
 
-// VOIVODATE
+// VOIVODATE Apoc Edits
 
 /obj/item/vamp/phone/voivode
 	important_contact_of = list(CLAN_TZIMISCE, CLAN_OLD_TZIMISCE)

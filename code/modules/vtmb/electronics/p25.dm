@@ -496,7 +496,7 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 	var/static/list/restricted_areas = list(
 		/area/vtm/sewer,
 		/area/vtm/sewer/nosferatu_town,
-		/area/vtm/interior/voivodate/sanctum
+		/area/vtm/interior/voivodate/sanctum //Apoc Edit
 	)
 	var/area/current_area = get_area(A)
 	for(var/restricted_type in restricted_areas)

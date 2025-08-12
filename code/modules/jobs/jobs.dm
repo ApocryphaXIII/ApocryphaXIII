@@ -77,6 +77,7 @@ GLOBAL_LIST_INIT(giovanni_positions, list(
 	"La Famiglia"
 ))
 
+//Apoc Edit
 GLOBAL_LIST_INIT(voivodate_positions, list(
 	"Voivode",
 	"Bogatyr Captain",
@@ -149,7 +150,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_SERVICES = list("jobs" = services_positions, "color" = "#e8e6e6"),
 	EXP_TYPE_CHURCH = list("jobs" = church_positions, "color" = " #fff700"),
 	EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#1d22cc"),
-	EXP_TYPE_NATIONAL_SECURITY = list("jobs" = national_security_positions, "color" = " #000491"),
+	EXP_TYPE_NATIONAL_SECURITY = list("jobs" = national_security_positions, "color" = " #000491"), //Apoc Edit
 	EXP_TYPE_GANG = list("jobs" = gang_positions, "color" = "#837524"),
 	EXP_TYPE_VOIVODATE = list("jobs" = voivodate_positions, "color" = "#fa0207"),
 	EXP_TYPE_PAINTED_CITY = list("jobs" = painted_positions, "color" = "#7195ad"),
@@ -159,7 +160,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
-	EXP_TYPE_CREW = list("titles" = command_positions | church_positions | camarilla_council_positions | citizen_positions | police_positions | national_security_positions | anarch_positions | services_positions  | giovanni_positions | voivodate_positions | warehouse_positions | tremere_positions | gang_positions | clinic_positions | painted_positions | amberglade_positions | spiral_positions), // crew positions
+	EXP_TYPE_CREW = list("titles" = command_positions | church_positions | camarilla_council_positions | citizen_positions | police_positions | national_security_positions | anarch_positions | services_positions  | giovanni_positions | voivodate_positions | warehouse_positions | tremere_positions | gang_positions | clinic_positions | painted_positions | amberglade_positions | spiral_positions), // crew positions //Apoc Edit
 	EXP_TYPE_CAMARILLIA = list("titles" = command_positions),
 	EXP_TYPE_TREMERE = list("titles" = tremere_positions),
 	EXP_TYPE_ANARCH = list("titles" = anarch_positions),
@@ -170,7 +171,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_CLINIC = list("titles" = clinic_positions),
 	EXP_TYPE_SERVICES = list("titles" = services_positions),
 	EXP_TYPE_GIOVANNI = list("titles" = giovanni_positions),
-	EXP_TYPE_VOIVODATE = list("titles" = voivodate_positions),
+	EXP_TYPE_VOIVODATE = list("titles" = voivodate_positions), //Apoc Edit
 	EXP_TYPE_WAREHOUSE = list("titles" = warehouse_positions),
 	EXP_TYPE_CHURCH = list("titles" = church_positions),
 	EXP_TYPE_NATIONAL_SECURITY = list("titles" = national_security_positions),

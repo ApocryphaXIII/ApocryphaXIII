@@ -44,6 +44,7 @@
 	lock_id = "cappadocian"
 	lockpick_difficulty = 8
 
+//Apoc Addition Start
 /obj/structure/vampdoor/wood/voivodate
 	lock_id = "seer_voivodate"
 	locked = TRUE
@@ -59,3 +60,4 @@
 
 /obj/structure/vampdoor/wood/voivodate_citizen/unlocked
 	locked = FALSE
+//Apoc Addition End

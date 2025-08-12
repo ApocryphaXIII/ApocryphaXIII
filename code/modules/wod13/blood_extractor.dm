@@ -12,7 +12,7 @@
 
 /obj/structure/bloodextractor/MouseDrop_T(mob/living/target, mob/living/user)
 	. = ..()
-	var/mob/living/carbon/human/H = target
+	var/mob/living/carbon/human/H = target	 // ZAPOC EDIT START
 	if(user.stat != CONSCIOUS || HAS_TRAIT(user, TRAIT_UI_BLOCKED) || !Adjacent(user) || !H.Adjacent(user) || !ishuman(H))
 		return
 	if(!H.buckled)
@@ -28,7 +28,7 @@
 		if(H.bloodpool < 4)
 			to_chat(user, span_warning("[src] can't find enough blood in [H]'s body!"))
 			return
-		var/obj/item/reagent_containers/blood/vitae/BV = new /obj/item/reagent_containers/blood/vitae(get_turf(src)) // ZAPOC EDIT START
+		var/obj/item/reagent_containers/blood/vitae/BV = new /obj/item/reagent_containers/blood/vitae(get_turf(src))
 		BV.blood_type = H.dna.blood_type
 		BV.layer = (layer + 0.1)
 		BV.update_name()

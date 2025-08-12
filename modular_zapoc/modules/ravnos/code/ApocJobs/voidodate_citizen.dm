@@ -17,7 +17,7 @@
 	exp_type_department = EXP_TYPE_VOIVODATE
 
 	allowed_species = list("Vampire", "Ghoul")
-	allowed_bloodlines = list(CLAN_TZIMISCE, CLAN_MALKAVIAN, CLAN_TOREADOR, CLAN_OLD_TZIMISCE, CLAN_SALUBRI, CLAN_SALUBRI_WARRIOR)
+	allowed_bloodlines = list(CLAN_TZIMISCE, CLAN_MALKAVIAN, CLAN_TOREADOR, CLAN_OLD_TZIMISCE, CLAN_SALUBRI, CLAN_SALUBRI_WARRIOR, CLAN_NONE, CLAN_RAVNOS, CLAN_DAUGHTERS_OF_CACOPHONY)
 
 	v_duty = "You belong to the Seer's Voivodate, a resurgance of the pre-existing California Voivodate. Above all you must respect the Hospitality, and the Voivodes."
 	known_contacts = list("Voivode", "Zadruga", "Bogatyr", "Bogatyr Captain")

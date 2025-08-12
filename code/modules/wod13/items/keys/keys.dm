@@ -340,7 +340,7 @@
 	accesslocks = list(
 		"clinic"
 	)
-
+/* Apoc Edit
 /obj/item/vamp/keys/clinics_director
 	name = "Clinic director keys"
 	accesslocks = list(
@@ -349,7 +349,7 @@
 		"director",
 		"malkav"
 	)
-
+*/
 //===========================POLICE KEYS===========================
 /obj/item/vamp/keys/police
 	name = "Police keys"

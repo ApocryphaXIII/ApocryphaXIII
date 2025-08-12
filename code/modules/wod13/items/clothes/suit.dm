@@ -424,12 +424,12 @@
 	desc = "For medicine and research purposes."
 	icon_state = "labcoat"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 90, WOUND = 10)
-
+/* Apoc Edit
 /obj/item/clothing/suit/vampire/labcoat/director
 	name = "clinic director's labcoat"
 	desc = "Special labcoat for clinic director with the Saint John's Hospital emblem."
 	icon_state = "director"
-
+*/
 /obj/item/clothing/suit/vampire/fancy_gray
 	name = "fancy gray jacket"
 	desc = "Gray-colored jacket"

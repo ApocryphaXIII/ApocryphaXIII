@@ -38,7 +38,6 @@ GLOBAL_LIST_INIT(CLINIC_job_access, list(
 	"Physician" = CLINIC_ACCESS_FULL,
 	"Doctor" = CLINIC_ACCESS_FULL,
 
-	"Clinic Director" = CLINIC_ACCESS_ADMIN,
 	"Malkavian Primogen" = CLINIC_ACCESS_ADMIN
 ))
 

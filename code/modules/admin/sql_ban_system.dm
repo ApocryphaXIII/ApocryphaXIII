@@ -243,7 +243,7 @@
 							"Triad" = GLOB.gang_positions,
 							"Unaligned" = GLOB.citizen_positions,
 							"City Services" = GLOB.services_positions,
-							"St Johns" = GLOB.clinic_positions,
+							"Clinic" = GLOB.clinic_positions,
 							"Church" = GLOB.church_positions,
 							"Painted City" = GLOB.painted_positions,
 							"Amberglade" = GLOB.amberglade_positions,

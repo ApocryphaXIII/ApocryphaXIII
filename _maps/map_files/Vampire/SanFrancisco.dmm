@@ -269,10 +269,7 @@
 "adi" = (
 /obj/effect/decal/rugs,
 /obj/effect/turf_decal/weather/dirt,
-/turf/open/floor/plating/vampwood{
-	alpha = 0;
-	icon_state = "woodd12"
-	},
+/turf/open/floor/plating/woodfancy,
 /area/vtm/sewer/nosferatu_warren)
 "adl" = (
 /obj/machinery/light{
@@ -309,12 +306,6 @@
 "adM" = (
 /obj/structure/coclock,
 /obj/machinery/photocopier,
-/obj/item/reagent_containers/food/drinks/trophy/bronze_cup{
-	pixel_y = 23;
-	pixel_x = 31;
-	name = "regional care cup";
-	desc = "A small bronze trophy for the third place position in the regional care outcome rankings. Not the best, but not the worst."
-	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/clinic)
 "adT" = (
@@ -22789,18 +22780,6 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
-"fBP" = (
-/obj/structure/closet/crate,
-/obj/item/defibrillator/compact/combat/loaded/nanotrasen{
-	name = "elite defibrillator"
-	},
-/obj/item/healthanalyzer/advanced,
-/obj/item/scalpel/advanced,
-/obj/item/cautery/advanced,
-/obj/item/retractor/advanced,
-/obj/item/storage/firstaid/advanced,
-/turf/open/floor/plating/parquetry,
-/area/vtm/clinic)
 "fBR" = (
 /obj/effect/turf_decal/bordur,
 /turf/closed/wall/vampwall/rock,
@@ -27409,7 +27388,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/brown,
-/obj/effect/landmark/start/vdirector,
 /turf/open/floor/carpet/vamp/bluegold,
 /area/vtm/clinic)
 "gJE" = (
@@ -35128,10 +35106,10 @@
 "iIv" = (
 /obj/effect/turf_decal/siding/white,
 /obj/structure/vampdoor/wood{
-	lock_id = "director";
+	lock_id = "clinic";
 	lockpick_difficulty = 16;
 	locked = 1;
-	name = "Director's Office"
+	name = "Office"
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
@@ -35966,10 +35944,6 @@
 /obj/item/megaphone/command,
 /obj/item/clothing/shoes/vampire/heels,
 /obj/item/clothing/shoes/vampire,
-/obj/item/melee/vampirearms/fireaxe{
-	desc = "FOR EMERGENCY USES ONLY!";
-	name = "Lucy The Axe"
-	},
 /obj/item/vamp/keys/clinic{
 	pixel_y = 0;
 	accesslocks = list("fireshelter");
@@ -328107,7 +328081,7 @@ qnl
 bhg
 uTp
 vvM
-fBP
+vvM
 ugA
 fuO
 ntq

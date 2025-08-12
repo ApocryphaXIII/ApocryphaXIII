@@ -32788,6 +32788,12 @@
 /obj/structure/stairs/north,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/banu/haven)
+"icm" = (
+/obj/flag/california/rare{
+	pixel_y = 28
+	},
+/turf/open/floor/carpet,
+/area/space)
 "icn" = (
 /turf/open/floor/plating/industrial{
 	icon_state = "industrial9"
@@ -551963,7 +551969,7 @@ dhc
 dhc
 nYS
 sAo
-fRh
+icm
 fRh
 llR
 sAo

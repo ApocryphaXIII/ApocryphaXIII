@@ -1,5 +1,6 @@
 /obj/flag/california/rare
-	var/always = 0
+	var/always = FALSE
+
 /obj/flag/california/rare/Initialize(mapload)
 	. = ..()
 	if(prob(1) || always)

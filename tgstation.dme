@@ -3763,4 +3763,5 @@
 #include "modular_zapoc\carpets.dm"
 #include "modular_zapoc\tiles.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
+#include "modular_zapoc\modules\ncr\code\ncr.dm"
 // END_INCLUDE

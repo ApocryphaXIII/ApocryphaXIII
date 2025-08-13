@@ -205,10 +205,10 @@
 	. = ..()
 	target.remove_overlay(MUTATIONS_LAYER)
 
-//SUMMON
+//FEAR // APOC EDIT START
 /datum/discipline_power/presence/summon
-	name = "Summon"
-	desc = "Call anyone you've ever met to be by your side."
+	name = "Fear" // Easier than adding functionality to Summon.
+	desc = "Instill fear into a target to make them flee." // ZAPOC EDIT END // This is the description of Dread Gaze in V5. This file is a mess...
 
 	level = 4
 
@@ -271,7 +271,7 @@
 //MAJESTY
 /datum/discipline_power/presence/majesty
 	name = "Majesty"
-	desc = "Become so grand that others find it nearly impossible to disobey or harm you."
+	desc = "Become so grand that others find it nearly impossible to disobey you." // APOC EDIT CHANGE // Doesn't do anything in combat. This whole discipline needs a rework.
 
 	level = 5
 

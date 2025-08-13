@@ -3765,4 +3765,5 @@
 #include "modular_zapoc\modules\eat_food\code\quirks_zapoc.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\ravnos\code\ApocJobs\voidodate_citizen.dm"
+#include "modular_zapoc\modules\minimap\code\minimap.dm"
 // END_INCLUDE

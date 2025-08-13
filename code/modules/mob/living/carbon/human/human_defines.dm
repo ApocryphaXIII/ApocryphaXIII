@@ -137,4 +137,4 @@
 	///The Examine Panel TGUI.
 	var/datum/examine_panel/tgui = new() //create the datum
 
-	var/time_spent_stationary = 0 // ZAPOC EDIT ADD //Used for freezing hunger when stationary.
+	var/time_spent_stationary = 0 // APOC EDIT ADD //Used for freezing hunger when stationary.

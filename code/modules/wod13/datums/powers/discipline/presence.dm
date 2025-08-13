@@ -205,7 +205,7 @@
 	. = ..()
 	target.remove_overlay(MUTATIONS_LAYER)
 
-//FEAR // APOC EDIT START
+//FEAR // APOC EDIT START, ORIGINAL: //SUMMON
 /datum/discipline_power/presence/summon
 	name = "Fear" // Easier than adding functionality to Summon.
 	desc = "Instill fear into a target to make them flee." // ZAPOC EDIT END // This is the description of Dread Gaze in V5. This file is a mess...

@@ -28647,6 +28647,10 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/supply)
+"gZh" = (
+/obj/effect/landmark/start/barkeep,
+/turf/open/floor/carpet/vamp,
+/area/vtm/anarch)
 "gZi" = (
 /obj/effect/decal/cleanable/crayon{
 	color = "FF99FF";
@@ -77588,6 +77592,10 @@
 /obj/item/trash/semki,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
+"sUp" = (
+/obj/effect/landmark/start/barkeep,
+/turf/open/floor/plating/rough,
+/area/vtm/anarch)
 "sUt" = (
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/vampwall/rich/old,
@@ -84481,7 +84489,7 @@
 /obj/structure/chair/comfy/brown{
 	dir = 1
 	},
-/obj/effect/landmark/start/barkeeper,
+/obj/effect/landmark/start/baron,
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/anarch/basement)
 "uFP" = (
@@ -182413,7 +182421,7 @@ pgA
 pMC
 vlb
 oTM
-xrN
+gZh
 xrN
 coN
 hPa
@@ -183692,7 +183700,7 @@ pMC
 pMC
 tnk
 wsX
-wsX
+sUp
 wsX
 pgA
 pMC

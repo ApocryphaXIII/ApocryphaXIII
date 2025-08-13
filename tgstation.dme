@@ -3765,4 +3765,6 @@
 #include "modular_zapoc\modules\eat_food\code\quirks_zapoc.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\ravnos\code\ApocJobs\voidodate_citizen.dm"
+#include "modular_zapoc\modules\mini_protean_update\code\dirt_pile.dm"
+#include "modular_zapoc\modules\mini_protean_update\code\mist_form.dm"
 // END_INCLUDE

@@ -179,19 +179,20 @@
 		"old_clan_tzimisce",
 		"tmr"
 	)
-
-/obj/item/vamp/keys/tzimisce
-	name = "Regal keys"
+//Apoc Edit Start
+/obj/item/vamp/keys/voivodate
+	name = "Family estate keys"
 	accesslocks = list(
-		"tzimisce"
+		"voivodate_citizen"
 	)
 
-/obj/item/vamp/keys/tzimisce/manor
-	name = "Manor keys"
+/obj/item/vamp/keys/voivodate/master
+	name = "Estate master keys"
 	accesslocks = list(
-		"tzimisce",
-		"tzimiscemanor"
+		"seer_voivodate",
+		"voivodate_citizen"
 	)
+//Apoc Edit End
 
 /obj/item/vamp/keys/setite
 	name = "Serpentine keys"

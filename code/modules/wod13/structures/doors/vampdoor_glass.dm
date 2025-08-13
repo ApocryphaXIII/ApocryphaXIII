@@ -79,3 +79,21 @@
 	lock_id = "setite"
 	locked = TRUE
 	lockpick_difficulty = 15
+
+//Apoc Addition Start
+/obj/structure/vampdoor/glass/voivodate
+	lock_id = "seer_voivodate"
+	locked = TRUE
+	lockpick_difficulty = 8
+
+/obj/structure/vampdoor/glass/voivodate/unlocked
+	locked = FALSE
+
+/obj/structure/vampdoor/glass/voivodate_citizen
+	lock_id = "voivodate_citizen"
+	locked = TRUE
+	lockpick_difficulty = 6
+
+/obj/structure/vampdoor/glass/voivodate_citizen/unlocked
+	locked = FALSE
+//Apoc Addition End

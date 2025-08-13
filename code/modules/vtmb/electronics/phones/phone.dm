@@ -769,24 +769,34 @@
 		list(NETWORK_ID = GIOVANNI_NETWORK, OUR_ROLE = "Bank Employee")
 		)
 
-// TZMISCE
+// VOIVODATE Apoc Edits
 
 /obj/item/vamp/phone/voivode
-	important_contact_of = CLAN_TZIMISCE
+	important_contact_of = list(CLAN_TZIMISCE, CLAN_OLD_TZIMISCE)
 	contact_networks_pre_init = list(
-		list(NETWORK_ID = TZMISCE_NETWORK, OUR_ROLE = "Lord of the Manor")
-		, list(NETWORK_ID = VAMPIRE_LEADER_NETWORK, OUR_ROLE = "Lord of the Manor")
+		list(NETWORK_ID = VOIVODATE_NETWORK, OUR_ROLE = "Master of the Estate")
+		, list(NETWORK_ID = VAMPIRE_LEADER_NETWORK, OUR_ROLE = "Master of the Estate")
+		)
+
+/obj/item/vamp/phone/bogatyr/captain
+	contact_networks_pre_init = list(
+		list(NETWORK_ID = VOIVODATE_NETWORK, OUR_ROLE = "Estate Guard Captain")
 		)
 
 /obj/item/vamp/phone/bogatyr
 	contact_networks_pre_init = list(
-		list(NETWORK_ID = TZMISCE_NETWORK, OUR_ROLE = "Resident of the Manor")
+		list(NETWORK_ID = VOIVODATE_NETWORK, OUR_ROLE = "Guard of the Estate")
 		)
 
 /obj/item/vamp/phone/zadruga
 	contact_networks_pre_init = list(
-		list(NETWORK_ID = TZMISCE_NETWORK, OUR_ROLE = "Servant of the Manor")
+		list(NETWORK_ID = VOIVODATE_NETWORK, OUR_ROLE = "Servant of the Estate")
 		)
+
+/obj/item/vamp/phone/voivodate
+	contact_networks_pre_init = list(
+		list(NETWORK_ID = VOIVODATE_NETWORK, OUR_ROLE = "Estate Family")
+	)
 
 // ANARCHS
 

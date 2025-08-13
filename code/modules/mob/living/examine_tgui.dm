@@ -29,8 +29,6 @@
 	var/headshot = ""
 	var/ooc_notes = ""
 	var/character_notes = ""
-	// Whether or not the viewing user wants to see potential NSFW content in the holder's examine panel
-	var/nsfw_content = user.client.prefs?.nsfw_content_pref
 
 	if(ishuman(holder))
 		var/mob/living/carbon/human/holder_human = holder
@@ -45,9 +43,8 @@
 			headshot = holder_human.headshot_link
 			flavor_text = holder_human.flavor_text
 			name = holder.name
-		if(nsfw_content)
-			flavor_text_nsfw = holder_human.flavor_text_nsfw
-			ooc_notes = holder_human.ooc_notes
+		flavor_text_nsfw = holder_human.flavor_text_nsfw
+		ooc_notes = holder_human.ooc_notes
 
 	data["obscured"] = obscured ? TRUE : FALSE
 	data["character_name"] = name
@@ -56,5 +53,4 @@
 	data["ooc_notes"] = ooc_notes
 	data["character_notes"] = character_notes
 	data["headshot"] = headshot
-	data["nsfw_content"] = nsfw_content ? TRUE : FALSE
 	return data

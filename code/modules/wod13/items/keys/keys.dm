@@ -179,7 +179,7 @@
 		"old_clan_tzimisce",
 		"tmr"
 	)
-//Apoc Edit Start
+//APOC EDIT Start
 /obj/item/vamp/keys/voivodate
 	name = "Family estate keys"
 	accesslocks = list(
@@ -192,7 +192,7 @@
 		"seer_voivodate",
 		"voivodate_citizen"
 	)
-//Apoc Edit End
+//APOC EDIT End
 
 /obj/item/vamp/keys/setite
 	name = "Serpentine keys"

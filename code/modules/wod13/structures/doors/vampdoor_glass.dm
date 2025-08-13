@@ -80,7 +80,7 @@
 	locked = TRUE
 	lockpick_difficulty = 15
 
-//Apoc Addition Start
+//APOC EDIT START
 /obj/structure/vampdoor/glass/voivodate
 	lock_id = "seer_voivodate"
 	locked = TRUE
@@ -96,4 +96,4 @@
 
 /obj/structure/vampdoor/glass/voivodate_citizen/unlocked
 	locked = FALSE
-//Apoc Addition End
+//APOC EDIT END

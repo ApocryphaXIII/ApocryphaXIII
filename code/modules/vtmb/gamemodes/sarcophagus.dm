@@ -134,7 +134,7 @@ GLOBAL_LIST_INIT(caesar_cipher, list(
 	anchored = TRUE
 	pixel_w = -8
 
-//Apoc Addition
+//APOC EDIT ADD
 /obj/sarcophagus/voivodate
 	name = "Voivode-in-Waiting's Sarcophagus"
 	desc = "A sarcophagus diligently protected by the Seer's Voivodate. Rumored to hold the next Voivode of Voivodes."

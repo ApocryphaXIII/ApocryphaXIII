@@ -59,7 +59,7 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	var/turf/T = get_step(exit, get_dir(AM, src))
 	AM.forceMove(T)
 
-//Apoc Addition Start
+//APOC EDIT START
 /obj/transfer_point_vamp/voivodate
 	name = "voivodate transfer point"
 	density = 1
@@ -73,4 +73,4 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 
 /obj/transfer_point_vamp/voivodate/three
 	id = "estate_4"
-//Apoc Addition End
+//APOC EDIT END

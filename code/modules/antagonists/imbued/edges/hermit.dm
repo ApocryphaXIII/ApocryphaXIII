@@ -48,13 +48,6 @@
 	log_directed_talk(user, M, msg, LOG_SAY, "[name]")
 	to_chat(user, span_hypnophrase("[msg]"))
 	to_chat(M, "[span_hypnophrase("You hear a voice in your head...")] [span_notice(msg)]")
-	for(var/ded in GLOB.dead_mob_list)
-		if(!isobserver(ded))
-			continue
-		//var/follow_rev = FOLLOW_LINK(ded, owner)
-		//var/follow_whispee = FOLLOW_LINK(ded, M)
-		to_chat(ded, "[user]")
-
 
 /datum/action/imbued_edge/edict
 	name = "Edict"

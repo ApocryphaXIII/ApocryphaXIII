@@ -12,7 +12,7 @@
 
 /obj/structure/bloodextractor/MouseDrop_T(mob/living/target, mob/living/user)
 	. = ..()
-	var/mob/living/carbon/human/H = target	 // ZAPOC EDIT START
+	var/mob/living/carbon/human/H = target	 // APOC EDIT START
 	if(user.stat != CONSCIOUS || HAS_TRAIT(user, TRAIT_UI_BLOCKED) || !Adjacent(user) || !H.Adjacent(user) || !ishuman(H))
 		return
 	if(!H.buckled)
@@ -49,4 +49,4 @@
 		BN.layer = (layer + 0.1)
 		BN.update_name()
 	H.bloodpool = max(0, H.bloodpool - 2)
-	user.visible_message("<span class='warning'>[user] connects [target] to [src] and draws some blood.") // ZAPOC EDIT END
+	user.visible_message("<span class='warning'>[user] connects [target] to [src] and draws some blood.") // APOC EDIT END

@@ -29,7 +29,7 @@
 	minimal_masquerade = 5
 	allowed_species = list("Werewolf", "Vampire", "Human")
 	allowed_tribes = list("Black Spiral Dancers")
-	allowed_bloodlines = list(CLAN_ALL, CLAN_NONE)
+	allowed_bloodlines = list(CLAN_ALL)
 
 	known_contacts = null
 

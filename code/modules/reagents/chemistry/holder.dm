@@ -361,10 +361,10 @@
 
 	var/allowed_to_kindred = FALSE
 	if(iskindred(target))
-		if(HAS_TRAIT(target, TRAIT_CAN_EAT) || methods & VAMPIRE) // ZAPOC EDIT START
+		if(HAS_TRAIT(target, TRAIT_CAN_EAT) || methods & VAMPIRE) // APOC EDIT START
 			allowed_to_kindred = TRUE
 		if(!allowed_to_kindred)
-			return // ZAPOC EDIT END
+			return // APOC EDIT END
 	if(iscathayan(target))
 		for(var/i in reagent_list)
 			if(istype(i, /datum/reagent/consumable/ethanol))
@@ -405,12 +405,12 @@
 			var/transfer_amount = T.volume * part
 			if(preserve_data)
 				trans_data = copy_data(T)
-			if(HAS_TRAIT(target, TRAIT_CAN_EAT)) // ZAPOC EDIT START
+			if(HAS_TRAIT(target, TRAIT_CAN_EAT)) // APOC EDIT START
 				if(!(T.type == /datum/reagent/consumable/ethanol/beer/typhon))
 					remove_reagent(T.type, transfer_amount)
 					return
 			else
-				R.add_reagent(T.type, transfer_amount * multiplier, trans_data, chem_temp, no_react = 1) //we only handle reaction after every reagent has been transfered. // ZAPOC EDIT END
+				R.add_reagent(T.type, transfer_amount * multiplier, trans_data, chem_temp, no_react = 1) //we only handle reaction after every reagent has been transfered. // APOC EDIT END
 			if(methods)
 				if(istype(target_atom, /obj/item/organ))
 					R.expose_single(T, target, methods, part, show_message)

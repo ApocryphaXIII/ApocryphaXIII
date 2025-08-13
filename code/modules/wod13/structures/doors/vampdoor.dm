@@ -250,7 +250,7 @@
 	if(!ishuman(usr) || !usr.canUseTopic(src, BE_CLOSE))
 		return
 
-	var/mob/living/carbon/human/H = usr // ZAPOC EDIT START
+	var/mob/living/carbon/human/H = usr // APOC EDIT START
 	var/obj/item/vamp/keys/K = locate() in H // In pockets
 	if(!K && H.back)
 		if(do_after(H, 1 SECONDS, src))
@@ -267,7 +267,7 @@
 		to_chat(usr, span_warning("Your key doesn't fit this lock!"))
 		return
 
-	for(var/i in K.accesslocks) // ZAPOC EDIT END
+	for(var/i in K.accesslocks) // APOC EDIT END
 		if(i == lock_id)
 			locked = !locked
 			playsound(src, lock_sound, 75, TRUE)

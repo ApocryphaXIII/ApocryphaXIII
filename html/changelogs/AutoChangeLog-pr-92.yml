@@ -1,0 +1,5 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - rscadd: "New preference for your phone number subscriber code"
+  - rscadd: "Added an extra didgits to subscriber code and uses real san fran area code"

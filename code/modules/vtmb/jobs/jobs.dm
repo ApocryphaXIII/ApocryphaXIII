@@ -453,6 +453,11 @@
 	worn_icon_state = "id12"
 	registered_name_is_public = FALSE
 
+//Apoc Addition
+/obj/item/card/id/bogatyr/captain
+	name = "patinated badge"
+	desc = "You have to wear this for the guards to recognize you."
+
 // PRIMOGEN STAFF (Distributed in game by Primogen)
 
 /obj/item/card/id/whip

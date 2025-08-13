@@ -34,7 +34,7 @@
 	var/fake = FALSE
 
 
-/obj/item/passport/Initialize() // ZAPOC EDIT START
+/obj/item/passport/Initialize() // APOC EDIT START
 	. = ..()
 	var/mob/living/carbon/human/user = null
 	if(ishuman(loc)) // In pockets
@@ -51,7 +51,7 @@
 			owner = random_unique_name(user.gender)
 	else
 		owner = user.real_name
-// ZAPOC EDIT END
+// APOC EDIT END
 
 /obj/item/passport/examine(mob/user)
 	. = ..()

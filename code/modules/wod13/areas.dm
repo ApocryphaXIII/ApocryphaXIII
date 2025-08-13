@@ -672,15 +672,15 @@
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
-/area/vtm/interior/tzimisce_manor
-	name = "Clan Tzimisce Manor"
+/area/vtm/interior/voivodate //Apoc Edit
+	name = "Seer's Voivodate Estate" 
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
 	music_index = MUSIC_PRINCE
 	wall_rating = HIGH_WALL_RATING
 
-/area/vtm/sewer/tzimisce_sanctum
-	name = "Clan Tzimisce Sanctum"
+/area/vtm/interior/voivodate/sanctum //Apoc Edit
+	name = "Seer's Voivodate Sanctum"
 	icon_state = "old_clan_sanctum"
 	zone_type = "elysium"
 	musictracks = list('sound/musictracks/nosferatu.ogg')

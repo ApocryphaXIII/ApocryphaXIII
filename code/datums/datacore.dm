@@ -146,7 +146,7 @@
 		"Tremere",
 		"Anarch",
 		"Giovanni",
-		"Clan Tzimisce",
+		"Seer's Voivodate", //Apoc Edit
 		"Law Enforcement",
 		"Warehouse",
 		"Triad"
@@ -157,7 +157,7 @@
 		"Tremere" = GLOB.tremere_positions,
 		"Anarch" = GLOB.anarch_positions,
 		"Giovanni" = GLOB.giovanni_positions,
-		"Clan Tzimisce" = GLOB.tzimisce_positions,
+		"Seer's Voivodate" = GLOB.voivodate_positions, //Apoc Edit
 		"Law Enforcement" = GLOB.police_positions + GLOB.national_security_positions,
 		"Warehouse" = GLOB.warehouse_positions,
 		"Triad" = GLOB.gang_positions

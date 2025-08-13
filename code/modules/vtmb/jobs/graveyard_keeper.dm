@@ -1,4 +1,5 @@
 
+/*Apoc Deprecated
 /datum/job/vamp/graveyard
 	title = "Graveyard Keeper"
 	department_head = list("Seneschal")
@@ -49,3 +50,4 @@
 /obj/effect/landmark/start/graveyardkeeper
 	name = "Graveyard Keeper"
 	icon_state = "Graveyard Keeper"
+*/

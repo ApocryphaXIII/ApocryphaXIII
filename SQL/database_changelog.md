@@ -2,17 +2,33 @@ Any time you make a change to the schema files, remember to increment the databa
 
 Make sure to also update `DB_MAJOR_VERSION` and `DB_MINOR_VERSION`, which can be found in `code/__DEFINES/subsystem.dm`.
 
-The latest database version is 5.28; The query to update the schema revision table is:
+The latest database version is 5.32; The query to update the schema revision table is:
 
 ```sql
-INSERT INTO `schema_revision` (`major`, `minor`) VALUES (5, 31);
+INSERT INTO `schema_revision` (`major`, `minor`) VALUES (5, 32);
 ```
 or
 
 ```sql
-INSERT INTO `SS13_schema_revision` (`major`, `minor`) VALUES (5, 31);
+INSERT INTO `SS13_schema_revision` (`major`, `minor`) VALUES (5, 32);
 ```
 In any query remember to add a prefix to the table names if you use one.
+
+-----------------------------------------------------
+Version 5.32, 3 July 2025, by FalloutFalcon
+Add a `privacy` policy consent table
+
+```
+DROP TABLE IF EXISTS `privacy`;
+CREATE TABLE `privacy` (
+  `ckey` varchar(32) NOT NULL,
+  `datetime` datetime NOT NULL,
+  `consent` bit(1) NOT NULL,
+  PRIMARY KEY (`ckey`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
+
+
 
 -----------------------------------------------------
 Version 5.30, 3 May 2025, by Atlanta-Ned

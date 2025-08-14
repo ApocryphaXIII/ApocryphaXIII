@@ -26,7 +26,7 @@
 	v_duty = "Help your fellow kindred in all matters medicine related. Sell blood. Keep your human colleagues ignorant. Remember, this is a Malkavian Domain."
 	duty = "You are on the night shift at the local clinic. Your eccentric bosses seem to be keeping a close eye on your work."
 	experience_addition = 15
-	allowed_bloodlines = list(CLAN_ALL)
+	allowed_bloodlines = CLAN_ALL
 	known_contacts = list("Doctor")
 
 /datum/outfit/job/vdoctor

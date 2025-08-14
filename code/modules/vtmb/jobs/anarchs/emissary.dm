@@ -20,7 +20,7 @@
 
 	display_order = JOB_DISPLAY_ORDER_EMISSARY
 	known_contacts = list("Baron","Bouncer","Emissary","Sweeper","Prince","Sheriff")
-	allowed_bloodlines = list(CLAN_ALL) //Apoc Edit
+	allowed_bloodlines = CLAN_ALL //Apoc Edit
 
 	v_duty = "You are a diplomat for the anarchs. Make deals, keep the peace, all through words, not violence. But the latter may come to pass if the former fails."
 	minimal_masquerade = 2

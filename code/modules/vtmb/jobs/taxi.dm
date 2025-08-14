@@ -22,7 +22,7 @@
 	duty = "Drive people in the city."
 	minimal_masquerade = 0
 	experience_addition = 10
-	allowed_bloodlines = list(CLAN_ALL) //Apoc Edit
+	allowed_bloodlines = CLAN_ALL //Apoc Edit
 
 
 /datum/job/vamp/taxi/after_spawn(mob/living/H, mob/M, latejoin = FALSE)

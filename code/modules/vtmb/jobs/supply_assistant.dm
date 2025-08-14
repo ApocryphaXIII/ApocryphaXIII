@@ -19,7 +19,7 @@
 	bounty_types = CIV_JOB_RANDOM
 	allowed_species = list("Vampire", "Ghoul", "Human", "Kuei-Jin")
 	known_contacts = list("Dealer")
-	allowed_bloodlines = list(CLAN_ALL) //apoc edit
+	allowed_bloodlines = CLAN_ALL //apoc edit
 
 	v_duty = "You work for the Dealer, or are a part of their coterie. They pay well and the job is easy. Don't disappoint them."
 	duty = "Though your boss is odd and only works late night hours, they pay you well enough that you avoid questioning it."

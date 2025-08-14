@@ -21,7 +21,7 @@
 	display_order = JOB_DISPLAY_ORDER_BRUISER
 	known_contacts = list("Baron","Bouncer","Emissary","Sweeper")
 	allowed_species = list("Vampire", "Ghoul")
-	allowed_bloodlines = list(CLAN_ALL) //Apoc Edit
+	allowed_bloodlines = CLAN_ALL //Apoc Edit
 	species_slots = list("Ghoul" = 3, "Vampire" = 50)
 
 	v_duty = "You are the enforcer of the Anarchs. The baron is always in need of muscle power. Try not to start an unnecessary war with the Camarilla." //Apoc Edit

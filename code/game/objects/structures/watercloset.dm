@@ -643,6 +643,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
 	/// if it can be seen through when closed
 	var/opaque_closed = FALSE
 
+/obj/structure/curtain/Initialize(mapload)
+	. = ..()
+	if(!open)
+		update_icon()
+
 /obj/structure/curtain/proc/toggle()
 	open = !open
 	update_icon()

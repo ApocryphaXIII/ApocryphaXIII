@@ -13180,10 +13180,12 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/setite/basement)
 "dgj" = (
-/obj/structure/closet/cardboard,
-/obj/structure/table,
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/ghetto)
+/obj/effect/turf_decal/siding/wood,
+/obj/machinery/light/small{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "dgl" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/plating/rough{
@@ -22522,9 +22524,16 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "fxn" = (
-/obj/structure/table,
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/ghetto)
+/obj/machinery/shower{
+	dir = 8;
+	pixel_y = 21
+	},
+/obj/structure/bath{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/plating/vampplating/stone,
+/area/vtm/interior/ghetto)
 "fxr" = (
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med/surgery,
@@ -31669,6 +31678,15 @@
 	},
 /turf/open/floor/plating/roofwalk/cobblestones,
 /area/vtm/jazzclub)
+"hKt" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/obj/structure/vampdoor/wood{
+	dir = 4
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "hKx" = (
 /obj/machinery/light/prince{
 	dir = 8
@@ -48818,6 +48836,12 @@
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict/library)
+"lZB" = (
+/obj/effect/decal/graffiti/large{
+	pixel_x = -15
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/ghetto)
 "lZF" = (
 /obj/machinery/vamp/atm{
 	dir = 8;
@@ -57982,11 +58006,11 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "oiC" = (
-/obj/structure/vampdoor/simple{
-	dir = 8
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
+	},
+/obj/structure/vampdoor/wood{
+	dir = 4
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -86674,6 +86698,12 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/strip)
+"vec" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating/bacotell,
+/area/vtm/interior/ghetto)
 "vei" = (
 /obj/structure/chair/wood,
 /turf/open/floor/plating/parquetry/old,
@@ -96322,7 +96352,8 @@
 /area/vtm/supply)
 "xtN" = (
 /obj/structure/toilet{
-	dir = 4
+	dir = 4;
+	pixel_y = 17
 	},
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/ghetto)
@@ -213204,8 +213235,8 @@ jlv
 jlv
 jlv
 jlv
-dgj
-fxn
+jmU
+jlv
 jlv
 jlv
 jlv
@@ -213461,7 +213492,7 @@ jlv
 jmU
 jlv
 jlv
-fxn
+jlv
 jlv
 jlv
 jlv
@@ -213980,7 +214011,7 @@ dLO
 lhF
 iFP
 tzw
-jlv
+lZB
 avt
 mwS
 xcu
@@ -214236,8 +214267,8 @@ npH
 npH
 lhF
 iFP
-tzw
-poL
+bxh
+jlv
 avt
 mwS
 xcu
@@ -215001,12 +215032,12 @@ iFP
 iFP
 fGT
 xEa
-cZo
+dgj
 cww
 jKi
 irx
 nFm
-nFm
+vec
 tzw
 jlv
 avt
@@ -215767,7 +215798,7 @@ vRy
 fKQ
 tzw
 rPP
-vTd
+hKt
 tzw
 tzw
 tzw
@@ -216541,7 +216572,7 @@ nPh
 flA
 flA
 qrh
-fMg
+fxn
 tzw
 aih
 jlv

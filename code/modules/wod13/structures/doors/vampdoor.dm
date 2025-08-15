@@ -250,21 +250,24 @@
 	if(!ishuman(usr) || !usr.canUseTopic(src, BE_CLOSE))
 		return
 
-	var/mob/living/carbon/human/H = usr
-	var/obj/item/vamp/keys/found_key = locate(/obj/item/vamp/keys) in H.contents
-	if(!found_key)
+	var/mob/living/carbon/human/H = usr // APOC EDIT START
+	var/obj/item/vamp/keys/K = locate() in H // In pockets
+	if(!K && H.back)
+		if(do_after(H, 1 SECONDS, src))
+			K = locate() in H.back
+	if(!K)
 		to_chat(usr, span_warning("You need a key to lock/unlock this door!"))
 		return
 
-	if(found_key.roundstart_fix)
-		found_key.roundstart_fix = FALSE
-		lock_id = pick(found_key.accesslocks)
+	if(K.roundstart_fix)
+		K.roundstart_fix = FALSE
+		lock_id = pick(K.accesslocks)
 
-	if(!found_key.accesslocks)
+	if(!K.accesslocks)
 		to_chat(usr, span_warning("Your key doesn't fit this lock!"))
 		return
 
-	for(var/i in found_key.accesslocks)
+	for(var/i in K.accesslocks) // APOC EDIT END
 		if(i == lock_id)
 			locked = !locked
 			playsound(src, lock_sound, 75, TRUE)

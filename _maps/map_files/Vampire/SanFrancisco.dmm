@@ -120,9 +120,12 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
 "abI" = (
-/obj/structure/closet/crate/bin,
+/obj/structure/closet/crate/bin{
+	pixel_y = 6
+	},
 /obj/item/reagent_containers/food/drinks/coffee/vampire/robust{
-	list_reagents = list()
+	list_reagents = list();
+	pixel_y = 4
 	},
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/ghetto)
@@ -31252,7 +31255,7 @@
 /area/vtm/unionsquare)
 "hFA" = (
 /obj/structure/clothinghanger{
-	pixel_y = -4
+	pixel_y = 10
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -64239,10 +64242,11 @@
 /area/vtm/sewer/nosferatu_town)
 "pFa" = (
 /obj/item/kirbyplants/random{
-	pixel_x = -8
+	pixel_x = -6;
+	pixel_y = 7
 	},
 /obj/structure/filingcabinet{
-	pixel_y = -1;
+	pixel_y = 2;
 	pixel_x = 10
 	},
 /turf/open/floor/plating/parquetry/old,
@@ -74920,6 +74924,13 @@
 	icon_state = "industrial3"
 	},
 /area/vtm/sewer/nosferatu_warren)
+"sfo" = (
+/obj/structure/toilet{
+	dir = 8;
+	pixel_y = 17
+	},
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/ghetto)
 "sfx" = (
 /obj/structure/closet/crate/large,
 /obj/effect/decal/pallet,
@@ -96608,8 +96619,8 @@
 /obj/structure/bed{
 	pixel_y = 8
 	},
-/obj/item/bedsheet/random{
-	pixel_y = 10
+/obj/item/bedsheet/brown{
+	pixel_y = 9
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -226881,7 +226892,7 @@ fMg
 trb
 rPP
 tuJ
-xdb
+sfo
 tzw
 dci
 jlv

@@ -1317,8 +1317,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
 "aoU" = (
-/obj/structure/chair/sofa/corp/left,
-/turf/closed/wall/vampwall/city,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/ghetto)
 "apa" = (
 /obj/structure/disposalpipe/segment,
@@ -85734,11 +85733,10 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower/f2)
 "uTi" = (
-/obj/structure/curtain/bounty{
-	icon_state = "bounty-closed";
-	open = 0
+/obj/structure/dresser{
+	pixel_y = 7
 	},
-/turf/closed/wall/vampwall/city/low/window,
+/turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "uTl" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -88931,7 +88929,7 @@
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/turf/open/floor/plating/parquetry/old,
+/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/ghetto)
 "vGv" = (
 /obj/effect/turf_decal/bordur{
@@ -96606,6 +96604,15 @@
 /obj/item/storage/book/bible,
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/staff)
+"xyq" = (
+/obj/structure/bed{
+	pixel_y = 8
+	},
+/obj/item/bedsheet/random{
+	pixel_y = 10
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "xyz" = (
 /obj/structure/table/wood,
 /obj/item/kirbyplants{
@@ -215238,7 +215245,7 @@ lOI
 klF
 iFP
 eRY
-oNc
+uTi
 xEa
 cZo
 nFm
@@ -215246,7 +215253,7 @@ nFm
 nFm
 nFm
 nFm
-uTi
+bxh
 jlv
 avt
 mwS
@@ -215495,7 +215502,7 @@ wQN
 iFP
 iFP
 qFk
-hVs
+xyq
 xEa
 jUz
 pfC
@@ -222759,9 +222766,9 @@ tzw
 tzw
 tzw
 tzw
-uTi
-uTi
-uTi
+bxh
+bxh
+bxh
 tzw
 tzw
 jlv
@@ -224809,10 +224816,10 @@ ulT
 jlv
 lJZ
 iFP
-iFP
-iFP
-iFP
-iFP
+aoU
+aoU
+aoU
+aoU
 iFP
 iFP
 iFP
@@ -225066,9 +225073,9 @@ fIv
 jlv
 xEa
 vTH
-iFP
-iFP
-iFP
+aoU
+aoU
+aoU
 vGr
 iFP
 iFP
@@ -226361,7 +226368,7 @@ mqr
 rPP
 dcn
 tzw
-aoU
+tzw
 gKQ
 mhC
 jlv

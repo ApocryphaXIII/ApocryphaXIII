@@ -12924,7 +12924,8 @@
 /area/vtm/financialdistrict/library)
 "ddt" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/beer/vampire,
+/obj/effect/spawner/random/food_or_drink/booze,
+/obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "ddv" = (
@@ -38220,6 +38221,18 @@
 	},
 /turf/open/floor/plating/toilet/clinic,
 /area/vtm/clinic/haven)
+"jqF" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/condiment/saltshaker{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/food/condiment/peppermill{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "jqR" = (
 /obj/structure/flora/rock/jungle,
 /turf/open/floor/plating/vampgrass,
@@ -39273,10 +39286,15 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior)
 "jDe" = (
-/obj/effect/mob_spawn/human/citizen,
-/obj/structure/bed,
-/obj/item/bedsheet/random,
-/turf/open/floor/plating/parquetry/old,
+/obj/machinery/washing_machine{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/obj/item/toy/plush/goatplushie{
+	pixel_y = 17;
+	pixel_x = -3
+	},
+/turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
 "jDf" = (
 /mob/living/carbon/human/npc/bouncer/endron/endron_backdoor,
@@ -81185,6 +81203,17 @@
 	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/clinic)
+"tFn" = (
+/obj/item/kirbyplants/random{
+	pixel_x = 10;
+	pixel_y = 3
+	},
+/obj/item/kirbyplants/random{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "tFr" = (
 /obj/machinery/light{
 	dir = 4
@@ -87839,6 +87868,11 @@
 /area/vtm/fishermanswharf/lower)
 "vqW" = (
 /obj/structure/table,
+/obj/machinery/microwave{
+	pixel_y = 15;
+	pixel_x = -4
+	},
+/obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "vrc" = (
@@ -90884,6 +90918,14 @@
 /obj/structure/table/wood,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/cog/pantry)
+"wcD" = (
+/obj/structure/table/wood,
+/obj/item/instrument/piano_synth/headphones{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "wcJ" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -93608,6 +93650,8 @@
 /area/vtm/interior/millennium_tower/f4)
 "wKy" = (
 /obj/structure/closet/crate/freezer/fridge,
+/obj/effect/spawner/random/food_or_drink/booze,
+/obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "wKD" = (
@@ -217998,7 +218042,7 @@ enC
 ijg
 iFP
 xtW
-npH
+wcD
 npH
 afe
 tEw
@@ -225437,7 +225481,7 @@ mrM
 jlv
 jlv
 nXD
-gZe
+tFn
 iFP
 iFP
 vqW
@@ -226212,7 +226256,7 @@ khC
 iFP
 iFP
 npH
-npH
+jqF
 afe
 jlv
 jlv
@@ -227236,10 +227280,10 @@ kno
 kno
 kno
 tlU
-bTy
+jDe
 flA
 nXD
-ujD
+ijg
 mXc
 afe
 dci
@@ -227754,7 +227798,7 @@ xdb
 cpM
 nXD
 bDq
-jDe
+hVs
 afe
 mhC
 jlv

@@ -8,7 +8,7 @@
 		if("help")
 			if (stat == DEAD)
 				return
-			if(HAS_TRAIT(M, TRAIT_ANIMAL_REPULSION))
+			if(HAS_TRAIT(M, TRAIT_ANIMAL_REPULSION) || !has_hate) // APOC EDIT ADD
 				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
 				var/shove_dir = get_dir(M, src)
 				if(!M.client)
@@ -26,7 +26,7 @@
 
 		if("grab")
 			grabbedby(M)
-			if(HAS_TRAIT(M, TRAIT_ANIMAL_REPULSION))
+			if(HAS_TRAIT(M, TRAIT_ANIMAL_REPULSION) || !has_hate) // APOC EDIT ADD
 				if (stat == DEAD)
 					return
 				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
@@ -152,7 +152,7 @@
 	if(animal)
 		if(animal.name == "Cain")
 			return //cain will never hate you.
-		if(HAS_TRAIT(src, TRAIT_ANIMAL_REPULSION))
+		if(HAS_TRAIT(src, TRAIT_ANIMAL_REPULSION) || !has_hate) // APOC EDIT ADD
 			adjustBruteLoss(3)
 			visible_message("<span class='danger'>[animal] bites at [name]!</span>", \
 							"<span class='userdanger'>[animal] bites you!</span>", null, COMBAT_MESSAGE_RANGE, src)

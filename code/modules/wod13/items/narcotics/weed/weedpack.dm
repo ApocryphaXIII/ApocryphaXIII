@@ -27,4 +27,4 @@
 		qdel(src)
 
 		user.put_in_hands(doctor_bluntenstein)
-		to_chat(user, span_notice("You remove the [pick("sticky green", "good kush", "devil's lettuce", "weed", "reefer", "ganja", "skunk", "dope", "cannabis", "pot")] from the package and quickly roll it)]"))
+		to_chat(user, span_notice("You remove the [pick("sticky green", "good kush", "devil's lettuce", "weed", "reefer", "ganja", "skunk", "dope", "cannabis", "pot")] from the package and quickly roll it up.)]"))

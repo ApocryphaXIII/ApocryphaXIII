@@ -35,6 +35,8 @@
 	///The Spell that the rat uses to recruit/convert more rats.
 	var/datum/action/cooldown/riot
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/regalrat/Initialize()
 	. = ..()
 	coffer = new /datum/action/cooldown/coffer
@@ -224,6 +226,8 @@
 	mob_size = MOB_SIZE_TINY
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	faction = list("rat")
+
+	has_hate = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/hostile/rat/Initialize()
 	. = ..()

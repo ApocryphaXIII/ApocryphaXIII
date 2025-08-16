@@ -30,6 +30,8 @@
 	pet_bonus = TRUE
 	pet_bonus_emote = "sticks its tongue out contentedly!"
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/lizard/CanAttack(atom/the_target)//Can we actually attack a possible target?
 	if(see_invisible < the_target.invisibility)//Target's invisible to us, forget it
 		return FALSE

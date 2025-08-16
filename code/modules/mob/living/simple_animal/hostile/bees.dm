@@ -60,6 +60,8 @@
 	var/static/beehometypecache = typecacheof(/obj/structure/beebox)
 	var/static/hydroponicstypecache = typecacheof(/obj/machinery/hydroponics)
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/poison/bees/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)

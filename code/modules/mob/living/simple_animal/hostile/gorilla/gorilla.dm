@@ -44,6 +44,8 @@
 
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 
+	has_hate = TRUE // APOC EDIT ADD
+
 // Gorillas like to dismember limbs from unconcious mobs.
 // Returns null when the target is not an unconcious carbon mob; a list of limbs (possibly empty) otherwise.
 /mob/living/simple_animal/hostile/gorilla/proc/target_bodyparts(atom/the_target)

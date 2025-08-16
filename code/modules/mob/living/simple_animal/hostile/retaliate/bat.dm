@@ -37,6 +37,8 @@
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/retaliate/bat/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
@@ -72,3 +74,5 @@
 	speed = -1
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "bat"
+
+	has_hate = FALSE // APOC EDIT ADD

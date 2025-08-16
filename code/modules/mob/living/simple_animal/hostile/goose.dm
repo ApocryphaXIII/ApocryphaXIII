@@ -38,6 +38,8 @@
 	var/list/nummies = list()
 	var/choking = FALSE
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/retaliate/goose/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(goosement))

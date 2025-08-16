@@ -24,6 +24,8 @@
 
 	footstep_type = FOOTSTEP_MOB_CLAW
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/pet/dog/Initialize()
 	. = ..()
 	add_cell_sample()

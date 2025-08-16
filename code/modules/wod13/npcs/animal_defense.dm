@@ -8,7 +8,7 @@
 		if("help")
 			if (stat == DEAD)
 				return
-			if(HAS_TRAIT(M, TRAIT_ANIMAL_REPULSION))
+			if(HAS_TRAIT(M, TRAIT_ANIMAL_REPULSION) || !has_hate) // APOC EDIT ADD
 				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
 				var/shove_dir = get_dir(M, src)
 				if(!M.client)
@@ -26,7 +26,7 @@
 
 		if("grab")
 			grabbedby(M)
-			if(HAS_TRAIT(M, TRAIT_ANIMAL_REPULSION))
+			if(HAS_TRAIT(M, TRAIT_ANIMAL_REPULSION) || !has_hate) // APOC EDIT ADD
 				if (stat == DEAD)
 					return
 				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
@@ -150,7 +150,7 @@
 	. = ..()
 	var/mob/living/simple_animal/animal = locate() in get_turf(Obstacle)
 	if(animal)
-		if(animal.name == "Cain")
+		if(animal.name == "Cain" || !animal.has_hate) // APOC EDIT ADD
 			return //cain will never hate you.
 		if(HAS_TRAIT(src, TRAIT_ANIMAL_REPULSION))
 			adjustBruteLoss(3)

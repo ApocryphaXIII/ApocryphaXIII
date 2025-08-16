@@ -28,6 +28,8 @@
 
 	footstep_type = FOOTSTEP_MOB_CLAW
 
+	has_hate = TRUE // APOC EDIT ADD
+
 //Captain fox
 /mob/living/simple_animal/pet/fox/renault
 	name = "Renault"

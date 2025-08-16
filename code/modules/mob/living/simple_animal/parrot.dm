@@ -107,6 +107,8 @@
 	//Parrots are kleptomaniacs. This variable ... stores the item a parrot is holding.
 	var/obj/item/held_item = null
 
+	has_hate = TRUE // APOC EDIT ADD
+
 
 /mob/living/simple_animal/parrot/Initialize()
 	. = ..()

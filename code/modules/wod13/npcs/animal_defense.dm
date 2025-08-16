@@ -150,9 +150,9 @@
 	. = ..()
 	var/mob/living/simple_animal/animal = locate() in get_turf(Obstacle)
 	if(animal)
-		if(animal.name == "Cain")
+		if(animal.name == "Cain" || !animal.has_hate) // APOC EDIT ADD
 			return //cain will never hate you.
-		if(HAS_TRAIT(src, TRAIT_ANIMAL_REPULSION) || !has_hate) // APOC EDIT ADD
+		if(HAS_TRAIT(src, TRAIT_ANIMAL_REPULSION))
 			adjustBruteLoss(3)
 			visible_message("<span class='danger'>[animal] bites at [name]!</span>", \
 							"<span class='userdanger'>[animal] bites you!</span>", null, COMBAT_MESSAGE_RANGE, src)

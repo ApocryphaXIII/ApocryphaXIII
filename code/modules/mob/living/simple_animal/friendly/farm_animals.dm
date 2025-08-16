@@ -454,4 +454,4 @@
 	food_type = list(/obj/item/food/grown/apple)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
-has_hate = TRUE // APOC EDIT ADD
+	has_hate = TRUE // APOC EDIT ADD

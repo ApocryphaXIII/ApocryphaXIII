@@ -6,26 +6,25 @@
 #define USE_JOB_TITLE 3
 
 
-/proc/create_unique_phone_number(exchange = 513)
-	if(length(GLOB.subscribers_numbers_list) < 1)
-		create_subscribers_numbers()
-	var/subscriber_code = pick(GLOB.subscribers_numbers_list)
-	GLOB.subscribers_numbers_list -= subscriber_code
-	return "[exchange][subscriber_code]"
+/proc/create_unique_phone_number(exchange = 415, postfix)
+	var/max_num = (10 ** SUBSCRIBER_NUMBER_LENGTH) - 1
 
-/proc/create_subscribers_numbers()
-	for(var/i in 1 to 9999)
-		var/ii = "0000"
-		switch(i)
-			if(1 to 9)
-				ii = "000[i]"
-			if(10 to 99)
-				ii = "00[i]"
-			if(100 to 999)
-				ii = "0[i]"
-			if(1000 to 9999)
-				ii = "[i]"
-		GLOB.subscribers_numbers_list += ii
+	//Slightly jank santization
+	if(postfix)
+		postfix = text2num(postfix)
+		postfix = num2text(postfix, SUBSCRIBER_NUMBER_LENGTH, 10)
+	// If we have a valid phone number set and someone hasnt already taken it
+	if((postfix && postfix != "0000") && !("[exchange][postfix]" in GLOB.phone_numbers_list))
+		return "[exchange][postfix]"
+
+	// If we dont pass a postfix or cant use it, pick a random one
+	var/subscriber_code
+	for(var/i in 1 to 1000)
+		subscriber_code = num2text(rand(1, max_num), SUBSCRIBER_NUMBER_LENGTH, 10)
+		if(!("[exchange][subscriber_code]" in GLOB.phone_numbers_list))
+			break
+
+	return "[exchange][subscriber_code]"
 
 /obj/item/vamp/phone
 	name = "\improper phone"
@@ -42,7 +41,7 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 
-	var/exchange_num = 513
+	var/exchange_num = 415
 	var/list/contacts = list()
 	var/blocked = FALSE
 	var/list/blocked_contacts = list()
@@ -80,7 +79,8 @@
 	if(!number || number == "")
 		if(!isnull(owner))
 			src.owner = owner.real_name
-		number = create_unique_phone_number(exchange_num)
+		var/my_number = owner?.client?.prefs?.phone_postfix
+		number = create_unique_phone_number(exchange_num, my_number)
 		GLOB.phone_numbers_list += number
 		GLOB.phones_list += src
 		if(!isnull(owner) && owner.Myself)
@@ -374,7 +374,7 @@
 					for(var/i = 1 to list_length)
 						var/number = GLOB.published_numbers[i]
 						var/display_number_first = copytext(number, 1, 4)
-						var/display_number_second = copytext(number, 4, 8)
+						var/display_number_second = copytext(number, 4, 4 + SUBSCRIBER_NUMBER_LENGTH)
 						var/split_number = display_number_first + " " + display_number_second
 						var/name = GLOB.published_number_names[i]
 						to_chat(usr, "- [name]: [split_number]")
@@ -444,7 +444,7 @@
 						for(var/datum/phonehistory/PH in phone_history_list)
 							//loop through the phone_history_list searching for a phonehistory datums and display them.
 							var/display_number_first = copytext(PH.number, 1, 4)
-							var/display_number_second = copytext(PH.number, 4, 8)
+							var/display_number_second = copytext(PH.number, 4, 4 + SUBSCRIBER_NUMBER_LENGTH)
 							var/split_number = display_number_first + " " + display_number_second
 							to_chat(usr, "# [PH.call_type]: [PH.name] , [split_number] at [PH.time]")
 					else
@@ -468,7 +468,7 @@
 						to_chat(usr, "You have no call history to delete it.")
 				if("My Number")
 					var/number_first_part = copytext(number, 1, 4)
-					var/number_second_part = copytext(number, 4, 8)
+					var/number_second_part = copytext(number, 4, 4 + SUBSCRIBER_NUMBER_LENGTH)
 					to_chat(usr, number_first_part + " " + number_second_part)
 			.= TRUE
 		if("settings")
@@ -801,14 +801,14 @@
 // ANARCHS
 
 /obj/item/vamp/phone/baron
-	exchange_num = 485
+	exchange_num = 180
 	contact_networks_pre_init = list(
 		list(NETWORK_ID = ANARCH_NETWORK, OUR_ROLE = "Club Manager")
 		, list(NETWORK_ID = VAMPIRE_LEADER_NETWORK, OUR_ROLE = "Anarchy Rose Club Manager")
 		)
 
 /obj/item/vamp/phone/emissary
-	exchange_num = 485
+	exchange_num = 180
 	contact_networks_pre_init = list(
 		list(NETWORK_ID = ANARCH_NETWORK, OUR_ROLE = "Club Representative")
 		, list(NETWORK_ID = VAMPIRE_LEADER_NETWORK, OUR_ROLE = "Anarchy Rose Club Representative")
@@ -827,7 +827,7 @@
 // WAREHOUSE
 
 /obj/item/vamp/phone/dealer
-	exchange_num = 485
+	exchange_num = 180
 	contact_networks_pre_init = list(
 		list(NETWORK_ID = WAREHOUSE_NETWORK, OUR_ROLE = "Warehouse Manager")
 		, list(NETWORK_ID = VAMPIRE_LEADER_NETWORK, OUR_ROLE = "Warehouse Manager")
@@ -848,7 +848,7 @@
 // ENDRON
 
 /obj/item/vamp/phone/endron_lead
-	exchange_num = 485
+	exchange_num = 180
 	contact_networks_pre_init = list(
 		list(NETWORK_ID = ENDRON_NETWORK, OUR_ROLE = "Endron Branch Lead")
 		)

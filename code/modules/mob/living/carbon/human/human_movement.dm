@@ -37,6 +37,7 @@
 
 /mob/living/carbon/human/Move(NewLoc, direct)
 	. = ..()
+	time_spent_stationary = 0 // APOC EDIT ADD
 	if(shoes && body_position == STANDING_UP && loc == NewLoc && has_gravity(loc))
 		SEND_SIGNAL(shoes, COMSIG_SHOES_STEP_ACTION)
 

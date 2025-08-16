@@ -41,7 +41,7 @@
 #define CHAT_LOGIN_LOGOUT	(1<<12)
 #define CHAT_ROLL_INFO		(1<<13)
 
-#define TOGGLES_DEFAULT_CHAT (CHAT_OOC|CHAT_DEAD|CHAT_GHOSTSIGHT|CHAT_PRAYER|CHAT_RADIO|CHAT_PULLR|CHAT_GHOSTWHISPER|CHAT_GHOSTPDA|CHAT_GHOSTRADIO|CHAT_BANKCARD|CHAT_GHOSTLAWS|CHAT_LOGIN_LOGOUT|CHAT_GHOSTEARS|CHAT_ROLL_INFO) // CHAT_GHOSTEARS| [ChillRaccoon] - Removed due to request //[Lucifernix] - readded because fuck you!
+#define TOGGLES_DEFAULT_CHAT (CHAT_OOC|CHAT_DEAD|CHAT_PRAYER|CHAT_RADIO|CHAT_PULLR|CHAT_GHOSTPDA|CHAT_GHOSTRADIO|CHAT_BANKCARD|CHAT_GHOSTLAWS|CHAT_LOGIN_LOGOUT|CHAT_ROLL_INFO) // CHAT_GHOSTEARS| [ChillRaccoon] - Removed due to request //[Lucifernix] - readded because fuck you! // APOC EDIT //[dwinters99] - re-removed because fuck you more! Also fuck CHAT_GHOSTSIGHT and CHAT_GHOSTWHISPER!
 
 #define PARALLAX_INSANE -1 //for show offs
 #define PARALLAX_HIGH    0 //default.
@@ -84,9 +84,9 @@
 #define EXP_TYPE_COUNCIL        "Camarilla Primogen Council"
 #define EXP_TYPE_POLICE         "Police Force"
 #define EXP_TYPE_SERVICES   "City Services"
-#define EXP_TYPE_CLINIC   "St. John's Clinic"
+#define EXP_TYPE_CLINIC   "Clinic"
 #define EXP_TYPE_GIOVANNI   "Giovanni Family"
-#define EXP_TYPE_VOIVODATE   "Voivodate" //Apoc Edit
+#define EXP_TYPE_VOIVODATE   "Voivodate" //APOC EDIT
 #define EXP_TYPE_WAREHOUSE      "Warehouse"
 #define EXP_TYPE_NATIONAL_SECURITY      "National Security"
 #define EXP_TYPE_PAINTED_CITY      "Sept of the Painted City"

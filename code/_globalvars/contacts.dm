@@ -8,7 +8,7 @@ GLOBAL_LIST_INIT(millenium_tower_network, list())
 GLOBAL_LIST_INIT(lasombra_network, list())
 GLOBAL_LIST_INIT(tremere_network, list())
 GLOBAL_LIST_INIT(giovanni_network, list())
-GLOBAL_LIST_INIT(voivodate_network, list()) //Apoc Edit
+GLOBAL_LIST_INIT(voivodate_network, list()) //APOC EDIT
 GLOBAL_LIST_INIT(anarch_network, list())
 GLOBAL_LIST_INIT(warehouse_network, list())
 GLOBAL_LIST_INIT(triads_network, list())
@@ -20,7 +20,7 @@ GLOBAL_LIST_INIT(endron_network, list())
 #define LASOMBRA_NETWORK 2
 #define TREMERE_NETWORK 3
 #define GIOVANNI_NETWORK 4
-#define VOIVODATE_NETWORK 5 //Apoc Edit
+#define VOIVODATE_NETWORK 5 //APOC EDIT
 #define ANARCH_NETWORK 6
 #define WAREHOUSE_NETWORK 7
 #define TRIADS_NETWORK 8
@@ -38,7 +38,7 @@ GLOBAL_LIST_INIT(endron_network, list())
 			return GLOB.tremere_network
 		if(GIOVANNI_NETWORK)
 			return GLOB.giovanni_network
-		if(VOIVODATE_NETWORK) //Apoc Edit
+		if(VOIVODATE_NETWORK) //APOC EDIT
 			return GLOB.voivodate_network
 		if(ANARCH_NETWORK)
 			return GLOB.anarch_network

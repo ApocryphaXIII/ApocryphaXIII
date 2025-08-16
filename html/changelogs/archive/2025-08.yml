@@ -29,3 +29,30 @@
   dwinters99:
   - bugfix: Animalism 1 rats no longer planeshift
   - rscadd: Eat Food quirk
+  - code_imp: Cleaned up some comments
+  - qol: Hunger is paused after 10 seconds of inactivity.
+  phoaly, dwinters99:
+  - map: Removed Graveyard and Tzimisce Manor
+  - map: Added Voivodate Manor
+  - map: Moved abandoned manor to original location
+  - code_imp: Stitched all Z-Levels together.
+  - code_imp: Changed all reference of the "Tzimisce Manor" jobs  to "Voivodate Estate"
+      jobs
+  - code_imp: Added Bogatyr Captain and Voivodate Citizen Jobs
+  - code_imp: Disabled Gravekeeper job
+2025-08-15:
+  FalloutFalcon:
+  - rscadd: New preference for your phone number subscriber code
+  - rscadd: Added an extra didgits to subscriber code and uses real san fran area
+      code
+  - bugfix: Aghosting does not remove right click popup
+  Latentish:
+  - balance: Changed what bloodlines are available where
+  - map: Tweaked the hospital
+  - bugfix: fixed voivode position edgecase
+  - code_imp: standardized apoc edit comments and filestructure
+  dwinters99:
+  - qol: Blood extractors are now less annoying to use
+  - spellcheck: Descriptions on Presence 4 and 5 are SLIGHTLY clearer
+  dwinters99 & Paynt:
+  - bugfix: BSD hispos now have the correct sprites

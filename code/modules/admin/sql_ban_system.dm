@@ -237,13 +237,13 @@
 							"Tremere" = GLOB.tremere_positions,
 							"Anarch" = GLOB.anarch_positions,
 							"Giovanni" = GLOB.giovanni_positions,
-							"Seer's Voivodate" = GLOB.voivodate_positions, //Apoc Edit
+							"Seer's Voivodate" = GLOB.voivodate_positions, //APOC EDIT
 							"Law Enforcement" = GLOB.police_positions + GLOB.national_security_positions,
 							"Warehouse" = GLOB.warehouse_positions,
 							"Triad" = GLOB.gang_positions,
 							"Unaligned" = GLOB.citizen_positions,
 							"City Services" = GLOB.services_positions,
-							"St Johns" = GLOB.clinic_positions,
+							"Clinic" = GLOB.clinic_positions,
 							"Church" = GLOB.church_positions,
 							"Painted City" = GLOB.painted_positions,
 							"Amberglade" = GLOB.amberglade_positions,

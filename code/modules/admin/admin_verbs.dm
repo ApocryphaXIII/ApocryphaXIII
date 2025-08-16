@@ -23,7 +23,8 @@ GLOBAL_PROTECT(admin_verbs_default)
 	/client/proc/addbunkerbypass,
 	/client/proc/revokebunkerbypass,
 	// TFN MODULAR END
-	/client/proc/requests
+	/client/proc/requests,
+	/client/proc/toggle_RMB
 	)
 GLOBAL_LIST_INIT(admin_verbs_admin, world.AVerbsAdmin())
 GLOBAL_PROTECT(admin_verbs_admin)
@@ -126,7 +127,6 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/client/proc/roll_dice_vtm,
 	/client/proc/smite,
 	/client/proc/admin_away,
-	/client/proc/toggle_RMB
 	))
 GLOBAL_PROTECT(admin_verbs_fun)
 GLOBAL_LIST_INIT(admin_verbs_spawn, list(/datum/admins/proc/spawn_atom, /datum/admins/proc/podspawn_atom, /datum/admins/proc/spawn_cargo, /datum/admins/proc/spawn_objasmob, /client/proc/respawn_character, /datum/admins/proc/beaker_panel))
@@ -381,7 +381,6 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 					log_admin("[key_name(usr)] re-entered corpse")
 					message_admins("[key_name_admin(usr)] re-entered corpse")
 				ghost.can_reenter_corpse = TRUE //force re-entering even when otherwise not possible
-				ghost.client.show_popup_menus = 0
 				ghost.reenter_corpse()
 
 				SSblackbox.record_feedback("tally", "admin_verb", 1, "Admin Reenter") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

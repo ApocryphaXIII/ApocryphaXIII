@@ -181,6 +181,10 @@
 	worn_icon_state = "bruiser_badge"
 	registered_name_is_public = FALSE
 
+//Apoc addition
+/obj/item/card/id/bruiser/barkeep
+	name = "barkeep's badge"
+
 /obj/item/card/id/sweeper
 	name = "sweeper badge"
 	id_type_name = "sweeper badge"
@@ -236,10 +240,11 @@
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id2"
-
+/* Apoc Edit
 /obj/item/card/id/clinic/director
 	name = "clinic director's badge"
 	desc = "A badge which shows not only medical qualification, but also an authority over the clinic."
+*/
 
 /obj/item/card/id/archive
 	name = "scholar badge"
@@ -448,7 +453,7 @@
 	worn_icon_state = "id12"
 	registered_name_is_public = FALSE
 
-//Apoc Addition
+//APOC EDIT ADD
 /obj/item/card/id/bogatyr/captain
 	name = "patinated badge"
 	desc = "You have to wear this for the guards to recognize you."

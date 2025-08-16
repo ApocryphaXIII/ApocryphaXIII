@@ -27,7 +27,7 @@
 	lock_id = "police"
 	lockpick_difficulty = 6
 
-//Apoc Addition Start
+//APOC EDIT START
 /obj/structure/vampdoor/prison/voivodate
 	lock_id = "seer_voivodate"
 	locked = TRUE
@@ -35,4 +35,4 @@
 
 /obj/structure/vampdoor/prison/voivodate/unlocked
 	locked = FALSE
-//Apoc Addition End
+//APOC EDIT END

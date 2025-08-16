@@ -3,7 +3,7 @@
 	title = "Bogatyr"
 	department_head = list("Voivode")
 	faction = "Vampire"
-	//Apoc Edit
+	//APOC EDIT
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = " the Laws of Hospitality"
@@ -16,17 +16,17 @@
 	paycheck = PAYCHECK_EASY
 	paycheck_department = ACCOUNT_SRV
 	display_order = JOB_DISPLAY_ORDER_BOGATYR
-	exp_type_department = EXP_TYPE_VOIVODATE //Apoc Edit
+	exp_type_department = EXP_TYPE_VOIVODATE //APOC EDIT
 
 	allowed_species = list("Vampire")
-	allowed_bloodlines = list(CLAN_TZIMISCE, CLAN_MALKAVIAN, CLAN_TOREADOR, CLAN_OLD_TZIMISCE) //Apoc Edit
+	allowed_bloodlines = list(CLAN_TZIMISCE, CLAN_MALKAVIAN, CLAN_TOREADOR, CLAN_OLD_TZIMISCE) //APOC EDIT
 	minimal_generation = 13	//Uncomment when players get exp enough
 
-	//Apoc Edit
+	//APOC EDIT
 	v_duty = "You bare the name of the warriors that guarded ancient Dragons, to be a Bogatyr is to serve the Voivodes and the Seer Voivodate. Protect your family and the Sarcophagus of the Voivode-in-Waiting."
 	experience_addition = 15
 	minimal_masquerade = 2
-	known_contacts = list("Prince", "Baron", "Sheriff", "Emissary", "Seneschal", "Zadruga", "Bogatyr Captain") //Apoc Edit
+	known_contacts = list("Prince", "Baron", "Sheriff", "Emissary", "Seneschal", "Zadruga", "Bogatyr Captain") //APOC EDIT
 
 /datum/outfit/job/bogatyr/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -44,12 +44,12 @@
 	l_pocket = /obj/item/vamp/phone/bogatyr
 	r_pocket = /obj/item/cockclock
 
-	backpack_contents = list(/obj/item/vamp/keys/voivodate/master=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1) //Apoc Edit
+	backpack_contents = list(/obj/item/vamp/keys/voivodate/master=1, /obj/item/passport=1, /obj/item/flashlight=1, /obj/item/card/credit=1) //APOC EDIT
 
 /obj/effect/landmark/start/bogatyr
 	name = "Bogatyr"
 
-//Apoc Addition Start
+//APOC EDIT START
 /datum/job/vamp/bogatyr/captain
 	title = "Bogatyr Captain"
 	total_positions = 2
@@ -67,4 +67,4 @@
 
 /obj/effect/landmark/start/bogatyr/captain
 	name = "Bogatyr Captain"
-//Apoc Edit End
+//APOC EDIT End

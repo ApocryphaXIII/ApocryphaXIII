@@ -21,10 +21,10 @@
 	if(istype(attacking_item, /obj/item/paper))
 		var/obj/item/clothing/mask/cigarette/rollie/cannabis/doctor_bluntenstein = new /obj/item/clothing/mask/cigarette/rollie/cannabis
 		doctor_bluntenstein.chem_volume = reagents.total_volume
-		attacking_item.reagents.trans_to(doctor_bluntenstein, doctor_bluntenstein.chem_volume, transfered_by = user)
+		reagents.trans_to(doctor_bluntenstein, doctor_bluntenstein.chem_volume, transfered_by = user)
 		remove_item_from_storage(user)
 
-		qdel(target)
+		qdel(attacking_item)
 		qdel(src)
 
 		user.put_in_hands(doctor_bluntenstein)

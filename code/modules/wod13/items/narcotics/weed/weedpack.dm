@@ -20,11 +20,14 @@
 	. = ..()
 	if(istype(attacking_item, /obj/item/paper))
 		var/obj/item/clothing/mask/cigarette/rollie/cannabis/doctor_bluntenstein = new /obj/item/clothing/mask/cigarette/rollie/cannabis
-
+		doctor_bluntenstein.chem_volume = reagents.total_volume
+		attacking_item.reagents.trans_to(doctor_bluntenstein, doctor_bluntenstein.chem_volume, transfered_by = user)
 		remove_item_from_storage(user)
-		if (!user.transferItemToLoc(attacking_item, doctor_bluntenstein))
-			return
+
+		qdel(target)
 		qdel(src)
 
 		user.put_in_hands(doctor_bluntenstein)
 		to_chat(user, span_notice("You remove the [pick("sticky green", "good kush", "devil's lettuce", "weed", "reefer", "ganja", "skunk", "dope", "cannabis", "pot")] from the package and quickly roll it up.)]"))
+		return TRUE
+	return FALSE

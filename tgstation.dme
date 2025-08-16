@@ -3765,5 +3765,7 @@
 #include "modular_zapoc\modules\carpets\code\carpets.dm"
 #include "modular_zapoc\modules\eat_food\code\quirks_zapoc.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
+#include "modular_zapoc\modules\ravnos\code\ApocJobs\voidodate_citizen.dm"
+#include "modular_zapoc\modules\ncr\code\ncr.dm"
 #include "modular_zapoc\modules\tiles\code\tiles.dm"
 // END_INCLUDE

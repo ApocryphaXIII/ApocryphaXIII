@@ -37,6 +37,8 @@
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/retaliate/goat/Initialize()
 	udder = new()
 	. = ..()
@@ -146,6 +148,8 @@
 	footstep_type = FOOTSTEP_MOB_SHOE
 	pet_bonus = TRUE
 	pet_bonus_emote = "moos happily!"
+
+	has_hate = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/cow/Initialize()
 	udder = new()
@@ -268,6 +272,8 @@
 
 	footstep_type = FOOTSTEP_MOB_CLAW
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/chick/Initialize()
 	. = ..()
 	pixel_x = base_pixel_x + rand(-6, 6)
@@ -333,6 +339,8 @@
 	var/static/chicken_count = 0
 
 	footstep_type = FOOTSTEP_MOB_CLAW
+
+	has_hate = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/chicken/Initialize()
 	. = ..()
@@ -445,3 +453,5 @@
 	blood_volume = BLOOD_VOLUME_NORMAL
 	food_type = list(/obj/item/food/grown/apple)
 	footstep_type = FOOTSTEP_MOB_SHOE
+
+has_hate = TRUE // APOC EDIT ADD

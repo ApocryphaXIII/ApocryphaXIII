@@ -50,6 +50,7 @@
 
 /datum/reagent/drug/cannabis/on_mob_end_metabolize(mob/living/L)
 	..()
+	SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "stoned")
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/cannabis)
 	if(ishuman(L))
 		var/mob/living/carbon/human/got_the_munchies = L

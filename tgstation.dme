@@ -3765,6 +3765,8 @@
 #include "modular_tfn\modules\retail\stores\library.dm"
 #include "modular_tfn\modules\retail\stores\pharmacy.dm"
 #include "modular_tfn\modules\retail\stores\smoke_menu.dm"
+#include "modular_tfn\modules\saysounds\code\human_say.dm"
+#include "modular_tfn\modules\saysounds\code\preferences_toggles.dm"
 #include "modular_tfn\modules\subtle\subtle.dm"
 #include "modular_tfn\modules\taser_tfn13\taser_tfn13.dm"
 #include "modular_zapoc\master_files\code\game\objects\items\trash.dm"

@@ -1,7 +1,10 @@
 /obj/item/soapstone/the_word
+	name = "pointed hand"
+	desc = "A hand prepared to write the word."
+	icon_state = "duffelcurse"
 	item_flags = DROPDEL | ABSTRACT | HAND_ITEM
 	tool_speed = 0.5 SECONDS
-	remaining_uses = 1
+	remaining_uses = -1
 	chisel_type = /obj/structure/chisel_message/the_word
 
 /obj/structure/chisel_message/the_word
@@ -15,14 +18,22 @@
 /obj/structure/chisel_message/the_word/Initialize(mapload)
 	. = ..()
 	prepare_huds()
+
+	var/datum/atom_hud/second_sight/hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
+	hud.add_to_hud(src)
+
 	var/image/holder = hud_list[SECOND_SIGHT_HUD]
+	var/icon/I = icon(icon, icon_state, dir)
+	holder.pixel_y = I.Height() - world.icon_size
 	holder.icon = 'icons/effects/effects.dmi'
 	holder.icon_state = "blessed"
+	/*
 	holder.layer = ABOVE_OPEN_TURF_LAYER
 	holder.plane = GAME_PLANE
 	holder.loc = src
 	holder.alpha = 255
 	holder.appearance_flags = RESET_ALPHA
+	*/
 /*
 	var/image/I = image(icon = 'icons/effects/effects.dmi', icon_state = "blessed", layer = ABOVE_OPEN_TURF_LAYER, loc = src)
 	I.alpha = 255

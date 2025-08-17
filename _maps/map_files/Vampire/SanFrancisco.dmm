@@ -1343,6 +1343,16 @@
 /obj/vampire_computer/prince,
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior/millennium_tower/f4)
+"apk" = (
+/obj/structure/table,
+/obj/structure/sink{
+	pixel_y = -3;
+	dir = 8;
+	icon_state = "basin";
+	pixel_x = 5
+	},
+/turf/open/floor/plating/bacotell,
+/area/vtm/interior/ghetto)
 "apm" = (
 /obj/machinery/light/small/pink{
 	dir = 8;
@@ -6059,6 +6069,15 @@
 /obj/structure/chair/stool/bar,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
+"bvw" = (
+/obj/structure/table,
+/obj/machinery/microwave{
+	desc = "Cooks and boils stuff, somehow.";
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/turf/open/floor/plating/bacotell,
+/area/vtm/interior/ghetto)
 "bvx" = (
 /obj/structure/chair/wood/wings{
 	dir = 4
@@ -39553,13 +39572,22 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
 "jGF" = (
-/obj/machinery/microwave{
-	desc = "Cooks and boils stuff, somehow.";
-	pixel_x = -3;
-	pixel_y = 5
+/obj/structure/table/wood,
+/obj/item/reagent_containers/glass/bowl/mushroom_bowl{
+	name = "ashtray";
+	desc = "A discreet ashtray for keeping things clean.";
+	pixel_x = -6;
+	pixel_y = 10
 	},
-/obj/structure/table,
-/turf/open/floor/plating/bacotell,
+/obj/item/cigbutt{
+	pixel_x = -10;
+	pixel_y = 14
+	},
+/obj/item/cigbutt{
+	pixel_x = -5;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "jGO" = (
 /obj/structure/filingcabinet/security,
@@ -87461,6 +87489,15 @@
 	},
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer)
+"vlh" = (
+/obj/structure/table/wood,
+/obj/structure/noticeboard{
+	desc = "A board with pamphlets of Saint John's Community Health Clinic.";
+	icon_state = "nboard05";
+	pixel_y = 32
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "vlj" = (
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower/f2)
@@ -223247,9 +223284,9 @@ acf
 npH
 rPP
 pfC
-hQI
-jGF
+bvw
 jKi
+hQI
 duK
 tzw
 uCs
@@ -223497,7 +223534,7 @@ mwS
 ulT
 jlv
 uUa
-npH
+vlh
 iFP
 iFP
 iFP
@@ -223762,7 +223799,7 @@ dDc
 rPP
 pYe
 jKi
-jKi
+apk
 nFm
 nFm
 tzw
@@ -225563,7 +225600,7 @@ iFP
 iFP
 rMU
 ahR
-npH
+jGF
 tzw
 uCs
 jlv

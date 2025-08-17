@@ -206,7 +206,7 @@ but only permanently removed with the curator's soapstone.
 		to_chat(user, span_warning("I cant make out what this says"))
 
 /obj/structure/chisel_message/proc/can_read_message(mob/user)
-	return can_read(user)
+	return user.can_read(src)
 
 /obj/structure/chisel_message/Destroy()
 	if(persists)

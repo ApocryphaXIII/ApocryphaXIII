@@ -129,6 +129,8 @@ but only permanently removed with the curator's soapstone.
 
 	var/turf/original_turf
 
+	var/the_word = FALSE
+
 	/// Total vote count at or below which we won't persist.
 	var/delete_at = -5
 
@@ -173,6 +175,7 @@ but only permanently removed with the curator's soapstone.
 	data["z"] = original_turf.z
 	data["like_keys"] = like_keys
 	data["dislike_keys"] = dislike_keys
+	data["the_word"] = the_word
 	return data
 
 /obj/structure/chisel_message/proc/unpack(list/data)

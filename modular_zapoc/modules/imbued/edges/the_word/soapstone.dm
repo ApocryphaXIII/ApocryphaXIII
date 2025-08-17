@@ -1,12 +1,3 @@
-/datum/action/imbued_edge/the_word
-	name = "The Word"
-	desc = "Allows you to write the word."
-	edge_dots = IMBUED_POWER_INNATE
-
-/datum/action/imbued_edge/the_word/edge_action(mob/living/user, mob/living/target)
-	user.put_in_hands(new /obj/item/soapstone/the_word)
-	. = ..()
-
 /obj/item/soapstone/the_word
 	item_flags = DROPDEL | ABSTRACT | HAND_ITEM
 	tool_speed = 0.5 SECONDS
@@ -14,6 +5,7 @@
 	chisel_type = /obj/structure/chisel_message/the_word
 
 /obj/structure/chisel_message/the_word
+	the_word = TRUE
 
 /obj/structure/chisel_message/the_word/Initialize(mapload)
 	. = ..()

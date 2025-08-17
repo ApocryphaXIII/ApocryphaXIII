@@ -1,6 +1,7 @@
 /datum/species/human/imbued
 	name = "Imbued"
 	id = "imbued"
+	limbs_id = "human"
 
 /datum/species/human/imbued/on_species_gain(mob/living/carbon/human/C)
 	for(var/datum/action/imbued_edge/path as anything in C.imbued_powers)

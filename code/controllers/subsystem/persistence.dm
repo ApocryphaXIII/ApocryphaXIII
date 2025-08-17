@@ -81,7 +81,7 @@ SUBSYSTEM_DEF(persistence)
 		if(locate(/obj/structure/chisel_message) in T)
 			continue
 
-		var/obj/structure/chisel_message/M = is_the_word ? new /obj/structure/chisel_message(T) : new(T)
+		var/obj/structure/chisel_message/M = is_the_word ? new /obj/structure/chisel_message/the_word(T) : new(T)
 
 		if(!QDELETED(M))
 			M.unpack(item)
@@ -259,8 +259,6 @@ SUBSYSTEM_DEF(persistence)
 	var/json_file = file("data/npc_saves/ChiselMessages[SSmapping.config.map_name].json")
 
 	for(var/obj/structure/chisel_message/M in chisel_messages)
-		if(istype(M, /obj/structure/chisel_message/the_word))
-			continue
 		saved_messages += list(M.pack())
 
 	log_world("Saved [saved_messages.len] engraved messages on map [SSmapping.config.map_name]")

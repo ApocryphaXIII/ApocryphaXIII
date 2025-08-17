@@ -157,6 +157,9 @@ but only permanently removed with the curator's soapstone.
 
 /obj/structure/chisel_message/update_appearance()
 	. = ..()
+	update_message_apperance()
+
+/obj/structure/chisel_message/proc/update_message_apperance()
 	var/hash = md5(hidden_message)
 	var/newcolor = copytext_char(hash, 1, 7)
 	add_atom_colour("#[newcolor]", FIXED_COLOUR_PRIORITY)

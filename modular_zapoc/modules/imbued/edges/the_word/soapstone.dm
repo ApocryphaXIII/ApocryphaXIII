@@ -31,7 +31,6 @@
 	holder.layer = ABOVE_OPEN_TURF_LAYER
 	holder.plane = GAME_PLANE
 	holder.loc = src
-	holder.alpha = 255
 	holder.appearance_flags = RESET_ALPHA
 	*/
 /*
@@ -47,6 +46,7 @@
 /obj/structure/chisel_message/the_word/update_message_apperance()
 	return
 
+/*
 /datum/atom_hud/alternate_appearance/basic/the_word
 
 /datum/atom_hud/alternate_appearance/basic/the_word/New()
@@ -59,3 +59,4 @@
 	if(isimbued(M))
 		return TRUE
 	return FALSE
+*/

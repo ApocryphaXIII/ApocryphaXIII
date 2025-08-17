@@ -3769,6 +3769,7 @@
 #include "modular_zapoc\modules\eat_food\code\quirks_zapoc.dm"
 #include "modular_zapoc\modules\imbued\conviction.dm"
 #include "modular_zapoc\modules\imbued\imbued_species.dm"
+#include "modular_zapoc\modules\imbued\smite.dm"
 #include "modular_zapoc\modules\imbued\willpower.dm"
 #include "modular_zapoc\modules\imbued\edges\_imbued_edges.dm"
 #include "modular_zapoc\modules\imbued\edges\second_sight\second_sight.dm"

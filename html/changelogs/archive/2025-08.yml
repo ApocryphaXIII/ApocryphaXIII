@@ -56,3 +56,6 @@
   - spellcheck: Descriptions on Presence 4 and 5 are SLIGHTLY clearer
   dwinters99 & Paynt:
   - bugfix: BSD hispos now have the correct sprites
+2025-08-17:
+  dwinters99:
+  - code_imp: Ghost ears and eyes are now opt-in for new players

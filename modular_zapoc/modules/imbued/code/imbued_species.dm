@@ -4,6 +4,7 @@
 	limbs_id = "human"
 
 /datum/species/human/imbued/on_species_gain(mob/living/carbon/human/C)
+	. = ..()
 	for(var/datum/action/imbued_edge/path as anything in C.imbued_powers)
 		if(initial(path.edge_dots) != IMBUED_POWER_INNATE)
 			continue

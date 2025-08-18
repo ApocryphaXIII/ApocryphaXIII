@@ -47,7 +47,7 @@
 				refund_use()
 		return
 
-	var/message = stripped_input(user, "What would you like to engrave?", "Leave a message")
+	var/message = get_message(user)
 	if(!message)
 		to_chat(user, "<span class='notice'>You decide not to engrave anything.</span>")
 		return
@@ -64,6 +64,9 @@
 			var/obj/structure/chisel_message/M = new chisel_type(T)
 			M.register(user, message)
 			remove_use()
+
+/obj/item/soapstone/proc/get_message(mob/user)
+	return stripped_input(user, "What would you like to engrave?", "Leave a message")
 
 /obj/item/soapstone/proc/can_use()
 	return remaining_uses == -1 || remaining_uses >= 0

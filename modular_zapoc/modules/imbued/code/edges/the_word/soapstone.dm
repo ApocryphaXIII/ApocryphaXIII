@@ -7,6 +7,9 @@
 	remaining_uses = -1
 	chisel_type = /obj/structure/chisel_message/the_word
 
+/obj/item/soapstone/the_word/get_message(mob/user)
+	return tgui_input_list(user, "What would you like to engrave?", "Leave a message", GLOB.the_word_words)
+
 /obj/structure/chisel_message/the_word
 	//The word is boring and mudane to non-imbued
 	color = COLOR_GRAY

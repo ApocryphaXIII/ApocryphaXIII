@@ -20,8 +20,8 @@
 	prepare_huds()
 
 	#warn likely unneeded
-	//var/datum/atom_hud/second_sight/hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
-	//hud.add_to_hud(src)
+	var/datum/atom_hud/second_sight/hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
+	hud.add_to_hud(src)
 
 	var/image/holder = hud_list[SECOND_SIGHT_HUD]
 	var/icon/I = icon(icon, icon_state, dir)

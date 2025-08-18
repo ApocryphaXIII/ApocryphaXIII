@@ -29,7 +29,7 @@
 #define MINIMUM_ELDER_AGE 30
 
 
-#define SPECIES_ALL list("Vampire", "Ghoul", "Human", "Werewolf", "Kuei-Jin")
+#define SPECIES_ALL list("Vampire", "Ghoul", "Human", "Imbued", "Werewolf", "Kuei-Jin")
 
 /**
  * Clan defines

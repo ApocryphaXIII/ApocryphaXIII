@@ -18,6 +18,7 @@
 /datum/status_effect/imbued/second_sight
 	id = "second_sight"
 	duration = 10 SECONDS
+	alert_type = /atom/movable/screen/alert/status_effect/imbued/second_sight
 
 /datum/status_effect/imbued/second_sight/on_apply()
 	. = ..()
@@ -30,3 +31,7 @@
 	var/datum/atom_hud/second_sight_hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
 	second_sight_hud.remove_hud_from(owner)
 	owner.update_sight()
+
+/atom/movable/screen/alert/status_effect/imbued/second_sight
+	name = "Second Sight"
+	icon_state = "second_sight"

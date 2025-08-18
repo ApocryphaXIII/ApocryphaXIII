@@ -1,5 +1,9 @@
 // Heavily based off the modern TG /datum/action/changling, i might have left 1 or 2 refrences in here.
 /datum/action/imbued_edge
+	background_icon_state = "background"
+	button_icon = 'modular_zapoc/modules/imbued/icons/actions.dmi'
+	button_icon_state = "second_sight"
+	icon_icon = 'modular_zapoc/modules/imbued/icons/actions.dmi'
 	/// Details displayed in fine print within the edge menu
 	var/helptext = ""
 	//var/related_virture
@@ -89,3 +93,8 @@ the same goes for Remove(). if you override Remove(), call parent or else your p
 		user.balloon_alert(user, "incapacitated!")
 		return FALSE
 	return TRUE
+
+/atom/movable/screen/alert/status_effect/imbued
+	name = "Imbued Ability"
+	icon = 'modular_zapoc/modules/imbued/icons/actions.dmi'
+	icon_state = "second_sight"

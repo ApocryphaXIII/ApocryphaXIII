@@ -470,11 +470,11 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		return
 
 	GLOB.canon_event = !GLOB.canon_event
-	SEND_SOUND(world, sound('code/modules/wod13/sounds/canon.ogg'))
+	SEND_SOUND(world, sound('code/modules/wod13/sounds/canon.ogg', 0, 0, 75))
 	if(GLOB.canon_event)
-		to_chat(world, "<b>THE ROUND IS NOW CANON. ALL ROLEPLAY AND ESCALATION RULES ARE IN EFFECT.</b>")
+		to_chat(world, "<b>THE ROUND IS NOW CANON. DATA WILL SAVE.</b>")
 	else
-		to_chat(world, "<b>THE ROUND IS NO LONGER CANON. DATA WILL NO LONGER SAVE, AND ROLEPLAY AND ESCALATION RULES ARE NO LONGER IN EFFECT.</b>")
+		to_chat(world, "<b>THE ROUND IS NO LONGER CANON. DATA WILL NO LONGER SAVE. ROLEPLAY AND ESCALATION IS STILL EXPECTED.</b>")
 	message_admins("[key_name_admin(usr)] toggled the round's canonicity. The round is [GLOB.canon_event ? "now canon." : "no longer canon."]")
 	log_admin("[key_name(usr)] toggled the round's canonicity. The round is [GLOB.canon_event ? "now canon." : "no longer canon."]")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Toggle Canon") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

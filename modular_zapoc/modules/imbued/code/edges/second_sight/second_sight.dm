@@ -17,8 +17,11 @@
 
 /datum/status_effect/imbued/second_sight
 	id = "second_sight"
-	duration = 10 SECONDS
+	duration = 15 SECONDS
 	alert_type = /atom/movable/screen/alert/status_effect/imbued/second_sight
+
+/datum/status_effect/imbued/second_sight/long
+	duration = 120 SECONDS
 
 /datum/status_effect/imbued/second_sight/on_apply()
 	. = ..()

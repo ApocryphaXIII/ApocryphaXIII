@@ -33,3 +33,5 @@
 
 /// Imbued abilities with XP cost = this are innately given to all imbued
 #define IMBUED_POWER_INNATE -1
+
+GLOBAL_LIST_INIT(the_word_words, world.file2list("strings/the_word.txt"))

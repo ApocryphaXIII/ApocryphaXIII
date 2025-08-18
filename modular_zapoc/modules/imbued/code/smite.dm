@@ -6,4 +6,4 @@
 	if(!ishuman(target))
 		return
 	target.set_species(/datum/species/human/imbued)
-	target.adjust_disgust(100)
+	//target.adjust_disgust(100)

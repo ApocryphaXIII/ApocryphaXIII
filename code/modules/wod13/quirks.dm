@@ -258,7 +258,7 @@ Dancer
 	value = -2
 	gain_text = "<span class='warning'>You can feel hostile eyes watching you.</span>"
 	lose_text = "<span class='notice'>Cats walk by you unphased.</span>"
-	allowed_species = list("Vampire","Ghoul","Human","Kuei-Jin")
+	allowed_species = list("Vampire","Ghoul","Human","Imbued","Kuei-Jin")
 
 /datum/quirk/wyrm_tainted
 	name = "Wyrm Tainted"
@@ -300,7 +300,7 @@ Dancer
 	value = -2
 	gain_text = "<span class='warning'>Vim runs through you.</span>"
 	lose_text = "<span class='notice'>You feel subtly enervated.</span>"
-	allowed_species = list("Ghoul","Human")
+	allowed_species = list("Ghoul","Human","Imbued")
 
 /datum/quirk/potent_blood/on_spawn()
 	var/mob/living/carbon/H = quirk_holder
@@ -602,7 +602,7 @@ Dancer
 	gain_text = "<span class='danger'>You feel injured from inside.</span>"
 	lose_text = "<span class='notice'>You feel healthy again.</span>"
 	medical_record_text = "Patient has aggressive flesh eating bacteria in their boody."
-	allowed_species = list("Vampire", "Ghoul", "Human", "Kuei-Jin")
+	allowed_species = list("Vampire", "Ghoul", "Human", "Imbued", "Kuei-Jin")
 
 /datum/quirk/consumption/on_process(delta_time)
 	if(prob(5))

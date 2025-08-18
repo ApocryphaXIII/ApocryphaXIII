@@ -17,7 +17,7 @@
 	paycheck_department = ACCOUNT_CAR
 	display_order = JOB_DISPLAY_ORDER_SUPPLY
 	bounty_types = CIV_JOB_RANDOM
-	allowed_species = list("Vampire", "Ghoul", "Human", "Kuei-Jin")
+	allowed_species = list(SPECIES_ALL)
 	known_contacts = list("Dealer")
 	allowed_bloodlines = CLAN_ALL //apoc edit
 

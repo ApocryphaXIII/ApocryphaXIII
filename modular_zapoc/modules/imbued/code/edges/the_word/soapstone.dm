@@ -22,7 +22,6 @@
 	. = ..()
 	prepare_huds()
 
-	#warn likely unneeded
 	var/datum/atom_hud/second_sight/hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
 	hud.add_to_hud(src)
 
@@ -45,7 +44,7 @@
 */
 
 /obj/structure/chisel_message/the_word/can_read_message(mob/user)
-	return isimbued(user)
+	return isimbued(user) || isobserver(user)
 
 /obj/structure/chisel_message/the_word/update_message_apperance()
 	return

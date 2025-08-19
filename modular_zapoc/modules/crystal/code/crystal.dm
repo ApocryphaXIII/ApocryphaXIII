@@ -10,6 +10,7 @@
 /datum/smite/crystal
 	name = "the crystal"
 
+	var/charge
 	var/sentence_choice
 	var/jailtime // Timer
 	var/felt_time // What did it feel like?
@@ -17,12 +18,11 @@
 
 
 /datum/smite/crystal/configure(client/user)
-	charge = input(user, "What are they charged with?") as null|text
+	charge = input(user, "What are they charged with?") as null|text // Displayed to victim
 	sentence_choice = (alert(user, "How long will they spend in the crystal?", "the crystal", "Just a second", "Only one week", "Like a century"))
 	sound_choice = (alert(user, "Play audio?", "the crystal", "Yes", "Nearby", "No"))
 
 
-/// The effect of the smite, make sure to call this in your own smites
 /datum/smite/crystal/effect(client/user, mob/living/target)
 	. = ..()
 
@@ -39,7 +39,7 @@
 		if("Only one week")
 			jailtime = 1 MINUTES
 			felt_time = span_notice("You spend a week in the crystal, but only a minute has passed back in reality.")
-		if("Like a century")
+		if("Like a century") // Teleports target to error room
 			jailtime = 30 SECONDS
 			felt_time = span_notice("You spend a century in the crystal, but only two minutes have passed back in reality. Wait, what is this place?")
 			target.move_to_error_room()

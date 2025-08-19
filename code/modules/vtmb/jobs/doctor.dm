@@ -19,7 +19,7 @@
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM)
 
-	allowed_species = list(SPECIES_ALL)
+	allowed_species = SPECIES_ALL
 	display_order = JOB_DISPLAY_ORDER_DOCTOR
 	bounty_types = CIV_JOB_MED
 

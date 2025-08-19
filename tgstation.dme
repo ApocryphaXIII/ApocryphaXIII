@@ -70,6 +70,7 @@
 #include "code\__DEFINES\footsteps.dm"
 #include "code\__DEFINES\forensics.dm"
 #include "code\__DEFINES\garou.dm"
+#include "code\__DEFINES\generators.dm"
 #include "code\__DEFINES\gridventory.dm"
 #include "code\__DEFINES\html_assistant.dm"
 #include "code\__DEFINES\hud.dm"

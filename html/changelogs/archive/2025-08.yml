@@ -56,3 +56,21 @@
   - spellcheck: Descriptions on Presence 4 and 5 are SLIGHTLY clearer
   dwinters99 & Paynt:
   - bugfix: BSD hispos now have the correct sprites
+2025-08-17:
+  dwinters99:
+  - code_imp: Ghost ears and eyes are now opt-in for new players
+2025-08-19:
+  Erikafox:
+  - rscadd: you can now add chemicals to weed, for bongs. it's too late for me to
+      figure out for rollies
+  - rscadd: weed now makes you slower and hungrier
+  - balance: removed lipolicide from most weed substances
+  FalloutFalcon:
+  - map: improved two houses
+  - qol: varedited curtains now acctually update
+  - qol: lights no longer start randomly broken
+  dwinters99:
+  - admin: 'New smite: The Crystal'
+  - rscadd: Earth Meld (Protean 3) and Mist Form (Protean 5)
+  - bugfix: Round time notifications no longer sorted into deadchat. Now sorted into
+      Warning.

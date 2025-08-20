@@ -20,7 +20,7 @@
 	var/moan_chance = 0
 
 	///Max units able to be stored inside the bong
-	var/chem_volume = 30
+	var/chem_volume = 40
 	///Is it filled?
 	var/packed_item = FALSE
 
@@ -56,13 +56,11 @@
 		to_chat(user, "<span class='notice'>You stuff [used_item] into [src].</span>")
 		bong_hits = max_hits
 		packed_item = TRUE
-		var/obj/item/food/grown/cannabis/W = new(loc)
-		if(W.reagents)
-			W.reagents.trans_to(src, W.reagents.total_volume)
+		if(used_item.reagents)
+			used_item.reagents.trans_to(src, used_item.reagents.total_volume)
 			reagent_transfer_per_use = reagents.total_volume / max_hits
-		qdel(W)
 		qdel(used_item)
-	else
+	if(used_item.get_temperature())
 		var/lighting_text = used_item.ignition_effect(src, user)
 		if(!lighting_text)
 			return ..()

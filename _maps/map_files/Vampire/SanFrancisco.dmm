@@ -6000,6 +6000,16 @@
 	},
 /turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
+"buF" = (
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/vampdoor/wood{
+	lock_id = "clinic";
+	lockpick_difficulty = 16;
+	locked = 1;
+	name = "Office"
+	},
+/turf/open/floor/plating/vampgrass,
+/area/vtm)
 "buS" = (
 /obj/structure/chair,
 /turf/open/floor/plating/parquetry/old,
@@ -60250,6 +60260,10 @@
 	name = "Fire Shelter keys";
 	desc = "Keys to the clinic's fire shelter.";
 	color = "#e06224"
+	},
+/obj/item/vamp/keys/clinic{
+	accesslocks = list("clinic", "clinicsec");
+	name = "Clinic Security keys"
 	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/clinic)
@@ -331957,7 +331971,7 @@ bUt
 bct
 kno
 lcI
-rfw
+buF
 asW
 bUt
 bUt

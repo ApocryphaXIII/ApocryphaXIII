@@ -78,3 +78,7 @@
 	description = "<span class='nicegreen'>Eh ah AAAAH! HA HA HA HA HAA! Uuuh.</span>\n"
 	mood_change = 6
 	timeout = 3 MINUTES
+
+/datum/mood_event/stoned
+	mood_change = 6
+	description = span_nicegreen("The world is so comfortable...")

@@ -1,0 +1,4 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - qol: "phones now have a visual effect played on the tile of the phone"

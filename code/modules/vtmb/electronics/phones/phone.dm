@@ -5,6 +5,14 @@
 /// Index to a boolean, on whether to replace role with job title (or alt-title).
 #define USE_JOB_TITLE 3
 
+/obj/effect/temp_visual/phone
+	icon = 'icons/effects/fov/fov_effects.dmi'
+	icon_state = "note"
+	duration = 1 SECONDS
+
+/obj/effect/temp_visual/phone/ringing
+
+/obj/effect/temp_visual/phone/end
 
 /proc/create_unique_phone_number(exchange = 415, postfix)
 	var/max_num = (10 ** SUBSCRIBER_NUMBER_LENGTH) - 1
@@ -49,6 +57,7 @@
 	var/owner = ""
 	var/datum/weakref/owner_ref = null
 	var/number
+	/// The cellphone we are currently calling
 	var/obj/item/vamp/phone/online
 	var/talking = FALSE
 	var/choosed_number = ""
@@ -273,7 +282,7 @@
 							last_call = world.time
 							online = PHN
 							PHN.online = src
-							Recall(online, usr)
+							ring_callback(online, usr)
 							var/datum/phonehistory/NEWH_caller = new()
 							var/datum/phonehistory/NEWH_being_called = new()
 							if(PHN.number == number)
@@ -541,7 +550,7 @@
 	return FALSE
 
 
-/obj/item/vamp/phone/proc/Recall(obj/item/vamp/phone/abonent, mob/usar)
+/obj/item/vamp/phone/proc/ring_callback(obj/item/vamp/phone/abonent, mob/user)
 	if(last_call+100 <= world.time && !talking)
 		last_call = 0
 		if(online)
@@ -553,7 +562,8 @@
 		if(online.silence == FALSE)
 			playsound(src, 'code/modules/wod13/sounds/phone.ogg', 10, FALSE)
 			playsound(online, online.call_sound, 25, FALSE)
-		addtimer(CALLBACK(src, PROC_REF(Recall), online, usar), 20)
+			new /obj/effect/temp_visual/phone/ringing(get_turf(online))
+		addtimer(CALLBACK(src, PROC_REF(ring_callback), online, user), 20)
 
 /obj/item/vamp/phone/proc/handle_hearing(datum/source, list/hearing_args)
 	var/message = hearing_args[HEARING_RAW_MESSAGE]

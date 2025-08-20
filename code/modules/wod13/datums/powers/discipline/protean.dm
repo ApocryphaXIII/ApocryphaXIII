@@ -119,7 +119,7 @@
 	held_items = list(null, null)
 	possible_a_intents = list(INTENT_HELP, INTENT_GRAB, INTENT_DISARM, INTENT_HARM)
 
-//EARTH MELD
+// APOC EDIT START
 /obj/effect/proc_holder/spell/targeted/shapeshift/gangrel
 	name = "Gangrel Form"
 	desc = "Take on the shape a wolf."
@@ -129,6 +129,7 @@
 	die_with_shapeshifted_form = FALSE
 	shapeshift_type = /mob/living/simple_animal/hostile/gangrel
 
+//EARTH MELD
 /datum/discipline_power/protean/earth_meld
 	name = "Earth Meld"
 	desc = "Hide yourself in the earth itself."
@@ -148,9 +149,47 @@
 		/datum/discipline_power/protean/shape_of_the_beast,
 		/datum/discipline_power/protean/mist_form
 	)
+	var/obj/effect/decal/dirt_pile/D
 
-	var/obj/effect/proc_holder/spell/targeted/shapeshift/gangrel/GA
+/datum/discipline_power/protean/earth_meld/proc/become_soil()
+	animate(owner, transform = matrix(), color = "#ffffff", time = 10) // Reset ourselves while we're invisible
+	D = new (get_turf(owner)) // Spawn some dirt
+	D.alpha = 64 // Subtle dirt
+	owner.forceMove(D) // Put ourselves inside the dirt
 
+/datum/discipline_power/protean/earth_meld/pre_activation_checks()
+	var/allowed_turfs = list(
+		/turf/open/floor/plating/vampgrass,
+		/turf/open/floor/plating/vampbeach,
+		/turf/open/floor/plating/vampdirt,
+		/turf/open/floor/plating/rough/cave,
+		/turf/open/floor/plating/stone,
+		/turf/open/floor/plating/sandy_dirt, // Only used in the bank and the forest
+		/turf/open/floor/plating/dirt // Only used in the nosferatu den
+	) // There has to be a better way.
+
+	if(!is_type_in_list(owner.loc, allowed_turfs)) // Check if the turf we're standing on is in allowed_turfs
+		to_chat(owner,"<span class='warning'>You can't meld into the ground here!<span>")
+		return FALSE
+	else
+		return TRUE
+
+/datum/discipline_power/protean/earth_meld/activate()
+	. = ..()
+	owner.drop_all_held_items()
+	owner.Stun(20 SECONDS) // Dirt can't move, and neither can you!
+	animate(owner, transform = matrix()/4, color = "#35240b", time = 10) // Sink into the earth
+	addtimer(CALLBACK(src, PROC_REF(become_soil)), 1 SECONDS)
+
+/datum/discipline_power/protean/earth_meld/deactivate()
+	. = ..()
+	if(owner.IsStun())
+		owner.SetStun(0) // End the ongoing stun
+	if(!D.expiring) // If D.expiring == 1, the following will occur anyways.
+		owner.Knockdown(3 SECONDS) // Get-up lag
+		owner.forceMove(get_turf(D))
+		D.remove_dirt_pile()
+/*
 /datum/discipline_power/protean/earth_meld/activate()
 	. = ..()
 	if (!GA)
@@ -163,6 +202,7 @@
 	GA.Restore(GA.myshape)
 	owner.Stun(1.5 SECONDS)
 	owner.do_jitter_animation(30)
+*/ // ZAPOC EDIT END
 
 /mob/living/simple_animal/hostile/gangrel/better
 	maxHealth = 325
@@ -220,8 +260,10 @@
 	speed = -0.8
 
 //MIST FORM
+/* APOC EDIT REMOVE
 /obj/effect/proc_holder/spell/targeted/shapeshift/gangrel/best
 	shapeshift_type = /mob/living/simple_animal/hostile/gangrel/best
+*/
 
 /datum/discipline_power/protean/mist_form
 	name = "Mist Form"
@@ -243,7 +285,7 @@
 		/datum/discipline_power/protean/shape_of_the_beast
 	)
 
-	var/obj/effect/proc_holder/spell/targeted/shapeshift/gangrel/best/GA
+	var/obj/effect/proc_holder/spell/targeted/shapeshift/mist/GA // ZAPOC EDIT CHANGE
 
 /datum/discipline_power/protean/mist_form/activate()
 	. = ..()

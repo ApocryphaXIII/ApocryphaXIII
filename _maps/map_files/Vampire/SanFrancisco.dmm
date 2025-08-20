@@ -805,6 +805,10 @@
 /obj/item/vamp/keys/voivodate,
 /obj/item/vamp/keys/voivodate/master,
 /obj/item/vamp/keys/voivodate/master,
+/obj/item/clothing/under/vampire/sancho,
+/obj/item/clothing/suit/vampire/sancho/armored,
+/obj/item/clothing/shoes/vampire/sancho,
+/obj/item/clothing/neck/vampire/sancho,
 /turf/open/floor/carpet/vamp/bluegold,
 /area/vtm/interior/voivodate)
 "ajv" = (
@@ -3706,6 +3710,10 @@
 /area/vtm)
 "aSA" = (
 /obj/structure/closet/cabinet,
+/obj/item/clothing/neck/vampire/sancho,
+/obj/item/clothing/shoes/vampire/sancho,
+/obj/item/clothing/suit/vampire/sancho,
+/obj/item/clothing/under/vampire/sancho,
 /turf/open/floor/plating/woodfancy,
 /area/vtm/interior/voivodate)
 "aSC" = (
@@ -48860,6 +48868,10 @@
 /obj/item/vamp/keys/voivodate,
 /obj/item/vamp/keys/voivodate/master,
 /obj/item/vamp/keys/voivodate/master,
+/obj/item/clothing/under/vampire/sancho,
+/obj/item/clothing/suit/vampire/sancho/armored,
+/obj/item/clothing/shoes/vampire/sancho,
+/obj/item/clothing/neck/vampire/sancho,
 /turf/open/floor/carpet/vamp/bluegold,
 /area/vtm/interior/voivodate)
 "lYo" = (
@@ -63486,6 +63498,14 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/oldchurch)
+"ptD" = (
+/obj/structure/closet/cardboard,
+/obj/item/clothing/under/vampire/sancho,
+/obj/item/clothing/suit/vampire/sancho,
+/obj/item/clothing/shoes/vampire/sancho,
+/obj/item/clothing/neck/vampire/sancho,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/mansion)
 "ptE" = (
 /mob/living/simple_animal/mouse,
 /turf/open/floor/plating/rough,
@@ -159651,7 +159671,7 @@ ltY
 cjT
 add
 wSd
-ltY
+ptD
 jgj
 ltY
 ltY

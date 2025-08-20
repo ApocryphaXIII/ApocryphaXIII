@@ -13,7 +13,13 @@
 	icon = 'modular_zapoc/modules/clothing/icons/clothing.dmi'
 	worn_icon = 'modular_zapoc/modules/clothing/icons/worn.dmi'
 	onflooricon = 'modular_zapoc/modules/clothing/icons/clothing_onfloor.dmi'
+	armor = list(MELEE = 25, BULLET = 25, LASER = 10, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 25, ACID = 10, WOUND = 25)
+
+/obj/item/clothing/suit/vampire/sancho/armored
+	desc = "A fancy dark jacket adorned with gold trims, woven with resistant fabrics."
+	name = "armored royal jacket"
 	armor = list(MELEE = 60, BULLET = 60, LASER = 10, ENERGY = 10, BOMB = 55, BIO = 0, RAD = 0, FIRE = 45, ACID = 10, WOUND = 25)
+
 
 /obj/item/clothing/shoes/vampire/sancho
 	desc = "A luxurious pair of black boots with gold trims. Ride onwards!"

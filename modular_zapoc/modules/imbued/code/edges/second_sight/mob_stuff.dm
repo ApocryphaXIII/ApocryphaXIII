@@ -5,7 +5,7 @@
 	var/image/holder = hud_list[SECOND_SIGHT_HUD]
 	var/icon/I = icon(icon, icon_state, dir)
 	holder.pixel_y = I.Height() - world.icon_size
-	holder.icon = 'modular_zapoc/modules/imbued/icons/the_word_small.dmi'
+	holder.icon = 'modular_zapoc/modules/imbued/icons/second_sight.dmi'
 	if(!ishumanbasic(src))
 		holder.icon_state = "monster"
 	else

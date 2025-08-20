@@ -35,3 +35,4 @@
 #define IMBUED_POWER_INNATE -1
 
 GLOBAL_LIST_INIT(the_word_words, world.file2list("strings/the_word.txt"))
+GLOBAL_LIST_INIT(the_word_valid_sprites, world.file2list("strings/the_word_sprites.txt"))

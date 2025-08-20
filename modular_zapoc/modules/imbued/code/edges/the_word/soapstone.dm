@@ -11,6 +11,7 @@
 	return tgui_input_list(user, "What would you like to engrave?", "Leave a message", GLOB.the_word_words)
 
 /obj/structure/chisel_message/the_word
+	name = "The Word"
 	icon_state = ""
 	//Imbued are a rare breed. It should not take many to remove a message.
 	delete_at = -1
@@ -37,25 +38,45 @@
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/the_word, "blessing", I)
 */
 
+/obj/structure/chisel_message/the_word/update_appearance()
+	. = ..()
+	update_imbued_hud()
+	update_second_sight_hud()
+
 /obj/structure/chisel_message/the_word/proc/add_imbued_hud()
 	var/datum/atom_hud/imbued/hud = GLOB.huds[DATA_HUD_IMBUED]
 	hud.add_to_hud(src)
 
+	update_imbued_hud()
+
+/obj/structure/chisel_message/the_word/proc/update_imbued_hud()
 	var/image/holder = hud_list[IMBUED_HUD]
 	var/icon/I = icon(icon, icon_state, dir)
 	holder.pixel_y = I.Height() - world.icon_size
-	holder.icon = 'icons/obj/stationobjs.dmi'
-	holder.icon_state = "soapstone_message"
+	holder.icon = 'modular_zapoc/modules/imbued/icons/the_word.dmi'
+	if(hidden_message in GLOB.the_word_valid_sprites)
+		holder.icon_state = hidden_message
+	else
+		holder.icon_state = ""
+	holder.layer = LATTICE_LAYER
 
 /obj/structure/chisel_message/the_word/proc/add_second_sight_hud()
 	var/datum/atom_hud/second_sight/hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
 	hud.add_to_hud(src)
 
+	update_second_sight_hud()
+
+/obj/structure/chisel_message/the_word/proc/update_second_sight_hud()
 	var/image/holder = hud_list[SECOND_SIGHT_HUD]
 	var/icon/I = icon(icon, icon_state, dir)
 	holder.pixel_y = I.Height() - world.icon_size
-	holder.icon = 'icons/effects/effects.dmi'
-	holder.icon_state = "blessed"
+	holder.icon = 'modular_zapoc/modules/imbued/icons/the_word.dmi'
+	if(hidden_message in GLOB.the_word_valid_sprites)
+		holder.icon_state = hidden_message
+	else
+		holder.icon_state = ""
+	holder.layer = LATTICE_LAYER
+	holder.color = COLOR_GOLD
 
 /obj/structure/chisel_message/the_word/can_read_message(mob/user)
 	return isimbued(user) || isobserver(user)

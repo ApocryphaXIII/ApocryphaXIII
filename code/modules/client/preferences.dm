@@ -966,8 +966,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<h3>[make_font_cool("HAIR")]</h3>"
 
-				dat += "<a href='byond://?_src_=prefs;preference=hairstyle;task=input'>[hairstyle]</a>"
 				dat += "<a href='byond://?_src_=prefs;preference=previous_hairstyle;task=input'>&lt;</a> <a href='byond://?_src_=prefs;preference=next_hairstyle;task=input'>&gt;</a>"
+				dat += "<a href='byond://?_src_=prefs;preference=hairstyle;task=input'>[hairstyle]</a>" // ZAPOC EDIT CHANGE // Rearranged this to make hair select way less bad
 //				dat += "<a href='byond://?_src_=prefs;preference=toggle_random;random_type=[RANDOM_HAIRSTYLE]'>[(randomise[RANDOM_HAIRSTYLE]) ? "Lock" : "Unlock"]</A>"
 
 				dat += "<br><span style='border:1px solid #161616; background-color: [hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=hair;task=input'>Change</a>"
@@ -975,8 +975,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<BR><h3>[make_font_cool("FACIAL")]</h3>"
 
-				dat += "<a href='byond://?_src_=prefs;preference=facial_hairstyle;task=input'>[facial_hairstyle]</a>"
 				dat += "<a href='byond://?_src_=prefs;preference=previous_facehairstyle;task=input'>&lt;</a> <a href='byond://?_src_=prefs;preference=next_facehairstyle;task=input'>&gt;</a>"
+				dat += "<a href='byond://?_src_=prefs;preference=facial_hairstyle;task=input'>[facial_hairstyle]</a>" // ZAPOC EDIT CHANGE // Rearranged this to make hair select way less bad
 //				dat += "<a href='byond://?_src_=prefs;preference=toggle_random;random_type=[RANDOM_FACIAL_HAIRSTYLE]'>[(randomise[RANDOM_FACIAL_HAIRSTYLE]) ? "Lock" : "Unlock"]</A>"
 
 				dat += "<br><span style='border: 1px solid #161616; background-color: [facial_hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=facial;task=input'>Change</a>"

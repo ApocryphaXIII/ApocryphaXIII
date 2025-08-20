@@ -5,9 +5,9 @@
 	var/image/holder = hud_list[SECOND_SIGHT_HUD]
 	var/icon/I = icon(icon, icon_state, dir)
 	holder.pixel_y = I.Height() - world.icon_size
-	holder.icon = 'icons/effects/effects.dmi'
+	holder.icon = 'modular_zapoc/modules/imbued/icons/the_word_small.dmi'
 	if(!ishumanbasic(src))
-		holder.icon_state = "blessed"
+		holder.icon_state = "monster"
 	else
 		holder.icon_state = ""
 
@@ -32,4 +32,4 @@
 	spin = generator(GEN_NUM, -15, 15, NORMAL_RAND)
 
 /particles/the_word/monster
-	icon_state = list("penis" = 1, "fart" = 1)
+	icon_state = list("danger" = 1, "humanity" = 1)

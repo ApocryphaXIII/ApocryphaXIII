@@ -11,25 +11,19 @@
 	return tgui_input_list(user, "What would you like to engrave?", "Leave a message", GLOB.the_word_words)
 
 /obj/structure/chisel_message/the_word
-	//The word is boring and mudane to non-imbued
-	color = COLOR_GRAY
+	icon_state = ""
 	//Imbued are a rare breed. It should not take many to remove a message.
 	delete_at = -1
 	the_word = TRUE
-	hud_possible = list(SECOND_SIGHT_HUD)
+	hud_possible = list(IMBUED_HUD, SECOND_SIGHT_HUD)
 
 /obj/structure/chisel_message/the_word/Initialize(mapload)
 	. = ..()
 	prepare_huds()
 
-	var/datum/atom_hud/second_sight/hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
-	hud.add_to_hud(src)
+	add_imbued_hud()
+	add_second_sight_hud()
 
-	var/image/holder = hud_list[SECOND_SIGHT_HUD]
-	var/icon/I = icon(icon, icon_state, dir)
-	holder.pixel_y = I.Height() - world.icon_size
-	holder.icon = 'icons/effects/effects.dmi'
-	holder.icon_state = "blessed"
 	/*
 	holder.layer = ABOVE_OPEN_TURF_LAYER
 	holder.plane = GAME_PLANE
@@ -42,6 +36,26 @@
 	I.appearance_flags = RESET_ALPHA
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/the_word, "blessing", I)
 */
+
+/obj/structure/chisel_message/the_word/proc/add_imbued_hud()
+	var/datum/atom_hud/imbued/hud = GLOB.huds[DATA_HUD_IMBUED]
+	hud.add_to_hud(src)
+
+	var/image/holder = hud_list[IMBUED_HUD]
+	var/icon/I = icon(icon, icon_state, dir)
+	holder.pixel_y = I.Height() - world.icon_size
+	holder.icon = 'icons/obj/stationobjs.dmi'
+	holder.icon_state = "soapstone_message"
+
+/obj/structure/chisel_message/the_word/proc/add_second_sight_hud()
+	var/datum/atom_hud/second_sight/hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
+	hud.add_to_hud(src)
+
+	var/image/holder = hud_list[SECOND_SIGHT_HUD]
+	var/icon/I = icon(icon, icon_state, dir)
+	holder.pixel_y = I.Height() - world.icon_size
+	holder.icon = 'icons/effects/effects.dmi'
+	holder.icon_state = "blessed"
 
 /obj/structure/chisel_message/the_word/can_read_message(mob/user)
 	return isimbued(user) || isobserver(user)

@@ -46,7 +46,10 @@
 #define ANTAG_HUD		"23"
 // for fans to identify pins
 #define FAN_HUD		"24"
-#define SECOND_SIGHT_HUD "25" // APOC ADD - IMBUED
+// APOC ADD START - IMBUED
+#define SECOND_SIGHT_HUD "25"
+#define IMBUED_HUD "26"
+// APOC ADD END - IMBUED
 
 //by default everything in the hud_list of an atom is an image
 //a value in hud_list with one of these will change that behavior
@@ -82,7 +85,8 @@
 #define ANTAG_HUD_SPACECOP		24
 #define ANTAG_HUD_HERETIC		25
 // APOC ADD START - IMBUED
-#define DATA_HUD_SECOND_SIGHT 26 // Not gonna update the indexs in this pr. Bite me
+#define DATA_HUD_IMBUED 26
+#define DATA_HUD_SECOND_SIGHT 27 // Not gonna update the indexs in this pr. Bite me
 // APOC ADD END - IMBUED
 
 // Notification action types

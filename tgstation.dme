@@ -3779,8 +3779,8 @@
 #include "modular_zapoc\modules\imbued\code\edges\second_sight\second_sight_hud.dm"
 #include "modular_zapoc\modules\imbued\code\edges\the_word\soapstone.dm"
 #include "modular_zapoc\modules\imbued\code\edges\the_word\the_word.dm"
-#include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\dirt_pile.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\mist_form.dm"
+#include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\tiles\code\tiles.dm"
 // END_INCLUDE

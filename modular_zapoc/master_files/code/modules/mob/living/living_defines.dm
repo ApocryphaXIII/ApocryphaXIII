@@ -1,6 +1,5 @@
 /mob/living
 	// Pools
-	#warn set at 2 while second sight is the only valid ability so people dont spam it.
 	/// The number of conviction points. Used primarly for imbued.
 	var/conviction = DEFAULT_CONVICTION
 	/// The max number of conviction points. Used primarly for imbued.

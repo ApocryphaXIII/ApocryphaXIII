@@ -5,9 +5,13 @@
 // Imbued trait source
 #define IMBUED_TRAIT "imbued_trait"
 
+#define VIRTUE_NONE "virtueless"
 #define VIRTUE_ZEAL "zeal"
 #define VIRTUE_MERCY "mercy"
 #define VIRTUE_VISION "vision"
+
+// A virtueless creed with no abilties
+#define CREED_BYSTANDER "bystander"
 
 #define CREED_DEFENDER "defender"
 #define CREED_JUDGE "judge"
@@ -24,7 +28,7 @@
 
 #define DEFAULT_WILLPOWER 4
 #define DEFAULT_CONVICTION 5
-
+#define CONVICTION_REGAIN 2
 
 //Refills whole bar
 #define CONVICTION_REFILL_XP_COST 15

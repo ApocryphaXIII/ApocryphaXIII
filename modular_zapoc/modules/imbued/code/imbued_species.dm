@@ -16,7 +16,7 @@
 		innate_ability.on_purchase(C, TRUE)
 
 	// Gain some extra conviction back on roundstart
-	C.adjust_conviction(2)
+	C.adjust_conviction(CONVICTION_REGAIN)
 
 /datum/species/human/imbued/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
 	. = ..()

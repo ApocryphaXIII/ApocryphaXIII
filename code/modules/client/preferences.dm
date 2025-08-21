@@ -523,7 +523,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				// APOC ADD START - IMBUED
 				if("Imbued") // Fucking kill me
 					dat += "<b>Willpower:</b> [willpower]<BR>"
-					dat += "<b>Conviction:</b> [conviction]"
+					dat += "<b>Conviction:</b> [conviction]<BR>"
+					dat += "<b>Creed:</b> <a href='byond://?_src_=prefs;preference=creed;task=input'>[capitalize(creed)]</a>"
 				// APOD ADD END - IMBUED
 				if("Vampire")
 					dat += "<b>Masquerade:</b> [masquerade]/5<BR>"
@@ -2690,6 +2691,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if (new_breed)
 						breed = new_breed
 
+				// APOC ADD START - IMBUED
+				if("creed")
+					if(slotlocked || !(pref_species.id == "imbued"))
+						return
+
+					var/new_creed = tgui_input_list(user, "Choose your Creed:", "Creed", ALL_IMBUED_CREEDS)
+					if (new_creed)
+						creed = new_creed
+				// APOC ADD END - IMBUED
+
 				if("archetype")
 					if(slotlocked)
 						return
@@ -3606,6 +3617,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	// APOC ADD START - IMBUED
 	character.willpower = willpower
 	character.conviction = conviction
+	character.creed = creed
 	// APOD ADD END - IMBUED
 	character.info_known = info_known
 

@@ -44,3 +44,5 @@
 
 GLOBAL_LIST_INIT(the_word_words, world.file2list("strings/the_word.txt"))
 GLOBAL_LIST_INIT(the_word_valid_sprites, world.file2list("strings/the_word_sprites.txt"))
+
+#define ALL_IMBUED_CREEDS list(CREED_BYSTANDER, CREED_DEFENDER, CREED_JUDGE, CREED_AVENGER, CREED_MARTYR, CREED_INNOCENT, CREED_REDEEMER, CREED_VISIONARY, CREED_HERMIT, CREED_WAYWARD)

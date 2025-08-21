@@ -516,6 +516,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	// APOC ADD START - IMUBED
 	READ_FILE(S["willpower"], willpower)
 	READ_FILE(S["conviction"], conviction)
+	READ_FILE(S["creed"], creed)
 	// APOC ADD END - IMBUED
 
 	// TFN ADDITION START: loadout
@@ -682,6 +683,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	// APOC ADD START - IMUBED
 	willpower = sanitize_integer(willpower, 0, 10, initial(willpower))
 	conviction = sanitize_integer(conviction, 0, 10, initial(conviction))
+	creed = sanitize_inlist(creed, ALL_IMBUED_CREEDS, initial(creed))
 	// APOC ADD end - IMUBED
 	hair_color			= sanitize_hexcolor(hair_color)
 	facial_hair_color			= sanitize_hexcolor(facial_hair_color)
@@ -879,6 +881,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	// APOC ADD START - IMUBED
 	WRITE_FILE(S["willpower"], willpower)
 	WRITE_FILE(S["conviction"], conviction)
+	WRITE_FILE(S["creed"], creed)
 	// APOC ADD END - IMBUED
 
 	//Custom names

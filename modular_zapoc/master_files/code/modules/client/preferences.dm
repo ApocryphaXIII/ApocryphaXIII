@@ -1,4 +1,4 @@
 /datum/preferences
 	//Pools
-	var/willpower = 0
-	var/conviction = 0
+	var/willpower = DEFAULT_WILLPOWER
+	var/conviction = DEFAULT_CONVICTION

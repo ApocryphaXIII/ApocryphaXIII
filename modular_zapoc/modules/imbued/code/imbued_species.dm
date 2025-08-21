@@ -15,6 +15,9 @@
 		var/datum/action/imbued_edge/innate_ability = new path()
 		innate_ability.on_purchase(C, TRUE)
 
+	// Gain some extra conviction back on roundstart
+	C.adjust_conviction(2)
+
 /datum/species/human/imbued/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
 	. = ..()
 	var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_IMBUED]

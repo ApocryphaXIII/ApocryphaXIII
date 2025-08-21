@@ -22,6 +22,10 @@
 #define MAX_DOT_TOTAL 15
 #define MAX_DOT_PER_VIRTUE 10
 
+#define DEFAULT_WILLPOWER 4
+#define DEFAULT_CONVICTION 5
+
+
 //Refills whole bar
 #define CONVICTION_REFILL_XP_COST 15
 //Per dot

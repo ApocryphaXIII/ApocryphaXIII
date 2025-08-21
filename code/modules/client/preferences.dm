@@ -520,6 +520,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<b>Species:</b><BR><a href='byond://?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
 			switch(pref_species.name)
+				// APOC ADD START - IMBUED
+				if("Imbued") // Fucking kill me
+					dat += "<b>Willpower:</b> [willpower]<BR>"
+					dat += "<b>Conviction:</b> [conviction]"
+				// APOD ADD END - IMBUED
 				if("Vampire")
 					dat += "<b>Masquerade:</b> [masquerade]/5<BR>"
 					dat += "<b>Generation:</b> [generation]"
@@ -3598,6 +3603,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.blood = blood
 	character.lockpicking = lockpicking
 	character.athletics = athletics
+	// APOC ADD START - IMBUED
+	character.willpower = willpower
+	character.conviction = conviction
+	// APOD ADD END - IMBUED
 	character.info_known = info_known
 
 	var/datum/archetype/A = new archetype()

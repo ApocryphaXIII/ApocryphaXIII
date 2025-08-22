@@ -75,6 +75,16 @@
   - bugfix: Round time notifications no longer sorted into deadchat. Now sorted into
       Warning.
 2025-08-20:
+  FalloutFalcon:
+  - qol: phones now have a visual effect played on the tile of the phone
   dwinters99:
   - admin: Canon toggle button no longer starts Team Deathmatch and produces less
       ear damage
+  - qol: Keys no longer need to be in the pockets or hand to be used.
+  - qol: Hair selection arrows were asked politely to be less shy
+2025-08-21:
+  FalloutFalcon:
+  - rscdel: Spawners no longer show up in the orbit menu.
+  PositiveEntropy:
+  - image: A very special and unique outfit for kindred has been added! See if you
+      can find it in the wild...

@@ -4,7 +4,7 @@
 	name = "bench"
 	desc = "A comfy wooden bench."
 	icon_state = "wood"
-	icon = 'modular_zapoc/icons/bench.dmi'
+	icon = 'modular_zapoc/modules/benches/icons/bench.dmi'
 
 /obj/structure/chair/sofa/bench/left
 	icon_state = "wood_left"

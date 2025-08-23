@@ -19,13 +19,15 @@
 	if(remaining_uses != -1)
 		. += "It has [remaining_uses] uses left."
 
-/obj/item/soapstone/afterattack(atom/target, mob/user, proximity)
+/obj/item/soapstone/afterattack(atom/target, mob/user, proximity, params)
 	. = ..()
 	var/turf/T = get_turf(target)
 	if(!proximity)
 		return
 
-	var/obj/structure/chisel_message/existing_message = locate() in T
+	var/obj/structure/chisel_message/existing_message
+	if(istype(target, /obj/structure/chisel_message))
+		existing_message = target
 
 	if(!remaining_uses && !existing_message)
 		to_chat(user, "<span class='warning'>[src] is too worn out to use.</span>")
@@ -45,21 +47,38 @@
 				refund_use()
 		return
 
+	// APOC ADD START - IMBUED
+	var/list/click_params = params2list(params)
+	var/clickx
+	var/clicky
+
+	if(click_params && click_params["icon-x"] && click_params["icon-y"])
+		clickx = clamp(text2num(click_params["icon-x"]) - 16, -(world.icon_size/2), world.icon_size/2)
+		clicky = clamp(text2num(click_params["icon-y"]) - 16, -(world.icon_size/2), world.icon_size/2)
+	// APOC ADD END - IMBUED
+
 	var/message = get_message(user)
 	if(!message)
 		to_chat(user, "<span class='notice'>You decide not to engrave anything.</span>")
 		return
 
+	// APOC REMOVAL START - IMBUED
+	/*
 	if(!target.Adjacent(user) && locate(/obj/structure/chisel_message) in T)
 		to_chat(user, "<span class='warning'>Someone wrote here before you chose! Find another spot.</span>")
 		return
+	*/
+	// APOC REMOVAL END - IMBUED
 	user.visible_message("<span class='notice'>[user] starts engraving a message into [T]...</span>", "<span class='notice'>You start engraving a message into [T]...</span>", "<span class='hear'>You hear a chipping sound.</span>")
 	if(can_use() && do_after(user, tool_speed, target = T) && can_use()) //This looks messy but it's actually really clever!
-		if(!locate(/obj/structure/chisel_message) in T)
-			user.visible_message("<span class='notice'>[user] leaves a message for future spacemen!</span>", "<span class='notice'>You engrave a message into [T]!</span>", "<span class='hear'>You hear a chipping sound.</span>")
-			var/obj/structure/chisel_message/M = new chisel_type(T)
-			M.register(user, message)
-			remove_use()
+		user.visible_message("<span class='notice'>[user] leaves a message for future spacemen!</span>", "<span class='notice'>You engrave a message into [T]!</span>", "<span class='hear'>You hear a chipping sound.</span>")
+		var/obj/structure/chisel_message/M = new chisel_type(T)
+		M.register(user, message)
+		// APOC ADD START - IMBUED
+		M.pixel_x = clickx
+		M.pixel_y = clicky
+		// APOC END START - IMBUED
+		remove_use()
 
 /obj/item/soapstone/proc/get_message(mob/user)
 	return stripped_input(user, "What would you like to engrave?", "Leave a message")
@@ -175,6 +194,10 @@ but only permanently removed with the curator's soapstone.
 	data["x"] = original_turf.x
 	data["y"] = original_turf.y
 	data["z"] = original_turf.z
+	// APOC ADD START - IMBUED
+	data["pixel_x"] = pixel_x
+	data["pixel_y"] = pixel_y
+	// APOC ADD END - IMBUED
 	data["like_keys"] = like_keys
 	data["dislike_keys"] = dislike_keys
 	data["the_word"] = the_word
@@ -195,6 +218,11 @@ but only permanently removed with the curator's soapstone.
 	if(!dislike_keys)
 		dislike_keys = list()
 
+	// APOC ADD START - IMBUED
+	if(data["pixel_x"] && data["pixel_y"])
+		pixel_x = data["pixel_x"]
+		pixel_y = data["pixel_y"]
+	// APOC ADD END - IMBUED
 	var/x = data["x"]
 	var/y = data["y"]
 	var/z = data["z"]

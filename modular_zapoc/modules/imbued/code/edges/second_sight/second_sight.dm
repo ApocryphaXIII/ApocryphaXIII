@@ -27,12 +27,14 @@
 	. = ..()
 	var/datum/atom_hud/second_sight_hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
 	second_sight_hud.add_hud_to(owner)
+	owner.see_invisible = SEE_INVISIBLE_OBSERVER
 	owner.update_sight()
 
 /datum/status_effect/imbued/second_sight/on_remove()
 	. = ..()
 	var/datum/atom_hud/second_sight_hud = GLOB.huds[DATA_HUD_SECOND_SIGHT]
 	second_sight_hud.remove_hud_from(owner)
+	owner.see_invisible = owner::see_invisible
 	owner.update_sight()
 
 /atom/movable/screen/alert/status_effect/imbued/second_sight

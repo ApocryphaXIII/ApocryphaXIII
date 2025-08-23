@@ -31,3 +31,21 @@
 	lock_id = "old_clan_tzimisce"
 	burnable = FALSE
 	lockpick_difficulty = 8
+
+//APOC EDIT START
+/obj/structure/vampdoor/wood/old/voivodate
+	lock_id = "seer_voivodate"
+	locked = TRUE
+	lockpick_difficulty = 8
+
+/obj/structure/vampdoor/wood/old/voivodate/unlocked
+	locked = FALSE
+
+/obj/structure/vampdoor/wood/old/voivodate_citizen
+	lock_id = "voivodate_citizen"
+	locked = TRUE
+	lockpick_difficulty = 6
+
+/obj/structure/vampdoor/wood/old/voivodate_citizen/unlocked
+	locked = FALSE
+//APOC EDIT END

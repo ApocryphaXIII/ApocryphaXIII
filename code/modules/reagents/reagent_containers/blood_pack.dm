@@ -160,8 +160,7 @@
 
 /obj/item/reagent_containers/blood/bweedpack/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(/datum/reagent/drug/cannabis, 20)
-	reagents.add_reagent(/datum/reagent/toxin/lipolicide, 20)
+	reagents.add_reagent(/datum/reagent/drug/cannabis, 40)
 	reagents.add_reagent(/datum/reagent/blood, 160,
 		list("donor" = null,
 			"viruses" = null,

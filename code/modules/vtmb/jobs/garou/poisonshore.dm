@@ -27,8 +27,9 @@
 	display_order = JOB_DISPLAY_ORDER_ENDRON
 
 	minimal_masquerade = 5
-	allowed_species = list("Werewolf")
+	allowed_species = list("Werewolf", "Vampire", "Human")
 	allowed_tribes = list("Black Spiral Dancers")
+	allowed_bloodlines = CLAN_ALL
 
 	known_contacts = null
 

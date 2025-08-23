@@ -72,6 +72,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
 	var/total_age = 30
+	var/phone_postfix = "Unset"
 	var/underwear = "Nude"				//underwear type
 	var/underwear_color = "000"			//underwear color
 	var/undershirt = "Nude"				//undershirt type
@@ -247,9 +248,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/yin = 5
 	var/list/chi_types = list()
 	var/list/chi_levels = list()
-
-	// Off by default. Opt-in.
-	var/nsfw_content_pref = FALSE
 
 	var/derangement = TRUE
 
@@ -508,6 +506,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<br><b>Biological Age:</b> <a href='byond://?_src_=prefs;preference=age;task=input'>[age]</a>"
 			dat += "<br><b>Actual Age:</b> <a href='byond://?_src_=prefs;preference=total_age;task=input'>[max(age, total_age)]</a>"
+
+			dat += "<br><b>Phone Number:</b> <a href='byond://?_src_=prefs;preference=phone_postfix;task=input'>[phone_postfix]</a>"
 
 			dat += "</tr></table>"
 
@@ -865,13 +865,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<BR><b>Headshot(1:1):</b> <a href='byond://?_src_=prefs;preference=headshot;task=input'>Change</a>"
 
-			dat += "<BR><b>NSFW Content:</b> <a href='byond://?_src_=prefs;preference=nsfw_content_preference'>[(nsfw_content_pref) ? "Enabled" : "Disabled"]</A>"
-			if(nsfw_content_pref)
-				if(length(flavor_text_nsfw) <= 110)
-					dat += "<BR><b>Flavor Text (NSFW):</b> [flavor_text_nsfw] <a href='byond://?_src_=prefs;preference=flavor_text_nsfw;task=input'>Change</a>"
-				else
-					dat += "<BR><b>Flavor Text (NSFW):</b> [preview_text_nsfw]... <a href='byond://?_src_=prefs;preference=flavor_text_nsfw;task=input'>Change</a>"
-				dat += "<BR><b>OOC Notes:</b> [ooc_notes] <a href='byond://?_src_=prefs;preference=ooc_notes;task=input'>Change</a>"
+			if(length(flavor_text_nsfw) <= 110)
+				dat += "<BR><b>Flavor Text (NSFW):</b> [flavor_text_nsfw] <a href='byond://?_src_=prefs;preference=flavor_text_nsfw;task=input'>Change</a>"
+			else
+				dat += "<BR><b>Flavor Text (NSFW):</b> [preview_text_nsfw]... <a href='byond://?_src_=prefs;preference=flavor_text_nsfw;task=input'>Change</a>"
+			dat += "<BR><b>OOC Notes:</b> [ooc_notes] <a href='byond://?_src_=prefs;preference=ooc_notes;task=input'>Change</a>"
 
 			// TFN EDIT ADDITION END
 			dat += "<h2>[make_font_cool("EQUIP")]</h2>"
@@ -968,8 +966,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<h3>[make_font_cool("HAIR")]</h3>"
 
-				dat += "<a href='byond://?_src_=prefs;preference=hairstyle;task=input'>[hairstyle]</a>"
 				dat += "<a href='byond://?_src_=prefs;preference=previous_hairstyle;task=input'>&lt;</a> <a href='byond://?_src_=prefs;preference=next_hairstyle;task=input'>&gt;</a>"
+				dat += "<a href='byond://?_src_=prefs;preference=hairstyle;task=input'>[hairstyle]</a>" // ZAPOC EDIT CHANGE // Rearranged this to make hair select way less bad
 //				dat += "<a href='byond://?_src_=prefs;preference=toggle_random;random_type=[RANDOM_HAIRSTYLE]'>[(randomise[RANDOM_HAIRSTYLE]) ? "Lock" : "Unlock"]</A>"
 
 				dat += "<br><span style='border:1px solid #161616; background-color: [hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=hair;task=input'>Change</a>"
@@ -977,8 +975,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<BR><h3>[make_font_cool("FACIAL")]</h3>"
 
-				dat += "<a href='byond://?_src_=prefs;preference=facial_hairstyle;task=input'>[facial_hairstyle]</a>"
 				dat += "<a href='byond://?_src_=prefs;preference=previous_facehairstyle;task=input'>&lt;</a> <a href='byond://?_src_=prefs;preference=next_facehairstyle;task=input'>&gt;</a>"
+				dat += "<a href='byond://?_src_=prefs;preference=facial_hairstyle;task=input'>[facial_hairstyle]</a>" // ZAPOC EDIT CHANGE // Rearranged this to make hair select way less bad
 //				dat += "<a href='byond://?_src_=prefs;preference=toggle_random;random_type=[RANDOM_FACIAL_HAIRSTYLE]'>[(randomise[RANDOM_FACIAL_HAIRSTYLE]) ? "Lock" : "Unlock"]</A>"
 
 				dat += "<br><span style='border: 1px solid #161616; background-color: [facial_hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=facial;task=input'>Change</a>"
@@ -2202,6 +2200,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							age = total_age
 						update_preview_icon()
 
+				if("phone_postfix")
+					if(slotlocked)
+						return
+
+					var/new_number = tgui_input_text(user, "Choose your character's phone number's subscriber code (postfix):\n([SUBSCRIBER_NUMBER_LENGTH] didgits)", "Character Preference", max_length = SUBSCRIBER_NUMBER_LENGTH)
+					if(!new_number)
+						return
+					new_number = text2num(new_number)
+					new_number = num2text(new_number, SUBSCRIBER_NUMBER_LENGTH, 10)
+					if(!new_number)
+						return
+					phone_postfix = new_number
+
 				if("info_choose")
 					var/new_info_known = tgui_input_list(user, "Choose who knows your character:", "Fame", list(INFO_KNOWN_UNKNOWN, INFO_KNOWN_CLAN_ONLY, INFO_KNOWN_FACTION, INFO_KNOWN_PUBLIC))
 					if(new_info_known)
@@ -3377,9 +3388,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				if("lover")
 					lover = !lover
-
-				if("nsfw_content_preference")
-					nsfw_content_pref = !nsfw_content_pref
 
 				if("persistent_scars")
 					persistent_scars = !persistent_scars

@@ -26,3 +26,13 @@
 	glass = TRUE
 	lock_id = "police"
 	lockpick_difficulty = 6
+
+//APOC EDIT START
+/obj/structure/vampdoor/prison/voivodate
+	lock_id = "seer_voivodate"
+	locked = TRUE
+	lockpick_difficulty = 8
+
+/obj/structure/vampdoor/prison/voivodate/unlocked
+	locked = FALSE
+//APOC EDIT END

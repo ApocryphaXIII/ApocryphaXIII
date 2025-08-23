@@ -34,16 +34,24 @@
 	var/fake = FALSE
 
 
-/obj/item/passport/Initialize()
+/obj/item/passport/Initialize() // APOC EDIT START
 	. = ..()
 	var/mob/living/carbon/human/user = null
 	if(ishuman(loc)) // In pockets
 		user = loc
 	else if(ishuman(loc?.loc)) // In backpack
 		user = loc
-	if(!isnull(user))
+	if(isnull(user))
+		return
+	if(HAS_TRAIT(user, TRAIT_ILLEGAL_IDENTITY))
+		fake = TRUE
+		if(user.dna?.species)
+			owner = user.dna.species.random_name(user.gender, unique = TRUE)
+		else
+			owner = random_unique_name(user.gender)
+	else
 		owner = user.real_name
-
+// APOC EDIT END
 
 /obj/item/passport/examine(mob/user)
 	. = ..()

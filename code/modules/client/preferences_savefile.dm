@@ -216,7 +216,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(hearted_until > world.realtime)
 		hearted = TRUE
 
-	READ_FILE(S["nsfw_content_pref"], nsfw_content_pref)
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
 		var/bacpath = "[path].updatebac" //todo: if the savefile version is higher then the server, check the backup, and give the player a prompt to load the backup
@@ -265,7 +264,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	pda_color		= sanitize_hexcolor(pda_color, 6, 1, initial(pda_color))
 	key_bindings 	= sanitize_keybindings(key_bindings)
 	purchased_gear  = sanitize_each_inlist(purchased_gear, GLOB.gear_datums) // TFN ADDITION: loadout
-	nsfw_content_pref = sanitize_integer(nsfw_content_pref, FALSE, TRUE, src::nsfw_content_pref)
 
 	player_experience   = sanitize_integer(player_experience, 0, 100000, 0)
 
@@ -345,7 +343,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["pda_color"], pda_color)
 	WRITE_FILE(S["key_bindings"], key_bindings)
 	WRITE_FILE(S["hearted_until"], (hearted_until > world.realtime ? hearted_until : null))
-	WRITE_FILE(S["nsfw_content_pref"], nsfw_content_pref)
 	WRITE_FILE(S["player_experience"], player_experience)
 	WRITE_FILE(S["purchased_gear"], purchased_gear) // TFN ADDITION: loadout
 	return TRUE
@@ -467,6 +464,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["age"], age)
 	READ_FILE(S["torpor_count"], torpor_count)
 	READ_FILE(S["total_age"], total_age)
+	READ_FILE(S["phone_postfix"], phone_postfix)
 	READ_FILE(S["hair_color"], hair_color)
 	READ_FILE(S["facial_hair_color"], facial_hair_color)
 	READ_FILE(S["eye_color"], eye_color)
@@ -626,6 +624,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	reason_of_death	= sanitize_text(reason_of_death)
 	torpor_count				= sanitize_integer(torpor_count, 0, 6, initial(torpor_count))
 	total_age		= sanitize_integer(total_age, 18, 1120, initial(total_age))
+
+	phone_postfix = sanitize_text(phone_postfix)
+	//Extra santiziation
+	phone_postfix = text2num(phone_postfix)
+	phone_postfix = num2text(phone_postfix, SUBSCRIBER_NUMBER_LENGTH, 10)
+
 	slotlocked			= sanitize_integer(slotlocked, 0, 1, initial(slotlocked))
 	path_score				= sanitize_integer(path_score, 0, 10, initial(path_score))
 	is_enlightened				= sanitize_integer(is_enlightened, 0, 1, initial(is_enlightened))
@@ -817,6 +821,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["age"]			, age)
 	WRITE_FILE(S["torpor_count"]			, torpor_count)
 	WRITE_FILE(S["total_age"]	, total_age)
+	WRITE_FILE(S["phone_postfix"] , phone_postfix)
 	WRITE_FILE(S["hair_color"]			, hair_color)
 	WRITE_FILE(S["facial_hair_color"]			, facial_hair_color)
 	WRITE_FILE(S["eye_color"]			, eye_color)

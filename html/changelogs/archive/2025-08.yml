@@ -18,3 +18,73 @@
   - rscadd: turf type that mimics the edges of the map.
   dwinters99:
   - qol: Mirrors no longer rudely ignore Lasombra vampires
+2025-08-09:
+  dwinters99:
+  - qol: Trash can be put in the source container
+  - rscadd: Clan Ravnos!
+2025-08-13:
+  FalloutFalcon:
+  - rscdel: Removed erp toggle button that does nothing.
+  - bugfix: fix gaining money by spending your card at retail stores
+  dwinters99:
+  - bugfix: Animalism 1 rats no longer planeshift
+  - rscadd: Eat Food quirk
+  - code_imp: Cleaned up some comments
+  - qol: Hunger is paused after 10 seconds of inactivity.
+  phoaly, dwinters99:
+  - map: Removed Graveyard and Tzimisce Manor
+  - map: Added Voivodate Manor
+  - map: Moved abandoned manor to original location
+  - code_imp: Stitched all Z-Levels together.
+  - code_imp: Changed all reference of the "Tzimisce Manor" jobs  to "Voivodate Estate"
+      jobs
+  - code_imp: Added Bogatyr Captain and Voivodate Citizen Jobs
+  - code_imp: Disabled Gravekeeper job
+2025-08-15:
+  FalloutFalcon:
+  - rscadd: New preference for your phone number subscriber code
+  - rscadd: Added an extra didgits to subscriber code and uses real san fran area
+      code
+  - bugfix: Aghosting does not remove right click popup
+  Latentish:
+  - balance: Changed what bloodlines are available where
+  - map: Tweaked the hospital
+  - bugfix: fixed voivode position edgecase
+  - code_imp: standardized apoc edit comments and filestructure
+  dwinters99:
+  - qol: Blood extractors are now less annoying to use
+  - spellcheck: Descriptions on Presence 4 and 5 are SLIGHTLY clearer
+  dwinters99 & Paynt:
+  - bugfix: BSD hispos now have the correct sprites
+2025-08-17:
+  dwinters99:
+  - code_imp: Ghost ears and eyes are now opt-in for new players
+2025-08-19:
+  Erikafox:
+  - rscadd: you can now add chemicals to weed, for bongs. it's too late for me to
+      figure out for rollies
+  - rscadd: weed now makes you slower and hungrier
+  - balance: removed lipolicide from most weed substances
+  FalloutFalcon:
+  - map: improved two houses
+  - qol: varedited curtains now acctually update
+  - qol: lights no longer start randomly broken
+  dwinters99:
+  - admin: 'New smite: The Crystal'
+  - rscadd: Earth Meld (Protean 3) and Mist Form (Protean 5)
+  - bugfix: Round time notifications no longer sorted into deadchat. Now sorted into
+      Warning.
+2025-08-20:
+  FalloutFalcon:
+  - qol: phones now have a visual effect played on the tile of the phone
+  dwinters99:
+  - admin: Canon toggle button no longer starts Team Deathmatch and produces less
+      ear damage
+  - qol: Keys no longer need to be in the pockets or hand to be used.
+  - qol: Hair selection arrows were asked politely to be less shy
+2025-08-21:
+  FalloutFalcon:
+  - rscdel: Spawners no longer show up in the orbit menu.
+  PositiveEntropy:
+  - image: A very special and unique outfit for kindred has been added! See if you
+      can find it in the wild...

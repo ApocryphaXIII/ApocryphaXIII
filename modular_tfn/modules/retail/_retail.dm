@@ -153,7 +153,7 @@
 					return
 				if(!used_account.check_pin(user, product.custom_price, creditcard))
 					return
-				if(!used_account.adjust_money(product.custom_price))
+				if(!used_account.adjust_money(-1 * product.custom_price))
 					to_chat(user, span_alert("The transaction is declined - Insufficient funds."))
 					return
 				//used_account.process_credit_fraud(user, product.price)

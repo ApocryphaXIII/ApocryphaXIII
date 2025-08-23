@@ -112,3 +112,21 @@
 	lock_id = "coggie"
 	burnable = TRUE
 	lockpick_difficulty = 4
+
+//APOC EDIT START
+/obj/structure/vampdoor/reinf/voivodate
+	lock_id = "seer_voivodate"
+	locked = TRUE
+	lockpick_difficulty = 8
+
+/obj/structure/vampdoor/reinf/voivodate/unlocked
+	locked = FALSE
+
+/obj/structure/vampdoor/reinf/voivodate_citizen
+	lock_id = "voivodate_citizen"
+	locked = TRUE
+	lockpick_difficulty = 6
+
+/obj/structure/vampdoor/reinf/voivodate_citizen/unlocked
+	locked = FALSE
+//APOC EDIT END

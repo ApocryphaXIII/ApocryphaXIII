@@ -3766,6 +3766,7 @@
 #include "modular_zapoc\modules\clothing\code\sancho.dm"
 #include "modular_zapoc\modules\crystal\code\crystal.dm"
 #include "modular_zapoc\modules\eat_food\code\quirks_zapoc.dm"
+#include "modular_zapoc\modules\items\code\jobs.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\ncr\code\ncr.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\dirt_pile.dm"

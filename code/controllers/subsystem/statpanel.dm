@@ -8,7 +8,7 @@ SUBSYSTEM_DEF(statpanels)
 	var/list/currentrun = list()
 	var/list/global_data
 	var/list/mc_data
-	var/list/cached_images = list()
+//	var/list/cached_images = list() // APOC EDIT REMOVE
 
 	///how many subsystem fires between most tab updates
 	var/default_wait = 10
@@ -17,7 +17,7 @@ SUBSYSTEM_DEF(statpanels)
 	///how many subsystem fires between updates of the MC tab
 	var/mc_wait = 5
 	/// how many subsystem fires between updates of the turf examine tab
-	var/turf_wait = 2
+//	var/turf_wait = 2 // APOC EDIT REMOVE // tgstation#67067 removed this in May 2022. If it's good enough for them, it's good enough for us.
 	///how many full runs this subsystem has completed. used for variable rate refreshes.
 	var/num_fires = 0
 
@@ -80,12 +80,10 @@ SUBSYSTEM_DEF(statpanels)
 					set_spells_tab(target, target_mob)
 
 
-			if(target_mob?.listed_turf && num_fires % turf_wait == 0)
-				if(!target_mob.TurfAdjacent(target_mob.listed_turf) || isnull(target_mob.listed_turf))
-					target.stat_panel.send_message("remove_listedturf")
-					target_mob.listed_turf = null
-
-				else if(target.stat_tab == target_mob?.listed_turf.name || !(target_mob?.listed_turf.name in target.panel_tabs))
+			// APOC EDIT START // Handle the examined turf of the stat panel, if it's been long enough, or if we've generated new images for it
+			var/turf/listed_turf = target_mob?.listed_turf
+			if(listed_turf && num_fires % default_wait == 0)
+				if(target.stat_tab == listed_turf.name || !(listed_turf.name in target.panel_tabs)) // APOC EDIT END
 					set_turf_examine_tab(target, target_mob)
 
 		if(MC_TICK_CHECK)
@@ -161,13 +159,13 @@ SUBSYSTEM_DEF(statpanels)
 
 /datum/controller/subsystem/statpanels/proc/set_turf_examine_tab(client/target, mob/target_mob)
 	var/list/overrides = list()
-	var/list/turfitems = list()
+//	var/list/turfitems = list() APOC EDIT REMOVE
 	for(var/image/target_image as anything in target.images)
 		if(!target_image.loc || target_image.loc.loc != target_mob.listed_turf || !target_image.override)
 			continue
 		overrides += target_image.loc
 
-	turfitems[++turfitems.len] = list("[target_mob.listed_turf]", REF(target_mob.listed_turf), icon2html(target_mob.listed_turf, target, sourceonly=TRUE))
+	var/list/atoms_to_display = list(target_mob.listed_turf) // APOC EDIT CHANGE
 
 	for(var/atom/movable/turf_content as anything in target_mob.listed_turf)
 		if(turf_content.mouse_opacity == MOUSE_OPACITY_TRANSPARENT)
@@ -178,24 +176,54 @@ SUBSYSTEM_DEF(statpanels)
 			continue
 		if(turf_content.IsObscured())
 			continue
+		atoms_to_display += turf_content // APOC EDIT START
 
-		if(length(turfitems) < 10) // only create images for the first 10 items on the turf, for performance reasons
-			var/turf_content_ref = REF(turf_content)
-			if(!(turf_content_ref in cached_images))
-				cached_images += turf_content_ref
-				turf_content.RegisterSignal(turf_content, COMSIG_PARENT_QDELETING, TYPE_PROC_REF(/atom, remove_from_cache))// we reset cache if anything in it gets deleted
+	/// Set the atoms we're meant to display
+	var/datum/object_window_info/obj_window = target.obj_window
+	obj_window.atoms_to_show = atoms_to_display
+	START_PROCESSING(SSobj_tab_items, obj_window)
+	refresh_client_obj_view(target)
 
-				if(ismob(turf_content) || length(turf_content.overlays) > 2)
-					turfitems[++turfitems.len] = list("[turf_content.name]", turf_content_ref, costly_icon2html(turf_content, target, sourceonly=TRUE))
-				else
-					turfitems[++turfitems.len] = list("[turf_content.name]", turf_content_ref, icon2html(turf_content, target, sourceonly=TRUE))
-			else
-				turfitems[++turfitems.len] = list("[turf_content.name]", turf_content_ref)
-		else
-			turfitems[++turfitems.len] = list("[turf_content.name]", REF(turf_content))
+/datum/controller/subsystem/statpanels/proc/refresh_client_obj_view(client/refresh)
+	var/list/turf_items = return_object_images(refresh)
+	if(!length(turf_items) || !refresh.mob?.listed_turf)
+		return
+	refresh.stat_panel.send_message("update_listedturf", turf_items)
 
-	turfitems = turfitems
-	target.stat_panel.send_message("update_listedturf", turfitems)
+#define OBJ_IMAGE_LOADING "statpanels obj loading temporary"
+/// Returns all our ready object tab images
+/// Returns a list in the form list(list(object_name, object_ref, loaded_image), ...)
+/datum/controller/subsystem/statpanels/proc/return_object_images(client/load_from)
+	// You might be inclined to think that this is a waste of cpu time, since we
+	// A: Double iterate over atoms in the build case, or
+	// B: Generate these lists over and over in the refresh case
+	// It's really not very hot. The hot portion of this code is genuinely mostly in the image generation
+	// So it's ok to pay a performance cost for cleanliness here
+
+	// No turf? go away
+	if(!load_from.mob?.listed_turf)
+		return list()
+	var/datum/object_window_info/obj_window = load_from.obj_window
+	var/list/already_seen = obj_window.atoms_to_images
+	var/list/to_make = obj_window.atoms_to_imagify
+	var/list/turf_items = list()
+	for(var/atom/turf_item as anything in obj_window.atoms_to_show)
+		// First, we fill up the list of refs to display
+		// If we already have one, just use that
+		var/existing_image = already_seen[turf_item]
+		if(existing_image == OBJ_IMAGE_LOADING)
+			continue
+		// We already have it. Success!
+		if(existing_image)
+			turf_items[++turf_items.len] = list("[turf_item.name]", REF(turf_item), existing_image)
+			continue
+		// Now, we're gonna queue image generation out of those refs
+		to_make += turf_item
+		already_seen[turf_item] = OBJ_IMAGE_LOADING
+		obj_window.RegisterSignal(turf_item, COMSIG_PARENT_QDELETING, /datum/object_window_info/proc/viewing_atom_deleted) // we reset cache if anything in it gets deleted
+	return turf_items
+
+#undef OBJ_IMAGE_LOADING // APOC EDIT END
 
 /datum/controller/subsystem/statpanels/proc/generate_mc_data()
 	mc_data = list(
@@ -230,8 +258,7 @@ SUBSYSTEM_DEF(statpanels)
 
 	if(target_mob?.listed_turf)
 		if(!target_mob.TurfAdjacent(target_mob.listed_turf))
-			target.stat_panel.send_message("removed_listedturf")
-			target_mob.listed_turf = null
+			target_mob.set_listed_turf(null) // APOC EDIT ADD
 
 		else if(target.stat_tab == target_mob?.listed_turf.name || !(target_mob?.listed_turf.name in target.panel_tabs))
 			set_turf_examine_tab(target, target_mob)
@@ -253,9 +280,9 @@ SUBSYSTEM_DEF(statpanels)
 
 	else if(length(GLOB.sdql2_queries) && target.stat_tab == "SDQL2")
 		set_SDQL2_tab(target)
-
+/* APOC EDIT REMOVE
 /atom/proc/remove_from_cache()
 	SSstatpanels.cached_images -= REF(src)
-
+*/
 /// Stat panel window declaration
 /client/var/datum/tgui_window/stat_panel

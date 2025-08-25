@@ -688,15 +688,19 @@ Dancer
 	gain_text = "<span class='notice'>You feel tall.</span>"
 	lose_text = "<span class='notice'>You don't feel tall anymore.</span>"
 
-/datum/quirk/tower/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(H.age < 16)
-		to_chat(H, "<span class='userdanger'>You can't be a tall kid, looser!</span>")
-		return
-	if(iswerewolf(quirk_holder))
-		return
-	H.AddElement(/datum/element/giantism, COMSIG_PARENT_PREQDELETED, src)
+
+/datum/quirk/tower/add() // APOC EDIT START
+	var/mob/living/carbon/H = quirk_holder
 	H.istower = TRUE
+	H.AddElement(/datum/element/giantism, COMSIG_PARENT_PREQDELETED, src)
+
+
+/datum/quirk/tower/remove()
+	var/mob/living/carbon/H = quirk_holder
+	if (!H)
+		return
+	H.RemoveElement(/datum/element/giantism) // APOC EDIT END
+
 
 #define TALL 1.16
 #define SHORT 0.86206896551

@@ -42753,6 +42753,11 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
+"kwn" = (
+/obj/structure/table,
+/obj/machinery/p25transceiver/endron,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/restricted)
 "kwo" = (
 /obj/structure/railing{
 	dir = 4
@@ -89681,6 +89686,9 @@
 /obj/item/vamp/keys/pentex,
 /obj/item/ammo_box/vampire/c44/silver,
 /obj/item/clothing/head/pentex/pentex_beret,
+/obj/item/p25radio,
+/obj/item/p25radio,
+/obj/item/p25radio,
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/endron_facility/restricted)
 "vML" = (
@@ -251884,7 +251892,7 @@ nSl
 bEx
 bEx
 cmM
-bEx
+kwn
 sGx
 bEx
 cmM

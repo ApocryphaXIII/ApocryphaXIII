@@ -301,13 +301,13 @@
 	id_type_name = "Security ID"
 	desc = "An ID showing propensity for donuts"
 	icon = 'code/modules/wod13/items.dmi'
-	icon_state = "id2"
+	icon_state = "id_red"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	worn_icon_state = "id2"
+	worn_icon_state = "id_red"
 
 /obj/item/card/id/chunk/AltClick(mob/user)
 	return
@@ -317,10 +317,10 @@
 	id_type_name = "Security ID"
 	desc = "An ID showing employment with the Millenium Tower - Maybe they give you free donuts."
 	icon = 'code/modules/wod13/items.dmi'
-	icon_state = "id2"
+	icon_state = "id_red"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	worn_icon_state = "id2"
+	worn_icon_state = "id_red"

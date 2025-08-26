@@ -108,3 +108,6 @@
   - balance: you 3 tiles or closer to hear radios
   KCartridge:
   - bugfix: fixed invisible Endron IDs
+2025-08-26:
+  dwinters99:
+  - bugfix: Organs no longer rot in freezer subtypes

@@ -155,13 +155,13 @@
 	id_type_name = "clerk badge"
 	desc = "A badge which shows bureaucracy qualification."
 	icon = 'code/modules/wod13/items.dmi'
-	icon_state = "id1"
+	icon_state = "id_red"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	worn_icon_state = "id1"
+	worn_icon_state = "id_red"
 
 /obj/item/card/id/clerk/harpy
 	name = "Public Relations Clerk badge"
@@ -233,13 +233,13 @@
 	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY)
 	desc = "A badge which shows medical qualification."
 	icon = 'code/modules/wod13/items.dmi'
-	icon_state = "id2"
+	icon_state = "id_green"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	worn_icon_state = "id2"
+	worn_icon_state = "id_green"
 /* Apoc Edit
 /obj/item/card/id/clinic/director
 	name = "clinic director's badge"
@@ -371,13 +371,13 @@
 	id_type_name = "emergency dispatcher badge"
 	desc = "Sponsored by the Government."
 	icon = 'code/modules/wod13/items.dmi'
-	icon_state = "id1"
+	icon_state = "id_red"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	worn_icon_state = "id1"
+	worn_icon_state = "id_red"
 
 /obj/item/card/id/government/districtattorney
 	name = "SFPD DA Badge"
@@ -561,8 +561,8 @@
 
 //ENDRON
 /obj/item/card/id/garou/spiral
-	icon_state = "endron_id"
-	worn_icon_state = "endron_id"
+	icon_state = "id_green"
+	worn_icon_state = "id_green"
 
 /obj/item/card/id/garou/spiral/lead
 	name = "Endron Branch Leader card"

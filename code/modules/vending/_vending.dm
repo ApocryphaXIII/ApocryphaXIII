@@ -261,7 +261,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	return ..()
 
 /obj/machinery/vending/can_speak()
-	return !shut_up
+	return FALSE
 
 //Better would be to make constructable child
 /obj/machinery/vending/RefreshParts()

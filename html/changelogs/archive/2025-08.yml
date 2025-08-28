@@ -95,3 +95,29 @@
   - refactor: Stationary hunger code is better
   - bugfix: Lucy The Axe is now once again accessible. (And the other director stuff
       I guess...)
+2025-08-24:
+  dwinters99:
+  - bugfix: TRAIT_ANIMAL_REPULSION should no longer cause shadow demons to hate you
+2025-08-25:
+  FalloutFalcon:
+  - rscadd: The (Creedless) Imbued
+  - qol: subtle is sorted into local
+  - qol: p25 radios use the radio class and are now sorted into radio
+  - qol: 5x lowered the volume of those evil radio cackles
+  - qol: Call history is boxed like examines
+  - balance: you 3 tiles or closer to hear radios
+  KCartridge:
+  - bugfix: fixed invisible Endron IDs
+2025-08-26:
+  dwinters99:
+  - bugfix: Organs no longer rot in freezer subtypes
+2025-08-27:
+  KCartridge:
+  - rscadd: Ronin to Endron allowed_tribes
+  - bugfix: Tower Security, Tower Employee, Clinic Ids should now be visible
+  dwinters99:
+  - rscadd: Gaia's Candor, a Philodox auspice gift
+  - rscadd: Layer change verb
+2025-08-28:
+  dwinters99:
+  - bugfix: Tower werewolves stay tall when they unshift

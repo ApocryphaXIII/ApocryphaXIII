@@ -10,6 +10,9 @@ export const file_labels = {
 	'GitHub': {
 		filepaths: ['.github'],
 	},
+	'.dme Edit': {
+		filepaths: ['.dme'],
+	},
 	'SQL': {
 		filepaths: ['SQL'],
 	},
@@ -120,5 +123,9 @@ export const changelog_labels = {
 	'Administration': {
 		default_text: 'messed with admin stuff',
 		keywords: ['admin'],
+	},
+	'Server': {
+		default_text: 'something server ops should know',
+		keywords: ['server'],
 	},
 }

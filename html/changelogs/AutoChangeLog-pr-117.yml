@@ -1,4 +1,0 @@
-author: "dwinters99"
-delete-after: True
-changes:
-  - bugfix: "TRAIT_ANIMAL_REPULSION should no longer cause shadow demons to hate you"

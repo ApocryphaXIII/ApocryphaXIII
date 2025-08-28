@@ -3773,6 +3773,8 @@
 #include "modular_zapoc\modules\clothing\code\turtleskirt_loadout.dm"
 #include "modular_zapoc\modules\crystal\code\crystal.dm"
 #include "modular_zapoc\modules\eat_food\code\quirks_zapoc.dm"
+#include "modular_zapoc\modules\ravnos\code\ravnos.dm"
+#include "modular_zapoc\modules\gaias_candor\code\gaias_candor.dm"
 #include "modular_zapoc\modules\imbued\code\conviction.dm"
 #include "modular_zapoc\modules\imbued\code\imbued_species.dm"
 #include "modular_zapoc\modules\imbued\code\smite.dm"
@@ -3786,6 +3788,8 @@
 #include "modular_zapoc\modules\mini_protean_update\code\dirt_pile.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\mist_form.dm"
 #include "modular_zapoc\modules\ncr\code\ncr.dm"
+#include "modular_zapoc\modules\talldog\code\talldog.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\tiles\code\tiles.dm"
+#include "modular_zapoc\modules\verbs\code\layerchange.dm"
 // END_INCLUDE

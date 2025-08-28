@@ -380,6 +380,8 @@
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	homid.update_body()
 	homid.mind.current = homid
+	if(homid.istower) // APOC EDIT START
+		homid.add_quirk(/datum/quirk/tower,TRUE) // APOC EDIT END
 
 /datum/werewolf_holder/transformation/proc/transform_corvid(mob/living/carbon/trans, mob/living/carbon/werewolf/lupus/corvid/corvid)
 	PRIVATE_PROC(TRUE)

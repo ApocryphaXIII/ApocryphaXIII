@@ -245,7 +245,7 @@
 			ADD_TRAIT(owner, TRAIT_SCENTTRUEFORM, REF(src))
 			to_chat(owner, "<span class='notice'>Your nose gains a clarity for the supernal around you...</span>")
 
-
+/* APOC REMOVAL START // See modular_zapoc/modules/gaias_candor/code/gaias_candor.dm
 /datum/action/gift/truth_of_gaia
 	name = "Truth Of Gaia"
 	desc = "As judges of the Litany, Philodox have the ability to sense whether others have spoken truth or falsehood."
@@ -255,6 +255,7 @@
 	. = ..()
 //	if(allowed_to_proceed)
 //
+*/ // APOC REMOVAL END
 
 /datum/action/gift/mothers_touch
 	name = "Mother's Touch"

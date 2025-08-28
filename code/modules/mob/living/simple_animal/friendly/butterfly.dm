@@ -30,6 +30,7 @@
 	verb_yell = "flutters intensely"
 	bloodpool = 0
 	maxbloodpool = 0
+	has_hate = TRUE // APOC EDIT ADD // This is dumb but I think it's funny.
 
 /mob/living/simple_animal/butterfly/Initialize()
 	. = ..()

@@ -1,15 +1,15 @@
 /obj/item/clothing/under/vampire/turtleneck_skirt
 	name = "white turtleneck skirt"
 	desc = "For me, it's always like this. Features a fashionable pencil skirt."
+	icon = 'modular_zapoc/modules/clothing/icons/turtleskirt.dmi'
 	icon_state = "turtleneck_white"
-	worn_icon = 'modular_zapoc/modules/clothing2_turtleskirt/icons/turtleskirt_worn.dmi'
-	onflooricon = 'modular_zapoc/modules/clothing2_turtleskirt/icons/turtleskirt_onfloor.dmi'
+	worn_icon = 'modular_zapoc/modules/clothing/icons/turtleskirt_worn.dmi'
+	onflooricon = 'modular_zapoc/modules/clothing/icons/turtleskirt_onfloor.dmi'
 
 
 /obj/item/clothing/under/vampire/turtleneck_skirt/black
 	name = "black turtleneck skirt"
 	desc = "By those in the know, it's called the Tactleneck, the premier clothing for secret agents.Features a fashionable pencil skirt."
-	icon = 'modular_zapoc/modules/clothing2_turtleskirt/icons/turtleskirt.dmi'
 	icon_state = "turtleneck_black"
 
 

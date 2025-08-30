@@ -71,7 +71,7 @@
 			possible_killers += L
 
 	spawn_hammer(user, target, hammer_damage, possible_killers, max(min(hammer_count, 50), 2))
-	var/msg = "[key_name(src)] was killed with [hammer_count] hammers for [hammer_count*hammer_damage] damage."
+	var/msg = "[key_name(target)] was killed with [hammer_count] hammers for [hammer_count*hammer_damage] damage."
 	message_admins(msg)
 	log_admin(msg)
 
@@ -112,4 +112,4 @@
 		span_danger("[target] is hit by a hammer!"))
 
 	if(repeats > 0)
-		addtimer(CALLBACK(src, PROC_REF(spawn_hammer), user, target, damage, moblist, repeats-1), 3)
+		addtimer(CALLBACK(src, PROC_REF(spawn_hammer), user, target, damage, moblist, repeats-1), 1)

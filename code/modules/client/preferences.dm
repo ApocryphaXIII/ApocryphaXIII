@@ -194,15 +194,17 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	///Ranks of the Disciplines this character knows, corresponding to discipline_types.
 	var/list/discipline_levels = list()
 
+	//Attributes
 	var/physique = 1
 	var/dexterity = 1
 	var/social = 1
 	var/mentality = 1
-	var/blood = 1
 
-	//Skills
+	//Abilities
 	var/lockpicking = 0
 	var/athletics = 0
+	//Kinda a weird mix of melee, brawl, and firearms
+	var/blood = 1
 
 	var/info_known = INFO_KNOWN_UNKNOWN
 
@@ -518,6 +520,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<b>Species:</b><BR><a href='byond://?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
 			switch(pref_species.name)
+				// APOC ADD START - IMBUED
+				if("Imbued") // Fucking kill me
+					dat += "<b>Willpower:</b> [willpower]<BR>"
+					dat += "<b>Conviction:</b> [conviction]<BR>"
+					dat += "<b>Creed:</b> <a href='byond://?_src_=prefs;preference=creed;task=input'>[capitalize(creed)]</a>"
+				// APOD ADD END - IMBUED
 				if("Vampire")
 					dat += "<b>Masquerade:</b> [masquerade]/5<BR>"
 					dat += "<b>Generation:</b> [generation]"
@@ -966,8 +974,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<h3>[make_font_cool("HAIR")]</h3>"
 
-				dat += "<a href='byond://?_src_=prefs;preference=hairstyle;task=input'>[hairstyle]</a>"
 				dat += "<a href='byond://?_src_=prefs;preference=previous_hairstyle;task=input'>&lt;</a> <a href='byond://?_src_=prefs;preference=next_hairstyle;task=input'>&gt;</a>"
+				dat += "<a href='byond://?_src_=prefs;preference=hairstyle;task=input'>[hairstyle]</a>" // ZAPOC EDIT CHANGE // Rearranged this to make hair select way less bad
 //				dat += "<a href='byond://?_src_=prefs;preference=toggle_random;random_type=[RANDOM_HAIRSTYLE]'>[(randomise[RANDOM_HAIRSTYLE]) ? "Lock" : "Unlock"]</A>"
 
 				dat += "<br><span style='border:1px solid #161616; background-color: [hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=hair;task=input'>Change</a>"
@@ -975,8 +983,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<BR><h3>[make_font_cool("FACIAL")]</h3>"
 
-				dat += "<a href='byond://?_src_=prefs;preference=facial_hairstyle;task=input'>[facial_hairstyle]</a>"
 				dat += "<a href='byond://?_src_=prefs;preference=previous_facehairstyle;task=input'>&lt;</a> <a href='byond://?_src_=prefs;preference=next_facehairstyle;task=input'>&gt;</a>"
+				dat += "<a href='byond://?_src_=prefs;preference=facial_hairstyle;task=input'>[facial_hairstyle]</a>" // ZAPOC EDIT CHANGE // Rearranged this to make hair select way less bad
 //				dat += "<a href='byond://?_src_=prefs;preference=toggle_random;random_type=[RANDOM_FACIAL_HAIRSTYLE]'>[(randomise[RANDOM_FACIAL_HAIRSTYLE]) ? "Lock" : "Unlock"]</A>"
 
 				dat += "<br><span style='border: 1px solid #161616; background-color: [facial_hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=facial;task=input'>Change</a>"
@@ -2683,6 +2691,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if (new_breed)
 						breed = new_breed
 
+				// APOC ADD START - IMBUED
+				if("creed")
+					if(slotlocked || !(pref_species.id == "imbued"))
+						return
+
+					var/new_creed = tgui_input_list(user, "Choose your Creed:", "Creed", ALL_IMBUED_CREEDS)
+					if (new_creed)
+						creed = new_creed
+				// APOC ADD END - IMBUED
+
 				if("archetype")
 					if(slotlocked)
 						return
@@ -3596,6 +3614,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.blood = blood
 	character.lockpicking = lockpicking
 	character.athletics = athletics
+	// APOC ADD START - IMBUED
+	character.willpower = willpower
+	character.conviction = conviction
+	character.creed = creed
+	// APOD ADD END - IMBUED
 	character.info_known = info_known
 
 	var/datum/archetype/A = new archetype()

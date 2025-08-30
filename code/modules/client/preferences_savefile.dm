@@ -513,6 +513,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		READ_FILE(S["feature_human_tail"], features["tail_human"])
 		READ_FILE(S["feature_human_ears"], features["ears"])
 
+	// APOC ADD START - IMUBED
+	READ_FILE(S["willpower"], willpower)
+	READ_FILE(S["conviction"], conviction)
+	READ_FILE(S["creed"], creed)
+	// APOC ADD END - IMBUED
 
 	// TFN ADDITION START: loadout
 	READ_FILE(S["equipped_gear"], equipped_gear)
@@ -675,6 +680,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	honor = sanitize_integer(honor, 0, 10, initial(honor))
 	renownrank = sanitize_integer(renownrank, 0, 5, initial(renownrank))
 	// TFN EDIT END
+	// APOC ADD START - IMUBED
+	willpower = sanitize_integer(willpower, 0, 10, initial(willpower))
+	conviction = sanitize_integer(conviction, 0, 10, initial(conviction))
+	creed = sanitize_inlist(creed, ALL_IMBUED_CREEDS, initial(creed))
+	// APOC ADD end - IMUBED
 	hair_color			= sanitize_hexcolor(hair_color)
 	facial_hair_color			= sanitize_hexcolor(facial_hair_color)
 	underwear_color			= sanitize_hexcolor(underwear_color)
@@ -867,6 +877,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["chi_types"], chi_types)
 	WRITE_FILE(S["chi_levels"], chi_levels)
 	WRITE_FILE(S["path"], morality_path.name)
+
+	// APOC ADD START - IMUBED
+	WRITE_FILE(S["willpower"], willpower)
+	WRITE_FILE(S["conviction"], conviction)
+	WRITE_FILE(S["creed"], creed)
+	// APOC ADD END - IMBUED
 
 	//Custom names
 	for(var/custom_name_id in GLOB.preferences_custom_names)

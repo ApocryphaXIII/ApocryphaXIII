@@ -198,7 +198,7 @@
 				found_organ.organ_flags ^= ORGAN_FROZEN
 
 		for(var/atom/B in A)	//objects held within other objects are added to the processing list, unless that object is something that can hold organs safely
-			if(!processed_list[B] && !istype(B, /obj/structure/closet/crate/freezer) && !istype(B, /obj/structure/closet/secure_closet/freezer))
+			if(!processed_list[B] && !ispath(B, /obj/structure/closet/crate/freezer) && !ispath(B, /obj/structure/closet/secure_closet/freezer)) // APOC EDIT CHANGE // istype() to ispath() to catch subtypes
 				processing_list+= B
 
 		index++

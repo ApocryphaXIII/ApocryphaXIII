@@ -11,6 +11,9 @@
 
 	var/mob/living/carbon/human/H = src
 
+	//Should really not be here.
+	update_second_sight()
+
 	if(HAS_TRAIT(src, TRAIT_FRENETIC_AURA))
 		holder.icon_state = "aura_bright"
 

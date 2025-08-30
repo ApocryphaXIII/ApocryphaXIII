@@ -33,6 +33,8 @@
 	faction = list("neutral")
 	var/squish_chance = 50
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/cockroach/Initialize()
 	. = ..()
 	add_cell_sample()

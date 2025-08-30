@@ -172,6 +172,7 @@
 	/// A string for an emote used when pet_bonus == true for the mob being pet.
 	var/pet_bonus_emote = ""
 
+	var/has_hate = FALSE // APOC EDIT ADD // For whitelisting animals that should retaliate when we have TRAIT_ANIMAL_REPULSION
 
 /mob/living/simple_animal/Initialize()
 	. = ..()

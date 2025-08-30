@@ -198,6 +198,14 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/space)
+"ay" = (
+/obj/transfer_point_vamp{
+	alpha = 0;
+	density = 0;
+	id = 672
+	},
+/turf/open/floor/light,
+/area/space)
 "az" = (
 /obj/structure/chair/stool/bar,
 /obj/effect/turf_decal/siding/white{
@@ -278,7 +286,20 @@
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "aS" = (
-/obj/structure/table,
+/obj/effect/decal/support,
+/obj/structure/railing{
+	dir = 1;
+	pixel_y = 16;
+	layer = 4.1
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 2
+	},
+/obj/machinery/light/small/pink{
+	pixel_y = 0;
+	pixel_x = 16;
+	dir = 8
+	},
 /turf/open/floor/plating/granite/black,
 /area/space)
 "aT" = (
@@ -736,6 +757,10 @@
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/carpet/red,
 /area/space)
+"cx" = (
+/obj/structure/chair/sofa/corp/right,
+/turf/open/floor/plating/vampplating/mono,
+/area/space)
 "cy" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -1074,6 +1099,15 @@
 	dir = 9
 	},
 /turf/open/floor/plating/rough,
+/area/space)
+"dN" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/granite/black,
 /area/space)
 "dO" = (
 /obj/structure/coclock/grandpa{
@@ -1449,7 +1483,7 @@
 /area/space)
 "eV" = (
 /obj/structure/table/wood/poker,
-/turf/open/floor/plating/granite/black,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "eW" = (
 /obj/effect/decal/cleanable/litter,
@@ -1833,7 +1867,7 @@
 /obj/structure/chair/sofa/corp{
 	dir = 1
 	},
-/turf/open/floor/plating/granite/black,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "gl" = (
 /obj/effect/decal/wallpaper/gold,
@@ -2152,7 +2186,7 @@
 /area/space)
 "hq" = (
 /obj/structure/chair/stool/bar,
-/turf/open/floor/plating/granite/black,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "hr" = (
 /obj/structure/table/wood/fancy/royalblack,
@@ -2883,10 +2917,11 @@
 /turf/open/floor/plating/concrete,
 /area/space)
 "jV" = (
-/obj/structure/chair/sofa/corp/right{
-	dir = 1
+/obj/structure/chair/stool/bar,
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 5
 	},
-/turf/open/floor/plating/granite/black,
+/turf/open/floor/plating/sidewalk/rich,
 /area/space)
 "jW" = (
 /obj/structure/bed/roller,
@@ -3315,7 +3350,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "lr" = (
-/turf/open/floor/plasteel/stairs/medium,
+/turf/open/floor/plating/vampplating/stairs/black,
 /area/space)
 "ls" = (
 /obj/structure/stairs/north,
@@ -4249,6 +4284,16 @@
 /obj/matrix,
 /turf/open/space/basic,
 /area/space)
+"ov" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/white{
+	pixel_y = 0;
+	dir = 8
+	},
+/turf/open/floor/plating/granite/black,
+/area/space)
 "ow" = (
 /turf/open/floor/carpet/green,
 /area/space)
@@ -4725,8 +4770,15 @@
 /turf/open/water,
 /area/space)
 "qc" = (
-/obj/structure/chair/sofa/corp,
-/turf/open/floor/plating/granite/black,
+/obj/machinery/light/small/pink{
+	pixel_y = 0;
+	pixel_x = -16;
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/rich,
 /area/space)
 "qd" = (
 /obj/clinic_machine/pyxis,
@@ -4779,6 +4831,15 @@
 	pixel_x = 6
 	},
 /turf/open/floor/carpet/vamp/cyan,
+/area/space)
+"qk" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/granite/black,
 /area/space)
 "ql" = (
 /obj/structure/fireplace{
@@ -5228,6 +5289,14 @@
 	},
 /turf/open/floor/carpet/blue,
 /area/space)
+"rG" = (
+/obj/structure/table,
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 1
+	},
+/obj/item/newspaper,
+/turf/open/floor/plating/vampplating/mono,
+/area/space)
 "rI" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -5391,6 +5460,13 @@
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/space)
+"sf" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/plating/granite/black,
+/area/space)
 "si" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 8
@@ -5516,10 +5592,8 @@
 /turf/open/floor/plating/vampdirt,
 /area/space)
 "sC" = (
-/obj/transfer_point_vamp{
-	alpha = 0;
-	density = 0;
-	id = 672
+/obj/effect/turf_decal/siding/white{
+	dir = 2
 	},
 /turf/open/floor/plating/granite/black,
 /area/space)
@@ -6481,7 +6555,7 @@
 /obj/structure/chair/sofa/corp/left{
 	dir = 1
 	},
-/turf/open/floor/plating/granite/black,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "vI" = (
 /turf/open/floor/carpet/vamp/bluesilver,
@@ -6539,6 +6613,14 @@
 	dir = 1;
 	pixel_y = 16;
 	layer = 4.1
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 2
+	},
+/obj/machinery/light/small/pink{
+	pixel_y = 0;
+	pixel_x = -16;
+	dir = 4
 	},
 /turf/open/floor/plating/granite/black,
 /area/space)
@@ -6653,6 +6735,11 @@
 "wq" = (
 /obj/structure/chair/office,
 /turf/open/floor/plating/parquetry/old,
+/area/space)
+"wr" = (
+/obj/structure/chair/sofa/corp,
+/mob/living/carbon/human/npc/incel,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "ws" = (
 /obj/structure/table/optable,
@@ -7445,6 +7532,11 @@
 /obj/effect/decal/wallpaper/paper/darkred,
 /turf/closed/wall/vampwall/old,
 /area/space)
+"zg" = (
+/obj/structure/table/wood/poker,
+/obj/item/storage/pill_bottle/dice,
+/turf/open/floor/plating/vampplating/mono,
+/area/space)
 "zh" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 4;
@@ -8003,6 +8095,15 @@
 	},
 /turf/open/floor/plating/rough/cave,
 /area/space)
+"AY" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/turf/open/floor/plating/granite/black,
+/area/space)
 "AZ" = (
 /obj/structure/stairs/north,
 /obj/structure/railing/metal{
@@ -8512,6 +8613,11 @@
 	pixel_x = 5
 	},
 /turf/open/floor/plating/woodfancy,
+/area/space)
+"CR" = (
+/obj/structure/table/wood/poker,
+/obj/item/toy/cards/deck,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "CT" = (
 /obj/structure/mirror{
@@ -11375,6 +11481,16 @@
 /obj/item/reagent_containers/blood/elite,
 /turf/open/floor/plating/vampplating/stone,
 /area/space)
+"LW" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 8;
+	icon_state = "siding_corner"
+	},
+/obj/effect/turf_decal/siding/white{
+	icon_state = "siding_corner"
+	},
+/turf/open/floor/plating/granite/black,
+/area/space)
 "LY" = (
 /obj/effect/decal/carpet{
 	icon_state = "greencarpet";
@@ -11661,8 +11777,7 @@
 /turf/open/floor/plating/stone,
 /area/space)
 "MS" = (
-/obj/structure/chair/sofa/corp,
-/mob/living/carbon/human/npc/incel,
+/obj/effect/turf_decal/siding/white,
 /turf/open/floor/plating/granite/black,
 /area/space)
 "MT" = (
@@ -12089,6 +12204,15 @@
 "OC" = (
 /obj/effect/turf_decal/siding/white/corner,
 /turf/open/floor/plating/vampcarpet,
+/area/space)
+"OF" = (
+/obj/machinery/light/small/pink{
+	pixel_y = 0;
+	pixel_x = 16;
+	dir = 8
+	},
+/obj/structure/table/modern,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "OG" = (
 /obj/effect/turf_decal/siding/white{
@@ -12616,8 +12740,10 @@
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "Qp" = (
-/obj/structure/chair/sofa/corp/left,
-/turf/open/floor/plating/granite/black,
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/rich,
 /area/space)
 "Qs" = (
 /obj/structure/chair/comfy/black,
@@ -13466,11 +13592,11 @@
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
 "Tj" = (
-/obj/structure/chair/sofa/corp{
+/obj/structure/chair/sofa/corp/right{
 	dir = 1
 	},
 /mob/living/carbon/human/npc/incel,
-/turf/open/floor/plating/granite/black,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "Tk" = (
 /obj/structure/toilet{
@@ -13713,6 +13839,10 @@
 /turf/open/floor/plating/toilet{
 	color = "#636363"
 	},
+/area/space)
+"Ug" = (
+/obj/structure/chair/sofa/corp/left,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "Ui" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -14494,7 +14624,13 @@
 /turf/open/floor/plating/vampwood,
 /area/space)
 "WF" = (
-/obj/structure/chair/sofa/corp/right,
+/obj/effect/turf_decal/siding/white{
+	icon_state = "siding_corner"
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 8;
+	icon_state = "siding_corner"
+	},
 /turf/open/floor/plating/granite/black,
 /area/space)
 "WG" = (
@@ -15413,6 +15549,10 @@
 	dir = 8
 	},
 /turf/open/floor/plating/sidewalk,
+/area/space)
+"ZO" = (
+/obj/structure/table/modern,
+/turf/open/floor/plating/vampplating/mono,
 /area/space)
 "ZR" = (
 /obj/structure/reagent_dispensers/water_cooler,
@@ -27066,10 +27206,10 @@ zC
 xu
 fX
 vU
-YA
-Or
-YA
-Or
+gb
+gb
+qc
+Pv
 QN
 WO
 WO
@@ -27167,11 +27307,11 @@ Or
 Or
 Or
 Or
-Or
-hq
+sC
+gb
 eV
-hq
-Or
+jV
+Qp
 QN
 WO
 WO
@@ -27269,10 +27409,10 @@ Or
 Or
 Or
 Or
-Or
+sC
 hq
-eV
-eV
+zg
+CR
 eV
 QN
 WO
@@ -27371,8 +27511,8 @@ Pk
 az
 az
 ke
-Or
-Or
+sC
+gb
 hq
 hq
 hq
@@ -27473,11 +27613,11 @@ UF
 yN
 Ws
 Vf
-Or
-Or
-Or
-Or
-Or
+LW
+AY
+AY
+AY
+dN
 GS
 WO
 WO
@@ -27575,11 +27715,11 @@ Pv
 Pv
 fP
 Vf
-Or
+MS
 sG
 sG
 sG
-Or
+sf
 GS
 WO
 WO
@@ -27677,11 +27817,11 @@ Pv
 Pv
 fP
 Vf
-Or
+MS
 sG
 sG
 sG
-Or
+sf
 XZ
 WO
 WO
@@ -27779,11 +27919,11 @@ gt
 Pv
 fP
 Vf
-Or
+MS
 sG
+ay
 sG
-sG
-Or
+sf
 XZ
 WO
 WO
@@ -27879,13 +28019,13 @@ xt
 xB
 Pv
 Pv
-fP
+rG
 Vf
-Or
+MS
 sG
 sG
 sG
-Or
+sf
 GS
 WO
 WO
@@ -27983,11 +28123,11 @@ Ye
 Ie
 Je
 Vf
-Or
-Or
-Or
-Or
-Or
+WF
+ov
+ov
+ov
+qk
 GS
 WO
 WO
@@ -28085,11 +28225,11 @@ Rn
 bt
 bt
 rL
-Or
-Or
-WF
-Or
-jV
+sC
+gb
+gb
+gb
+gb
 GS
 WO
 WO
@@ -28188,9 +28328,9 @@ Or
 Or
 Or
 sC
-Or
-qc
-aS
+cx
+ZO
+ZO
 Tj
 QN
 WO
@@ -28289,10 +28429,10 @@ Or
 Or
 Or
 Or
-Or
-Or
-MS
-aS
+sC
+wr
+ZO
+ZO
 gk
 QN
 WO
@@ -28391,10 +28531,10 @@ LN
 zC
 sl
 Ew
-vU
-LN
-Qp
-LN
+aS
+Ug
+ZO
+OF
 vH
 QN
 WO

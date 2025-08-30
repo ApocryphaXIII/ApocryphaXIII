@@ -1533,8 +1533,9 @@
 	if(stat < 2)
 		if(prob(20))
 			if(istype(our_pole) && (our_pole.loc == src.loc))
-				drop_all_held_items()
-				ClickOn(our_pole)
+				return
+				//drop_all_held_items()
+				//ClickOn(our_pole)
 			else
 				for(var/obj/structure/pole/P in range(1, src))
 					our_pole = P

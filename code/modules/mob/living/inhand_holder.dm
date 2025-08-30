@@ -77,8 +77,11 @@
 /obj/item/clothing/head/mob_holder/on_found(mob/finder)
 	var/mob/living/carbon/human/animal_hated = null
 	if(ishuman(finder))
-		if(HAS_TRAIT(finder, TRAIT_ANIMAL_REPULSION))
-			animal_hated = finder
+		if(HAS_TRAIT(finder, TRAIT_ANIMAL_REPULSION)) // APOC EDIT ADD
+			if(isanimal(held_mob))
+				var/mob/living/simple_animal/SA
+				if(SA.has_hate)
+					animal_hated = finder
 	if(held_mob?.will_escape_storage())
 		to_chat(finder, "<span class='warning'>\A [held_mob.name] pops out! </span>")
 		finder.visible_message("<span class='warning'>\A [held_mob.name] pops out of the container [finder] is opening!</span>", ignored_mobs = finder)

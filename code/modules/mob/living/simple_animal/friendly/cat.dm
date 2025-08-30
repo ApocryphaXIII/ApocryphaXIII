@@ -45,6 +45,8 @@
 
 	footstep_type = FOOTSTEP_MOB_CLAW
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/pet/cat/Initialize()
 	. = ..()
 	add_verb(src, /mob/living/proc/toggle_resting)

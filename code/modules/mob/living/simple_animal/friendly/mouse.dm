@@ -32,6 +32,8 @@
 	held_state = "rat"
 	faction = list("rat")
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/mouse/Initialize()
 	. = ..()
 	pixel_w = rand(-8, 8)

@@ -23,6 +23,8 @@
 
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/pet/penguin/Initialize()
 	. = ..()
 	AddElement(/datum/element/waddling)

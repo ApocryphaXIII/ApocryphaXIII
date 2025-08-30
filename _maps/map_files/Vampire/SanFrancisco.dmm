@@ -805,6 +805,10 @@
 /obj/item/vamp/keys/voivodate,
 /obj/item/vamp/keys/voivodate/master,
 /obj/item/vamp/keys/voivodate/master,
+/obj/item/clothing/under/vampire/sancho,
+/obj/item/clothing/suit/vampire/sancho/armored,
+/obj/item/clothing/shoes/vampire/sancho,
+/obj/item/clothing/neck/vampire/sancho,
 /turf/open/floor/carpet/vamp/bluegold,
 /area/vtm/interior/voivodate)
 "ajv" = (
@@ -3706,6 +3710,10 @@
 /area/vtm)
 "aSA" = (
 /obj/structure/closet/cabinet,
+/obj/item/clothing/neck/vampire/sancho,
+/obj/item/clothing/shoes/vampire/sancho,
+/obj/item/clothing/suit/vampire/sancho,
+/obj/item/clothing/under/vampire/sancho,
 /turf/open/floor/plating/woodfancy,
 /area/vtm/interior/voivodate)
 "aSC" = (
@@ -6000,6 +6008,16 @@
 	},
 /turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
+"buF" = (
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/vampdoor/wood{
+	lock_id = "clinic";
+	lockpick_difficulty = 16;
+	locked = 1;
+	name = "Office"
+	},
+/turf/open/floor/plating/vampgrass,
+/area/vtm)
 "buS" = (
 /obj/structure/chair,
 /turf/open/floor/plating/parquetry/old,
@@ -33081,6 +33099,12 @@
 /obj/structure/stairs/north,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/banu/haven)
+"icm" = (
+/obj/flag/california/rare{
+	pixel_y = 28
+	},
+/turf/open/floor/carpet,
+/area/space)
 "icn" = (
 /turf/open/floor/plating/industrial{
 	icon_state = "industrial9"
@@ -48860,6 +48884,10 @@
 /obj/item/vamp/keys/voivodate,
 /obj/item/vamp/keys/voivodate/master,
 /obj/item/vamp/keys/voivodate/master,
+/obj/item/clothing/under/vampire/sancho,
+/obj/item/clothing/suit/vampire/sancho/armored,
+/obj/item/clothing/shoes/vampire/sancho,
+/obj/item/clothing/neck/vampire/sancho,
 /turf/open/floor/carpet/vamp/bluegold,
 /area/vtm/interior/voivodate)
 "lYo" = (
@@ -60251,6 +60279,10 @@
 	desc = "Keys to the clinic's fire shelter.";
 	color = "#e06224"
 	},
+/obj/item/vamp/keys/clinic{
+	accesslocks = list("clinic", "clinicsec");
+	name = "Clinic Security keys"
+	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/clinic)
 "oFS" = (
@@ -63486,6 +63518,14 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/oldchurch)
+"ptD" = (
+/obj/structure/closet/cardboard,
+/obj/item/clothing/under/vampire/sancho,
+/obj/item/clothing/suit/vampire/sancho,
+/obj/item/clothing/shoes/vampire/sancho,
+/obj/item/clothing/neck/vampire/sancho,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/mansion)
 "ptE" = (
 /mob/living/simple_animal/mouse,
 /turf/open/floor/plating/rough,
@@ -159651,7 +159691,7 @@ ltY
 cjT
 add
 wSd
-ltY
+ptD
 jgj
 ltY
 ltY
@@ -331957,7 +331997,7 @@ bUt
 bct
 kno
 lcI
-rfw
+buF
 asW
 bUt
 bUt
@@ -552475,7 +552515,7 @@ dhc
 dhc
 nYS
 sAo
-fRh
+icm
 fRh
 llR
 sAo

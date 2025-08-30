@@ -62,17 +62,17 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 			to_chat(usr, "<span class='notice'>You deactivate [src].</span>")
 			for(var/obj/item/p25radio/R in connected_radios)
 				if(R.linked_network == p25_network)
-					playsound(R, 'sound/effects/radiodestatic.ogg', 50, FALSE)
+					playsound(R, 'sound/effects/radiodestatic.ogg', 10, FALSE)
 					for(var/mob/M in get_hearers_in_view(1, get_turf(R)))
-						to_chat(M, "<span class='warning'>The [R] emits a burst of static as it loses connection to the transceiver.</span>")
+						to_chat(M, span_radio("The [R] emits a burst of static as it loses connection to the transceiver"))
 		else
 			active = TRUE
 			to_chat(usr, "<span class='notice'>You activate [src].</span>")
 			for(var/obj/item/p25radio/R in connected_radios)
 				if(R.linked_network == p25_network)
-					playsound(R, 'sound/effects/radioonn.ogg', 50, FALSE)
+					playsound(R, 'sound/effects/radioonn.ogg', 10, FALSE)
 					for(var/mob/M in get_hearers_in_view(1, get_turf(R)))
-						to_chat(M, "<span class='notice'>The [R] chirps as it establishes connection to the transceiver.</span>")
+						to_chat(M, span_radio("The [R] chirps as it establishes connection to the transceiver."))
 		update_appearance()
 
 	if(href_list["view_callsigns"])
@@ -170,8 +170,8 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 
 	message = replacetext(message, "\[<b>", "\[<b>TRANSCEIVER</b>\] \[<b>")
 
-	for(var/mob/listener in get_hearers_in_view(7, get_turf(src)))
-		to_chat(listener, message)
+	for(var/mob/listener in get_hearers_in_view(3, get_turf(src)))
+		to_chat(listener, span_radio(message))
 
 /obj/machinery/p25transceiver/proc/broadcast_to_network(message, network = src.p25_network, play_sound = 'sound/effects/radioclick.ogg', sound_volume = 30, check_dispatch = FALSE)
 	if(!active)
@@ -192,7 +192,7 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 				continue
 
 		for(var/mob/listener in get_hearers_in_view(1, get_turf(R)))
-			to_chat(listener, message)
+			to_chat(listener, span_radio(message))
 			if(play_sound)
 				playsound(R, play_sound, sound_volume, FALSE)
 

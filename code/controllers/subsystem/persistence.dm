@@ -69,6 +69,8 @@ SUBSYSTEM_DEF(persistence)
 		var/yvar = item["y"]
 		var/zvar = item["z"]
 
+		var/is_the_word = item["the_word"]
+
 		if(!xvar || !yvar || !zvar)
 			continue
 
@@ -79,7 +81,7 @@ SUBSYSTEM_DEF(persistence)
 		if(locate(/obj/structure/chisel_message) in T)
 			continue
 
-		var/obj/structure/chisel_message/M = new(T)
+		var/obj/structure/chisel_message/M = is_the_word ? new /obj/structure/chisel_message/the_word(T) : new(T)
 
 		if(!QDELETED(M))
 			M.unpack(item)

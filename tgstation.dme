@@ -3769,7 +3769,6 @@
 #include "modular_zapoc\modules\apoc_jobs\job_types\_job.dm"
 #include "modular_zapoc\modules\carpets\code\carpets.dm"
 #include "modular_zapoc\modules\clothing\code\sancho.dm"
-#include "modular_zapoc\modules\crystal\code\crystal.dm"
 #include "modular_zapoc\modules\eat_food\code\quirks_zapoc.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\gaias_candor\code\gaias_candor.dm"

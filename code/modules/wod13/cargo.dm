@@ -526,8 +526,8 @@
 	desc = "Special deliever."
 	icon_state = "box"
 	icon = 'code/modules/wod13/items.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 
 /obj/structure/cargo_take

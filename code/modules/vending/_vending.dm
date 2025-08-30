@@ -155,7 +155,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	///How many ticks until we can send another
 	var/slogan_delay = 6000
 	//Stop spouting those godawful pitches!
-	var/shut_up = 0
+	var/shut_up = TRUE
 
 	///Icon when vending an item to the user
 	var/icon_vend

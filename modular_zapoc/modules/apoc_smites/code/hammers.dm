@@ -71,7 +71,7 @@
 			possible_killers += L
 
 	spawn_hammer(user, target, hammer_damage, possible_killers, max(min(hammer_count, 50), 2))
-	var/msg = "[key_name(src)] was killed with [hammer_count] hammers for [hammer_damage] damage."
+	var/msg = "[key_name(src)] was killed with [hammer_count] hammers for [hammer_count*hammer_damage] damage."
 	message_admins(msg)
 	log_admin(msg)
 

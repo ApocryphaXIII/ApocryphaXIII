@@ -12453,7 +12453,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/museum)
 "cWs" = (
-/obj/structure/rack/tacobell/horizontal,
+/obj/structure/table/bacotell,
 /obj/underplate{
 	pixel_y = 8
 	},
@@ -14909,7 +14909,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "dBs" = (
-/obj/structure/rack/tacobell/east,
+/obj/structure/table/bacotell,
 /obj/underplate/stuff{
 	pixel_y = 8
 	},
@@ -15582,7 +15582,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "dKy" = (
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /obj/underplate/stuff{
 	pixel_y = 8;
 	pixel_x = -6
@@ -16065,7 +16065,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/sewer/nosferatu_bar)
 "dQz" = (
-/obj/structure/rack/tacobell/horizontal,
+/obj/structure/table/bacotell,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/bianchiBank)
 "dQF" = (
@@ -18180,7 +18180,7 @@
 /turf/closed/wall/vampwall/old/low,
 /area/vtm/interior/voivodate)
 "esp" = (
-/obj/structure/rack/bubway/north,
+/obj/structure/table/bubway,
 /obj/item/gun/ballistic/automatic/vampire/ar15{
 	cost = 0;
 	desc = "A shiny new SFPD Carbine, courtesy of improved budgets and a dire need to clean these streets.";
@@ -31481,7 +31481,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/police/fed)
 "hHr" = (
-/obj/structure/rack/tacobell/horizontal,
+/obj/structure/table/bacotell,
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/shop)
 "hHu" = (
@@ -32929,7 +32929,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/techshop)
 "iaj" = (
-/obj/structure/rack/tacobell/horizontal,
+/obj/structure/table/bacotell,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
 "ial" = (
@@ -32987,7 +32987,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "ibc" = (
-/obj/structure/rack/tacobell/vertical,
+/obj/structure/table/bacotell,
 /obj/item/reagent_containers/food/drinks/soda_cans/vampirecola{
 	pixel_x = 5;
 	pixel_y = 7
@@ -33968,8 +33968,8 @@
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/park)
 "ioU" = (
-/obj/structure/rack/bubway/east,
-/obj/structure/rack/bubway/north,
+/obj/structure/table/bubway,
+/obj/structure/table/bubway,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/cog/pantry)
 "iph" = (
@@ -42092,7 +42092,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/cog/caern)
 "kmD" = (
-/obj/structure/rack/tacobell/vertical,
+/obj/structure/table/bacotell,
 /obj/machinery/light/prince{
 	pixel_y = 32
 	},
@@ -44519,7 +44519,7 @@
 /area/vtm/interior)
 "kTv" = (
 /obj/item/food/soup/stew,
-/obj/structure/rack/bubway/vertical,
+/obj/structure/table/bubway,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/cog/pantry)
 "kTA" = (
@@ -46380,7 +46380,7 @@
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/jazzclub)
 "ltj" = (
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/cog/pantry)
 "ltk" = (
@@ -47361,7 +47361,7 @@
 /turf/open/floor/plating/shit,
 /area/vtm/sewer/nosferatu_warren)
 "lFF" = (
-/obj/structure/rack/tacobell/horizontal,
+/obj/structure/table/bacotell,
 /obj/underplate,
 /obj/item/food/burger/baconburger,
 /turf/closed/wall/vampwall/painted/low,
@@ -47474,7 +47474,7 @@
 /turf/open/floor/plating/rust,
 /area/vtm/interior/strip)
 "lGP" = (
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /obj/structure/fluff/tv/order/one{
 	pixel_x = -10
 	},
@@ -53946,7 +53946,7 @@
 /turf/closed/wall/vampwall/rich,
 /area/vtm/interior/millennium_tower/f4)
 "nlQ" = (
-/obj/structure/rack/bubway/east,
+/obj/structure/table/bubway,
 /obj/structure/closet/mini_fridge,
 /obj/item/reagent_containers/blood,
 /obj/item/reagent_containers/blood,
@@ -54680,10 +54680,6 @@
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/forest)
-"ntM" = (
-/obj/structure/rack/bubway/vertical,
-/turf/closed/wall/vampwall/brick/low,
-/area/vtm/interior/cog/pantry)
 "ntV" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 4
@@ -58886,7 +58882,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm)
 "oqa" = (
-/obj/structure/rack/bubway/east,
+/obj/structure/table/bubway,
 /turf/open/floor/plating/industrial{
 	icon_state = "industrial2"
 	},
@@ -72557,10 +72553,6 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
-"rAu" = (
-/obj/structure/rack/tacobell/west,
-/turf/open/floor/plating/bacotell,
-/area/vtm/interior/shop)
 "rAv" = (
 /obj/machinery/light/small{
 	pixel_y = 32
@@ -81878,7 +81870,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "tOp" = (
-/obj/structure/rack/tacobell/horizontal,
+/obj/structure/table/bacotell,
 /obj/structure/retail/bacotell_menu,
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/shop)
@@ -91490,7 +91482,7 @@
 /turf/open/floor/plating/vampwood,
 /area/vtm/sewer/nosferatu_town)
 "wiq" = (
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /obj/structure/retail/bubway_menu,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
@@ -91560,7 +91552,7 @@
 /obj/machinery/microwave{
 	pixel_y = 9
 	},
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /obj/machinery/light/warm{
 	dir = 8
 	},
@@ -93193,7 +93185,7 @@
 /area/vtm/supply)
 "wEp" = (
 /obj/machinery/chem_dispenser/drinks/fullupgrade,
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /turf/open/floor/plating/industrial{
 	icon_state = "industrial9"
 	},
@@ -95121,7 +95113,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "xaW" = (
-/obj/structure/rack/bubway/south,
+/obj/structure/table/bubway,
 /obj/item/gun/ballistic/shotgun/vampire,
 /obj/item/ammo_box/vampire/c12g/buck{
 	pixel_y = 9
@@ -95285,13 +95277,9 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
 "xcT" = (
-/obj/structure/rack/tacobell,
-/obj/structure/rack/tacobell/horizontal{
-	pixel_x = 5
-	},
-/obj/structure/rack/tacobell/vertical{
-	pixel_y = 10
-	},
+/obj/structure/table/bacotell,
+/obj/structure/table/bacotell,
+/obj/structure/table/bacotell,
 /obj/structure/fluff/tv/order/two,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
@@ -98016,7 +98004,7 @@
 /obj/machinery/microwave{
 	pixel_y = 9
 	},
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /turf/open/floor/plating/industrial{
 	icon_state = "industrial2"
 	},
@@ -99910,7 +99898,7 @@
 /area/vtm/cabaret)
 "yjc" = (
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /turf/open/floor/plating/industrial,
 /area/vtm/sewer/nosferatu_bar)
 "yji" = (
@@ -99964,7 +99952,7 @@
 /turf/closed/wall/vampwall/junk/alt,
 /area/vtm/anarch/garage)
 "yjM" = (
-/obj/structure/rack/bubway/east,
+/obj/structure/table/bubway,
 /obj/machinery/microwave{
 	pixel_y = 9
 	},
@@ -181539,7 +181527,7 @@ rei
 ioU
 kTv
 kTv
-ntM
+ltj
 vEB
 atu
 atu
@@ -200953,7 +200941,7 @@ wUk
 ewI
 jcD
 scR
-rAu
+hHr
 scR
 scR
 scR
@@ -208204,7 +208192,7 @@ ppQ
 ppQ
 kjl
 scR
-rAu
+hHr
 scR
 oID
 oID

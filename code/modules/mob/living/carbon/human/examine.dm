@@ -610,8 +610,8 @@
 
 	if (!(face_obscured))
 		flavor_text_link = span_notice("[preview_text]... <a href='byond://?src=[REF(src)];view_flavortext=1'>\[Look closer?\]</a>")
-	else
-		flavor_text_link = span_notice("<a href='byond://?src=[REF(src)];view_flavortext=1'>\[Examine closely...\]</a>")
+//	else // APOC EDIT REMOVE START // This doesn't seem needed and makes face-obfuscating clothing nearly useless.
+//		flavor_text_link = span_notice("<a href='byond://?src=[REF(src)];view_flavortext=1'>\[Examine closely...\]</a>") // APOC EDIT REMOVE END
 	if (flavor_text_link)
 		. += flavor_text_link
 

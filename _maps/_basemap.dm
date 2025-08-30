@@ -1,6 +1,11 @@
 //#define LOWMEMORYMODE //uncomment this to load just titlescreen and runtime town
 
+#ifdef LOWMEMORYMODE
 #include "map_files\generic\titlescreen.dmm"
+#else
+#include "map_files\generic\admin_central.dmm"
+#endif
+
 // #include "map_files\Mining\Lavaland.dmm"
 
 #ifndef LOWMEMORYMODE

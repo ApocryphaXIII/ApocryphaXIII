@@ -960,7 +960,7 @@
 /obj/structure/roofstuff
 	name = "roof ventilation"
 	desc = "Air to inside."
-	icon = 'code/modules/wod13/props.dmi'
+	icon = 'code/modules/wod13/vents.dmi'
 	icon_state = "roof1"
 	plane = GAME_PLANE
 	layer = ABOVE_ALL_MOB_LAYER
@@ -984,6 +984,31 @@
 
 /obj/structure/roofstuff/alt3
 	icon_state = "roof4"
+
+// Use this instead of alt3
+/obj/structure/roofstuff/vent_end
+	icon_state = "roof4"
+	smoothing_groups = list(SMOOTH_GROUP_VENTS)
+
+/obj/structure/roofstuff/vent
+	icon_state = "vent-0"
+	base_icon_state = "vent"
+	smoothing_groups = list(SMOOTH_GROUP_VENTS)
+
+/obj/structure/roofstuff/vent/south
+	icon_state = "vent-3"
+
+/obj/structure/roofstuff/vent/autotiling
+	MAP_SWITCH(icon_state = "vent-0", icon_state = "vent_autotile")
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_VENTS)
+	canSmoothWith = list(SMOOTH_GROUP_VENTS)
+
+/obj/structure/roofstuff/vent/autotiling/update_appearance()
+	. = ..()
+	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
+		QUEUE_SMOOTH(src)
+		QUEUE_SMOOTH_NEIGHBORS(src)
 
 /obj/effect/decal/kopatich
 	name = "hide carpet"

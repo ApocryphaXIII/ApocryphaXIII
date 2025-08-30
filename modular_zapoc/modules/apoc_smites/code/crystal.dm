@@ -26,11 +26,11 @@
 		sentence_choice = (alert(user, "How long will they spend in the crystal?", "the crystal", "Just a second", "Only one week", "Like a century"))
 		sound_choice = (alert(user, "Play audio?", "the crystal", "Target only", "Nearby", "No"))
 	else if(quick_crystal == "Yes")
-		charge = "ADDED NOTHING TO THE CONVERSATION"
+		charge = "ADDED NOTHING"
 		sentence_choice = "Just a second"
 		sound_choice = "Nearby"
 	else if(quick_crystal == "Error Room")
-		charge = "ADDED NOTHING TO THE CONVERSATION"
+		charge = "ADDED NOTHING"
 		sentence_choice = "Like a century"
 		sound_choice = "Nearby"
 

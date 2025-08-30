@@ -4,6 +4,7 @@
 	icon = 'icons/obj/crayons.dmi'
 	icon_state = "crayonblack"
 	w_class = WEIGHT_CLASS_SMALL
+	slot_flags = ITEM_SLOT_EARS
 
 /obj/item/charcoal_stick/afterattack(atom/target, mob/living/carbon/user, proximity)
 	if(!proximity || !isgarou(user))

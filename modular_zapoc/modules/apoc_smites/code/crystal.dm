@@ -6,6 +6,7 @@
 	pixel_x = -16
 	pixel_y = -16
 
+
 /// To be deployed after typos and blunders.
 /datum/smite/crystal
 	name = "the crystal"
@@ -15,12 +16,23 @@
 	var/jailtime // Timer
 	var/felt_time // What did it feel like?
 	var/sound_choice
+	var/quick_crystal
 
 
 /datum/smite/crystal/configure(client/user)
-	charge = input(user, "What are they charged with?") as null|text // Displayed to victim
-	sentence_choice = (alert(user, "How long will they spend in the crystal?", "the crystal", "Just a second", "Only one week", "Like a century"))
-	sound_choice = (alert(user, "Play audio?", "the crystal", "Yes", "Nearby", "No"))
+	quick_crystal = (alert(user, "Skip setup?", "the crystal", "Yes", "No", "Error Room"))
+	if(quick_crystal == "No")
+		charge = input(user, "What are they charged with?") as null|text // Displayed to victim
+		sentence_choice = (alert(user, "How long will they spend in the crystal?", "the crystal", "Just a second", "Only one week", "Like a century"))
+		sound_choice = (alert(user, "Play audio?", "the crystal", "Target only", "Nearby", "No"))
+	else if(quick_crystal == "Yes")
+		charge = "ADDED NOTHING TO THE CONVERSATION"
+		sentence_choice = "Just a second"
+		sound_choice = "Nearby"
+	else if(quick_crystal == "Error Room")
+		charge = "ADDED NOTHING TO THE CONVERSATION"
+		sentence_choice = "Like a century"
+		sound_choice = "Nearby"
 
 
 /datum/smite/crystal/effect(client/user, mob/living/target)
@@ -42,34 +54,40 @@
 		if("Like a century") // Teleports target to error room
 			jailtime = 30 SECONDS
 			felt_time = span_notice("You spend a century in the crystal, but only two minutes have passed back in reality. Wait, what is this place?")
-			target.move_to_error_room()
+			addtimer(CALLBACK(target, PROC_REF(move_to_error_room)), 30 SECONDS)
 
 	switch(sound_choice)
-		if("Yes")
-			target.playsound_local(get_turf(target), 'modular_zapoc/modules/crystal/sound/crystal.ogg', 75)
+		if("Target only")
+			target.playsound_local(get_turf(target), 'modular_zapoc/modules/apoc_smites/sound/crystal.ogg', 75)
 			to_chat(target, span_purple("What the hell are you talkin' about? You've added nothing to the conversation- Get in the- Get in the crystal. Sorry, buddy, get in the crystal. HAH hahahahahahaha. We're going to put you in the crystal, you're gonna be in the crystal for a minute; It's gonna feel like one week. It's only one week, man! Some of the people are in the crystal for like, a century, okay? You're going in- the minute is gonna feel like a week so you have some time to think about what you've done. And then you're going to come out of the crystal."))
 
 		if("Nearby")
-			playsound(target, 'modular_zapoc/modules/crystal/sound/crystal.ogg', 75)
+			playsound(target, 'modular_zapoc/modules/apoc_smites/sound/crystal.ogg', 75)
 			to_chat(target, span_purple("What the hell are you talkin' about? You've added nothing to the conversation- Get in the- Get in the crystal. Sorry, buddy, get in the crystal. HAH hahahahahahaha. We're going to put you in the crystal, you're gonna be in the crystal for a minute; It's gonna feel like one week. It's only one week, man! Some of the people are in the crystal for like, a century, okay? You're going in- the minute is gonna feel like a week so you have some time to think about what you've done. And then you're going to come out of the crystal."))
 
 		if("No")
 			to_chat(target, span_purple("What the hell are you talkin' about? You've added nothing to the conversation- Get in the- Get in the crystal. Sorry, buddy, get in the crystal. HAH hahahahahahaha. We're going to put you in the crystal, you're gonna be in the crystal for a minute; It's gonna feel like one week. It's only one week, man! Some of the people are in the crystal for like, a century, okay? You're going in- the minute is gonna feel like a week so you have some time to think about what you've done. And then you're going to come out of the crystal."))
 
 	crystal.freedom_timer(jailtime, felt_time)
-
+	var/msg = "[key_name(src)] was put in the crystal for [LOWER_TEXT(sentence_choice)]. They are charged with: [charge]."
+	message_admins(msg)
+	log_admin(msg)
 
 /obj/smite_crystal/attack_hand(mob/user)
-	var/sacrifice_mob = (alert(user, "Get in the crystal?", "the crystal", "Yes", "No"))
+	if(!(user in contents))
+		var/sacrifice_mob = (alert(user, "Get in the crystal?", "the crystal", "Yes", "No"))
 
-	switch(sacrifice_mob)
-		if("Yes")
-			user.forceMove(src)
-			user.visible_message("<span class='notice'>[user] gets in [src].</span>", \
-				"<span class='notice'>You get in [src].</span>")
-		if("No")
-			user.visible_message("<span class='notice'>[user] thinks better of getting in [src].</span>", \
-			"<span class='notice'>You think better of getting in [src].</span>")
+		switch(sacrifice_mob)
+			if("Yes")
+				user.forceMove(src)
+				user.visible_message("<span class='notice'>[user] gets in [src].</span>", \
+					"<span class='notice'>You get in [src].</span>")
+			if("No")
+				user.visible_message("<span class='notice'>[user] thinks better of getting in [src].</span>", \
+				"<span class='notice'>You think better of getting in [src].</span>")
+	else
+		to_chat(user, span_notice("You bang on the walls of the crystal."))
+
 
 /obj/smite_crystal/attackby(obj/item/I, mob/user)
 	var/sacrifice = (alert(user, "Place [I] to the crystal? You might not get it back!", "the crystal", "Yes", "No"))
@@ -92,7 +110,9 @@
 	for(var/mob/i in contents)
 		i.forceMove(get_turf(src))
 		to_chat(i, "[freedom_text]")
-
+	for(var/obj/o in contents)
+		if(prob(25))
+			i.forceMove(get_turf(src))
 	animate(src, alpha = 0, time = 1 SECONDS)
 	spawn(1 SECONDS)
 		qdel(src)

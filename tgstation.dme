@@ -3787,6 +3787,7 @@
 #include "modular_zapoc\modules\ncr\code\ncr.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\dirt_pile.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\mist_form.dm"
+#include "modular_zapoc\modules\structures\tables\code\tables.dm"
 #include "modular_zapoc\modules\talldog\code\talldog.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\tiles\code\tiles.dm"

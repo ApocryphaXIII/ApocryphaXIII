@@ -54,7 +54,7 @@
 		if("Like a century") // Teleports target to error room
 			jailtime = 30 SECONDS
 			felt_time = span_notice("You spend a century in the crystal, but only two minutes have passed back in reality. Wait, what is this place?")
-			addtimer(CALLBACK(target, PROC_REF(move_to_error_room)), 30 SECONDS)
+			target.move_to_error_room()
 
 	switch(sound_choice)
 		if("Target only")
@@ -112,7 +112,7 @@
 		to_chat(i, "[freedom_text]")
 	for(var/obj/o in contents)
 		if(prob(25))
-			i.forceMove(get_turf(src))
+			o.forceMove(get_turf(src))
 	animate(src, alpha = 0, time = 1 SECONDS)
 	spawn(1 SECONDS)
 		qdel(src)

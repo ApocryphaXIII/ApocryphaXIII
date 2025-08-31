@@ -12,7 +12,7 @@
 ## Testing Photographs and Procedure
 <!-- Include any screenshots/videos/debugging steps of the modified code functioning successfully, ideally including edge cases. -->
 <!-- You can uncomment line 1 @ _maps/_basemap.dm to boot up a test map that loads much faster. -->
-<details>
+<details open>
 <summary>Screenshots&Videos</summary>
 
 Put screenshots and videos here with an empty line between the screenshots and the `<details>` tags.

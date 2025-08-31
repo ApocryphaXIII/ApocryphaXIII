@@ -20,11 +20,11 @@
 
 
 /datum/smite/crystal/configure(client/user)
-	quick_crystal = (alert(user, "Skip setup?", "the crystal", "Yes", "No", "Error Room"))
+	quick_crystal = (alert(user, "Skip setup?", "the crystal", "Yes", "No", "Error Room", "Cancel"))
 	if(quick_crystal == "No")
 		charge = input(user, "What are they charged with?") as null|text // Displayed to victim
-		sentence_choice = (alert(user, "How long will they spend in the crystal?", "the crystal", "Just a second", "Only one week", "Like a century"))
-		sound_choice = (alert(user, "Play audio?", "the crystal", "Target only", "Nearby", "No"))
+		sentence_choice = (alert(user, "How long will they spend in the crystal?", "the crystal", "Just a second", "Only one week", "Like a century", "Cancel"))
+		sound_choice = (alert(user, "Play audio?", "the crystal", "Target only", "Nearby", "No", "Cancel"))
 	else if(quick_crystal == "Yes")
 		charge = "ADDED NOTHING"
 		sentence_choice = "Just a second"

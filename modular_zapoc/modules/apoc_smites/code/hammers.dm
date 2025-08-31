@@ -35,15 +35,15 @@
 	var/hammer_damage
 
 /datum/smite/hammers/configure(client/user)
-	quick_hammers = (alert(user, "Skip setup?", "hammers", "Yes", "No"))
+	quick_hammers = (alert(user, "Skip setup?", "hammers", "Yes", "No", "Cancel"))
 	if(quick_hammers == "Yes")
 		hammer_count = 5
 		sound_choice = "Nearby"
 		lethal = "Not really"
 	else if(quick_hammers == "No")
 		hammer_count = input(user, "How many hammers are we killing this guy with?") as num
-		sound_choice = (alert(user, "Play audio?", "hammers", "Target only", "Nearby", "No"))
-		lethal = (alert(user, "Kill them?", "hammers", "Not really", "With hammers", "NOW"))
+		sound_choice = (alert(user, "Play audio?", "hammers", "Target only", "Nearby", "No", "Cancel"))
+		lethal = (alert(user, "Kill them?", "hammers", "Not really", "With hammers", "NOW", "Cancel"))
 
 
 /datum/smite/hammers/effect(client/user, mob/living/target)

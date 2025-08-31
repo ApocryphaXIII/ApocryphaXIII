@@ -1,17 +1,21 @@
 /turf/open/floor/plating/vampgrass/random // All
+	MAP_SWITCH(icon_state = "grass1", icon_state = "grass_autodec_all")
 	var/autodecor = list(/obj/structure/flora/ausbushes,
 		/obj/structure/small_vamprocks)
 	var/autodecor_list = list()
 
 /turf/open/floor/plating/vampgrass/random/grass // Just grass
+	MAP_SWITCH(icon_state = "grass1", icon_state = "grass_autodec_grass")
 	autodecor = list(/obj/structure/flora/ausbushes/fullgrass, /obj/structure/flora/ausbushes/shortgrass, /obj/structure/flora/ausbushes/sparsegrass, /obj/structure/flora/grass/green)
 
 
 /turf/open/floor/plating/vampgrass/random/bushes // No rocks
+	MAP_SWITCH(icon_state = "grass1", icon_state = "grass_autodec_bushes")
 	autodecor = list(/obj/structure/flora/ausbushes)
 
 
 /turf/open/floor/plating/vampgrass/random/rocks // Just rocks
+	MAP_SWITCH(icon_state = "grass1", icon_state = "grass_autodec_rocks")
 	autodecor = list(/obj/structure/small_vamprocks)
 
 

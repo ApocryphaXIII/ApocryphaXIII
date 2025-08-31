@@ -3784,6 +3784,7 @@
 #include "modular_zapoc\modules\imbued\code\edges\the_word\soapstone.dm"
 #include "modular_zapoc\modules\imbued\code\edges\the_word\the_word.dm"
 #include "modular_zapoc\modules\ncr\code\ncr.dm"
+#include "modular_zapoc\modules\minimap\code\minimap.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\dirt_pile.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\mist_form.dm"
 #include "modular_zapoc\modules\talldog\code\talldog.dm"

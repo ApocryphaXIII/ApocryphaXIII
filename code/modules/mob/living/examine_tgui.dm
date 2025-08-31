@@ -43,16 +43,16 @@
 			headshot = holder_human.headshot_link
 			flavor_text = holder_human.flavor_text
 			name = holder.name
-			flavor_text_nsfw = holder_human.flavor_text_nsfw
+			flavor_text_nsfw = holder_human.flavor_text_nsfw // APOC EDIT CHANGE
 		ooc_notes = holder_human.ooc_notes
 
-	if((obscured && !isobserver(user)))
+	if((obscured && !isobserver(user))) // APOC EDIT CHANGE START
 		data["character_name"] = name
 		data["flavor_text"] = flavor_text
 		data["flavor_text_nsfw"] = flavor_text_nsfw
 		data["headshot"] = headshot
 	data["obscured"] = obscured ? TRUE : FALSE
 	data["ooc_notes"] = ooc_notes
-	data["character_notes"] = character_notes
+	data["character_notes"] = character_notes // APOC EDIT CHANGE END
 
 	return data

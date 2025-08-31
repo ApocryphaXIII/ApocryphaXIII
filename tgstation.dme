@@ -162,7 +162,6 @@
 #include "code\__DEFINES\wires.dm"
 #include "code\__DEFINES\wod13.dm"
 #include "code\__DEFINES\wounds.dm"
-#include "code\__DEFINES\apoc\directions.dm"
 #include "code\__DEFINES\apoc\imbued.dm"
 #include "code\__DEFINES\dcs\declarations.dm"
 #include "code\__DEFINES\dcs\deprecated_signals.dm"

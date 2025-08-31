@@ -8,7 +8,7 @@
 	chisel_type = /obj/structure/chisel_message/the_word
 
 /obj/item/soapstone/the_word/get_message(mob/user)
-	return tgui_input_list(user, "What would you like to engrave?", "Leave a message", GLOB.the_word_words)
+	return tgui_input_list(user, "What would you like to engrave?", "Leave a message", GLOB.the_word_valid_sprites)
 
 /obj/structure/chisel_message/the_word
 	name = "The Word"

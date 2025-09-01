@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = " the SFPD Chief and your Sergeant."
+	supervisors = " the SFPD Chief and your Sergeant" // APOC EDIT CHANGE
 	selection_color = "#7e7e7e"
 
 	outfit = /datum/outfit/job/police_officer

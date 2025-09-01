@@ -53,7 +53,7 @@
 	name = "Doctor"
 	icon_state = "Doctor"
 
-/* Apoc Edit
+/* APOC EDIT REMOVE START
 /datum/job/vamp/vdirector
 	title = "Clinic Director"
 	department_head = list("Primogen Malkavian")
@@ -107,4 +107,4 @@
 /obj/effect/landmark/start/vdirector
 	name = "Clinic Director"
 	icon_state = "Doctor"
-*/
+*/ // APOC EDIT REMOVE END

@@ -13,7 +13,7 @@
 
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "The Litany and Yourself."
+	supervisors = "The Litany and Yourself" // APOC EDIT CHANGE
 
 	req_admin_notify = 1
 	minimal_player_age = 25
@@ -71,7 +71,7 @@
 	minimal_renownrank = 3
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Litany and the Council."
+	supervisors = "The Litany and the Council" // APOC EDIT CHANGE
 
 	req_admin_notify = 1
 	minimal_player_age = 25
@@ -128,7 +128,7 @@
 
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Litany and the Council."
+	supervisors = "The Litany and the Council" // APOC EDIT CHANGE
 	minimal_renownrank = 2
 
 	req_admin_notify = 1
@@ -187,7 +187,7 @@
 	minimal_renownrank = 3
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Litany and the Council."
+	supervisors = "The Litany and the Council" // APOC EDIT CHANGE
 
 	req_admin_notify = 1
 	minimal_player_age = 25
@@ -248,7 +248,7 @@
 
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "The Litany and the Council."
+	supervisors = "The Litany and the Council" // APOC EDIT CHANGE
 
 	req_admin_notify = 1
 	minimal_player_age = 25

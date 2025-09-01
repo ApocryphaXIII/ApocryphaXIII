@@ -3,7 +3,7 @@
 	faction = "Vampire"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Traditions" //Apoc Edit
+	supervisors = "the Traditions" // APOC EDIT CHANGE
 	selection_color = "#df7058"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()

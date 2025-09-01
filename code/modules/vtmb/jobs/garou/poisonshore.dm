@@ -7,7 +7,7 @@
 	minimal_renownrank = 4
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Board and Yourself."
+	supervisors = "The Board and Yourself" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -71,7 +71,7 @@
 
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead, and yourself."
+	supervisors = "The Branch Lead, and yourself" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	minimal_renownrank = 3
@@ -135,7 +135,7 @@
 	minimal_renownrank = 2
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -197,7 +197,7 @@
 	minimal_renownrank = 3
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -258,7 +258,7 @@
 
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "The Branch Lead and the Security Chief."
+	supervisors = "The Branch Lead and the Security Chief" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -321,7 +321,7 @@
 
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 
 	req_admin_notify = 1
 	minimal_player_age = 25

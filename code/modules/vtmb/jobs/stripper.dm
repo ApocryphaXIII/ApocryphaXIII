@@ -15,7 +15,7 @@
 
 	paycheck_department = ACCOUNT_CIV
 	display_order = JOB_DISPLAY_ORDER_STRIP
-	allowed_species = list("Vampire", "Ghoul", "Human", "Werewolf", "Kuei-Jin")
+	allowed_species = SPECIES_ALL
 
 	v_duty = "Offer strip club services to humans, undead or anything else that walks through the door."
 	duty = "Offer strip club services. Some of your clientele may be... Unusual, but you are either addicted to vampire bites, or bribed to listen little and say even less."

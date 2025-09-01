@@ -114,7 +114,7 @@
 
 //	minimal_generation = 11	//Uncomment when players get exp enough
 
-	allowed_species = list("Ghoul", "Human")
+	allowed_species = list("Ghoul", "Human", "Imbued")
 	duty = "Your family is a strange one. Maybe you are strange too, because sitting next to your great uncles as an equal is something you are greatly interested in."
 	minimal_masquerade = 0
 	experience_addition = 10

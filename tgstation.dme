@@ -3769,6 +3769,8 @@
 #include "modular_zapoc\modules\apoc_jobs\voidodate_citizen.dm"
 #include "modular_zapoc\modules\apoc_jobs\job_types\_job.dm"
 #include "modular_zapoc\modules\apoc_quirks\talldog.dm"
+#include "modular_zapoc\modules\apoc_smites\code\truck_kun.dm"
+#include "modular_zapoc\modules\apoc_vehicles\code\admin_truck.dm"
 #include "modular_zapoc\modules\carpets\code\carpets.dm"
 #include "modular_zapoc\modules\clothing\code\sancho.dm"
 #include "modular_zapoc\modules\clothing\code\turtleskirt.dm"

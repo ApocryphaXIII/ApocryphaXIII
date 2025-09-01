@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/vampire
 	icon = 'code/modules/wod13/weapons.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	can_suppress = FALSE
@@ -9,8 +9,8 @@
 
 /obj/item/gun/ballistic/automatic/vampire
 	icon = 'code/modules/wod13/weapons.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	can_suppress = FALSE
@@ -125,8 +125,8 @@
 /obj/item/ammo_box/magazine/m44
 	name = "handgun magazine (.44)"
 	icon = 'code/modules/wod13/ammo.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "deagle"
@@ -164,8 +164,8 @@
 /obj/item/ammo_box/magazine/m50
 	name = "handgun magazine (.50)"
 	icon = 'code/modules/wod13/ammo.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "deagle"
@@ -187,8 +187,8 @@
 /obj/item/ammo_box/magazine/vamp45acp
 	name = "pistol magazine (.45 ACP)"
 	icon = 'code/modules/wod13/ammo.dmi'
-//	lefthand_file = 'code/modules/wod13/righthand.dmi'
-//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+//	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+//	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "m1911"
@@ -225,8 +225,8 @@
 /obj/item/ammo_box/magazine/glock9mm
 	name = "automatic pistol magazine (9mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
-//	lefthand_file = 'code/modules/wod13/righthand.dmi'
-//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+//	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+//	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "glock19"
@@ -263,8 +263,8 @@
 /obj/item/ammo_box/magazine/glock45acp
 	name = "automatic pistol magazine (.45 ACP)"
 	icon = 'code/modules/wod13/ammo.dmi'
-//	lefthand_file = 'code/modules/wod13/righthand.dmi'
-//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+//	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+//	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "glock21"
@@ -337,8 +337,8 @@
 /obj/item/ammo_box/magazine/semi9mm
 	name = "pistol magazine (9mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
-//	lefthand_file = 'code/modules/wod13/righthand.dmi'
-//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+//	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+//	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "semi9mm"
@@ -354,8 +354,8 @@
 /obj/item/ammo_box/magazine/vamp9mm
 	name = "uzi magazine (9mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "uzi"
@@ -384,8 +384,8 @@
 /obj/item/ammo_box/magazine/vamp9mp5
 	name = "mp5 magazine (9mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
-//	lefthand_file = 'code/modules/wod13/righthand.dmi'
-//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+//	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+//	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "mp5"
@@ -414,8 +414,8 @@
 /obj/item/ammo_box/magazine/vamp46mp7
 	name = "mp7 magazine (4.6mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
-//	lefthand_file = 'code/modules/wod13/righthand.dmi'
-//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+//	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+//	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "mp7"
@@ -446,8 +446,8 @@
 /obj/item/ammo_box/magazine/vamp556
 	name = "carbine magazine (5.56mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "rifle"
@@ -504,8 +504,8 @@
 /obj/item/ammo_box/magazine/vamp545
 	name = "rifle magazine (5.45mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
-//	lefthand_file = 'code/modules/wod13/righthand.dmi'
-//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+//	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+//	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "ak"
@@ -538,8 +538,8 @@
 /obj/item/ammo_box/magazine/vampaug
 	name = "AUG magazine (5.56mm)"
 	icon = 'code/modules/wod13/ammo.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "aug"
@@ -573,8 +573,8 @@
 	name = "tommy gun magazine (.45 ACP)"
 	icon = 'code/modules/wod13/ammo.dmi'
 	icon_state = "thompson"
-//	lefthand_file = 'code/modules/wod13/righthand.dmi'
-//	righthand_file = 'code/modules/wod13/lefthand.dmi'
+//	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+//	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	ammo_type = /obj/item/ammo_casing/vampire/c45acp
@@ -671,8 +671,8 @@
 	name = "PSG1 magazine (7.62x51mm)"
 	desc = "A magazine for the PSG1 loaded in 7.62 NATO."
 	icon = 'code/modules/wod13/ammo.dmi'
-	//lefthand_file = 'code/modules/wod13/righthand.dmi'
-	//righthand_file = 'code/modules/wod13/lefthand.dmi'
+	//lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	//righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "PSG1"
@@ -694,8 +694,8 @@
 	name = "shotgun"
 	desc = "A traditional shotgun with wood furniture and a six-round tube magazine."
 	icon = 'code/modules/wod13/48x32weapons.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	w_class = WEIGHT_CLASS_BULKY
@@ -715,8 +715,8 @@
 /obj/item/ammo_box/magazine/vampautoshot
 	name = "shotgun magazine (12ga)"
 	icon = 'code/modules/wod13/ammo.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "spas15"
@@ -752,8 +752,8 @@
 	name = "crossbow"
 	desc = "Welcome to the Middle Ages!"
 	icon = 'code/modules/wod13/48x32weapons.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "crossbow0"
 	inhand_icon_state = "crossbow0"
@@ -822,8 +822,8 @@
 	icon_state = "flamethrower4"
 	icon = 'code/modules/wod13/weapons.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	masquerade_violating = TRUE
 	var/oil = 1000

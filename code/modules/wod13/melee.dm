@@ -1,6 +1,6 @@
 /obj/item/melee/vampirearms
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	var/quieted = FALSE
@@ -278,8 +278,8 @@
 	worn_icon_state = "longsword_sheathe"
 	w_class = WEIGHT_CLASS_BULKY
 	icon = 'code/modules/wod13/weapons.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	component_type = /datum/component/storage/concrete/vtm/sheathe
@@ -756,8 +756,8 @@
 	desc = "It opens and closes."
 	icon_state = "door"
 	icon = 'code/modules/wod13/weapons.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	force = 20
 	block_chance = 25
 	throwforce = 40

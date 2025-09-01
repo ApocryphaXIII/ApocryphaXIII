@@ -6,7 +6,7 @@
 	if(SSbloodhunt.hunted.len) // APOC EDIT START
 		var/compound
 		for(var/mob/living/carbon/human/H in SSbloodhunt.hunted)
-			compound = (compose_dir(H, usr, get_turf(H), "Bloodhunt"))
+			compound = (compose_dir(H, usr, get_turf(H), LOCATOR_BLOODHUNT))
 			to_chat(usr, "[compound]") // APOC EDIT END
 
 SUBSYSTEM_DEF(bloodhunt)

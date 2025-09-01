@@ -1062,6 +1062,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 	var/obj/item/held_item = locate(params["payment_item"]) in user
 	if(!held_item)
 		to_chat(usr, span_alert("Error: Payment method not found!"))
+		vend_ready = TRUE
 		return
 
 	if(!all_products_free)
@@ -1074,13 +1075,16 @@ GLOBAL_LIST_EMPTY(vending_products)
 			if(!used_account)
 				to_chat(user, span_alert("The [creditcard] has no linked account."))
 				flick(icon_deny,src)
+				vend_ready = TRUE
 				return
 			if(!used_account.check_pin(user, price_to_use, creditcard))
 				flick(icon_deny,src)
+				vend_ready = TRUE
 				return
 			if(!used_account.adjust_money(price_to_use))
 				to_chat(user, span_alert("The transaction is declined - Insufficient funds."))
 				flick(icon_deny,src)
+				vend_ready = TRUE
 				return
 			//used_account.process_credit_fraud(user, product.price)
 			var/datum/bank_account/D = SSeconomy.get_dep_account(payment_department)
@@ -1091,6 +1095,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			if(!held_item.use(price_to_use))
 				to_chat(user, span_alert("You don't have enough money in your hand."))
 				flick(icon_deny,src)
+				vend_ready = TRUE
 				return
 			cash_contained += price_to_use
 

@@ -275,7 +275,6 @@
 	sacrifices = list(/obj/item/reagent_containers/blood)
 
 /mob/living/simple_animal/hostile/ghost/tremere
-		name = "ancestor" // APOC EDIT ADD
 	maxHealth = 1
 	health = 1
 	melee_damage_lower = 1
@@ -293,6 +292,7 @@
 		var/mob/dead/observer/C = pick(candidates)
 		var/mob/living/simple_animal/hostile/ghost/tremere/TR = new(loc)
 		TR.key = C.key
+		TR.name = "ancestor" // APOC EDIT ADD
 //		TR.name = C.name // APOC EDIT REMOVE
 		playsound(loc, 'code/modules/wod13/sounds/thaum.ogg', 50, FALSE)
 		qdel(src)

@@ -312,7 +312,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/cog/caern)
 "adp" = (
-/obj/machinery/vending/sustenance,
+/obj/machinery/vending/snack,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
 "adD" = (
@@ -3333,7 +3333,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee/private,
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/millennium_tower/f3)
 "aNq" = (
@@ -9722,7 +9722,9 @@
 /area/vtm/interior/baali)
 "coN" = (
 /obj/structure/table/wood,
-/obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
+	dir = 1
+	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/anarch)
 "coO" = (
@@ -14919,7 +14921,7 @@
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/shop)
 "dBB" = (
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee/private,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
 "dBK" = (
@@ -20493,7 +20495,7 @@
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior)
 "eXP" = (
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee/private,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/banu)
 "eXQ" = (
@@ -43317,7 +43319,9 @@
 /area/vtm/financialdistrict/construction)
 "kEr" = (
 /obj/structure/table/wood,
-/obj/machinery/chem_dispenser/drinks/fullupgrade,
+/obj/machinery/chem_dispenser/drinks/fullupgrade{
+	dir = 1
+	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/anarch)
 "kEC" = (
@@ -51690,8 +51694,8 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower)
 "mJt" = (
-/obj/machinery/vending/sustenance{
-	pixel_y = 18
+/obj/machinery/vending/snack{
+	pixel_y = 19
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower)
@@ -68458,10 +68462,10 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/forest)
 "qCC" = (
-/obj/machinery/vending/coffee,
 /obj/machinery/light/prince{
 	pixel_y = 32
 	},
+/obj/machinery/vending/coffee/private,
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/voivodate)
 "qCD" = (
@@ -73764,7 +73768,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "rPh" = (
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee/private,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower)
 "rPp" = (
@@ -92884,7 +92888,7 @@
 /turf/open/floor/plating/shit,
 /area/vtm/sewer/nosferatu_warren)
 "wBD" = (
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee/private,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/clinic)
 "wBF" = (

@@ -212,7 +212,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "fL" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/boozeomat/all_access,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "fS" = (
@@ -1225,6 +1225,10 @@
 	dir = 1
 	},
 /turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
+"FC" = (
+/obj/machinery/vending/boozeomat,
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "FD" = (
 /obj/machinery/fax/admin/police,
@@ -3822,7 +3826,7 @@ NR
 ES
 kM
 NR
-NR
+FC
 NR
 NR
 NR

@@ -3791,6 +3791,7 @@
 #include "modular_zapoc\modules\imbued\code\edges\the_word\the_word.dm"
 #include "modular_zapoc\modules\masquerade_contract_tracking\code\brass_pocketwatch.dm"
 #include "modular_zapoc\modules\masquerade_contract_tracking\code\masquerade_contract_tracking.dm"
+#include "modular_zapoc\modules\klaives\code\melee.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\dirt_pile.dm"
 #include "modular_zapoc\modules\mini_protean_update\code\mist_form.dm"
 #include "modular_zapoc\modules\structures\code\p25_endron.dm"

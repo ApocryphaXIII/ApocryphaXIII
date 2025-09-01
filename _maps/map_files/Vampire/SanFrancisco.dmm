@@ -9590,6 +9590,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/clothing/under/vampire/turtleneck_skirt/endron,
+/obj/item/clothing/under/vampire/turtleneck_skirt/endron,
+/obj/item/clothing/under/vampire/turtleneck_skirt/endron,
 /obj/item/clothing/shoes/vampire/jackboots,
 /obj/item/clothing/shoes/vampire/jackboots,
 /obj/item/clothing/shoes/vampire/jackboots,

@@ -27,7 +27,7 @@
 
 	if(prob(33)) // Chance might need tweaked
 		var/decor = safepick(autodecor_list) // Pick a candidate
-
+		new decor (T)
 
 /turf/open/floor/plating/vampgrass/random/Initialize(mapload)
 	. = ..()

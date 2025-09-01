@@ -1,4 +1,4 @@
-/proc/compose_dir(mob/living/carbon/human/target, mob/living/carbon/human/user, turf/targetturf, method = LOCATOR_NORMAL)
+/proc/compose_dir(mob/living/carbon/human/target, mob/living/carbon/human/user, turf/targetturf, method = LOCATOR_NORM)
 	var/ourturf = get_turf(user)
 
 	if(method == "Masquerade" || method == "Veil")

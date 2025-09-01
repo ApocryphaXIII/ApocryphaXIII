@@ -261,6 +261,7 @@
 	desc = "A badge which shows a love of culture."
 	icon = 'code/modules/wod13/items.dmi'
 	icon_state = "id7"
+	onflooricon_state = = "id_red"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'

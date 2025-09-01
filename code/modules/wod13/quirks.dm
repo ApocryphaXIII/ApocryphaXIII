@@ -12,7 +12,7 @@ Coffin Therapy
 Not Crossing the Rubicon
 Hungry
 Fenix
-Dwarf
+Dwarf // APOC EDIT REMOVE // Removed for being a noob trap.
 Homosexual
 Dancer
 */
@@ -367,12 +367,12 @@ Dancer
 					SEND_SIGNAL(human, COMSIG_PATH_HIT, PATH_SCORE_UP)
 					last_added_humanity = world.time
 
-/datum/quirk/dwarf
+/*/datum/quirk/dwarf // APOC EDIT REMOVE
 	name = "Dwarf"
 	desc = "You are short."
 	value = 0
 	gain_text = "<span class='notice'>You feel short.</span>"
-	lose_text = "<span class='notice'>You don't feel short anymore.</span>"
+	lose_text = "<span class='notice'>You don't feel short anymore.</span>"*/ // APOC EDIT REMOVE
 
 /datum/quirk/dwarf/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder

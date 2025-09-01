@@ -135,3 +135,13 @@
   - bugfix: A lot of items using the wrong hands.
   dwinters99:
   - bugfix: deadchat can be toggled again
+2025-08-31:
+  KCartridge:
+  - rscadd: Cigarettes and related items are now allowed in the ear slot, they are
+      not allowed to be lit in the ear slot.
+  - rscadd: Sprites for cigarettes in your ear slot
+  dwinters99:
+  - map: Autodecor grass
+  - config: PULL_REQUEST_TEMPLATE.md improvement
+  - rscadd: Turtleneck with skirt
+  - spellcheck: removed a bad word

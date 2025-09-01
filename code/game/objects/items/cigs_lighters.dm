@@ -136,6 +136,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/icon_off = "cigoff"
 	var/type_butt = /obj/item/cigbutt
 	var/lastHolder = null
+	slot_flags = ITEM_SLOT_MASK | ITEM_SLOT_EARS // APOC EDIT ADD // So that you can put cigarettes on your ear like a badass
 	/// How long the cigarette lasts in seconds
 	var/smoketime = 360
 	var/chem_volume = 30
@@ -183,13 +184,17 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 
 /obj/item/clothing/mask/cigarette/proc/light(flavor_text = null)
+	if(iscarbon(loc)) // Cannot light Cigarette if it's on your ear // APOC EDIT ADD
+		var/mob/living/carbon/C = loc
+		if(src == C.ears)
+			to_chat(C, span_notice("Maybe put it in your mouth first."))
+			return
 	if(lit)
 		return
 	if(!(flags_1 & INITIALIZED_1))
 		icon_state = icon_on
 		inhand_icon_state = icon_on
 		return
-
 	lit = TRUE
 	name = "lit [name]"
 	attack_verb_continuous = string_list(list("burns", "sings"))
@@ -321,6 +326,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/mask/cigarette/get_temperature()
 	return lit * heat
+
+/obj/item/clothing/mask/cigarette/equipped(mob/M, slot) //Stops you from equipping lit cigarette anywhere but mask slot, drops it if you try // APOC EDIT ADD
+	. = ..()
+	if(lit && (slot & ITEM_SLOT_EARS))
+		M.dropItemToGround(src)
+		to_chat(M, span_warning("The cigarette burns you, you fling it to the ground."))
 
 // Cigarette brands.
 

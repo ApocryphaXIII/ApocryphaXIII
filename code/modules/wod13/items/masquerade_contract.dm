@@ -16,8 +16,8 @@
 	if(GLOB.masquerade_breakers_list.len)
 		var/compound
 		for(var/mob/living/carbon/human/H in GLOB.masquerade_breakers_list)
-			compound = compose_dir(H, user, get_turf(H), method)
-			if(compound)
+			compound_message = compose_dir(H, user, get_turf(H), method)
+			if(compound_message)
 				to_chat(user, span_warning("[compound]"))
 	else
 		to_chat(user, span_notice("No available [method] breakers in the city...")) // APOC ADD END

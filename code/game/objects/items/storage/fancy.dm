@@ -247,7 +247,7 @@
 
 /obj/item/storage/fancy/cigarettes/update_overlays()
 	. = ..()
-	if(fancy_open && contents.len)
+	if(fancy_open && contents.len && !(istype(src, /obj/item/storage/fancy/cigarettes/cigars))) // APOC EDIT CHANGE // Will now check if the box is a cigar box
 		. += "[icon_state]_open"
 		var/cig_position = 1
 		for(var/C in contents)

@@ -1059,15 +1059,15 @@ GLOBAL_LIST_EMPTY(vending_products)
 		vend_ready = TRUE
 		return
 
-	var/obj/item/held_item = locate(params["payment_item"]) in user
-	if(!held_item)
-		to_chat(usr, span_alert("Error: Payment method not found!"))
-		vend_ready = TRUE
-		return
-
 	if(!all_products_free)
 		if(coin_records.Find(R) || hidden_records.Find(R))
 			price_to_use = R.custom_premium_price ? R.custom_premium_price : extra_price
+
+		var/obj/item/held_item = locate(params["payment_item"]) in user
+		if(!held_item)
+			to_chat(usr, span_alert("Error: Payment method not found!"))
+			vend_ready = TRUE
+			return
 
 		if(is_creditcard(held_item))
 			var/obj/item/card/credit/creditcard = held_item

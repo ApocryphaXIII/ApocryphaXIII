@@ -12,7 +12,7 @@ Coffin Therapy
 Not Crossing the Rubicon
 Hungry
 Fenix
-Dwarf
+Dwarf // APOC EDIT REMOVE // Removed for being a noob trap.
 Homosexual
 Dancer
 */
@@ -367,7 +367,7 @@ Dancer
 					SEND_SIGNAL(human, COMSIG_PATH_HIT, PATH_SCORE_UP)
 					last_added_humanity = world.time
 
-/datum/quirk/dwarf
+/*/datum/quirk/dwarf // APOC EDIT REMOVE START
 	name = "Dwarf"
 	desc = "You are short."
 	value = 0
@@ -382,7 +382,7 @@ Dancer
 	if(iswerewolf(quirk_holder))
 		return
 	H.AddElement(/datum/element/dwarfism, COMSIG_PARENT_PREQDELETED, src)
-	H.isdwarfy = TRUE
+	H.isdwarfy = TRUE */ // APOC EDIT REMOVE END
 
 #define SHORT 4/5
 #define TALL 5/4

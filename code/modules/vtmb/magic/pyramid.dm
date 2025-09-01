@@ -292,7 +292,7 @@
 		var/mob/dead/observer/C = pick(candidates)
 		var/mob/living/simple_animal/hostile/ghost/tremere/TR = new(loc)
 		TR.key = C.key
-		TR.name = "ancestor" // APOC EDIT ADD
+		TR.name = "\improper ancestor" // APOC EDIT ADD
 //		TR.name = C.name // APOC EDIT REMOVE
 		playsound(loc, 'code/modules/wod13/sounds/thaum.ogg', 50, FALSE)
 		qdel(src)

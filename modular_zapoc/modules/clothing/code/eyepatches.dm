@@ -14,17 +14,18 @@
 	examine_list += "Alt-click to flip the eyepatch to the other eye."
 
 
-/obj/item/clothing/glasses/apoc/eyepatch/AltClick()
-	swap_eye(src)
+/obj/item/clothing/glasses/apoc/eyepatch/AltClick(mob/user)
+	if(isliving(user))
+		swap_eye(src)
 
 
-/obj/item/clothing/glasses/apoc/eyepatch/proc/swap_eye()
+/obj/item/clothing/glasses/apoc/eyepatch/proc/swap_eye(mob/user)
 	flipped = !flipped
 	icon_state = flipped ? "[base_icon_state]_flipped" : base_icon_state
-	if (!ismob(loc))
+	if (!ismob(user))
 		return
-	var/mob/user = loc
-	user.update_inv_glasses()
+	var/mob/living/carbon/human/H = user
+	H.regenerate_icons()
 
 
 /obj/item/clothing/glasses/apoc/eyepatch/medical
@@ -47,6 +48,7 @@
 	var/trick = FALSE
 	var/adjusted_state = "both"
 
+
 /obj/item/clothing/glasses/apoc/blindfold/proc/on_examine(datum/source, mob/user, list/examine_list)
 	examine_list += "Alt-click to adjust the [name]."
 
@@ -61,8 +63,9 @@
 
 /obj/item/clothing/glasses/apoc/blindfold/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
-	if(slot == ITEM_SLOT_EYES && !trick)
+	if((slot == ITEM_SLOT_EYES && !trick) && adjusted_state == "both")
 		user.become_blind("blindfold_[REF(src)]")
+
 
 /obj/item/clothing/glasses/apoc/blindfold/dropped(mob/living/carbon/human/user)
 	..()
@@ -72,7 +75,7 @@
 /obj/item/clothing/glasses/apoc/blindfold/AltClick(mob/user)
 	if(!ishuman(user))
 		return
-	adjust_blindfold()
+	adjust_blindfold(user)
 
 
 /obj/item/clothing/glasses/apoc/blindfold/proc/adjust_blindfold(mob/living/carbon/user)
@@ -84,6 +87,7 @@
 			name = "eyepatch"
 			desc = "A fabric eyepatch over your left eye."
 			oldname = "blindfold"
+			user.cure_blind("blindfold_[REF(src)]")
 		if("left")
 			adjusted_state = "right"
 			desc = "A fabric eyepatch over your right eye."
@@ -99,6 +103,6 @@
 
 	worn_icon_state = "[base_icon_state]_[adjusted_state]"
 
-	to_chat(user, span_notice("You adjust the [oldname], wearing it as a [name]."))
+	to_chat(user, span_notice("You adjust the [oldname], wearing it as [name]."))
 
 	user.update_inv_glasses()

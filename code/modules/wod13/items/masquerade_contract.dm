@@ -14,11 +14,11 @@
 /obj/item/masquerade_contract/attack_self(mob/user) // APOC ADD START
 	. = ..()
 	if(GLOB.masquerade_breakers_list.len)
-		var/compound
+		var/compound_message
 		for(var/mob/living/carbon/human/H in GLOB.masquerade_breakers_list)
 			compound_message = compose_dir(H, user, get_turf(H), method)
 			if(compound_message)
-				to_chat(user, span_warning("[compound]"))
+				to_chat(user, span_warning("[compound_message]"))
 	else
 		to_chat(user, span_notice("No available [method] breakers in the city...")) // APOC ADD END
 

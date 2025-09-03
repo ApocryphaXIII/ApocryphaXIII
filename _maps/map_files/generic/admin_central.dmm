@@ -18,8 +18,14 @@
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
+"bh" = (
+/obj/effect/decal/cleanable/cardboard,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior)
 "bX" = (
-/obj/machinery/food_cart,
+/obj/machinery/vending/hotdog{
+	pixel_y = 14
+	},
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
 "cd" = (
@@ -41,9 +47,9 @@
 	lockpick_timer = 999
 	},
 /turf/open/floor/plating/parquetry/old,
-/area/vtm/interior)
+/area/misc/cordon)
 "cT" = (
-/obj/structure/stairs/south,
+/obj/transfer_point_vamp/stairs/theatre1,
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
 "dr" = (
@@ -51,6 +57,12 @@
 /area/start)
 "eF" = (
 /turf/open/floor/plating/toilet,
+/area/vtm/interior)
+"eN" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/vampplating/stairs/black{
+	dir = 1
+	},
 /area/vtm/interior)
 "eZ" = (
 /obj/machinery/light/small{
@@ -68,8 +80,26 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
+"fn" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/item/trash/vampirecrisps,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
+"hG" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "hK" = (
 /obj/structure/closet/crate/bin,
+/obj/item/trash/popcorn,
+/obj/item/trash/popcorn,
+/obj/item/trash/popcorn,
+/obj/item/trash/popcorn,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
 "hS" = (
@@ -77,6 +107,16 @@
 	dir = 1
 	},
 /turf/open/floor/carpet/vamp,
+/area/vtm/interior)
+"iH" = (
+/obj/structure/toilet{
+	pixel_y = 9
+	},
+/obj/machinery/light/small/directional/south{
+	pixel_y = 33
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/toilet,
 /area/vtm/interior)
 "iS" = (
 /obj/structure/table/wood/fancy,
@@ -124,7 +164,7 @@
 	lockpick_timer = 999
 	},
 /turf/open/floor/carpet/vamp,
-/area/vtm/interior)
+/area/misc/cordon)
 "lC" = (
 /obj/effect/decal/wallpaper/light,
 /turf/closed/wall/vampwall/rich/old,
@@ -137,6 +177,15 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/turf/open/floor/carpet/vamp/blackgold,
+/area/vtm/interior)
+"oC" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior)
+"oH" = (
+/obj/structure/table/wood,
+/obj/structure/sign/city/order,
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
 "qd" = (
@@ -172,21 +221,55 @@
 /obj/effect/landmark/start/new_player,
 /turf/open/floor/plating,
 /area/start)
+"rJ" = (
+/obj/structure/curtain/cloth/fancy,
+/obj/item/trash/popcorn{
+	pixel_y = 7;
+	pixel_x = 3
+	},
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "rX" = (
 /turf/open/space/basic,
 /area/space)
 "sg" = (
 /turf/closed/indestructible/riveted,
 /area/start)
+"vk" = (
+/obj/item/trash/popcorn{
+	pixel_y = 15;
+	pixel_x = 8
+	},
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "vw" = (
 /turf/open/floor/carpet,
 /area/awaymission/errorroom)
+"vI" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
+"vU" = (
+/obj/effect/turf_decal/bordur/corner{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "vZ" = (
 /turf/open/floor/plating/vampplating/stairs/black/left,
 /area/vtm/interior)
 "ww" = (
 /turf/closed/wall/vampwall,
 /area/awaymission/errorroom)
+"wR" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/carpet/vamp/blackgold,
+/area/vtm/interior)
 "xE" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 8
@@ -196,6 +279,10 @@
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
+"zs" = (
+/obj/structure/curtain/cloth/fancy,
+/turf/closed/wall/vampwall/rich/old/low/window,
+/area/misc/cordon)
 "Ay" = (
 /obj/machinery/light{
 	dir = 1
@@ -208,12 +295,22 @@
 	},
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
+"Cv" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "Dg" = (
 /obj/structure/vampdoor/wood{
 	dir = 4
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
+"Eb" = (
+/turf/closed/wall/vampwall/rich/old,
+/area/misc/cordon)
 "Ew" = (
 /obj/machinery/light/small{
 	dir = 8;
@@ -227,9 +324,33 @@
 	},
 /turf/open/floor/plating/vampplating/stairs/black/right,
 /area/vtm/interior)
+"Ga" = (
+/obj/structure/table/wood,
+/obj/structure/fluff/tv/order/random{
+	pixel_y = 10;
+	pixel_x = -4
+	},
+/obj/structure/fluff/tv/order/random{
+	pixel_y = 10;
+	pixel_x = 11
+	},
+/turf/open/floor/carpet/vamp/blackgold,
+/area/vtm/interior)
+"Gr" = (
+/obj/structure/curtain/cloth/fancy,
+/obj/item/trash/popcorn,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "GC" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 1
+	},
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
+"GL" = (
+/mob/living/simple_animal/chicken{
+	name = "\improper jacques";
+	faction = list("hostile")
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
@@ -253,6 +374,14 @@
 /obj/machinery/chem_dispenser/drinks,
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
+"IU" = (
+/obj/effect/decal/wallpaper/light,
+/turf/closed/wall/vampwall/rich/old,
+/area/misc/cordon)
+"Jl" = (
+/obj/effect/decal/cleanable/trash,
+/turf/open/floor/carpet/vamp/blackgold,
+/area/vtm/interior)
 "Jm" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -260,42 +389,22 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
+"JT" = (
+/obj/structure/curtain/cloth/fancy,
+/obj/item/trash/popcorn{
+	pixel_y = 10
+	},
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
+"KV" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "Ls" = (
 /turf/open/floor/plating/vampplating/stairs/black/middle,
-/area/vtm/interior)
-"LL" = (
-/obj/item/food/popcorn{
-	pixel_y = 12;
-	pixel_x = 8
-	},
-/obj/item/food/popcorn{
-	pixel_y = 11;
-	pixel_x = -6
-	},
-/obj/item/food/popcorn{
-	pixel_y = 12
-	},
-/obj/item/food/popcorn{
-	pixel_y = 11;
-	pixel_x = -17
-	},
-/obj/item/food/popcorn{
-	pixel_y = 7;
-	pixel_x = -15
-	},
-/obj/item/food/popcorn{
-	pixel_y = 7;
-	pixel_x = -6
-	},
-/obj/item/food/popcorn{
-	pixel_y = 6
-	},
-/obj/item/food/popcorn{
-	pixel_y = 7;
-	pixel_x = 8
-	},
-/obj/structure/table/wood,
-/turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
 "Mt" = (
 /obj/structure/chair/sofa/corp/left{
@@ -303,6 +412,19 @@
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 1
+	},
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
+"Nu" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/item/trash/popcorn,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
+"NC" = (
+/obj/item/trash/popcorn{
+	pixel_y = 7
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
@@ -324,12 +446,38 @@
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
+"OQ" = (
+/obj/structure/curtain/cloth/fancy,
+/obj/effect/turf_decal/bordur/corner{
+	dir = 8
+	},
+/turf/closed/wall/vampwall/rich/old/low/window,
+/area/misc/cordon)
+"OU" = (
+/obj/effect/turf_decal/bordur/corner{
+	dir = 8
+	},
+/obj/item/trash/popcorn,
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "Qb" = (
 /obj/structure/curtain/cloth/fancy,
 /turf/closed/wall/vampwall/rich/old/low/window,
 /area/vtm/interior)
+"Rq" = (
+/obj/structure/curtain/cloth/fancy,
+/obj/item/trash/popcorn{
+	pixel_y = -5;
+	pixel_x = 8
+	},
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "Sv" = (
 /turf/open/floor/carpet/vamp,
+/area/vtm/interior)
+"SE" = (
+/obj/transfer_point_vamp/stairs/theatre2,
+/turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
 "SH" = (
 /obj/effect/turf_decal/bordur{
@@ -343,29 +491,9 @@
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
 "Tr" = (
-/obj/item/food/popcorn{
-	pixel_y = 11;
-	pixel_x = 8
+/obj/machinery/vending/boozeomat/all_access{
+	pixel_y = 14
 	},
-/obj/item/food/popcorn{
-	pixel_y = 12
-	},
-/obj/item/food/popcorn{
-	pixel_y = 12;
-	pixel_x = -6
-	},
-/obj/item/food/popcorn{
-	pixel_y = 7;
-	pixel_x = -6
-	},
-/obj/item/food/popcorn{
-	pixel_y = 7;
-	pixel_x = 8
-	},
-/obj/item/food/popcorn{
-	pixel_y = 6
-	},
-/obj/structure/table/wood,
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
 "TZ" = (
@@ -381,6 +509,12 @@
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
+"UK" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/turf/open/floor/plating/toilet,
+/area/vtm/interior)
 "UN" = (
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
@@ -390,6 +524,14 @@
 	},
 /turf/open/floor/carpet,
 /area/awaymission/errorroom)
+"VO" = (
+/obj/structure/curtain/cloth/fancy,
+/obj/item/food/egg{
+	pixel_y = 9;
+	pixel_x = 8
+	},
+/turf/open/floor/carpet/vamp,
+/area/vtm/interior)
 "Wk" = (
 /obj/effect/landmark/error,
 /turf/open/floor/carpet,
@@ -428,13 +570,15 @@
 /area/vtm/interior)
 "ZH" = (
 /obj/structure/table/wood,
-/obj/item/storage/box/drinkingglasses,
-/obj/item/storage/box/drinkingglasses,
-/obj/item/storage/box/drinkingglasses,
+/obj/structure/popcorn_maker{
+	pixel_y = 12
+	},
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
 "ZI" = (
 /obj/structure/closet/crate/bin,
+/obj/item/trash/popcorn,
+/obj/item/trash/popcorn,
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
 
@@ -815,7 +959,7 @@ qe
 qe
 qe
 qe
-qe
+Eb
 qe
 qe
 qe
@@ -1002,14 +1146,14 @@ rX
 XQ
 qe
 qe
-Sv
+GL
 kI
 Sv
 kI
 Sv
 kI
 Sv
-kI
+eN
 Sv
 kI
 Sv
@@ -1017,8 +1161,8 @@ Sv
 qe
 UN
 UN
-qe
-ao
+Eb
+wR
 qg
 qg
 iS
@@ -1203,15 +1347,15 @@ rX
 rX
 XQ
 qe
-ju
+VO
 Sv
-qv
+OU
 aq
 qv
 aq
 qv
 aq
-qv
+vU
 aq
 qv
 aq
@@ -1219,7 +1363,7 @@ Sv
 qe
 UN
 UN
-qe
+Eb
 ao
 ao
 ao
@@ -1405,23 +1549,23 @@ rX
 rX
 XQ
 lC
-ju
+Gr
 Sv
 jX
 aq
-jX
+vI
 aq
-jX
+fn
 aq
-jX
+Cv
 aq
-jX
-aq
+Nu
+KV
 Sv
 qe
 UN
 UN
-qe
+Eb
 ao
 ao
 ao
@@ -1607,23 +1751,23 @@ rX
 rX
 XQ
 lC
-ju
-Sv
+rJ
+NC
+Cv
+hG
+Cv
+KV
 jX
 aq
 jX
 aq
-jX
-aq
-jX
-aq
-jX
-aq
+vI
+KV
 Sv
 Qb
 YA
 UN
-qe
+Eb
 ao
 ao
 ao
@@ -1631,7 +1775,7 @@ ao
 ao
 ao
 ao
-cT
+SE
 qe
 XQ
 sg
@@ -1809,26 +1953,26 @@ rX
 rX
 XQ
 lC
-ju
-Sv
-jX
+Rq
+vk
+Nu
 aq
-jX
+Nu
 aq
-jX
+vI
+KV
+Nu
 aq
-jX
-aq
-jX
+fn
 aq
 Sv
 Qb
+oC
 UN
-UN
-qe
+Eb
 ao
 ao
-ao
+Jl
 ao
 ao
 no
@@ -2011,14 +2155,14 @@ rX
 rX
 XQ
 lC
-ju
+JT
 Sv
 jX
 aq
 jX
 aq
 jX
-aq
+KV
 jX
 aq
 jX
@@ -2027,13 +2171,13 @@ Sv
 qe
 UN
 UN
-qe
+Eb
 BJ
 ao
 kx
 kx
 kx
-ao
+kx
 qe
 XQ
 XQ
@@ -2213,7 +2357,7 @@ rX
 rX
 XQ
 qe
-ju
+Gr
 Sv
 GC
 aq
@@ -2232,10 +2376,10 @@ UN
 cD
 ao
 ao
-Tr
+oH
 ao
 ao
-ao
+bX
 qe
 XQ
 rX
@@ -2431,13 +2575,13 @@ Sv
 qe
 UN
 UN
-qe
+Eb
 BJ
 ao
-LL
+kx
 ao
 ao
-bX
+Ga
 qe
 XQ
 rX
@@ -2617,23 +2761,23 @@ rX
 rX
 XQ
 XQ
-qe
-qe
-qe
-qe
-qe
-qe
-qe
-qe
-qe
-qe
-qe
+Eb
+Eb
+Eb
+Eb
+Eb
+Eb
+Eb
+Eb
+Eb
+Eb
+Eb
 lg
 lg
-qe
-qe
-qe
-qe
+Eb
+Eb
+Eb
+Eb
 ao
 ao
 kx
@@ -2822,11 +2966,11 @@ qe
 qe
 ao
 ao
-ao
+Jl
 SX
 WX
 Oh
-ao
+Jl
 ao
 ao
 ao
@@ -2841,7 +2985,7 @@ ao
 Hx
 ao
 ao
-kx
+ZH
 qe
 XQ
 rX
@@ -3245,7 +3389,7 @@ ao
 ao
 ao
 ao
-ao
+Tr
 qe
 XQ
 rX
@@ -3438,11 +3582,11 @@ qe
 qe
 Dg
 Oz
-qe
-qe
-qe
-qe
-qe
+Eb
+Eb
+Eb
+Eb
+Eb
 ao
 ao
 qe
@@ -3640,8 +3784,8 @@ kI
 an
 Sv
 Sv
-qe
-UN
+Eb
+oC
 UN
 UN
 cD
@@ -3842,16 +3986,16 @@ kH
 qm
 Sv
 ZI
-qe
+Eb
 UN
 UN
 UN
+Eb
 qe
 qe
 qe
 qe
-qe
-eF
+UK
 qe
 XQ
 rX
@@ -4044,11 +4188,11 @@ SH
 hS
 Sv
 Sv
-qe
+Eb
 UN
 UN
 UN
-lC
+IU
 Hc
 jl
 Jm
@@ -4246,11 +4390,11 @@ Ui
 GN
 Sv
 Sv
-Qb
+OQ
+oC
 UN
 UN
-UN
-qe
+Eb
 qe
 qe
 eF
@@ -4448,12 +4592,12 @@ Mt
 qm
 Sv
 Sv
-Qb
+zs
 YA
 UN
 UN
-lC
-Hc
+IU
+iH
 jl
 eF
 eF
@@ -4650,11 +4794,11 @@ SH
 hS
 Sv
 Sv
-qe
+Eb
 UN
 UN
 UN
-qe
+Eb
 qe
 qe
 eF
@@ -4852,11 +4996,11 @@ xE
 GN
 Sv
 Sv
-qe
+Eb
 UN
 UN
 UN
-lC
+IU
 Hc
 jl
 eF
@@ -5054,16 +5198,16 @@ kI
 Ew
 Sv
 Sv
-qe
+Eb
 UN
 UN
 UN
-qe
+Eb
 qe
 qe
 mx
 fj
-eF
+bh
 qe
 XQ
 rX
@@ -5256,11 +5400,11 @@ qe
 qe
 qe
 qe
-qe
-qe
-qe
-qe
-qe
+Eb
+Eb
+Eb
+Eb
+Eb
 XQ
 qe
 qe

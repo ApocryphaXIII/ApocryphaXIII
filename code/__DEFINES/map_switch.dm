@@ -3,23 +3,15 @@
 // or if map tools ever agree on a standard, this should switch to use that.
 #ifdef CBT
 #define MAP_SWITCH(compile_time, map_time) ##compile_time
-#else
-#define MAP_SWITCH(compile_time, map_time) ##map_time
-#endif
-
-#ifdef CBT
 #define WHEN_MAP(map_time) // Not mapping, nothing here
-#else
-#define WHEN_MAP(map_time) ##map_time
-#endif
-
-#ifdef CBT
 #define WHEN_COMPILE(compile_time) ##compile_time
 #else
+#define MAP_SWITCH(compile_time, map_time) ##map_time
+#define WHEN_MAP(map_time) ##map_time
 #define WHEN_COMPILE(compile_time) // Not compiling, nothing here
 #endif
 
-#ifdef CBT
+#if defined(CBT) || defined(SHOW_INVENTORY_ICONS)
 #define ONFLOOR_ICON_HELPER(file) onflooricon = ##file
 #else
 #define ONFLOOR_ICON_HELPER(file) icon=##file; onflooricon=##file

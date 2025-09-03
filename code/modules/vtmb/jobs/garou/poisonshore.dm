@@ -40,6 +40,7 @@
 	name = "Endron Branch Lead"
 	jobtype = /datum/job/vamp/garou/spiral/lead
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/lead
 	uniform =  /obj/item/clothing/under/pentex/pentex_executive_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
@@ -104,6 +105,7 @@
 	name = "Endron Executive"
 	jobtype = /datum/job/vamp/garou/spiral/executive
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/executive
 	uniform =  /obj/item/clothing/under/pentex/pentex_executive_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
@@ -166,6 +168,7 @@
 	name = "Endron Internal Affairs"
 	jobtype = /datum/job/vamp/garou/spiral/executive
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/affairs
 	uniform =  /obj/item/clothing/under/pentex/pentex_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
@@ -229,6 +232,7 @@
 	name = "Endron Chief of Security"
 	jobtype = /datum/job/vamp/garou/spiral/secchief
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/secchief
 	uniform =  /obj/item/clothing/under/pentex/pentex_turtleneck
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
@@ -291,6 +295,7 @@
 	name = "Endron Security Agent"
 	jobtype = /datum/job/vamp/garou/spiral/sec
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/sec
 	uniform =  /obj/item/clothing/under/pentex/pentex_shortsleeve
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
@@ -350,6 +355,7 @@
 	name = "Endron Employee"
 	jobtype = /datum/job/vamp/garou/spiral/employee
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/employee
 	uniform = /obj/item/clothing/under/pentex/pentex_longleeve
 	gloves = /obj/item/clothing/gloves/vampire/work

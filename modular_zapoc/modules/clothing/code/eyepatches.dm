@@ -7,7 +7,14 @@
 	base_icon_state = "eyepatch"
 	inhand_icon_state = "eyepatch"
 	custom_materials = list(/datum/material/glass = 250)
+	var/wornunder = TRUE
 	var/flipped = FALSE
+
+
+/obj/item/clothing/glasses/apoc/eyepatch/attack_self(mob/user)
+	wornunder = !wornunder
+	alternate_worn_layer = wornunder ? GLASSES_LAYER : UPPER_EARS_LAYER
+	to_chat(user, span_notice("You adjust the [src]."))
 
 
 /obj/item/clothing/glasses/apoc/eyepatch/proc/on_examine(datum/source, mob/user, list/examine_list)
@@ -16,7 +23,7 @@
 
 /obj/item/clothing/glasses/apoc/eyepatch/AltClick(mob/user)
 	if(isliving(user))
-		swap_eye(src)
+		swap_eye(user)
 
 
 /obj/item/clothing/glasses/apoc/eyepatch/proc/swap_eye(mob/user)
@@ -42,23 +49,26 @@
 	icon = 'modular_zapoc/modules/clothing/icons/eyepatches.dmi'
 	worn_icon = 'modular_zapoc/modules/clothing/icons/eyepatches_worn.dmi'
 	icon_state = "blindfoldwhite"
-	base_icon_state = "blindfoldwhite"
+	base_icon_state = "blindfoldwhite_both"
 	worn_icon_state = "blindfoldwhite_both"
-	inhand_icon_state = "blindfoldwhite"
+	var/wornunder = TRUE
 	var/trick = FALSE
 	var/adjusted_state = "both"
 
 
-/obj/item/clothing/glasses/apoc/blindfold/proc/on_examine(datum/source, mob/user, list/examine_list)
-	examine_list += "Alt-click to adjust the [name]."
-
-
 /obj/item/clothing/glasses/apoc/blindfold/trick
 	desc = "Fold it over your eyes to not go blind, because this one is too thin to obstruct your vision. Cheater."
-	icon_state = "blindfoldwhite"
-	base_icon_state = "blindfoldwhite"
-	inhand_icon_state = "blindfoldwhite"
 	trick = TRUE
+
+
+/obj/item/clothing/glasses/apoc/blindfold/attack_self(mob/user)
+	wornunder = !wornunder
+	alternate_worn_layer = wornunder ? GLASSES_LAYER : UPPER_EARS_LAYER
+	to_chat(user, span_notice("You adjust the [src]."))
+
+
+/obj/item/clothing/glasses/apoc/blindfold/proc/on_examine(datum/source, mob/user, list/examine_list)
+	examine_list += span_notice("Alt-click to adjust the [name]. Use in hand to change layer.")
 
 
 /obj/item/clothing/glasses/apoc/blindfold/equipped(mob/living/carbon/human/user, slot)

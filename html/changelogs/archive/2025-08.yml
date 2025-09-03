@@ -88,3 +88,60 @@
   PositiveEntropy:
   - image: A very special and unique outfit for kindred has been added! See if you
       can find it in the wild...
+2025-08-23:
+  dwinters99:
+  - rscadd: Joke Cali flag subtype
+  - balance: They once again hunger
+  - refactor: Stationary hunger code is better
+  - bugfix: Lucy The Axe is now once again accessible. (And the other director stuff
+      I guess...)
+2025-08-24:
+  dwinters99:
+  - bugfix: TRAIT_ANIMAL_REPULSION should no longer cause shadow demons to hate you
+2025-08-25:
+  FalloutFalcon:
+  - rscadd: The (Creedless) Imbued
+  - qol: subtle is sorted into local
+  - qol: p25 radios use the radio class and are now sorted into radio
+  - qol: 5x lowered the volume of those evil radio cackles
+  - qol: Call history is boxed like examines
+  - balance: you 3 tiles or closer to hear radios
+  KCartridge:
+  - bugfix: fixed invisible Endron IDs
+2025-08-26:
+  dwinters99:
+  - bugfix: Organs no longer rot in freezer subtypes
+2025-08-27:
+  KCartridge:
+  - rscadd: Ronin to Endron allowed_tribes
+  - bugfix: Tower Security, Tower Employee, Clinic Ids should now be visible
+  dwinters99:
+  - rscadd: Gaia's Candor, a Philodox auspice gift
+  - rscadd: Layer change verb
+2025-08-28:
+  FalloutFalcon:
+  - qol: shuts up vending machines
+  dwinters99:
+  - bugfix: Tower werewolves stay tall when they unshift
+2025-08-29:
+  dwinters99:
+  - bugfix: white hispo rest dandruff removal
+2025-08-30:
+  FalloutFalcon:
+  - balance: limits the selection of the word to ones we have sprites for, no calling
+      out an area has vampires specificly
+  KCartridge:
+  - bugfix: cigarette overlay in cigar boxes
+  - bugfix: A lot of items using the wrong hands.
+  dwinters99:
+  - bugfix: deadchat can be toggled again
+2025-08-31:
+  KCartridge:
+  - rscadd: Cigarettes and related items are now allowed in the ear slot, they are
+      not allowed to be lit in the ear slot.
+  - rscadd: Sprites for cigarettes in your ear slot
+  dwinters99:
+  - map: Autodecor grass
+  - config: PULL_REQUEST_TEMPLATE.md improvement
+  - rscadd: Turtleneck with skirt
+  - spellcheck: removed a bad word

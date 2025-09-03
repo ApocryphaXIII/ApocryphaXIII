@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Camarilla and the Traditions. Yourself."
+	supervisors = "the Camarilla and the Traditions. Yourself" // APOC EDIT CHANGE
 	selection_color = "#bd3327"
 	req_admin_notify = 1
 	minimal_player_age = 14

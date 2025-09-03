@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "None. You are beholden only to yourself."
+	supervisors = "None. You are beholden only to yourself" // APOC EDIT CHANGE
 	selection_color = "#edc009"
 	exp_type_department = EXP_TYPE_WAREHOUSE // This is so the jobs menu can work properly
 
@@ -28,7 +28,7 @@
 
 	v_duty = "You provide both legal and illegal supplies to those that get busy during the night. You are your own man yet you know people are out for you. Time to buckle in..."
 	minimal_masquerade = 3
-	allowed_species = list("Vampire", "Werewolf", "Kuei-Jin", "Ghoul", "Human") //Apoc Edit
+	allowed_species = SPECIES_ALL //Apoc Edit
 	experience_addition = 20
 
 /datum/outfit/job/dealer

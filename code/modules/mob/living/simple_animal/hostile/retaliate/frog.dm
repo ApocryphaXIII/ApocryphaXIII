@@ -31,6 +31,8 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	var/stepped_sound = 'sound/effects/huuu.ogg'
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/retaliate/frog/Initialize()
 	. = ..()
 	if(prob(1))

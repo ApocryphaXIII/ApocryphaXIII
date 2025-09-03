@@ -24,8 +24,8 @@
 	desc = "A pair of prehensile pincers."
 	icon_state = "retractor_vic"
 	inhand_icon_state = "clamps_vic"
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	masquerade_violating = TRUE
 
 /obj/item/hemostat/augment/vicissitude
@@ -33,8 +33,8 @@
 	desc = "A pair of thin appendages that were once fingers, secreting a hemostatic fluid from the tips."
 	icon_state = "hemostat_vic"
 	inhand_icon_state = "clamps_vic"
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	masquerade_violating = TRUE
 
 /obj/item/cautery/augment/vicissitude
@@ -42,8 +42,8 @@
 	desc = "A specialized organ drooling a chemical package that releases an extreme amount of heat, very quickly."
 	icon_state = "cautery_vic"
 	inhand_icon_state = "cautery_vic"
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	masquerade_violating = TRUE
 
 /obj/item/surgicaldrill/augment/vicissitude
@@ -51,8 +51,8 @@
 	desc = "A spiral fang that bores into the flesh with reckless glee."
 	icon_state = "drill_vic"
 	hitsound = 'sound/effects/wounds/blood2.ogg'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	masquerade_violating = TRUE
 
 /obj/item/scalpel/augment/vicissitude
@@ -60,8 +60,8 @@
 	desc = "An altered nail, adjusted to make fine incisions."
 	icon_state = "scalpel_vic"
 	inhand_icon_state = "scalpel_vic"
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	masquerade_violating = TRUE
 
 /obj/item/circular_saw/augment/vicissitude
@@ -70,8 +70,8 @@
 	icon_state = "saw_vic"
 	inhand_icon_state = "saw_vic"
 	hitsound = 'sound/effects/wounds/blood2.ogg'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	masquerade_violating = TRUE
 
 /obj/item/surgical_drapes/vicissitude
@@ -79,8 +79,8 @@
 	desc = "A stretch of skin, sweating out antibiotics and disinfectants, to provide a sterile-ish environment to work in."
 	icon_state = "surgical_drapes_vic"
 	inhand_icon_state = "drapes_vic"
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	masquerade_violating = TRUE
 
 //MALLEABLE VISAGE

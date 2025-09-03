@@ -39,6 +39,8 @@
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
 
+	has_hate = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/retaliate/poison/snake/Initialize()
 	. = ..()
 	add_cell_sample()

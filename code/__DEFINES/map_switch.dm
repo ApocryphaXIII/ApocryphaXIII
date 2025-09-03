@@ -6,3 +6,21 @@
 #else
 #define MAP_SWITCH(compile_time, map_time) ##map_time
 #endif
+
+#ifdef CBT
+#define WHEN_MAP(map_time) // Not mapping, nothing here
+#else
+#define WHEN_MAP(map_time) ##map_time
+#endif
+
+#ifdef CBT
+#define WHEN_COMPILE(compile_time) ##compile_time
+#else
+#define WHEN_COMPILE(compile_time) // Not compiling, nothing here
+#endif
+
+#ifdef CBT
+#define ONFLOOR_ICON_HELPER(map_time) ##onflooricon = 'code/modules/wod13/onfloor.dmi'
+#else
+#define ONFLOOR_ICON_HELPER(map_time) // Not compiling, nothing here
+#endif

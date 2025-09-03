@@ -20,7 +20,7 @@
 #endif
 
 #ifdef CBT
-#define ONFLOOR_ICON_HELPER(map_time) ##onflooricon = 'code/modules/wod13/onfloor.dmi'
+#define ONFLOOR_ICON_HELPER(file) onflooricon = ##file
 #else
-#define ONFLOOR_ICON_HELPER(map_time) // Not compiling, nothing here
+#define ONFLOOR_ICON_HELPER(file) icon=##file; onflooricon=##file
 #endif

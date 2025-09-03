@@ -136,6 +136,10 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
+"ds" = (
+/obj/structure/roofstuff/vent_end,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "dA" = (
 /obj/structure/table,
 /obj/item/storage/firstaid/medical,
@@ -144,6 +148,10 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"dP" = (
+/obj/structure/roofstuff/vent/autotiling,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "ee" = (
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
@@ -178,6 +186,12 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"eM" = (
+/obj/structure/roofstuff/vent_end{
+	dir = 8
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "eQ" = (
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
@@ -338,6 +352,15 @@
 /obj/effect/decal/wallpaper/paper/stripe,
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
+"jX" = (
+/obj/structure/table/wood,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
+	dir = 4;
+	pixel_y = 5;
+	pixel_x = 10
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "kc" = (
 /obj/structure/roadblock{
 	dir = 8
@@ -417,6 +440,11 @@
 /obj/machinery/mineral/equipment_vendor/restricted/police,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
+"mv" = (
+/obj/structure/chair/stool/bar/directional/east,
+/mob/living/carbon/human/npc/incel,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "mw" = (
 /obj/structure/ladder/manhole/up{
 	connect_down = 1;
@@ -472,6 +500,10 @@
 /area/vtm/interior/shop)
 "nY" = (
 /turf/open/floor/plating/vampcanal,
+/area/vtm/pacificheights)
+"oe" = (
+/obj/structure/chair/stool/bar/directional/east,
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "of" = (
 /obj/item/storage/firstaid/regular,
@@ -587,6 +619,10 @@
 /area/vtm/supply)
 "qV" = (
 /turf/closed/wall/vampwall/brick,
+/area/vtm/pacificheights)
+"qX" = (
+/obj/structure/table/wood,
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "ri" = (
 /obj/structure/table/wood,
@@ -733,6 +769,10 @@
 /obj/structure/sign/city/police_department,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"un" = (
+/obj/structure/lamppost/one,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "uC" = (
 /obj/structure/table,
 /obj/item/ammo_box/magazine/glock45acp,
@@ -831,6 +871,10 @@
 /obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
+"wU" = (
+/obj/machinery/vending/boozeomat,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "wW" = (
 /obj/effect/landmark/observer_start,
 /turf/open/floor/plating/vampbeach,
@@ -840,6 +884,10 @@
 	dir = 1
 	},
 /turf/closed/wall/vampwall/junk/alt,
+/area/vtm/pacificheights)
+"xk" = (
+/obj/machinery/vending/boozeomat/all_access,
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "xC" = (
 /obj/effect/decal/cleanable/litter,
@@ -901,6 +949,10 @@
 "yK" = (
 /obj/structure/vampdoor,
 /turf/open/floor/plating/rough/cave,
+/area/vtm/pacificheights)
+"yO" = (
+/obj/structure/roofstuff/vent,
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "zc" = (
 /obj/structure/vampdoor,
@@ -1010,6 +1062,12 @@
 /obj/item/gun/ballistic/automatic/vampire/sniper,
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
+"Cd" = (
+/obj/structure/roofstuff/vent_end{
+	dir = 4
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "Cg" = (
 /obj/structure/table/wood,
 /obj/structure/retail/library,
@@ -1257,6 +1315,14 @@
 /obj/structure/vampdoor/police,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"GT" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/drinkingglasses{
+	pixel_y = 3;
+	pixel_x = 11
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "GX" = (
 /obj/structure/barrels/rand,
 /obj/machinery/light{
@@ -1455,6 +1521,14 @@
 "Ln" = (
 /turf/open/floor/light,
 /area/vtm/pacificheights)
+"Lq" = (
+/obj/structure/table/wood,
+/obj/machinery/chem_dispenser/drinks/fullupgrade{
+	dir = 4;
+	pixel_x = 13
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "Lw" = (
 /obj/structure/table,
 /obj/item/gas_can,
@@ -1588,6 +1662,14 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"OP" = (
+/obj/vampire_car/track{
+	access = "supply";
+	locked = 0;
+	dir = 5
+	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "OU" = (
 /obj/effect/spawner/random/trash/grime{
 	spawn_loot_count = 20;
@@ -1630,6 +1712,17 @@
 	dir = 4
 	},
 /turf/open/floor/plating/rough/cave,
+/area/vtm/pacificheights)
+"PL" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/drinkingglass/pint{
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass/pint{
+	pixel_y = 3;
+	pixel_x = 9
+	},
+/turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "PO" = (
 /turf/open/floor/plating/rough,
@@ -1942,6 +2035,10 @@
 /obj/item/gun/ballistic/automatic/vampire/deagle/c50,
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
+"Xj" = (
+/obj/structure/roofstuff/vent/south,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "Xr" = (
 /obj/machinery/bookbinder,
 /turf/open/floor/plating/concrete,
@@ -3585,10 +3682,10 @@ zx
 zx
 kS
 NR
-NR
-NR
-NR
-NR
+un
+mv
+oe
+oe
 NR
 NR
 NR
@@ -3621,11 +3718,11 @@ nh
 nh
 kS
 NR
-NR
-NR
-NR
-NR
-NR
+GT
+jX
+qX
+Lq
+qX
 NR
 NR
 NR
@@ -3657,7 +3754,7 @@ UK
 yt
 kS
 NR
-NR
+PL
 NR
 NR
 NR
@@ -3693,11 +3790,11 @@ kS
 kS
 kS
 NR
+xk
 NR
 NR
 NR
-NR
-NR
+OP
 NR
 NR
 NR
@@ -3724,12 +3821,12 @@ GF
 sb
 NR
 NR
+dP
 NR
+yO
+Cd
 NR
-NR
-NR
-NR
-NR
+wU
 NR
 NR
 NR
@@ -3760,9 +3857,9 @@ GF
 sb
 NR
 NR
-NR
-NR
-NR
+dP
+dP
+dP
 NR
 NR
 NR
@@ -3796,9 +3893,9 @@ GF
 sb
 NR
 NR
+eM
 NR
-NR
-NR
+eM
 NR
 NR
 NR
@@ -3867,7 +3964,7 @@ GF
 GF
 sb
 NR
-NR
+ds
 NR
 NR
 NR
@@ -3902,8 +3999,8 @@ GF
 (52,1,1) = {"
 GF
 sb
-NR
-NR
+Xj
+dP
 NR
 NR
 NR
@@ -3939,7 +4036,7 @@ GF
 GF
 sb
 NR
-NR
+Cd
 NR
 NR
 NR

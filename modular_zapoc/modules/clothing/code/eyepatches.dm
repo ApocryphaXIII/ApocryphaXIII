@@ -110,7 +110,7 @@
 			adjusted_state = "both"
 			desc = initial(desc)
 			oldname = "headband"
-			if((slot == ITEM_SLOT_EYES && !trick) && adjusted_state == "both")
+			if((user.glasses == src && !trick) && adjusted_state == "both")
 				user.become_blind("blindfold_[REF(src)]")
 
 	worn_icon_state = "[base_icon_state]_[adjusted_state]"

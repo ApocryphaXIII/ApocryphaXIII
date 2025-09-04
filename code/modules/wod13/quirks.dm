@@ -678,7 +678,15 @@ Dancer
 	value = 0
 	mob_trait = TRAIT_PERMAFANGS
 	gain_text = span_notice("You feel your canines on the inside of your mouth.")
-	lose_text = span_notice("You can finally close your mouth without risking your tongue.") // APOC EDIT END
+	lose_text = span_notice("You can finally close your mouth without risking your tongue.")
+
+/datum/quirk/permafangs/vampire
+	name = "Permanent Fangs (Kindred)"
+	desc = "Your fangs do not retract, making it impossible for you to hide your true nature. While some mortals may think you’ve had your teeth filed or are wearing prosthetics, sooner or later you’re going to run into someone who knows what you truly are."
+	value = -1
+	gain_text = span_warning("<span class='notice'>Your fangs become stuck.")
+	lose_text = span_notice("You feel your fangs retract again.")
+	allowed_species = list("Vampire", "Kuei-Jin") // APOC EDIT END
 
 /datum/quirk/diablerist
 	name = "Diablerist"

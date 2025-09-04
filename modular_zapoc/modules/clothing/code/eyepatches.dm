@@ -54,6 +54,7 @@
 	var/wornunder = TRUE
 	var/trick = FALSE
 	var/adjusted_state = "both"
+	var/oldname = "blindfold"
 
 
 /obj/item/clothing/glasses/apoc/blindfold/trick
@@ -89,7 +90,6 @@
 
 
 /obj/item/clothing/glasses/apoc/blindfold/proc/adjust_blindfold(mob/living/carbon/user)
-	var/oldname
 
 	switch(adjusted_state)
 		if("both")
@@ -107,6 +107,7 @@
 			desc = "A tied fabric headband."
 			oldname = "eyepatch"
 		if("head")
+			name = "blindfold"
 			adjusted_state = "both"
 			desc = initial(desc)
 			oldname = "headband"

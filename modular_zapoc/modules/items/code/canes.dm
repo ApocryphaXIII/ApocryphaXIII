@@ -9,7 +9,7 @@
 	righthand_file = 'modular_zapoc/modules/items/icons/canes_righthand.dmi'
 	force = 1
 	w_class = WEIGHT_CLASS_SMALL
-	var/extended = FALSE
+	extended = FALSE
 
 /obj/item/cane/white/AltClick(mob/user)
 	. = ..()

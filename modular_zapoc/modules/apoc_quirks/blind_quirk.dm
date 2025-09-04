@@ -11,5 +11,15 @@
 	var/obj/item/organ/eyes/eyes = H.getorganslot(ORGAN_SLOT_EYES)
 	var/obj/item/organ/ears/ears = H.getorganslot(ORGAN_SLOT_EARS)
 	eyes.damage = ears.damage
-	if(!istype(H.get_active_held_item(), /obj/item/cane) && !istype(H.get_inactive_held_item(), /obj/item/cane))
-		H.set_blurriness(5)
+
+	var/holding_cane
+	for(var/obj/item/cane/i in H.held_items)
+		if(istype(i, /obj/item/cane) && i.extended)
+			holding_cane = TRUE
+		else
+			holding_cane = FALSE
+
+	if(holding_cane)
+		H.set_blurriness(0)
+	else
+		H.set_blurriness(2)

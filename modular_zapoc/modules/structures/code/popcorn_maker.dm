@@ -3,6 +3,7 @@
 	desc = "Old fansioned, you think it might even be older then you."
 	icon = 'modular_zapoc/modules/structures/icons/popcorn_maker.dmi'
 	icon_state = "popcorn_machine"
+	density = TRUE
 	COOLDOWN_DECLARE(popcorn_cooldown)
 
 /obj/structure/popcorn_maker/attack_hand(mob/living/user)

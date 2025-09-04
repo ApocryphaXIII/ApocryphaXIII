@@ -16,8 +16,8 @@
 				/obj/item/food/pigblanket = 4,
 				/obj/item/food/butterdog = 4,
 				/obj/item/food/poppypretzel = 8,
-				/obj/item/food/nachos = 8,
-				/obj/item/food/cheesynachos = 8,
+				/obj/item/food/nachos/movie = 8,
+				/obj/item/food/cheesynachos/movie = 8,
 			),
 		),
 		list(

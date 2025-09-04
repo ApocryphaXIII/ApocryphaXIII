@@ -12,7 +12,7 @@
 			"name" = "Food",
 			"products" = list(
 				/obj/item/food/hotdog = 8,
-				/obj/item/food/butterdog = 4,
+				/obj/item/food/butterdog = 2,
 				/obj/item/food/nachos/movie = 8,
 				/obj/item/food/cheesynachos/movie = 8,
 			),

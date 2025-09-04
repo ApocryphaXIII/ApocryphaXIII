@@ -49,7 +49,7 @@
 	icon = 'modular_zapoc/modules/clothing/icons/eyepatches.dmi'
 	worn_icon = 'modular_zapoc/modules/clothing/icons/eyepatches_worn.dmi'
 	icon_state = "blindfoldwhite"
-	base_icon_state = "blindfoldwhite_both"
+	base_icon_state = "blindfoldwhite"
 	worn_icon_state = "blindfoldwhite_both"
 	var/wornunder = TRUE
 	var/trick = FALSE
@@ -110,6 +110,8 @@
 			adjusted_state = "both"
 			desc = initial(desc)
 			oldname = "headband"
+			if((slot == ITEM_SLOT_EYES && !trick) && adjusted_state == "both")
+				user.become_blind("blindfold_[REF(src)]")
 
 	worn_icon_state = "[base_icon_state]_[adjusted_state]"
 

@@ -23,11 +23,13 @@
 	if(user.get_active_held_item() == src || user.get_inactive_held_item() == src)
 		if(extended == FALSE)
 			icon_state = "[base_icon_state]_on"
+			inhand_icon_state = "[base_icon_state]_on"
 			force = 5
 			w_class = WEIGHT_CLASS_BULKY
 			extended = TRUE
 		else
-			icon_state = "[initial(icon_state)]"
+			icon_state = "[base_icon_state]"
+			inhand_icon_state = "[base_icon_state]"
 			force = initial(force)
 			w_class = initial(w_class)
 			extended = FALSE

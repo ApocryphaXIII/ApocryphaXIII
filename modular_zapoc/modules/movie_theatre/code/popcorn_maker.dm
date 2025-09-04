@@ -1,7 +1,7 @@
 /obj/structure/popcorn_maker
 	name = "popcorn maker"
 	desc = "Old fansioned, you think it might even be older then you."
-	icon = 'modular_zapoc/modules/structures/icons/popcorn_maker.dmi'
+	icon = 'modular_zapoc/modules/movie_theatre/icons/popcorn_maker.dmi'
 	icon_state = "popcorn_machine"
 	density = TRUE
 	COOLDOWN_DECLARE(popcorn_cooldown)
@@ -13,3 +13,4 @@
 		var/obj/item/food/popcorn/new_popcorn = new(loc)
 		user.put_in_hands(new_popcorn)
 		playsound(src, 'sound/machines/machine_vend.ogg', 50, TRUE)
+

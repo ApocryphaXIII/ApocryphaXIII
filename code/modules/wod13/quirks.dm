@@ -479,7 +479,7 @@ Dancer
 	mob_trait = TRAIT_HOMOSEXUAL
 	gain_text = "<span class='notice'>You feel gay.</span>"
 	lose_text = "<span class='notice'>You don't feel gay anymore.</span>"
-
+/* APOC EDIT REMOVE START
 /datum/quirk/foreign
 	name = "Foreign"
 	desc = "You don't know English language! If you don't know other languages - that means you don't know any."
@@ -495,7 +495,7 @@ Dancer
 /datum/quirk/foreign/remove()
 	var/mob/living/carbon/H = quirk_holder
 	H.remove_blocked_language(/datum/language/english)
-
+*/ // APOC EDIT REMOVE END
 /datum/quirk/espanol
 	name = "Espanol"
 	desc = "You know the Spanish language."

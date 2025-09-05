@@ -679,6 +679,7 @@ Dancer
 	mob_trait = TRAIT_PERMAFANGS
 	gain_text = "<span class='notice'>You feel your canines on the inside of your mouth.</span>"
 	lose_text = "<span class='notice'>You can finally close your mouth without risking your tongue.</span>"
+	allowed_species = list("Ghoul","Human","Imbued","Werewolf","Kuei-Jin")
 
 /datum/quirk/permafangs/vampire
 	name = "Permanent Fangs (Kindred)"

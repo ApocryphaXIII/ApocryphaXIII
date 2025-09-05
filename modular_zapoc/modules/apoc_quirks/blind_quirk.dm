@@ -2,8 +2,8 @@
 	name = "Blind"
 	desc = "Your eyes either don't work or are missing. Maybe you should bring a cane."
 	value = -4
-	gain_text = span_notice("You can't see.")
-	lose_text = span_notice("You can see!")
+	gain_text = "<span class='warning'>You can't see.</span>"
+	lose_text = "<span class='notice'>You can see!</span>"
 
 
 /datum/quirk/blind/on_process()

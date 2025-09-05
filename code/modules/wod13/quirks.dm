@@ -111,8 +111,8 @@ Dancer
 	name = "One Handed (left)" // APOC EDIT CHANGE START
 	desc = "You're missing your left arm. You're definitely not a south-paw."
 	value = -3
-	gain_text = span_warning("You can't feel your left arm!")
-	lose_text = span_notice("Huh? Your left arm is back...")
+	gain_text = "<span class='warning'>You can't feel your left arm!</span>"
+	lose_text = "<span class='notice'>Huh? Your left arm is back...</span>"
 	allowed_species = list("Vampire","Ghoul","Human","Imbued","Kuei-Jin")
 	var/arm_missing = "left"
 
@@ -120,8 +120,8 @@ Dancer
 	name = "One Handed (right)"
 	desc = "You're missing your right arm. That just ain't right."
 	value = -3
-	gain_text = span_warning("You can't feel your right arm!")
-	lose_text = span_notice("Huh? Your right arm is back...")
+	gain_text = "<span class='warning'>You can't feel your right arm!</span>"
+	lose_text = "<span class='notice'>Huh? Your right arm is back...</span>"
 	arm_missing = "right" // APOC EDIT CHANGE END
 
 /datum/quirk/one_hand/on_spawn()
@@ -677,15 +677,15 @@ Dancer
 	desc = "For one reason or another, your canines are sharp and elongated. Prosthetics? Body mod? You're an evil monster and you can't retract your horrible fangs? No matter what the reason, be careful who you let see your chompers."
 	value = 0
 	mob_trait = TRAIT_PERMAFANGS
-	gain_text = span_notice("You feel your canines on the inside of your mouth.")
-	lose_text = span_notice("You can finally close your mouth without risking your tongue.")
+	gain_text = "<span class='notice'>You feel your canines on the inside of your mouth.</span>"
+	lose_text = "<span class='notice'>You can finally close your mouth without risking your tongue.</span>"
 
 /datum/quirk/permafangs/vampire
 	name = "Permanent Fangs (Kindred)"
 	desc = "Your fangs do not retract, making it impossible for you to hide your true nature. While some mortals may think you’ve had your teeth filed or are wearing prosthetics, sooner or later you’re going to run into someone who knows what you truly are."
 	value = -1
-	gain_text = span_warning("<span class='notice'>Your fangs become stuck.")
-	lose_text = span_notice("You feel your fangs retract again.")
+	gain_text = "<span class='warning'>Your fangs become stuck.</span>"
+	lose_text = "<span class='notice'>You feel your fangs retract again.</span>"
 	allowed_species = list("Vampire", "Kuei-Jin") // APOC EDIT END
 
 /datum/quirk/diablerist

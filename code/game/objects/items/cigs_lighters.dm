@@ -318,8 +318,76 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			cig.attackby(src, user)
 		else
 			cig.light("<span class='notice'>[user] holds the [name] out for [M], and lights [M.p_their()] [cig.name].</span>")
+// APOC EDIT ADD START - Allows you to extinguish cigarettes on people, freak
+	if(lit && user.a_intent == INTENT_DISARM && !M.on_fire)
+		var/zone_selected = user.zone_selected
+		var/bodypart_cigextinguish
+
+		M.visible_message(span_warning("[user] begins putting out their [name] on [M]!"), \
+			span_userdanger("[user] begins putting out their [name] on you!"))
+		if(!do_after(user, 4 SECONDS, M))
+			return
+		M.apply_damage(3, BURN, user.zone_selected)
+		switch(zone_selected)
+			if(BODY_ZONE_PRECISE_EYES)
+				bodypart_cigextinguish = pick(list(
+					" eye, a loud hiss as the tip burns [M.p_them()]",
+					" eye, twisting it back and forth until the cherry burns out",
+					" eye, blinding [M.p_them()] for a moment"))
+			if(BODY_ZONE_PRECISE_MOUTH)
+				bodypart_cigextinguish = pick(list(
+					" tongue, blowing a cloud of smoke into [M.p_their()] mouth afterward",
+					" tongue, the embers probably don't taste too good",
+					" upper lip, the unpleasant smell directly under [M.p_their()] nose"))
+			if(BODY_ZONE_PRECISE_GROIN)
+				bodypart_cigextinguish = pick(list(
+					" inner thigh, leaving an ashy mark",
+					" inner thigh, staining [M.p_their()] flesh with the cherry",
+					" inner thigh, leaving a noticeable burn mark"))
+
+			if(BODY_ZONE_HEAD)
+				bodypart_cigextinguish = pick(list(
+					" face, leaving a circular burn mark on [M.p_their()] cheek",
+					" face, leaving a circular burn mark on [M.p_their()] forehead",
+					" neck, a mark is left with the hiss of the cherry"))
+			if(BODY_ZONE_CHEST)
+				bodypart_cigextinguish = pick(list(
+					" chest, the ash spreading over [M.p_their()] skin",
+					" chest, leaving a visible burn mark",
+					" chest, twisting the tip onto [M.p_their()] sternum"))
+
+			if(BODY_ZONE_L_ARM)
+				bodypart_cigextinguish = pick(list(
+					" arm, leaving an ashy mark",
+					" arm, staining [M.p_their()] flesh with the cherry",
+					" arm, leaving a noticeable burn mark",
+					" hand, leaving a burning mark in [M.p_their()] palm"))
+			if(BODY_ZONE_R_ARM)
+				bodypart_cigextinguish = pick(list(
+					" arm, leaving an ashy mark",
+					" arm, staining [M.p_their()] flesh with the cherry",
+					" arm, leaving a noticeable burn mark",
+					" hand, leaving a burning mark in [M.p_their()] palm"))
+
+			if(BODY_ZONE_L_LEG)
+				bodypart_cigextinguish = pick(list(
+					" thigh, leaving an ashy mark",
+					" thigh, staining [M.p_their()] flesh with the cherry",
+					" leg, leaving a noticeable burn mark",
+					" leg, ash spreads over [M.p_their()] skin"))
+			if(BODY_ZONE_R_LEG)
+				bodypart_cigextinguish = pick(list(
+					" thigh, leaving an ashy mark",
+					" thigh, staining [M.p_their()] flesh with the cherry",
+					" leg, leaving a noticeable burn mark",
+					" leg, ash spreads over [M.p_their()] skin"))
+		user.visible_message(span_rose("With a push of [user.p_their()] [name] onto [M], [src] is snuffed using [M.p_their()][bodypart_cigextinguish]. Damn, [user.p_theyre()] a freak."))
+		new type_butt(user.loc)
+		qdel(src)
 	else
 		return ..()
+// APOC EDIT ADD END
+
 
 /obj/item/clothing/mask/cigarette/fire_act(exposed_temperature, exposed_volume)
 	light()

@@ -17,8 +17,9 @@
 	to_chat(user, span_notice("You adjust the [src]."))
 
 
-/obj/item/clothing/glasses/apoc/eyepatch/proc/on_examine(datum/source, mob/user, list/examine_list)
-	examine_list += "Alt-click to flip the eyepatch to the other eye."
+/obj/item/clothing/glasses/apoc/eyepatch/examine(mob/user)
+	. = ..()
+	. += "Alt-click to flip the eyepatch to the other eye."
 
 
 /obj/item/clothing/glasses/apoc/eyepatch/AltClick(mob/user)

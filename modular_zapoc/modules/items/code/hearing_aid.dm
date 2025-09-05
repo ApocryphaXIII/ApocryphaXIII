@@ -19,7 +19,7 @@
 
 /obj/item/clothing/ears/hearing_aid/examine(mob/user)
 	. = ..()
-	. += "Alt-click to flip the hearing aid to the other ear."
+	. += span_notice("Alt-click to flip the hearing aid to the other ear.")
 
 
 /obj/item/clothing/ears/hearing_aid/AltClick(mob/user)

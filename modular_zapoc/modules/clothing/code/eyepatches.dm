@@ -19,7 +19,7 @@
 
 /obj/item/clothing/glasses/apoc/eyepatch/examine(mob/user)
 	. = ..()
-	. += "Alt-click to flip the eyepatch to the other eye."
+	. += span_notice("Alt-click to flip the eyepatch to the other eye.")
 
 
 /obj/item/clothing/glasses/apoc/eyepatch/AltClick(mob/user)

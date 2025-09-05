@@ -3763,6 +3763,7 @@
 #include "modular_tfn\modules\retail\stores\smoke_menu.dm"
 #include "modular_tfn\modules\subtle\subtle.dm"
 #include "modular_tfn\modules\taser_tfn13\taser_tfn13.dm"
+#include "modular_zapoc\_DEFINES\jobs.dm"
 #include "modular_zapoc\master_files\code\modules\client\preferences.dm"
 #include "modular_zapoc\master_files\code\modules\mob\living\living_defines.dm"
 #include "modular_zapoc\_DEFINES\_access.dm"

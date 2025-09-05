@@ -1,4 +1,4 @@
-/datum/quirk/Deaf
+/datum/quirk/deaf
 	name = "Deaf"
 	desc = "Your ears don't pick up sound very well. A hearing aid might help..."
 	value = -3

@@ -10,5 +10,5 @@
 
 	if(!(HAS_TRAIT(H, TRAIT_DEAF) && HAS_TRAIT_FROM(H, TRAIT_DEAF, "quirk")) && !istype(H.ears, /obj/item/clothing/ears/hearing_aid))
 		ADD_TRAIT(H, TRAIT_DEAF, "quirk")
-	else if(!istype(H.ears, /obj/item/clothing/ears/hearing_aid))
+	else if(istype(H.ears, /obj/item/clothing/ears/hearing_aid))
 		REMOVE_TRAIT(H, TRAIT_DEAF, "quirk")

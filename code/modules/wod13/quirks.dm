@@ -479,9 +479,9 @@ Dancer
 	mob_trait = TRAIT_HOMOSEXUAL
 	gain_text = "<span class='notice'>You feel gay.</span>"
 	lose_text = "<span class='notice'>You don't feel gay anymore.</span>"
-/* APOC EDIT REMOVE START
+/* //APOC EDIT REMOVE START
 /datum/quirk/foreign
-	name = "Foreign"
+	name = "Foreigner"
 	desc = "You don't know English language! If you don't know other languages - that means you don't know any."
 	value = -3
 	gain_text = "<span class='notice'>The words being spoken around you don't make any sense."

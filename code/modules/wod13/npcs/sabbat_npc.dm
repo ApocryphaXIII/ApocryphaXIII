@@ -21,109 +21,6 @@
 	possible_clan = list(/datum/vampire_clan/gangrel)
 //============================================================
 
-/mob/living/carbon/human/npc/sabbat/shovelhead/LateInitialize()
-	. = ..()
-	//assign their special stuff. species, clan, etc
-	roundstart_vampire = FALSE
-	set_species(/datum/species/kindred)
-	var/random_clan = pick(possible_clan)
-	clan = new random_clan()
-	create_disciplines(FALSE, clan.clan_disciplines)
-	generation = 12
-	ADD_TRAIT(src, TRAIT_MESSY_EATER, "sabbat_shovelhead")
-	is_criminal = TRUE
-
-	//dress them, name them
-	AssignSocialRole(pick(/datum/socialrole/usualmale, /datum/socialrole/usualfemale))
-
-	AddElement(/datum/element/point_of_interest)
-
-	//store actions to use later based on what we rolled for disciplines
-	for(var/datum/action/discipline/action in actions)
-		if(action.discipline.name == "Bloodheal")
-			blood_heal_action = action
-			continue // we don't want to add this to the targeted/untargeted lists
-		else if(action.discipline.name == "Auspex")
-			continue // or this. everything else should be OK
-		var/datum/discipline_power/power = action.discipline.current_power
-		if(power.target_type == NONE) //build our list of targeted and untargeted disciplines
-			untargeted_disciplines += action
-		else
-			targeted_disciplines += action
-
-	//bloody their clothes
-	if(wear_mask)
-		wear_mask.add_mob_blood(src)
-		update_inv_wear_mask()
-	if(head)
-		head.add_mob_blood(src)
-		update_inv_head()
-	if(wear_suit)
-		wear_suit.add_mob_blood(src)
-		update_inv_wear_suit()
-	if(w_uniform)
-		w_uniform.add_mob_blood(src)
-		update_inv_w_uniform()
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/death(gibbed)
-	. = ..()
-	dust(TRUE)
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/torpor(source)
-	dust(TRUE)
-//============================================================
-/mob/living/carbon/human/npc/sabbat/shovelhead/AssignSocialRole(datum/socialrole/S, dont_random = FALSE)
-	. = ..()
-	real_name = pick("Shovelhead","Mass-embraced Lunatic", "Reanimated Psycho")
-	name = real_name
-	dna.real_name = real_name
-
-/mob/living/carbon/human/toggle_resting()
-	..()
-	update_shadow()
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/attack_hand(mob/living/attacker)
-	if(!attacker)
-		return
-	for(var/mob/living/carbon/human/npc/sabbat/shovelhead/NEPIC in oviewers(7, src))
-		NEPIC.Aggro(attacker)
-	Aggro(attacker, TRUE)
-	..()
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/on_hit(obj/projectile/P)
-	. = ..()
-	if(!P || !P.firer)
-		return
-	for(var/mob/living/carbon/human/npc/sabbat/shovelhead/NEPIC in oviewers(7, src))
-		NEPIC.Aggro(P.firer)
-	Aggro(P.firer, TRUE)
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum)
-	. = ..()
-	if(throwingdatum?.thrower && (AM.throwforce > 5 || (AM.throwforce && src.health < src.maxHealth)))
-		Aggro(throwingdatum.thrower, TRUE)
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/attackby(obj/item/W, mob/living/attacker, params)
-	. = ..()
-	if(!attacker)
-		return
-	if(W.force > 5 || (W.force && src.health < src.maxHealth))
-		for(var/mob/living/carbon/human/npc/sabbat/shovelhead/NEPIC in oviewers(7, src))
-			NEPIC.Aggro(attacker)
-		Aggro(attacker, TRUE)
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/EmoteAction()
-	return
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/StareAction()
-	return
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/SpeechAction()
-	return
-
-/mob/living/carbon/human/npc/sabbat/shovelhead/ghoulificate(mob/owner)
-	return FALSE
-
 	var/list/shovelhead_idle_phrases = list(
 		"A memory... almost... gone...",
 		"Alone... so... alone...",
@@ -241,6 +138,109 @@
 		"Your fault... you're warm!",
 		"Your life... so bright..."
 	)
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/LateInitialize()
+	. = ..()
+	//assign their special stuff. species, clan, etc
+	roundstart_vampire = FALSE
+	set_species(/datum/species/kindred)
+	var/random_clan = pick(possible_clan)
+	clan = new random_clan()
+	create_disciplines(FALSE, clan.clan_disciplines)
+	generation = 12
+	ADD_TRAIT(src, TRAIT_MESSY_EATER, "sabbat_shovelhead")
+	is_criminal = TRUE
+
+	//dress them, name them
+	AssignSocialRole(pick(/datum/socialrole/usualmale, /datum/socialrole/usualfemale))
+
+	AddElement(/datum/element/point_of_interest)
+
+	//store actions to use later based on what we rolled for disciplines
+	for(var/datum/action/discipline/action in actions)
+		if(action.discipline.name == "Bloodheal")
+			blood_heal_action = action
+			continue // we don't want to add this to the targeted/untargeted lists
+		else if(action.discipline.name == "Auspex")
+			continue // or this. everything else should be OK
+		var/datum/discipline_power/power = action.discipline.current_power
+		if(power.target_type == NONE) //build our list of targeted and untargeted disciplines
+			untargeted_disciplines += action
+		else
+			targeted_disciplines += action
+
+	//bloody their clothes
+	if(wear_mask)
+		wear_mask.add_mob_blood(src)
+		update_inv_wear_mask()
+	if(head)
+		head.add_mob_blood(src)
+		update_inv_head()
+	if(wear_suit)
+		wear_suit.add_mob_blood(src)
+		update_inv_wear_suit()
+	if(w_uniform)
+		w_uniform.add_mob_blood(src)
+		update_inv_w_uniform()
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/death(gibbed)
+	. = ..()
+	dust(TRUE)
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/torpor(source)
+	dust(TRUE)
+//============================================================
+/mob/living/carbon/human/npc/sabbat/shovelhead/AssignSocialRole(datum/socialrole/S, dont_random = FALSE)
+	. = ..()
+	real_name = pick("Shovelhead","Mass-embraced Lunatic", "Reanimated Psycho")
+	name = real_name
+	dna.real_name = real_name
+
+/mob/living/carbon/human/toggle_resting()
+	..()
+	update_shadow()
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/attack_hand(mob/living/attacker)
+	if(!attacker)
+		return
+	for(var/mob/living/carbon/human/npc/sabbat/shovelhead/NEPIC in oviewers(7, src))
+		NEPIC.Aggro(attacker)
+	Aggro(attacker, TRUE)
+	..()
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/on_hit(obj/projectile/P)
+	. = ..()
+	if(!P || !P.firer)
+		return
+	for(var/mob/living/carbon/human/npc/sabbat/shovelhead/NEPIC in oviewers(7, src))
+		NEPIC.Aggro(P.firer)
+	Aggro(P.firer, TRUE)
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum)
+	. = ..()
+	if(throwingdatum?.thrower && (AM.throwforce > 5 || (AM.throwforce && src.health < src.maxHealth)))
+		Aggro(throwingdatum.thrower, TRUE)
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/attackby(obj/item/W, mob/living/attacker, params)
+	. = ..()
+	if(!attacker)
+		return
+	if(W.force > 5 || (W.force && src.health < src.maxHealth))
+		for(var/mob/living/carbon/human/npc/sabbat/shovelhead/NEPIC in oviewers(7, src))
+			NEPIC.Aggro(attacker)
+		Aggro(attacker, TRUE)
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/EmoteAction()
+	return
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/StareAction()
+	return
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/SpeechAction()
+	return
+
+/mob/living/carbon/human/npc/sabbat/shovelhead/ghoulificate(mob/owner)
+	return FALSE
 
 /mob/living/carbon/human/npc/sabbat/shovelhead/Annoy(atom/source)
 	return

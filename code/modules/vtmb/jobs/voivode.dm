@@ -35,12 +35,12 @@
 		allowed_bloodlines -= clan_name
 
 /datum/job/vamp/voivode/on_free_job(mob/living/carbon/human/despawning)
-    if(!despawning.clan)
-        return
-    var/clan_name = despawning.clan.name
-    if(despawning.clan && (clan_name in src::allowed_bloodlines))
-        allowed_bloodlines += clan_name
-//APOC EDIT END
+	if(!despawning.clan)
+		return
+	var/clan_name = despawning.clan.name
+	if(despawning.clan && (clan_name in src::allowed_bloodlines))
+		allowed_bloodlines += clan_name
+// APOC EDIT END
 
 
 /datum/outfit/job/voivode

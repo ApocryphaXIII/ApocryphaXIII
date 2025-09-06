@@ -7,7 +7,7 @@
 /obj/item/clothing/suit/vampire
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 	body_parts_covered = CHEST
 	cold_protection = CHEST|GROIN
@@ -28,7 +28,7 @@
 	desc = "A set of PPE, made for working with chemicals."
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "heisenberg"
 	inhand_icon_state = "heisenberg"
 	body_parts_covered = CHEST | GROIN | ARMS
@@ -44,7 +44,7 @@
 	icon_state = "heisenberg_helm"
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	body_parts_covered = HEAD
 	cold_protection = HEAD
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
@@ -59,7 +59,7 @@
 	icon_state = "robes"
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	inhand_icon_state = "robes"
 	flags_inv = HIDEJUMPSUIT
 	body_parts_covered = CHEST | GROIN | LEGS | ARMS
@@ -73,7 +73,7 @@
 	icon_state = "robes_hood"
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	body_parts_covered = HEAD
 	cold_protection = HEAD
 	flags_inv = HIDEHAIR | HIDEEARS
@@ -202,7 +202,7 @@
 	icon_state = "hoodie"
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	body_parts_covered = CHEST | GROIN | ARMS
 	cold_protection = CHEST | GROIN | ARMS
 	hoodtype = /obj/item/clothing/head/hooded/hood_hood
@@ -214,7 +214,7 @@
 	icon_state = "hoodie_hood"
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	body_parts_covered = HEAD
 	cold_protection = HEAD
 	flags_inv = HIDEHAIR | HIDEEARS
@@ -481,7 +481,7 @@
 /obj/item/clothing/suit/pentex
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	body_parts_covered = CHEST
 	cold_protection = CHEST|GROIN
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT

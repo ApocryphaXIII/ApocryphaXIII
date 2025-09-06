@@ -243,7 +243,7 @@
 	desc = "Just blood and guts..."
 	icon_state = "guts"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/spine
@@ -251,7 +251,7 @@
 	desc = "If only I had control..."
 	icon_state = "spine"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_SMALL
 
 /datum/crafting_recipe/tzi_biter
@@ -503,7 +503,7 @@
 	desc = "Boghatyrskaya sila taitsa zdies'..."
 	icon_state = "dirt"
 	icon = 'code/modules/wod13/icons.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_SMALL
 
 /datum/material/vicissitude_flesh
@@ -541,7 +541,7 @@
 	desc = "What the fuck..."
 	singular_name = "human flesh"
 	icon_state = "human"
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	mats_per_unit = list(/datum/material/vicissitude_flesh = MINERAL_MATERIAL_AMOUNT)
 	merge_type = /obj/item/stack/human_flesh
 	max_amount = 50

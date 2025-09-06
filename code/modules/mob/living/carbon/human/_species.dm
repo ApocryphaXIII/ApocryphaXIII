@@ -62,14 +62,14 @@ GLOBAL_LIST_EMPTY(selectable_races)
 	///What languages this species can understand and say. Use a [language holder datum][/datum/language_holder] in this var.
 	var/species_language_holder = /datum/language_holder
 	/**
-	 * Visible CURRENT bodyparts that are unique to a species.
-	 * DO NOT USE THIS AS A LIST OF ALL POSSIBLE BODYPARTS AS IT WILL FUCK
-	 * SHIT UP! Changes to this list for non-species specific bodyparts (ie
-	 * cat ears and tails) should be assigned at organ level if possible.
-	 * Assoc values are defaults for given bodyparts, also modified by aforementioned organs.
-	 * They also allow for faster '[]' list access versus 'in'. Other than that, they are useless right now.
-	 * Layer hiding is handled by [/datum/species/proc/handle_mutant_bodyparts] below.
-	 */
+ * Visible CURRENT bodyparts that are unique to a species.
+ * DO NOT USE THIS AS A LIST OF ALL POSSIBLE BODYPARTS AS IT WILL FUCK
+ * SHIT UP! Changes to this list for non-species specific bodyparts (ie
+ * cat ears and tails) should be assigned at organ level if possible.
+ * Assoc values are defaults for given bodyparts, also modified by aforementioned organs.
+ * They also allow for faster '[]' list access versus 'in'. Other than that, they are useless right now.
+ * Layer hiding is handled by [/datum/species/proc/handle_mutant_bodyparts] below.
+ */
 	var/list/mutant_bodyparts = list()
 	///Internal organs that are unique to this race, like a tail.
 	var/list/mutant_organs = list()
@@ -112,7 +112,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 	///To use MUTCOLOR with a fixed color that's independent of the mcolor feature in DNA.
 	var/fixed_mut_color = ""
 	///Special mutation that can be found in the genepool exclusively in this species. Dont leave empty or changing species will be a headache
-	var/inert_mutation 	= DWARFISM
+	var/inert_mutation = DWARFISM
 	///Used to set the mob's deathsound upon species change
 	var/deathsound
 	///Sounds to override barefeet walking

@@ -407,7 +407,7 @@
 			if(!HAS_TRAIT(H, TRAIT_SECURITY_HUD))
 				return
 			if(usr.stat || usr == src) //|| !usr.canmove || usr.restrained()) Fluff: Sechuds have eye-tracking technology and sets 'arrest' to people that the wearer looks and blinks at.
-				return													 //Non-fluff: This allows sec to set people to arrest as they get disarmed or beaten
+				return										//Non-fluff: This allows sec to set people to arrest as they get disarmed or beaten
 			// Checks the user has security clearence before allowing them to change arrest status via hud, comment out to enable all access
 			var/allowed_access = null
 			var/obj/item/clothing/glasses/hud/security/G = H.glasses

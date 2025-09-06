@@ -194,7 +194,7 @@
 	var/obj/item/storage/backpack/duffelbag/cursed/conjuredduffel= new get_turf(target)
 
 	duffelvictim.visible_message("<span class='danger'>A growling duffel bag appears on [duffelvictim]!</span>", \
-						 "<span class='danger'>You feel something attaching itself to you, and a strong desire to discuss your [elaborate_backstory] at length!</span>")
+			"<span class='danger'>You feel something attaching itself to you, and a strong desire to discuss your [elaborate_backstory] at length!</span>")
 
 	if(duffelvictim.dropItemToGround(duffelvictim.back))
 		duffelvictim.equip_to_slot_if_possible(conjuredduffel, ITEM_SLOT_BACK, TRUE, TRUE)

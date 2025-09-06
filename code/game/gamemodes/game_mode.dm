@@ -34,7 +34,7 @@
 	var/mob/living/living_antag_player = null
 	var/datum/game_mode/replacementmode = null
 	var/round_converted = 0 //0: round not converted, 1: round going to convert, 2: round converted
-	var/reroll_friendly 	//During mode conversion only these are in the running
+	var/reroll_friendly //During mode conversion only these are in the running
 	var/continuous_sanity_checked	//Catches some cases where config options could be used to suggest that modes without antagonists should end when all antagonists die
 	var/enemy_minimum_age = 7 //How many days must players have been playing before they can play this antagonist
 

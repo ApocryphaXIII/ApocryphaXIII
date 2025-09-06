@@ -26,7 +26,7 @@
 	switch(screen)
 
 
-	 // --- Main Menu ---
+ // --- Main Menu ---
 
 		if(0)
 			dat += "<br>[temp]<br><br>"
@@ -41,7 +41,7 @@
 				dat += "<a href='byond://?src=[REF(src)];operation=probe'>\[Probe Network\]</a>"
 
 
-	 // --- Viewing Machine ---
+ // --- Viewing Machine ---
 
 		if(1)
 			dat += "<br>[temp]<br>"

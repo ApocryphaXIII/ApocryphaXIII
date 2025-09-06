@@ -1,14 +1,14 @@
 /obj/structure/retail/costume_store
 	desc = "Purchase a mask for that ugly mug."
 	products_list = list(
-		new /datum/data/vending_product("balaclava",	 /obj/item/clothing/mask/vampire/balaclava,	10),
-		new /datum/data/vending_product("bear mask",	 /obj/item/clothing/mask/animal/rat/bear,	13),
+		new /datum/data/vending_product("balaclava", /obj/item/clothing/mask/vampire/balaclava,	10),
+		new /datum/data/vending_product("bear mask", /obj/item/clothing/mask/animal/rat/bear,	13),
 		new /datum/data/vending_product("rat mask",	/obj/item/clothing/mask/animal/rat,	10),
 		new /datum/data/vending_product("bee mask",	/obj/item/clothing/mask/animal/rat/bee,	12),
 		new /datum/data/vending_product("fox mask",	/obj/item/clothing/mask/animal/rat/fox,	10),
 		new /datum/data/vending_product("bat mask",	/obj/item/clothing/mask/animal/rat/bat,	15),
 		new /datum/data/vending_product("raven mask",	/obj/item/clothing/mask/animal/rat/raven,	20),
-		new /datum/data/vending_product("jackal mask",	 /obj/item/clothing/mask/animal/rat/jackal,	20),
+		new /datum/data/vending_product("jackal mask", /obj/item/clothing/mask/animal/rat/jackal,	20),
 		new /datum/data/vending_product("medical mask",	/obj/item/clothing/mask/surgical,	10),
 		new /datum/data/vending_product("mummy mask",	/obj/item/clothing/mask/mummy,	15),
 		new /datum/data/vending_product("scarecrow mask",	/obj/item/clothing/mask/scarecrow,	10),
@@ -22,7 +22,7 @@
 		new /datum/data/vending_product("bloody mask",	/obj/item/clothing/mask/vampire/venetian_mask/scary,	30),
 		new /datum/data/vending_product("comedy mask", /obj/item/clothing/mask/vampire/comedy,	25),
 		new /datum/data/vending_product("tragedy mask", /obj/item/clothing/mask/vampire/tragedy,	25),
-		new /datum/data/vending_product("shemagh",	 /obj/item/clothing/mask/vampire/shemagh,	20),
+		new /datum/data/vending_product("shemagh", /obj/item/clothing/mask/vampire/shemagh,	20),
 		new /datum/data/vending_product("white robes",	/obj/item/clothing/suit/hooded/robes,	40),
 		new /datum/data/vending_product("black robes",	/obj/item/clothing/suit/hooded/robes/black,	40),
 		new /datum/data/vending_product("grey robes",	/obj/item/clothing/suit/hooded/robes/grey,	40),

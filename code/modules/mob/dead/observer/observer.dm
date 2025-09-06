@@ -206,7 +206,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 		updatedir = 1
 	else
 		updatedir = 0	//stop updating the dir in case we want to show accessories with dirs on a ghost sprite without dirs
-		setDir(2 		)//reset the dir to its default so the sprites all properly align up
+		setDir(2 )//reset the dir to its default so the sprites all properly align up
 
 /*
  * Increase the brightness of a color by calculating the average distance between the R, G and B values,
@@ -463,7 +463,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 
 	var/list/dest = list() //List of possible destinations (mobs)
-	var/target = null	 //Chosen target.
+	var/target = null //Chosen target.
 
 	dest += getpois(mobs_only = TRUE) //Fill list, prompt user with list
 	target = input("Please, select a player!", "Jump to Mob", null, null) as null|anything in dest
@@ -472,7 +472,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 	else
 		var/mob/M = dest[target] //Destination mob
-		var/mob/A = src			 //Source mob
+		var/mob/A = src//Source mob
 		var/turf/T = get_turf(M) //Turf of the destination mob
 
 		if(T && isturf(T))	//Make sure the turf exists, then move the source to that destination.

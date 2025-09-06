@@ -50,8 +50,8 @@ DEFINE_BITFIELD(smoothing_junction, list(
 #define ADJ_FOUND 1
 #define NULLTURF_BORDER 2
 
-#define DEFAULT_UNDERLAY_ICON 			'icons/turf/floors.dmi'
-#define DEFAULT_UNDERLAY_ICON_STATE 	"plating"
+#define DEFAULT_UNDERLAY_ICON 	'icons/turf/floors.dmi'
+#define DEFAULT_UNDERLAY_ICON_STATE "plating"
 
 
 #define SET_ADJ_IN_DIR(source, junction, direction, direction_flag) \

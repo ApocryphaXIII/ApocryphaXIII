@@ -108,18 +108,18 @@ SUBSYSTEM_DEF(events)
 	holder.forceEvent()
 
 /datum/admins/proc/forceEvent()
-	var/dat 	= ""
-	var/normal 	= ""
-	var/magic 	= ""
+	var/dat = ""
+	var/normal = ""
+	var/magic = ""
 	var/holiday = ""
 	for(var/datum/round_event_control/E in SSevents.control)
 		dat = "<BR><A href='byond://?src=[REF(src)];[HrefToken()];forceevent=[REF(E)]'>[E]</A>"
 		if(E.holidayID)
 			holiday	+= dat
 		else if(E.wizardevent)
-			magic 	+= dat
+			magic += dat
 		else
-			normal 	+= dat
+			normal += dat
 
 	dat = normal + "<BR>" + magic + "<BR>" + holiday
 
@@ -159,8 +159,8 @@ SUBSYSTEM_DEF(events)
 		return		// Holiday stuff was not enabled in the config!
 
 	var/YYYY = text2num(time2text(world.timeofday, "YYYY")) // get the current year
-	var/MM = text2num(time2text(world.timeofday, "MM")) 	// get the current month
-	var/DD = text2num(time2text(world.timeofday, "DD")) 	// get the current day
+	var/MM = text2num(time2text(world.timeofday, "MM")) // get the current month
+	var/DD = text2num(time2text(world.timeofday, "DD")) // get the current day
 	var/DDD = time2text(world.timeofday, "DDD")	// get the current weekday
 
 	for(var/H in subtypesof(/datum/holiday))

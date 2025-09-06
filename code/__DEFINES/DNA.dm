@@ -66,7 +66,7 @@
 // String identifiers for associative list lookup
 
 //Types of usual mutations
-#define	POSITIVE 			1
+#define	POSITIVE 	1
 #define	NEGATIVE			2
 #define	MINOR_NEGATIVE		4
 
@@ -108,7 +108,7 @@
 #define DIGITIGRADE		10
 #define NO_UNDERWEAR	11
 #define NOSTOMACH		12
-#define NO_DNA_COPY	 13
+#define NO_DNA_COPY 13
 #define DRINKSBLOOD		14
 /// Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting
 #define DYNCOLORS		15
@@ -125,7 +125,7 @@
 /// Do not draw blood overlay
 #define NOBLOODOVERLAY 21
 ///No augments, for monkeys in specific because they will turn into fucking freakazoids https://cdn.discordapp.com/attachments/326831214667235328/791313258912153640/102707682-fa7cad80-4294-11eb-8f13-8c689468aeb0.png
-#define NOAUGMENTS 		22
+#define NOAUGMENTS 22
 
 //organ slots
 #define ORGAN_SLOT_BRAIN "brain"
@@ -162,8 +162,8 @@
 #define ORGAN_SLOT_XENO_EGGSAC "eggsac"
 
 //organ defines
-#define STANDARD_ORGAN_THRESHOLD 	100
-#define STANDARD_ORGAN_HEALING 		0.001
+#define STANDARD_ORGAN_THRESHOLD 100
+#define STANDARD_ORGAN_HEALING 0.001
 /// designed to fail organs when left to decay for ~15 minutes
 #define STANDARD_ORGAN_DECAY		0.00222
 

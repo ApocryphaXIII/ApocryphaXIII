@@ -16,7 +16,7 @@
 #define DISEASE_SPREAD_NON_CONTAGIOUS	(1<<1)
 #define DISEASE_SPREAD_BLOOD			(1<<2)
 #define DISEASE_SPREAD_CONTACT_FLUIDS	(1<<3)
-#define DISEASE_SPREAD_CONTACT_SKIN 	(1<<4)
+#define DISEASE_SPREAD_CONTACT_SKIN (1<<4)
 #define DISEASE_SPREAD_AIRBORNE			(1<<5)
 
 //Severity Defines
@@ -31,6 +31,6 @@
 /// Diseases that can do significant harm, or severe disruption (brainrot)
 #define DISEASE_SEVERITY_HARMFUL	"Harmful"
 /// Diseases that can kill or maim if left untreated (flesh eating, blindness)
-#define DISEASE_SEVERITY_DANGEROUS 	"Dangerous"
+#define DISEASE_SEVERITY_DANGEROUS "Dangerous"
 /// Diseases that can quickly kill an unprepared victim (fungal tb, gbs)
 #define DISEASE_SEVERITY_BIOHAZARD	"BIOHAZARD"

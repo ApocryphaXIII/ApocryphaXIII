@@ -8,7 +8,7 @@ GLOBAL_LIST_INIT(malkavian_character_replacements, list(
 		"o"	= "𝙤",			"O" = "𝙊",
 		"s"	= "𝘴",			"S" = "𝙎",
 		"u"	= "𝙪",			"U" = "𝙐",
-		"v"	 = "𝐯",			"V" = "𝓥",
+		"v" = "𝐯",			"V" = "𝓥",
 	))
 
 /datum/vampire_clan/malkavian

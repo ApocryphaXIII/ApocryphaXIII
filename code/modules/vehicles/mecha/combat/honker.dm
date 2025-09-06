@@ -54,7 +54,7 @@
 							setInterval(function(){
 								window.location='byond://?src=[REF(src)]&update_content=1';
 								document.body.style.color = get_rand_color_string();
-							 document.body.style.background = get_rand_color_string();
+				document.body.style.background = get_rand_color_string();
 							}, 1000);
 						}
 

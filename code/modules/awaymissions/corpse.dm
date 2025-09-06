@@ -312,7 +312,7 @@
 	qdel(src)
 
 /obj/effect/mob_spawn/slime
-	mob_type = 	/mob/living/simple_animal/slime
+	mob_type = /mob/living/simple_animal/slime
 	var/mobcolour = "grey"
 	icon = 'icons/mob/slimes.dmi'
 	icon_state = "grey baby slime" //sets the icon in the map editor

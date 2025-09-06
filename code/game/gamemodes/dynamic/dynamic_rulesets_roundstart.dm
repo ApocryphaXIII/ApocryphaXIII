@@ -1,8 +1,8 @@
 
 //////////////////////////////////////////////
-//										 //
-//		 SYNDICATE TRAITORS			 //
-//										 //
+//							//
+// SYNDICATE TRAITORS//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/traitor
@@ -42,9 +42,9 @@
 		mode.picking_specific_rule(/datum/dynamic_ruleset/midround/autotraitor)
 
 //////////////////////////////////////////
-//									 //
-//		 BLOOD BROTHERS			 //
-//									 //
+//						//
+// BLOOD BROTHERS//
+//						//
 //////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/traitorbro
@@ -92,9 +92,9 @@
 	return TRUE
 
 //////////////////////////////////////////////
-//										 //
-//			 CHANGELINGS				//
-//										 //
+//							//
+//CHANGELINGS				//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/changeling
@@ -129,9 +129,9 @@
 	return TRUE
 
 //////////////////////////////////////////////
-//										 //
-//			 ELDRITCH CULT			 //
-//										 //
+//							//
+//ELDRITCH CULT//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/heretics
@@ -172,9 +172,9 @@
 
 
 //////////////////////////////////////////////
-//										 //
-//			 WIZARDS					//
-//										 //
+//							//
+//WIZARDS					//
+//							//
 //////////////////////////////////////////////
 
 // Dynamic is a wonderful thing that adds wizards to every round and then adds even more wizards during the round.
@@ -216,9 +216,9 @@
 	return TRUE
 
 //////////////////////////////////////////////
-//										 //
+//							//
 //				BLOOD CULT				//
-//										 //
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/bloodcult
@@ -273,9 +273,9 @@
 		SSticker.news_report = CULT_FAILURE
 
 //////////////////////////////////////////////
-//										 //
-//		 NUCLEAR OPERATIVES			 //
-//										 //
+//							//
+// NUCLEAR OPERATIVES//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/nuclear
@@ -357,9 +357,9 @@
 			SSticker.news_report = OPERATIVE_SKIRMISH
 
 //////////////////////////////////////////////
-//										 //
-//			 REVS						//
-//										 //
+//							//
+//REVS						//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/revs
@@ -442,9 +442,9 @@
 	revolution.round_result(finished)
 
 //////////////////////////////////////////////
-//										 //
-//				 FAMILIES				 //
-//										 //
+//							//
+//	FAMILIES	//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/families
@@ -487,9 +487,9 @@
 // Admin only rulesets. The threat requirement is 101 so it is not possible to roll them.
 
 //////////////////////////////////////////////
-//										 //
-//			 EXTENDED				 //
-//										 //
+//							//
+//EXTENDED	//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/extended
@@ -511,9 +511,9 @@
 	return TRUE
 
 //////////////////////////////////////////////
-//										 //
-//			 CLOWN OPS				 //
-//										 //
+//							//
+//CLOWN OPS	//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/nuclear/clown_ops
@@ -536,9 +536,9 @@
 
 
 //////////////////////////////////////////////
-//										 //
-//			 MONKEY					 //
-//										 //
+//							//
+//MONKEY		//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/monkey
@@ -599,9 +599,9 @@
 		SSticker.mode_result = "loss - staff stopped the monkeys"
 
 //////////////////////////////////////////////
-//										 //
-//			 METEOR					 //
-//										 //
+//							//
+//METEOR		//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/meteor

@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(portals)							//list of all /obj/effect/portal
 GLOBAL_LIST_EMPTY(airlocks)							//list of all airlocks
 GLOBAL_LIST_EMPTY(curtains)							//list of all curtains
 GLOBAL_LIST_EMPTY(mechas_list)						//list of all mechs. Used by hostile mobs target tracking.
-GLOBAL_LIST_EMPTY(shuttle_caller_list) 			//list of all communication consoles and AIs, for automatic shuttle calls when there are none.
+GLOBAL_LIST_EMPTY(shuttle_caller_list) 	//list of all communication consoles and AIs, for automatic shuttle calls when there are none.
 GLOBAL_LIST_EMPTY(machines)							//NOTE: this is a list of ALL machines now. The processing machines list is SSmachine.processing !
 GLOBAL_LIST_EMPTY(navigation_computers)				//list of all /obj/machinery/computer/camera_advanced/shuttle_docker
 GLOBAL_LIST_EMPTY(syndicate_shuttle_boards)			//important to keep track of for managing nukeops war declarations.
@@ -27,9 +27,9 @@ GLOBAL_LIST_EMPTY(tracked_implants)			//list of all current implants that are tr
 GLOBAL_LIST_EMPTY(tracked_chem_implants)			//list of implants the prisoner console can track and send inject commands too
 GLOBAL_LIST_EMPTY(poi_list)					//list of points of interest for observe/follow
 GLOBAL_LIST_EMPTY(pinpointer_list)			//list of all pinpointers. Used to change stuff they are pointing to all at once.
-GLOBAL_LIST_EMPTY(zombie_infection_list) 		// A list of all zombie_infection organs, for any mass "animation"
+GLOBAL_LIST_EMPTY(zombie_infection_list) // A list of all zombie_infection organs, for any mass "animation"
 GLOBAL_LIST_EMPTY(meteor_list)				// List of all meteors.
-GLOBAL_LIST_EMPTY(active_jammers)			 // List of active radio jammers
+GLOBAL_LIST_EMPTY(active_jammers)// List of active radio jammers
 GLOBAL_LIST_EMPTY(ladders)
 GLOBAL_LIST_EMPTY(trophy_cases)
 ///This is a global list of all signs you can change an existing sign or new sign backing to, when using a pen on them.
@@ -40,7 +40,7 @@ GLOBAL_LIST_EMPTY(wire_name_directory)
 
 GLOBAL_LIST_EMPTY(ai_status_displays)
 
-GLOBAL_LIST_EMPTY(mob_spawners) 			// All mob_spawn objects
+GLOBAL_LIST_EMPTY(mob_spawners) 	// All mob_spawn objects
 GLOBAL_LIST_EMPTY(alert_consoles)			// Station alert consoles, /obj/machinery/computer/station_alert
 
 GLOBAL_LIST_EMPTY(air_scrub_names)			// Name list of all air scrubbers

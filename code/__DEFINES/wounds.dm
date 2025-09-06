@@ -76,20 +76,20 @@ GLOBAL_LIST_INIT(global_all_wound_types, list(/datum/wound/blunt/critical, /datu
 
 // ~random wound balance defines
 /// how quickly sanitization removes infestation and decays per tick
-#define WOUND_BURN_SANITIZATION_RATE 	0.15
+#define WOUND_BURN_SANITIZATION_RATE 0.15
 /// how much blood you can lose per tick per slash max. 8 is a LOT of blood for one cut so don't worry about hitting it easily
 #define WOUND_SLASH_MAX_BLOODFLOW		8
 /// dead people don't bleed, but they can clot! this is the minimum amount of clotting per tick on dead people, so even critical cuts will slowly clot in dead people
 #define WOUND_SLASH_DEAD_CLOT_MIN		0.05
 /// if we suffer a bone wound to the head that creates brain traumas, the timer for the trauma cycle is +/- by this percent (0-100)
-#define WOUND_BONE_HEAD_TIME_VARIANCE 	20
+#define WOUND_BONE_HEAD_TIME_VARIANCE 20
 
 
 
 // ~mangling defines
 // With the wounds pt. 2 update, general dismemberment now requires 2 things for a limb to be dismemberable (bone only creatures just need the second):
-// 	1. Skin is mangled: A critical slash or pierce wound on that limb
-// 	2. Bone is mangled: At least a severe bone wound on that limb
+// 1. Skin is mangled: A critical slash or pierce wound on that limb
+// 2. Bone is mangled: At least a severe bone wound on that limb
 // see [/obj/item/bodypart/proc/get_mangled_state] for more information
 #define BODYPART_MANGLED_NONE	0
 #define BODYPART_MANGLED_BONE	1

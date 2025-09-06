@@ -74,8 +74,8 @@
 #define MOVE_CONTENTS 4
 
 //Rotation params
-#define ROTATE_DIR 		1
-#define ROTATE_SMOOTH 	2
+#define ROTATE_DIR 1
+#define ROTATE_SMOOTH 2
 #define ROTATE_OFFSET	4
 
 #define SHUTTLE_DOCKER_LANDING_CLEAR 1

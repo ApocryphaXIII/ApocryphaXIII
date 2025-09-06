@@ -1,6 +1,6 @@
 /***************************************************************
-**						Design Datums						 **
-**	All the data for building stuff.						 **
+**						Design Datums			**
+**	All the data for building stuff.			**
 ***************************************************************/
 /*
 For the materials datum, it assumes you need reagents unless specified otherwise. To designate a material that isn't a reagent,

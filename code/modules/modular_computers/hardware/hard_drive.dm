@@ -14,7 +14,7 @@
 	MC.shutdown_computer()
 
 /obj/item/computer_hardware/hard_drive/proc/install_default_programs()
-	store_file(new/datum/computer_file/program/computerconfig(src)) 	// Computer configuration utility, allows hardware control and displays more info than status bar
+	store_file(new/datum/computer_file/program/computerconfig(src)) // Computer configuration utility, allows hardware control and displays more info than status bar
 	store_file(new/datum/computer_file/program/ntnetdownload(src))		// NTNet Downloader Utility, allows users to download more software from NTNet repository
 	store_file(new/datum/computer_file/program/filemanager(src))		// File manager, allows text editor functions and basic file manipulation.
 
@@ -129,7 +129,7 @@
 	name = "advanced hard disk drive"
 	desc = "A hybrid HDD, for use in higher grade computers where balance between power efficiency and capacity is desired."
 	max_capacity = 256
-	power_usage = 50 					// Hybrid, medium capacity and medium power storage
+	power_usage = 50 			// Hybrid, medium capacity and medium power storage
 	icon_state = "harddisk_mini"
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -161,7 +161,7 @@
 
 // For borg integrated tablets. No downloader.
 /obj/item/computer_hardware/hard_drive/small/integrated/install_default_programs()
-	store_file(new /datum/computer_file/program/computerconfig(src)) 	// Computer configuration utility, allows hardware control and displays more info than status bar
+	store_file(new /datum/computer_file/program/computerconfig(src)) // Computer configuration utility, allows hardware control and displays more info than status bar
 	store_file(new /datum/computer_file/program/filemanager(src))		// File manager, allows text editor functions and basic file manipulation.
 	store_file(new /datum/computer_file/program/robotact(src))
 

@@ -3,7 +3,7 @@
 #define AREA_USAGE_EQUIP			1
 #define AREA_USAGE_LIGHT			2
 #define AREA_USAGE_ENVIRON			3
-#define AREA_USAGE_STATIC_EQUIP 	4
+#define AREA_USAGE_STATIC_EQUIP 4
 #define AREA_USAGE_STATIC_LIGHT	5
 #define AREA_USAGE_STATIC_ENVIRON	6
 #define AREA_USAGE_LEN AREA_USAGE_STATIC_ENVIRON // largest idx
@@ -38,10 +38,10 @@
 #define PROTOLATHE		(1<<1)	//New stuff. Uses glass/metal/chemicals
 #define AUTOLATHE		(1<<2)	//Uses glass/metal only.
 #define CRAFTLATHE		(1<<3)	//Uses fuck if I know. For use eventually.
-#define MECHFAB			(1<<4) 	//Remember, objects utilising this flag should have construction_time and construction_cost vars.
-#define BIOGENERATOR	(1<<5) 	//Uses biomass
-#define LIMBGROWER		(1<<6) 	//Uses synthetic flesh
-#define SMELTER			(1<<7) 	//uses various minerals
+#define MECHFAB			(1<<4) //Remember, objects utilising this flag should have construction_time and construction_cost vars.
+#define BIOGENERATOR	(1<<5) //Uses biomass
+#define LIMBGROWER		(1<<6) //Uses synthetic flesh
+#define SMELTER			(1<<7) //uses various minerals
 #define NANITE_COMPILER (1<<8) //Prints nanite disks
 //Note: More than one of these can be added to a design but imprinter and lathe designs are incompatable.
 
@@ -62,7 +62,7 @@
 
 //NTNet stuff, for modular computers
 									// NTNet module-configuration values. Do not change these. If you need to add another use larger number (5..6..7 etc)
-#define NTNET_SOFTWAREDOWNLOAD 1 	// Downloads of software from NTNet
+#define NTNET_SOFTWAREDOWNLOAD 1 // Downloads of software from NTNet
 #define NTNET_PEERTOPEER 2			// P2P transfers of files between devices
 #define NTNET_COMMUNICATION 3		// Communication (messaging)
 #define NTNET_SYSTEMCONTROL 4		// Control of various systems, RCon, air alarm control, etc.

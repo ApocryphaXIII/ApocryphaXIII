@@ -98,8 +98,8 @@ Borg Hypospray
 		if(R?.cell)
 			for(var/i in 1 to reagent_ids.len)
 				var/datum/reagents/RG = reagent_list[i]
-				if(RG.total_volume < RG.maximum_volume) 	//Don't recharge reagents and drain power if the storage is full.
-					R.cell.use(charge_cost) 					//Take power from borg...
+				if(RG.total_volume < RG.maximum_volume) //Don't recharge reagents and drain power if the storage is full.
+					R.cell.use(charge_cost) 			//Take power from borg...
 					RG.add_reagent(reagent_ids[i], 5)		//And fill hypo with reagent.
 
 /obj/item/reagent_containers/borghypo/attack(mob/living/carbon/M, mob/user)

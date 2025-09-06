@@ -34,7 +34,7 @@
 #define ROLE_OBSESSED				"Obsessed"
 #define ROLE_SPACE_DRAGON		"Space Dragon"
 #define ROLE_SENTIENCE			"Sentience Potion Spawn"
-#define ROLE_PYROCLASTIC_SLIME 	"Pyroclastic Anomaly Slime"
+#define ROLE_PYROCLASTIC_SLIME "Pyroclastic Anomaly Slime"
 #define ROLE_MIND_TRANSFER		"Mind Transfer Potion"
 #define ROLE_POSIBRAIN			"Posibrain"
 #define ROLE_DRONE				"Drone"
@@ -73,6 +73,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection
-#define BEOVERFLOW 	1
-#define BERANDOMJOB 	2
-#define RETURNTOLOBBY 	3
+#define BEOVERFLOW 1
+#define BERANDOMJOB 2
+#define RETURNTOLOBBY 3

@@ -112,8 +112,8 @@ GLOBAL_PROTECT(duplicate_forbidden_vars)
 	//Takes: Area. Optional: If it should copy to areas that don't have plating
 	//Returns: Nothing.
 	//Notes: Attempts to move the contents of one area to another area.
-	//	 Movement based on lower left corner. Tiles that do not fit
-	//		 into the new area will not be moved.
+	// Movement based on lower left corner. Tiles that do not fit
+	// into the new area will not be moved.
 
 	if(!A || !src)
 		return 0

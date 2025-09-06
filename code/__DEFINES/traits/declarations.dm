@@ -20,7 +20,7 @@
 #define TRAIT_PERFECT_ATTACKER "perfect_attacker"
 #define TRAIT_INCAPACITATED		"incapacitated"
 #define TRAIT_CRITICAL_CONDITION	"critical-condition" //In some kind of critical condition. Is able to succumb.
-#define TRAIT_BLIND 			"blind"
+#define TRAIT_BLIND 	"blind"
 #define TRAIT_MUTE				"mute"
 #define TRAIT_EMOTEMUTE			"emotemute"
 #define TRAIT_DEAF				"deaf"
@@ -58,7 +58,7 @@
 #define TRAIT_RESISTLOWPRESSURE	"resist_low_pressure"
 #define TRAIT_BOMBIMMUNE		"bomb_immunity"
 #define TRAIT_RADIMMUNE			"rad_immunity"
-#define TRAIT_GENELESS 		"geneless"
+#define TRAIT_GENELESS "geneless"
 #define TRAIT_VIRUSIMMUNE		"virus_immunity"
 #define TRAIT_PIERCEIMMUNE		"pierce_immunity"
 #define TRAIT_NODISMEMBER		"dismember_immunity"
@@ -69,7 +69,7 @@
 #define TRAIT_NOCLONELOSS		"no_cloneloss"
 #define TRAIT_TOXIMMUNE			"toxin_immune"
 #define TRAIT_EASYDISMEMBER		"easy_dismember"
-#define TRAIT_LIMBATTACHMENT 	"limb_attach"
+#define TRAIT_LIMBATTACHMENT "limb_attach"
 #define TRAIT_NOLIMBDISABLE		"no_limb_disable"
 #define TRAIT_EASILY_WOUNDED		"easy_limb_wound"
 #define TRAIT_HARDLY_WOUNDED		"hard_limb_wound"
@@ -96,18 +96,18 @@
 #define TRAIT_PARALYSIS_R_LEG	"para-r-leg"
 #define TRAIT_CANNOT_OPEN_PRESENTS "cannot-open-presents"
 #define TRAIT_PRESENT_VISION	"present-vision"
-#define TRAIT_DISK_VERIFIER	 "disk-verifier"
-#define TRAIT_NOMOBSWAP		 "no-mob-swap"
-#define TRAIT_XRAY_VISION	 "xray_vision"
+#define TRAIT_DISK_VERIFIER "disk-verifier"
+#define TRAIT_NOMOBSWAP "no-mob-swap"
+#define TRAIT_XRAY_VISION "xray_vision"
 #define TRAIT_THERMAL_VISION	"thermal_vision"
 #define TRAIT_PROTEAN_VISION	"protean_vision"
 #define TRAIT_ABDUCTOR_TRAINING "abductor-training"
 #define TRAIT_ABDUCTOR_SCIENTIST_TRAINING "abductor-scientist-training"
-#define TRAIT_SURGEON		 "surgeon"
+#define TRAIT_SURGEON "surgeon"
 #define	TRAIT_STRONG_GRABBER	"strong_grabber"
 #define	TRAIT_MAGIC_CHOKE		"magic_choke"
 #define TRAIT_SOOTHED_THROAT	"soothed-throat"
-#define TRAIT_BOOZE_SLIDER	 "booze-slider"
+#define TRAIT_BOOZE_SLIDER "booze-slider"
 #define TRAIT_QUICK_CARRY		"quick-carry" //We place people into a fireman carry quicker than standard
 #define TRAIT_QUICKER_CARRY		"quicker-carry" //We place people into a fireman carry especially quickly compared to quick_carry
 #define TRAIT_QUICK_BUILD		"quick-build"
@@ -194,7 +194,7 @@
 #define TRAIT_DIABLERIE			"diablerie"
 #define TRAIT_GULLET			"gullet"
 #define TRAIT_CHARMER			"charmer"
-#define TRAIT_UNBONDING		 "unbonding"
+#define TRAIT_UNBONDING "unbonding"
 #define TRAIT_PERMAFANGS		"permafangs"
 #define TRAIT_ORGANOVORE		"organovore"
 #define TRAIT_SALUBRI_EYE_OPEN	"eye_open" //This is for Salubri Stuff in regards to oepning and closing it
@@ -275,7 +275,7 @@
 #define TRAIT_DISABLED_BY_WOUND		"disabled-by-wound"
 
 ///Used for managing KEEP_TOGETHER in [/atom/var/appearance_flags]
-#define TRAIT_KEEP_TOGETHER 	"keep-together"
+#define TRAIT_KEEP_TOGETHER "keep-together"
 
 ///Marks the item as having been transmuted. Functionally blacklists the item from being recycled or sold for materials.
 #define TRAIT_MAT_TRANSMUTED	"transmuted"
@@ -285,7 +285,7 @@
 #define TRAIT_NO_STORAGE_INSERT	"no_storage_insert" //cannot be inserted in a storage.
 #define TRAIT_T_RAY_VISIBLE		"t-ray-visible" // Visible on t-ray scanners if the atom/var/level == 1
 #define TRAIT_NO_TELEPORT		"no-teleport" //you just can't
-#define TRAIT_FOOD_GRILLED 		"food_grilled"
+#define TRAIT_FOOD_GRILLED "food_grilled"
 #define TRAIT_NEEDS_TWO_HANDS	"needstwohands" //The items needs two hands to be carried
 #define TRAIT_FISH_SAFE_STORAGE "fish_case" //Fish in this won't die
 #define TRAIT_FISH_CASE_COMPATIBILE "fish_case_compatibile" //Stuff that can go inside fish cases

@@ -6,16 +6,16 @@
 
 /datum/language
 	var/name = "an unknown language" // Fluff name of language if any.
-	var/desc = "A language."		 // Short description for 'Check Languages'.
-	var/key						 // Character used to speak in language
+	var/desc = "A language." // Short description for 'Check Languages'.
+	var/key			// Character used to speak in language
 	// If key is null, then the language isn't real or learnable.
-	var/flags						 // Various language flags.
+	var/flags			// Various language flags.
 	var/list/syllables				// Used when scrambling text for a non-speaker.
-	var/sentence_chance = 5	 // Likelihood of making a new sentence after each syllable.
+	var/sentence_chance = 5 // Likelihood of making a new sentence after each syllable.
 	var/space_chance = 55		// Likelihood of getting a space in the random scramble string
 	var/list/spans = list()
 	var/list/scramble_cache = list()
-	var/default_priority = 0		 // the language that an atom knows with the highest "default_priority" is selected by default.
+	var/default_priority = 0 // the language that an atom knows with the highest "default_priority" is selected by default.
 
 	// if you are seeing someone speak popcorn language, then something is wrong.
 	var/icon = 'icons/misc/language.dmi'

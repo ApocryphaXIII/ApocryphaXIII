@@ -73,7 +73,7 @@
 	var/helmet_type = /obj/item
 	var/suit_type = /obj/item
 	var/suit_name_simple = "	"
-	var/helmet_name_simple = "	 "
+	var/helmet_name_simple = " "
 	var/recharge_slowdown = 0
 	var/blood_on_castoff = 0
 

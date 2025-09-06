@@ -12,12 +12,12 @@
 	circuit = /obj/item/circuitboard/machine/medical_kiosk
 	payment_department = ACCOUNT_MED
 	var/obj/item/scanner_wand
-	var/default_price = 15		 //I'm defaulting to a low price on this, but in the future I wouldn't have an issue making it more or less expensive.
-	var/active_price = 15		 //Change by using a multitool on the board.
+	var/default_price = 15 //I'm defaulting to a low price on this, but in the future I wouldn't have an issue making it more or less expensive.
+	var/active_price = 15 //Change by using a multitool on the board.
 	var/pandemonium = FALSE			//AKA: Emag mode.
 
-	var/scan_active_1 = FALSE	 //Shows if the machine is being used for a general scan.
-	var/scan_active_2 = FALSE 		//as above, symptom scan
+	var/scan_active_1 = FALSE //Shows if the machine is being used for a general scan.
+	var/scan_active_2 = FALSE //as above, symptom scan
 	var/scan_active_3 = FALSE		//as above, radiological scan
 	var/scan_active_4 = FALSE		//as above, chemical/hallucinations.
 	var/paying_customer = FALSE		//Ticked yes if passing inuse()
@@ -25,7 +25,7 @@
 	var/datum/bank_account/account //payer's account.
 	var/mob/living/carbon/human/H //The person using the console in each instance. Used for paying for the kiosk.
 	var/mob/living/carbon/human/altPatient //If scanning someone else, this will be the target.
-	var/obj/item/card/id/C		 //the account of the person using the console.
+	var/obj/item/card/id/C //the account of the person using the console.
 
 /obj/machinery/medical_kiosk/Initialize() //loaded subtype for mapping use
 	. = ..()

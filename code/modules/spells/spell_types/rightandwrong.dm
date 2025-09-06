@@ -180,7 +180,7 @@ GLOBAL_VAR_INIT(summon_magic_triggered, FALSE)
 		SSevents.toggleWizardmode()
 		SSevents.reschedule()
 
-	else 																//Speed it up
+	else 														//Speed it up
 		SSevents.frequency_upper -= 600	//The upper bound falls a minute each time, making the AVERAGE time between events lessen
 		if(SSevents.frequency_upper < SSevents.frequency_lower) //Sanity
 			SSevents.frequency_upper = SSevents.frequency_lower

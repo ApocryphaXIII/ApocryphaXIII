@@ -1,7 +1,7 @@
 //////////////////////////////////////////////
-//										 //
-//			MIDROUND RULESETS			 //
-//										 //
+//							//
+//			MIDROUND RULESETS//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround // Can be drafted once in a while during a round
@@ -155,9 +155,9 @@
 	return
 
 //////////////////////////////////////////////
-//										 //
-//		 SYNDICATE TRAITORS			 //
-//										 //
+//							//
+// SYNDICATE TRAITORS//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/autotraitor
@@ -206,9 +206,9 @@
 	return TRUE
 
 //////////////////////////////////////////////
-//										 //
-//				 FAMILIES				 //
-//										 //
+//							//
+//	FAMILIES	//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/families
@@ -275,9 +275,9 @@
 	return handler.set_round_result_analogue()
 
 //////////////////////////////////////////////
-//										 //
-//		 Malfunctioning AI				//
-//							 			//
+//							//
+// Malfunctioning AI				//
+//					//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/malf
@@ -323,9 +323,9 @@
 	return TRUE
 
 //////////////////////////////////////////////
-//										 //
-//			 WIZARD (GHOST)			 //
-//										 //
+//							//
+//WIZARD (GHOST)//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/wizard
@@ -354,9 +354,9 @@
 	new_character.forceMove(pick(GLOB.wizardstart))
 
 //////////////////////////////////////////////
-//										 //
-//		 NUCLEAR OPERATIVES (MIDROUND) //
-//										 //
+//							//
+// NUCLEAR OPERATIVES (MIDROUND) //
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/nuclear
@@ -396,9 +396,9 @@
 		return ..()
 
 //////////////////////////////////////////////
-//										 //
-//			 BLOB (GHOST)				//
-//										 //
+//							//
+//BLOB (GHOST)				//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/blob
@@ -418,9 +418,9 @@
 	return body
 
 //////////////////////////////////////////////
-//										 //
-//		 XENOMORPH (GHOST)			 //
-//										 //
+//							//
+// XENOMORPH (GHOST)//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/xenomorph
@@ -452,9 +452,9 @@
 	return new_xeno
 
 //////////////////////////////////////////////
-//										 //
-//		 NIGHTMARE (GHOST)			 //
-//										 //
+//							//
+// NIGHTMARE (GHOST)//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/nightmare
@@ -498,9 +498,9 @@
 	return S
 
 //////////////////////////////////////////////
-//										 //
-//		 SPACE DRAGON (GHOST)		 //
-//										 //
+//							//
+// SPACE DRAGON (GHOST) //
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/space_dragon
@@ -542,9 +542,9 @@
 	return S
 
 //////////////////////////////////////////////
-//										 //
-//		 ABDUCTORS	(GHOST)		 //
-//										 //
+//							//
+// ABDUCTORS	(GHOST) //
+//							//
 //////////////////////////////////////////////
 #define ABDUCTOR_MAX_TEAMS 4
 
@@ -580,9 +580,9 @@
 #undef ABDUCTOR_MAX_TEAMS
 
 //////////////////////////////////////////////
-//										 //
-//			SWARMERS	(GHOST)		 //
-//										 //
+//							//
+//			SWARMERS	(GHOST) //
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/swarmers
@@ -615,9 +615,9 @@
 	return ..()
 
 //////////////////////////////////////////////
-//										 //
-//			SPACE NINJA (GHOST)		 //
-//										 //
+//							//
+//			SPACE NINJA (GHOST) //
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/space_ninja
@@ -655,9 +655,9 @@
 	return ninja
 
 //////////////////////////////////////////////
-//										 //
-//			SPIDERS	 (GHOST)		 //
-//										 //
+//							//
+//			SPIDERS (GHOST) //
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/spiders

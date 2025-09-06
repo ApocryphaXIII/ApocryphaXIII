@@ -14,7 +14,7 @@
 /// Cellular degredation. Rare and difficult to treat.
 #define CLONE		"clone"
 /// Exhaustion and nonlethal damage.
-#define STAMINA 	"stamina"
+#define STAMINA "stamina"
 /// Brain damage. Should probably be decomissioned and replaced with proper organ damage.
 #define BRAIN		"brain"
 
@@ -43,12 +43,12 @@
 #define WOUND		"wound"
 
 //bitflag damage defines used for suicide_act
-#define BRUTELOSS 					(1<<0)
-#define FIRELOSS 					(1<<1)
-#define TOXLOSS 					(1<<2)
-#define OXYLOSS 					(1<<3)
-#define SHAME 						(1<<4)
-#define MANUAL_SUICIDE		 	(1<<5)	//suicide_act will do the actual killing.
+#define BRUTELOSS 			(1<<0)
+#define FIRELOSS 			(1<<1)
+#define TOXLOSS 			(1<<2)
+#define OXYLOSS 			(1<<3)
+#define SHAME 				(1<<4)
+#define MANUAL_SUICIDE (1<<5)	//suicide_act will do the actual killing.
 #define MANUAL_SUICIDE_NONLETHAL	(1<<6) //when the suicide is conditionally lethal
 
 #define EFFECT_STUN			"stun"
@@ -58,7 +58,7 @@
 #define EFFECT_IMMOBILIZE	"immobilize"
 #define EFFECT_IRRADIATE	"irradiate"
 #define EFFECT_STUTTER		"stutter"
-#define EFFECT_SLUR 		"slur"
+#define EFFECT_SLUR "slur"
 #define EFFECT_EYE_BLUR		"eye_blur"
 #define EFFECT_DROWSY		"drowsy"
 #define EFFECT_JITTER		"jitter"
@@ -105,7 +105,7 @@
 #define GRAB_KILL					3
 
 //Grab breakout odds
-#define BASE_GRAB_RESIST_CHANCE 	60 //base chance for whether or not you can escape from a grab
+#define BASE_GRAB_RESIST_CHANCE 60 //base chance for whether or not you can escape from a grab
 
 //slowdown when in softcrit. Note that crawling slowdown will also apply at the same time!
 #define SOFTCRIT_ADD_SLOWDOWN 2
@@ -163,9 +163,9 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 
 //Embedded objects
 ///Chance for embedded objects to cause pain (damage user)
-#define EMBEDDED_PAIN_CHANCE 					15
+#define EMBEDDED_PAIN_CHANCE 			15
 ///Chance for embedded object to fall out (causing pain but removing the object)
-#define EMBEDDED_ITEM_FALLOUT 					5
+#define EMBEDDED_ITEM_FALLOUT 			5
 ///Chance for an object to embed into somebody when thrown
 #define EMBED_CHANCE							45
 ///Coefficient of multiplication for the damage the item does while embedded (this*item.w_class)
@@ -230,7 +230,7 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 #define SUPPRESSED_VERY 2 /// no message
 
 //Projectile Reflect
-#define REFLECT_NORMAL 				(1<<0)
+#define REFLECT_NORMAL 		(1<<0)
 #define REFLECT_FAKEPROJECTILE		(1<<1)
 
 //Object/Item sharpness

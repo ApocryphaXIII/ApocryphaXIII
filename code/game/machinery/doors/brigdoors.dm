@@ -13,7 +13,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Brig Door control displays.
 // Description: This is a controls the timer for the brig doors, displays the timer on itself and
-//			 has a popup window when used, allowing to set the timer.
+//has a popup window when used, allowing to set the timer.
 // Code Notes: Combination of old brigdoor.dm code from rev4407 and the status_display.dm code
 // Date: 01/September/2010
 // Programmer: Veryinky

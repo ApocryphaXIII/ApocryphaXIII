@@ -253,7 +253,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	var/oneway = FALSE			// if the switch only operates the conveyor belts in a single direction.
 	var/invert_icon = FALSE		// If the level points the opposite direction when it's turned on.
 
-	var/id = "" 				// must match conveyor IDs to control them
+	var/id = "" 		// must match conveyor IDs to control them
 
 /obj/machinery/conveyor_switch/Initialize(mapload, newid)
 	. = ..()

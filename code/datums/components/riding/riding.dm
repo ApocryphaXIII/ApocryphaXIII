@@ -14,10 +14,10 @@
 	var/vehicle_move_delay = 2
 
 	/**
-	 * If the driver needs a certain item in hand (or inserted, for vehicles) to drive this. For vehicles, this must be duplicated on the actual vehicle object in their
-	 * [/obj/vehicle/var/key_type] variable because the vehicle objects still have a few special checks/functions of their own I'm not porting over to the riding component
-	 * quite yet. Make sure if you define it on the vehicle, you define it here too.
-	 */
+ * If the driver needs a certain item in hand (or inserted, for vehicles) to drive this. For vehicles, this must be duplicated on the actual vehicle object in their
+ * [/obj/vehicle/var/key_type] variable because the vehicle objects still have a few special checks/functions of their own I'm not porting over to the riding component
+ * quite yet. Make sure if you define it on the vehicle, you define it here too.
+ */
 	var/keytype
 
 	/// position_of_user = list(dir = list(px, py)), or RIDING_OFFSET_ALL for a generic one.
@@ -34,9 +34,9 @@
 	var/override_allow_spacemove = FALSE
 
 	/**
-	 * Ride check flags defined for the specific riding component types, so we know if we need arms, legs, or whatever.
-	 * Takes additional flags from the ridable element and the buckle proc (buckle_mob_flags) for riding cyborgs/humans in case we need to reserve arms
-	 */
+ * Ride check flags defined for the specific riding component types, so we know if we need arms, legs, or whatever.
+ * Takes additional flags from the ridable element and the buckle proc (buckle_mob_flags) for riding cyborgs/humans in case we need to reserve arms
+ */
 	var/ride_check_flags = NONE
 	/// For telling someone they can't drive
 	COOLDOWN_DECLARE(message_cooldown)

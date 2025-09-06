@@ -418,7 +418,7 @@
 		// discovered when Monkified is removed
 		// ---------------------------------------------------------------------- //
 		// params["alias"] - Alias of a mutation. The alias is the "hidden" name of
-		//				 the mutation, for example "Mutation 5" or "Mutation 33"
+		//	the mutation, for example "Mutation 5" or "Mutation 33"
 		if("check_discovery")
 			// GUARD CHECK - Can we genetically modify the occupant? Includes scanner
 			// operational guard checks.
@@ -1195,8 +1195,8 @@
 		// params["type"] - Type of injector to create
 		// Expected results:
 		// "ue" - Unique Enzyme, changes name and blood type
-		//	 "ui" - Unique Identity, changes looks
-		//	 "mixed" - Combination of both ue and ui
+		// "ui" - Unique Identity, changes looks
+		// "mixed" - Combination of both ue and ui
 		if("makeup_injector")
 			// Convert the index to a number and clamp within the array range, then
 			// copy the data from the disk to that buffer
@@ -1274,8 +1274,8 @@
 		// params["type"] - Type of genetic makeup copy to implement
 		// Expected results:
 		// "ue" - Unique Enzyme, changes name and blood type
-		//	 "ui" - Unique Identity, changes looks
-		//	 "mixed" - Combination of both ue and ui
+		// "ui" - Unique Identity, changes looks
+		// "mixed" - Combination of both ue and ui
 		if("makeup_apply")
 			// GUARD CHECK - Can we genetically modify the occupant? Includes scanner
 			// operational guard checks.
@@ -1311,8 +1311,8 @@
 		// params["type"] - Type of genetic makeup copy to implement
 		// Expected results:
 		// "ue" - Unique Enzyme, changes name and blood type
-		//	 "ui" - Unique Identity, changes looks
-		//	 "mixed" - Combination of both ue and ui
+		// "ui" - Unique Identity, changes looks
+		// "mixed" - Combination of both ue and ui
 		if("makeup_delay")
 			// Convert the index to a number and clamp within the array range, then
 			// copy the data from the disk to that buffer
@@ -1449,7 +1449,7 @@
 		if("add_advinj_mut")
 			// GUARD CHECK - Can we genetically modify the occupant? Includes scanner
 			// operational guard checks.
-			// 	This is needed because this operation can only be completed from the
+			// This is needed because this operation can only be completed from the
 			// genetic sequencer.
 			if(!can_modify_occupant())
 				return
@@ -1635,7 +1635,7 @@
 		// Check validity of occupent for DNA Modification
 		// DNA Modification:
 		// requires DNA
-		//	 this DNA can not be bad
+		// this DNA can not be bad
 		// is done via radiation bursts, so radiation immune carbons are not viable
 		// And the DNA Scanner itself must have a valid scan level
 	if(scanner_occupant.has_dna() && !HAS_TRAIT(scanner_occupant, TRAIT_GENELESS) && !HAS_TRAIT(scanner_occupant, TRAIT_BADDNA) || (connected_scanner.scan_level == 3))
@@ -2018,7 +2018,7 @@
 	var/mutation
 
 	// Assume the occupant is valid and the check has been carried out before
-	// 	calling this proc with the relevant flags.
+	// calling this proc with the relevant flags.
 	if(target_flags & SEARCH_OCCUPANT)
 		mutation = (locate(ref) in scanner_occupant.dna.mutations)
 		if(mutation)
@@ -2077,11 +2077,11 @@
 	return num2hex(WRAP(hex2num(input)+ran, 0, 16**length), length)
 
 	/**
-	 * Performs the enzyme radiation pulse.
+ * Performs the enzyme radiation pulse.
 		*
 		* Donor code from previous DNA Console iteration. Called from process() when
 		* there is a radiation pulse in progress. Ends processing.
-	 */
+ */
 /obj/machinery/computer/scan_consolenew/proc/rad_pulse()
 	// GUARD CHECK - Can we genetically modify the occupant? Includes scanner
 	// operational guard checks.
@@ -2092,7 +2092,7 @@
 		return
 
 	var/len = length_char(scanner_occupant.dna.uni_identity)
-	var/num = randomize_radiation_accuracy(rad_pulse_index, radduration + (connected_scanner.precision_coeff ** 2), len) //Each manipulator level above 1 makes randomization as accurate as selected time + manipulator lvl^2																																																		 //Value is this high for the same reason as with laser - not worth the hassle of upgrading if the bonus is low
+	var/num = randomize_radiation_accuracy(rad_pulse_index, radduration + (connected_scanner.precision_coeff ** 2), len) //Each manipulator level above 1 makes randomization as accurate as selected time + manipulator lvl^2																																															//Value is this high for the same reason as with laser - not worth the hassle of upgrading if the bonus is low
 	var/hex = copytext_char(scanner_occupant.dna.uni_identity, num, num+1)
 	hex = scramble(hex, radstrength, radduration)
 

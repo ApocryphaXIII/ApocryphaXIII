@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 /// This flag is what recursive_hear_check() uses to determine wether to add an item to the hearer list or not.
 #define HEAR_1						(1<<3)
 /// Is this object currently processing in the atmos object list?
-#define ATMOS_IS_PROCESSING_1 		(1<<4)
+#define ATMOS_IS_PROCESSING_1 (1<<4)
 /// conducts electricity (metal etc.)
 #define CONDUCT_1					(1<<5)
 /// For machines and structures that should not break into parts, eg, holodeck stuff
@@ -34,7 +34,7 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define PREVENT_CLICK_UNDER_1		(1<<11)
 #define HOLOGRAM_1					(1<<12)
 /// Prevents mobs from getting chainshocked by teslas and the supermatter
-#define SHOCKED_1 					(1<<13)
+#define SHOCKED_1 			(1<<13)
 ///Whether /atom/Initialize() has already run for the object
 #define INITIALIZED_1				(1<<14)
 /// was this spawned by an admin? used for stat tracking stuff.
@@ -194,7 +194,7 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 /// can pull things
 #define MOBILITY_PULL			(1<<6)
 /// can rest
-#define MOBILITY_REST		 (1<<7)
+#define MOBILITY_REST (1<<7)
 
 #define MOBILITY_FLAGS_DEFAULT (MOBILITY_MOVE | MOBILITY_STAND | MOBILITY_PICKUP | MOBILITY_USE | MOBILITY_UI | MOBILITY_STORAGE | MOBILITY_PULL)
 #define MOBILITY_FLAGS_CARBON_DEFAULT (MOBILITY_MOVE | MOBILITY_STAND | MOBILITY_PICKUP | MOBILITY_USE | MOBILITY_UI | MOBILITY_STORAGE | MOBILITY_PULL | MOBILITY_REST)
@@ -242,11 +242,11 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 ///True if the dir is east/west, false otherwise
 #define EWCOMPONENT(d) (d&(EAST|WEST))
 ///Flips the dir for north/south directions
-#define NSDIRFLIP(d)	 (d^(NORTH|SOUTH))
+#define NSDIRFLIP(d) (d^(NORTH|SOUTH))
 ///Flips the dir for east/west directions
-#define EWDIRFLIP(d)	 (d^(EAST|WEST))
+#define EWDIRFLIP(d) (d^(EAST|WEST))
 ///Turns the dir by 180 degrees
-#define DIRFLIP(d)	 turn(d, 180)
+#define DIRFLIP(d) turn(d, 180)
 
 /// 33554431 (2^24 - 1) is the maximum value our bitflags can reach.
 #define MAX_BITFLAG_DIGITS 8

@@ -12,7 +12,7 @@
 
 /obj/structure/bloodextractor/MouseDrop_T(mob/living/target, mob/living/user)
 	. = ..()
-	var/mob/living/carbon/human/H = target	 // APOC EDIT START
+	var/mob/living/carbon/human/H = target // APOC EDIT START
 	if(user.stat != CONSCIOUS || HAS_TRAIT(user, TRAIT_UI_BLOCKED) || !Adjacent(user) || !H.Adjacent(user) || !ishuman(H))
 		return
 	if(!H.buckled)

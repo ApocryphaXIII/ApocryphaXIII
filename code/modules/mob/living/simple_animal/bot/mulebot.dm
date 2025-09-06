@@ -43,12 +43,12 @@
 	var/mob/living/passenger /// who's riding us
 	var/turf/target				/// this is turf to navigate to (location of beacon)
 	var/loaddir = 0				/// this the direction to unload onto/load from
-	var/home_destination = "" 	/// tag of home delivery beacon
+	var/home_destination = "" /// tag of home delivery beacon
 
-	var/reached_target = TRUE 	///true if already reached the target
+	var/reached_target = TRUE ///true if already reached the target
 
 	var/auto_return = TRUE		/// true if auto return to home beacon after unload
-	var/auto_pickup = TRUE 	/// true if auto-pickup at beacon
+	var/auto_pickup = TRUE /// true if auto-pickup at beacon
 	var/report_delivery = TRUE /// true if bot will announce an arrival to a location.
 
 	var/obj/item/stock_parts/cell/cell /// Internal Powercell

@@ -45,17 +45,17 @@
 	var/probed_to_crit = FALSE
 
 	/** PROJECTILE PIERCING
-	 * WARNING:
-	 * Projectile piercing MUST be done using these variables.
-	 * Ordinary passflags will result in can_hit_target being false unless directly clicked on - similar to projectile_phasing but without even going to process_hit.
-	 * The two flag variables below both use pass flags.
-	 * In the context of LETPASStHROW, it means the projectile will ignore things that are currently "in the air" from a throw.
-	 *
-	 * Also, projectiles sense hits using Bump(), and then pierce them if necessary.
-	 * They simply do not follow conventional movement rules.
-	 * NEVER flag a projectile as PHASING movement type.
-	 * If you so badly need to make one go through *everything*, override check_pierce() for your projectile to always return PROJECTILE_PIERCE_PHASE/HIT.
-	 */
+ * WARNING:
+ * Projectile piercing MUST be done using these variables.
+ * Ordinary passflags will result in can_hit_target being false unless directly clicked on - similar to projectile_phasing but without even going to process_hit.
+ * The two flag variables below both use pass flags.
+ * In the context of LETPASStHROW, it means the projectile will ignore things that are currently "in the air" from a throw.
+ *
+ * Also, projectiles sense hits using Bump(), and then pierce them if necessary.
+ * They simply do not follow conventional movement rules.
+ * NEVER flag a projectile as PHASING movement type.
+ * If you so badly need to make one go through *everything*, override check_pierce() for your projectile to always return PROJECTILE_PIERCE_PHASE/HIT.
+ */
 	/// The "usual" flags of pass_flags is used in that can_hit_target ignores these unless they're specifically targeted/clicked on. This behavior entirely bypasses process_hit if triggered, rather than phasing which uses prehit_pierce() to check.
 	pass_flags = PASSTABLE
 	/// If FALSE, allow us to hit something directly targeted/clicked/whatnot even if we're able to phase through it
@@ -388,7 +388,7 @@
  * T - Turf we're on/supposedly hitting
  * target - target we're hitting
  * bumped - target we originally bumped. it's here to ensure that if something blocks our projectile by means of Cross() failure, we hit it
- * 		even if it is not dense.
+ * even if it is not dense.
  * hit_something - only should be set by recursive calling by this proc - tracks if we hit something already
  *
  * Returns if we hit something.
@@ -435,7 +435,7 @@
  *
  * Priority:
  * 0. Anything that is already in impacted is ignored no matter what. Furthermore, in any bracket, if the target atom parameter is in it, that's hit first.
- * 	Furthermore, can_hit_target is always checked. This (entire proc) is PERFORMANCE OVERHEAD!! But, it shouldn't be ""too"" bad and I frankly don't have a better *generic non snowflakey* way that I can think of right now at 3 AM.
+ * Furthermore, can_hit_target is always checked. This (entire proc) is PERFORMANCE OVERHEAD!! But, it shouldn't be ""too"" bad and I frankly don't have a better *generic non snowflakey* way that I can think of right now at 3 AM.
  *		FURTHERMORE, mobs/objs have a density check from can_hit_target - to hit non dense objects over a turf, you must click on them, same for mobs that usually wouldn't get hit.
  * 1. The thing originally aimed at/clicked on
  * 2. Mobs - picks lowest buckled mob to prevent scarp piggybacking memes

@@ -1,7 +1,7 @@
 //////////////////////////////////////////////
-//										 //
-//			LATEJOIN RULESETS			 //
-//										 //
+//							//
+//			LATEJOIN RULESETS//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/latejoin/trim_candidates()
@@ -44,9 +44,9 @@
 	return TRUE
 
 //////////////////////////////////////////////
-//										 //
-//		 SYNDICATE TRAITORS			 //
-//										 //
+//							//
+// SYNDICATE TRAITORS//
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/latejoin/infiltrator
@@ -63,9 +63,9 @@
 	flags = TRAITOR_RULESET
 
 //////////////////////////////////////////////
-//										 //
-//	 REVOLUTIONARY PROVOCATEUR		 //
-//										 //
+//							//
+// REVOLUTIONARY PROVOCATEUR //
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/latejoin/provocateur
@@ -140,9 +140,9 @@
 	revolution.round_result(finished)
 
 //////////////////////////////////////////////
-//										 //
-//		 HERETIC SMUGGLER		 		//
-//										 //
+//							//
+// HERETIC SMUGGLER //
+//							//
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/latejoin/heretic_smuggler

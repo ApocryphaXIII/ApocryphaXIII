@@ -24,9 +24,9 @@
 	var/blocks = 4 //Amount of those big blocks with gene sequences
 	var/difficulty = 8 //Amount of missing sequences. Sometimes it removes an entire pair for 2 points
 	var/timed = FALSE //Boolean to easily check if we're going to self-destruct
-	var/alias		 //'Mutation #49', decided every round to get some form of distinction between undiscovered mutations
+	var/alias //'Mutation #49', decided every round to get some form of distinction between undiscovered mutations
 	var/scrambled = FALSE //Wheter we can read it if it's active. To avoid cheesing with mutagen
-	var/class		 //Decides player accesibility, sorta
+	var/class //Decides player accesibility, sorta
 	var/list/conflicts //any mutations that might conflict. put mutation typepath defines in here. make sure to enter it both ways (so that A conflicts with B, and B with A)
 	var/allow_transfer //Do we transfer upon cloning?
 	//MUT_NORMAL - A mutation that can be activated and deactived by completing a sequence

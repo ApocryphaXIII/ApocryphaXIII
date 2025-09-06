@@ -19,7 +19,7 @@
 	throw_range = 2
 	custom_materials = list(/datum/material/iron=750)
 	var/drain_rate = 2000000	// amount of power to drain per tick
-	var/power_drained = 0 		// has drained this much power
+	var/power_drained = 0 // has drained this much power
 	var/max_power = 6e8		// maximum power that can be drained before exploding
 	var/mode = 0		// 0 = off, 1=clamped (off), 2=operating
 	var/admins_warned = FALSE // stop spam, only warn the admins once that we are about to boom

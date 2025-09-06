@@ -120,7 +120,7 @@
 				return
 			playsound(src, get_dismember_sound(), 80, TRUE)
 			target.visible_message("<span class='danger'>[chassis] rips [target]'s arms off!</span>", \
-						 "<span class='userdanger'>[chassis] rips your arms off!</span>")
+			"<span class='userdanger'>[chassis] rips your arms off!</span>")
 			log_combat(source, M, "removed both arms with a real clamp,", "[name]", "(INTENT: [uppertext(source.a_intent)]) (DAMTYPE: [uppertext(damtype)])")
 			return ..()
 

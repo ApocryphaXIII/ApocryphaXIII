@@ -120,7 +120,7 @@
 #define SHOES_KNOTTED 2
 
 //how fast a disposal machinery thing is ejecting things
-#define EJECT_SPEED_SLOW 	1
+#define EJECT_SPEED_SLOW 1
 #define EJECT_SPEED_MED		2
 #define EJECT_SPEED_FAST	4
 #define EJECT_SPEED_YEET	6
@@ -149,7 +149,7 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define TURF_DRY			(0)
 #define TURF_WET_WATER		(1<<0)
 #define TURF_WET_PERMAFROST	(1<<1)
-#define TURF_WET_ICE 		(1<<2)
+#define TURF_WET_ICE (1<<2)
 #define TURF_WET_LUBE		(1<<3)
 #define TURF_WET_SUPERLUBE	(1<<4)
 
@@ -205,13 +205,13 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 
 GLOBAL_LIST_INIT(ghost_accs_options, list(GHOST_ACCS_NONE, GHOST_ACCS_DIR, GHOST_ACCS_FULL)) //So save files can be sanitized properly.
 
-#define GHOST_OTHERS_SIMPLE 			1
+#define GHOST_OTHERS_SIMPLE 	1
 #define GHOST_OTHERS_DEFAULT_SPRITE		50
-#define GHOST_OTHERS_THEIR_SETTING 		100
+#define GHOST_OTHERS_THEIR_SETTING 100
 
-#define GHOST_OTHERS_SIMPLE_NAME 			"white ghost"
-#define GHOST_OTHERS_DEFAULT_SPRITE_NAME 	"default sprites"
-#define GHOST_OTHERS_THEIR_SETTING_NAME 	"their setting"
+#define GHOST_OTHERS_SIMPLE_NAME 	"white ghost"
+#define GHOST_OTHERS_DEFAULT_SPRITE_NAME "default sprites"
+#define GHOST_OTHERS_THEIR_SETTING_NAME "their setting"
 
 #define GHOST_OTHERS_DEFAULT_OPTION			GHOST_OTHERS_THEIR_SETTING
 

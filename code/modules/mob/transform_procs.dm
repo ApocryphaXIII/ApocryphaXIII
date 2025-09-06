@@ -28,7 +28,7 @@
 	uncuff()
 	return src
 
-//////////////////////////		 Humanize			 //////////////////////////////
+////////////////////////// Humanize//////////////////////////////
 //Could probably be merged with monkeyize but other transformations got their own procs, too
 
 /mob/living/carbon/proc/humanize(species = /datum/species/human)

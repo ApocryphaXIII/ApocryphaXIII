@@ -46,7 +46,7 @@
 	var/locked = TRUE
 	var/hacked = FALSE //Used to differentiate between being hacked by silicons and emagged by humans.
 	var/text_hack = ""		//Custom text returned to a silicon upon hacking a bot.
-	var/text_dehack = "" 	//Text shown when resetting a bots hacked status to normal.
+	var/text_dehack = "" //Text shown when resetting a bots hacked status to normal.
 	var/text_dehack_fail = "" //Shown when a silicon tries to reset a bot emagged with the emag item, which cannot be reset.
 	var/declare_message = "" //What the bot will display to the HUD user.
 	var/frustration = 0 //Used by some bots for tracking failures to reach their target.

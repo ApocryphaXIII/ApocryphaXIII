@@ -353,7 +353,7 @@
 		to_chat(user, span_notice("You readjust [src], returning it to it's initial position."))
 	else
 		alternate_worn_layer = BACK_LAYER
-		to_chat(user, span_notice("You adjust [src]."))
+		to_chat(user, span_notice("You adjust [src].")) // APOC EDIT ADD END
 
 /obj/item/storage/belt/vampire/sheathe/AltClick(mob/user)
 	if(!user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))

@@ -4,8 +4,10 @@
 	var/upgrade_item = /obj/item/stack/sheet/animalhide/goliath_hide
 	var/datum/armor/added_armor = list(MELEE = 10)
 	var/upgrade_name
+	var/set_armor // APOC EDIT ADD START
+	var/upgrade_item_used // APOC EDIT ADD END
 
-/datum/component/armor_plate/Initialize(_maxamount,obj/item/_upgrade_item,datum/armor/_added_armor)
+/datum/component/armor_plate/Initialize(_maxamount,obj/item/_upgrade_item,datum/armor/_added_armor,set_armor) // APOC EDIT ADD
 	if(!isobj(parent))
 		return COMPONENT_INCOMPATIBLE
 
@@ -19,6 +21,8 @@
 		maxamount = _maxamount
 	if(_upgrade_item)
 		upgrade_item = _upgrade_item
+	if(set_armor) // APOC EDIT ADD START
+		src.set_armor = set_armor // APOC EDIT ADD END
 	if(_added_armor)
 		if(islist(_added_armor))
 			added_armor = getArmor(arglist(_added_armor))
@@ -60,15 +64,20 @@
 
 	if(istype(I,/obj/item/stack))
 		I.use(1)
+		upgrade_item_used = I
 	else
 		if(length(I.contents))
 			to_chat(user, "<span class='warning'>[I] cannot be used for armoring while there's something inside!</span>")
 			return
+		upgrade_item_used = I
 		qdel(I)
 
 	var/obj/O = parent
 	amount++
-	O.armor = O.armor.attachArmor(added_armor)
+	if(set_armor) // APOC EDIT ADD START
+		O.armor = O.armor.setArmor(added_armor)
+	else
+		O.armor = O.armor.attachArmor(added_armor) // APOC EDIT ADD END
 
 	if(ismecha(O))
 		var/obj/vehicle/sealed/mecha/R = O
@@ -76,7 +85,7 @@
 		to_chat(user, "<span class='info'>You strengthen [R], improving its resistance against melee, bullet and laser damage.</span>")
 	else
 		SEND_SIGNAL(O, COMSIG_ARMOR_PLATED, amount, maxamount)
-		to_chat(user, "<span class='info'>You strengthen [O], improving its resistance against melee attacks.</span>")
+		to_chat(user, "<span class='info'>You strengthen [O], improving its resistances.</span>") // APOC EDIT CHANGE
 
 
 /datum/component/armor_plate/proc/dropplates(datum/source, force)

@@ -32,18 +32,19 @@
 
 	if(ishuman(holder))
 		var/mob/living/carbon/human/holder_human = holder
-		obscured = (holder_human.wear_mask && (holder_human.wear_mask.flags_inv & HIDEFACE)) && (holder_human.head && (holder_human.head.flags_inv & HIDEFACE))
+		obscured = (holder_human.wear_mask && (holder_human.wear_mask.flags_inv & HIDEFACE)) || (holder_human.head && (holder_human.head.flags_inv & HIDEFACE))
 
 		character_notes = holder_human.character_notes
 		//Check if the mob is obscured, then continue to headshot
 		if((obscured || !holder_human.dna) && !isobserver(user))
 			flavor_text = "Obscured"
+			flavor_text_nsfw = "Obscured"
 			name = "Unknown"
 		else
 			headshot = holder_human.headshot_link
 			flavor_text = holder_human.flavor_text
 			name = holder.name
-		flavor_text_nsfw = holder_human.flavor_text_nsfw
+			flavor_text_nsfw = holder_human.flavor_text_nsfw
 		ooc_notes = holder_human.ooc_notes
 
 	data["obscured"] = obscured ? TRUE : FALSE

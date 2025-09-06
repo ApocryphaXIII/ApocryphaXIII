@@ -9,11 +9,16 @@
 	path = /obj/item/clothing/glasses/apoc/eyepatch/medical
 
 
-/datum/gear/eyewear/bandage_head
-	display_name = "head bandage"
+/datum/gear/eyewear/rosepatch
+	display_name = "eyepatch (rose)"
+	path = /obj/item/clothing/glasses/apoc/eyepatch/rose
+
+
+/datum/gear/eyewear/blindfold
+	display_name = "blindfold (adjustable)"
 	path = /obj/item/clothing/glasses/apoc/blindfold
 
 
 /datum/gear/eyewear/blindfold_thin
-	display_name = "glasses, prescription"
+	display_name = "blindfold (adjustable, thin)"
 	path = /obj/item/clothing/glasses/apoc/blindfold/trick

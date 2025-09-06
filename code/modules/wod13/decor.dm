@@ -599,9 +599,23 @@
 /obj/underplate/stuff
 	icon_state = "stuff"
 
-/obj/matrix
+/turf/closed/indestructible/the_matrix
 	name = "matrix"
 	desc = "Suicide is no exit..."
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "matrix"
+
+/turf/closed/indestructible/the_matrix/attack_hand(mob/user)
+	if(!user.client)
+		return FALSE
+	if(!do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
+		return FALSE
+	matrix_mob(user, src)
+	return TRUE
+
+/obj/the_matrix
+	name = "matrix (depricated)"
+	desc = "Suicide is no exit... This is an old evil version, please contact a mapper to replace this with a turf one if you are reading this"
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "matrix"
 	plane = GAME_PLANE
@@ -611,13 +625,23 @@
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 
-/obj/matrix/attack_hand(mob/user)
-	if(user.client)
-		if(do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
-			cryo_mob(user, src)
+/obj/the_matrix/attack_hand(mob/user)
+	if(!user.client)
+		return FALSE
+	if(!do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
+		return FALSE
+	matrix_mob(user, src)
 	return TRUE
 
-/obj/matrix/proc/cryo_mob(mob/living/mob_occupant)
+/proc/martix_mob_verb(mob/living/M in world)
+	set name = "Matrix Mob"
+	set category = "Admin"
+	if(!istype(M))
+		return
+
+	matrix_mob(M)
+
+/proc/matrix_mob(mob/living/mob_occupant)
 	message_admins("[ADMIN_LOOKUP(mob_occupant)] has exited through the matrix.")
 	log_game("[mob_occupant] has exited through the matrix.")
 	var/list/crew_member = list()

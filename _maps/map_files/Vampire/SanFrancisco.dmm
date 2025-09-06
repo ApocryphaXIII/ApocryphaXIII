@@ -635,11 +635,11 @@
 /turf/open/floor/plating/shit,
 /area/vtm/sewer/nosferatu_warren)
 "ahs" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -2145,7 +2145,7 @@
 	color = "#bdbdbd";
 	dir = 4
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -4080,7 +4080,7 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/endron_facility/restricted)
 "aWP" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/shit,
@@ -4685,7 +4685,7 @@
 /turf/open/floor/carpet/vamp/cyan,
 /area/vtm/hotel)
 "bdA" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/floor/plating/shit,
 /area/vtm/sewer/nosferatu_town)
 "bdH" = (
@@ -8653,7 +8653,7 @@
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior/police/fed)
 "ceA" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -9237,7 +9237,7 @@
 	},
 /area/vtm/church/interior/haven)
 "ckk" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -15129,7 +15129,7 @@
 /area/vtm/sewer/nosferatu_warren)
 "dEK" = (
 /obj/effect/turf_decal/bordur,
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -18563,7 +18563,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/church)
 "exU" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/vampcanalplating,
@@ -21170,7 +21170,7 @@
 /obj/structure/vamproofwall{
 	dir = 1
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -21961,10 +21961,10 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/church)
 "fpD" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/sidewalk,
@@ -24231,7 +24231,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/clinic)
 "fRq" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/floor/plating/sidewalk,
 /area/vtm)
 "fRv" = (
@@ -24358,7 +24358,7 @@
 /turf/closed/wall/vampwall/market/low/window,
 /area/vtm/interior/laundromat)
 "fTm" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/parquetry,
@@ -24412,7 +24412,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "fTK" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "fTM" = (
@@ -25297,8 +25297,8 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/millennium_tower/f4)
 "gfq" = (
-/obj/matrix,
-/obj/matrix,
+/obj/the_matrix,
+/obj/the_matrix,
 /turf/open/space/basic,
 /area/space)
 "gfr" = (
@@ -25403,7 +25403,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "ggz" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/floor/plating/shit,
 /area/space)
 "ggF" = (
@@ -29281,7 +29281,7 @@
 /turf/open/floor/plating/vampwood,
 /area/vtm/interior/millennium_tower/ventrue)
 "hdL" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/sidewalk/old,
@@ -29408,7 +29408,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/millennium_tower)
 "hgg" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/space/basic,
 /area/vtm/sewer/nosferatu_town)
 "hgn" = (
@@ -31804,7 +31804,7 @@
 /obj/effect/turf_decal/asphaltline{
 	dir = 8
 	},
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "hLp" = (
@@ -36519,7 +36519,7 @@
 /turf/closed/wall/vampwall/rich,
 /area/vtm/interior/millennium_tower)
 "iVR" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/closed/wall/vampwall,
@@ -37910,7 +37910,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/clinic)
 "jmu" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /obj/structure/vampdoor/old{
@@ -38478,7 +38478,7 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/cog/caern)
 "jtq" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/asphalt,
@@ -39559,7 +39559,7 @@
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/interior/voivodate)
 "jFF" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -41792,7 +41792,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/ghetto)
 "kiB" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/closed/wall/vampwall/rock,
@@ -43157,13 +43157,13 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/bianchiBank)
 "kCt" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -47696,7 +47696,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/sewer/nosferatu_town)
 "lJn" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -47959,7 +47959,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm)
 "lMx" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/closed/wall/vampwall/rock,
 /area/space)
 "lMB" = (
@@ -51653,7 +51653,7 @@
 /turf/closed/wall/vampwall/rock,
 /area/vtm/clinic/haven)
 "mIV" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/space/basic,
 /area/space)
 "mJb" = (
@@ -52957,7 +52957,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
 "mYT" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/shit,
@@ -57346,7 +57346,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/sewer)
 "nYS" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -58509,16 +58509,16 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/millennium_tower/f5)
 "ome" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -60436,7 +60436,7 @@
 /turf/open/floor/plating/shit,
 /area/vtm/sewer)
 "oIa" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/closed/wall/vampwall/rock,
@@ -60687,7 +60687,7 @@
 /turf/open/indestructible/necropolis/air,
 /area/vtm/sewer)
 "oKW" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/sidewalk,
@@ -60741,10 +60741,10 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/bianchiBank)
 "oLz" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/closed/wall/vampwall/rock,
@@ -61862,7 +61862,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/mansion)
 "oYz" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -73780,7 +73780,7 @@
 	color = "#bdbdbd";
 	dir = 1
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -73859,13 +73859,13 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/gnawer)
 "rQy" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -75660,7 +75660,7 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/supply)
 "slo" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/closed/wall/vampwall,
@@ -79504,10 +79504,10 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "tiZ" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -81853,7 +81853,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/forest)
 "tND" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/floor/plating/sidewalk,
@@ -83845,7 +83845,7 @@
 	color = "#7c7c7c";
 	dir = 1
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -85931,7 +85931,7 @@
 /area/vtm/pacificheights)
 "uSI" = (
 /obj/effect/turf_decal/asphaltline,
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "uSK" = (
@@ -86780,7 +86780,7 @@
 /obj/structure/vamproofwall{
 	dir = 4
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -89055,10 +89055,10 @@
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
 "vEW" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0
 	},
 /turf/open/space/basic,
@@ -93985,9 +93985,9 @@
 /turf/open/floor/plating/circled,
 /area/vtm/interior)
 "wNL" = (
-/obj/matrix,
-/obj/matrix,
-/obj/matrix,
+/obj/the_matrix,
+/obj/the_matrix,
+/obj/the_matrix,
 /turf/open/space/basic,
 /area/space)
 "wNN" = (
@@ -95853,7 +95853,7 @@
 /area/vtm)
 "xkj" = (
 /obj/structure/vamproofwall,
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -96004,7 +96004,7 @@
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/interior/strip/toreador)
 "xmn" = (
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},
@@ -97198,7 +97198,7 @@
 	color = "#7c7c7c";
 	dir = 4
 	},
-/obj/matrix{
+/obj/the_matrix{
 	alpha = 0;
 	opacity = 0
 	},

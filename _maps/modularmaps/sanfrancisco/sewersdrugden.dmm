@@ -253,7 +253,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "TD" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/template_noop,
 /area/template_noop)
 "Vc" = (

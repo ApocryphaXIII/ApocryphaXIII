@@ -72,7 +72,7 @@
 /mob/living/carbon/human/npc/sabbat/shovelhead/torpor(source)
 	dust(TRUE)
 //============================================================
-/mob/living/carbon/human/npc/sabbat/shovelhead/AssignSocialRole(datum/socialrole/S, var/dont_random = FALSE)
+/mob/living/carbon/human/npc/sabbat/shovelhead/AssignSocialRole(datum/socialrole/S, dont_random = FALSE)
 	. = ..()
 	real_name = pick("Shovelhead","Mass-embraced Lunatic", "Reanimated Psycho")
 	name = real_name

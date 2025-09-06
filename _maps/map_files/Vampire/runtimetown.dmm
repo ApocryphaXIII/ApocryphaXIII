@@ -615,7 +615,7 @@
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
 "rB" = (
-/obj/matrix,
+/obj/the_matrix,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "rF" = (

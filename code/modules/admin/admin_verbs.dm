@@ -175,6 +175,7 @@ GLOBAL_PROTECT(admin_verbs_debug)
 	/client/proc/debugNatureMapGenerator,
 	/client/proc/check_bomb_impacts,
 	/proc/machine_upgrade,
+	/proc/matrix_mob_verb,
 	/client/proc/populate_world,
 	/client/proc/get_dynex_power,		//*debug verbs for dynex explosions.
 	/client/proc/get_dynex_range,		//*debug verbs for dynex explosions.

@@ -49,6 +49,8 @@
 	desc = "You suffer from full colorblindness, and perceive nearly the entire world in blacks and whites."
 	value = 0
 	medical_record_text = "Patient is afflicted with almost complete color blindness."
+	gain_text = "<span class='warning'>You feel colorblind.</span>"
+	lose_text = "<span class='notice'>Everything looks so colorful!</span>"
 	var/client_colour_path = /datum/client_colour/monochrome
 	var/should_transfer = FALSE
 

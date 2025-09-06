@@ -361,7 +361,7 @@
 	desc = "A small stun gun designed to momentarily incapacitate assailants. To avoid continuous misfire, the button has a safety and must be pressed every few seconds."
 	icon_state = "handtaser"
 	icon = 'modular_tfn/modules/taser_tfn13/taser.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	inhand_icon_state = "emp"
 	worn_icon_state = "baton"
 	force = 1

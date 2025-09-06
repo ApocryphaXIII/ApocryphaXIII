@@ -582,64 +582,11 @@
 			to_chat(user, "<span class='notice'>You fill [I].</span>")
 			say("Gas filled.")
 
-
 /obj/structure/reagent_dispensers/cleaningfluid
 	name = "cleaning fluid tank"
 	desc = "A container filled with cleaning fluid."
 	reagent_id = /datum/reagent/space_cleaner
 	icon_state = "water"
-
-/obj/structure/rack/tacobell
-	name = "table"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "tacobell"
-
-/obj/structure/rack/tacobell/attack_hand(mob/living/user)
-	return
-
-/obj/structure/rack/tacobell/horizontal
-	icon_state = "tacobell1"
-
-/obj/structure/rack/tacobell/vertical
-	icon_state = "tacobell2"
-
-/obj/structure/rack/tacobell/south
-	icon_state = "tacobell3"
-
-/obj/structure/rack/tacobell/north
-	icon_state = "tacobell4"
-
-/obj/structure/rack/tacobell/east
-	icon_state = "tacobell5"
-
-/obj/structure/rack/tacobell/west
-	icon_state = "tacobell6"
-
-/obj/structure/rack/bubway
-	name = "table"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "bubway"
-
-/obj/structure/rack/bubway/attack_hand(mob/living/user)
-	return
-
-/obj/structure/rack/bubway/horizontal
-	icon_state = "bubway1"
-
-/obj/structure/rack/bubway/vertical
-	icon_state = "bubway2"
-
-/obj/structure/rack/bubway/south
-	icon_state = "bubway3"
-
-/obj/structure/rack/bubway/north
-	icon_state = "bubway4"
-
-/obj/structure/rack/bubway/east
-	icon_state = "bubway5"
-
-/obj/structure/rack/bubway/west
-	icon_state = "bubway6"
 
 /obj/underplate
 	name = "underplate"

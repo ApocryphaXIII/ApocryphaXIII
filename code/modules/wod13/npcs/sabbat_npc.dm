@@ -10,7 +10,7 @@
 	var/list/possible_clan = list(/datum/vampire_clan/toreador, /datum/vampire_clan/brujah, /datum/vampire_clan/malkavian, /datum/vampire_clan/gangrel)
 	var/datum/action/discipline/activated_action //mostly for debugging purposes, this stores the npc's last activated discipline action
 
-		var/list/shovelhead_idle_phrases = list(
+	var/list/shovelhead_idle_phrases = list(
 		"A memory... almost... gone...",
 		"Alone... so... alone...",
 		"Am I... dreaming?",

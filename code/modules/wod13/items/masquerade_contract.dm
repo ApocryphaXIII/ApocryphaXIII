@@ -2,7 +2,7 @@
 	name = "\improper elegant scroll"
 	desc = "This piece of thaumaturgy shows Masquerade breakers. <b>CLICK ON the Contract to see possible breakers for catching. PUSH the target in torpor, to restore the Masquerade.</b>"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "masquerade"
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_SMALL
@@ -46,7 +46,7 @@
 	name = "\improper brass pocketwatch"
 	desc = "The hands do not tell the time, but a spirit's blessing on this fetish points you to dangers to the veil. <b>CLICK ON the clock to see possible breakers for catching. Shame or execute the offender for crimes against the nation.</b>"
 	icon = 'icons/obj/items_and_weapons.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "pocketwatch"
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_SMALL

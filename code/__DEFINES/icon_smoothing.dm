@@ -73,8 +73,12 @@ DEFINE_BITFIELD(smoothing_flags, list(
 #define SMOOTH_GROUP_BOSS_WALLS S_TURF(29)				///turf/closed/indestructible/riveted/boss
 #define SMOOTH_GROUP_SURVIVAL_TITANIUM_WALLS S_TURF(30)	///turf/closed/wall/mineral/titanium/survival
 
-#define MAX_S_TURF SMOOTH_GROUP_SURVIVAL_TITANIUM_WALLS //Always match this value with the one above it.
+// DARKPACK EDIT START
+#define SMOOTH_GROUP_CITY_WALL S_TURF(31) ///turf/closed/wall/vampwall
+#define SMOOTH_GROUP_CITY_LOW_WALL S_TURF(32) ///turf/closed/wall/vampwall/low
 
+#define MAX_S_TURF 32 //Always match this value with the one above it.
+// DARKPACK EDIT END
 
 #define S_OBJ(num) (MAX_S_TURF + 1 + num)
 /* /obj included */

@@ -3775,6 +3775,7 @@
 #include "modular_zapoc\modules\apoc_quirks\bright_eyes.dm"
 #include "modular_zapoc\modules\apoc_quirks\colorblind_quirk.dm"
 #include "modular_zapoc\modules\apoc_quirks\deaf_quirk.dm"
+#include "modular_zapoc\modules\apoc_quirks\mute_quirk.dm"
 #include "modular_zapoc\modules\apoc_quirks\talldog.dm"
 #include "modular_zapoc\modules\apoc_smites\code\truck_kun.dm"
 #include "modular_zapoc\modules\apoc_vehicles\code\admin_truck.dm"

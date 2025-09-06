@@ -2,8 +2,8 @@
 	name = "Mute"
 	desc = "You can't speak, but you know sign language!"
 	value = -3
-	gain_text = "<span class='warning'>You can't see.</span>"
-	lose_text = "<span class='notice'>You can see!</span>"
+	gain_text = "<span class='warning'>You feel quiet.</span>"
+	lose_text = "<span class='notice'>You feel like saying something.</span>"
 
 /datum/quirk/mute/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder

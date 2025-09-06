@@ -108,7 +108,7 @@ Dancer
 	lose_text = "<span class='warning'>You can feed normal again.</span>"
 
 /datum/quirk/one_hand
-	name = "One Handed (left)" // APOC EDIT CHANGE START
+	name = "One Handed (Left)" // APOC EDIT CHANGE START
 	desc = "You're missing your left arm. You're definitely not a south-paw."
 	value = -3
 	gain_text = "<span class='warning'>You can't feel your left arm!</span>"
@@ -117,7 +117,7 @@ Dancer
 	var/arm_missing = "left"
 
 /datum/quirk/one_hand/right
-	name = "One Handed (right)"
+	name = "One Handed (Right)"
 	desc = "You're missing your right arm. That just ain't right."
 	value = -3
 	gain_text = "<span class='warning'>You can't feel your right arm!</span>"

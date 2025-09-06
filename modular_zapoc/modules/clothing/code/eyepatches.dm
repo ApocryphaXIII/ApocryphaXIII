@@ -3,8 +3,10 @@
 	desc = "Put this over your eye if you don't want your eye to see, or if you don't want to see your eye."
 	icon = 'modular_zapoc/modules/clothing/icons/eyepatches.dmi'
 	worn_icon = 'modular_zapoc/modules/clothing/icons/eyepatches_worn.dmi'
+	onflooricon = 'modular_zapoc/modules/clothing/icons/eyepatches_onfloor.dmi'
 	icon_state = "eyepatch"
 	base_icon_state = "eyepatch"
+	inhand_icon_state = "nothing"
 	var/wornunder = TRUE
 	var/flipped = FALSE
 
@@ -39,7 +41,6 @@
 	desc = "Used by weeaboos to pretend their eye isn't there, and those who actually lost their eye to pretend their eye is there."
 	icon_state = "eyepatch_medical"
 	base_icon_state = "eyepatch_medical"
-	inhand_icon_state = "nothing"
 
 
 /obj/item/clothing/glasses/apoc/eyepatch/rose
@@ -47,7 +48,6 @@
 	desc = "Put this over your eye if you want people to think your head is full of roses."
 	icon_state = "rosepatch"
 	base_icon_state = "rosepatch"
-	inhand_icon_state = "nothing"
 
 
 /obj/item/clothing/glasses/apoc/blindfold
@@ -55,6 +55,7 @@
 	desc = "Fold it over your eyes to go blind."
 	icon = 'modular_zapoc/modules/clothing/icons/eyepatches.dmi'
 	worn_icon = 'modular_zapoc/modules/clothing/icons/eyepatches_worn.dmi'
+	onflooricon = 'modular_zapoc/modules/clothing/icons/eyepatches_onfloor.dmi'
 	icon_state = "blindfoldwhite"
 	base_icon_state = "blindfoldwhite"
 	worn_icon_state = "blindfoldwhite_both"

@@ -12,3 +12,8 @@
 		ADD_TRAIT(H, TRAIT_DEAF, "quirk")
 	else if(istype(H.ears, /obj/item/clothing/ears/hearing_aid))
 		REMOVE_TRAIT(H, TRAIT_DEAF, "quirk")
+
+/datum/quirk/deaf/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(HAS_TRAIT(H, TRAIT_DEAF))
+		REMOVE_TRAIT(H, TRAIT_DEAF, "quirk")

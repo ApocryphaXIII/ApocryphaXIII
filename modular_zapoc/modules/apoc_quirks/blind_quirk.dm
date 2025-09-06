@@ -17,4 +17,4 @@
 			holding_cane = FALSE
 
 	if(!holding_cane)
-		H.set_blurriness(max(2, H.eye_blurry))
+		H.set_blurriness(max(1, H.eye_blurry))

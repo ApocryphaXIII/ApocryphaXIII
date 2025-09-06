@@ -1,9 +1,9 @@
 /**
  * # Ninja Mask
  *
- * Space ninja's mask.  Other than looking cool, doesn't do anything.
+ * Space ninja's mask. Other than looking cool, doesn't do anything.
  *
- * A mask which only spawns as a part of space ninja's starting kit.  Functions as a gas mask.
+ * A mask which only spawns as a part of space ninja's starting kit. Functions as a gas mask.
  *
  */
 /obj/item/clothing/mask/gas/space_ninja

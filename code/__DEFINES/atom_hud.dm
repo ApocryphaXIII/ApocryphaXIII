@@ -73,7 +73,7 @@
 #define ANTAG_HUD_REV			12
 #define ANTAG_HUD_OPS			13
 #define ANTAG_HUD_WIZ			14
-#define ANTAG_HUD_SHADOW    	15
+#define ANTAG_HUD_SHADOW		15
 #define ANTAG_HUD_TRAITOR 		16
 #define ANTAG_HUD_NINJA 		17
 #define ANTAG_HUD_CHANGELING 	18

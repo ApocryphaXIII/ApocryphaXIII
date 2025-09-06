@@ -125,7 +125,7 @@ GLOBAL_LIST_EMPTY(deletion_failures)
 			SSgarbage.next_fire = world.time + world.tick_lag
 			return
 
-		if(!skip_alert && alert("Running this will lock everything up for about 5 minutes.  Would you like to begin the search?", "Find References", "Yes", "No") != "Yes")
+		if(!skip_alert && alert("Running this will lock everything up for about 5 minutes. Would you like to begin the search?", "Find References", "Yes", "No") != "Yes")
 			running_find_references = null
 			return
 

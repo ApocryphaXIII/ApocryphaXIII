@@ -149,17 +149,17 @@ Note: Must be placed within 3 tiles of the R&D Console
 			var/datum/techweb_node/N = SSresearch.techweb_node_by_id(id)
 
 			l += "<div class='statusDisplay'>[RDSCREEN_NOBREAK]"
-			if (stored_research.researched_nodes[N.id])  // already researched
+			if (stored_research.researched_nodes[N.id]) // already researched
 				l += "<span class='linkOff'>[N.display_name]</span>"
 				l += "This node has already been researched."
-			else if(!length(worth))  // reveal only
+			else if(!length(worth)) // reveal only
 				if (stored_research.hidden_nodes[N.id])
 					l += "<A href='byond://?src=[REF(src)];deconstruct=[N.id]'>[N.display_name]</A>"
 					l += "This node will be revealed."
 				else
 					l += "<span class='linkOff'>[N.display_name]</span>"
 					l += "This node has already been revealed."
-			else  // boost by the difference
+			else // boost by the difference
 				var/list/differences = list()
 				var/list/already_boosted = stored_research.boosted_nodes[N.id]
 				for(var/i in worth)

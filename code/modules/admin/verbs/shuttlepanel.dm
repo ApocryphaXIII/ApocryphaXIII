@@ -14,7 +14,7 @@
 
 	for(var/port in SSshuttle.stationary)
 		if (istype(port, /obj/docking_port/stationary/transit))
-			continue  // please don't do this
+			continue // please don't do this
 		var/obj/docking_port/stationary/S = port
 		if (canDock(S) == SHUTTLE_CAN_DOCK)
 			options[S.name || S.id] = S
@@ -49,7 +49,7 @@
 				request(options[selection])
 
 /obj/docking_port/mobile/emergency/admin_fly_shuttle(mob/user)
-	return  // use the existing verbs for this
+	return // use the existing verbs for this
 
 /obj/docking_port/mobile/arrivals/admin_fly_shuttle(mob/user)
 	switch(alert(user, "Would you like to fly the arrivals shuttle once or change its destination?", "Fly Shuttle", "Fly", "Retarget", "Cancel"))
@@ -62,7 +62,7 @@
 
 	for(var/port in SSshuttle.stationary)
 		if (istype(port, /obj/docking_port/stationary/transit))
-			continue  // please don't do this
+			continue // please don't do this
 		var/obj/docking_port/stationary/S = port
 		if (canDock(S) == SHUTTLE_CAN_DOCK)
 			options[S.name || S.id] = S

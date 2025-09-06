@@ -265,7 +265,7 @@ a.updated {
 
 	var/total = amt * S.current_value
 	to_chat(user, "<span class='notice'>Bought [amt] shares of [S.name] at [S.current_value] a share for [total] credits.</span>")
-	GLOB.stockExchange.add_log(/datum/stock_log/buy, user.name, S.name, amt, S.current_value,  total)
+	GLOB.stockExchange.add_log(/datum/stock_log/buy, user.name, S.name, amt, S.current_value, total)
 
 /obj/machinery/computer/stockexchange/proc/do_borrowing_deal(datum/borrow/B, mob/user)
 	if (B.stock.borrow(B, logged_in))

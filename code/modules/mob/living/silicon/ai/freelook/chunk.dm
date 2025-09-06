@@ -75,7 +75,7 @@
 		for(var/turf/t in c.can_see())
 			// Possible optimization: if(turfs[t]) here, rather than &= turfs afterwards.
 			// List associations use a tree or hashmap of some sort (alongside the list itself)
-			//  so are surprisingly fast. (significantly faster than var/thingy/x in list, in testing)
+			// so are surprisingly fast. (significantly faster than var/thingy/x in list, in testing)
 			newVisibleTurfs[t] = t
 
 	// Removes turf that isn't in turfs.
@@ -130,7 +130,7 @@
 		for(var/turf/t in c.can_see())
 			// Possible optimization: if(turfs[t]) here, rather than &= turfs afterwards.
 			// List associations use a tree or hashmap of some sort (alongside the list itself)
-			//  so are surprisingly fast. (significantly faster than var/thingy/x in list, in testing)
+			// so are surprisingly fast. (significantly faster than var/thingy/x in list, in testing)
 			visibleTurfs[t] = t
 
 	// Removes turf that isn't in turfs.

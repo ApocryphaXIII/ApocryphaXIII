@@ -34,7 +34,7 @@
  *
  * Beacon which creates sentient player swarmers.
  *
- * The beacon which creates sentient player swarmers during the swarmer event.  Spawns in maint on xeno locations, and can create a player swarmer once every 30 seconds.
+ * The beacon which creates sentient player swarmers during the swarmer event. Spawns in maint on xeno locations, and can create a player swarmer once every 30 seconds.
  * The beacon cannot be damaged by swarmers, and must be destroyed to prevent the spawning of further player-controlled swarmers.
  * Holds a swarmer within itself during the 30 seconds before releasing it and allowing for another swarmer to be spawned in.
  */
@@ -63,7 +63,7 @@
 /obj/structure/swarmer_beacon/attack_ghost(mob/user)
 	. = ..()
 	if(processing_swarmer)
-		to_chat(user, "<b>A swarmer is currently being created.  Try again soon.</b>")
+		to_chat(user, "<b>A swarmer is currently being created. Try again soon.</b>")
 		return
 	que_swarmer(user)
 
@@ -88,20 +88,20 @@
 /**
  * Releases a swarmer from the beacon and tells it what to do
  *
- * Occcurs 5 + (alive swarmers made from beacon * 2) seconds after a ghost becomes a swarmer.  The beacon releases it, tells it what to do, and opens itself up to spawn in a new swarmer.
+ * Occcurs 5 + (alive swarmers made from beacon * 2) seconds after a ghost becomes a swarmer. The beacon releases it, tells it what to do, and opens itself up to spawn in a new swarmer.
  * Arguments:
  * * swarmer - The swarmer being released and told what to do
  */
 /obj/structure/swarmer_beacon/proc/release_swarmer(mob/swarmer)
-	to_chat(swarmer, "<span class='bold'>SWARMER CONSTRUCTION COMPLETED.  OBJECTIVES:\n\
+	to_chat(swarmer, "<span class='bold'>SWARMER CONSTRUCTION COMPLETED. OBJECTIVES:\n\
 		1. CONSUME RESOURCES AND REPLICATE UNTIL THERE ARE NO MORE RESOURCES LEFT\n\
 		2. ENSURE PROTECTION OF THE BEACON SO THIS LOCATION CAN BE INVADED AT A LATER DATE; DO NOT PERFORM ACTIONS THAT WOULD RENDER THIS LOCATION DANGEROUS OR INHOSPITABLE\n\
 		3. BIOLOGICAL RESOURCES WILL BE HARVESTED AT A LATER DATE: DO NOT HARM THEM\n\
 		OPERATOR NOTES:\n\
 		- CONSUME RESOURCES TO CONSTRUCT TRAPS, BARRIERS, AND FOLLOWER DRONES\n\
-		- FOLLOWER DRONES WILL FOLLOW YOU AUTOMATCIALLY UNLESS THEY POSSESS A TARGET.  WHILE DRONES CANNOT ASSIST IN RESOURCE HARVESTING, THEY CAN PROTECT YOU FROM THREATS\n\
+		- FOLLOWER DRONES WILL FOLLOW YOU AUTOMATCIALLY UNLESS THEY POSSESS A TARGET. WHILE DRONES CANNOT ASSIST IN RESOURCE HARVESTING, THEY CAN PROTECT YOU FROM THREATS\n\
 		- LCTRL + ATTACKING AN ORGANIC WILL ALOW YOU TO REMOVE SAID ORGANIC FROM THE AREA\n\
-		- YOU AND YOUR DRONES HAVE A STUN EFFECT ON MELEE.  YOU ARE ALSO ARMED WITH A DISABLER PROJECTILE, USE THESE TO PREVENT ORGANICS FROM HALTING YOUR PROGRESS\n\
+		- YOU AND YOUR DRONES HAVE A STUN EFFECT ON MELEE. YOU ARE ALSO ARMED WITH A DISABLER PROJECTILE, USE THESE TO PREVENT ORGANICS FROM HALTING YOUR PROGRESS\n\
 		GLORY TO !*# $*#^</span>")
 	swarmer.forceMove(get_turf(src))
 	LAZYADD(swarmerlist, swarmer)
@@ -115,7 +115,7 @@
  * Called specifically when a swarmer is about to be destroyed, so we don't have any null references.
  * Arguments:
  * * mob/swarmer - The swarmer to be removed from the list.
- * * force - Parameter sent by the COSMIG_PARENT_QDELETING signal.  Does nothing in this proc.
+ * * force - Parameter sent by the COSMIG_PARENT_QDELETING signal. Does nothing in this proc.
  */
 /obj/structure/swarmer_beacon/proc/remove_swarmer(mob/swarmer, force)
 	SIGNAL_HANDLER

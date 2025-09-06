@@ -107,7 +107,7 @@ LINEN BINS
 
 /obj/item/bedsheet/mime
 	name = "mime's blanket"
-	desc = "A very soothing striped blanket.  All the noise just seems to fade out when you're under the covers in this."
+	desc = "A very soothing striped blanket. All the noise just seems to fade out when you're under the covers in this."
 	icon_state = "sheetmime"
 	inhand_icon_state = "sheetmime"
 	dream_messages = list("silence", "gestures", "a pale face", "a gaping mouth", "the mime")
@@ -141,7 +141,7 @@ LINEN BINS
 
 /obj/item/bedsheet/medical
 	name = "medical blanket"
-	desc = "It's a sterilized* blanket commonly used in the Medbay.  *Sterilization is voided if a virologist is present onboard the station."
+	desc = "It's a sterilized* blanket commonly used in the Medbay. *Sterilization is voided if a virologist is present onboard the station."
 	icon_state = "sheetmedical"
 	inhand_icon_state = "sheetmedical"
 	dream_messages = list("healing", "life", "surgery", "a doctor")
@@ -174,7 +174,7 @@ LINEN BINS
 
 /obj/item/bedsheet/qm
 	name = "quartermaster's bedsheet"
-	desc = "It is decorated with a crate emblem in silver lining.  It's rather tough, and just the thing to lie on after a hard day of pushing paper."
+	desc = "It is decorated with a crate emblem in silver lining. It's rather tough, and just the thing to lie on after a hard day of pushing paper."
 	icon_state = "sheetqm"
 	inhand_icon_state = "sheetqm"
 	dream_messages = list("a grey ID", "a shuttle", "a crate", "a sloth", "the quartermaster")

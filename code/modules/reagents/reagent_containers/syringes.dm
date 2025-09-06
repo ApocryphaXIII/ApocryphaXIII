@@ -155,7 +155,7 @@
 /*
  * On accidental consumption, inject the eater with 2/3rd of the syringe and reveal it
  */
-/obj/item/reagent_containers/syringe/on_accidental_consumption(mob/living/carbon/victim, mob/living/carbon/user, obj/item/source_item,  discover_after = TRUE)
+/obj/item/reagent_containers/syringe/on_accidental_consumption(mob/living/carbon/victim, mob/living/carbon/user, obj/item/source_item, discover_after = TRUE)
 	if(source_item)
 		to_chat(victim, "<span class='boldwarning'>There's a [src] in [source_item]!!</span>")
 	else

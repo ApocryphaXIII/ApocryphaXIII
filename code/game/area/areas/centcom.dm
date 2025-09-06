@@ -2,7 +2,7 @@
 // CENTCOM
 
 // Side note, be sure to change the network_root_id of any areas that are not a part of centcom
-// and just using the z space as safe harbor.  It shouldn't matter much as centcom z is isolated
+// and just using the z space as safe harbor. It shouldn't matter much as centcom z is isolated
 // from everything anyway
 
 /area/centcom

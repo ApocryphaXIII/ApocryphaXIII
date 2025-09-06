@@ -484,11 +484,11 @@ SUBSYSTEM_DEF(shuttle)
 	var/turf/bottomleft = locate(proposal.bottom_left_coords[1], proposal.bottom_left_coords[2], proposal.bottom_left_coords[3])
 	// Then create a transit docking port in the middle
 	var/coords = M.return_coords(0, 0, dock_dir)
-	/*  0------2
-	*   |      |
-	*   |      |
-	*   |  x   |
-	*   3------1
+	/* 0------2
+	* |	 |
+	* |	 |
+	* | x |
+	* 3------1
 	*/
 
 	var/x0 = coords[1]
@@ -737,9 +737,9 @@ SUBSYSTEM_DEF(shuttle)
 	var/found = 0
 	// Search the turfs for docking ports
 	// - We need to find the mobile docking port because that is the heart of
-	//   the shuttle.
+	// the shuttle.
 	// - We need to check that no additional ports have slipped in from the
-	//   template, because that causes unintended behaviour.
+	// template, because that causes unintended behaviour.
 	for(var/T in affected)
 		for(var/obj/docking_port/P in T)
 			if(istype(P, /obj/docking_port/mobile))

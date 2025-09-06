@@ -58,7 +58,7 @@
 
 /obj/item/paper/fluff/awaymissions/academy/grade/failure
 	name = "Pyromancy Evaluation"
-	default_raw_text = "Current Grade: F. Educator's Notes: No improvement shown despite multiple private lessons.  Suggest additional tutelage."
+	default_raw_text = "Current Grade: F. Educator's Notes: No improvement shown despite multiple private lessons. Suggest additional tutelage."
 
 /obj/item/clothing/glasses/meson/truesight
 	name = "The Lens of Truesight"

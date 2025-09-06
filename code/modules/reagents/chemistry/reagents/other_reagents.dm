@@ -210,7 +210,7 @@
 	name = "Holy Water"
 	description = "Water blessed by some deity."
 	color = "#E0E8EF" // rgb: 224, 232, 239
-	glass_icon_state  = "glass_clear"
+	glass_icon_state = "glass_clear"
 	glass_name = "glass of holy water"
 	glass_desc = "A glass of holy water."
 	self_consuming = TRUE //divine intervention won't be limited by the lack of a liver
@@ -325,7 +325,7 @@
 	name = "Unholy Water"
 	description = "Something that shouldn't exist on this plane of existence."
 	taste_description = "suffering"
-	metabolization_rate = 2.5 * REAGENTS_METABOLISM  //1u/tick
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM //1u/tick
 	penetrates_skin = TOUCH|VAPOR
 
 /datum/reagent/fuel/unholywater/on_mob_life(mob/living/carbon/M)
@@ -339,7 +339,7 @@
 		M.adjustFireLoss(-2, 0)
 		if(ishuman(M) && M.blood_volume < BLOOD_VOLUME_NORMAL)
 			M.blood_volume += 3
-	else  // Will deal about 90 damage when 50 units are thrown
+	else // Will deal about 90 damage when 50 units are thrown
 		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3, 150)
 		M.adjustToxLoss(2, 0)
 		M.adjustFireLoss(2, 0)
@@ -389,8 +389,8 @@
 /datum/reagent/spraytan
 	name = "Spray Tan"
 	description = "A substance applied to the skin to darken the skin."
-	color = "#FFC080" // rgb: 255, 196, 128  Bright orange
-	metabolization_rate = 10 * REAGENTS_METABOLISM // very fast, so it can be applied rapidly.  But this changes on an overdose
+	color = "#FFC080" // rgb: 255, 196, 128 Bright orange
+	metabolization_rate = 10 * REAGENTS_METABOLISM // very fast, so it can be applied rapidly. But this changes on an overdose
 	overdose_threshold = 11 //Slightly more than one un-nozzled spraybottle.
 	taste_description = "sour oranges"
 
@@ -2328,7 +2328,7 @@
 	description = "A strange liquid that defies the laws of physics. It re-energizes and heals those who can see beyond this fragile reality, but is incredibly harmful to the closed-minded. It metabolizes very quickly."
 	taste_description = "Ag'hsj'saje'sh"
 	color = "#1f8016"
-	metabolization_rate = 2.5 * REAGENTS_METABOLISM  //1u/tick
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM //1u/tick
 
 /datum/reagent/eldritch/on_mob_life(mob/living/carbon/M)
 	if(IS_HERETIC(M))

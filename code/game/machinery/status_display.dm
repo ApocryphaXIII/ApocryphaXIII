@@ -7,10 +7,10 @@
 #define FONT_STYLE "Small Fonts"
 #define SCROLL_SPEED 2
 
-#define SD_BLANK 0  // 0 = Blank
-#define SD_EMERGENCY 1  // 1 = Emergency Shuttle timer
-#define SD_MESSAGE 2  // 2 = Arbitrary message(s)
-#define SD_PICTURE 3  // 3 = alert picture
+#define SD_BLANK 0 // 0 = Blank
+#define SD_EMERGENCY 1 // 1 = Emergency Shuttle timer
+#define SD_MESSAGE 2 // 2 = Arbitrary message(s)
+#define SD_PICTURE 3 // 3 = alert picture
 
 /// Status display which can show images and scrolling text.
 /obj/machinery/status_display
@@ -154,8 +154,8 @@
 /obj/machinery/status_display/evac
 	var/frequency = FREQ_STATUS_DISPLAYS
 	var/mode = SD_EMERGENCY
-	var/friendc = FALSE      // track if Friend Computer mode
-	var/last_picture  // For when Friend Computer mode is undone
+	var/friendc = FALSE	 // track if Friend Computer mode
+	var/last_picture // For when Friend Computer mode is undone
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/evac, 32)
 

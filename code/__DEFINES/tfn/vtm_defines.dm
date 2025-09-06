@@ -68,11 +68,11 @@
 
 #define AURA_MORTAL_DISARM "#2222ff"
 #define AURA_MORTAL_HELP "#22ff22"
-#define AURA_MORTAL_GRAB  "#ffff22"
+#define AURA_MORTAL_GRAB "#ffff22"
 #define AURA_MORTAL_HARM "#ff2222"
 #define AURA_UNDEAD_DISARM "#BBBBff"
 #define AURA_UNDEAD_HELP "#BBffBB"
-#define AURA_UNDEAD_GRAB  "#ffffBB"
+#define AURA_UNDEAD_GRAB "#ffffBB"
 #define AURA_UNDEAD_HARM "#ffBBBB"
 #define AURA_GAROU "aura_bright"
 #define AURA_GHOUL "aura_ghoul"

@@ -1,5 +1,5 @@
 #define TRAITOR_HUMAN "human"
-#define TRAITOR_AI	  "AI"
+#define TRAITOR_AI	 "AI"
 
 /datum/antagonist/traitor
 	name = "Traitor"
@@ -215,7 +215,7 @@
 	remove_antag_hud(antag_hud_type, M)
 	handle_clown_mutation(M, removing = FALSE)
 	var/mob/living/silicon/ai/A = M
-	if(istype(A)  && traitor_kind == TRAITOR_AI)
+	if(istype(A) && traitor_kind == TRAITOR_AI)
 		A.hack_software = FALSE
 	UnregisterSignal(M, COMSIG_MOVABLE_HEAR)
 

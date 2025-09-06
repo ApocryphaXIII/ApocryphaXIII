@@ -36,7 +36,7 @@ It has a punishment variable that is what happens to the parent when they leave 
  * Punishments:
  * * PUNISHMENT_MURDER: kills parent
  * * PUNISHMENT_GIB: gibs parent
- * * PUNISHMENT_TELEPORT:  finds a safe turf if possible, or a completely random one if not.
+ * * PUNISHMENT_TELEPORT: finds a safe turf if possible, or a completely random one if not.
  */
 /datum/component/stationstuck/proc/punish()
 	SIGNAL_HANDLER

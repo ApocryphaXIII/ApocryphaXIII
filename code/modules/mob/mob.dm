@@ -798,13 +798,13 @@
 	unset_machine()
 
 //suppress the .click/dblclick macros so people can't use them to identify the location of items or aimbot
-/mob/verb/DisClick(argu = null as anything, sec = "" as text, number1 = 0 as num  , number2 = 0 as num)
+/mob/verb/DisClick(argu = null as anything, sec = "" as text, number1 = 0 as num , number2 = 0 as num)
 	set name = ".click"
 	set hidden = TRUE
 	set category = null
 	return
 
-/mob/verb/DisDblClick(argu = null as anything, sec = "" as text, number1 = 0 as num  , number2 = 0 as num)
+/mob/verb/DisDblClick(argu = null as anything, sec = "" as text, number1 = 0 as num , number2 = 0 as num)
 	set name = ".dblclick"
 	set hidden = TRUE
 	set category = null
@@ -1300,7 +1300,7 @@
  * Checks if there is enough light where the mob is located
  *
  * Args:
- *  light_amount (optional) - A decimal amount between 1.0 through 0.0 (default is 0.2)
+ * light_amount (optional) - A decimal amount between 1.0 through 0.0 (default is 0.2)
 **/
 /mob/proc/has_light_nearby(light_amount = LIGHTING_TILE_IS_DARK)
 	var/turf/mob_location = get_turf(src)
@@ -1454,25 +1454,25 @@
 				return FALSE
 		if(NAMEOF(src, machine))
 			set_machine(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, focus))
 			set_focus(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, nutrition))
 			set_nutrition(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, stat))
 			set_stat(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, dizziness))
 			set_dizziness(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, eye_blind))
 			set_blindness(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, eye_blurry))
 			set_blurriness(var_value)
-			. =  TRUE
+			. = TRUE
 
 	if(!isnull(.))
 		datum_flags |= DF_VAR_EDITED

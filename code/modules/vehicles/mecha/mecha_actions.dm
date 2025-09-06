@@ -128,7 +128,7 @@
 		var/datum/action/action = LAZYACCESSASSOC(occupant_actions, occupant, /datum/action/vehicle/sealed/mecha/strafe)
 		action?.UpdateButtonIcon()
 
-//////////////////////////////////////// Specific Ability Actions  ///////////////////////////////////////////////
+//////////////////////////////////////// Specific Ability Actions ///////////////////////////////////////////////
 //Need to be granted by the mech type, Not default abilities.
 
 /datum/action/vehicle/sealed/mecha/mech_defense_mode

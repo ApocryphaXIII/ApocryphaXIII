@@ -39,13 +39,13 @@
 	for(var/i in 1 to valid_network_names.len)
 		var/name = valid_network_names[i]
 		var/list/name_list = SSnetworks.network_string_to_list(name)
-		TEST_ASSERT(compare_list(name_list,  valid_network_trees[i]), "Network name ([name]) did not unpack into a proper list")
+		TEST_ASSERT(compare_list(name_list, valid_network_trees[i]), "Network name ([name]) did not unpack into a proper list")
 	for(var/i in 1 to valid_network_trees.len)
 		var/list/name_list = valid_network_trees[i]
 		var/name = SSnetworks.network_list_to_string(name_list)
 		TEST_ASSERT_EQUAL(name, valid_network_names[i], "Network name ([name]) did not pack into a proper string")
 
-	// Ok, we know we can verify network names now, and that we can pack and unpack.  Lets try making some random good names
+	// Ok, we know we can verify network names now, and that we can pack and unpack. Lets try making some random good names
 	var/list/generated_network_names = list()
 	var/test_string
 	for(var/i in 1 to number_of_names_to_test)

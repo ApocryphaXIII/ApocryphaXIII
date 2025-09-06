@@ -51,11 +51,11 @@
 		mytray.adjustWeeds(-rand(1,5))
 	if(chems.has_reagent(type, 3))
 		switch(rand(100))
-			if(66  to 100)
+			if(66 to 100)
 				mytray.mutatespecie()
 			if(33	to 65)
 				mytray.mutateweed()
-			if(1   to 32)
+			if(1 to 32)
 				mytray.mutatepest(user)
 			else
 				if(prob(20))
@@ -1247,13 +1247,13 @@
 /datum/reagent/medicine/metafactor
 	name = "Mitogen Metabolism Factor"
 	description = "This enzyme catalyzes the conversion of nutricious food into healing peptides."
-	metabolization_rate = 0.0625  * REAGENTS_METABOLISM //slow metabolism rate so the patient can self heal with food even after the troph has metabolized away for amazing reagent efficency.
+	metabolization_rate = 0.0625 * REAGENTS_METABOLISM //slow metabolism rate so the patient can self heal with food even after the troph has metabolized away for amazing reagent efficency.
 	reagent_state = SOLID
 	color = "#FFBE00"
 	overdose_threshold = 10
 
 /datum/reagent/medicine/metafactor/overdose_start(mob/living/carbon/M)
-	metabolization_rate = 2  * REAGENTS_METABOLISM
+	metabolization_rate = 2 * REAGENTS_METABOLISM
 
 /datum/reagent/medicine/metafactor/overdose_process(mob/living/carbon/M)
 	if(prob(25))
@@ -1272,7 +1272,7 @@
 	..()
 	. = 1
 
-/datum/reagent/medicine/polypyr  //This is intended to be an ingredient in advanced chems.
+/datum/reagent/medicine/polypyr //This is intended to be an ingredient in advanced chems.
 	name = "Polypyrylium Oligomers"
 	description = "A purple mixture of short polyelectrolyte chains not easily synthesized in the laboratory. It is valued as an intermediate in the synthesis of the cutting edge pharmaceuticals."
 	reagent_state = SOLID
@@ -1321,7 +1321,7 @@
 	M.adjustToxLoss(0.2 * REM, 0) //Only really deadly if you eat over 100u
 	..()
 
-/datum/reagent/medicine/badstims  //These are bad for combat on purpose. Used in adrenal implant.
+/datum/reagent/medicine/badstims //These are bad for combat on purpose. Used in adrenal implant.
 	name = "Experimental Stimulants"
 	description = "Experimental Stimulants designed to get you away from trouble."
 	reagent_state = LIQUID

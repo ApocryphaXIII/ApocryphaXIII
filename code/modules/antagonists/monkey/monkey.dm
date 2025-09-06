@@ -41,7 +41,7 @@
 	owner.special_role = null
 	SSticker.mode.ape_infectees -= owner
 
-	var/datum/disease/transformation/jungle_fever/D =  locate() in owner.current.diseases
+	var/datum/disease/transformation/jungle_fever/D = locate() in owner.current.diseases
 	if(D)
 		qdel(D)
 

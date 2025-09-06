@@ -230,7 +230,7 @@
 	return cell
 
 /obj/vehicle/sealed/mecha/rust_heretic_act()
-	take_damage(500,  BRUTE)
+	take_damage(500, BRUTE)
 
 /obj/vehicle/sealed/mecha/proc/restore_equipment()
 	equipment_disabled = FALSE
@@ -479,7 +479,7 @@
 		on_mouseclick(user, target, params)
 
 //////////////////////////////////
-////////  Movement procs  ////////
+//////// Movement procs ////////
 //////////////////////////////////
 
 ///Plays the mech step sound effect. Split from movement procs so that other mechs (HONK) can override this one specific part.
@@ -624,7 +624,7 @@
 
 
 ///////////////////////////////////
-////////  Internal damage  ////////
+//////// Internal damage ////////
 ///////////////////////////////////
 
 /obj/vehicle/sealed/mecha/proc/check_for_internal_damage(list/possible_int_damage,ignore_threshold=null)
@@ -725,7 +725,7 @@
 			AI.radio_enabled = FALSE
 			AI.disconnect_shell()
 			remove_occupant(AI)
-			mecha_flags  &= ~SILICON_PILOT
+			mecha_flags &= ~SILICON_PILOT
 			AI.forceMove(card)
 			card.AI = AI
 			AI.controlled_mech = null
@@ -795,7 +795,7 @@
 
 
 /////////////////////////////////////
-////////  Atmospheric stuff  ////////
+//////// Atmospheric stuff ////////
 /////////////////////////////////////
 
 /obj/vehicle/sealed/mecha/mob_try_enter(mob/M)
@@ -942,7 +942,7 @@
 	else if(isAI(M))
 		var/mob/living/silicon/ai/AI = M
 		if(forced)//This should only happen if there are multiple AIs in a round, and at least one is Malf.
-			AI.gib()  //If one Malf decides to steal a mech from another AI (even other Malfs!), they are destroyed, as they have nowhere to go when replaced.
+			AI.gib() //If one Malf decides to steal a mech from another AI (even other Malfs!), they are destroyed, as they have nowhere to go when replaced.
 			AI = null
 			mecha_flags &= ~SILICON_PILOT
 			return
@@ -960,7 +960,7 @@
 	else
 		return ..()
 	var/mob/living/L = M
-	mecha_flags  &= ~SILICON_PILOT
+	mecha_flags &= ~SILICON_PILOT
 	if(mob_container.forceMove(newloc))//ejecting mob container
 		log_message("[mob_container] moved out.", LOG_MECHA)
 		L << browse(null, "window=exosuit")

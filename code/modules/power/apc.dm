@@ -872,8 +872,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/power/apc/auto_name, APC_PIXEL_OFFSET
 				"status" = equipment,
 				"topicParams" = list(
 					"auto" = list("eqp" = 3),
-					"on"   = list("eqp" = 2),
-					"off"  = list("eqp" = 1)
+					"on" = list("eqp" = 2),
+					"off" = list("eqp" = 1)
 				)
 			),
 			list(
@@ -882,8 +882,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/power/apc/auto_name, APC_PIXEL_OFFSET
 				"status" = lighting,
 				"topicParams" = list(
 					"auto" = list("lgt" = 3),
-					"on"   = list("lgt" = 2),
-					"off"  = list("lgt" = 1)
+					"on" = list("lgt" = 2),
+					"off" = list("lgt" = 1)
 				)
 			),
 			list(
@@ -892,8 +892,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/power/apc/auto_name, APC_PIXEL_OFFSET
 				"status" = environ,
 				"topicParams" = list(
 					"auto" = list("env" = 3),
-					"on"   = list("env" = 2),
-					"off"  = list("env" = 1)
+					"on" = list("env" = 2),
+					"off" = list("env" = 1)
 				)
 			)
 		)
@@ -935,13 +935,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/power/apc/auto_name, APC_PIXEL_OFFSET
 	if(user.has_unlimited_silicon_privilege)
 		var/mob/living/silicon/ai/AI = user
 		var/mob/living/silicon/robot/robot = user
-		if (                                                             \
-			src.aidisabled ||                                            \
-			malfhack && istype(malfai) &&                                \
-			(                                                            \
-				(istype(AI) && (malfai!=AI && malfai != AI.parent)) ||   \
-				(istype(robot) && (robot in malfai.connected_robots))    \
-			)                                                            \
+		if (															 \
+			src.aidisabled ||											\
+			malfhack && istype(malfai) &&								\
+			(															\
+				(istype(AI) && (malfai!=AI && malfai != AI.parent)) || \
+				(istype(robot) && (robot in malfai.connected_robots))	\
+			)															\
 		)
 			if(!loud)
 				to_chat(user, "<span class='danger'>\The [src] has eee disabled!</span>")

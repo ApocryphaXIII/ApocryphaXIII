@@ -154,7 +154,7 @@
 	if (. & EMP_PROTECT_CONTENTS)
 		return
 	if(!(machine_stat & (NOPOWER|BROKEN)) && anchored)
-		if(istype(charging,  /obj/item/gun/energy))
+		if(istype(charging, /obj/item/gun/energy))
 			var/obj/item/gun/energy/E = charging
 			if(E.cell)
 				E.cell.emp_act(severity)

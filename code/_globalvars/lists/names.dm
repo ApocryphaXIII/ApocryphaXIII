@@ -35,7 +35,7 @@ GLOBAL_LIST_INIT(verbs, world.file2list("strings/names/verbs.txt"))
 GLOBAL_LIST_INIT(ing_verbs, world.file2list("strings/names/ing_verbs.txt"))
 GLOBAL_LIST_INIT(adverbs, world.file2list("strings/names/adverbs.txt"))
 GLOBAL_LIST_INIT(adjectives, world.file2list("strings/names/adjectives.txt"))
-GLOBAL_LIST_INIT(gross_adjectives,  world.file2list("strings/names/gross_adjectives.txt"))
+GLOBAL_LIST_INIT(gross_adjectives, world.file2list("strings/names/gross_adjectives.txt"))
 GLOBAL_LIST_INIT(dream_strings, world.file2list("strings/dreamstrings.txt"))
 //loaded on startup because of "
 //would include in rsc if ' was used
@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(dream_strings, world.file2list("strings/dreamstrings.txt"))
 List of configurable names in preferences and their metadata
 "id" = list(
 	"pref_name" = "name", //pref label
-	"qdesc" =  "name", //popup question text
+	"qdesc" = "name", //popup question text
 	"allow_numbers" = FALSE, // numbers allowed in the name
 	"group" = "whatever", // group (these will be grouped together on pref ui ,order still follows the list so they need to be concurrent to be grouped)
 	"allow_null" = FALSE // if empty name is entered it's replaced with default value

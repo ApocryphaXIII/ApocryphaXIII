@@ -119,7 +119,7 @@ RLD
 	if(value <= 0)
 		to_chat(user, "<span class='notice'>You can't insert [S.name] into [src]!</span>")
 		return FALSE
-	var/maxsheets = round((max_matter-matter)/value)    //calculate the max number of sheets that will fit in RCD
+	var/maxsheets = round((max_matter-matter)/value) //calculate the max number of sheets that will fit in RCD
 	if(maxsheets > 0)
 		var/amount_to_use = min(S.amount, maxsheets)
 		S.use(amount_to_use)
@@ -921,7 +921,7 @@ RLD
 			if(useResource(launchcost, user))
 				activate()
 				to_chat(user, "<span class='notice'>You fire a glowstick!</span>")
-				var/obj/item/flashlight/glowstick/G  = new /obj/item/flashlight/glowstick(start)
+				var/obj/item/flashlight/glowstick/G = new /obj/item/flashlight/glowstick(start)
 				G.color = color_choice
 				G.set_light_color(G.color)
 				G.throw_at(A, 9, 3, user)

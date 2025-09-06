@@ -289,7 +289,7 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	usesound = list('sound/items/screwdriver.ogg', 'sound/items/screwdriver2.ogg')
 	drop_sound = 'sound/items/handling/screwdriver_drop.ogg'
-	pickup_sound =  'sound/items/handling/screwdriver_pickup.ogg'
+	pickup_sound = 'sound/items/handling/screwdriver_pickup.ogg'
 	item_flags = EYE_STAB
 	sharpness = SHARP_POINTY
 

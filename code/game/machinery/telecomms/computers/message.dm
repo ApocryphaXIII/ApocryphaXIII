@@ -3,7 +3,7 @@
 	Lets you read PDA and request console messages.
 */
 
-#define LINKED_SERVER_NONRESPONSIVE  (!linkedServer || (linkedServer.machine_stat & (NOPOWER|BROKEN)))
+#define LINKED_SERVER_NONRESPONSIVE (!linkedServer || (linkedServer.machine_stat & (NOPOWER|BROKEN)))
 
 #define MSG_MON_SCREEN_MAIN 		0
 #define MSG_MON_SCREEN_LOGS 		1
@@ -145,8 +145,8 @@
 				index++
 				if(index > 3000)
 					break
-				// Del - Sender   - Recepient - Message
-				// X   - Al Green - Your Mom  - WHAT UP!?
+				// Del - Sender - Recepient - Message
+				// X - Al Green - Your Mom - WHAT UP!?
 				dat += "<tr><td width = '5%'><center><A href='byond://?src=[REF(src)];delete_logs=[REF(pda)]' style='color: rgb(255,0,0)'>X</a></center></td><td width='15%'>[pda.sender]</td><td width='15%'>[pda.recipient]</td><td width='300px'>[pda.message][pda.picture ? " <a href='byond://?src=[REF(pda)];photo=1'>(Photo)</a>":""]</td></tr>"
 			dat += "</table>"
 		//Hacking screen.
@@ -201,8 +201,8 @@
 					<td width='20%'><A href='byond://?src=[REF(src)];select=RecJob'>Sender's Job</a></td>
 					<td width='20%'><A href='byond://?src=[REF(src)];select=Recepient'>Recipient</a></td>
 					<td width='300px' word-wrap: break-word><A href='byond://?src=[REF(src)];select=Message'>Message</a></td></tr>"}
-				//Sender  - Sender's Job  - Recepient - Message
-				//Al Green- Your Dad	  - Your Mom  - WHAT UP!?
+				//Sender - Sender's Job - Recepient - Message
+				//Al Green- Your Dad	 - Your Mom - WHAT UP!?
 
 			dat += {"<tr><td width='20%'>[customsender]</td>
 			<td width='20%'>[customjob]</td>
@@ -230,8 +230,8 @@
 				index++
 				if(index > 3000)
 					break
-				// Del - Sender   - Recepient - Message
-				// X   - Al Green - Your Mom  - WHAT UP!?
+				// Del - Sender - Recepient - Message
+				// X - Al Green - Your Mom - WHAT UP!?
 				dat += {"<tr><td width = '5%'><center><A href='byond://?src=[REF(src)];delete_requests=[REF(rc)]' style='color: rgb(255,0,0)'>X</a></center></td><td width='15%'>[rc.send_dpt]</td>
 				<td width='15%'>[rc.rec_dpt]</td><td width='300px'>[rc.message]</td><td width='15%'>[rc.stamp]</td><td width='15%'>[rc.id_auth]</td><td width='15%'>[rc.priority]</td></tr>"}
 			dat += "</table>"
@@ -296,7 +296,7 @@
 				message = "<span class='alert'>NOTICE: Server selected.</span>"
 			else if(message_servers.len > 0)
 				linkedServer = message_servers[1]
-				message =  "<span class='notice'>NOTICE: Only Single Server Detected - Server selected.</span>"
+				message = "<span class='notice'>NOTICE: Only Single Server Detected - Server selected.</span>"
 			else
 				message = noserver
 

@@ -93,10 +93,10 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 	var/list/usrinfo = null
 	var/locinfo
 	if(istype(usr))
-		usrinfo = list("  usr: [key_name(usr)]")
+		usrinfo = list(" usr: [key_name(usr)]")
 		locinfo = loc_name(usr)
 		if(locinfo)
-			usrinfo += "  usr.loc: [locinfo]"
+			usrinfo += " usr.loc: [locinfo]"
 	// The proceeding mess will almost definitely break if error messages are ever changed
 	var/list/splitlines = splittext(E.desc, "\n")
 	var/list/desclines = list()
@@ -110,14 +110,14 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 					usrinfo = null
 				continue // Our usr info is better, replace it
 
-			if(copytext(line, 1, 3) != "  ")//3 == length("  ") + 1
-				desclines += ("  " + line) // Pad any unpadded lines, so they look pretty
+			if(copytext(line, 1, 3) != " ")//3 == length(" ") + 1
+				desclines += (" " + line) // Pad any unpadded lines, so they look pretty
 			else
 				desclines += line
 	if(usrinfo) //If this info isn't null, it hasn't been added yet
 		desclines.Add(usrinfo)
 	if(silencing)
-		desclines += "  (This error will now be silenced for [DisplayTimeText(configured_error_silence_time)])"
+		desclines += " (This error will now be silenced for [DisplayTimeText(configured_error_silence_time)])"
 	if(GLOB.error_cache)
 		GLOB.error_cache.log_error(E, desclines)
 

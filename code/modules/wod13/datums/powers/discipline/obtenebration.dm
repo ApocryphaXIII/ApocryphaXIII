@@ -56,7 +56,7 @@
 	. = ..()
 	target.Stun(1 SECONDS)
 	var/obj/item/ammo_casing/magic/tentacle/lasombra/casing = new (owner.loc)
-	casing.fire_casing(target, owner, null, null, null, ran_zone(), 0,  owner)
+	casing.fire_casing(target, owner, null, null, null, ran_zone(), 0, owner)
 
 //ARMS OF THE ABYSS
 /datum/discipline_power/obtenebration/arms_of_the_abyss

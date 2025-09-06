@@ -57,7 +57,7 @@
 	id = /obj/item/card/id/prince
 	glasses = /obj/item/clothing/glasses/vampire/sun
 	gloves = /obj/item/clothing/gloves/vampire/latex
-	uniform =  /obj/item/clothing/under/vampire/prince
+	uniform = /obj/item/clothing/under/vampire/prince
 	suit = /obj/item/clothing/suit/vampire/trench/alt
 	shoes = /obj/item/clothing/shoes/vampire
 	l_pocket = /obj/item/vamp/phone/prince

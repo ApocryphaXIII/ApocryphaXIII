@@ -16,13 +16,13 @@
 		to_chat(user, "<span class='warning'>[dude] does not have an ID card with an account!</span>", confidential = TRUE)
 		return
 	if (card.registered_account.account_balance == 0)
-		to_chat(user,  "<span class='warning'>ID Card lacks any funds. No pay to dock.</span>")
+		to_chat(user, "<span class='warning'>ID Card lacks any funds. No pay to dock.</span>")
 		return
 	var/new_cost = input("How much pay are we docking? Current balance: [card.registered_account.account_balance] credits.", "BUDGET CUTS") as num|null
 	if (!new_cost)
 		return
 	if (!(card.registered_account.has_money(new_cost)))
-		to_chat(user,  "<span class='warning'>ID Card lacked funds. Emptying account.</span>")
+		to_chat(user, "<span class='warning'>ID Card lacked funds. Emptying account.</span>")
 		card.registered_account.bank_card_talk("[new_cost] credits deducted from your account based on performance review.")
 		card.registered_account.account_balance = 0
 	else

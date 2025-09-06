@@ -40,7 +40,7 @@
 			return
 		switch(choice)
 			if("Underwear")
-				var/new_undies = input(user, "Select your underwear", "Changing")  as null|anything in GLOB.underwear_list
+				var/new_undies = input(user, "Select your underwear", "Changing") as null|anything in GLOB.underwear_list
 				if(new_undies)
 					H.underwear = new_undies
 			if("Underwear Color")

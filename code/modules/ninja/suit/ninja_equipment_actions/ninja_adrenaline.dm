@@ -11,8 +11,8 @@
 /**
  * Proc called to activate space ninja's adrenaline.
  *
- * Proc called to use space ninja's adrenaline.  Gets the ninja out of almost any stun.
- * Also makes them shout MGS references when used.  After a bit, it injects the user with
+ * Proc called to use space ninja's adrenaline. Gets the ninja out of almost any stun.
+ * Also makes them shout MGS references when used. After a bit, it injects the user with
  * radium by calling a different proc.
  */
 /obj/item/clothing/suit/space/space_ninja/proc/ninjaboost()

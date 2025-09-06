@@ -10,12 +10,12 @@
  *		Plant Bag
  *		Sheet Snatcher
  *		Book Bag
- *      Biowaste Bag
+ * Biowaste Bag
  *
  *	-Sayu
  */
 
-//  Generic non-item
+// Generic non-item
 /obj/item/storage/bag
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_BULKY
@@ -29,7 +29,7 @@
 	STR.click_gather = TRUE
 
 // -----------------------------
-//          Trash bag
+// Trash bag
 // -----------------------------
 /obj/item/storage/bag/trash
 	name = "trash bag"
@@ -104,7 +104,7 @@
 	insertable = FALSE
 
 // -----------------------------
-//        Mining Satchel
+// Mining Satchel
 // -----------------------------
 
 /obj/item/storage/bag/ore
@@ -192,7 +192,7 @@
 	STR.max_combined_stack_amount = INFINITY
 
 // -----------------------------
-//          Plant bag
+// Plant bag
 // -----------------------------
 
 /obj/item/storage/bag/plants
@@ -232,7 +232,7 @@
 		seedify(O, 1)
 
 // -----------------------------
-//        Sheet Snatcher
+// Sheet Snatcher
 // -----------------------------
 // Because it stacks stacks, this doesn't operate normally.
 // However, making it a storage/bag allows us to reuse existing code in some places. -Sayu
@@ -262,7 +262,7 @@
 	STR.max_combined_stack_amount = 300
 
 // -----------------------------
-//    Sheet Snatcher (Cyborg)
+// Sheet Snatcher (Cyborg)
 // -----------------------------
 
 /obj/item/storage/bag/sheetsnatcher/borg
@@ -276,7 +276,7 @@
 	STR.max_combined_stack_amount = 500
 
 // -----------------------------
-//           Book bag
+// Book bag
 // -----------------------------
 
 /obj/item/storage/bag/books
@@ -416,7 +416,7 @@
 		))
 
 /*
- *  Biowaste bag (mostly for xenobiologists)
+ * Biowaste bag (mostly for xenobiologists)
  */
 
 /obj/item/storage/bag/bio
@@ -450,7 +450,7 @@
 		))
 
 /*
- *  Construction bag (for engineering, holds stock parts and electronics)
+ * Construction bag (for engineering, holds stock parts and electronics)
  */
 
 /obj/item/storage/bag/construction

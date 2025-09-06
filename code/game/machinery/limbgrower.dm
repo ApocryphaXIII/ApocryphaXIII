@@ -1,6 +1,6 @@
-#define LIMBGROWER_MAIN_MENU       1
-#define LIMBGROWER_CATEGORY_MENU   2
-#define LIMBGROWER_CHEMICAL_MENU   3
+#define LIMBGROWER_MAIN_MENU	 1
+#define LIMBGROWER_CATEGORY_MENU 2
+#define LIMBGROWER_CHEMICAL_MENU 3
 //use these for the menu system
 
 
@@ -86,7 +86,7 @@
 		if(href_list["category"] in categories) //Don't let people send invalid categories, selected_category is displayed to anyone who looks at the machine in several places
 			selected_category = href_list["category"]
 
-		if(href_list["disposeI"])  //Get rid of a reagent incase you add the wrong one by mistake
+		if(href_list["disposeI"]) //Get rid of a reagent incase you add the wrong one by mistake
 			reagents.del_reagent(text2path(href_list["disposeI"]))
 
 		if(href_list["make"])

@@ -5,7 +5,7 @@
  * for these non-standard blocks to work, as well as the entire unique identity string.
  * Should you add a new ui block which size differ from the standard (again, 3 ASCII characters), like for example, a color,
  * please do not forget to also include it in this list in the following format:
- *  "[dna block number]" = dna block size,
+ * "[dna block number]" = dna block size,
  * Failure to do that may result in bugs. Thanks.
  */
 GLOBAL_LIST_INIT(identity_block_lengths, list(
@@ -55,7 +55,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	var/datum/species/species = new /datum/species/human //The type of mutant race the player is if applicable (i.e. potato-man)
 	var/list/features = list("FFF") //first value is mutant color
 	var/real_name //Stores the real name of the person who originally got this dna datum. Used primarely for changelings,
-	var/list/mutations = list()   //All mutations are from now on here
+	var/list/mutations = list() //All mutations are from now on here
 	var/list/temporary_mutations = list() //Temporary changes to the UE
 	var/list/previous = list() //For temporary name/ui/ue/blood_type modifications
 	var/mob/living/holder

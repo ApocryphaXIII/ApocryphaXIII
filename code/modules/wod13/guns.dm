@@ -667,7 +667,7 @@
 	recoil = 4
 	zoomable = TRUE
 	zoom_amt = 4 //It's known for having a shitty scope
-	zoom_out_amt =  1
+	zoom_out_amt = 1
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = TRUE
 	mag_display = TRUE

@@ -175,7 +175,7 @@
 		max_failed_spreads--
 
 	//if we didn't get all possible shrooms planted or we haven't failed to spread at least 5 times then try to spread again later
-	if( (shrooms_planted <= myseed.yield) && (max_failed_spreads >= 0)  )
+	if( (shrooms_planted <= myseed.yield) && (max_failed_spreads >= 0) )
 		myseed.adjust_yield(-shrooms_planted)
 		//Lets make this a unique hash
 		addtimer(CALLBACK(src, PROC_REF(Spread)), delay_spread, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)

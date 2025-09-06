@@ -95,7 +95,7 @@
 	ASSERT(a)
 	. = list()
 	var/d		= b*b - 4 * a * c
-	var/bottom  = 2 * a
+	var/bottom = 2 * a
 	if(d < 0)
 		return
 	var/root = sqrt(d)
@@ -190,7 +190,7 @@
 	var/y_distance_sign = SIGN(y_distance)
 
 	var/x = abs_x_distance / 2 //Counters for steps taken, setting to distance/2
-	var/y = abs_y_distance / 2 //Bit-shifting makes me l33t.  It also makes get_line() unnessecarrily fast.
+	var/y = abs_y_distance / 2 //Bit-shifting makes me l33t. It also makes get_line() unnessecarrily fast.
 
 	if(abs_x_distance >= abs_y_distance) //x distance is greater than y
 		for(var/distance_counter in 0 to (abs_x_distance - 1))//It'll take abs_x_distance steps to get there

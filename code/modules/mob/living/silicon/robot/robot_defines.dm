@@ -90,7 +90,7 @@
 	var/wiresexposed = FALSE
 
 	var/lawupdate = TRUE //Cyborgs will sync their laws with their AI by default
-	///Used to determine if a borg shows up on the robotics console.  Setting to TRUE hides them.
+	///Used to determine if a borg shows up on the robotics console. Setting to TRUE hides them.
 	var/scrambledcodes = FALSE
 	///Boolean of whether the borg is locked down or not
 	var/lockcharge = FALSE
@@ -142,7 +142,7 @@
 
 
 /***************************************************************************************
- *                          Defining specific kinds of robots
+ *						 Defining specific kinds of robots
  ***************************************************************************************/
 ///This is the subtype that gets created by robot suits. It's needed so that those kind of borgs don't have a useless cell in them
 /mob/living/silicon/robot/nocell

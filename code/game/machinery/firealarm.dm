@@ -305,7 +305,7 @@
 
 /obj/machinery/firealarm/proc/update_fire_light(fire)
 	if(fire == !!light_power)
-		return  // do nothing if we're already active
+		return // do nothing if we're already active
 	if(fire)
 		set_light(l_power = 0.8)
 	else

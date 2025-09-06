@@ -45,17 +45,17 @@
 	var/probed_to_crit = FALSE
 
 	/** PROJECTILE PIERCING
-	  * WARNING:
-	  * Projectile piercing MUST be done using these variables.
-	  * Ordinary passflags will result in can_hit_target being false unless directly clicked on - similar to projectile_phasing but without even going to process_hit.
-	  * The two flag variables below both use pass flags.
-	  * In the context of LETPASStHROW, it means the projectile will ignore things that are currently "in the air" from a throw.
-	  *
-	  * Also, projectiles sense hits using Bump(), and then pierce them if necessary.
-	  * They simply do not follow conventional movement rules.
-	  * NEVER flag a projectile as PHASING movement type.
-	  * If you so badly need to make one go through *everything*, override check_pierce() for your projectile to always return PROJECTILE_PIERCE_PHASE/HIT.
-	  */
+	 * WARNING:
+	 * Projectile piercing MUST be done using these variables.
+	 * Ordinary passflags will result in can_hit_target being false unless directly clicked on - similar to projectile_phasing but without even going to process_hit.
+	 * The two flag variables below both use pass flags.
+	 * In the context of LETPASStHROW, it means the projectile will ignore things that are currently "in the air" from a throw.
+	 *
+	 * Also, projectiles sense hits using Bump(), and then pierce them if necessary.
+	 * They simply do not follow conventional movement rules.
+	 * NEVER flag a projectile as PHASING movement type.
+	 * If you so badly need to make one go through *everything*, override check_pierce() for your projectile to always return PROJECTILE_PIERCE_PHASE/HIT.
+	 */
 	/// The "usual" flags of pass_flags is used in that can_hit_target ignores these unless they're specifically targeted/clicked on. This behavior entirely bypasses process_hit if triggered, rather than phasing which uses prehit_pierce() to check.
 	pass_flags = PASSTABLE
 	/// If FALSE, allow us to hit something directly targeted/clicked/whatnot even if we're able to phase through it
@@ -128,7 +128,7 @@
 	var/damage_type = BRUTE //BRUTE, BURN, TOX, OXY, CLONE are the only things that should be in here
 	var/cruelty_multiplier = 2
 	var/nodamage = FALSE //Determines if the projectile will skip any damage inflictions
-	var/flag = BULLET //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb
+	var/flag = BULLET //Defines what armor to use when it hits things. Must be set to bullet, laser, energy,or bomb
 	///How much armor this projectile pierces.
 	var/armour_penetration = 0
 	var/projectile_type = /obj/projectile
@@ -431,7 +431,7 @@
  * T - The turf
  * target - The "preferred" atom to hit, usually what we Bumped() first.
  * bumped - used to track if something is the reason we impacted in the first place.
- *    If set, this atom is always treated as dense by can_hit_target.
+ *	If set, this atom is always treated as dense by can_hit_target.
  *
  * Priority:
  * 0. Anything that is already in impacted is ignored no matter what. Furthermore, in any bracket, if the target atom parameter is in it, that's hit first.

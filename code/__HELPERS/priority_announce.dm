@@ -43,9 +43,9 @@
 	if(announce)
 		priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg')
 
-	var/datum/comm_message/M  = new
+	var/datum/comm_message/M = new
 	M.title = title
-	M.content =  text
+	M.content = text
 
 	SScommunications.send_message(M)
 

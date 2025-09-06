@@ -229,8 +229,8 @@ Key procs
 
 
 //************************************************
-//*        Specific language holders              *
-//*      Use atom language sources only.           *
+//*		Specific language holders			 *
+//*	 Use atom language sources only.		 *
 //************************************************/
 
 
@@ -368,7 +368,7 @@ Key procs
 	understood_languages = list(/datum/language/primal_tongue = list(LANGUAGE_ATOM), // Corax can understand and speak languages properly, they do not know Garou tongue since they are not Garou.
 								/datum/language/english = list(LANGUAGE_ATOM))
 
-	spoken_languages = list(    /datum/language/primal_tongue = list(LANGUAGE_ATOM),
+	spoken_languages = list(	/datum/language/primal_tongue = list(LANGUAGE_ATOM),
 								/datum/language/english = list(LANGUAGE_ATOM))
 
 /datum/language_holder/empty

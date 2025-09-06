@@ -3,7 +3,7 @@
 	///Weighted list of the types that spawns if the turf is open
 	var/open_turf_types = list(/turf/open/floor/plating/asteroid = 1)
 	///Weighted list of the types that spawns if the turf is closed
-	var/closed_turf_types =  list(/turf/closed/mineral/random/volcanic = 1)
+	var/closed_turf_types = list(/turf/closed/mineral/random/volcanic = 1)
 
 
 	///Weighted list of extra features that can spawn in the area, such as geysers.
@@ -40,7 +40,7 @@
 /datum/map_generator/cave_generator/New()
 	. = ..()
 	if(!megafauna_spawn_list)
-		megafauna_spawn_list  = GLOB.megafauna_spawn_list
+		megafauna_spawn_list = GLOB.megafauna_spawn_list
 
 /datum/map_generator/cave_generator/generate_terrain(list/turfs)
 	. = ..()

@@ -221,7 +221,7 @@
 	icon_state = "energycakeslice"
 	force = 2
 	hitsound = 'sound/weapons/blade1.ogg'
-	food_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/sprinkles = 2, /datum/reagent/consumable/nutriment/vitamin = 1,  /datum/reagent/consumable/pwr_game = 2, /datum/reagent/consumable/liquidelectricity = 2)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/sprinkles = 2, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/pwr_game = 2, /datum/reagent/consumable/liquidelectricity = 2)
 	tastes = list("cake" = 3, "a Vlad's Salad" = 1)
 
 /obj/item/food/cakeslice/birthday/energy/proc/energy_bite(mob/living/user)
@@ -303,7 +303,7 @@
 
 /obj/item/food/cakeslice/bsvc
 	name = "blackberry and strawberry vanilla cake slice"
-	desc = "Just a slice of cake  filled with assortment of blackberries and strawberries!"
+	desc = "Just a slice of cake filled with assortment of blackberries and strawberries!"
 	icon_state = "blackbarry_strawberries_cake_vanilla_slice"
 	tastes = list("blackberry" = 2, "strawberries" = 2, "vanilla" = 2, "sweetness" = 2,"cake" = 3)
 	foodtypes = GRAIN | DAIRY | FRUIT | SUGAR
@@ -321,7 +321,7 @@
 
 /obj/item/food/cakeslice/bscc
 	name = "blackberry and strawberry chocolate cake slice"
-	desc = "Just a slice of cake  filled with assortment of blackberries and strawberries!"
+	desc = "Just a slice of cake filled with assortment of blackberries and strawberries!"
 	icon_state = "blackbarry_strawberries_cake_coco_slice"
 	tastes = list("blackberry" = 2, "strawberries" = 2, "chocolate" = 2, "sweetness" = 2,"cake" = 3)
 	foodtypes = GRAIN | DAIRY | FRUIT | SUGAR

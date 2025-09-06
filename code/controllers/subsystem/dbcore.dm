@@ -44,7 +44,7 @@ SUBSYSTEM_DEF(dbcore)
 	var/shutting_down = FALSE
 
 
-	var/connection  // Arbitrary handle returned from rust_g.
+	var/connection // Arbitrary handle returned from rust_g.
 
 	var/db_daemon_started = FALSE
 
@@ -84,7 +84,7 @@ SUBSYSTEM_DEF(dbcore)
 		else //the defaults are wrong?!?!?!
 			stack_trace("The config defaults for sql database pooling don't make sense.")
 			CONFIG_SET(number/pooling_min_sql_connections, min(min_sql_connections, max_sql_connections))
-			CONFIG_SET(number/pooling_max_sql_connections,  max(min_sql_connections, max_sql_connections))
+			CONFIG_SET(number/pooling_max_sql_connections, max(min_sql_connections, max_sql_connections))
 			log_config("ERROR: POOLING_MAX_SQL_CONNECTIONS ([max_sql_connections]) is set lower than POOLING_MIN_SQL_CONNECTIONS ([min_sql_connections]). Please check your config or the code defaults for sanity")
 
 /datum/controller/subsystem/dbcore/stat_entry(msg)
@@ -475,7 +475,7 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 	for (var/list/row in rows)
 		if (has_row)
 			query_parts += ","
-		query_parts += "\n  ("
+		query_parts += "\n ("
 		var/has_col = FALSE
 		for (var/column in columns)
 			if (has_col)
@@ -570,7 +570,7 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 	var/affected
 	var/last_insert_id
 
-	var/list/item  //list of data values populated by NextRow()
+	var/list/item //list of data values populated by NextRow()
 
 /datum/db_query/New(connection, sql, arguments)
 	SSdbcore.all_queries += src

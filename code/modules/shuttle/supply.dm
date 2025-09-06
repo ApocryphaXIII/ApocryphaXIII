@@ -175,7 +175,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 			var/datum/supply_order/our_order = O
 			for (var/item in our_order.pack.contains)
 				misc_contents[buyer] += item
-			misc_order_num[buyer] = "[misc_order_num[buyer]]#[our_order.id]  "
+			misc_order_num[buyer] = "[misc_order_num[buyer]]#[our_order.id] "
 
 	for(var/I in miscboxes)
 		var/datum/supply_order/SO = new/datum/supply_order()

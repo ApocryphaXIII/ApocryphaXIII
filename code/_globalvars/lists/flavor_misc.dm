@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 		if(input == "Random")
 			input = pick(GLOB.ai_core_display_screens - "Random")
 		if(input == "Portrait")
-			var/datum/portrait_picker/tgui  = new(usr)//create the datum
+			var/datum/portrait_picker/tgui = new(usr)//create the datum
 			tgui.ui_interact(usr)//datum has a tgui component, here we open the window
 			return "ai-portrait" //just take this until they decide
 		return "ai-[LOWER_TEXT(input)]"
@@ -168,7 +168,7 @@ GLOBAL_LIST_INIT(jumpsuitlist, list(PREF_SUIT, PREF_SKIRT))
 #define UPLINK_PDA		"PDA"
 #define UPLINK_RADIO	"Radio"
 #define UPLINK_PEN		"Pen" //like a real spy!
-#define UPLINK_IMPLANT  "Implant"
+#define UPLINK_IMPLANT "Implant"
 GLOBAL_LIST_INIT(uplink_spawn_loc_list, list(UPLINK_PDA, UPLINK_RADIO, UPLINK_PEN, UPLINK_IMPLANT))
 
 	//Female Uniforms

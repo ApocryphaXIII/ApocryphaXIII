@@ -234,7 +234,7 @@ AI MODULES
 	if(newpos == null)
 		return
 	if(newpos < 15)
-		var/response = alert("Error: The law priority of [newpos] is invalid,  Law priorities below 14 are reserved for core laws,  Would you like to change that that to 15?", "Invalid law priority", "Change to 15", "Cancel")
+		var/response = alert("Error: The law priority of [newpos] is invalid, Law priorities below 14 are reserved for core laws, Would you like to change that that to 15?", "Invalid law priority", "Change to 15", "Cancel")
 		if (!response || response == "Cancel")
 			return
 		newpos = 15
@@ -478,7 +478,7 @@ AI MODULES
 	..()
 
 /obj/item/ai_module/syndicate/transmitInstructions(datum/ai_laws/law_datum, mob/sender, overflow)
-//	..()    //We don't want this module reporting to the AI who dun it. --NEO
+//	..()	//We don't want this module reporting to the AI who dun it. --NEO
 	if(law_datum.owner)
 		to_chat(law_datum.owner, "<span class='warning'>BZZZZT</span>")
 		if(!overflow)
@@ -522,7 +522,7 @@ AI MODULES
 	playsound(user, 'sound/machines/click.ogg', 20, TRUE)
 	src.loc.visible_message("<span class='warning'>[icon2html(src, viewers(loc))] [laws[1]]</span>")
 
-/******************** Mother Drone  ******************/
+/******************** Mother Drone ******************/
 
 /obj/item/ai_module/core/full/drone
 	name = "'Mother Drone' Core AI Module"

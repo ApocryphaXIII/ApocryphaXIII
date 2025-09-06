@@ -8,7 +8,7 @@
 	required_reagents = list(/datum/reagent/consumable/ice = 1, /datum/reagent/consumable/coffee = 3)
 
 
-////  This basic drinks recipes have full capacity of glass to prevent reaction proceeding in other reactions ////
+//// This basic drinks recipes have full capacity of glass to prevent reaction proceeding in other reactions ////
 
 /datum/chemical_reaction/vodka
 	results = list(/datum/reagent/consumable/ethanol/vodka/vodka_shot = 15)

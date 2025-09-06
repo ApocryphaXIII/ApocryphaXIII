@@ -145,14 +145,14 @@
 	else
 		shock_restore(usr)
 
-/obj/machinery/door/airlock/AIShiftClick()  // Opens and closes doors!
+/obj/machinery/door/airlock/AIShiftClick() // Opens and closes doors!
 	if(obj_flags & EMAGGED)
 		return
 
 	user_toggle_open(usr)
 	add_hiddenprint(usr)
 
-/obj/machinery/door/airlock/AICtrlShiftClick()  // Sets/Unsets Emergency Access Override
+/obj/machinery/door/airlock/AICtrlShiftClick() // Sets/Unsets Emergency Access Override
 	if(obj_flags & EMAGGED)
 		return
 

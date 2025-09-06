@@ -312,7 +312,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 /// Updates the switch's `position` and `last_pos` variable. Useful so that the switch can properly cycle between the forwards, backwards and neutral positions.
 /obj/machinery/conveyor_switch/proc/update_position()
 	if(position == 0)
-		if(oneway)   //is it a oneway switch
+		if(oneway) //is it a oneway switch
 			position = oneway
 		else
 			if(last_pos < 0)

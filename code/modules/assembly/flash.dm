@@ -24,7 +24,7 @@
 	light_on = FALSE
 	var/flashing_overlay = "flash-f"
 	var/times_used = 0 //Number of times it's been used.
-	var/burnt_out = FALSE     //Is the flash burnt out?
+	var/burnt_out = FALSE	 //Is the flash burnt out?
 	var/burnout_resistance = 0
 	var/last_used = 0 //last world.time it was used.
 	var/cooldown = 0

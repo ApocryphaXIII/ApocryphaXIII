@@ -14,7 +14,7 @@
 	///defines on top
 	var/state = LIGHTFLOOR_FINE
 	///list of colours to choose
-	var/static/list/coloredlights = list(LIGHT_COLOR_CYAN, COLOR_SOFT_RED, LIGHT_COLOR_ORANGE, LIGHT_COLOR_GREEN, LIGHT_COLOR_YELLOW, LIGHT_COLOR_DARK_BLUE, LIGHT_COLOR_LAVENDER, COLOR_WHITE,  LIGHT_COLOR_SLIME_LAMP, LIGHT_COLOR_FIRE)
+	var/static/list/coloredlights = list(LIGHT_COLOR_CYAN, COLOR_SOFT_RED, LIGHT_COLOR_ORANGE, LIGHT_COLOR_GREEN, LIGHT_COLOR_YELLOW, LIGHT_COLOR_DARK_BLUE, LIGHT_COLOR_LAVENDER, COLOR_WHITE, LIGHT_COLOR_SLIME_LAMP, LIGHT_COLOR_FIRE)
 	///current light color
 	var/currentcolor = LIGHT_COLOR_CYAN
 	///var to prevent changing color on certain admin spawn only tiles
@@ -128,7 +128,7 @@
 	if(. & EMP_PROTECT_SELF)
 		return
 	currentcolor = pick(coloredlights)
-	if(state == LIGHTFLOOR_BROKEN)  /// he's dead, jim
+	if(state == LIGHTFLOOR_BROKEN) /// he's dead, jim
 		return
 	if(prob(50))
 		state++

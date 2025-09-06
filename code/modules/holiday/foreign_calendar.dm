@@ -46,7 +46,7 @@ by John Walker 2015, released under public domain
 	return round(realtime / 864000) + BYOND_EPOCH
 
 //////////////////////////////
-//     Islamic Calendar     //
+//	 Islamic Calendar	 //
 //////////////////////////////
 /datum/foreign_calendar/islamic/proc/leap_islamic(yr)
 	return ((yr * 11 + 14) % 30) < 11
@@ -61,7 +61,7 @@ by John Walker 2015, released under public domain
 	return day + CEILING(29.5 * (month - 1), 1) + (year - 1) * 354 + round((3 + (11 * year)) / 30) + ISLAMIC_EPOCH - 1
 
 //////////////////////////////
-//      Hebrew Calendar     //
+//	 Hebrew Calendar	 //
 //////////////////////////////
 /datum/foreign_calendar/hebrew/proc/hebrew_leap(year)
 	switch (year % 19)
@@ -134,22 +134,22 @@ by John Walker 2015, released under public domain
 
 /datum/foreign_calendar/hebrew/proc/hebrew_month_days(year, month)
 	switch (month)
-		//  First of all, dispose of fixed-length 29 day months
+		// First of all, dispose of fixed-length 29 day months
 		if (2, 4, 6, 10, 13)
 			return 29
-		//  If it's not a leap year, Adar has 29 days
+		// If it's not a leap year, Adar has 29 days
 		if (12)
 			if (!hebrew_leap(year))
 				return 29
-		//  If it's Heshvan, days depend on length of year
+		// If it's Heshvan, days depend on length of year
 		if (8)
 			if (hebrew_year_days(year) % 10 != 5)
 				return 29
-		//  Similarly, Kislev varies with the length of year
+		// Similarly, Kislev varies with the length of year
 		if (9)
 			if (hebrew_year_days(year) % 10 == 3)
 				return 29
-	//  Nope, it's a 30 day month
+	// Nope, it's a 30 day month
 	return 30
 
 #undef ISLAMIC_EPOCH

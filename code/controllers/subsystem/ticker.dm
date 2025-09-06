@@ -70,17 +70,17 @@ SUBSYSTEM_DEF(ticker)
 	load_mode()
 
 	var/list/byond_sound_formats = list(
-		"mid"  = TRUE,
+		"mid" = TRUE,
 		"midi" = TRUE,
-		"mod"  = TRUE,
-		"it"   = TRUE,
-		"s3m"  = TRUE,
-		"xm"   = TRUE,
-		"oxm"  = TRUE,
-		"wav"  = TRUE,
-		"ogg"  = TRUE,
-		"raw"  = TRUE,
-		"wma"  = TRUE,
+		"mod" = TRUE,
+		"it" = TRUE,
+		"s3m" = TRUE,
+		"xm" = TRUE,
+		"oxm" = TRUE,
+		"wav" = TRUE,
+		"ogg" = TRUE,
+		"raw" = TRUE,
+		"wma" = TRUE,
 		"aiff" = TRUE
 	)
 
@@ -469,7 +469,7 @@ SUBSYSTEM_DEF(ticker)
 					return
 				queued_players -= next_in_line //Client disconnected, remove he
 			queue_delay = 0 //No vacancy: restart timer
-		if(25 to INFINITY)  //No response from the next in line when a vacancy exists, remove he
+		if(25 to INFINITY) //No response from the next in line when a vacancy exists, remove he
 			to_chat(next_in_line, "<span class='danger'>No response received. You have been removed from the line.</span>")
 			queued_players -= next_in_line
 			queue_delay = 0

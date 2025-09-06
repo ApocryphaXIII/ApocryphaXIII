@@ -1,6 +1,6 @@
 /mob/living/simple_animal/bot/secbot
 	name = "\improper Securitron"
-	desc = "A little security robot.  He looks less than thrilled."
+	desc = "A little security robot. He looks less than thrilled."
 	icon = 'icons/mob/aibots.dmi'
 	icon_state = "secbot"
 	density = FALSE
@@ -352,13 +352,13 @@ Auto Patrol: []"},
 		if(BOT_PREP_ARREST)		// preparing to arrest target
 
 			// see if he got away. If he's no no longer adjacent or inside a closet or about to get up, we hunt again.
-			if( !Adjacent(target) || !isturf(target.loc) ||  target.AmountParalyzed() < 40)
+			if( !Adjacent(target) || !isturf(target.loc) || target.AmountParalyzed() < 40)
 				back_to_hunt()
 				return
 
 			if(iscarbon(target) && target.canBeHandcuffed())
 				if(!arrest_type)
-					if(!target.handcuffed)  //he's not cuffed? Try to cuff him!
+					if(!target.handcuffed) //he's not cuffed? Try to cuff him!
 						cuff(target)
 					else
 						back_to_idle()

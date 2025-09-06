@@ -30,7 +30,7 @@
 	next_move = world.time + ((num + adj)*mod)
 
 /**
- * Before anything else, defer these calls to a per-mobtype handler.  This allows us to
+ * Before anything else, defer these calls to a per-mobtype handler. This allows us to
  * remove istype() spaghetti code, but requires the addition of other handler procs to simplify it.
  *
  * Alternately, you could hardcode every mob's variation in a flat [/mob/proc/ClickOn] proc; however,
@@ -164,7 +164,7 @@
 		return
 
 	if(HAS_TRAIT(src, TRAIT_HANDS_BLOCKED))
-		changeNext_move(CLICK_CD_HANDCUFFED)   //Doing shit in cuffs shall be vey slow
+		changeNext_move(CLICK_CD_HANDCUFFED) //Doing shit in cuffs shall be vey slow
 		UnarmedAttack(A)
 		return
 
@@ -341,8 +341,8 @@
 		var/list/next = list()
 		--depth
 
-		for(var/atom/target in checking)  // will filter out nulls
-			if(closed[target] || isarea(target))  // avoid infinity situations
+		for(var/atom/target in checking) // will filter out nulls
+			if(closed[target] || isarea(target)) // avoid infinity situations
 				continue
 			closed[target] = TRUE
 			if(isturf(target) || isturf(target.loc) || (target in direct_access) || (isobj(target) && target.flags_1 & IS_ONTOP_1)) //Directly accessible atoms
@@ -405,7 +405,7 @@
  * Translates into [atom/proc/attack_hand], etc.
  *
  * Note: proximity_flag here is used to distinguish between normal usage (flag=1),
- * and usage when clicking on things telekinetically (flag=0).  This proc will
+ * and usage when clicking on things telekinetically (flag=0). This proc will
  * not be called at ranged except with telekinesis.
  *
  * proximity_flag is not currently passed to attack_hand, and is instead used
@@ -420,7 +420,7 @@
  * Ranged unarmed attack:
  *
  * This currently is just a default for all mobs, involving
- * laser eyes and telekinesis.  You could easily add exceptions
+ * laser eyes and telekinesis. You could easily add exceptions
  * for things like ranged glove touches, spitting alien acid/neurotoxin,
  * animals lunging, etc.
  */

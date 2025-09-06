@@ -261,7 +261,7 @@
  * Late Intialization, for code that should run after all atoms have run Intialization
  *
  * To have your LateIntialize proc be called, your atoms [Initalization][/atom/proc/Initialize]
- *  proc must return the hint
+ * proc must return the hint
  * [INITIALIZE_HINT_LATELOAD] otherwise you will never be called.
  *
  * useful for doing things like finding other machines on GLOB.machines because you can guarantee
@@ -431,7 +431,7 @@
  * Goes throught he list of passed in parts, if they're reagents, adds them to our reagent holder
  * creating the reagent holder if it exists.
  *
- * If the part is a moveable atom and the  previous location of the item was a mob/living,
+ * If the part is a moveable atom and the previous location of the item was a mob/living,
  * it calls the inventory handler transferItemToLoc for that mob/living and transfers the part
  * to this atom
  *
@@ -1033,37 +1033,37 @@
 				set_light(l_range = var_value)
 			else
 				set_light_range(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, light_power))
 			if(light_system == STATIC_LIGHT)
 				set_light(l_power = var_value)
 			else
 				set_light_power(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, light_color))
 			if(light_system == STATIC_LIGHT)
 				set_light(l_color = var_value)
 			else
 				set_light_color(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, light_on))
 			set_smoothed_icon_state(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, light_flags))
 			set_light_flags(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, smoothing_junction))
 			set_smoothed_icon_state(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, opacity))
 			set_opacity(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, base_pixel_x))
 			set_base_pixel_x(var_value)
-			. =  TRUE
+			. = TRUE
 		if(NAMEOF(src, base_pixel_y))
 			set_base_pixel_y(var_value)
-			. =  TRUE
+			. = TRUE
 
 	if(!isnull(.))
 		datum_flags |= DF_VAR_EDITED
@@ -1232,7 +1232,7 @@
  *
  * You can override it to catch all tool interactions, for use in complex deconstruction procs.
  *
- * Must return  parent proc ..() in the end if overridden
+ * Must return parent proc ..() in the end if overridden
  */
 /atom/proc/tool_act(mob/living/user, obj/item/I, tool_type)
 	var/list/processing_recipes = list() //List of recipes that can be mutated by sending the signal

@@ -1,12 +1,12 @@
 //used for holding information about unique properties of maps
 //feed it json files that match the datum layout
 //defaults to box
-//  -Cyberboss
+// -Cyberboss
 
 /datum/map_config
 	// Metadata
 	var/config_filename = "_maps/kindredcity.json"
-	var/defaulted = TRUE  // set to FALSE by LoadConfig() succeeding
+	var/defaulted = TRUE // set to FALSE by LoadConfig() succeeding
 	// Config from maps.txt
 	var/config_max_users = 0
 	var/config_min_users = 0
@@ -42,7 +42,7 @@
 		return config
 	if (!config.LoadConfig(filename, error_if_missing))
 		qdel(config)
-		config = new /datum/map_config  // Fall back to Box
+		config = new /datum/map_config // Fall back to Box
 	if (delete_after)
 		fdel(filename)
 	return config
@@ -146,7 +146,7 @@
 			log_world("map_config \"job_changes\" field is missing or invalid!")
 			return
 		job_changes = json["job_changes"]
-	
+
 	if("library_areas" in json)
 		if(!islist(json["library_areas"]))
 			log_world("map_config \"library_areas\" field is missing or invalid!")

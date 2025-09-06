@@ -32,7 +32,7 @@
 	return ..()
 
 
-/mob/living/simple_animal/slime/proc/AIprocess()  // the master AI process
+/mob/living/simple_animal/slime/proc/AIprocess() // the master AI process
 
 	if(AIproc || stat || client)
 		return

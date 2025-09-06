@@ -74,7 +74,7 @@
 				atmos_machines += A
 
 	// Not sure if there is some importance here to make sure the area is in z
-	// first or not.  Its defined In Initialize yet its run first in templates
+	// first or not. Its defined In Initialize yet its run first in templates
 	// BEFORE so... hummm
 	SSmapping.reg_in_areas_in_z(areas)
 	SSnetworks.assign_areas_root_ids(areas, src)

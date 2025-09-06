@@ -23,7 +23,7 @@
 	for(var/i = 0, i < codelen, i++)
 		var/dig = pick(digits)
 		code += dig
-		digits -= dig  //there are never matching digits in the answer
+		digits -= dig //there are never matching digits in the answer
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/structure/closet/crate/secure/loot/attack_hand(mob/user)

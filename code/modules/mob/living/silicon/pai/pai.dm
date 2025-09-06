@@ -49,7 +49,7 @@
 	var/subscreen			// Which specific function of the main screen is being displayed
 
 	var/secHUD = 0			// Toggles whether the Security HUD is active or not
-	var/medHUD = 0			// Toggles whether the Medical  HUD is active or not
+	var/medHUD = 0			// Toggles whether the Medical HUD is active or not
 
 	var/datum/data/record/medicalActive1		// Datacore record declarations for record software
 	var/datum/data/record/medicalActive2

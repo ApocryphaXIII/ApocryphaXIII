@@ -231,7 +231,7 @@
 			current_value = max(0, current_value + amount)
 			if(renownrank > AuspiceRankCheck(src))
 				renownrank = AuspiceRankCheck(src)
-				to_chat(vessel, span_userdanger("You are now ai  [RankName(src.renownrank)]."))
+				to_chat(vessel, span_userdanger("You are now ai [RankName(src.renownrank)]."))
 
 		if(amount > 0)
 			if(threshold && current_value >= threshold)

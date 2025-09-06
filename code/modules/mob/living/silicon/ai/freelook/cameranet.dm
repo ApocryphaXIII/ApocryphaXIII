@@ -190,7 +190,7 @@ GLOBAL_DATUM_INIT(cameranet, /datum/cameranet, new)
 	name = "static"
 	icon = null
 	icon_state = null
-	anchored = TRUE  // should only appear in vis_contents, but to be safe
+	anchored = TRUE // should only appear in vis_contents, but to be safe
 	appearance_flags = RESET_TRANSFORM | TILE_BOUND
 	// this combination makes the static block clicks to everything below it,
 	// without appearing in the right-click menu for non-AI clients

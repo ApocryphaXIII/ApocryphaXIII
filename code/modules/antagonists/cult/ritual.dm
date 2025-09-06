@@ -117,7 +117,7 @@ This file contains the cult dagger and rune list code
 			return
 		Turf = get_turf(user)
 		A = get_area(src)
-		if(!(A in summon_objective.summon_spots))  // Check again to make sure they didn't move
+		if(!(A in summon_objective.summon_spots)) // Check again to make sure they didn't move
 			to_chat(user, "<span class='cultlarge'>The Geometer can only be summoned where the veil is weak - in [english_list(summon_objective.summon_spots)]!</span>")
 			return
 		priority_announce("Figments from an eldritch god are being summoned by [user] into [initial(A.name)] from an unknown dimension. Disrupt the ritual at all costs!","Central Command Higher Dimensional Affairs", 'sound/ai/spanomalies.ogg')

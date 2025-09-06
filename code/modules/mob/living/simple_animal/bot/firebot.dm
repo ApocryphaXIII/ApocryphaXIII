@@ -1,8 +1,8 @@
 //Firebot
 
-#define SPEECH_INTERVAL 300  // Time between idle speeches
-#define DETECTED_VOICE_INTERVAL 300  // Time between fire detected callouts
-#define FOAM_INTERVAL 50  // Time between deployment of fire fighting foam
+#define SPEECH_INTERVAL 300 // Time between idle speeches
+#define DETECTED_VOICE_INTERVAL 300 // Time between fire detected callouts
+#define FOAM_INTERVAL 50 // Time between deployment of fire fighting foam
 
 /mob/living/simple_animal/bot/firebot
 	name = "\improper Firebot"

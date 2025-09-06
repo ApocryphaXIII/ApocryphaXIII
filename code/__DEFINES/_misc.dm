@@ -300,7 +300,7 @@ GLOBAL_LIST_INIT(pda_styles, sort_list(list(MONO, VT, ORBITRON, SHARE)))
 #define INCREMENT_TALLY(L, stat) if(L[stat]){L[stat]++}else{L[stat] = 1}
 
 //TODO Move to a pref
-#define STATION_GOAL_BUDGET  1
+#define STATION_GOAL_BUDGET 1
 
 //Endgame Results
 #define NUKE_NEAR_MISS 1

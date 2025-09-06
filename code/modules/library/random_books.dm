@@ -13,7 +13,7 @@
 	if(!random_loaded)
 		// Adult books are excluded unless explicitly set
 		var/loaded_category = random_category == BOOK_CATEGORY_RANDOM ? pick(BOOK_CATEGORY_FICTION, BOOK_CATEGORY_NONFICTION, BOOK_CATEGORY_RELIGION, BOOK_CATEGORY_REFERENCE) : random_category
-		create_random_books(amount = 1, location = loc, fail_loud = TRUE,  category = loaded_category, existing_book = src)
+		create_random_books(amount = 1, location = loc, fail_loud = TRUE, category = loaded_category, existing_book = src)
 		random_loaded = TRUE
 	return ..()
 

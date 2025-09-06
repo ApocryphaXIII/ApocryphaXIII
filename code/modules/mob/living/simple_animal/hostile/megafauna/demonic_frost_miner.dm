@@ -40,8 +40,8 @@ Difficulty: Extremely Hard
 	deathsound = "bodyfall"
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	attack_action_types = list(/datum/action/innate/megafauna_attack/frost_orbs,
-							   /datum/action/innate/megafauna_attack/snowball_machine_gun,
-							   /datum/action/innate/megafauna_attack/ice_shotgun)
+							 /datum/action/innate/megafauna_attack/snowball_machine_gun,
+							 /datum/action/innate/megafauna_attack/ice_shotgun)
 	/// Modifies the speed of the projectiles the demonic frost miner shoots out
 	var/projectile_speed_multiplier = 1
 	/// If the demonic frost miner is in its enraged state

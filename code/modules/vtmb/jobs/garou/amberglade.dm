@@ -43,7 +43,7 @@
 	jobtype = /datum/job/vamp/garou/amberglade/council
 
 	id = /obj/item/card/id/garou/glade/council
-	uniform =  /obj/item/clothing/under/vampire/turtleneck_white
+	uniform = /obj/item/clothing/under/vampire/turtleneck_white
 	suit = /obj/item/clothing/suit/vampire/coat/winter/alt
 	shoes = /obj/item/clothing/shoes/vampire/jackboots/work
 	l_pocket = /obj/item/vamp/phone
@@ -100,7 +100,7 @@
 	jobtype = /datum/job/vamp/garou/amberglade/keeper
 
 	id = /obj/item/card/id/garou/glade/keeper
-	uniform =  /obj/item/clothing/under/vampire/mechanic
+	uniform = /obj/item/clothing/under/vampire/mechanic
 	suit = /obj/item/clothing/suit/vampire/labcoat
 	gloves = /obj/item/clothing/gloves/vampire/work
 	shoes = /obj/item/clothing/shoes/vampire/jackboots/work
@@ -158,7 +158,7 @@
 	jobtype = /datum/job/vamp/garou/amberglade/truthcatcher
 
 	id = /obj/item/card/id/garou/glade/truthcatcher
-	uniform =  /obj/item/clothing/under/vampire/office
+	uniform = /obj/item/clothing/under/vampire/office
 	suit = /obj/item/clothing/suit/vampire/coat/winter/alt
 	gloves = /obj/item/clothing/gloves/vampire/work
 	shoes = /obj/item/clothing/shoes/vampire/jackboots/work
@@ -217,7 +217,7 @@
 	jobtype = /datum/job/vamp/garou/amberglade/warder
 
 	id = /obj/item/card/id/garou/glade/warder
-	uniform =  /obj/item/clothing/under/vampire/biker
+	uniform = /obj/item/clothing/under/vampire/biker
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	gloves = /obj/item/clothing/gloves/vampire/work
 	head = /obj/item/clothing/head/vampire/cowboy
@@ -278,7 +278,7 @@
 	jobtype = /datum/job/vamp/garou/amberglade/guardian
 
 	id = /obj/item/card/id/garou/glade/guardian
-	uniform =  /obj/item/clothing/under/vampire/biker
+	uniform = /obj/item/clothing/under/vampire/biker
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	head = /obj/item/clothing/head/vampire/baseballcap
 	belt = /obj/item/melee/classic_baton/vampire

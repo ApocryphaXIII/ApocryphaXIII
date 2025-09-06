@@ -2,7 +2,7 @@
  * Element for scaling item appearances in the overworld or in inventory/storage.
  *
  * This bespoke element allows for items to have varying sizes depending on their location.
- * The overworld simply refers to items being on a turf.  Inventory includes HUD item slots,
+ * The overworld simply refers to items being on a turf. Inventory includes HUD item slots,
  * and storage is anywhere a storage component is used.
  * Scaling should affect the item's icon and all attached overlays (such as blood decals).
  *
@@ -18,10 +18,10 @@
 /**
  * Attach proc for the item_scaling element
  *
- * The proc checks the target's type before attaching.  It then initializes
- * the target to overworld scaling.  The target should then rescale if it is placed
- * in inventory/storage on initialization.  Relevant signals are registered to listen
- * for pickup/drop or storage events.  Scaling values of 1 will result in items
+ * The proc checks the target's type before attaching. It then initializes
+ * the target to overworld scaling. The target should then rescale if it is placed
+ * in inventory/storage on initialization. Relevant signals are registered to listen
+ * for pickup/drop or storage events. Scaling values of 1 will result in items
  * returning to their original size.
  * Arguments:
  * * target - Datum to attach the element to.

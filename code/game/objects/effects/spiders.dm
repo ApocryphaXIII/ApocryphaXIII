@@ -69,9 +69,9 @@
 	name = "egg cluster"
 	desc = "They seem to pulse slightly with an inner life."
 	icon_state = "eggs"
-	///The amount the egg cluster has grown.  Is able to produce a spider when it hits 100.
+	///The amount the egg cluster has grown. Is able to produce a spider when it hits 100.
 	var/amount_grown = 0
-	///The mother's directive at the time the egg was produced.  Passed onto the child.
+	///The mother's directive at the time the egg was produced. Passed onto the child.
 	var/directive = "" //Message from the mother
 	///Which factions to give to the produced spider, inherited from the mother.
 	var/list/faction = list("spiders")
@@ -137,7 +137,7 @@
 /obj/structure/spider/eggcluster/bloody
 	name = "bloody egg cluster"
 	color = rgb(255,0,0)
-	directive = "You are the spawn of a visicious changeling.  You have no ambitions except to wreak havoc and ensure your own survival.  You are aggressive to all living beings outside of your species, including changelings."
+	directive = "You are the spawn of a visicious changeling. You have no ambitions except to wreak havoc and ensure your own survival. You are aggressive to all living beings outside of your species, including changelings."
 	potentialspawns = list(/mob/living/simple_animal/hostile/poison/giant_spider/hunter/flesh)
 
 /obj/structure/spider/eggcluster/midwife

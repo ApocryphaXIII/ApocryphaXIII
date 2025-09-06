@@ -1,6 +1,6 @@
 
 #define BEE_IDLE_ROAMING		70 //The value of idle at which a bee in a beebox will try to wander
-#define BEE_IDLE_GOHOME			0  //The value of idle at which a bee will try to go home
+#define BEE_IDLE_GOHOME			0 //The value of idle at which a bee will try to go home
 #define BEE_PROB_GOHOME			35 //Probability to go home when idle is below BEE_IDLE_GOHOME
 #define BEE_PROB_GOROAM			5 //Probability to go roaming when idle is above BEE_IDLE_ROAMING
 #define BEE_TRAY_RECENT_VISIT	200	//How long in deciseconds until a tray can be visited by a bee again

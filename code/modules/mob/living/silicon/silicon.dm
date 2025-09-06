@@ -24,7 +24,7 @@
 	var/obj/item/camera/siliconcam/aicamera = null //photography
 	hud_possible = list(ANTAG_HUD, DIAG_STAT_HUD, DIAG_HUD, DIAG_TRACK_HUD)
 
-	var/obj/item/radio/borg/radio = null  ///If this is a path, this gets created as an object in Initialize.
+	var/obj/item/radio/borg/radio = null ///If this is a path, this gets created as an object in Initialize.
 
 	var/list/alarm_types_show = list("Motion" = 0, "Fire" = 0, "Atmosphere" = 0, "Power" = 0, "Camera" = 0)
 	var/list/alarm_types_clear = list("Motion" = 0, "Fire" = 0, "Atmosphere" = 0, "Power" = 0, "Camera" = 0)
@@ -362,7 +362,7 @@
 	return FALSE
 
 // The src mob is trying to place an item on someone
-// But the src mob is a silicon!!  Disable.
+// But the src mob is a silicon!! Disable.
 /mob/living/silicon/stripPanelEquip(obj/item/what, mob/who, slot)
 	return FALSE
 

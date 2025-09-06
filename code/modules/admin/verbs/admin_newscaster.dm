@@ -27,7 +27,7 @@
 	///Is the current user creating a new comment at the moment?
 	var/creating_comment = FALSE
 	///Is the current user editing or viewing a new wanted issue at the moment?
-	var/viewing_wanted  = FALSE
+	var/viewing_wanted = FALSE
 	///What is the user submitted, criminal name for the new wanted issue?
 	var/criminal_name
 	///What is the user submitted, crime description for the new wanted issue?

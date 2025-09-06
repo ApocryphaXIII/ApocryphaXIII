@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 #define PDA_SCANNER_REAGENT		3
 #define PDA_SCANNER_HALOGEN		4
 #define PDA_SCANNER_GAS			5
-#define PDA_SPAM_DELAY		    2 MINUTES
+#define PDA_SPAM_DELAY		 2 MINUTES
 
 /obj/item/pda
 	name = "\improper PDA"
@@ -67,7 +67,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	var/notescanned = FALSE // True if what is in the notekeeper was from a paper.
 	var/hidden = FALSE // Is the PDA hidden from the PDA list?
 	var/emped = FALSE
-	var/equipped = FALSE  //used here to determine if this is the first time its been picked up
+	var/equipped = FALSE //used here to determine if this is the first time its been picked up
 	var/allow_emojis = FALSE //if the pda can send emojis and actually have them parsed as such
 	var/sort_by_job = FALSE // If this is TRUE, will sort PDA list by job.
 
@@ -235,7 +235,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	dat += "<br>"
 
 	if (!owner)
-		dat += "Warning: No owner information entered.  Please swipe card.<br><br>"
+		dat += "Warning: No owner information entered. Please swipe card.<br><br>"
 		dat += "<a href='byond://?src=[REF(src)];choice=Refresh'>[PDAIMG(refresh)]Retry</a>"
 	else
 		switch (mode)
@@ -706,7 +706,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	// Send the signal
 	var/list/string_targets = list()
 	for (var/obj/item/pda/P in targets)
-		if (P.owner && P.ownjob)  // != src is checked by the UI
+		if (P.owner && P.ownjob) // != src is checked by the UI
 			string_targets += "[P.owner] ([P.ownjob])"
 	for (var/obj/machinery/computer/message_monitor/M in targets)
 		// In case of "Reply" to a message from a console, this will make the

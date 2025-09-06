@@ -772,7 +772,7 @@
 /datum/supply_pack/materials/license50
 	name = "50 Empty License Plates"
 	desc = "Create a bunch of boxes."
-	cost = CARGO_CRATE_VALUE * 2  // 50 * 25 + 700 - 1000 = 950 credits profit
+	cost = CARGO_CRATE_VALUE * 2 // 50 * 25 + 700 - 1000 = 950 credits profit
 	access_view = ACCESS_SEC_DOORS
 	contains = list(/obj/item/stack/license_plates/empty/fifty)
 	crate_name = "empty license plate crate"

@@ -92,7 +92,7 @@
 			msg += "<br><span class='info'>Maximum reagent capacity: [reagents.maximum_volume]</span>"
 			var/chem_cap = 0
 			for(var/reagent_id in reagents.reagent_list)
-				var/datum/reagent/R  = reagent_id
+				var/datum/reagent/R = reagent_id
 				var/amt = R.volume
 				chem_cap += R.volume
 				reag_txt += "\n<span class='info'>- [R.name]: [amt]</span>"

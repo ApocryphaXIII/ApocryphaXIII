@@ -24,7 +24,7 @@
 	switch(screen)
 
 
-	  // --- Main Menu ---
+	 // --- Main Menu ---
 
 		if(0)
 			dat += "<br>[temp]<br>"
@@ -40,11 +40,11 @@
 				dat += "<br>No servers detected. Scan for servers: <a href='byond://?src=[REF(src)];operation=scan'>\[Scan\]</a>"
 
 
-	  // --- Viewing Server ---
+	 // --- Viewing Server ---
 
 		if(1)
 			dat += "<br>[temp]<br>"
-			dat += "<center><a href='byond://?src=[REF(src)];operation=mainmenu'>\[Main Menu\]</a>     <a href='byond://?src=[REF(src)];operation=refresh'>\[Refresh\]</a></center>"
+			dat += "<center><a href='byond://?src=[REF(src)];operation=mainmenu'>\[Main Menu\]</a>	 <a href='byond://?src=[REF(src)];operation=refresh'>\[Refresh\]</a></center>"
 			dat += "<br>Current Network: [network]"
 			dat += "<br>Selected Server: [SelectedServer.id]"
 
@@ -62,12 +62,12 @@
 
 				// If the log is a speech file
 				if(C.input_type == "Speech File")
-					dat += "<li><font color = #008F00>[C.name]</font>  <font color = #FF0000><a href='byond://?src=[REF(src)];delete=[i]'>\[X\]</a></font><br>"
+					dat += "<li><font color = #008F00>[C.name]</font> <font color = #FF0000><a href='byond://?src=[REF(src)];delete=[i]'>\[X\]</a></font><br>"
 
 					// -- Determine race of orator --
 
 					var/mobtype = C.parameters["mobtype"]
-					var/race			   // The actual race of the mob
+					var/race			 // The actual race of the mob
 
 					if(ispath(mobtype, /mob/living/carbon/human) || ispath(mobtype, /mob/living/brain))
 						race = "Humanoid"
@@ -108,12 +108,12 @@
 					dat += "</li><br>"
 
 				else if(C.input_type == "Execution Error")
-					dat += "<li><font color = #990000>[C.name]</font>  <a href='byond://?src=[REF(src)];delete=[i]'>\[X\]</a><br>"
+					dat += "<li><font color = #990000>[C.name]</font> <a href='byond://?src=[REF(src)];delete=[i]'>\[X\]</a><br>"
 					dat += "<u><font color = #787700>Error</font></u>: \"[C.parameters["message"]]\"<br>"
 					dat += "</li><br>"
 
 				else
-					dat += "<li><font color = #000099>[C.name]</font>  <a href='byond://?src=[REF(src)];delete=[i]'>\[X\]</a><br>"
+					dat += "<li><font color = #000099>[C.name]</font> <a href='byond://?src=[REF(src)];delete=[i]'>\[X\]</a><br>"
 					dat += "<u><font color = #18743E>Data type</font></u>: [C.input_type]<br>"
 					dat += "<u><font color = #18743E>Contents</font></u>: <i>(unintelligible)</i><br>"
 					dat += "</li><br>"

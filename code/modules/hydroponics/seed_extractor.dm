@@ -1,8 +1,8 @@
 /**
  * Finds and extracts seeds from an object
  *
- * Checks if the object is such that creates a seed when extracted.  Used by seed
- * extractors or posably anything that would create seeds in some way.  The seeds
+ * Checks if the object is such that creates a seed when extracted. Used by seed
+ * extractors or posably anything that would create seeds in some way. The seeds
  * are dropped either at the extractor, if it exists, or where the original object
  * was and it qdel's the object
  *
@@ -61,7 +61,7 @@
 	icon_state = "sextractor"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/seed_extractor
-	/// Associated list of seeds, they are all weak refs.  We check the len to see how many refs we have for each
+	/// Associated list of seeds, they are all weak refs. We check the len to see how many refs we have for each
 	// seed
 	var/list/piles = list()
 	var/max_seeds = 1000
@@ -122,9 +122,9 @@
 /**
  * Generate seed string
  *
- * Creates a string based of the traits of a seed.  We use this string as a bucket for all
- * seeds that match as well as the key the ui uses to get the seed.  We also use the key
- * for the data shown in the ui.  Javascript parses this string to display
+ * Creates a string based of the traits of a seed. We use this string as a bucket for all
+ * seeds that match as well as the key the ui uses to get the seed. We also use the key
+ * for the data shown in the ui. Javascript parses this string to display
  *
  * Arguments:
  * * O - seed to generate the string from

@@ -9,16 +9,16 @@
  * A box with a similar design to the Hierophant which trades large, single attacks for more frequent smaller ones.
  * As it's health gets lower, the time between it's attacks decrease.
  * It's attacks are as follows:
- * - Fires hierophant blasts in a straight line.  Can only fire in a straight line in 8 directions, being the diagonals and cardinals.
- * - Creates a box of hierophant blasts around the target.  If they try to run away to avoid it, they'll very likely get hit.
+ * - Fires hierophant blasts in a straight line. Can only fire in a straight line in 8 directions, being the diagonals and cardinals.
+ * - Creates a box of hierophant blasts around the target. If they try to run away to avoid it, they'll very likely get hit.
  * - Teleports the pandora from one location to another, almost identical to Hierophant.
  * - Spawns a 7x7 AOE at the location of choice, spreading out from the center.
- * Pandora's fight mirrors Hierophant's closely, but has stark differences in attack effects.  Instead of long-winded dodge times and long cooldowns, Pandora constantly attacks the opponent, but leaves itself open for attack.
+ * Pandora's fight mirrors Hierophant's closely, but has stark differences in attack effects. Instead of long-winded dodge times and long cooldowns, Pandora constantly attacks the opponent, but leaves itself open for attack.
  */
 
 /mob/living/simple_animal/hostile/asteroid/elite/pandora
 	name = "pandora"
-	desc = "A large magic box with similar power and design to the Hierophant.  Once it opens, it's not easy to close it."
+	desc = "A large magic box with similar power and design to the Hierophant. Once it opens, it's not easy to close it."
 	icon_state = "pandora"
 	icon_living = "pandora"
 	icon_aggro = "pandora"

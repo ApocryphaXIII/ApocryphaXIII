@@ -4,7 +4,7 @@
 
 /*
 
-/obj/machinery/vending/[vendors name here]   // --vending machine template   :)
+/obj/machinery/vending/[vendors name here] // --vending machine template :)
 	name = ""
 	desc = ""
 	icon = ''
@@ -101,10 +101,10 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/list/pinned_mobs = list()
 
 	/**
-	  * List of products this machine sells
-	  *
-	  *	form should be list(/type/path = amount, /type/path2 = amount2)
-	  */
+	 * List of products this machine sells
+	 *
+	 *	form should be list(/type/path = amount, /type/path2 = amount2)
+	 */
 	var/list/products	= list()
 
 	/**
@@ -121,17 +121,17 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 
 
 	/**
-	  * List of products this machine sells when you hack it
-	  *
-	  *	form should be list(/type/path = amount, /type/path2 = amount2)
-	  */
+	 * List of products this machine sells when you hack it
+	 *
+	 *	form should be list(/type/path = amount, /type/path2 = amount2)
+	 */
 	var/list/contraband	= list()
 
 	/**
-	  * List of premium products this machine sells
-	  *
-	  *	form should be list(/type/path, /type/path2) as there is only ever one in stock
-	  */
+	 * List of premium products this machine sells
+	 *
+	 *	form should be list(/type/path, /type/path2) as there is only ever one in stock
+	 */
 	var/list/premium 	= list()
 
 	var/list/product_records = list()
@@ -180,10 +180,10 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	/// How much physical cash does this vending machine have?
 	var/cash_contained = 0
 	/**
-	  * Is this item on station or not
-	  *
-	  * if it doesn't originate from off-station during mapload, everything is free
-	  */
+	 * Is this item on station or not
+	 *
+	 * if it doesn't originate from off-station during mapload, everything is free
+	 */
 	var/onstation = TRUE //if it doesn't originate from off-station during mapload, everything is free
 	///A variable to change on a per instance basis on the map that allows the instance to force cost and ID requirements
 	var/onstation_override = FALSE //change this on the object on the map to override the onstation check. DO NOT APPLY THIS GLOBALLY.
@@ -1129,7 +1129,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 	if(seconds_electrified > MACHINE_NOT_ELECTRIFIED)
 		seconds_electrified--
 
-	//Pitch to the people!  Really sell it!
+	//Pitch to the people! Really sell it!
 	if(last_slogan + slogan_delay <= world.time && slogan_list.len > 0 && !shut_up && DT_PROB(2.5, delta_time))
 		var/slogan = pick(slogan_list)
 		speak(slogan)

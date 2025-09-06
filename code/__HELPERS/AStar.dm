@@ -143,7 +143,7 @@ Actual Adjacent procs :
 				if(cur.bf & f)
 					var/T = get_step(cur.source,f)
 					if(T != exclude)
-						var/datum/pathnode/CN = openc[T]  //current checking turf
+						var/datum/pathnode/CN = openc[T] //current checking turf
 						var/r=((f & MASK_ODD)<<1)|((f & MASK_EVEN)>>1) //getting reverse direction throught swapping even and odd bits.((f & 01010101)<<1)|((f & 10101010)>>1)
 						var/newg = cur.g + call(cur.source,dist)(T)
 						if(CN)

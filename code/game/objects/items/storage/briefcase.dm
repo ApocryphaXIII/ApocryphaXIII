@@ -50,7 +50,7 @@
 
 /obj/item/storage/secure/briefcase/fbi
 	name = "official looking briefcase"
-	desc =  "This briefcase looks important, and has a lock."
+	desc = "This briefcase looks important, and has a lock."
 /obj/item/storage/secure/briefcase/fbi/PopulateContents()
 	..()
 	new /obj/item/stack/dollar/thousand(src)

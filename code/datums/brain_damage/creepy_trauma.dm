@@ -119,7 +119,7 @@
 	var/list/possible_targets = list() //The second list, which filters out silicons and simplemobs
 	var/static/list/trait_obsessions = list("Mime" = TRAIT_FAN_MIME, "Clown" = TRAIT_FAN_CLOWN, "Chaplain" = TRAIT_SPIRITUAL) //Jobs and their corresponding quirks
 	var/list/special_pool = list() //The special list, for quirk-based
-	var/chosen_victim  //The obsession target
+	var/chosen_victim //The obsession target
 
 	for(var/mob/Player in GLOB.player_list)//prevents crewmembers falling in love with nuke ops they never met, and other annoying hijinks
 		if(Player.mind && Player.stat != DEAD && !isnewplayer(Player) && !isbrain(Player) && Player.client && Player != owner && SSjob.GetJob(Player.mind.assigned_role))

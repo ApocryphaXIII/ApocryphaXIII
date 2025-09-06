@@ -18,9 +18,9 @@ SUBSYSTEM_DEF(economy)
 	/// Departmental cash provided to science when a node is researched in specific configs.
 	var/techweb_bounty = 250
 	/**
-	  * List of normal (no department ones) accounts' identifiers with associated datum accounts, for big O performance.
-	  * A list of sole account datums can be obtained with flatten_list(), another variable would be redundant rn.
-	  */
+	 * List of normal (no department ones) accounts' identifiers with associated datum accounts, for big O performance.
+	 * A list of sole account datums can be obtained with flatten_list(), another variable would be redundant rn.
+	 */
 	var/list/bank_accounts_by_id = list()
 	var/list/dep_cards = list()
 	/// A var that collects the total amount of credits owned in player accounts on station, reset and recounted on fire()

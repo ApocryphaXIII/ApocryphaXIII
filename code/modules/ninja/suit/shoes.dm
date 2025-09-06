@@ -1,9 +1,9 @@
 /**
  * # Ninja Shoes
  *
- * Space ninja's shoes.  Gives him armor on his feet.
+ * Space ninja's shoes. Gives him armor on his feet.
  *
- * Space ninja's ninja shoes.  How mousey.  Gives him slip protection and protection against attacks.
+ * Space ninja's ninja shoes. How mousey. Gives him slip protection and protection against attacks.
  * Also are temperature resistant.
  *
  */

@@ -116,7 +116,7 @@
 	amount_per_transfer_from_this = 50
 	possible_transfer_amounts = list(25,50,100)
 	volume = 500
-	item_flags = NOBLUDGEON | ABSTRACT  // don't put in storage
+	item_flags = NOBLUDGEON | ABSTRACT // don't put in storage
 	slot_flags = NONE
 
 	var/obj/item/watertank/tank
@@ -219,7 +219,7 @@
 	precision = 1
 	cooling_power = 5
 	w_class = WEIGHT_CLASS_HUGE
-	item_flags = ABSTRACT  // don't put in storage
+	item_flags = ABSTRACT // don't put in storage
 	chem = null //holds no chems of its own, it takes from the tank.
 	var/obj/item/watertank/tank
 	var/nozzle_mode = 0

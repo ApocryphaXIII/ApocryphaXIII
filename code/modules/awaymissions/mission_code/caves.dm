@@ -50,7 +50,7 @@
 
 /obj/item/paper/fluff/awaymissions/caves/safety_notice
 	name = "safety notice"
-	default_raw_text = "<center>Some of the miners have gone to laying some mine traps among the lower levels of the mine to keep the monsters at bay.  This probably isn't the smartest idea in a cavern like this but the boys seem to get a chuckle out of every distant blast they hear go off, so I guess it works </center>"
+	default_raw_text = "<center>Some of the miners have gone to laying some mine traps among the lower levels of the mine to keep the monsters at bay. This probably isn't the smartest idea in a cavern like this but the boys seem to get a chuckle out of every distant blast they hear go off, so I guess it works </center>"
 
 /obj/item/paper/fluff/awaymissions/caves/shipment_receipt
 	name = "Shipment Receipt"

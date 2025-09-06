@@ -127,7 +127,7 @@
 	force = 10
 	unfolded_type = /obj/vehicle/ridden/wheelchair/gold
 
-/obj/vehicle/ridden/wheelchair/MouseDrop(over_object, src_location, over_location)  //Lets you collapse wheelchair
+/obj/vehicle/ridden/wheelchair/MouseDrop(over_object, src_location, over_location) //Lets you collapse wheelchair
 	. = ..()
 	if(over_object != usr || !Adjacent(usr) || !foldabletype)
 		return FALSE
@@ -140,7 +140,7 @@
 	usr.put_in_hands(wheelchair_folded)
 	qdel(src)
 
-/obj/item/wheelchair/attack_self(mob/user)  //Deploys wheelchair on in-hand use
+/obj/item/wheelchair/attack_self(mob/user) //Deploys wheelchair on in-hand use
 	deploy_wheelchair(user, user.loc)
 
 /obj/item/wheelchair/proc/deploy_wheelchair(mob/user, atom/location)

@@ -218,18 +218,18 @@ INITIALIZE_IMMEDIATE(/atom/movable/virtualspeaker)
 			job = findjob.fields["rank"]
 		else
 			job = "Unknown"
-	else if(iscarbon(M))  // Carbon nonhuman
+	else if(iscarbon(M)) // Carbon nonhuman
 		job = "No ID"
-	else if(isAI(M))  // AI
+	else if(isAI(M)) // AI
 		job = "AI"
-	else if(iscyborg(M))  // Cyborg
+	else if(iscyborg(M)) // Cyborg
 		var/mob/living/silicon/robot/B = M
 		job = "[B.designation] Cyborg"
-	else if(istype(M, /mob/living/silicon/pai))  // Personal AI (pAI)
+	else if(istype(M, /mob/living/silicon/pai)) // Personal AI (pAI)
 		job = "Personal AI"
-	else if(isobj(M))  // Cold, emotionless machines
+	else if(isobj(M)) // Cold, emotionless machines
 		job = "Machine"
-	else  // Unidentifiable mob
+	else // Unidentifiable mob
 		job = "Unknown"
 
 /atom/movable/virtualspeaker/GetJob()

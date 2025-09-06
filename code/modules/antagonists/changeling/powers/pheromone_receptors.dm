@@ -1,12 +1,12 @@
 #define CHANGELING_PHEROMONE_MIN_DISTANCE 10 //More generous than the agent pinpointer because you don't know who you're looking for.
-#define CHANGELING_PHEROMONE_MAX_DISTANCE 25 //They can smell your fear a mile away.  Well, 50 meters.
+#define CHANGELING_PHEROMONE_MAX_DISTANCE 25 //They can smell your fear a mile away. Well, 50 meters.
 #define CHANGELING_PHEROMONE_PING_TIME 20 //2s update time.
 
 
 /datum/action/changeling/pheromone_receptors
 	name = "Pheromone Receptors"
-	desc = "We attune our senses to track other changelings by scent.  The closer they are, the easier we can find them."
-	helptext = "We will know the general direction of nearby changelings, with closer scents being stronger.  Our chemical generation is slowed while this is active."
+	desc = "We attune our senses to track other changelings by scent. The closer they are, the easier we can find them."
+	helptext = "We will know the general direction of nearby changelings, with closer scents being stronger. Our chemical generation is slowed while this is active."
 	chemical_cost = 0 //Reduces regain rate while active.
 	dna_cost = 2
 	var/receptors_active = FALSE
@@ -26,7 +26,7 @@
 	receptors_active = !receptors_active
 
 //Modified IA pinpointer - Points to the NEAREST changeling, but will only get you within a few tiles of the target.
-//You'll still have to rely on intuition and observation to make the identification.  Lings can 'hide' in public places.
+//You'll still have to rely on intuition and observation to make the identification. Lings can 'hide' in public places.
 /datum/status_effect/agent_pinpointer/changeling
 	alert_type = /atom/movable/screen/alert/status_effect/agent_pinpointer/changeling
 	minimum_range = CHANGELING_PHEROMONE_MIN_DISTANCE

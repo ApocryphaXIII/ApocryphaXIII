@@ -1,9 +1,9 @@
 //////////////////////////////////////////////
-//////////     SLIME CROSSBREEDS    //////////
+//////////	 SLIME CROSSBREEDS	//////////
 //////////////////////////////////////////////
 // A system of combining two extract types. //
-// Performed by feeding a slime 10 of an    //
-// extract color.                           //
+// Performed by feeding a slime 10 of an	//
+// extract color.						 //
 //////////////////////////////////////////////
 /*==========================================*\
 To add a crossbreed:
@@ -45,7 +45,7 @@ To add a crossbreed:
 
 /obj/item/slimecross/Initialize()
 	. = ..()
-	name =  effect + " " + colour + " extract"
+	name = effect + " " + colour + " extract"
 	var/itemcolor = "#FFFFFF"
 	switch(colour)
 		if("orange")

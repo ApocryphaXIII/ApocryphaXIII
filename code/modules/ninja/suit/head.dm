@@ -1,9 +1,9 @@
 /**
  * # Ninja Hood
  *
- * Space ninja's hood.  Provides armor and blocks AI tracking.
+ * Space ninja's hood. Provides armor and blocks AI tracking.
  *
- * A hood that only exists as a part of space ninja's starting kit.  Provides armor equal of space ninja's suit and disallows an AI to track the wearer.
+ * A hood that only exists as a part of space ninja's starting kit. Provides armor equal of space ninja's suit and disallows an AI to track the wearer.
  *
  */
 /obj/item/clothing/head/helmet/space/space_ninja

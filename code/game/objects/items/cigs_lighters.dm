@@ -132,7 +132,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/nextdragtime = 0
 	var/lit = FALSE
 	var/starts_lit = FALSE
-	var/icon_on = "cigon"  //Note - these are in masks.dmi not in cigarette.dmi
+	var/icon_on = "cigon" //Note - these are in masks.dmi not in cigarette.dmi
 	var/icon_off = "cigoff"
 	var/type_butt = /obj/item/cigbutt
 	var/lastHolder = null
@@ -541,7 +541,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A pipe, for smoking. Probably made of meerschaum or something."
 	icon_state = "pipeoff"
 	inhand_icon_state = "pipeoff"
-	icon_on = "pipeon"  //Note - these are in masks.dmi
+	icon_on = "pipeon" //Note - these are in masks.dmi
 	icon_off = "pipeoff"
 	smoketime = 0
 	chem_volume = 100
@@ -626,7 +626,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A nicotine delivery system popularized by folksy backwoodsmen and kept popular in the modern age and beyond by space hipsters. Can be loaded with objects."
 	icon_state = "cobpipeoff"
 	inhand_icon_state = "cobpipeoff"
-	icon_on = "cobpipeon"  //Note - these are in masks.dmi
+	icon_on = "cobpipeon" //Note - these are in masks.dmi
 	icon_off = "cobpipeoff"
 	smoketime = 0
 

@@ -37,7 +37,7 @@
 	..()
 	var/common_min = 30 //Minimum amount of minerals in the stack for common minerals
 	var/common_max = 50 //Maximum amount of HONK in the stack for HONK common minerals
-	var/rare_min = 5  //Minimum HONK of HONK in the stack HONK HONK rare minerals
+	var/rare_min = 5 //Minimum HONK of HONK in the stack HONK HONK rare minerals
 	var/rare_max = 20 //Maximum HONK HONK HONK in the HONK for HONK rare HONK
 
 

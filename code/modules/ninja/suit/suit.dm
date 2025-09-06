@@ -1,11 +1,11 @@
 /**
  * # Ninja Suit
  *
- * Space ninja's suit.  Provides him with most of his powers.
+ * Space ninja's suit. Provides him with most of his powers.
  *
- * Space ninja's suit.  Gives space ninja all his iconic powers, which are mostly kept in
- * the folder ninja_equipment_actions.  Has a lot of unique stuff going on, so make sure to check
- * the variables.  Check suit_attackby to see radium interaction, disk copying, and cell replacement.
+ * Space ninja's suit. Gives space ninja all his iconic powers, which are mostly kept in
+ * the folder ninja_equipment_actions. Has a lot of unique stuff going on, so make sure to check
+ * the variables. Check suit_attackby to see radium interaction, disk copying, and cell replacement.
  *
  */
 /obj/item/clothing/suit/space/space_ninja
@@ -24,9 +24,9 @@
 	var/mob/living/carbon/human/affecting = null
 	///The suit's spark system, used for... sparking.
 	var/datum/effect_system/spark_spread/spark_system
-	///The suit's stored research.  Used for the research objective (see antagonist file)
+	///The suit's stored research. Used for the research objective (see antagonist file)
 	var/datum/techweb/stored_research
-	///The katana registered with the suit, used for recalling and catching the katana.  Set when the ninja outfit is created.
+	///The katana registered with the suit, used for recalling and catching the katana. Set when the ninja outfit is created.
 	var/obj/item/energy_katana/energyKatana
 
 	///The space ninja's hood.
@@ -38,9 +38,9 @@
 	///The space ninja's mask.
 	var/obj/item/clothing/mask/gas/space_ninja/n_mask
 
-	///Whether or not the suit is currently booted up.  Starts off.
+	///Whether or not the suit is currently booted up. Starts off.
 	var/s_initialized = FALSE//Suit starts off.
-	///The suit's current cooldown.  If not 0, blocks usage of most abilities, and decrements its value by 1 every process
+	///The suit's current cooldown. If not 0, blocks usage of most abilities, and decrements its value by 1 every process
 	var/s_coold = 0
 	///How much energy the suit expends in a single process
 	var/s_cost = 1
@@ -65,7 +65,7 @@
 		return
 	. += "All systems operational. Current energy capacity: <B>[DisplayEnergy(cell.charge)]</B>.\n"+\
 	"The CLOAK-tech device is <B>[stealth?"active":"inactive"]</B>.\n"+\
-	"[a_boost?"An adrenaline boost is available to use.":"There is no adrenaline boost available.  Try refilling the suit with 20 units of radium."]"
+	"[a_boost?"An adrenaline boost is available to use.":"There is no adrenaline boost available. Try refilling the suit with 20 units of radium."]"
 
 /obj/item/clothing/suit/space/space_ninja/Initialize()
 	. = ..()
@@ -152,7 +152,7 @@
 /**
  * Proc for changing the suit's appearance upon locking.
  *
- * Proc for when space ninja's suit locks.  If the user selects Original, gives it glowing lights, along with having an alternate sprite for female body types.
+ * Proc for when space ninja's suit locks. If the user selects Original, gives it glowing lights, along with having an alternate sprite for female body types.
  * Yes, we do have nipLEDs, how could you tell?
  * If the user selects New Age, it applies new sprites to all the gear.
  * Arguments:
@@ -177,7 +177,7 @@
  * Proc called to lock the important gear pieces onto space ninja's body.
  *
  * Called during the suit startup to lock all gear pieces onto space ninja.
- * Terminates if a gear piece is not being worn.  Also gives the ninja the inability to use firearms.
+ * Terminates if a gear piece is not being worn. Also gives the ninja the inability to use firearms.
  * If the person in the suit isn't a ninja when this is called, this proc just gibs them instead.
  * Arguments:
  * * ninja - The person wearing the suit.
@@ -215,7 +215,7 @@
 /**
  * Proc called to unlock all the gear off space ninja's body.
  *
- * Proc which is essentially the opposite of lock_suit.  Lets you take off all the suit parts.
+ * Proc which is essentially the opposite of lock_suit. Lets you take off all the suit parts.
  * Also gets rid of the objection to using firearms from the wearer.
  * Arguments:
  * * ninja - The person wearing the suit.

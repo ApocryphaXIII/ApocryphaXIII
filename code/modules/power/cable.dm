@@ -167,8 +167,8 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	add_fingerprint(user)
 
 // Items usable on a cable :
-//   - Wirecutters : cut it duh !
-//   - Multitool : get the power currently passing through the cable
+// - Wirecutters : cut it duh !
+// - Multitool : get the power currently passing through the cable
 //
 /obj/structure/cable/attackby(obj/item/W, mob/user, params)
 	handlecable(W, user, params)
@@ -237,7 +237,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 
 	var/inverse_dir = (!direction)? 0 : turn(direction, 180) //flip the direction, to match with the source position on its turf
 
-	var/turf/TB  = get_step(src, direction)
+	var/turf/TB = get_step(src, direction)
 
 	for(var/obj/structure/cable/C in TB)
 		if(!C)

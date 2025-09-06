@@ -62,14 +62,14 @@ GLOBAL_LIST_EMPTY(selectable_races)
 	///What languages this species can understand and say. Use a [language holder datum][/datum/language_holder] in this var.
 	var/species_language_holder = /datum/language_holder
 	/**
-	  * Visible CURRENT bodyparts that are unique to a species.
-	  * DO NOT USE THIS AS A LIST OF ALL POSSIBLE BODYPARTS AS IT WILL FUCK
-	  * SHIT UP! Changes to this list for non-species specific bodyparts (ie
-	  * cat ears and tails) should be assigned at organ level if possible.
-	  * Assoc values are defaults for given bodyparts, also modified by aforementioned organs.
-	  * They also allow for faster '[]' list access versus 'in'. Other than that, they are useless right now.
-	  * Layer hiding is handled by [/datum/species/proc/handle_mutant_bodyparts] below.
-	  */
+	 * Visible CURRENT bodyparts that are unique to a species.
+	 * DO NOT USE THIS AS A LIST OF ALL POSSIBLE BODYPARTS AS IT WILL FUCK
+	 * SHIT UP! Changes to this list for non-species specific bodyparts (ie
+	 * cat ears and tails) should be assigned at organ level if possible.
+	 * Assoc values are defaults for given bodyparts, also modified by aforementioned organs.
+	 * They also allow for faster '[]' list access versus 'in'. Other than that, they are useless right now.
+	 * Layer hiding is handled by [/datum/species/proc/handle_mutant_bodyparts] below.
+	 */
 	var/list/mutant_bodyparts = list()
 	///Internal organs that are unique to this race, like a tail.
 	var/list/mutant_organs = list()
@@ -103,7 +103,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 	var/punchdamagelow = 1
 	///Highest possible punch damage this species can give.
 	var/punchdamagehigh = 10
-	///Base electrocution coefficient.  Basically a multiplier for damage from electrocutions.
+	///Base electrocution coefficient. Basically a multiplier for damage from electrocutions.
 	var/meleemod = 1
 	//For melee damage
 	var/siemens_coeff = 1
@@ -2047,7 +2047,7 @@ GLOBAL_LIST_EMPTY(selectable_races)
 
 
 ////////////
-//  Stun  //
+// Stun //
 ////////////
 
 /datum/species/proc/spec_stun(mob/living/carbon/human/H,amount)

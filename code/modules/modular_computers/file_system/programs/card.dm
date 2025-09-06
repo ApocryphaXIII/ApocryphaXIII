@@ -142,7 +142,7 @@
 			var/known_access_rights = get_all_accesses()
 			for(var/A in target_id_card.access)
 				if(A in known_access_rights)
-					contents += "  [get_access_desc(A)]"
+					contents += " [get_access_desc(A)]"
 
 			if(!printer.print_text(contents,"access report"))
 				to_chat(usr, "<span class='notice'>Hardware error: Printer was unable to print the file. It may be out of paper.</span>")

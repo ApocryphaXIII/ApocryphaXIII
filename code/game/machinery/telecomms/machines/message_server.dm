@@ -183,7 +183,7 @@
 	return "\"[data["message"]]\""
 
 /datum/signal/subspace/messaging/pda/broadcast()
-	if (!logged)  // Can only go through if a message server logs it
+	if (!logged) // Can only go through if a message server logs it
 		return
 	for (var/obj/item/pda/P in GLOB.PDAs)
 		if ("[P.owner] ([P.ownjob])" in data["targets"])
@@ -191,7 +191,7 @@
 
 // Request Console signal datum
 /datum/signal/subspace/messaging/rc/broadcast()
-	if (!logged)  // Like /pda, only if logged
+	if (!logged) // Like /pda, only if logged
 		return
 	var/rec_dpt = ckey(data["rec_dpt"])
 	for (var/obj/machinery/requests_console/Console in GLOB.allConsoles)
@@ -202,8 +202,8 @@
 /datum/data_pda_msg
 	var/sender = "Unspecified"
 	var/recipient = "Unspecified"
-	var/message = "Blank"  // transferred message
-	var/datum/picture/picture  // attached photo
+	var/message = "Blank" // transferred message
+	var/datum/picture/picture // attached photo
 	var/automated = 0 //automated message
 
 /datum/data_pda_msg/New(param_rec, param_sender, param_message, param_photo)
@@ -228,8 +228,8 @@
 		onclose(M, "pdaphoto")
 
 /datum/data_rc_msg
-	var/rec_dpt = "Unspecified"  // receiving department
-	var/send_dpt = "Unspecified"  // sending department
+	var/rec_dpt = "Unspecified" // receiving department
+	var/send_dpt = "Unspecified" // sending department
 	var/message = "Blank"
 	var/stamp = "Unstamped"
 	var/id_auth = "Unauthenticated"

@@ -344,7 +344,7 @@
 				if (initial(D.build_type) & BIOGENERATOR)
 					item = /obj/item/reagent_containers/glass/beaker/large
 				else
-					continue  // shouldn't happen, but just in case
+					continue // shouldn't happen, but just in case
 
 			// circuit boards become their resulting machines or computers
 			if (ispath(item, /obj/item/circuitboard))

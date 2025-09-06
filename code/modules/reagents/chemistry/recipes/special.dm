@@ -151,7 +151,7 @@ GLOBAL_LIST_INIT(medicine_reagents, build_medicine_reagents())
 	var/containerpath = text2path(recipe_data["required_container"])
 	if(!containerpath)
 		return FALSE
-	required_container =  containerpath
+	required_container = containerpath
 	return TRUE
 
 /datum/chemical_reaction/randomized/secret_sauce

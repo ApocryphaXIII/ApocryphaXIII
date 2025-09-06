@@ -217,7 +217,7 @@
 		return
 
 	for(var/mob/dead/observer/ghost in GLOB.dead_mob_list) //excludes new players
-		if(ghost.mind && ghost.mind.current == M && ghost.client)  //the dead mobs list can contain clientless mobs
+		if(ghost.mind && ghost.mind.current == M && ghost.client) //the dead mobs list can contain clientless mobs
 			ghost.reenter_corpse()
 			break
 
@@ -334,7 +334,7 @@
 	if(target && cooldown < world.time)
 		switch(user.zone_selected)
 			if(BODY_ZONE_PRECISE_MOUTH)
-				var/wgw =  sanitize(input(user, "What would you like the victim to say", "Voodoo", null)  as text)
+				var/wgw = sanitize(input(user, "What would you like the victim to say", "Voodoo", null) as text)
 				target.say(wgw, forced = "voodoo doll")
 				log_game("[key_name(user)] made [key_name(target)] say [wgw] with a voodoo doll.")
 			if(BODY_ZONE_PRECISE_EYES)

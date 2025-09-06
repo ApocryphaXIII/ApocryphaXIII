@@ -187,7 +187,7 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-	    /obj/item/storage/pill_bottle/multiver/less = 1,
+	 /obj/item/storage/pill_bottle/multiver/less = 1,
 		/obj/item/reagent_containers/syringe/syriniver = 3,
 		/obj/item/storage/pill_bottle/potassiodide = 1,
 		/obj/item/reagent_containers/hypospray/medipen/penacid = 1)
@@ -607,14 +607,14 @@
 /obj/item/storage/organbox/proc/unfreeze(datum/source, obj/item/I)
 	if(isorgan(I))
 		var/obj/item/organ/organ = I
-		organ.organ_flags  &= ~ORGAN_FROZEN
+		organ.organ_flags &= ~ORGAN_FROZEN
 		return
 	if(istype(I, /obj/item/bodypart))
 		var/obj/item/bodypart/B = I
 		for(var/O in B.contents)
 			if(isorgan(O))
 				var/obj/item/organ/organ = O
-				organ.organ_flags  &= ~ORGAN_FROZEN
+				organ.organ_flags &= ~ORGAN_FROZEN
 
 /obj/item/storage/organbox/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/reagent_containers) && I.is_open_container())

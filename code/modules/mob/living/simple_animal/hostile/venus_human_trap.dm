@@ -5,8 +5,8 @@
  *
  * A flower created by flowering kudzu which spawns a venus human trap after a certain amount of time has passed.
  *
- * A flower created by kudzu with the flowering mutation.  Spawns a venus human trap after 2 minutes under normal circumstances.
- * Also spawns 4 vines going out in diagonal directions from the bud.  Any living creature not aligned with plants is damaged by these vines.
+ * A flower created by kudzu with the flowering mutation. Spawns a venus human trap after 2 minutes under normal circumstances.
+ * Also spawns 4 vines going out in diagonal directions from the bud. Any living creature not aligned with plants is damaged by these vines.
  * Once it grows a venus human trap, the bud itself will destroy itself.
  *
  */
@@ -79,8 +79,8 @@
  *
  * The result of a kudzu flower bud, these enemies use vines to drag prey close to them for attack.
  *
- * A carnivorious plant which uses vines to catch and ensnare prey.  Spawns from kudzu flower buds.
- * Each one has a maximum of four vines, which can be attached to a variety of things.  Carbons are stunned when a vine is attached to them, and movable entities are pulled closer over time.
+ * A carnivorious plant which uses vines to catch and ensnare prey. Spawns from kudzu flower buds.
+ * Each one has a maximum of four vines, which can be attached to a variety of things. Carbons are stunned when a vine is attached to them, and movable entities are pulled closer over time.
  * Attempting to attach a vine to something with a vine already attached to it will pull all movable targets closer on command.
  * Once the prey is in melee range, melee attacks from the venus human trap heals itself for 10% of its max health, assuming the target is alive.
  * Akin to certain spiders, venus human traps can also be possessed and controlled by ghosts.
@@ -162,7 +162,7 @@
 
 /mob/living/simple_animal/hostile/venus_human_trap/Login()
 	. = ..()
-	to_chat(src, "<span class='boldwarning'>You are a venus human trap!  Protect the kudzu at all costs, and feast on those who oppose you!</span>")
+	to_chat(src, "<span class='boldwarning'>You are a venus human trap! Protect the kudzu at all costs, and feast on those who oppose you!</span>")
 
 /mob/living/simple_animal/hostile/venus_human_trap/attack_ghost(mob/user)
 	. = ..()

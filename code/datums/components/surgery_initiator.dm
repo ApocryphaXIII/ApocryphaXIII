@@ -26,10 +26,10 @@
 	return ..()
 
 	/**
-	  *
-	  * Does the surgery initiation.
-	  *
-	  */
+	 *
+	 * Does the surgery initiation.
+	 *
+	 */
 /datum/component/surgery_initiator/proc/initiate_surgery_moment(datum/source, atom/target, mob/user)
 	SIGNAL_HANDLER
 	if(!isliving(target))
@@ -120,10 +120,10 @@
 		attempt_cancel_surgery(current_surgery, parent, livingtarget, user)
 
 		/**
-		  *
-		  * Does the surgery de-initiation.
-		  *
-		  */
+		 *
+		 * Does the surgery de-initiation.
+		 *
+		 */
 /datum/component/surgery_initiator/proc/attempt_cancel_surgery(datum/surgery/the_surgery, obj/item/the_item, mob/living/the_patient, mob/user)
 	var/selected_zone = user.zone_selected
 

@@ -193,7 +193,7 @@
 	var/datum/nanite_extra_setting/type = extra_settings[NES_DAMAGE_TYPE]
 	var/datum/nanite_extra_setting/damage = extra_settings[NES_DAMAGE]
 	var/datum/nanite_extra_setting/direction = extra_settings[NES_DIRECTION]
-	var/check_above =  direction.get_value()
+	var/check_above = direction.get_value()
 	var/damage_amt = 0
 	switch(type.get_value())
 		if(BRUTE)
@@ -228,7 +228,7 @@
 	var/datum/nanite_extra_setting/direction = extra_settings[NES_DIRECTION]
 	var/datum/nanite_extra_setting/damage_type = extra_settings[NES_DAMAGE_TYPE]
 	var/datum/nanite_extra_setting/damage = extra_settings[NES_DAMAGE]
-	rule.above  =  direction.get_value()
+	rule.above = direction.get_value()
 	rule.threshold = damage.get_value()
 	rule.damage_type = damage_type.get_value()
 	return rule

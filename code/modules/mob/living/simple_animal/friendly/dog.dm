@@ -185,8 +185,8 @@
 	icon_dead = "black_rest"
 
 /mob/living/simple_animal/pet/dog/wolfkin/update_stat()
-    . = ..()
-    update_icons()
+	. = ..()
+	update_icons()
 
 /mob/living/simple_animal/pet/dog/wolfkin/update_icons()
 	cut_overlays()

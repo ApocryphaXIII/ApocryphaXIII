@@ -127,6 +127,7 @@
 		"Your fault... you're warm!",
 		"Your life... so bright..."
 	)
+
 //============================================================
 // subtypes of shovelhead, each with a different clan
 /mob/living/carbon/human/npc/sabbat/shovelhead/toreador

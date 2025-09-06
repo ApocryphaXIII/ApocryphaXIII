@@ -7,7 +7,7 @@
 	minimal_renownrank = 4
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Board and Yourself."
+	supervisors = "The Board and Yourself" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -72,7 +72,7 @@
 
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead, and yourself."
+	supervisors = "The Branch Lead, and yourself" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	minimal_renownrank = 3
@@ -137,7 +137,7 @@
 	minimal_renownrank = 2
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -174,7 +174,7 @@
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
 	l_pocket = /obj/item/vamp/phone/endron_affairs
 	r_pocket = /obj/item/vamp/keys/pentex
-	backpack_contents = list(/obj/item/phone_book=1, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/veil_contract, /obj/item/card/credit/rich=1)
+	backpack_contents = list(/obj/item/phone_book=1, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/masquerade_contract/veil, /obj/item/card/credit/rich=1)
 
 
 	backpack = /obj/item/storage/backpack
@@ -200,7 +200,7 @@
 	minimal_renownrank = 3
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -243,7 +243,7 @@
 	glasses = /obj/item/clothing/glasses/vampire/sun
 	l_pocket = /obj/item/vamp/phone/endron_sec_chief
 	r_pocket = /obj/item/vamp/keys/pentex
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/vampire/deagle=1, /obj/item/phone_book=1, /obj/item/veil_contract, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit/rich=1)
+	backpack_contents = list(/obj/item/gun/ballistic/automatic/vampire/deagle=1, /obj/item/phone_book=1, /obj/item/masquerade_contract/veil, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit/rich=1)
 
 
 	backpack = /obj/item/storage/backpack
@@ -262,7 +262,7 @@
 
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "The Branch Lead and the Security Chief."
+	supervisors = "The Branch Lead and the Security Chief" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -326,7 +326,7 @@
 
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 
 	req_admin_notify = 1
 	minimal_player_age = 25

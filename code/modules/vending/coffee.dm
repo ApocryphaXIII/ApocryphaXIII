@@ -18,3 +18,11 @@
 /obj/item/vending_refill/coffee
 	machine_name = "Solar's Best Hot Drinks"
 	icon_state = "refill_joe"
+
+// APOC EDIT ADD START
+/obj/machinery/vending/coffee/private
+	desc = "An employee only vending machine. I love coffee in my coffee hole."
+	req_access = null
+	onstation = FALSE
+	all_products_free = TRUE
+// APOC EDIT ADD END

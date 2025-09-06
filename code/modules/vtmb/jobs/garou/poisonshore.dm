@@ -7,7 +7,7 @@
 	minimal_renownrank = 4
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Board and Yourself."
+	supervisors = "The Board and Yourself" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -40,6 +40,7 @@
 	name = "Endron Branch Lead"
 	jobtype = /datum/job/vamp/garou/spiral/lead
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/lead
 	uniform =  /obj/item/clothing/under/pentex/pentex_executive_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
@@ -71,7 +72,7 @@
 
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead, and yourself."
+	supervisors = "The Branch Lead, and yourself" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	minimal_renownrank = 3
@@ -104,6 +105,7 @@
 	name = "Endron Executive"
 	jobtype = /datum/job/vamp/garou/spiral/executive
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/executive
 	uniform =  /obj/item/clothing/under/pentex/pentex_executive_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
@@ -135,7 +137,7 @@
 	minimal_renownrank = 2
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -166,12 +168,13 @@
 	name = "Endron Internal Affairs"
 	jobtype = /datum/job/vamp/garou/spiral/executive
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/affairs
 	uniform =  /obj/item/clothing/under/pentex/pentex_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
 	l_pocket = /obj/item/vamp/phone/endron_affairs
 	r_pocket = /obj/item/vamp/keys/pentex
-	backpack_contents = list(/obj/item/phone_book=1, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/veil_contract, /obj/item/card/credit/rich=1)
+	backpack_contents = list(/obj/item/phone_book=1, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/masquerade_contract/veil, /obj/item/card/credit/rich=1)
 
 
 	backpack = /obj/item/storage/backpack
@@ -197,7 +200,7 @@
 	minimal_renownrank = 3
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -229,6 +232,7 @@
 	name = "Endron Chief of Security"
 	jobtype = /datum/job/vamp/garou/spiral/secchief
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/secchief
 	uniform =  /obj/item/clothing/under/pentex/pentex_turtleneck
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
@@ -239,7 +243,7 @@
 	glasses = /obj/item/clothing/glasses/vampire/sun
 	l_pocket = /obj/item/vamp/phone/endron_sec_chief
 	r_pocket = /obj/item/vamp/keys/pentex
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/vampire/deagle=1, /obj/item/phone_book=1, /obj/item/veil_contract, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit/rich=1)
+	backpack_contents = list(/obj/item/gun/ballistic/automatic/vampire/deagle=1, /obj/item/phone_book=1, /obj/item/masquerade_contract/veil, /obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/card/credit/rich=1)
 
 
 	backpack = /obj/item/storage/backpack
@@ -258,7 +262,7 @@
 
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "The Branch Lead and the Security Chief."
+	supervisors = "The Branch Lead and the Security Chief" // APOC EDIT CHANGE
 	selection_color = "#015334"
 
 	req_admin_notify = 1
@@ -291,6 +295,7 @@
 	name = "Endron Security Agent"
 	jobtype = /datum/job/vamp/garou/spiral/sec
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/sec
 	uniform =  /obj/item/clothing/under/pentex/pentex_shortsleeve
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
@@ -321,7 +326,7 @@
 
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "The Branch Lead."
+	supervisors = "The Branch Lead" // APOC EDIT CHANGE
 
 	req_admin_notify = 1
 	minimal_player_age = 25
@@ -350,6 +355,7 @@
 	name = "Endron Employee"
 	jobtype = /datum/job/vamp/garou/spiral/employee
 
+	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/employee
 	uniform = /obj/item/clothing/under/pentex/pentex_longleeve
 	gloves = /obj/item/clothing/gloves/vampire/work

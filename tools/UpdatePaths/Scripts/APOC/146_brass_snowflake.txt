@@ -1,0 +1,1 @@
+/obj/item/veil_contract : /obj/item/masquerade_contract/veil {@OLD}

@@ -108,7 +108,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "ci" = (
-/obj/structure/rack/tacobell/horizontal,
+/obj/structure/table/bacotell,
 /obj/underplate/stuff{
 	pixel_y = 8
 	},
@@ -158,7 +158,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/techshop)
 "el" = (
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /obj/structure/retail/bubway_menu,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
@@ -212,7 +212,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "fL" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/boozeomat/all_access,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "fS" = (
@@ -798,7 +798,7 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/pacificheights)
 "uL" = (
-/obj/structure/rack/bubway/horizontal,
+/obj/structure/table/bubway,
 /obj/underplate/stuff{
 	pixel_y = 8
 	},
@@ -1226,6 +1226,10 @@
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
+"FC" = (
+/obj/machinery/vending/boozeomat,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "FD" = (
 /obj/machinery/fax/admin/police,
 /turf/open/floor/plating/vampbeach,
@@ -1593,7 +1597,7 @@
 /turf/open/floor/plating/vampcanal,
 /area/vtm/pacificheights)
 "NI" = (
-/obj/structure/rack/tacobell/horizontal,
+/obj/structure/table/bacotell,
 /obj/structure/retail/bacotell_menu,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
@@ -3822,7 +3826,7 @@ NR
 ES
 kM
 NR
-NR
+FC
 NR
 NR
 NR

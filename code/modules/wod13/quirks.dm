@@ -367,12 +367,12 @@ Dancer
 					SEND_SIGNAL(human, COMSIG_PATH_HIT, PATH_SCORE_UP)
 					last_added_humanity = world.time
 
-/*/datum/quirk/dwarf // APOC EDIT REMOVE
+/*/datum/quirk/dwarf // APOC EDIT REMOVE START
 	name = "Dwarf"
 	desc = "You are short."
 	value = 0
 	gain_text = "<span class='notice'>You feel short.</span>"
-	lose_text = "<span class='notice'>You don't feel short anymore.</span>"*/ // APOC EDIT REMOVE
+	lose_text = "<span class='notice'>You don't feel short anymore.</span>"
 
 /datum/quirk/dwarf/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -382,7 +382,7 @@ Dancer
 	if(iswerewolf(quirk_holder))
 		return
 	H.AddElement(/datum/element/dwarfism, COMSIG_PARENT_PREQDELETED, src)
-	H.isdwarfy = TRUE
+	H.isdwarfy = TRUE */ // APOC EDIT REMOVE END
 
 #define SHORT 4/5
 #define TALL 5/4

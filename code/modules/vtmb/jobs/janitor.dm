@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Camarilla."
+	supervisors = "the Camarilla" // APOC EDIT CHANGE
 	selection_color = "#e3e3e3"
 
 	outfit = /datum/outfit/job/vjanitor

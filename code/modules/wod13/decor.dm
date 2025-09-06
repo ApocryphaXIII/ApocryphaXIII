@@ -633,7 +633,7 @@
 	matrix_mob(user, src)
 	return TRUE
 
-/proc/martix_mob_verb(mob/living/M in world)
+/proc/matrix_mob_verb(mob/living/M in world)
 	set name = "Matrix Mob"
 	set category = "Admin"
 	if(!istype(M))

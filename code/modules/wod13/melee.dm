@@ -122,6 +122,18 @@
 	cost = 250
 	is_iron = TRUE
 
+/obj/item/melee/vampirearms/katana/examine(mob/user) // APOC EDIT ADD START
+	. = ..()
+	. += span_notice("Use [src] in-hand to change how you wear it.")
+
+/obj/item/melee/vampirearms/katana/attack_self(mob/user)
+	if(alternate_worn_layer)
+		alternate_worn_layer = null
+		to_chat(user, span_notice("You readjust [src], returning it to it's initial position."))
+	else
+		alternate_worn_layer = BACK_LAYER
+		to_chat(user, span_notice("You adjust [src].")) // APOC EDIT ADD END
+
 /obj/item/melee/vampirearms/katana/fire
 	name = "burning katana"
 	icon_state = "firetana"
@@ -327,10 +339,21 @@
 		/obj/item/melee/vampirearms/sabre
 		))
 
-/obj/item/storage/belt/vampire/sheathe/examine(mob/user)
+/obj/item/storage/belt/vampire/sheathe/examine(mob/user) // APOC EDIT ADD START
 	. = ..()
+
+	. += span_notice("Use [src] in-hand to change how you wear it.")
+
 	if(length(contents))
-		. += "<span class='notice'>Alt-click it to quickly draw the blade.</span>"
+		. += span_notice("Alt-click it to quickly draw the blade.")
+
+/obj/item/storage/belt/vampire/sheathe/attack_self(mob/user)
+	if(alternate_worn_layer)
+		alternate_worn_layer = null
+		to_chat(user, span_notice("You readjust [src], returning it to it's initial position."))
+	else
+		alternate_worn_layer = BACK_LAYER
+		to_chat(user, span_notice("You adjust [src]."))
 
 /obj/item/storage/belt/vampire/sheathe/AltClick(mob/user)
 	if(!user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))

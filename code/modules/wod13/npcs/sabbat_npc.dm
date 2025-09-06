@@ -9,19 +9,8 @@
 	var/list/targeted_disciplines = list()
 	var/list/possible_clan = list(/datum/vampire_clan/toreador, /datum/vampire_clan/brujah, /datum/vampire_clan/malkavian, /datum/vampire_clan/gangrel)
 	var/datum/action/discipline/activated_action //mostly for debugging purposes, this stores the npc's last activated discipline action
-//============================================================
-// subtypes of shovelhead, each with a different clan
-/mob/living/carbon/human/npc/sabbat/shovelhead/toreador
-	possible_clan = list(/datum/vampire_clan/toreador)
-/mob/living/carbon/human/npc/sabbat/shovelhead/brujah
-	possible_clan = list(/datum/vampire_clan/brujah)
-/mob/living/carbon/human/npc/sabbat/shovelhead/malkavian
-	possible_clan = list(/datum/vampire_clan/malkavian)
-/mob/living/carbon/human/npc/sabbat/shovelhead/gangrel
-	possible_clan = list(/datum/vampire_clan/gangrel)
-//============================================================
 
-	var/list/shovelhead_idle_phrases = list(
+		var/list/shovelhead_idle_phrases = list(
 		"A memory... almost... gone...",
 		"Alone... so... alone...",
 		"Am I... dreaming?",
@@ -138,6 +127,17 @@
 		"Your fault... you're warm!",
 		"Your life... so bright..."
 	)
+//============================================================
+// subtypes of shovelhead, each with a different clan
+/mob/living/carbon/human/npc/sabbat/shovelhead/toreador
+	possible_clan = list(/datum/vampire_clan/toreador)
+/mob/living/carbon/human/npc/sabbat/shovelhead/brujah
+	possible_clan = list(/datum/vampire_clan/brujah)
+/mob/living/carbon/human/npc/sabbat/shovelhead/malkavian
+	possible_clan = list(/datum/vampire_clan/malkavian)
+/mob/living/carbon/human/npc/sabbat/shovelhead/gangrel
+	possible_clan = list(/datum/vampire_clan/gangrel)
+//============================================================
 
 /mob/living/carbon/human/npc/sabbat/shovelhead/LateInitialize()
 	. = ..()

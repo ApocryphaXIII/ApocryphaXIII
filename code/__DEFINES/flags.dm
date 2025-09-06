@@ -34,7 +34,7 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define PREVENT_CLICK_UNDER_1		(1<<11)
 #define HOLOGRAM_1					(1<<12)
 /// Prevents mobs from getting chainshocked by teslas and the supermatter
-#define SHOCKED_1 			(1<<13)
+#define SHOCKED_1 (1<<13)
 ///Whether /atom/Initialize() has already run for the object
 #define INITIALIZED_1				(1<<14)
 /// was this spawned by an admin? used for stat tracking stuff.

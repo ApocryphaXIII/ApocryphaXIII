@@ -22,7 +22,7 @@
 
 	outfit = /datum/outfit/job/garou/gladecouncil
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
@@ -80,7 +80,7 @@
 
 	outfit = /datum/outfit/job/garou/gladekeeper
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
@@ -138,7 +138,7 @@
 
 	outfit = /datum/outfit/job/garou/gladecatcher
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC

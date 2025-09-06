@@ -15,7 +15,7 @@ SUBSYSTEM_DEF(blackmarket)
 	/// List of existing ltsrbts.
 	var/list/obj/machinery/ltsrbt/telepads			= list()
 	/// Currently queued purchases.
-	var/list/queued_purchases 				= list()
+	var/list/queued_purchases = list()
 
 /datum/controller/subsystem/blackmarket/Initialize(timeofday)
 	for(var/market in subtypesof(/datum/blackmarket_market))

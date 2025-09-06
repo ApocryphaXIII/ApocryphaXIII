@@ -9,7 +9,7 @@
 	var/obj/item/modular_computer/holder = null
 	// Computer that holds this hardware, if any.
 
-	var/power_usage = 0 	// If the hardware uses extra power, change this.
+	var/power_usage = 0 // If the hardware uses extra power, change this.
 	var/enabled = TRUE				// If the hardware is turned off set this to 0.
 	var/critical = FALSE			// Prevent disabling for important component, like the CPU.
 	var/can_install = TRUE			// Prevents direct installation of removable media.

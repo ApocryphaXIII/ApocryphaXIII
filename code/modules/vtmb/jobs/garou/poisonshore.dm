@@ -17,7 +17,7 @@
 
 	outfit = /datum/outfit/job/garou/endronlead
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
@@ -83,7 +83,7 @@
 
 	outfit = /datum/outfit/job/garou/endronexec
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
@@ -147,7 +147,7 @@
 
 	outfit = /datum/outfit/job/garou/endronaffairs
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
@@ -210,7 +210,7 @@
 
 	outfit = /datum/outfit/job/garou/endronsecchief
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
@@ -272,7 +272,7 @@
 
 	outfit = /datum/outfit/job/garou/endronsec
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
@@ -335,7 +335,7 @@
 
 	outfit = /datum/outfit/job/garou/endron
 
-	access = list() 	//See get_access()
+	access = list() //See get_access()
 	minimal_access = list() //See get_access()
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC

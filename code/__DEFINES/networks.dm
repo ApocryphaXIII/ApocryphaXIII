@@ -11,11 +11,11 @@
 /// all the constants though all the files for them. hurrah!
 
 /// Ugh, couldn't get recursive stringafy to work in byond for some reason
-#define NETWORK_NAME_COMBINE(L,R) 	((L) + "." + (R))
+#define NETWORK_NAME_COMBINE(L,R) ((L) + "." + (R))
 
 /// Station network names. Used as the root networks for main parts of the station
-#define __STATION_NETWORK_ROOT 	"SS13"
-#define __CENTCOM_NETWORK_ROOT 	"CENTCOM"
+#define __STATION_NETWORK_ROOT "SS13"
+#define __CENTCOM_NETWORK_ROOT "CENTCOM"
 #define __SYNDICATE_NETWORK_ROOT "SYNDI"
 #define __LIMBO_NETWORK_ROOT			"LIMBO"	// Limbo is a dead network
 
@@ -23,9 +23,9 @@
 #define __NETWORK_LIMBO					"LIMBO"
 #define __NETWORK_TOOLS					"TOOLS"
 #define __NETWORK_REMOTES				"REMOTES"
-#define __NETWORK_AIRLOCKS 		"AIRLOCKS"
+#define __NETWORK_AIRLOCKS "AIRLOCKS"
 #define __NETWORK_DOORS					"DOORS"
-#define __NETWORK_ATMOS 		"ATMOS"
+#define __NETWORK_ATMOS "ATMOS"
 #define __NETWORK_SCUBBERS				"AIRLOCKS"
 #define __NETWORK_AIRALARMS				"AIRALARMS"
 #define __NETWORK_CONTROL				"CONTROL"

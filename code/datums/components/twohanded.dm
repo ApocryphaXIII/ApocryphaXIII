@@ -6,12 +6,12 @@
  */
 /datum/component/two_handed
 	dupe_mode = COMPONENT_DUPE_UNIQUE_PASSARGS // Only one of the component can exist on an item
-	var/wielded = FALSE 					/// Are we holding the two handed item properly
+	var/wielded = FALSE 	/// Are we holding the two handed item properly
 	var/force_multiplier = 0						/// The multiplier applied to force when wielded, does not work with force_wielded, and force_unwielded
-	var/force_wielded = 0 				/// The force of the item when weilded
-	var/force_unwielded = 0 			/// The force of the item when unweilded
-	var/wieldsound = FALSE 					/// Play sound when wielded
-	var/unwieldsound = FALSE 				/// Play sound when unwielded
+	var/force_wielded = 0 /// The force of the item when weilded
+	var/force_unwielded = 0 /// The force of the item when unweilded
+	var/wieldsound = FALSE 	/// Play sound when wielded
+	var/unwieldsound = FALSE /// Play sound when unwielded
 	var/attacksound = FALSE							/// Play sound on attack when wielded
 	var/require_twohands = FALSE					/// Does it have to be held in both hands
 	var/icon_wielded = FALSE						/// The icon that will be used when wielded

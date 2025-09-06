@@ -8,14 +8,14 @@ GLOBAL_LIST_EMPTY(allConsoles)
 GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 
 
-#define REQ_SCREEN_MAIN 	0
+#define REQ_SCREEN_MAIN 0
 #define REQ_SCREEN_REQ_ASSISTANCE 1
 #define REQ_SCREEN_REQ_SUPPLIES 2
-#define REQ_SCREEN_RELAY 	3
-#define REQ_SCREEN_WRITE 	4
-#define REQ_SCREEN_CHOOSE 	5
-#define REQ_SCREEN_SENT 	6
-#define REQ_SCREEN_ERR 		7
+#define REQ_SCREEN_RELAY 3
+#define REQ_SCREEN_WRITE 4
+#define REQ_SCREEN_CHOOSE 5
+#define REQ_SCREEN_SENT 6
+#define REQ_SCREEN_ERR 7
 #define REQ_SCREEN_VIEW_MSGS 8
 #define REQ_SCREEN_AUTHENTICATE 9
 #define REQ_SCREEN_ANNOUNCE 10
@@ -38,7 +38,7 @@ GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 		// info = 4
 		// assistance + supplies = 3
 		// assistance + info = 5
-		// supplies + info 	= 6
+		// supplies + info = 6
 		// assistance + supplies + info = 7
 	var/newmessagepriority = REQ_NO_NEW_MESSAGE
 	var/screen = REQ_SCREEN_MAIN

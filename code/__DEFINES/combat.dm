@@ -43,11 +43,11 @@
 #define WOUND		"wound"
 
 //bitflag damage defines used for suicide_act
-#define BRUTELOSS 			(1<<0)
-#define FIRELOSS 			(1<<1)
-#define TOXLOSS 			(1<<2)
-#define OXYLOSS 			(1<<3)
-#define SHAME 				(1<<4)
+#define BRUTELOSS (1<<0)
+#define FIRELOSS (1<<1)
+#define TOXLOSS (1<<2)
+#define OXYLOSS (1<<3)
+#define SHAME (1<<4)
 #define MANUAL_SUICIDE (1<<5)	//suicide_act will do the actual killing.
 #define MANUAL_SUICIDE_NONLETHAL	(1<<6) //when the suicide is conditionally lethal
 
@@ -163,9 +163,9 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 
 //Embedded objects
 ///Chance for embedded objects to cause pain (damage user)
-#define EMBEDDED_PAIN_CHANCE 			15
+#define EMBEDDED_PAIN_CHANCE 15
 ///Chance for embedded object to fall out (causing pain but removing the object)
-#define EMBEDDED_ITEM_FALLOUT 			5
+#define EMBEDDED_ITEM_FALLOUT 5
 ///Chance for an object to embed into somebody when thrown
 #define EMBED_CHANCE							45
 ///Coefficient of multiplication for the damage the item does while embedded (this*item.w_class)
@@ -230,7 +230,7 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 #define SUPPRESSED_VERY 2 /// no message
 
 //Projectile Reflect
-#define REFLECT_NORMAL 		(1<<0)
+#define REFLECT_NORMAL (1<<0)
 #define REFLECT_FAKEPROJECTILE		(1<<1)
 
 //Object/Item sharpness

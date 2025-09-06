@@ -123,6 +123,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id6"
+	uses_overlays = FALSE
 
 /obj/item/card/id/sheriff
 	name = "head security badge"
@@ -136,6 +137,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id4"
+	uses_overlays = FALSE
 
 /obj/item/card/id/camarilla
 	name = "security badge"
@@ -149,6 +151,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id3"
+	uses_overlays = FALSE
 
 /obj/item/card/id/clerk
 	name = "clerk badge"
@@ -162,6 +165,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id_red"
+	uses_overlays = FALSE
 
 /obj/item/card/id/clerk/harpy
 	name = "Public Relations Clerk badge"
@@ -180,6 +184,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "bruiser_badge"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 //Apoc addition
 /obj/item/card/id/bruiser/barkeep
@@ -198,6 +203,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "sweeper_badge"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 /obj/item/card/id/emissary
 	name = "emissary badge"
@@ -212,6 +218,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "emissary_badge"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 /obj/item/card/id/baron
 	name = "eagle badge"
@@ -226,6 +233,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "eagle_badge"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 /obj/item/card/id/clinic
 	name = "medical badge"
@@ -240,6 +248,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id_green"
+	uses_overlays = FALSE
 /* Apoc Edit
 /obj/item/card/id/clinic/director
 	name = "clinic director's badge"
@@ -252,12 +261,14 @@
 	desc = "A badge which shows a love of culture."
 	icon = 'code/modules/wod13/items.dmi'
 	icon_state = "id7"
+	onflooricon_state = "id_red"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id7"
+	uses_overlays = FALSE
 
 /obj/item/card/id/regent
 	name = "erudite scholar badge"
@@ -271,6 +282,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id7_regent"
+	uses_overlays = FALSE
 
 /obj/item/card/id/cleaning
 	name = "janitor badge"
@@ -284,6 +296,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id8"
+	uses_overlays = FALSE
 
 /obj/item/card/id/graveyard
 	name = "keeper badge"
@@ -297,6 +310,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id8"
+	uses_overlays = FALSE
 
 /obj/item/card/id/dealer
 	name = "business badge"
@@ -310,6 +324,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id9"
+	uses_overlays = FALSE
 
 /obj/item/card/id/supplytech
 	name = "technician badge"
@@ -323,6 +338,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id10"
+	uses_overlays = FALSE
 
 /obj/item/card/id/hunter
 	name = "cross"
@@ -338,6 +354,7 @@
 	worn_icon_state = "id11"
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_ID
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 /obj/item/card/id/primogen
 	name = "mysterious primogen badge"
@@ -352,6 +369,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id12"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 /obj/item/card/id/police
 	name = "police officer badge"
@@ -365,6 +383,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id13"
+	uses_overlays = FALSE
 
 /obj/item/card/id/government
 	name = "emergency dispatcher badge"
@@ -378,6 +397,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id_red"
+	uses_overlays = FALSE
 
 /obj/item/card/id/government/districtattorney
 	name = "SFPD DA Badge"
@@ -408,6 +428,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id14"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 /obj/item/card/id/noddist
 	name = "cultist badge"
@@ -422,6 +443,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id15"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 //TZIMISCE ROLES
 
@@ -438,6 +460,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id12"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 /obj/item/card/id/bogatyr
 	name = "dusty badge"
@@ -452,6 +475,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id12"
 	registered_name_is_public = FALSE
+	uses_overlays = FALSE
 
 //APOC EDIT ADD
 /obj/item/card/id/bogatyr/captain
@@ -472,6 +496,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "onyxBadge"
+	uses_overlays = FALSE
 
 /obj/item/card/id/steward
 	name = "primogen's steward badge"
@@ -485,6 +510,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "emeraldBadge"
+	uses_overlays = FALSE
 
 /obj/item/card/id/myrmidon
 	name = "primogen's myrmidon badge"
@@ -498,6 +524,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "rubyBadge"
+	uses_overlays = FALSE
 
 // GAROU
 /obj/item/card/id/garou
@@ -512,6 +539,7 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id5"
+	uses_overlays = FALSE
 
 //PAINTED CITY
 /obj/item/card/id/garou/city/council

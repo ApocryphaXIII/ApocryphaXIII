@@ -59,7 +59,7 @@ GLOBAL_LIST_INIT(avatar_banned_verbs, list(
 	auspex_avatar.overlay_fullscreen("film_grain", /atom/movable/screen/fullscreen/film_grain, rand(1, 9))
 
 	return auspex_avatar
-
+/* APOC EDIT REMOVE START
 /mob/dead/observer/avatar/reenter_corpse()
 	if(!client)
 		return FALSE
@@ -91,7 +91,7 @@ GLOBAL_LIST_INIT(avatar_banned_verbs, list(
 	original_body.soul_state = SOUL_PRESENT
 
 	return TRUE
-
+*/ // APOC EDIT REMOVE END
 /mob/dead/observer/avatar/say(message, bubble_type, list/spans, sanitize, datum/language/language, ignore_spam, forced)
 	return
 

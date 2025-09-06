@@ -5,7 +5,7 @@
 
 # byond version
 export BYOND_MAJOR=516
-export BYOND_MINOR=1666
+export BYOND_MINOR=1665
 
 # ! THIS IS CURRENTLY OUT OF SYNC WITH THE .DLL WHICH IS 3.6.0
 #rust_g git tag

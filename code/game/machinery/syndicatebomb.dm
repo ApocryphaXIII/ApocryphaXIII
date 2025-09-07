@@ -22,7 +22,7 @@
 
 	var/can_unanchor = TRUE
 
-	var/open_panel = FALSE //are the wires exposed?
+	var/open_panel = FALSE 	//are the wires exposed?
 	var/active = FALSE		//is the bomb counting down?
 	var/obj/item/bombcore/payload = /obj/item/bombcore
 	var/beepsound = 'sound/items/timer.ogg'
@@ -291,7 +291,7 @@
 	qdel(src)
 
 /obj/item/bombcore/proc/defuse()
-//Note: the machine's defusal is mostly done from the wires code, this is here if you want the core itself to do anything.
+//Note: 	the machine's defusal is mostly done from the wires code, this is here if you want the core itself to do anything.
 
 ///Bomb Core Subtypes///
 
@@ -354,7 +354,7 @@
 
 /obj/item/bombcore/badmin/summon/clown
 	summon_path = /mob/living/simple_animal/hostile/retaliate/clown
-	amt_summon = 50
+	amt_summon 	= 50
 
 /obj/item/bombcore/badmin/summon/clown/defuse()
 	playsound(src, 'sound/misc/sadtrombone.ogg', 50)

@@ -180,11 +180,11 @@
 	var/movement_locked = FALSE
 
 	/**
- * Assoc list with all the active maps - when a screen obj is added to
- * a map, it's put in here as well.
- *
- * Format: list(<mapname> = list(/atom/movable/screen))
- */
+	 * Assoc list with all the active maps - when a screen obj is added to
+	 * a map, it's put in here as well.
+	 *
+	 * Format: list(<mapname> = list(/atom/movable/screen))
+	 */
 	var/list/screen_maps = list()
 
 	// List of all asset filenames sent to this client by the asset cache, along with their assoicated md5s

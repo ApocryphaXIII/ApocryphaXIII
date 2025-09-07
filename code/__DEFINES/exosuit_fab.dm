@@ -1,5 +1,5 @@
 /// Module is compatible with Security Cyborg model
-#define BORG_MODEL_SECURITY (1<<0)
+#define BORG_MODEL_SECURITY 		(1<<0)
 /// Module is compatible with Miner Cyborg model
 #define BORG_MODEL_MINER			(1<<1)
 /// Module is compatible with Janitor Cyborg model

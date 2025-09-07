@@ -9,14 +9,14 @@
 #define DEFAULT_SCAN_RANGE		7	//default view range for finding targets.
 
 //Mode defines. If you add a new one make sure you update mode_name in /mob/living/simple_animal/bot
-#define BOT_IDLE 	0	// idle
-#define BOT_HUNT 	1	// found target, hunting
-#define BOT_PREP_ARREST 2	// at target, preparing to arrest
+#define BOT_IDLE 			0	// idle
+#define BOT_HUNT 			1	// found target, hunting
+#define BOT_PREP_ARREST 	2	// at target, preparing to arrest
 #define BOT_ARREST			3	// arresting target
 #define BOT_START_PATROL	4	// start patrol
 #define BOT_PATROL			5	// patrolling
 #define BOT_SUMMON			6	// summoned by PDA
-#define BOT_CLEANING 7	// cleaning (cleanbots)
+#define BOT_CLEANING 		7	// cleaning (cleanbots)
 #define BOT_REPAIRING		8	// repairing hull breaches (floorbots)
 #define BOT_MOVING			9	// for clean/floor/med bots, when moving.
 #define BOT_HEALING			10	// healing people (medbots)
@@ -43,17 +43,17 @@
 
 //AI notification defines
 #define		NEW_BORG			1
-#define		NEW_MODEL 2
-#define		RENAME3
+#define		NEW_MODEL		 2
+#define		RENAME			 3
 #define		AI_SHELL			4
-#define		DISCONNECT 5
+#define		DISCONNECT		 5
 
 //Assembly defines
-#define ASSEMBLY_FIRST_STEP 0
-#define ASSEMBLY_SECOND_STEP 1
-#define ASSEMBLY_THIRD_STEP 2
+#define ASSEMBLY_FIRST_STEP 	0
+#define ASSEMBLY_SECOND_STEP 	1
+#define ASSEMBLY_THIRD_STEP	 2
 #define ASSEMBLY_FOURTH_STEP	3
-#define ASSEMBLY_FIFTH_STEP 4
+#define ASSEMBLY_FIFTH_STEP	 4
 
 #define BORG_LAMP_CD_RESET -1 //special value to reset cyborg's lamp_cooldown
 
@@ -63,6 +63,6 @@
 #define BORG_MODULE_THREE_DISABLED (1<<2)
 
 /// Defines for borg module selection
-#define BORG_CHOOSE_MODULE_ONE 1
-#define BORG_CHOOSE_MODULE_TWO 2
+#define BORG_CHOOSE_MODULE_ONE 	 1
+#define BORG_CHOOSE_MODULE_TWO 	 2
 #define BORG_CHOOSE_MODULE_THREE 3

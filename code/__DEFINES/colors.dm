@@ -282,7 +282,7 @@
 /// Bright yellow. rgb(255, 255, 150)
 #define LIGHT_COLOR_BRIGHT_YELLOW "#FFFF99"
 /// Dimmed yellow, leaning kaki. rgb(225, 225, 125)
-#define LIGHT_COLOR_YELLOW "#E1E17D"
+#define LIGHT_COLOR_YELLOW	 "#E1E17D"
 /// Clear brown, mostly dim. rgb(150, 100, 50)
 #define LIGHT_COLOR_BROWN "#966432"
 /// Mostly pure orange. rgb(250, 150, 50)

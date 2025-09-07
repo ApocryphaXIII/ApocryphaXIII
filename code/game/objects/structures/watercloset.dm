@@ -486,7 +486,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
 	icon_state = "sink"
 	desc = "A sink used for washing one's hands and face. This one seems to be infinite!"
 	anchored = TRUE
-	var/busy = FALSE //Something's being washed at the moment
+	var/busy = FALSE 	//Something's being washed at the moment
 	var/dispensedreagent = /datum/reagent/water // for whenever plumbing happens
 
 /obj/structure/water_source/attack_hand(mob/living/user)

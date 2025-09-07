@@ -10,10 +10,10 @@
 
 /atom
 	/**
- * used to store the different colors on an atom
- *
- * its inherent color, the colored paint applied on it, special color effect etc...
- */
+	 * used to store the different colors on an atom
+	 *
+	 * its inherent color, the colored paint applied on it, special color effect etc...
+	 */
 	var/list/atom_colours
 	/// Currently used color filter - cached because its applied to all of our overlays because BYOND is horrific
 	var/cached_color_filter

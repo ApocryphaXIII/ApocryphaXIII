@@ -33,10 +33,10 @@
 	var/refreshing = TRUE
 
 	/**
- * Whether the menu is currently locked down to prevent abuse from players.
- * Currently is only unlocked when opened from vv.
- * It also enables the user to modify the alpha channel of the colors.
- */
+	 * Whether the menu is currently locked down to prevent abuse from players.
+	 * Currently is only unlocked when opened from vv.
+	 * It also enables the user to modify the alpha channel of the colors.
+	 */
 	var/unlocked = FALSE
 
 /datum/greyscale_modify_menu/New(datum/target, client/user, list/allowed_configs, datum/callback/apply_callback, starting_icon_state = "", starting_config, starting_colors, unlocked = FALSE)

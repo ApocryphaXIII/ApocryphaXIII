@@ -53,7 +53,7 @@
 			armor_bullet_addon += protec.armor.bullet
 			armor_fire_addon += protec.armor.fire
 		var/melee_armor = target.physiology.armor.melee + armor_melee_addon
-		var/bullet_armor = target.physiology.armor.bullet + armor_bullet_addon
+		var/bullet_armor = 	target.physiology.armor.bullet + armor_bullet_addon
 		var/fire_armor = target.physiology.armor.fire + armor_fire_addon
 		to_chat(owner, "<b>[target]</b> has a defense rating of <b>[num2text(melee_armor)]</b> against melee attacks ")
 		to_chat(owner, "<b>[target]</b> has a defense rating of <b>[num2text(bullet_armor)]</b> against ranged attacks ")

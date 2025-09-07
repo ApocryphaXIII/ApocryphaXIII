@@ -229,8 +229,8 @@ Key procs
 
 
 //************************************************
-//*		Specific language holders*
-//* Use atom language sources only. *
+//*		Specific language holders			 *
+//*	 Use atom language sources only.		 *
 //************************************************/
 
 

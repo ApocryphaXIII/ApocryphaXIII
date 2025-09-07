@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 #define PDA_SCANNER_REAGENT		3
 #define PDA_SCANNER_HALOGEN		4
 #define PDA_SCANNER_GAS			5
-#define PDA_SPAM_DELAY 2 MINUTES
+#define PDA_SPAM_DELAY		 2 MINUTES
 
 /obj/item/pda
 	name = "\improper PDA"

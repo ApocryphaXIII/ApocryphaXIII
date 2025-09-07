@@ -564,7 +564,7 @@ SUBSYSTEM_DEF(carpool)
 	if(istype(A, /mob/living))
 		var/mob/living/hit_mob = A
 		switch(hit_mob.mob_size)
-			if(MOB_SIZE_HUGE) //gangrel warforms, werewolves, bears, ppl with fortitude
+			if(MOB_SIZE_HUGE) 	//gangrel warforms, werewolves, bears, ppl with fortitude
 				playsound(src, 'code/modules/wod13/sounds/bump.ogg', 75, TRUE)
 				speed_in_pixels = 0
 				impact_delay = world.time

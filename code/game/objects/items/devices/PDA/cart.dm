@@ -282,7 +282,7 @@ Code:
 				menu += "<FONT SIZE=-1>"
 
 				if(L.len > 0)
-					menu += "Area			Eqp./Lgt./Env. Load Cell<HR>"
+					menu += "Area						 Eqp./Lgt./Env. Load Cell<HR>"
 
 					var/list/S = list(" Off","AOff"," On", " AOn")
 					var/list/chg = list("N","C","F")

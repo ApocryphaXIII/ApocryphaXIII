@@ -1,8 +1,8 @@
 //Defines for dynamic mode and rulesets that are called by other files. Migrated here from dynamic.dm due to use outside local.
-#define ONLY_RULESET 1
+#define ONLY_RULESET	 1
 #define HIGHLANDER_RULESET 2
 #define TRAITOR_RULESET	4
-#define MINOR_RULESET 8
+#define MINOR_RULESET	 8
 
 #define RULESET_STOP_PROCESSING 1
 

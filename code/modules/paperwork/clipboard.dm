@@ -25,10 +25,10 @@
 	/// Is the pen integrated?
 	var/integrated_pen = FALSE
 	/**
- * Topmost piece of paper
- * This is used for the paper displayed on the clipboard's icon
- * and it is the one attacked, when attacking the clipboard.
- */
+	 * Topmost piece of paper
+	 * This is used for the paper displayed on the clipboard's icon
+	 * and it is the one attacked, when attacking the clipboard.
+	 */
 	var/obj/item/paper/top_paper
 
 /obj/item/clipboard/suicide_act(mob/living/carbon/user)

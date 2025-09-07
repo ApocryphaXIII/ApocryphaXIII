@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			sale_items += I
 	if(allow_sales)
 		var/datum/team/nuclear/nuclear_team
-		if (gamemode == /datum/game_mode/nuclear) 			// uplink code kind of needs a redesign
+		if (gamemode == /datum/game_mode/nuclear) 					// uplink code kind of needs a redesign
 			nuclear_team = locate() in GLOB.antagonist_teams	// the team discounts could be in a GLOB with this design but it would make sense for them to be team specific...
 		if (!nuclear_team)
 			create_uplink_sales(3, "Discounted Gear", 1, sale_items, filtered_uplink_items)

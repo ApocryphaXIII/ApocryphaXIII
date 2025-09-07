@@ -101,15 +101,15 @@
 	/// Default [/mob/living/simple_animal/drone/var/head] item
 	var/obj/item/default_hatmask
 	/**
- * icon_state of drone from icons/mobs/drone.dmi
- *
- * Possible states are:
- *
- * - [MAINTDRONE]
- * - [REPAIRDRONE]
- * - [SCOUTDRONE]
- * - [CLOCKDRONE]
- */
+	 * icon_state of drone from icons/mobs/drone.dmi
+	 *
+	 * Possible states are:
+	 *
+	 * - [MAINTDRONE]
+	 * - [REPAIRDRONE]
+	 * - [SCOUTDRONE]
+	 * - [CLOCKDRONE]
+	 */
 	var/visualAppearance = MAINTDRONE
 	/// Hacked state, see [/mob/living/simple_animal/drone/proc/update_drone_hack]
 	var/hacked = FALSE
@@ -118,9 +118,9 @@
 	"\n<big><span class='warning'>DO NOT INTERFERE WITH THE ROUND AS A DRONE OR YOU WILL BE DRONE BANNED</span></big>\n"+\
 	"<span class='notice'>Drones are a ghost role that are allowed to fix the station and build things. Interfering with the round as a drone is against the rules.</span>\n"+\
 	"<span class='notice'>Actions that constitute interference include, but are not limited to:</span>\n"+\
-	"<span class='notice'> - Interacting with round critical objects (IDs, weapons, contraband, powersinks, bombs, etc.)</span>\n"+\
-	"<span class='notice'> - Interacting with living beings (communication, attacking, healing, etc.)</span>\n"+\
-	"<span class='notice'> - Interacting with non-living beings (dragging bodies, looting bodies, etc.)</span>\n"+\
+	"<span class='notice'>	 - Interacting with round critical objects (IDs, weapons, contraband, powersinks, bombs, etc.)</span>\n"+\
+	"<span class='notice'>	 - Interacting with living beings (communication, attacking, healing, etc.)</span>\n"+\
+	"<span class='notice'>	 - Interacting with non-living beings (dragging bodies, looting bodies, etc.)</span>\n"+\
 	"<span class='warning'>These rules are at admin discretion and will be heavily enforced.</span>\n"+\
 	"<span class='warning'><u>If you do not have the regular drone laws, follow your laws to the best of your ability.</u></span>"
 

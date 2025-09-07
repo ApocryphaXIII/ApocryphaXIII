@@ -52,9 +52,9 @@
 	deathmessage = "disintegrates, leaving a glowing core in its wake."
 	deathsound = 'sound/magic/demon_dies.ogg'
 	attack_action_types = list(/datum/action/innate/megafauna_attack/spiral_attack,
-				/datum/action/innate/megafauna_attack/aoe_attack,
-				/datum/action/innate/megafauna_attack/shotgun,
-				/datum/action/innate/megafauna_attack/alternating_cardinals)
+							 /datum/action/innate/megafauna_attack/aoe_attack,
+							 /datum/action/innate/megafauna_attack/shotgun,
+							 /datum/action/innate/megafauna_attack/alternating_cardinals)
 	small_sprite_type = /datum/action/small_sprite/megafauna/colossus
 
 /mob/living/simple_animal/hostile/megafauna/colossus/Initialize()

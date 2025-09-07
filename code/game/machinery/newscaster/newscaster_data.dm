@@ -251,7 +251,7 @@ GLOBAL_LIST_EMPTY(request_list)
 	return photo_file
 
 //**************************
-// Bounty Board Datums
+//	 Bounty Board Datums
 //**************************
 
 

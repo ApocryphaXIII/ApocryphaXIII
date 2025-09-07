@@ -102,7 +102,7 @@
 	var/obj/item/inventory_head
 	var/obj/item/inventory_back
 	var/shaved = FALSE
-	var/nofur = FALSE //Corgis that have risen past the material plane of existence.
+	var/nofur = FALSE 		//Corgis that have risen past the material plane of existence.
 
 /mob/living/simple_animal/pet/dog/corgi/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CORGI, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
@@ -539,7 +539,7 @@
 /mob/living/simple_animal/pet/dog/corgi/ian/proc/Read_Memory()
 	if(fexists("data/npc_saves/Ian.sav")) //legacy compatability to convert old format to new
 		var/savefile/S = new /savefile("data/npc_saves/Ian.sav")
-		S["age"] >> age
+		S["age"] 		>> age
 		S["record_age"]	>> record_age
 		S["saved_head"] >> saved_head
 		fdel("data/npc_saves/Ian.sav")

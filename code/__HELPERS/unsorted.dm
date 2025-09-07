@@ -726,13 +726,13 @@ rough example of the "cone" made by the 3 dirs checked
 * \
 * \
 * >
-* <
-* \
-* \
+*	 <
+*	 \
+*	 \
 *B --><-- A
-* /
-* /
-* <
+*	 /
+*	 /
+*	 <
 *	>
 * /
 * /
@@ -956,7 +956,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 
 
 #define FOR_DVIEW(type, range, center, invis_flags) \
-	GLOB.dview_mob.loc = center; \
+	GLOB.dview_mob.loc = center;		 \
 	GLOB.dview_mob.see_invisible = invis_flags; \
 	for(type in view(range, GLOB.dview_mob))
 

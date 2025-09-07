@@ -549,7 +549,7 @@
 	list_reagents = list(/datum/reagent/consumable/prunomix = 50)
 	var/fermentation_time = 30 SECONDS /// time it takes to ferment
 	var/fermentation_time_remaining /// for partial fermentation
-	var/fermentation_timer /// store the timer id of fermentation
+	var/fermentation_timer 	/// store the timer id of fermentation
 
 /obj/item/reagent_containers/food/drinks/bottle/pruno/Initialize()
 	. = ..()

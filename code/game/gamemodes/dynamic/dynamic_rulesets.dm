@@ -177,9 +177,9 @@
 /datum/dynamic_ruleset/proc/round_result()
 
 //////////////////////////////////////////////
-//							//
-// ROUNDSTART RULESETS			//
-//							//
+//										 //
+//		 ROUNDSTART RULESETS			//
+//										 //
 //////////////////////////////////////////////
 
 /// Checks if candidates are connected and if they are banned or don't want to be the antagonist.

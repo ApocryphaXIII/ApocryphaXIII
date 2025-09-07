@@ -250,7 +250,7 @@
 	var/setting_systemcontrol = TRUE
 	var/setting_disabled = FALSE					// Setting to 1 will disable all wireless, independently on relays status.
 
-	var/intrusion_detection_enabled = TRUE // Whether the IDS warning system is enabled
+	var/intrusion_detection_enabled = TRUE 		// Whether the IDS warning system is enabled
 	var/intrusion_detection_alarm = FALSE			// Set when there is an IDS warning due to malicious (antag) software.
 
 // If new NTNet datum is spawned, it replaces the old one.

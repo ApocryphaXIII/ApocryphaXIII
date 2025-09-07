@@ -246,7 +246,7 @@ GLOBAL_LIST_INIT(oddity_loot, list(//oddity: strange or crazy items
 		/obj/item/clothing/suit/space/hardsuit/carp = 1,
 		/obj/item/book/granter/crafting_recipe/pipegun_prime =1,
 		/obj/item/dice/d20/fate/stealth/one_use = 1,	//Looks like a d20, keep the d20 in the uncommon pool.
-		/obj/item/dice/d20/fate/stealth/cursed = 1, //Only rolls 1
+		/obj/item/dice/d20/fate/stealth/cursed = 1, 	//Only rolls 1
 		/obj/item/clothing/shoes/jackboots/fast = 1,
 		/obj/item/clothing/suit/armor/reactive/table = 1,
 		/obj/item/storage/box/donkpockets/donkpocketgondola = 1

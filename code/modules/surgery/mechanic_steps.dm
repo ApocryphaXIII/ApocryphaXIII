@@ -3,7 +3,7 @@
 	name = "unscrew shell"
 	implements = list(
 		TOOL_SCREWDRIVER		= 100,
-		TOOL_SCALPEL 	= 75, // med borgs could try to unskrew shell with scalpel
+		TOOL_SCALPEL 			= 75, // med borgs could try to unskrew shell with scalpel
 		/obj/item/kitchen/knife	= 50,
 		/obj/item				= 10) // 10% success with any sharp item.
 	time = 24
@@ -24,7 +24,7 @@
 	name = "screw shell"
 	implements = list(
 		TOOL_SCREWDRIVER		= 100,
-		TOOL_SCALPEL 	= 75,
+		TOOL_SCALPEL 			= 75,
 		/obj/item/kitchen/knife	= 50,
 		/obj/item				= 10) // 10% success with any sharp item.
 	time = 24

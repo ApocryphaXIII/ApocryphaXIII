@@ -72,9 +72,9 @@
 	deathsound = 'sound/magic/demon_dies.ogg'
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	attack_action_types = list(/datum/action/innate/megafauna_attack/fire_cone,
-				/datum/action/innate/megafauna_attack/fire_cone_meteors,
-				/datum/action/innate/megafauna_attack/mass_fire,
-				/datum/action/innate/megafauna_attack/lava_swoop)
+							 /datum/action/innate/megafauna_attack/fire_cone_meteors,
+							 /datum/action/innate/megafauna_attack/mass_fire,
+							 /datum/action/innate/megafauna_attack/lava_swoop)
 	small_sprite_type = /datum/action/small_sprite/megafauna/drake
 
 /datum/action/innate/megafauna_attack/fire_cone

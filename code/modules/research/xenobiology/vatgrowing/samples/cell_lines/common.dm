@@ -1,7 +1,7 @@
 #define VAT_GROWTH_RATE 4
 
 ////////////////////////////////
-//// VERTEBRATES		////
+//// 		VERTEBRATES		////
 ////////////////////////////////
 
 /datum/micro_organism/cell_line/mouse //nuisance cell line designed to complicate the growing of animal type cell lines.
@@ -200,7 +200,7 @@
 
 
 ///////////////////////////////////////////
-/// SLIMES, OOZES & BLOBS ///
+/// 		SLIMES, OOZES & BLOBS 		///
 //////////////////////////////////////////
 
 /datum/micro_organism/cell_line/slime

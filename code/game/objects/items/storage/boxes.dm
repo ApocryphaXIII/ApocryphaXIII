@@ -1049,7 +1049,7 @@
 	name = "box of materials"
 	illustration = "implant"
 
-/obj/item/storage/box/material/PopulateContents() //less uranium because radioactive
+/obj/item/storage/box/material/PopulateContents() 	//less uranium because radioactive
 	var/static/items_inside = list(
 		/obj/item/stack/sheet/metal/fifty=1,\
 		/obj/item/stack/sheet/glass/fifty=1,\

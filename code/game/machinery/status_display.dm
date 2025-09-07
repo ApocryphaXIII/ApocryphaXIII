@@ -154,7 +154,7 @@
 /obj/machinery/status_display/evac
 	var/frequency = FREQ_STATUS_DISPLAYS
 	var/mode = SD_EMERGENCY
-	var/friendc = FALSE // track if Friend Computer mode
+	var/friendc = FALSE	 // track if Friend Computer mode
 	var/last_picture // For when Friend Computer mode is undone
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/evac, 32)

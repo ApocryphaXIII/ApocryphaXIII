@@ -24,7 +24,7 @@
 	switch(screen)
 
 
- // --- Main Menu ---
+	 // --- Main Menu ---
 
 		if(0)
 			dat += "<br>[temp]<br>"
@@ -40,11 +40,11 @@
 				dat += "<br>No servers detected. Scan for servers: <a href='byond://?src=[REF(src)];operation=scan'>\[Scan\]</a>"
 
 
- // --- Viewing Server ---
+	 // --- Viewing Server ---
 
 		if(1)
 			dat += "<br>[temp]<br>"
-			dat += "<center><a href='byond://?src=[REF(src)];operation=mainmenu'>\[Main Menu\]</a> <a href='byond://?src=[REF(src)];operation=refresh'>\[Refresh\]</a></center>"
+			dat += "<center><a href='byond://?src=[REF(src)];operation=mainmenu'>\[Main Menu\]</a>	 <a href='byond://?src=[REF(src)];operation=refresh'>\[Refresh\]</a></center>"
 			dat += "<br>Current Network: [network]"
 			dat += "<br>Selected Server: [SelectedServer.id]"
 
@@ -67,7 +67,7 @@
 					// -- Determine race of orator --
 
 					var/mobtype = C.parameters["mobtype"]
-					var/race// The actual race of the mob
+					var/race			 // The actual race of the mob
 
 					if(ispath(mobtype, /mob/living/carbon/human) || ispath(mobtype, /mob/living/brain))
 						race = "Humanoid"

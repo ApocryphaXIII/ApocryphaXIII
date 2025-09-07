@@ -35,7 +35,7 @@
 #define CHAT_PULLR			(1<<6)
 #define CHAT_GHOSTWHISPER	(1<<7)
 #define CHAT_GHOSTPDA		(1<<8)
-#define CHAT_GHOSTRADIO (1<<9)
+#define CHAT_GHOSTRADIO 	(1<<9)
 #define CHAT_BANKCARD		(1<<10)
 #define CHAT_GHOSTLAWS		(1<<11)
 #define CHAT_LOGIN_LOGOUT	(1<<12)
@@ -45,8 +45,8 @@
 
 #define PARALLAX_INSANE -1 //for show offs
 #define PARALLAX_HIGH	0 //default.
-#define PARALLAX_MED 1
-#define PARALLAX_LOW 2
+#define PARALLAX_MED	 1
+#define PARALLAX_LOW	 2
 #define PARALLAX_DISABLE 3 //this option must be the highest number
 
 #define PIXEL_SCALING_AUTO 0
@@ -60,8 +60,8 @@
 #define SCALING_METHOD_BLUR "blur"
 
 #define PARALLAX_DELAY_DEFAULT world.tick_lag
-#define PARALLAX_DELAY_MED 1
-#define PARALLAX_DELAY_LOW 2
+#define PARALLAX_DELAY_MED	 1
+#define PARALLAX_DELAY_LOW	 2
 
 #define SEC_DEPT_NONE "None"
 #define SEC_DEPT_RANDOM "Random"
@@ -73,7 +73,7 @@
 // Playtime tracking system, see jobs_exp.dm
 #define EXP_TYPE_LIVING			"Living"
 #define EXP_TYPE_CREW			"Kindred"
-#define EXP_TYPE_GAROU "Garou"
+#define EXP_TYPE_GAROU	 "Garou"
 #define EXP_TYPE_CAMARILLIA		"Camarilla Authorities"
 #define EXP_TYPE_GANG			"Gangs"
 #define EXP_TYPE_TREMERE		"Tremere"
@@ -82,17 +82,17 @@
 #define EXP_TYPE_NEUTRALS		"Neutrals"
 #define EXP_TYPE_ANTAG			"Antag"
 #define EXP_TYPE_COUNCIL		"Camarilla Primogen Council"
-#define EXP_TYPE_POLICE "Police Force"
+#define EXP_TYPE_POLICE		 "Police Force"
 #define EXP_TYPE_SERVICES "City Services"
 #define EXP_TYPE_CLINIC "Clinic"
 #define EXP_TYPE_GIOVANNI "Giovanni Family"
 #define EXP_TYPE_VOIVODATE "Voivodate" //APOC EDIT
-#define EXP_TYPE_WAREHOUSE "Warehouse"
-#define EXP_TYPE_NATIONAL_SECURITY "National Security"
-#define EXP_TYPE_PAINTED_CITY "Sept of the Painted City"
+#define EXP_TYPE_WAREHOUSE	 "Warehouse"
+#define EXP_TYPE_NATIONAL_SECURITY	 "National Security"
+#define EXP_TYPE_PAINTED_CITY	 "Sept of the Painted City"
 #define EXP_TYPE_AMBERGLADE	"Sept of the Amberglade"
 #define EXP_TYPE_SPIRAL	"Hive of the Poisoned Shore"
-#define EXP_TYPE_CHURCH "Church"
+#define EXP_TYPE_CHURCH		 "Church"
 #define EXP_TYPE_SPECIAL		"Special"
 #define EXP_TYPE_GHOST			"Ghost"
 #define EXP_TYPE_ADMIN			"Admin"

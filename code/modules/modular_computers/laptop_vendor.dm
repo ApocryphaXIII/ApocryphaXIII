@@ -13,8 +13,8 @@
 	var/obj/item/modular_computer/tablet/fabricated_tablet = null
 
 	// Utility vars
-	var/state = 0 					// 0: Select device type, 1: Select loadout, 2: Payment, 3: Thankyou screen
-	var/devtype = 0 				// 0: None(unselected), 1: Laptop, 2: Tablet
+	var/state = 0 							// 0: Select device type, 1: Select loadout, 2: Payment, 3: Thankyou screen
+	var/devtype = 0 						// 0: None(unselected), 1: Laptop, 2: Tablet
 	var/total_price = 0						// Price of currently vended device.
 	var/credits = 0
 
@@ -48,7 +48,7 @@
 // Recalculates the price and optionally even fabricates the device.
 /obj/machinery/lapvend/proc/fabricate_and_recalc_price(fabricate = FALSE)
 	total_price = 0
-	if(devtype == 1) // Laptop, generally cheaper to make it accessible for most station roles
+	if(devtype == 1) 		// Laptop, generally cheaper to make it accessible for most station roles
 		var/obj/item/computer_hardware/battery/battery_module = null
 		if(fabricate)
 			fabricated_laptop = new /obj/item/modular_computer/laptop/buildable(src)
@@ -111,7 +111,7 @@
 				fabricated_laptop.install_component(new /obj/item/computer_hardware/card_slot/secondary)
 
 		return total_price
-	else if(devtype == 2) // Tablet, more expensive, not everyone could probably afford this.
+	else if(devtype == 2) 	// Tablet, more expensive, not everyone could probably afford this.
 		var/obj/item/computer_hardware/battery/battery_module = null
 		if(fabricate)
 			fabricated_tablet = new(src)

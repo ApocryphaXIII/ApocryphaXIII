@@ -55,7 +55,7 @@
 
 /// Turning text into lists
 /proc/dd_text2list(text, separator)
-	var/textlength = lentext(text)
+	var/textlength	 = lentext(text)
 	var/separatorlength = lentext(separator)
 	var/list/textList = new /list()
 	var/searchPosition = 1
@@ -75,7 +75,7 @@
 				return textList
 
 /proc/dd_text2List(text, separator)
-	var/textlength = lentext(text)
+	var/textlength	 = lentext(text)
 	var/separatorlength = lentext(separator)
 	var/list/textList = new /list()
 	var/searchPosition = 1

@@ -101,38 +101,38 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	var/list/pinned_mobs = list()
 
 	/**
- * List of products this machine sells
- *
- *	form should be list(/type/path = amount, /type/path2 = amount2)
- */
+	 * List of products this machine sells
+	 *
+	 *	form should be list(/type/path = amount, /type/path2 = amount2)
+	 */
 	var/list/products	= list()
 
 	/**
- * List of products this machine sells, categorized.
- * Can only be used as an alternative to `products`, not alongside it.
- *
- * Form should be list(
- * "name" = "Category Name",
- * "icon" = "UI Icon (Font Awesome or tgfont)",
- * "products" = list(/type/path = amount, ...),
- * )
- */
+	 * List of products this machine sells, categorized.
+	 * Can only be used as an alternative to `products`, not alongside it.
+	 *
+	 * Form should be list(
+	 * 	"name" = "Category Name",
+	 * 	"icon" = "UI Icon (Font Awesome or tgfont)",
+	 * 	"products" = list(/type/path = amount, ...),
+	 * )
+	 */
 	var/list/product_categories = null
 
 
 	/**
- * List of products this machine sells when you hack it
- *
- *	form should be list(/type/path = amount, /type/path2 = amount2)
- */
+	 * List of products this machine sells when you hack it
+	 *
+	 *	form should be list(/type/path = amount, /type/path2 = amount2)
+	 */
 	var/list/contraband	= list()
 
 	/**
- * List of premium products this machine sells
- *
- *	form should be list(/type/path, /type/path2) as there is only ever one in stock
- */
-	var/list/premium = list()
+	 * List of premium products this machine sells
+	 *
+	 *	form should be list(/type/path, /type/path2) as there is only ever one in stock
+	 */
+	var/list/premium 	= list()
 
 	var/list/product_records = list()
 	var/list/hidden_records = list()
@@ -180,18 +180,18 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	/// How much physical cash does this vending machine have?
 	var/cash_contained = 0
 	/**
- * Is this item on station or not
- *
- * if it doesn't originate from off-station during mapload, everything is free
- */
+	 * Is this item on station or not
+	 *
+	 * if it doesn't originate from off-station during mapload, everything is free
+	 */
 	var/onstation = TRUE //if it doesn't originate from off-station during mapload, everything is free
 	///A variable to change on a per instance basis on the map that allows the instance to force cost and ID requirements
 	var/onstation_override = FALSE //change this on the object on the map to override the onstation check. DO NOT APPLY THIS GLOBALLY.
 	/**
- * If this is set to TRUE, all products sold by the vending machine are free (cost nothing).
- * If unset, this will get automatically set to TRUE during init if the machine originates from off-station during mapload.
- * Defaults to null, set it to TRUE or FALSE explicitly on a per-machine basis if you want to force it to be a certain value.
- */
+	 * If this is set to TRUE, all products sold by the vending machine are free (cost nothing).
+	 * If unset, this will get automatically set to TRUE during init if the machine originates from off-station during mapload.
+	 * Defaults to null, set it to TRUE or FALSE explicitly on a per-machine basis if you want to force it to be a certain value.
+	 */
 	var/all_products_free
 
 	///ID's that can load this vending machine wtih refills

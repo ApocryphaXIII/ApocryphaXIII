@@ -10,8 +10,8 @@ GLOBAL_LIST_INIT(LIGHTING_CORNER_DIAGONAL, list(NORTHEAST, SOUTHEAST, SOUTHWEST,
 	var/list/datum/light_source/affecting // Light sources affecting us.
 	var/active							= FALSE // TRUE if one of our masters has dynamic lighting.
 
-	var/x = 0
-	var/y = 0
+	var/x	 = 0
+	var/y	 = 0
 
 	var/lum_r = 0
 	var/lum_g = 0
@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(LIGHTING_CORNER_DIAGONAL, list(NORTHEAST, SOUTHEAST, SOUTHWEST,
 	masters[new_turf] = turn(diagonal, 180)
 
 	var/vertical = diagonal & ~(diagonal - 1) // The horizontal directions (4 and 8) are bigger than the vertical ones (1 and 2), so we can reliably say the lsb is the horizontal direction.
-	var/horizontal = diagonal & ~vertical // Now that we know the horizontal one we can get the vertical one.
+	var/horizontal = diagonal & ~vertical	 // Now that we know the horizontal one we can get the vertical one.
 
 	x = new_turf.x + (horizontal == EAST ? 0.5 : -0.5)
 	y = new_turf.y + (vertical == NORTH ? 0.5 : -0.5)

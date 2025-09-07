@@ -97,19 +97,19 @@
 /obj/item/storage/box/ingredients/wildcard/PopulateContents()
 	for(var/i in 1 to 7)
 		var/randomFood = pick(/obj/item/food/grown/chili,
-				/obj/item/food/grown/tomato,
-				/obj/item/food/grown/carrot,
-				/obj/item/food/grown/potato,
-				/obj/item/food/grown/potato/sweet,
-				/obj/item/food/grown/apple,
-				/obj/item/food/chocolatebar,
-				/obj/item/food/grown/cherries,
-				/obj/item/food/grown/banana,
-				/obj/item/food/grown/cabbage,
-				/obj/item/food/grown/soybeans,
-				/obj/item/food/grown/corn,
-				/obj/item/food/grown/mushroom/plumphelmet,
-				/obj/item/food/grown/mushroom/chanterelle)
+							 /obj/item/food/grown/tomato,
+							 /obj/item/food/grown/carrot,
+							 /obj/item/food/grown/potato,
+							 /obj/item/food/grown/potato/sweet,
+							 /obj/item/food/grown/apple,
+							 /obj/item/food/chocolatebar,
+							 /obj/item/food/grown/cherries,
+							 /obj/item/food/grown/banana,
+							 /obj/item/food/grown/cabbage,
+							 /obj/item/food/grown/soybeans,
+							 /obj/item/food/grown/corn,
+							 /obj/item/food/grown/mushroom/plumphelmet,
+							 /obj/item/food/grown/mushroom/chanterelle)
 		new randomFood(src)
 
 /obj/item/storage/box/ingredients/fiesta

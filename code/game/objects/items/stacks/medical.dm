@@ -204,7 +204,7 @@
 	However they provice graunular control of where the healing is directed, this makes them better for curing work-related cuts and scrapes.
 
 	The interesting limb targeting mechanic is retained and i still believe they will be a viable choice, especially when healing others in the field.
- */
+	 */
 
 /obj/item/stack/medical/suture
 	name = "suture"
@@ -283,7 +283,7 @@
 
 /obj/item/stack/medical/mesh/Initialize(mapload, new_amount, merge = TRUE, list/mat_override=null, mat_amt=1)
 	. = ..()
-	if(amount == max_amount) //only seal full mesh packs
+	if(amount == max_amount)	 //only seal full mesh packs
 		is_open = FALSE
 		update_appearance()
 

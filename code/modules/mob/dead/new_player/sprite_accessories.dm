@@ -64,7 +64,7 @@
 // Hair Definitions //
 //////////////////////
 /datum/sprite_accessory/hair
-	icon = 'icons/mob/human_face.dmi' // default icon for all hairs
+	icon = 'icons/mob/human_face.dmi'	 // default icon for all hairs
 
 	// please make sure they're sorted alphabetically and, where needed, categorized
 	// try to capitalize the names please~
@@ -2483,7 +2483,7 @@
 	name = "Aquatic"
 	icon_state = "aqua"
 
-/datum/sprite_accessory/legs //legs are a special case, they aren't actually sprite_accessories but are updated with them.
+/datum/sprite_accessory/legs 	//legs are a special case, they aren't actually sprite_accessories but are updated with them.
 	icon = null					//These datums exist for selecting legs on preference, and little else
 
 /datum/sprite_accessory/legs/none

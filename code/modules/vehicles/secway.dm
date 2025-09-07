@@ -62,7 +62,7 @@
 	return ..()
 
 /obj/vehicle/ridden/secway/attack_hand(mob/living/user)
-	if(eddie_murphy)										// v lol
+	if(eddie_murphy)													 // v lol
 		user.visible_message("<span class='warning'>[user] begins cleaning [eddie_murphy] out of [src].</span>", "<span class='warning'>You begin cleaning [eddie_murphy] out of [src]...</span>")
 		if(do_after(user, 60, target = src))
 			user.visible_message("<span class='warning'>[user] cleans [eddie_murphy] out of [src].</span>", "<span class='warning'>You manage to get [eddie_murphy] out of [src].</span>")

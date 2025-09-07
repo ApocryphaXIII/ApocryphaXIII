@@ -32,7 +32,7 @@
 		new /datum/data/mining_equipment("Point Transfer Card",			/obj/item/card/mining_point_card,									500),
 		new /datum/data/mining_equipment("Survival Medipen",			/obj/item/reagent_containers/hypospray/medipen/survival,			500),
 		new /datum/data/mining_equipment("Brute First-Aid Kit",			/obj/item/storage/firstaid/brute,									600),
-		new /datum/data/mining_equipment("Tracking Implant Kit", /obj/item/storage/box/minertracker,									600),
+		new /datum/data/mining_equipment("Tracking Implant Kit", 		/obj/item/storage/box/minertracker,									600),
 		new /datum/data/mining_equipment("Jaunter",						/obj/item/wormhole_jaunter,											750),
 		new /datum/data/mining_equipment("Kinetic Crusher",				/obj/item/kinetic_crusher,											750),
 		new /datum/data/mining_equipment("Kinetic Accelerator",			/obj/item/gun/energy/kinetic_accelerator,							750),
@@ -344,14 +344,14 @@
 /obj/machinery/mineral/equipment_vendor/golem/Initialize()
 	desc += "\nIt seems a few selections have been added."
 	prize_list += list(
-		new /datum/data/mining_equipment("Extra Id", 		/obj/item/card/id/mining, 			250),
-		new /datum/data/mining_equipment("Science Goggles", /obj/item/clothing/glasses/science,								250),
+		new /datum/data/mining_equipment("Extra Id",	 				/obj/item/card/id/mining, 								 		250),
+		new /datum/data/mining_equipment("Science Goggles",	 		/obj/item/clothing/glasses/science,								250),
 		new /datum/data/mining_equipment("Monkey Cube",					/obj/item/food/monkeycube,			300),
 		new /datum/data/mining_equipment("Toolbelt",					/obj/item/storage/belt/utility,									350),
-		new /datum/data/mining_equipment("Royal Cape of the Liberator", /obj/item/bedsheet/rd/royal_cape, 						500),
+		new /datum/data/mining_equipment("Royal Cape of the Liberator", /obj/item/bedsheet/rd/royal_cape, 								500),
 		new /datum/data/mining_equipment("Grey Slime Extract",			/obj/item/slime_extract/grey,									1000),
 		new /datum/data/mining_equipment("Modification Kit",			/obj/item/borg/upgrade/modkit/trigger_guard,					1700),
-		new /datum/data/mining_equipment("The Liberator's Legacy", /obj/item/storage/box/rndboards,								2000)
+		new /datum/data/mining_equipment("The Liberator's Legacy", 	/obj/item/storage/box/rndboards,								2000)
 		)
 	return ..()
 

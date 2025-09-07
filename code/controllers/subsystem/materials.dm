@@ -70,11 +70,11 @@ SUBSYSTEM_DEF(materials)
  * Arguments:
  * - [arguments][/list]: The list of arguments used to fetch the material ref.
  * - The first element is a material datum, text string, or material type.
- * - [Material datums][/datum/material] are assumed to be references to the cached datum and are returned
- * - Text is assumed to be the text ID of a material and the corresponding material is fetched from the cache
- * - A material type is checked for bespokeness:
- * - If the material type is not bespoke the type is assumed to be the id for a material and the corresponding material is loaded from the cache.
- * - If the material type is bespoke a text ID is generated from the arguments list and used to load a material datum from the cache.
+ *	 - [Material datums][/datum/material] are assumed to be references to the cached datum and are returned
+ *	 - Text is assumed to be the text ID of a material and the corresponding material is fetched from the cache
+ *	 - A material type is checked for bespokeness:
+ *	 - If the material type is not bespoke the type is assumed to be the id for a material and the corresponding material is loaded from the cache.
+ *	 - If the material type is bespoke a text ID is generated from the arguments list and used to load a material datum from the cache.
  * - The following elements are used to generate bespoke IDs
  */
 /datum/controller/subsystem/materials/proc/_GetMaterialRef(list/arguments)

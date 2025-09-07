@@ -2161,8 +2161,8 @@
 	if(HAS_TRAIT(L, TRAIT_NOHUNGER)) //they can't puke
 		holder.del_reagent(type)
 
-#define YUCK_PUKE_CYCLES 3 // every X cycle is a puke
-#define YUCK_PUKES_TO_STUN 3 // hit this amount of pukes in a row to start stunning
+#define YUCK_PUKE_CYCLES 3 		// every X cycle is a puke
+#define YUCK_PUKES_TO_STUN 3 	// hit this amount of pukes in a row to start stunning
 /datum/reagent/yuck/on_mob_life(mob/living/carbon/C)
 	if(!yuck_cycle)
 		if(prob(8))

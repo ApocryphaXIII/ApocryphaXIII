@@ -41,12 +41,12 @@
 #define VENTCRAWLER_ALWAYS 2
 
 //Mob bio-types flags
-#define MOB_ORGANIC (1 << 0)
+#define MOB_ORGANIC 	(1 << 0)
 #define MOB_MINERAL		(1 << 1)
-#define MOB_ROBOTIC (1 << 2)
+#define MOB_ROBOTIC 	(1 << 2)
 #define MOB_UNDEAD		(1 << 3)
-#define MOB_HUMANOID (1 << 4)
-#define MOB_BUG (1 << 5)
+#define MOB_HUMANOID 	(1 << 4)
+#define MOB_BUG 		(1 << 5)
 #define MOB_BEAST		(1 << 6)
 #define MOB_EPIC		(1 << 7) //megafauna
 #define MOB_REPTILE		(1 << 8)
@@ -102,11 +102,11 @@
 #define BRAIN_TRAUMA_SPECIAL /datum/brain_trauma/special
 #define BRAIN_TRAUMA_MAGIC /datum/brain_trauma/magic
 
-#define TRAUMA_RESILIENCE_BASIC 1 //Curable with chems
+#define TRAUMA_RESILIENCE_BASIC 1	 //Curable with chems
 #define TRAUMA_RESILIENCE_SURGERY 2	//Curable with brain surgery
 #define TRAUMA_RESILIENCE_LOBOTOMY 3 //Curable with lobotomy
 #define TRAUMA_RESILIENCE_WOUND 4	//Curable by healing the head wound
-#define TRAUMA_RESILIENCE_MAGIC 5 //Curable only with magic
+#define TRAUMA_RESILIENCE_MAGIC 5	 //Curable only with magic
 #define TRAUMA_RESILIENCE_ABSOLUTE 6 //This is here to stay
 
 //Limit of traumas for each resilience tier
@@ -195,8 +195,8 @@
 #define SLIME_EXTRACT_CROSSING_REQUIRED 10
 
 //Slime commands defines
-#define SLIME_FRIENDSHIP_FOLLOW 	3 //Min friendship to order it to follow
-#define SLIME_FRIENDSHIP_STOPEAT 	5 //Min friendship to order it to stop eating someone
+#define SLIME_FRIENDSHIP_FOLLOW 			3 //Min friendship to order it to follow
+#define SLIME_FRIENDSHIP_STOPEAT 			5 //Min friendship to order it to stop eating someone
 #define SLIME_FRIENDSHIP_STOPEAT_NOANGRY	7 //Min friendship to order it to stop eating someone without it losing friendship
 #define SLIME_FRIENDSHIP_STOPCHASE			4 //Min friendship to order it to stop chasing someone (their target)
 #define SLIME_FRIENDSHIP_STOPCHASE_NOANGRY	6 //Min friendship to order it to stop chasing someone (their target) without it losing friendship
@@ -228,7 +228,7 @@
 
 //determines if a mob can smash through it
 #define ENVIRONMENT_SMASH_NONE			0
-#define ENVIRONMENT_SMASH_STRUCTURES	(1<<0) //crates, lockers, ect
+#define ENVIRONMENT_SMASH_STRUCTURES	(1<<0) 	//crates, lockers, ect
 #define ENVIRONMENT_SMASH_WALLS			(1<<1) //walls
 #define ENVIRONMENT_SMASH_RWALLS		(1<<2)	//rwalls
 
@@ -343,13 +343,13 @@
 //Pride ruin mirror
 #define MIRROR_PRIDE (1<<2)
 //Race swap wizard event
-#define RACE_SWAP (1<<3)
+#define RACE_SWAP	 (1<<3)
 //ERT spawn template (avoid races that don't function without correct gear)
-#define ERT_SPAWN (1<<4)
+#define ERT_SPAWN	 (1<<4)
 //xenobio black crossbreed
 #define SLIME_EXTRACT (1<<5)
 //Wabbacjack staff projectiles
-#define WABBAJACK (1<<6)
+#define WABBAJACK	 (1<<6)
 
 // Reasons a defibrilation might fail
 #define DEFIB_POSSIBLE (1<<0)

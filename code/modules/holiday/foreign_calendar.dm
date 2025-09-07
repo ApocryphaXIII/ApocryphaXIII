@@ -46,7 +46,7 @@ by John Walker 2015, released under public domain
 	return round(realtime / 864000) + BYOND_EPOCH
 
 //////////////////////////////
-// Islamic Calendar //
+//	 Islamic Calendar	 //
 //////////////////////////////
 /datum/foreign_calendar/islamic/proc/leap_islamic(yr)
 	return ((yr * 11 + 14) % 30) < 11
@@ -61,7 +61,7 @@ by John Walker 2015, released under public domain
 	return day + CEILING(29.5 * (month - 1), 1) + (year - 1) * 354 + round((3 + (11 * year)) / 30) + ISLAMIC_EPOCH - 1
 
 //////////////////////////////
-// Hebrew Calendar //
+//	 Hebrew Calendar	 //
 //////////////////////////////
 /datum/foreign_calendar/hebrew/proc/hebrew_leap(year)
 	switch (year % 19)

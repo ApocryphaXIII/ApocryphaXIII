@@ -23,7 +23,7 @@
 
 	src.invisibility_trait = invisibility_trait
 	src.invisibility_level = invisibility_level
-	src.tile_overlay = tile_overlay
+	src.tile_overlay 		= tile_overlay
 	src.use_alpha			= use_alpha
 	src.use_anchor			= use_anchor
 

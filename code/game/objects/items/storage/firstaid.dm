@@ -1,7 +1,7 @@
 /* First aid storage
  * Contains:
  *		First Aid Kits
- * Pill Bottles
+ * 		Pill Bottles
  *		Dice Pack (in a pill bottle)
  */
 
@@ -187,7 +187,7 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
- /obj/item/storage/pill_bottle/multiver/less = 1,
+	 /obj/item/storage/pill_bottle/multiver/less = 1,
 		/obj/item/reagent_containers/syringe/syriniver = 3,
 		/obj/item/storage/pill_bottle/potassiodide = 1,
 		/obj/item/reagent_containers/hypospray/medipen/penacid = 1)

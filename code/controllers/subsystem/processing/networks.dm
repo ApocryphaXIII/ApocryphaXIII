@@ -35,7 +35,7 @@ SUBSYSTEM_DEF(networks)
 	var/packet_count = 0
 	// packet stats
 	var/count_broadcasts_packets = 0 // count of broadcast packets sent
-	var/count_failed_packets = 0 // count of message fails
+	var/count_failed_packets = 0 	// count of message fails
 	var/count_good_packets = 0
 	// Logs moved here
 	// Amount of logs the system tries to keep in memory. Keep below 999 to prevent byond from acting weirdly.
@@ -284,7 +284,7 @@ SUBSYSTEM_DEF(networks)
  * be put in the object.area
  *
  * An example on what the area.network_root_id does/
- * Before Init: obj.network_id = "ATMOS.SCRUBBER" area.network_root_id="SS13_STATION" area.network_area_id = "BRIDGE"
+ * Before Init: 	obj.network_id = "ATMOS.SCRUBBER" area.network_root_id="SS13_STATION" area.network_area_id = "BRIDGE"
  * After Init:		obj.network_id = "SS13_STATION.ATMOS.SCRUBBER" also obj.network_id = "SS13_STATION.AREA.BRIDGE"
  *
  * Arguments:
@@ -301,7 +301,7 @@ SUBSYSTEM_DEF(networks)
 		/// if we have a template, try to get the network id from the template
 		if(M.station_id && M.station_id != LIMBO_NETWORK_ROOT)		// check if the template specifies it
 			A.network_root_id = simple_network_name_fix(M.station_id)
-		else if(istype(M, /datum/map_template/shuttle))		// if not, then check if its a shuttle type
+		else if(istype(M, /datum/map_template/shuttle))					 // if not, then check if its a shuttle type
 			var/datum/map_template/shuttle/T = M	// we are a shuttle so use shuttle id
 			A.network_root_id = simple_network_name_fix(T.shuttle_id)
 		else if(istype(M,/datum/map_template/ruin))						// if not again, check if its a ruin type
@@ -327,7 +327,7 @@ SUBSYSTEM_DEF(networks)
 		// finally set the network area id, bit copy paste from area Initialize
 		// This is done in case we have more than one area type, each area instance has its own network name
 	if(!A.network_area_id)
-		A.network_area_id = A.network_root_id + ".AREA." + simple_network_name_fix(A.name) // Make the string
+		A.network_area_id = A.network_root_id + ".AREA." + simple_network_name_fix(A.name) 		// Make the string
 		if(!(A.area_flags & UNIQUE_AREA)) // if we aren't a unique area, make sure our name is different
 			A.network_area_id = SSnetworks.assign_random_name(5, A.network_area_id + "_")		// tack on some garbage incase there are two area types
 

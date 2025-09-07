@@ -11,8 +11,4 @@
 #define WHEN_COMPILE(compile_time) // Not compiling, nothing here
 #endif
 
-#ifdef SHOW_INVENTORY_ICONS
 #define ONFLOOR_ICON_HELPER(file) onflooricon = ##file
-#else
-#define ONFLOOR_ICON_HELPER(file) icon=##file; onflooricon=##file
-#endif

@@ -4,8 +4,8 @@
 #define ACHIEVEMENT_SCORE "score"
 
 //Misc Medal hub IDs
-#define MEDAL_METEOR "Your Life Before Your Eyes"
-#define MEDAL_PULSE "Jackpot"
+#define MEDAL_METEOR 	"Your Life Before Your Eyes"
+#define MEDAL_PULSE 	"Jackpot"
 #define MEDAL_TIMEWASTE "Overextended The Joke"
 #define MEDAL_RODSUPLEX "Feat of Strength"
 #define MEDAL_CLOWNCARKING "Round and Full"

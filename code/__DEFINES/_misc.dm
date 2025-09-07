@@ -205,11 +205,11 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 
 GLOBAL_LIST_INIT(ghost_accs_options, list(GHOST_ACCS_NONE, GHOST_ACCS_DIR, GHOST_ACCS_FULL)) //So save files can be sanitized properly.
 
-#define GHOST_OTHERS_SIMPLE 1
+#define GHOST_OTHERS_SIMPLE 	1
 #define GHOST_OTHERS_DEFAULT_SPRITE		50
 #define GHOST_OTHERS_THEIR_SETTING 100
 
-#define GHOST_OTHERS_SIMPLE_NAME "white ghost"
+#define GHOST_OTHERS_SIMPLE_NAME 	"white ghost"
 #define GHOST_OTHERS_DEFAULT_SPRITE_NAME "default sprites"
 #define GHOST_OTHERS_THEIR_SETTING_NAME "their setting"
 

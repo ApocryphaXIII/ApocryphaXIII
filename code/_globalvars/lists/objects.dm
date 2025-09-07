@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(portals)							//list of all /obj/effect/portal
 GLOBAL_LIST_EMPTY(airlocks)							//list of all airlocks
 GLOBAL_LIST_EMPTY(curtains)							//list of all curtains
 GLOBAL_LIST_EMPTY(mechas_list)						//list of all mechs. Used by hostile mobs target tracking.
-GLOBAL_LIST_EMPTY(shuttle_caller_list) //list of all communication consoles and AIs, for automatic shuttle calls when there are none.
+GLOBAL_LIST_EMPTY(shuttle_caller_list) 	//list of all communication consoles and AIs, for automatic shuttle calls when there are none.
 GLOBAL_LIST_EMPTY(machines)							//NOTE: this is a list of ALL machines now. The processing machines list is SSmachine.processing !
 GLOBAL_LIST_EMPTY(navigation_computers)				//list of all /obj/machinery/computer/camera_advanced/shuttle_docker
 GLOBAL_LIST_EMPTY(syndicate_shuttle_boards)			//important to keep track of for managing nukeops war declarations.
@@ -40,7 +40,7 @@ GLOBAL_LIST_EMPTY(wire_name_directory)
 
 GLOBAL_LIST_EMPTY(ai_status_displays)
 
-GLOBAL_LIST_EMPTY(mob_spawners) // All mob_spawn objects
+GLOBAL_LIST_EMPTY(mob_spawners) 	// All mob_spawn objects
 GLOBAL_LIST_EMPTY(alert_consoles)			// Station alert consoles, /obj/machinery/computer/station_alert
 
 GLOBAL_LIST_EMPTY(air_scrub_names)			// Name list of all air scrubbers

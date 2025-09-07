@@ -44,10 +44,10 @@
  */
 /datum/component/ntnet_interface
 	var/hardware_id = null				// text. this is the true ID. do not change this. stuff like ID forgery can be done manually.
-	var/id_tag = null // named tag, mainly used to look up mapping objects
+	var/id_tag = null 			// named tag, mainly used to look up mapping objects
 	var/datum/ntnet/network = null		// network we are on, we MUST be on a network or there is no point in this component
 	var/list/registered_sockets = list()// list of ports opened up on devices
-	var/list/alias = list() // if we live in more than one network branch
+	var/list/alias = list() 	// if we live in more than one network branch
 
 /**
  * Initialize for the interface

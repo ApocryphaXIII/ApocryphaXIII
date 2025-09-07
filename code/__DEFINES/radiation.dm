@@ -4,7 +4,7 @@ Changes here can have widespread effects: make sure you test well.
 Ask ninjanomnom if they're around
 */
 
-#define RAD_BACKGROUND_RADIATION 9 // How much radiation is harmless to a mob, this is also when radiation waves stop spreading
+#define RAD_BACKGROUND_RADIATION 9 			// How much radiation is harmless to a mob, this is also when radiation waves stop spreading
 													// WARNING: Lowering this value significantly increases SSradiation load
 
 // apply_effect((amount*RAD_MOB_COEFFICIENT)/max(1, (radiation**2)*RAD_OVERDOSE_REDUCTION), IRRADIATE, blocked)

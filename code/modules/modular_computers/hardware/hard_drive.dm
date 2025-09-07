@@ -129,7 +129,7 @@
 	name = "advanced hard disk drive"
 	desc = "A hybrid HDD, for use in higher grade computers where balance between power efficiency and capacity is desired."
 	max_capacity = 256
-	power_usage = 50 // Hybrid, medium capacity and medium power storage
+	power_usage = 50 			// Hybrid, medium capacity and medium power storage
 	icon_state = "harddisk_mini"
 	w_class = WEIGHT_CLASS_SMALL
 

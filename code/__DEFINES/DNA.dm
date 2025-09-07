@@ -66,7 +66,7 @@
 // String identifiers for associative list lookup
 
 //Types of usual mutations
-#define	POSITIVE 1
+#define	POSITIVE 	1
 #define	NEGATIVE			2
 #define	MINOR_NEGATIVE		4
 

@@ -19,6 +19,7 @@
 			var/obj/item/gun/ballistic/gun_item = src
 			gun_item.show_bolt_icon = gun_item::show_bolt_icon
 			gun_item.mag_display = gun_item::mag_display
+			gun_item.mag_display_ammo = gun_item::mag_display_ammo
 	if(body_worn && ishuman(M))
 		var/mob/living/carbon/human/BS = M
 		if(BS.body_sprite)
@@ -36,11 +37,12 @@
 		cut_overlays()
 		if(onflooricon_state)
 			icon_state = onflooricon_state
-		// TODO: [Rebase] - Get bolt states for world icons so we can remove this
+		// This shit so ass lol
 		if(istype(src, /obj/item/gun/ballistic))
 			var/obj/item/gun/ballistic/gun_item = src
 			gun_item.show_bolt_icon = FALSE
 			gun_item.mag_display = FALSE
+			gun_item.mag_display_ammo = FALSE
 	update_appearance()
 	..()
 

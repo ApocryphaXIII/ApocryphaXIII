@@ -639,6 +639,11 @@
 	if(!istype(M))
 		return
 
+	var/turf/target_turf = get_turf(M)
+	var/message = "[key_name(usr)] has matrixed [M] ([M.type]) at [AREACOORD(target_turf)]"
+	message_admins(message)
+	log_admin(message)
+
 	matrix_mob(M)
 
 /proc/matrix_mob(mob/living/mob_occupant)

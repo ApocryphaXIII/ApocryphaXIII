@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "God ... And the Patron of the Church."
+	supervisors = "God ... And the Patron of the Church" // APOC EDIT CHANGE
 	selection_color = "#fff700"
 
 	outfit = /datum/outfit/job/priest

@@ -117,3 +117,7 @@
 
 /datum/movespeed_modifier/metabolicboost
 	multiplicative_slowdown = -1.5
+
+/datum/movespeed_modifier/post_jump // APOC EDIT ADD // Jump penalty
+	multiplicative_slowdown = 2
+	flags = IGNORE_NOSLOW

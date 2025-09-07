@@ -1,5 +1,0 @@
-author: "KCartridge"
-delete-after: True
-changes:
-  - rscadd: "Cigarettes and related items are now allowed in the ear slot, they are not allowed to be lit in the ear slot."
-  - rscadd: "Sprites for cigarettes in your ear slot"

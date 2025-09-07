@@ -261,6 +261,8 @@
 
 
 		var/travel_time = distance * 0.5
+		add_movespeed_modifier(/datum/movespeed_modifier/post_jump) // APOC EDIT START
+		addtimer(CALLBACK(src, PROC_REF(remove_movespeed_modifier), /datum/movespeed_modifier/post_jump), distance*1.5) // APOC EDIT END
 		spawn(travel_time)
 			if(get_dist(loc, adjusted_target) <= 1 && H.potential > 0)
 				H.epic_fall(FALSE, FALSE)

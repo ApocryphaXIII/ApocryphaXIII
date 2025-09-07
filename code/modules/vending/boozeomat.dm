@@ -81,10 +81,19 @@
 	payment_department = ACCOUNT_SRV
 	light_mask = "boozeomat-light-mask"
 
+// APOC EDIT CHANGE START
 /obj/machinery/vending/boozeomat/all_access
-	desc = "A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one. This model appears to have no access restrictions."
+	name = "liquor cabinet"
+	desc = "A climate controlled fridge for booze."
 	req_access = null
 	onstation = FALSE
+	all_products_free = TRUE
+
+	premium = list(
+		/obj/item/reagent_containers/glass/bottle/ethanol = 2,
+		/obj/item/reagent_containers/food/drinks/bottle/champagne = 1
+	)
+// APOC EDIT CHANGE END
 
 /obj/machinery/vending/boozeomat/syndicate_access
 	req_access = list(ACCESS_SYNDICATE)

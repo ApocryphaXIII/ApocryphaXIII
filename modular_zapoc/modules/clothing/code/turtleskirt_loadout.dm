@@ -6,7 +6,7 @@
 
 /datum/gear/uniform/skirtleneck/navy
 	display_name = "skirtleneck, navy"
-	description = "A red turtleneck with a skirt."
+	description = "A navy turtleneck with a skirt."
 	path = /obj/item/clothing/under/vampire/turtleneck_skirt/navy
 
 

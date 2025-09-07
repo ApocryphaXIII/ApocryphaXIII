@@ -1,15 +1,15 @@
 /*
  * # /datum/ntnet
  *
- * This class defines each network of the world. Each root network is accessible by any device
- * on the same network but NOT accessible to any other "root" networks. All normal devices only have
+ * This class defines each network of the world.  Each root network is accessible by any device
+ * on the same network but NOT accessible to any other "root" networks.  All normal devices only have
  * one network and one network_id.
  *
- * This thing replaces radio. Think of wifi but better, bigger and bolder! The idea is that any device
- * on a network can reach any other device on that same network if it knows the hardware_id. You can also
- * search or broadcast to devices if you know what branch you wish. That is to say you can broadcast to all
+ * This thing replaces radio.  Think of wifi but better, bigger and bolder!  The idea is that any device
+ * on a network can reach any other device on that same network if it knows the hardware_id.  You can also
+ * search or broadcast to devices if you know what branch you wish.  That is to say you can broadcast to all
  * devices on "SS13.ATMOS.SCRUBBERS" to change the settings of all the scrubbers on the station or to
- * "SS13.AREA.FRED_HOME.SCRUBBERS" to all the scrubbers at one area. However devices CANNOT communicate cross
+ * "SS13.AREA.FRED_HOME.SCRUBBERS" to all the scrubbers at one area.  However devices CANNOT communicate cross
  * networks normality.
  *
  */
@@ -19,18 +19,18 @@
 	var/network_id
 	/// The network name part of this leaf ex ATMOS
 	var/network_node_id
-	/// All devices on this network. ALL devices on this network, not just this branch.
+	/// All devices on this network.  ALL devices on this network, not just this branch.
 	/// This list is shared between all leaf networks so we don't have to keep going to the
-	/// parents on lookups. It is an associated list of hardware_id AND tag_id's
+	/// parents on lookups.  It is an associated list of hardware_id AND tag_id's
 	var/list/root_devices
-	/// This lists has all the networks in this node. Each name is fully qualified
+	/// This lists has all the networks in this node.  Each name is fully qualified
 	/// ie. SS13.ATMOS.SCRUBBERS, SS13.ATMOS.VENTS, etc
 	var/list/networks
 	/// All the devices on this branch of the network
 	var/list/linked_devices
-	/// Network children. Associated list using the network_node_id of the child as the key
+	/// Network children.  Associated list using the network_node_id of the child as the key
 	var/list/children
-	/// Parrnt of the network. If this is null, we are a oot network
+	/// Parrnt of the network.  If this is null, we are a oot network
 	var/datum/ntnet/parent
 
 
@@ -69,7 +69,7 @@
 
 	return ..()
 
-/// A network should NEVER be deleted. If you don't want to show it exists just check if its
+/// A network should NEVER be deleted.  If you don't want to show it exists just check if its
 /// empty
 /datum/ntnet/Destroy()
 	if(children.len > 0 || linked_devices.len > 0)
@@ -96,7 +96,7 @@
  * children
  *
  * Used for broadcasting, this will collect all the interfaces on this
- * network and by default everything below this branch. Will return an
+ * network and by default everything below this branch.  Will return an
  * empty list if no devices were found
  *
  * Arguments:
@@ -106,7 +106,7 @@
 	if(!include_children || children.len == 0)
 		return linked_devices.Copy()
 	else
-		/// Please no recursion. Byond hates recursion
+		/// Please no recursion.  Byond hates recursion
 		var/list/devices = list()
 		var/list/queue = list(src) // add ourselves
 		while(queue.len)
@@ -134,7 +134,7 @@
  *
  * This will add a network interface to this branch of the network.
  * If the interface already exists on the network it will add it and
- * give the alias list in the interface this branch name. If the interface
+ * give the alias list in the interface this branch name.  If the interface
  * has an id_tag it will add that name to the root_devices for map lookup
  *
  * Arguments:
@@ -154,7 +154,7 @@
 				log_telecomms("The device {[interface.hardware_id]} is trying to join '[network_id]' for a second time!")
 			return
 	// we have no network
-	interface.network = src // now we do!
+	interface.network = src  // now we do!
 	interface.alias[network_id] = src // add to the alias just to make removing easier.
 	linked_devices[interface.hardware_id] = interface
 	root_devices[interface.hardware_id] = interface
@@ -165,7 +165,7 @@
  * Remove this interface from the network
  *
  * This will remove an interface from this network and null the network field on the
- * interface. Be sure that add_interface is run as soon as posable as an interface MUST
+ * interface.  Be sure that add_interface is run as soon as posable as an interface MUST
  * have a network
  *
  * Arguments:
@@ -190,7 +190,7 @@
 	// Now check if there are more than meets the eye
 	if(interface.network == src || remove_all_alias)
 		// Ok, so we got to remove this network, but if we have an alias we are still "on" the network
-		// so we need to shift down to one of the other networks on the alias list. If the alias list
+		// so we need to shift down to one of the other networks on the alias list.  If the alias list
 		// is empty, fuck it and remove it from the network.
 		if(interface.alias.len > 0)
 			interface.network = interface.alias[1] // ... whatever is there.
@@ -205,7 +205,7 @@
  * Move interface to another branch of the network
  *
  * This function is a lightweight way of moving an interface from one branch to another like a gps
- * device going from one area to another. Target network MUST be this network or it will fail
+ * device going from one area to another.  Target network MUST be this network or it will fail
  *
  * Arguments:
  * * interface - ntnet component of the device to move

@@ -7,7 +7,7 @@
 /**
  * Proc called to create a ninja star in the ninja's hands.
  *
- * Called to create a ninja star in the wearer's hand. The ninja
+ * Called to create a ninja star in the wearer's hand.  The ninja
  * star doesn't do much up-front damage, but deals stamina damage
  * as the target moves around, forcing a finish or flee scenario.
  */
@@ -33,10 +33,10 @@
  * important change made is that its name specifically has the prefix, 'ninja' in it.
  * This provides the detective role with information to play off of by ensuring that his
  * assumption that a space ninja is aboard the ship to be true when he find 20 of these in
- * the captain's back. Along with this, its throwforce is 10 instead of the 5 of the stamina
+ * the captain's back.  Along with this, its throwforce is 10 instead of the 5 of the stamina
  * throwing star, meaning it'll do a little more damage than the stamina throwing star does as well.
  * Changes to this item need to be approved by all maintainers, so if you do change it, make sure
- * you go through the proper channels, lest you get permabanned. Do I make myself clear?
+ * you go through the proper channels, lest you get permabanned.  Do I make myself clear?
  */
 /obj/item/throwing_star/stamina/ninja
 	name = "ninja throwing star"

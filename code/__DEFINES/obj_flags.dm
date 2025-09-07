@@ -6,11 +6,11 @@
 #define CAN_BE_HIT				(1<<2) //can this be bludgeoned by items?
 #define BEING_SHOCKED			(1<<3) // Whether this thing is currently (already) being shocked by a tesla
 #define DANGEROUS_POSSESSION	(1<<4) //Admin possession yes/no
-#define ON_BLUEPRINTS			(1<<5) //Are we visible on the station blueprints at roundstart?
+#define ON_BLUEPRINTS			(1<<5)  //Are we visible on the station blueprints at roundstart?
 #define UNIQUE_RENAME			(1<<6) // can you customize the description/name of the thing?
 #define USES_TGUI				(1<<7)	//put on things that use tgui on ui_interact instead of custom/old UI.
 #define FROZEN					(1<<8)
-#define BLOCK_Z_OUT_DOWN		(1<<9) // Should this object block z falling from loc?
+#define BLOCK_Z_OUT_DOWN		(1<<9)  // Should this object block z falling from loc?
 #define BLOCK_Z_OUT_UP			(1<<10) // Should this object block z uprise from loc?
 #define BLOCK_Z_IN_DOWN			(1<<11) // Should this object block z falling from above?
 #define BLOCK_Z_IN_UP			(1<<12) // Should this object block z uprise from below?
@@ -42,18 +42,18 @@
 #define LAVAPROTECT (1<<0)
 #define STOPSPRESSUREDAMAGE		(1<<1)	//SUIT and HEAD items which stop pressure damage. To stop you taking all pressure damage you must have both a suit and head item with this flag.
 #define BLOCK_GAS_SMOKE_EFFECT	(1<<2)	// blocks the effect that chemical clouds would have on a mob --glasses, mask and helmets ONLY!
-#define MASKINTERNALS					(1<<3)		// mask allows internals
-#define NOSLIP				 (1<<4) //prevents from slipping on wet floors, in space etc
+#define MASKINTERNALS				    (1<<3)		// mask allows internals
+#define NOSLIP                  (1<<4)   //prevents from slipping on wet floors, in space etc
 #define NOSLIP_ICE				(1<<5)	 //prevents from slipping on frozen floors
 #define THICKMATERIAL				(1<<6)	//prevents syringes, parapens and hypos if the external suit or helmet (if targeting head) has this flag. Example: space suits, biosuit, bombsuits, thick suits that cover your body.
 #define VOICEBOX_TOGGLABLE (1<<7) // The voicebox in this clothing can be toggled.
 #define VOICEBOX_DISABLED (1<<8) // The voicebox is currently turned off.
 #define SCAN_REAGENTS (1<<9) // Allows helmets, masks and glasses to scan reagents.
 #define BLOCKS_SHOVE_KNOCKDOWN (1<<10) // Prevents shovies against a dense object from knocking the wearer down.
-#define SNUG_FIT			 (1<<11) //Prevents knock-off from things like hat-throwing.
-#define ANTI_TINFOIL_MANEUVER (1<<12) //Hats with negative effects when worn (i.e the tinfoil hat).
-#define DANGEROUS_OBJECT	(1<<13)	 //Clothes that cause a larger notification when placed on a person.
-#define LARGE_WORN_ICON	(1<<14)	 //Clothes that use large icons, for applying the proper overlays like blood
+#define SNUG_FIT               (1<<11) //Prevents knock-off from things like hat-throwing.
+#define ANTI_TINFOIL_MANEUVER   (1<<12) //Hats with negative effects when worn (i.e the tinfoil hat).
+#define DANGEROUS_OBJECT    (1<<13)     //Clothes that cause a larger notification when placed on a person.
+#define LARGE_WORN_ICON    (1<<14)     //Clothes that use large icons, for applying the proper overlays like blood
 #define NO_HAT_TRICKS		(1<<15)	//Prevents this item from being thrown onto other people's heads.
 
 /// Flags for the organ_flags var on /obj/item/organ

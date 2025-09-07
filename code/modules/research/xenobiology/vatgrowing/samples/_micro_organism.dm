@@ -15,7 +15,7 @@
 	var/growth = 0
 	///All the reagent types required for letting this organism grow into whatever it should become
 	var/list/required_reagents
-	///Reagent types that further speed up growth, but aren't needed. Assoc list of reagent datum type || bonus growth per tick
+	///Reagent types that further speed up growth, but aren't needed.  Assoc list of reagent datum type || bonus growth per tick
 	var/list/supplementary_reagents
 	///Reagent types that surpress growth. Assoc list of reagent datum type || lost growth per tick
 	var/list/suppressive_reagents

@@ -23,7 +23,7 @@
 	var/nuke_off_station = 0 //Used for tracking where the nuke hit
 	var/round_ends_with_antag_death = 0 //flags the "one verse the station" antags as such
 	var/list/datum/mind/antag_candidates = list()	// List of possible starting antags goes here
-	var/list/restricted_jobs = list()	// Jobs it doesn't make sense to be. I.E chaplain or AI cultist
+	var/list/restricted_jobs = list()	// Jobs it doesn't make sense to be.  I.E chaplain or AI cultist
 	var/list/protected_jobs = list()	// Jobs that can't be traitors because
 	var/list/required_jobs = list()		// alternative required job groups eg list(list(cap=1),list(hos=1,sec=2)) translates to one captain OR one hos and two secmans
 	var/required_players = 0
@@ -84,7 +84,7 @@
 /datum/game_mode/proc/pre_setup()
 	return TRUE
 
-///Everyone should now be on the station and have their normal gear. This is the place to give the special roles extra things
+///Everyone should now be on the station and have their normal gear.  This is the place to give the special roles extra things
 /datum/game_mode/proc/post_setup(report) //Gamemodes can override the intercept report. Passing TRUE as the argument will force a report.
 	if(!report)
 		report = !CONFIG_GET(flag/no_intercept_report)
@@ -433,7 +433,7 @@
 		var/mob/living/L = i
 		var/mob/living/carbon/C = L
 		if (istype(C) && !C.last_mind)
-			continue // never had a client
+			continue  // never had a client
 
 		if(L.ckey && !GLOB.directory[L.ckey])
 			msg += "<b>[L.name]</b> ([L.key]), the [L.job] (<font color='#ffcc00'><b>Disconnected</b></font>)\n"
@@ -525,7 +525,7 @@
 
 
 /datum/game_mode/proc/generate_report() //Generates a small text blurb for the gamemode in centcom report
-	return "Gamemode report for [name] not set. Contact a coder."
+	return "Gamemode report for [name] not set.  Contact a coder."
 
 //By default nuke just ends the round
 /datum/game_mode/proc/OnNukeExplosion(off_station)

@@ -367,7 +367,7 @@
 	design_ids = list("hdd_basic", "hdd_advanced", "hdd_super", "hdd_cluster", "ssd_small", "ssd_micro", "netcard_basic", "netcard_advanced", "netcard_wired",
 	"portadrive_basic", "portadrive_advanced", "portadrive_super", "cardslot", "aislot", "miniprinter", "APClink", "bat_control", "bat_normal", "bat_advanced",
 	"bat_super", "bat_micro", "bat_nano", "cpu_normal", "pcpu_normal", "cpu_small", "pcpu_small", "sensorpackage")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000) //they are really shitty
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)  //they are really shitty
 
 /datum/techweb_node/computer_board_gaming
 	id = "computer_board_gaming"
@@ -487,7 +487,7 @@
 	display_name = "Mining Technology"
 	description = "Better than Efficiency V."
 	prereq_ids = list("engineering", "basic_plasma")
-	design_ids = list("drill", "superresonator", "triggermod", "damagemod", "cooldownmod", "rangemod", "ore_redemption", "mining_equipment_vendor", "cargoexpress", "plasmacutter")//e a r l y	g a m e)
+	design_ids = list("drill", "superresonator", "triggermod", "damagemod", "cooldownmod", "rangemod", "ore_redemption", "mining_equipment_vendor", "cargoexpress", "plasmacutter")//e a r l y    g a  m e)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /datum/techweb_node/adv_mining
@@ -567,7 +567,7 @@
 	id = "electronic_weapons"
 	display_name = "Electric Weapons"
 	description = "Weapons using electric technology"
-	prereq_ids = list("weaponry", "adv_power" , "emp_basic")
+	prereq_ids = list("weaponry", "adv_power"  , "emp_basic")
 	design_ids = list("stunrevolver", "ioncarbine")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
@@ -754,7 +754,7 @@
 
 /datum/techweb_node/mech_disabler
 	id = "mech_disabler"
-	display_name = "Exosuit Weapon (CH-DS \"Peacemaker\" Mounted Disabler)"
+	display_name =  "Exosuit Weapon (CH-DS \"Peacemaker\" Mounted Disabler)"
 	description = "A basic piece of mech weaponry"
 	prereq_ids = list("beam_weapons")
 	design_ids = list("mech_disabler")
@@ -810,7 +810,7 @@
 
 /datum/techweb_node/mech_diamond_drill
 	id = "mech_diamond_drill"
-	display_name = "Exosuit Diamond Drill"
+	display_name =  "Exosuit Diamond Drill"
 	description = "A diamond drill fit for a large exosuit"
 	prereq_ids = list("adv_mining")
 	design_ids = list("mech_diamond_drill")

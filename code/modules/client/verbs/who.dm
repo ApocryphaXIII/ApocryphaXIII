@@ -73,7 +73,7 @@
 	set name = "Staffwho"
 	staff_who("Staffwho")
 
-/client/verb/mentorwho() // redundant with staffwho, but people wont check the admin tab for if there are mentors on
+/client/verb/mentorwho()  // redundant with staffwho, but people wont check the admin tab for if there are mentors on
 	set category = "Mentor"
 	set name = "Mentorwho"
 	staff_who("Mentorwho")

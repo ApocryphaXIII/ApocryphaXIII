@@ -171,7 +171,7 @@
 	else if(gelled)
 		msg += ", <span class='notice'>with fizzing flecks of blue bone gel sparking off the bone!</span>"
 	else
-		msg += "!"
+		msg +=  "!"
 	return "<B>[msg.Join()]</B>"
 
 /*

@@ -5,7 +5,7 @@
 	custom_materials = list(/datum/material/iron=1000, /datum/material/glass=500)
 	is_position_sensitive = TRUE
 	drop_sound = 'sound/items/handling/component_drop.ogg'
-	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	pickup_sound =  'sound/items/handling/component_pickup.ogg'
 	var/on = FALSE
 	var/visible = FALSE
 	var/maxlength = 8
@@ -155,7 +155,7 @@
 		if(ismob(CHM))
 			var/mob/LM = CHM
 			LM.playsound_local(get_turf(src), 'sound/machines/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
-	next_activate = world.time + 30
+	next_activate =  world.time + 30
 
 /obj/item/assembly/infra/proc/switchListener(turf/newloc)
 	if(listeningTo == newloc)

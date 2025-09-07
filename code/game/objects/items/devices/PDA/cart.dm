@@ -277,14 +277,14 @@ Code:
 						var/obj/machinery/power/apc/A = term.master
 						L += A
 
-				menu += "<PRE>Location: [get_area_name(powmonitor, TRUE)]<BR>Total power: [DisplayPower(connected_powernet.viewavail)]<BR>Total load: [DisplayPower(connected_powernet.viewload)]<BR>"
+				menu += "<PRE>Location: [get_area_name(powmonitor, TRUE)]<BR>Total power: [DisplayPower(connected_powernet.viewavail)]<BR>Total load:  [DisplayPower(connected_powernet.viewload)]<BR>"
 
 				menu += "<FONT SIZE=-1>"
 
 				if(L.len > 0)
-					menu += "Area						 Eqp./Lgt./Env. Load Cell<HR>"
+					menu += "Area                           Eqp./Lgt./Env.  Load   Cell<HR>"
 
-					var/list/S = list(" Off","AOff"," On", " AOn")
+					var/list/S = list(" Off","AOff","  On", " AOn")
 					var/list/chg = list("N","C","F")
 //Neither copytext nor copytext_char is appropriate here; neither 30 UTF-8 code units nor 30 code points equates to 30 columns of output.
 //Some glyphs are very tall or very wide while others are small or even take up no space at all.
@@ -293,7 +293,7 @@ Code:
 //would be to use <span style="width: NNNpx; overflow: none;">[A.area.name]</span>
 					for(var/obj/machinery/power/apc/A in L)
 						menu += copytext_char(add_trailing(A.area.name, 30, " "), 1, 30)
-						menu += " [S[A.equipment+1]] [S[A.lighting+1]] [S[A.environ+1]] [add_leading(DisplayPower(A.lastused_total), 6, " ")] [A.cell ? "[add_leading(round(A.cell.percent()), 3, " ")]% [chg[A.charging+1]]" : " N/C"]<BR>"
+						menu += " [S[A.equipment+1]] [S[A.lighting+1]] [S[A.environ+1]] [add_leading(DisplayPower(A.lastused_total), 6, " ")]  [A.cell ? "[add_leading(round(A.cell.percent()), 3, " ")]% [chg[A.charging+1]]" : "  N/C"]<BR>"
 
 				menu += "</FONT></PRE>"
 

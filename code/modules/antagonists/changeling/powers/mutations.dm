@@ -72,8 +72,8 @@
 
 	var/helmet_type = /obj/item
 	var/suit_type = /obj/item
-	var/suit_name_simple = "	"
-	var/helmet_name_simple = "	 "
+	var/suit_name_simple = "    "
+	var/helmet_name_simple = "     "
 	var/recharge_slowdown = 0
 	var/blood_on_castoff = 0
 
@@ -440,7 +440,7 @@
 	icon_state = "ling_shield"
 	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
-	block_chance = 90 //Very effective, but requires you going loud, and has a limited number of uses.
+	block_chance = 90 //Very effective, but requires you going loud, and has a limited number of uses. 
 
 	var/remaining_uses //Set by the changeling ability.
 
@@ -547,7 +547,7 @@
 	icon_state = "lingarmor"
 	item_flags = DROPDEL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list(MELEE = 80, BULLET = 80, LASER = 40, ENERGY = 50, BOMB = 10, BIO = 4, RAD = 0, FIRE = 90, ACID = 90, WOUND = 40) //Slightly better than Voivode suit.
+	armor = list(MELEE = 80, BULLET = 80, LASER = 40, ENERGY = 50, BOMB = 10, BIO = 4, RAD = 0, FIRE = 90, ACID = 90,  WOUND = 40) //Slightly better than Voivode suit.
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = 0
 	heat_protection = 0
@@ -563,7 +563,7 @@
 	desc = "A tough, hard covering of black chitin with transparent chitin in front."
 	icon_state = "lingarmorhelmet"
 	item_flags = DROPDEL
-	armor = list(MELEE = 80, BULLET = 80, LASER = 40, ENERGY = 50, BOMB = 10, BIO = 4, RAD = 0, FIRE = 90, ACID = 90, WOUND = 40)
+	armor = list(MELEE = 80, BULLET = 80, LASER = 40, ENERGY = 50, BOMB = 10, BIO = 4, RAD = 0, FIRE = 90, ACID = 90,  WOUND = 40)
 	flags_inv = HIDEEARS|HIDEHAIR|HIDEEYES|HIDEFACIALHAIR|HIDEFACE|HIDESNOUT
 
 /obj/item/clothing/head/helmet/changeling/Initialize()

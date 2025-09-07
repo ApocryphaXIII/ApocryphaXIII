@@ -90,7 +90,7 @@
 	build_path = /obj/machinery/computer/message_monitor
 
 /obj/item/circuitboard/computer/powermonitor
-	name = "Power Monitor (Computer Board)" //name fixed 250810
+	name = "Power Monitor (Computer Board)"  //name fixed 250810
 	icon_state = "engineering"
 	build_path = /obj/machinery/computer/monitor
 
@@ -100,7 +100,7 @@
 	build_path = /obj/machinery/computer/monitor/secret
 
 /obj/item/circuitboard/computer/solar_control
-	name = "Solar Control (Computer Board)" //name fixed 250810
+	name = "Solar Control (Computer Board)"  //name fixed 250810
 	icon_state = "engineering"
 	build_path = /obj/machinery/power/solar_control
 
@@ -136,7 +136,7 @@
 	build_path = /obj/machinery/computer/libraryconsole
 
 /obj/item/circuitboard/computer/libraryconsole/bookconsole
-	name = "Book Inventory Management Console (Machine Board)"
+	name =  "Book Inventory Management Console (Machine Board)"
 	build_path = /obj/machinery/computer/libraryconsole/bookmanagement
 
 /obj/item/circuitboard/computer/libraryconsole/screwdriver_act(mob/living/user, obj/item/tool)

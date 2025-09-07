@@ -96,12 +96,12 @@
 	var/datum/language/language
 
 /datum/signal/subspace/vocal/New(
-	obj/source, // the originating radio
-	frequency, // the frequency the signal is taking place on
-	atom/movable/virtualspeaker/speaker, // representation of the method's speaker
-	datum/language/language, // the language of the message
-	message, // the text content of the message
-	spans, // the list of spans applied to the message
+	obj/source,  // the originating radio
+	frequency,  // the frequency the signal is taking place on
+	atom/movable/virtualspeaker/speaker,  // representation of the method's speaker
+	datum/language/language,  // the language of the message
+	message,  // the text content of the message
+	spans,  // the list of spans applied to the message
 	list/message_mods // the list of modification applied to the message. Whispering, singing, ect
 )
 	src.source = source
@@ -208,4 +208,4 @@
 	else
 		log_telecomms("[virt.source] [log_text] [loc_name(get_turf(virt.source))]")
 
-	QDEL_IN(virt, 50) // Make extra sure the virtualspeaker gets qdeleted
+	QDEL_IN(virt, 50)  // Make extra sure the virtualspeaker gets qdeleted

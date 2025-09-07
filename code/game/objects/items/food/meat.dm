@@ -9,7 +9,7 @@
 	icon_state = "cubancarp"
 	trash_type = /obj/item/trash/plate
 	bite_consumption = 3
-	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/protein = 6, /datum/reagent/consumable/capsaicin = 1, /datum/reagent/consumable/nutriment/vitamin = 4)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/protein = 6,  /datum/reagent/consumable/capsaicin = 1, /datum/reagent/consumable/nutriment/vitamin = 4)
 	tastes = list("fish" = 4, "batter" = 1, "hot peppers" = 1)
 	foodtypes = MEAT
 	w_class = WEIGHT_CLASS_SMALL
@@ -570,13 +570,13 @@
 
 /obj/item/food/meat/slab/Initialize()
 	. = ..()
-	AddElement(/datum/element/dryable, /obj/item/food/sosjerky/healthy)
+	AddElement(/datum/element/dryable,  /obj/item/food/sosjerky/healthy)
 
 /obj/item/food/meat/slab/MakeGrillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/steak/plain, rand(30 SECONDS, 90 SECONDS), TRUE, TRUE) //Add medium rare later maybe?
 
 /obj/item/food/meat/slab/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/meat/rawcutlet/plain, 3, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meat/rawcutlet/plain, 3, 30)
 
 ///////////////////////////////////// HUMAN MEATS //////////////////////////////////////////////////////
 
@@ -589,7 +589,7 @@
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/steak/plain/human, rand(30 SECONDS, 90 SECONDS), TRUE, TRUE) //Add medium rare later maybe?
 
 /obj/item/food/meat/slab/human/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/meat/rawcutlet/plain/human, 3, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meat/rawcutlet/plain/human, 3, 30)
 
 /obj/item/food/meat/slab/human/mutant/slime
 	icon_state = "slimemeat"

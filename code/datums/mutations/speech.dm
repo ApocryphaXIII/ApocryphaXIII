@@ -120,7 +120,7 @@
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message)
 		message = " [message] "
-		message = replacetext(message," looking at "," gawpin' at ")
+		message = replacetext(message," looking at  ","  gawpin' at ")
 		message = replacetext(message," great "," bangin' ")
 		message = replacetext(message," man "," mate ")
 		message = replacetext(message," friend ",pick(" mate "," bruv "," bledrin "))
@@ -132,7 +132,7 @@
 		message = replacetext(message," i don't know "," wot mate ")
 		message = replacetext(message," no "," naw ")
 		message = replacetext(message," robust "," chin ")
-		message = replacetext(message," hi "," how what how ")
+		message = replacetext(message,"  hi  "," how what how ")
 		message = replacetext(message," hello "," sup bruv ")
 		message = replacetext(message," kill "," bang ")
 		message = replacetext(message," murder "," bang ")

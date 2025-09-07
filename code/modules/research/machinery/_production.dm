@@ -91,7 +91,7 @@
  * - material: The material being checked.
  */
 /obj/machinery/rnd/production/proc/check_material_req(datum/design/being_built, material)
-	if(!materials.mat_container) // no connected silo
+	if(!materials.mat_container)  // no connected silo
 		return 0
 
 	var/mat_amt = materials.mat_container.get_material_amount(material)
@@ -111,7 +111,7 @@
  * - reagent: The reagent being checked.
  */
 /obj/machinery/rnd/production/proc/check_reagent_req(datum/design/being_built, reagent)
-	if(!reagents) // no reagent storage
+	if(!reagents)  // no reagent storage
 		return 0
 
 	var/chem_amt = reagents.get_reagent_amount(reagent)
@@ -327,7 +327,7 @@
 		say("Synchronizing research with host technology database.")
 	if(ls["category"])
 		selected_category = ls["category"]
-	if(ls["dispose"]) //Causes the protolathe to dispose of a single reagent (all of it)
+	if(ls["dispose"])  //Causes the protolathe to dispose of a single reagent (all of it)
 		var/reagent_path = text2path(ls["dispose"])
 		if(!ispath(reagent_path, /datum/reagent))
 			stack_trace("Invalid reagent typepath - [ls["dispose"]] - returned in reagent disposal topic call")

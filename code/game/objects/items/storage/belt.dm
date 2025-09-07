@@ -38,7 +38,7 @@
 	content_overlays = TRUE
 	custom_premium_price = PAYCHECK_MEDIUM * 2
 	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
+	pickup_sound =  'sound/items/handling/toolbelt_pickup.ogg'
 
 /obj/item/storage/belt/utility/ComponentInitialize()
 	. = ..()
@@ -594,7 +594,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
-	STR.max_w_class = WEIGHT_CLASS_NORMAL // Set to this so the light replacer can fit.
+	STR.max_w_class = WEIGHT_CLASS_NORMAL // Set to this so the  light replacer can fit.
 	STR.set_holdable(list(
 		/obj/item/grenade/chem_grenade,
 		/obj/item/lightreplacer,

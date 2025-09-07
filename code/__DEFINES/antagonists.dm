@@ -26,7 +26,7 @@
 
 //ERT Types
 #define ERT_BLUE "Blue"
-#define ERT_RED "Red"
+#define ERT_RED  "Red"
 #define ERT_AMBER "Amber"
 #define ERT_DEATHSQUAD "Deathsquad"
 

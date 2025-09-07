@@ -219,7 +219,7 @@ round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), ro
 				. += list(0,0,0,0)
 		if(9 to 12) //RGB
 			. = list(L[1],L[2],L[3],0, L[4],L[5],L[6],0, L[7],L[8],L[9],0, 0,0,0,1)
-			for(var/b in 1 to 3) //missing constants row
+			for(var/b in 1 to 3)  //missing constants row
 				. += L.len < 9+b ? 0 : L[9+b]
 			. += 0
 		if(16 to 20) // RGBA

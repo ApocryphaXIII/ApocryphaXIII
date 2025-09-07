@@ -29,7 +29,7 @@
 
 	var/alarm_on = FALSE
 	var/busy = FALSE
-	var/emped = FALSE //Number of consecutive EMP's on this camera
+	var/emped = FALSE  //Number of consecutive EMP's on this camera
 	var/in_use_lights = 0
 
 	// Upgrades bitflag
@@ -149,7 +149,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray, 0)
 			GLOB.cameranet.removeCamera(src)
 			set_machine_stat(machine_stat | EMPED)
 			set_light(0)
-			emped = emped+1 //Increase the number of consecutive EMP's
+			emped = emped+1  //Increase the number of consecutive EMP's
 			update_appearance()
 			addtimer(CALLBACK(src, PROC_REF(post_emp_reset), emped, network), 90 SECONDS)
 			for(var/i in GLOB.player_list)

@@ -29,7 +29,7 @@
 
 /obj/structure/barrier_tape/police
 	name = "police tape"
-	desc = "A length of police tape. Do not cross."
+	desc = "A length of police tape.  Do not cross."
 	req_access = list(ACCESS_SECURITY)
 	icon_base = "police"
 

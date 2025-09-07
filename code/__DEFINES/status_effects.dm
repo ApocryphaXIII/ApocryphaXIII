@@ -118,7 +118,7 @@
 #define STATUS_EFFECT_LEANING /datum/status_effect/leaning //! Makes you lean on something
 
 /////////////
-// SLIME //
+//  SLIME  //
 /////////////
 
 #define STATUS_EFFECT_RAINBOWPROTECTION /datum/status_effect/rainbow_protection //Invulnerable and pacifistic

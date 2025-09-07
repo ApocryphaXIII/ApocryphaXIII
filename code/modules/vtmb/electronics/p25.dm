@@ -452,7 +452,7 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 	flags_1 = HEAR_1
 	var/receiving = TRUE
 	var/in_restricted_area = FALSE
-	var/powered = TRUE // New var to track power state
+	var/powered = TRUE  // New var to track power state
 
 /obj/item/p25radio/Initialize()
 	. = ..()

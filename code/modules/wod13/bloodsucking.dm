@@ -165,7 +165,7 @@
 									trauma.friend.key = K.key
 								mob.death()
 								if(P2)
-									P2.reason_of_death = "Diablerized by [true_real_name ? true_real_name : real_name] ([time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")])."
+									P2.reason_of_death =  "Diablerized by [true_real_name ? true_real_name : real_name] ([time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")])."
 								apply_status_effect(STATUS_EFFECT_DIABLERIE_HIGH)
 								adjustBruteLoss(-50, TRUE)
 								adjustFireLoss(-50, TRUE)

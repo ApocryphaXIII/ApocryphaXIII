@@ -199,19 +199,19 @@
 		char = t_in[i]
 		switch(text2ascii(char))
 
-			// A .. Z
+			// A  .. Z
 			if(65 to 90) //Uppercase Letters
 				number_of_alphanumeric++
 				last_char_group = LETTERS_DETECTED
 
-			// a .. z
+			// a  .. z
 			if(97 to 122) //Lowercase Letters
 				if(last_char_group == NO_CHARS_DETECTED || last_char_group == SPACES_DETECTED || cap_after_symbols && last_char_group == SYMBOLS_DETECTED) //start of a word
 					char = uppertext(char)
 				number_of_alphanumeric++
 				last_char_group = LETTERS_DETECTED
 
-			// 0 .. 9
+			// 0  .. 9
 			if(48 to 57) //Numbers
 				if(last_char_group == NO_CHARS_DETECTED || !allow_numbers) //suppress at start of string
 					if(strict)
@@ -219,7 +219,7 @@
 					continue
 				number_of_alphanumeric++
 				last_char_group = NUMBERS_DETECTED
-			// ' - .
+			// '  -  .
 			if(39,45,46) //Common name punctuation
 				if(last_char_group == NO_CHARS_DETECTED)
 					if(strict)
@@ -227,7 +227,7 @@
 					continue
 				last_char_group = SYMBOLS_DETECTED
 
-			// ~ | @ : # $ % & * +
+			// ~   |   @  :  #  $  %  &  *  +
 			if(126,124,64,58,35,36,37,38,42,43) //Other symbols that we'll allow (mainly for AI)
 				if(last_char_group == NO_CHARS_DETECTED || !allow_numbers) //suppress at start of string
 					if(strict)
@@ -425,8 +425,8 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 //merges non-null characters (3rd argument) from "from" into "into". Returns result
 //e.g. into = "Hello World"
-//	 from = "Seeya______"
-//	 returns"Seeya World"
+//     from = "Seeya______"
+//     returns"Seeya World"
 //The returned text is always the same length as into
 //This was coded to handle DNA gene-splicing.
 /proc/merge_text(into, from, null_char="_")
@@ -498,7 +498,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	t = replacetext(t, "\\|", "$9")
 	t = replacetext(t, "\\%", "$0")
 
-	// Escape single characters that will be used
+	// Escape  single characters that will be used
 
 	t = replacetext(t, "!", "$a")
 
@@ -615,7 +615,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 	// Premanage whitespace
 
-	t = replacetext(t, regex("\[^\\S\\r\\n \]", "g"), " ")
+	t = replacetext(t, regex("\[^\\S\\r\\n \]", "g"), "  ")
 
 	t = parsemarkdown_basic_step1(t)
 
@@ -628,7 +628,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 	t = replacetext(t, regex("(?:\\r\\n?|\\n)", "g"), "<br>")
 
-	t = replacetext(t, " ", "&nbsp;&nbsp;")
+	t = replacetext(t, "  ", "&nbsp;&nbsp;")
 
 	// Done
 

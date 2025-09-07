@@ -1,6 +1,6 @@
 //**************
 //*****Keys*******************
-//**************		** **
+//**************		**  **
 /obj/item/keycard
 	name = "security keycard"
 	desc = "This feels like it belongs to a door."
@@ -66,7 +66,7 @@
 	. = ..()
 	if(istype(I,/obj/item/keycard))
 		var/obj/item/keycard/key = I
-		if((!puzzle_id || puzzle_id == key.puzzle_id) && density)
+		if((!puzzle_id || puzzle_id == key.puzzle_id)  && density)
 			if(open_message)
 				to_chat(user, "<span class='notice'>[open_message]</span>")
 			open()

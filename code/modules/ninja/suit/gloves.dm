@@ -1,11 +1,11 @@
 /**
  * # Ninja Gloves
  *
- * Space ninja's gloves. Gives access to a number of special interactions.
+ * Space ninja's gloves.  Gives access to a number of special interactions.
  *
- * Gloves only found from space ninjas. Allows the wearer to access special interactions with various objects.
+ * Gloves only found from space ninjas.  Allows the wearer to access special interactions with various objects.
  * These interactions are detailed in ninjaDrainAct.dm in the suit file.
- * These interactions are toggled by an action tied to the gloves. The interactions will not activate if the user is also not wearing a ninja suit.
+ * These interactions are toggled by an action tied to the gloves.  The interactions will not activate if the user is also not wearing a ninja suit.
  *
  */
 /obj/item/clothing/gloves/space_ninja

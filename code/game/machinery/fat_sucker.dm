@@ -29,7 +29,7 @@
 
 /obj/machinery/fat_sucker/Initialize()
 	. = ..()
-	soundloop = new(list(src), FALSE)
+	soundloop = new(list(src),  FALSE)
 	update_icon()
 
 /obj/machinery/fat_sucker/RefreshParts()

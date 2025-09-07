@@ -25,7 +25,7 @@
 //Variables declared to change how items in the launch bay are picked and launched. (Almost) all of these are changed in the ui_act proc
 //Some effect groups are choices, while other are booleans. This is because some effects can stack, while others dont (ex: you can stack explosion and quiet, but you cant stack ordered launch and random launch)
 /datum/centcom_podlauncher
-	var/static/list/ignored_atoms = typecacheof(list(null, /mob/dead, /obj/effect/landmark, /obj/docking_port, /atom/movable/lighting_object, /obj/effect/particle_effect/sparks, /obj/effect/pod_landingzone, /obj/effect/hallucination/simple/supplypod_selector, /obj/effect/hallucination/simple/dropoff_location))
+	var/static/list/ignored_atoms = typecacheof(list(null, /mob/dead, /obj/effect/landmark, /obj/docking_port, /atom/movable/lighting_object, /obj/effect/particle_effect/sparks, /obj/effect/pod_landingzone, /obj/effect/hallucination/simple/supplypod_selector,  /obj/effect/hallucination/simple/dropoff_location))
 	var/turf/oldTurf //Keeps track of where the user was at if they use the "teleport to centcom" button, so they can go back
 	var/client/holder //client of whoever is using this datum
 	var/area/centcom/supplypod/loading/bay //What bay we're using to launch shit from.
@@ -68,7 +68,7 @@
 	else
 		var/mob/user_mob = user
 		holder = user_mob.client //if its a mob, assign the mob's client to holder
-	bay = locate(/area/centcom/supplypod/loading/one) in GLOB.sortedAreas //Locate the default bay (one) from the centcom map
+	bay =  locate(/area/centcom/supplypod/loading/one) in GLOB.sortedAreas //Locate the default bay (one) from the centcom map
 	bayNumber = bay.loading_id //Used as quick reference to what bay we're taking items from
 	var/area/pod_storage_area = locate(/area/centcom/supplypod/pod_storage) in GLOB.sortedAreas
 	temp_pod = new(pick(get_area_turfs(pod_storage_area))) //Create a new temp_pod in the podStorage area on centcom (so users are free to look at it and change other variables if needed)
@@ -284,7 +284,7 @@
 			var/list/expNames = list("Devastation", "Heavy Damage", "Light Damage", "Flame") //Explosions have a range of different types of damage
 			var/list/boomInput = list()
 			for (var/i=1 to expNames.len) //Gather input from the user for the value of each type of damage
-				boomInput.Add(input("Enter the [expNames[i]] range of the explosion. WARNING: This ignores the bomb cap!", "[expNames[i]] Range", 0) as null|num)
+				boomInput.Add(input("Enter the [expNames[i]] range of the explosion. WARNING: This ignores the bomb cap!", "[expNames[i]] Range",  0) as null|num)
 				if (isnull(boomInput[i]))
 					return
 				if (!isnum(boomInput[i])) //If the user doesn't input a number, set that specific explosion value to zero
@@ -306,7 +306,7 @@
 				damageChoice = 0
 				temp_pod.damage = 0
 				return
-			var/damageInput = input("Enter the amount of brute damage dealt by getting hit","How much damage to deal", 0) as null|num
+			var/damageInput = input("Enter the amount of brute damage dealt by getting hit","How much damage to deal",  0) as null|num
 			if (isnull(damageInput))
 				return
 			if (!isnum(damageInput)) //Sanitize the input for damage to deal.s
@@ -344,7 +344,7 @@
 			if (temp_pod.effectShrapnel == TRUE) //If already doing custom damage, set back to default (no shrapnel)
 				temp_pod.effectShrapnel = FALSE
 				return
-			var/shrapnelInput = input("Please enter the type of pellet cloud you'd like to create on landing (Can be any projectile!)", "Projectile Typepath", 0) in sort_list(subtypesof(/obj/projectile), GLOBAL_PROC_REF(cmp_typepaths_asc))
+			var/shrapnelInput = input("Please enter the type of pellet cloud you'd like to create on landing (Can be any projectile!)", "Projectile Typepath",  0) in sort_list(subtypesof(/obj/projectile), GLOBAL_PROC_REF(cmp_typepaths_asc))
 			if (isnull(shrapnelInput))
 				return
 			var/shrapnelMagnitude = input("Enter the magnitude of the pellet cloud. This is usually a value around 1-5. Please note that Ryll-Ryll has asked me to tell you that if you go too crazy with the projectiles you might crash the server. So uh, be gentle!", "Shrapnel Magnitude", 0) as null|num
@@ -448,7 +448,7 @@
 				if (found.file == tempSound.file)
 					soundLen = found.len
 			if (!soundLen)
-				soundLen = input(holder, "Couldn't auto-determine sound file length. What is the exact length of the sound file, in seconds. This number will be used to line the sound up so that it finishes right as the pod lands!", "Pick a Sound File", 0.3) as null|num
+				soundLen =  input(holder, "Couldn't auto-determine sound file length. What is the exact length of the sound file, in seconds. This number will be used to line the sound up so that it finishes right as the pod lands!", "Pick a Sound File", 0.3) as null|num
 				if (isnull(soundLen))
 					return
 				if (!isnum(soundLen))
@@ -807,12 +807,12 @@
 	temp_pod.delays = dataToLoad["delays"]
 	temp_pod.reverse_delays = dataToLoad["rev_delays"]
 	temp_pod.custom_rev_delay = dataToLoad["custom_rev_delay"]
-	temp_pod.setStyle(dataToLoad["styleChoice"]) //Style is a variable that keeps track of what the pod is supposed to look like. It acts as an index to the GLOB.podstyles list in cargo.dm defines to get the proper icon/name/desc for the pod.
+	temp_pod.setStyle(dataToLoad["styleChoice"])  //Style is a variable that keeps track of what the pod is supposed to look like. It acts as an index to the GLOB.podstyles list in cargo.dm defines to get the proper icon/name/desc for the pod.
 	temp_pod.effectShrapnel = dataToLoad["effectShrapnel"] //If true, creates a cloud of shrapnel of a decided type and magnitude on landing
 	temp_pod.shrapnel_type = text2path(dataToLoad["shrapnelType"])
 	temp_pod.shrapnel_magnitude = dataToLoad["shrapnelMagnitude"]
-	temp_pod.effectStun = dataToLoad["effectStun"]//If true, stuns anyone under the pod when it launches until it lands, forcing them to get hit by the pod. Devilish!
-	temp_pod.effectLimb = dataToLoad["effectLimb"]//If true, pops off a limb (if applicable) from anyone caught under the pod when it lands
+	temp_pod.effectStun  = dataToLoad["effectStun"]//If true, stuns anyone under the pod when it launches until it lands, forcing them to get hit by the pod. Devilish!
+	temp_pod.effectLimb  = dataToLoad["effectLimb"]//If true, pops off a limb (if applicable) from anyone caught under the pod when it lands
 	temp_pod.effectOrgans = dataToLoad["effectOrgans"]//If true, yeets the organs out of any bodies caught under the pod when it lands
 	temp_pod.bluespace = dataToLoad["effectBluespace"] //If true, the pod deletes (in a shower of sparks) after landing
 	temp_pod.effectStealth = dataToLoad["effectStealth"]//If true, a target icon isn't displayed on the turf where the pod will land

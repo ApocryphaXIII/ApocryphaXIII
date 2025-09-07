@@ -283,7 +283,7 @@
 	desc = "An extremely sturdy metal ladder."
 	resistance_flags = INDESTRUCTIBLE
 	var/id
-	var/height = 0 // higher numbers are considered physically higher
+	var/height = 0  // higher numbers are considered physically higher
 
 /obj/structure/ladder/unbreakable/Destroy()
 	. = ..()
@@ -298,19 +298,19 @@
 
 	for(var/obj/structure/ladder/unbreakable/unbreakable_ladder in GLOB.ladders)
 		if (unbreakable_ladder.id != id)
-			continue // not one of our pals
+			continue  // not one of our pals
 		if (!down && unbreakable_ladder.height == height - 1)
 			down = unbreakable_ladder
 			unbreakable_ladder.up = src
 			unbreakable_ladder.update_appearance()
 			if (up)
-				break // break if both our connections are filled
+				break  // break if both our connections are filled
 		else if (!up && unbreakable_ladder.height == height + 1)
 			up = unbreakable_ladder
 			unbreakable_ladder.down = src
 			unbreakable_ladder.update_appearance()
 			if (down)
-				break // break if both our connections are filled
+				break  // break if both our connections are filled
 
 	update_appearance()
 

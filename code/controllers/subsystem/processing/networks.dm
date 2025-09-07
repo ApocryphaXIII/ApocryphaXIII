@@ -6,7 +6,7 @@ SUBSYSTEM_DEF(networks)
 	init_order = INIT_ORDER_NETWORKS
 
 	var/list/relays = list()
-	/// Legacy ntnet lookup for software. Should be changed latter so don't rely on this
+	/// Legacy ntnet lookup for software.  Should be changed latter so don't rely on this
 	/// being here.
 	var/datum/ntnet/station_root/station_network
 	var/datum/ntnet/station_root/syndie_network
@@ -20,18 +20,18 @@ SUBSYSTEM_DEF(networks)
 	/// area many times
 	var/list/area_network_lookup = list()
 
-	/// List of networks using their fully qualified network name. Used for quick lookups
+	/// List of networks using their fully qualified network name.  Used for quick lookups
 	/// of networks for sending packets
 	var/list/networks = list()
-	/// List of the root networks starting at their root names. Used to find and/or build
+	/// List of the root networks starting at their root names.  Used to find and/or build
 	/// network tress
 	var/list/root_networks = list()
 
 
 
-	// Why not list? Because its a Copy() every time we add a packet, and thats stupid.
-	var/datum/netdata/first = null // start of the queue. Pulled off in fire.
-	var/datum/netdata/last = null	// end of the queue. pushed on by transmit
+	// Why not list?  Because its a Copy() every time we add a packet, and thats stupid.
+	var/datum/netdata/first = null // start of the queue.  Pulled off in fire.
+	var/datum/netdata/last = null	// end of the queue.  pushed on by transmit
 	var/packet_count = 0
 	// packet stats
 	var/count_broadcasts_packets = 0 // count of broadcast packets sent
@@ -48,8 +48,8 @@ SUBSYSTEM_DEF(networks)
 	var/list/used_names = list()
 
 
-/// You shouldn't need to do this. But mapping is async and there is no guarantee that Initialize
-/// will run before these networks are dynamically created. So its here.
+/// You shouldn't need to do this.  But mapping is async and there is no guarantee that Initialize
+/// will run before these networks are dynamically created.  So its here.
 /datum/controller/subsystem/networks/PreInit()
 	/// Limbo network needs to be made at boot up for all error devices
 	new/datum/ntnet(LIMBO_NETWORK_ROOT)
@@ -78,7 +78,7 @@ SUBSYSTEM_DEF(networks)
  * Process incoming queued packet and return NAK/ACK signals
  *
  * This should only be called when you want the target object to process the NAK/ACK signal, usually
- * during fire. At this point data.receiver_id has already been converted if it was a broadcast but
+ * during fire.  At this point data.receiver_id has already been converted if it was a broadcast but
  * is undefined in this function.
  * Arguments:
  * * receiver_id - text hardware id for the target device
@@ -98,16 +98,16 @@ SUBSYSTEM_DEF(networks)
 			SEND_SIGNAL(sending_interface.parent, COMSIG_COMPONENT_NTNET_NAK, data , NETWORK_ERROR_BAD_NETWORK)
 		return
 
-	/// Check if the receiver_id is in the network. If not send an error and return
+	/// Check if the receiver_id is in the network.  If not send an error and return
 	var/datum/component/ntnet_interface/target_interface = target_network.root_devices[receiver_id]
 	if(QDELETED(target_interface))
 		count_failed_packets++
 		add_log("Bad target device '[receiver_id]'", target_network, data.sender_id)
 		if(!QDELETED(sending_interface))
-			SEND_SIGNAL(sending_interface.parent, COMSIG_COMPONENT_NTNET_NAK, data, NETWORK_ERROR_BAD_RECEIVER_ID)
+			SEND_SIGNAL(sending_interface.parent, COMSIG_COMPONENT_NTNET_NAK, data,  NETWORK_ERROR_BAD_RECEIVER_ID)
 		return
 
-	// Check if we care about permissions. If we do check if we are allowed the message to be processed
+	// Check if we care about permissions.  If we do check if we are allowed the message to be processed
 	if(data.passkey) // got to check permissions
 		var/obj/O = target_interface.parent
 		if(O)
@@ -130,14 +130,14 @@ SUBSYSTEM_DEF(networks)
 	count_good_packets++
 
 /// Helper define to make sure we pop the packet and qdel it
-#define POP_PACKET(CURRENT) first = CURRENT.next; packet_count--; if(!first) { last = null; packet_count = 0; }; qdel(CURRENT);
+#define POP_PACKET(CURRENT) first = CURRENT.next;  packet_count--; if(!first) { last = null; packet_count = 0; }; qdel(CURRENT);
 
 /datum/controller/subsystem/networks/fire(resumed = 0)
 	var/datum/netdata/current
 	var/datum/component/ntnet_interface/target_interface
 	while(first)
 		current = first
-		/// Check if we are a list. If so process the list
+		/// Check if we are a list.  If so process the list
 		if(islist(current.receiver_id)) // are we a broadcast list
 			var/list/receivers = current.receiver_id
 			var/receiver_id = receivers[receivers.len--] // pop it
@@ -168,9 +168,9 @@ SUBSYSTEM_DEF(networks)
 #undef POP_PACKET
 
 /*
- * Main function to queue a packet. As long as we have valid receiver_id and network_id we will take it
+ * Main function to queue a packet.  As long as we have valid receiver_id and network_id we will take it
  *
- * Main queuing function for any message sent. if the data.receiver_id is null, then it will be broadcasted
+ * Main queuing function for any message sent.  if the data.receiver_id is null, then it will be broadcasted
  * error checking is only done during the process this just throws it on the queue.
  * Arguments:
  * * data - packet to be sent
@@ -206,8 +206,8 @@ SUBSYSTEM_DEF(networks)
  * Records a message into the station logging system for the network
  *
  * This CAN be read in station by personal so do not use it for game debugging
- * during fire. At this point data.receiver_id has already been converted if it was a broadcast but
- * is undefined in this function. It is also dumped to normal logs but remember players can read/intercept
+ * during fire.  At this point data.receiver_id has already been converted if it was a broadcast but
+ * is undefined in this function.  It is also dumped to normal logs but remember players can read/intercept
  * these messages
  * Arguments:
  * * log_string - message to log
@@ -278,13 +278,13 @@ SUBSYSTEM_DEF(networks)
  *
  * When a device is added to the network on map load, it needs to know where it is.
  * So that it is added to that ruins/base's network instead of the general station network
- * This way people on the station cannot just hack Charlie's doors and visa versa. All area's
+ * This way people on the station cannot just hack Charlie's doors and visa versa.  All area's
  * "should" have this information and if not one is created from existing map tags or
- * ruin template id's. This SHOULD run before the Initialize of a atom, or the root will not
+ * ruin template id's.  This SHOULD run before the Initialize of a atom, or the root will not
  * be put in the object.area
  *
  * An example on what the area.network_root_id does/
- * Before Init: 	obj.network_id = "ATMOS.SCRUBBER" area.network_root_id="SS13_STATION" area.network_area_id = "BRIDGE"
+ * Before Init: 	obj.network_id = "ATMOS.SCRUBBER"  area.network_root_id="SS13_STATION" area.network_area_id = "BRIDGE"
  * After Init:		obj.network_id = "SS13_STATION.ATMOS.SCRUBBER" also obj.network_id = "SS13_STATION.AREA.BRIDGE"
  *
  * Arguments:
@@ -308,23 +308,23 @@ SUBSYSTEM_DEF(networks)
 			var/datum/map_template/ruin/R = M
 			A.network_root_id = simple_network_name_fix(R.id)
 
-	if(!A.network_root_id) // not assigned? Then lets use some defaults
+	if(!A.network_root_id) // not assigned?  Then lets use some defaults
 		// Anything in Centcom is completely isolated
 		// Special case for holodecks.
 		if(istype(A,/area/holodeck))
-			A.network_root_id = "HOLODECK"		// isolated from the station network
+			A.network_root_id =  "HOLODECK"		// isolated from the station network
 		else if(SSmapping.level_trait(A.z, ZTRAIT_CENTCOM))
-			A.network_root_id = CENTCOM_NETWORK_ROOT
+			A.network_root_id =  CENTCOM_NETWORK_ROOT
 		// Otherwise the default is the station
 		else
-			A.network_root_id = STATION_NETWORK_ROOT
+			A.network_root_id =  STATION_NETWORK_ROOT
 
 /datum/controller/subsystem/networks/proc/assign_area_network_id(area/A, datum/map_template/M=null)
 	if(!istype(A))
 		return
 	if(!A.network_root_id)
 		lookup_area_root_id(A, M)
-		// finally set the network area id, bit copy paste from area Initialize
+		// finally  set the network area id, bit copy paste from area Initialize
 		// This is done in case we have more than one area type, each area instance has its own network name
 	if(!A.network_area_id)
 		A.network_area_id = A.network_root_id + ".AREA." + simple_network_name_fix(A.name) 		// Make the string
@@ -338,7 +338,7 @@ SUBSYSTEM_DEF(networks)
 /**
  * Converts a list of string's into a full network_id
  *
- * Converts a list of individual branches into a proper network id. Validates
+ * Converts a list of individual branches into a proper network id.  Validates
  * individual parts to make sure they are clean.
  *
  * ex. list("A","B","C") -> A.B.C
@@ -361,7 +361,7 @@ SUBSYSTEM_DEF(networks)
  *
  * Converts a a proper network id into a list of the individual branches
  *
- * ex. A.B.C -> list("A","B","C")
+ * ex.  A.B.C -> list("A","B","C")
  *
  * Arguments:
  * * tree - List of strings
@@ -371,13 +371,13 @@ SUBSYSTEM_DEF(networks)
 	if(!verify_network_name(name))
 		stack_trace("network_string_to_list: [name] IS INVALID")
 #endif
-	return splittext(name,".") // should we do a splittext_char? I doubt we really need unicode in network names
+	return splittext(name,".") // should we do a splittext_char?  I doubt we really need unicode in network names
 
 
 /**
  * Hard creates a network. Helper function for create_network_simple and create_network
  *
- * Hard creates a using a list of branches and returns. No error checking as it should
+ * Hard creates a using a list of branches and returns.  No error checking as it should
  * of been done before this call
  *
  * Arguments:
@@ -388,7 +388,7 @@ SUBSYSTEM_DEF(networks)
 	var/network_id = network_name_part
 	var/datum/ntnet/parent = root_networks[network_name_part]
 	var/datum/ntnet/network
-	if(!parent) // we have no network root? Must be mapload of a ruin or such
+	if(!parent) // we have no network root?  Must be mapload of a ruin or such
 		parent = new(network_name_part)
 
 	// go up the branches, creating nodes
@@ -406,11 +406,11 @@ SUBSYSTEM_DEF(networks)
 /**
  * Creates or finds a network anywhere in the world using a fully qualified name
  *
- * This is the simple case finding of a network in the world. It must take a full
+ * This is the simple case finding of a network in the world.  It must take a full
  * qualified network name and it will either return an existing network or build
- * a new one from scratch. We must be able to create names on the fly as there is
+ * a new one from scratch.  We must be able to create names on the fly as there is
  * no way for the map loader to tell us ahead of time what networks to create or
- * use for any maps or templates. So this thing will throw silent mapping errors
+ * use for any maps or templates.  So this thing will throw silent mapping errors
  * and log them, but will always return a network for something.
  *
  * Arguments:
@@ -422,7 +422,7 @@ SUBSYSTEM_DEF(networks)
 	if(network!=null)
 		return network // don't worry about it
 
-	/// Checks to make sure the network is valid. We log BOTH to mapping and telecoms
+	/// Checks to make sure the network is valid.  We log BOTH to mapping and telecoms
 	/// so if your checking for network errors you can find it in mapping to (because its their fault!)
 	if(!verify_network_name(network_id))
 		log_mapping("create_network_simple: [network_id] IS INVALID, replacing with LIMBO")
@@ -440,7 +440,7 @@ SUBSYSTEM_DEF(networks)
 	if(!network)
 		CRASH("NETWORK CANNOT BE NULL")
 #endif
-	log_telecomms("create_network_simple: created final [network.network_id]")
+	log_telecomms("create_network_simple:  created final [network.network_id]")
 	return network // and we are done!
 
 
@@ -448,8 +448,8 @@ SUBSYSTEM_DEF(networks)
  * Creates or finds a network anywhere in the world using bits of text
  *
  * This works the same as create_network_simple however it allows the addition
- * of qualified network names. So you can call it with a root_id and a sub
- * network. However this function WILL return null if it cannot be created
+ * of qualified network names.  So you can call it with a root_id and a sub
+ * network.  However this function WILL return null if it cannot be created
  * so it should be used with error checking is involved.
  *
  * ex. create_network("ROOT_NETWORK", "ATMOS.SCRUBBERS") -> ROOT_NETWORK.ATMOS.SCRUBBERS
@@ -470,15 +470,15 @@ SUBSYSTEM_DEF(networks)
 #endif
 		network_tree += network_string_to_list(part)
 
-	var/datum/ntnet/network = _hard_create_network(network_tree)
-	log_telecomms("create_network: created final [network.network_id]")
+	var/datum/ntnet/network =  _hard_create_network(network_tree)
+	log_telecomms("create_network:  created final [network.network_id]")
 	return network
 
 /**
  * Generate a hardware id for devices.
  *
- * Creates a 32 bit hardware id for network devices. This is random so masking
- * the number won't make routing "easier" (Think Ethernet) It does check if
+ * Creates a 32 bit hardware id for network devices.  This is random so masking
+ * the number won't make routing "easier" (Think Ethernet)  It does check if
  * an existing device has the number but will NOT assign it as thats
  * up to the collar
  *

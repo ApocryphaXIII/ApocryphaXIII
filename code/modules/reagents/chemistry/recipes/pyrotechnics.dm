@@ -88,7 +88,7 @@
 	strengthdiv = 3
 
 /datum/chemical_reaction/reagent_explosion/tatp/update_info()
-	required_temp = 450 + rand(-49,49) //this gets loaded only on round start
+	required_temp = 450 + rand(-49,49)  //this gets loaded only on round start
 
 /datum/chemical_reaction/reagent_explosion/tatp/on_reaction(datum/reagents/holder, created_volume)
 	if(holder.has_reagent(/datum/reagent/exotic_stabilizer,round(created_volume / 50, CHEMICAL_QUANTISATION_LEVEL))) // we like exotic stabilizer

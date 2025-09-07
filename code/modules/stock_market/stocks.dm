@@ -72,7 +72,7 @@
 /datum/stock/proc/generateIndustry()
 	if (findtext(name, "Farms"))
 		industry = new /datum/industry/agriculture
-	else if (findtext(name, "Software") || findtext(name, "Programming") || findtext(name, "IT Group") || findtext(name, "Electronics") || findtext(name, "Electric") || findtext(name, "Nanotechnology"))
+	else if (findtext(name, "Software") || findtext(name, "Programming")  || findtext(name, "IT Group") || findtext(name, "Electronics") || findtext(name, "Electric") || findtext(name, "Nanotechnology"))
 		industry = new /datum/industry/it
 	else if (findtext(name, "Mobile") || findtext(name, "Communications"))
 		industry = new /datum/industry/communications

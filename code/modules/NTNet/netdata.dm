@@ -28,12 +28,12 @@
 
 // If you don't want to use this fine, but this just shows how the system works
 
-// I hate you all. I want to operator overload []
+// I hate you all.  I want to operator overload []
 // So fuck you all, Do NOT access data directly you freaks
 // or this breaks god knows what.
 // FINE, you don't have to use get, is dirty or even clean
 // proc overhead is WAY more important than fucking clarity or
-// sealed classes. But for the LOVE OF GOD make sure _updated
+// sealed classes.   But for the LOVE OF GOD make sure _updated
 // is set if your going to do this.
 /datum/netlink/proc/get(idx)
 	return data ? data[idx] : null
@@ -59,7 +59,7 @@
 
 /datum/netdata
 	//this requires some thought later on but for now it's fine. (WarlockD) ARRRRG
-	// Packets are kind of shaped like IPX. IPX had a network, a node (aka id) and a port.
+	// Packets are kind of shaped like IPX.  IPX had a network, a node (aka id) and a port.
 	// Special case with receiver_id == null, that wil broadcast to the network_id
 	// Also, if the network id is not the same for both sender and receiver the packet is dropped.
 	var/sender_id

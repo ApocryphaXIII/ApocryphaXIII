@@ -100,11 +100,11 @@
 			continue
 		supply_packs[P.type] = P
 	for(var/pack in supply_packs) // our quartermaster taught us not to be ashamed of our supply packs
-		var/datum/supply_pack/vampire/P = supply_packs[pack] // specially since they're such a good price and all
+		var/datum/supply_pack/vampire/P = supply_packs[pack]  // specially since they're such a good price and all
 		if(!meme_pack_data[P.group]) // yeah, I see that, your quartermaster gave you good advice
 			meme_pack_data[P.group] = list( // it gets cheaper when I return it
 				"name" = P.group, // mmhm
-				"packs" = list() // sometimes, I return it so much, I rip the manifest
+				"packs" = list()  // sometimes, I return it so much, I rip the manifest
 			) // see, my quartermaster taught me a few things too
 		meme_pack_data[P.group]["packs"] += list(list(
 			"name" = P.name,
@@ -323,7 +323,7 @@
 						update_appearance()
 			else
 				if(SO.pack.cost * (0.72*MAX_EMAG_ROCKETS) <= points_to_check) // bulk discount :^)
-					landingzone = GLOB.areas_by_type[pick(GLOB.the_station_areas)] //override default landing zone
+					landingzone = GLOB.areas_by_type[pick(GLOB.the_station_areas)]  //override default landing zone
 					for(var/turf/open/floor/T in landingzone.contents)
 						if(T.is_blocked_turf())
 							continue

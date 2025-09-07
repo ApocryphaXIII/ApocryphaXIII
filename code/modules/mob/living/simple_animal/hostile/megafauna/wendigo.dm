@@ -44,8 +44,8 @@ Difficulty: Hard
 	deathsound = 'sound/effects/gravhit.ogg'
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	attack_action_types = list(/datum/action/innate/megafauna_attack/heavy_stomp,
-							 /datum/action/innate/megafauna_attack/teleport,
-							 /datum/action/innate/megafauna_attack/disorienting_scream)
+							   /datum/action/innate/megafauna_attack/teleport,
+							   /datum/action/innate/megafauna_attack/disorienting_scream)
 	/// Saves the turf the megafauna was created at (spawns exit portal here)
 	var/turf/starting
 	/// Range for wendigo stomping when it moves
@@ -121,7 +121,7 @@ Difficulty: Hard
 		return
 	if(target || get_dist(src, starting) < 12)
 		return
-	do_teleport(src, starting, 0, channel=TELEPORT_CHANNEL_BLUESPACE, forced = TRUE)
+	do_teleport(src, starting, 0,  channel=TELEPORT_CHANNEL_BLUESPACE, forced = TRUE)
 
 /mob/living/simple_animal/hostile/megafauna/wendigo/Move(atom/newloc, direct)
 	if(!can_move)
@@ -172,7 +172,7 @@ Difficulty: Hard
 		possible_ends |= T
 	if (LAZYLEN(possible_ends))
 		var/turf/end = pick(possible_ends)
-		do_teleport(src, end, 0, channel=TELEPORT_CHANNEL_BLUESPACE, forced = TRUE)
+		do_teleport(src, end, 0,  channel=TELEPORT_CHANNEL_BLUESPACE, forced = TRUE)
 		SetRecoveryTime(20, 0)
 
 /// Applies dizziness to all nearby enemies that can hear the scream and animates the wendigo shaking up and down

@@ -38,7 +38,7 @@
 
 /datum/element/food_trash/proc/async_generate_trash(datum/source)
 
-	var/obj/item/trash_item = generate_trash_callback ? generate_trash_callback.Invoke(source) : new trash()
+	var/obj/item/trash_item =  generate_trash_callback ? generate_trash_callback.Invoke(source) : new trash()
 
 	var/atom/edible_object = source
 

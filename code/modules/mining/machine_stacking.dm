@@ -80,8 +80,8 @@
 	output_dir = WEST
 	var/obj/machinery/mineral/stacking_unit_console/CONSOLE
 	var/stk_types = list()
-	var/stk_amt = list()
-	var/stack_list[0] //Key: Type. Value: Instance of type.
+	var/stk_amt   = list()
+	var/stack_list[0] //Key: Type.  Value: Instance of type.
 	var/stack_amt = 50 //amount to stack before releassing
 	var/datum/component/remote_materials/materials
 	var/force_connect = FALSE

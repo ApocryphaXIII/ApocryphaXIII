@@ -369,7 +369,7 @@ GLOBAL_VAR_INIT(deaths_during_shift, 0)
 				end_time = start_time + ((30 MINUTES) / (use_dynamic_timing ? 2 : 1))
 			announcement_message = "The fleet enroute to [station_name()] now consists of national guard personnel."
 	if(!midround_ruleset) // stops midround rulesets from announcing janky ass times
-		announcement_message += " They will arrive at the [(end_time - start_time) / (1 MINUTES)] minute mark."
+		announcement_message += "  They will arrive at the [(end_time - start_time) / (1 MINUTES)] minute mark."
 	if(newlevel == 1) // specific exception to stop the announcement from triggering right after the families themselves are announced because aesthetics
 		return
 	priority_announce(announcement_message, "Station Spaceship Detection Systems")
@@ -395,7 +395,7 @@ GLOBAL_VAR_INIT(deaths_during_shift, 0)
 				end_time = start_time + ((35 MINUTES) / (use_dynamic_timing ? 2 : 1))
 			announcement_message = "The convoy enroute to [station_name()] seems to no longer consist of national guard personnel."
 	if(!midround_ruleset)
-		announcement_message += " They will arrive at the [(end_time - start_time) / (1 MINUTES)] minute mark."
+		announcement_message += "  They will arrive at the [(end_time - start_time) / (1 MINUTES)] minute mark."
 	priority_announce(announcement_message, "Station Spaceship Detection Systems")
 
 /// Internal. Polls ghosts and sends in a team of space cops according to the wanted level, accompanied by an announcement. Will let the shuttle leave 10 minutes after sending. Freezes the wanted level.

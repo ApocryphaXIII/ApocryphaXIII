@@ -284,7 +284,7 @@
 			A.owner = user.mind
 			var/list/targets = list()
 			for(var/i in 0 to 3)
-				var/datum/mind/targeted = A.find_target()//easy way, i dont feel like copy pasting that entire block of code
+				var/datum/mind/targeted =  A.find_target()//easy way, i dont feel like copy pasting that entire block of code
 				if(!targeted)
 					break
 				targets["[targeted.current.real_name] the [targeted.assigned_role]"] = targeted.current

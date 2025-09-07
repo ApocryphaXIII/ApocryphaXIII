@@ -35,7 +35,7 @@
 	///Is there currently an alert on this newscaster that hasn't been seen yet?
 	var/alert = FALSE
 	///Is the current user editing or viewing a new wanted issue at the moment?
-	var/viewing_wanted = FALSE
+	var/viewing_wanted  = FALSE
 	///Is the current user creating a new channel at the moment?
 	var/creating_channel = FALSE
 	///Is the current user creating a new comment at the moment?

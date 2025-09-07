@@ -20,29 +20,29 @@
 
 	var/on = TRUE
 	var/frequency = FREQ_COMMON
-	var/canhear_range = 3 // The range around the radio in which mobs can hear what it receives.
-	var/emped = 0 // Tracks the number of EMPs currently stacked.
+	var/canhear_range = 3  // The range around the radio in which mobs can hear what it receives.
+	var/emped = 0  // Tracks the number of EMPs currently stacked.
 
-	var/broadcasting = FALSE // Whether the radio will transmit dialogue it hears nearby.
-	var/listening = TRUE // Whether the radio is currently receiving.
-	var/prison_radio = FALSE // If true, the transmit wire starts cut.
-	var/unscrewed = FALSE // Whether wires are accessible. Toggleable by screwdrivering.
-	var/freerange = FALSE // If true, the radio has access to the full spectrum.
-	var/subspace_transmission = FALSE // If true, the radio transmits and receives on subspace exclusively.
-	var/subspace_switchable = FALSE // If true, subspace_transmission can be toggled at will.
-	var/freqlock = FALSE // Frequency lock to stop the user from untuning specialist radios.
-	var/use_command = FALSE // If true, broadcasts will be large and BOLD.
-	var/command = FALSE // If true, use_command can be toggled at will.
+	var/broadcasting = FALSE  // Whether the radio will transmit dialogue it hears nearby.
+	var/listening = TRUE  // Whether the radio is currently receiving.
+	var/prison_radio = FALSE  // If true, the transmit wire starts cut.
+	var/unscrewed = FALSE  // Whether wires are accessible. Toggleable by screwdrivering.
+	var/freerange = FALSE  // If true, the radio has access to the full spectrum.
+	var/subspace_transmission = FALSE  // If true, the radio transmits and receives on subspace exclusively.
+	var/subspace_switchable = FALSE  // If true, subspace_transmission can be toggled at will.
+	var/freqlock = FALSE  // Frequency lock to stop the user from untuning specialist radios.
+	var/use_command = FALSE  // If true, broadcasts will be large and BOLD.
+	var/command = FALSE  // If true, use_command can be toggled at will.
 
 	///makes anyone who is talking through this anonymous.
 	var/anonymize = FALSE
 
 	// Encryption key handling
 	var/obj/item/encryptionkey/keyslot
-	var/translate_binary = FALSE // If true, can hear the special binary channel.
-	var/independent = FALSE // If true, can say/hear on the special CentCom channel.
-	var/syndie = FALSE // If true, hears all well-known channels automatically, and can say/hear on the Syndicate channel.
-	var/list/channels = list() // Map from name (see communications.dm) to on/off. First entry is current department (:h)
+	var/translate_binary = FALSE  // If true, can hear the special binary channel.
+	var/independent = FALSE  // If true, can say/hear on the special CentCom channel.
+	var/syndie = FALSE  // If true, hears all well-known channels automatically, and can say/hear on the Syndicate channel.
+	var/list/channels = list()  // Map from name (see communications.dm) to on/off. First entry is current department (:h)
 	var/list/secure_radio_connections
 
 /obj/item/radio/suicide_act(mob/living/user)
@@ -218,7 +218,7 @@
 		return // the device has to be on
 	if(!M || !message)
 		return
-	if(wires.is_cut(WIRE_TX)) // Permacell and otherwise tampered-with radios
+	if(wires.is_cut(WIRE_TX))  // Permacell and otherwise tampered-with radios
 		return
 	if(!M.IsVocal())
 		return
@@ -265,7 +265,7 @@
 	if (independent && (freq == FREQ_CENTCOM || freq == FREQ_CTF_RED || freq == FREQ_CTF_BLUE))
 		signal.data["compression"] = 0
 		signal.transmission_method = TRANSMISSION_SUPERSPACE
-		signal.levels = list(0) // reaches all Z-levels
+		signal.levels = list(0)  // reaches all Z-levels
 		signal.broadcast()
 		return
 
@@ -318,7 +318,7 @@
 	if (freq == FREQ_SYNDICATE && !syndie)
 		return FALSE
 	if (freq == FREQ_CENTCOM)
-		return independent // hard-ignores the z-level check
+		return independent  // hard-ignores the z-level check
 	if (!(0 in level))
 		var/turf/position = get_turf(src)
 		if(!position || !(position.z in level))

@@ -140,13 +140,13 @@
 /obj/item/seeds/proc/set_mutability(typepath, mutability)
 	var/datum/plant_gene/g = get_gene(typepath)
 	if(g)
-		g.mutability_flags |= mutability
+		g.mutability_flags |=  mutability
 
 ///This proc removes a mutability_flag from a gene
 /obj/item/seeds/proc/unset_mutability(typepath, mutability)
 	var/datum/plant_gene/g = get_gene(typepath)
 	if(g)
-		g.mutability_flags &= ~mutability
+		g.mutability_flags &=  ~mutability
 
 /obj/item/seeds/proc/mutate(lifemut = 2, endmut = 5, productmut = 1, yieldmut = 2, potmut = 25, wrmut = 2, wcmut = 5, traitmut = 0, stabmut = 3)
 	adjust_lifespan(rand(-lifemut,lifemut))
@@ -447,7 +447,7 @@
 		C.value = weed_chance
 
 
-/obj/item/seeds/proc/get_analyzer_text() //in case seeds have something special to tell to the analyzer
+/obj/item/seeds/proc/get_analyzer_text()  //in case seeds have something special to tell to the analyzer
 	var/text = ""
 	if(!get_gene(/datum/plant_gene/trait/plant_type/weed_hardy) && !get_gene(/datum/plant_gene/trait/plant_type/fungal_metabolism) && !get_gene(/datum/plant_gene/trait/plant_type/alien_properties))
 		text += "- Plant type: Normal plant\n"
@@ -480,7 +480,7 @@
 	text += "*---------*"
 	return text
 
-/obj/item/seeds/proc/on_chem_reaction(datum/reagents/S) //in case seeds have some special interaction with special chems
+/obj/item/seeds/proc/on_chem_reaction(datum/reagents/S)  //in case seeds have some special interaction with special chems
 	return
 
 /obj/item/seeds/attackby(obj/item/O, mob/user, params)

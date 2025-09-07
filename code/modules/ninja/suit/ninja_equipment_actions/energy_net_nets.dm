@@ -1,9 +1,9 @@
 /**
  * # Energy Net
  *
- * Energy net which ensnares prey until it is destroyed. Used by space ninjas.
+ * Energy net which ensnares prey until it is destroyed.  Used by space ninjas.
  *
- * Energy net which keeps its target from moving until it is destroyed. Used to send
+ * Energy net which keeps its target from moving until it is destroyed.  Used to send
  * players to a holding area in which they could never leave, but such feature has since
  * been removed.
  */

@@ -102,8 +102,8 @@ GLOBAL_LIST_EMPTY(asset_datums)
 /datum/asset/spritesheet
 	_abstract = /datum/asset/spritesheet
 	var/name
-	var/list/sizes = list()	// "32x32" -> list(10, icon/normal, icon/stripped)
-	var/list/sprites = list() // "foo_bar" -> list("32x32", 5)
+	var/list/sizes = list()    // "32x32" -> list(10, icon/normal, icon/stripped)
+	var/list/sprites = list()  // "foo_bar" -> list("32x32", 5)
 
 /datum/asset/spritesheet/register()
 	if (!name)
@@ -177,7 +177,7 @@ GLOBAL_LIST_EMPTY(asset_datums)
 
 /datum/asset/spritesheet/proc/Insert(sprite_name, icon/I, icon_state="", dir=SOUTH, frame=1, moving=FALSE)
 	I = icon(I, icon_state=icon_state, dir=dir, frame=frame, moving=moving)
-	if (!I || !length(icon_states(I))) // that direction or state doesn't exist
+	if (!I || !length(icon_states(I)))  // that direction or state doesn't exist
 		return
 	var/size_id = "[I.Width()]x[I.Height()]"
 	var/size = sizes[size_id]

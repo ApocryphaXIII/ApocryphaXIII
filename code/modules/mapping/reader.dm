@@ -153,7 +153,7 @@
 		var/ycrd = gset.ycrd + y_offset - 1
 		var/zcrd = gset.zcrd + z_offset - 1
 		if(!cropMap && ycrd > world.maxy)
-			world.maxy = ycrd // Expand Y here. X is expanded in the loop below
+			world.maxy = ycrd // Expand Y here.  X is expanded in the loop below
 		var/zexpansion = zcrd > world.maxz
 		if(zexpansion)
 			if(cropMap)
@@ -248,7 +248,7 @@
 			if(dpos)
 				old_position = dpos + length(model[dpos])
 
-			if(!ispath(atom_def, /atom)) // Skip the item if the path does not exist. Fix your crap, mappers!
+			if(!ispath(atom_def, /atom)) // Skip the item if the path does not exist.  Fix your crap, mappers!
 				if(bad_paths)
 					LAZYOR(bad_paths[path_text], model_key)
 				continue
@@ -316,7 +316,7 @@
 	index = members.len
 	if(members[index] != /area/template_noop)
 		var/atype = members[index]
-		world.preloader_setup(members_attributes[index], atype)//preloader for assigning set variables on atom creation
+		world.preloader_setup(members_attributes[index], atype)//preloader for assigning  set variables on atom creation
 		var/atom/instance = areaCache[atype]
 		if (!instance)
 			instance = GLOB.areas_by_type[atype]
@@ -424,7 +424,7 @@
 	var/old_position = 1
 
 	while(position != 0)
-		// find next delimiter that is not within "..."
+		// find next delimiter that is not within  "..."
 		position = find_next_delimiter_position(text,old_position,delimiter)
 
 		// check if this is a simple variable (as in list(var1, var2)) or an associative one (as in list(var1="foo",var2=7))
@@ -442,7 +442,7 @@
 			var/right_constant = parse_constant(trim_right)
 			.[left_constant] = right_constant
 
-		else // simple var
+		else  // simple var
 			. += list(left_constant)
 
 /datum/parsed_map/proc/parse_constant(text)

@@ -77,11 +77,11 @@
 		qdel(src)
 
 		/**
-		 * Checks to see if we can fold. Return TRUE to actually perform the fold and delete.
+		  * Checks to see if we can fold. Return TRUE to actually perform the fold and delete.
 			*
-		 * Arguments:
-		 * * the_folder - over_object of MouseDrop aka usr
-		 */
+		  * Arguments:
+		  * * the_folder - over_object of MouseDrop aka usr
+		  */
 /obj/structure/closet/body_bag/proc/attempt_fold(mob/living/carbon/human/the_folder)
 	. = FALSE
 	if(!istype(the_folder))

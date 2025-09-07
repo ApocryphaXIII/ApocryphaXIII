@@ -1,5 +1,5 @@
 // This used to be in paper.dm, it was some snowflake code that was
-// used ONLY on april's fool. I moved it to a component so it could be
+// used ONLY on april's fool.  I moved it to a component so it could be
 // used in other places
 
 //This is copypasted on other obj so if you are readin this go refactor it, start on objs with var/limiting_spam

@@ -13,7 +13,7 @@
 
 /datum/chemical_reaction/probital
 	results = list(/datum/reagent/medicine/c2/probital = 4)
-	required_reagents = list(/datum/reagent/copper = 1, /datum/reagent/acetone = 2, /datum/reagent/phosphorus = 1)
+	required_reagents = list(/datum/reagent/copper = 1, /datum/reagent/acetone = 2,  /datum/reagent/phosphorus = 1)
 
 /*****BURN*****/
 
@@ -62,4 +62,4 @@
 
 /datum/chemical_reaction/penthrite
 	results = list(/datum/reagent/medicine/c2/penthrite = 3)
-	required_reagents = list(/datum/reagent/pentaerythritol = 1, /datum/reagent/acetone = 1, /datum/reagent/toxin/acid/nitracid = 1 , /datum/reagent/wittel = 1)
+	required_reagents = list(/datum/reagent/pentaerythritol = 1, /datum/reagent/acetone = 1,  /datum/reagent/toxin/acid/nitracid = 1 , /datum/reagent/wittel = 1)

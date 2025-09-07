@@ -10,24 +10,24 @@
 /**
  * # Space Dragon
  *
- * A space-faring leviathan-esque monster which breathes fire and summons carp. Spawned during its respective midround antagonist event.
+ * A space-faring leviathan-esque monster which breathes fire and summons carp.  Spawned during its respective midround antagonist event.
  *
  * A space-faring monstrosity who has the ability to breathe dangerous fire breath and uses its powerful wings to knock foes away.
  * Normally spawned as an antagonist during the Space Dragon event, Space Dragon's main goal is to open three rifts from which to pull a great tide of carp onto the station.
- * Space Dragon can summon only one rift at a time, and can do so anywhere a blob is allowed to spawn. In order to trigger his victory condition, Space Dragon must summon and defend three rifts while they charge.
- * Space Dragon, when spawned, has five minutes to summon the first rift. Failing to do so will cause Space Dragon to return from whence he came.
- * When the rift spawns, ghosts can interact with it to spawn in as space carp to help complete the mission. One carp is granted when the rift is first summoned, with an extra one every 40 seconds.
+ * Space Dragon can summon only one rift at a time, and can do so anywhere a blob is allowed to spawn.  In order to trigger his victory condition, Space Dragon must summon and defend three rifts while they charge.
+ * Space Dragon, when spawned, has five minutes to summon the first rift.  Failing to do so will cause Space Dragon to return from whence he came.
+ * When the rift spawns, ghosts can interact with it to spawn in as space carp to help complete the mission.  One carp is granted when the rift is first summoned, with an extra one every 40 seconds.
  * Once the victory condition is met, the shuttle is called and all current rifts are allowed to spawn infinite sentient space carp.
  * If a charging rift is destroyed, Space Dragon will be incredibly slowed, and the endlag on his gust attack is greatly increased on each use.
  * Space Dragon has the following abilities to assist him with his objective:
  * - Can shoot fire in straight line, dealing 30 burn damage and setting those suseptible on fire.
- * - Can use his wings to temporarily stun and knock back any nearby mobs. This attack has no cooldown, but instead has endlag after the attack where Space Dragon cannot act. This endlag's time decreases over time, but is added to every time he uses the move.
- * - Can swallow mob corpses to heal for half their max health. Any corpses swallowed are stored within him, and will be regurgitated on death.
- * - Can tear through any type of wall. This takes 4 seconds for most walls, and 12 seconds for reinforced walls.
+ * - Can use his wings to temporarily stun and knock back any nearby mobs.  This attack has no cooldown, but instead has endlag after the attack where Space Dragon cannot act.  This endlag's time decreases over time, but is added to every time he uses the move.
+ * - Can swallow mob corpses to heal for half their max health.  Any corpses swallowed are stored within him, and will be regurgitated on death.
+ * - Can tear through any type of wall.  This takes 4 seconds for most walls, and 12 seconds for reinforced walls.
  */
 /mob/living/simple_animal/hostile/space_dragon
 	name = "Space Dragon"
-	desc = "A vile, leviathan-esque creature that flies in the most unnatural way. Looks slightly similar to a space carp."
+	desc = "A vile, leviathan-esque creature that flies in the most unnatural way.  Looks slightly similar to a space carp."
 	maxHealth = 400
 	health = 400
 	a_intent = INTENT_HARM
@@ -59,17 +59,17 @@
 	minbodytemp = 0
 	maxbodytemp = 1500
 	faction = list("carp")
-	/// Current time since the the last rift was activated. If set to -1, does not increment.
+	/// Current time since the the last rift was activated.  If set to -1, does not increment.
 	var/riftTimer = 0
 	/// Maximum amount of time which can pass without a rift before Space Dragon despawns.
 	var/maxRiftTimer = 300
-	/// How much endlag using Wing Gust should apply. Each use of wing gust increments this, and it decreases over time.
+	/// How much endlag using Wing Gust should apply.  Each use of wing gust increments this, and it decreases over time.
 	var/tiredness = 0
-	/// A multiplier to how much each use of wing gust should add to the tiredness variable. Set to 5 if the current rift is destroyed.
+	/// A multiplier to how much each use of wing gust should add to the tiredness variable.  Set to 5 if the current rift is destroyed.
 	var/tiredness_mult = 1
-	/// Determines whether or not Space Dragon is in the middle of using wing gust. If set to true, prevents him from moving and doing certain actions.
+	/// Determines whether or not Space Dragon is in the middle of using wing gust.  If set to true, prevents him from moving and doing certain actions.
 	var/using_special = FALSE
-	/// A list of all of the rifts created by Space Dragon. Used for setting them all to infinite carp spawn when Space Dragon wins, and removing them when Space Dragon dies.
+	/// A list of all of the rifts created by Space Dragon.  Used for setting them all to infinite carp spawn when Space Dragon wins, and removing them when Space Dragon dies.
 	var/list/obj/structure/carp_rift/rift_list = list()
 	/// How many rifts have been successfully charged
 	var/rifts_charged = 0
@@ -113,10 +113,10 @@
 		return
 	riftTimer = min(riftTimer + 1, maxRiftTimer + 1)
 	if(riftTimer == (maxRiftTimer - 60))
-		to_chat(src, "<span class='boldwarning'>You have a minute left to summon the rift! Get to it!</span>")
+		to_chat(src, "<span class='boldwarning'>You have a minute left to summon the rift!  Get to it!</span>")
 		return
 	if(riftTimer == maxRiftTimer)
-		to_chat(src, "<span class='boldwarning'>You've failed to summon the rift in a timely manner! You're being pulled back from whence you came!</span>")
+		to_chat(src, "<span class='boldwarning'>You've failed to summon the rift in a timely manner!  You're being pulled back from whence you came!</span>")
 		destroy_rifts()
 		QDEL_NULL(src)
 
@@ -384,8 +384,8 @@
  * Handles wing gust from the windup all the way to the endlag at the end.
  *
  * Handles the wing gust attack from start to finish, based on the timer.
- * When intially triggered, starts at 0. Until the timer reaches 10, increase Space Dragon's y position by 2 and call back to the function in 1.5 deciseconds.
- * When the timer is at 10, trigger the attack. Change Space Dragon's sprite. reset his y position, and push all living creatures back in a 3 tile radius and stun them for 5 seconds.
+ * When intially triggered, starts at 0.  Until the timer reaches 10, increase Space Dragon's y position by 2 and call back to the function in 1.5 deciseconds.
+ * When the timer is at 10, trigger the attack.  Change Space Dragon's sprite. reset his y position, and push all living creatures back in a 3 tile radius and stun them for 5 seconds.
  * Stay in the ending state for how much our tiredness dictates and add to our tiredness.
  * Arguments:
  * * timer - The timer used for the windup.
@@ -448,7 +448,7 @@
 /datum/action/innate/space_dragon/gust_attack
 	name = "Gust Attack"
 	button_icon_state = "gust_attack"
-	desc = "Use your wings to knock back foes with gusts of air, pushing them away and stunning them. Using this too often will leave you vulnerable for longer periods of time."
+	desc = "Use your wings to knock back foes with gusts of air, pushing them away and stunning them.  Using this too often will leave you vulnerable for longer periods of time."
 
 /datum/action/innate/space_dragon/gust_attack/Activate()
 	var/mob/living/simple_animal/hostile/space_dragon/S = owner
@@ -470,12 +470,12 @@
 		return
 	var/area/A = get_area(S)
 	if(!(A.area_flags & VALID_TERRITORY))
-		to_chat(S, "<span class='warning'>You can't summon a rift here! Try summoning somewhere secure within the station!</span>")
+		to_chat(S, "<span class='warning'>You can't summon a rift here!  Try summoning somewhere secure within the station!</span>")
 		return
 	for(var/obj/structure/carp_rift/rift in S.rift_list)
 		var/area/RA = get_area(rift)
 		if(RA == A)
-			to_chat(S, "<span class='warning'>You've already summoned a rift in this area! You have to summon again somewhere else!</span>")
+			to_chat(S, "<span class='warning'>You've already summoned a rift in this area!  You have to summon again somewhere else!</span>")
 			return
 	to_chat(S, "<span class='warning'>You begin to open a rift...</span>")
 	if(do_after(S, 100, target = S))
@@ -486,7 +486,7 @@
 		S.riftTimer = -1
 		CR.dragon = S
 		S.rift_list += CR
-		to_chat(S, "<span class='boldwarning'>The rift has been summoned. Prevent the crew from destroying it at all costs!</span>")
+		to_chat(S, "<span class='boldwarning'>The rift has been summoned.  Prevent the crew from destroying it at all costs!</span>")
 		notify_ghosts("The Space Dragon has opened a rift!", source = CR, action = NOTIFY_ORBIT, flashwindow = FALSE, header = "Carp Rift Opened")
 		qdel(src)
 
@@ -495,9 +495,9 @@
  *
  * The portals Space Dragon summons to bring carp onto the station.
  *
- * The portals Space Dragon summons to bring carp onto the station. His main objective is to summon 3 of them and protect them from being destroyed.
- * The portals can summon sentient space carp in limited amounts. The portal also changes color based on whether or not a carp spawn is available.
- * Once it is fully charged, it becomes indestructible, and intermitently spawns non-sentient carp. It is still destroyed if Space Dragon dies.
+ * The portals Space Dragon summons to bring carp onto the station.  His main objective is to summon 3 of them and protect them from being destroyed.
+ * The portals can summon sentient space carp in limited amounts.  The portal also changes color based on whether or not a carp spawn is available.
+ * Once it is fully charged, it becomes indestructible, and intermitently spawns non-sentient carp.  It is still destroyed if Space Dragon dies.
  */
 /obj/structure/carp_rift
 	name = "carp rift"
@@ -544,7 +544,7 @@
 /obj/structure/carp_rift/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	if(time_charged != max_charge + 1)
-		to_chat(dragon, "<span class='boldwarning'>The rift has been destroyed! You have failed, and find yourself brought down by the weight of your failure.</span>")
+		to_chat(dragon, "<span class='boldwarning'>The rift has been destroyed!  You have failed, and find yourself brought down by the weight of your failure.</span>")
 		dragon.set_varspeed(5)
 		dragon.tiredness_mult = 5
 		dragon.destroy_rifts()
@@ -624,7 +624,7 @@
 	if(charge_state < CHARGE_FINALWARNING && time_charged >= (max_charge * 0.5))
 		charge_state = CHARGE_FINALWARNING
 		var/area/A = get_area(src)
-		priority_announce("A rift is causing an unnaturally large energy flux in [initial(A.name)]. Stop it at all costs!", "Central Command Spatial Corps", 'sound/ai/spanomalies.ogg')
+		priority_announce("A rift is causing an unnaturally large energy flux in [initial(A.name)].  Stop it at all costs!", "Central Command Spatial Corps", 'sound/ai/spanomalies.ogg')
 
 /**
  * Used to create carp controlled by ghosts when the option is available.
@@ -649,7 +649,7 @@
 	var/datum/antagonist/space_dragon/S = dragon.mind.has_antag_datum(/datum/antagonist/space_dragon)
 	if(S)
 		S.carp += newcarp.mind
-	to_chat(newcarp, "<span class='boldwarning'>You have arrived in order to assist the space dragon with securing the rift. Do not jeopardize the mission, and protect the rift at all costs!</span>")
+	to_chat(newcarp, "<span class='boldwarning'>You have arrived in order to assist the space dragon with securing the rift.  Do not jeopardize the mission, and protect the rift at all costs!</span>")
 	carp_stored--
 	if(carp_stored <= 0 && charge_state < CHARGE_COMPLETED)
 		icon_state = "carp_rift"

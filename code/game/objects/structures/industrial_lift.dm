@@ -147,7 +147,7 @@ GLOBAL_LIST_EMPTY(lifts)
 	var/pass_through_floors = FALSE //if true, the elevator works through floors
 	var/controls_locked = FALSE //if true, the lift cannot be manually moved.
 	var/list/atom/movable/lift_load //things to move
-	var/datum/lift_master/lift_master_datum	//control from
+	var/datum/lift_master/lift_master_datum    //control from
 
 /obj/structure/industrial_lift/New()
 	GLOB.lifts.Add(src)
@@ -222,7 +222,7 @@ GLOBAL_LIST_EMPTY(lifts)
 		return
 	var/result = show_radial_menu(user, src, tool_list, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 	if(!is_ghost && !in_range(src, user))
-		return // nice try
+		return  // nice try
 	switch(result)
 		if("Up")
 			lift_master_datum.MoveLift(UP, user)
@@ -302,7 +302,7 @@ GLOBAL_LIST_EMPTY(lifts)
 
 	var/result = show_radial_menu(user, src, tool_list, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = FALSE)
 	if (!in_range(src, user))
-		return // nice try
+		return  // nice try
 
 	switch(result)
 		if("NORTH")

@@ -91,7 +91,7 @@
 	if(!H)
 		return
 
-	. = H.stored
+	. =  H.stored
 	H.restore()
 
 	clothes_req = initial(clothes_req)

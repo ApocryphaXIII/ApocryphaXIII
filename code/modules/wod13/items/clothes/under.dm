@@ -487,7 +487,7 @@
 
 /obj/item/clothing/under/pentex/pentex_executive_suit
 	name = "Endron executive suit"
-	desc = "A white designer suit with a green dress shirt. This one has an Endron International tag on it!"
+	desc = "A  white designer suit with a green dress shirt. This one has an Endron International tag on it!"
 	icon_state = "pentex_executivesuit"
 
 /obj/item/clothing/under/pentex/pentex_executiveskirt

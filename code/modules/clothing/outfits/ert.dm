@@ -129,7 +129,7 @@
 	id = /obj/item/card/id/ert/engineer
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/engi
 	suit_store = /obj/item/gun/energy/e_gun
-	glasses = /obj/item/clothing/glasses/meson/engine
+	glasses =  /obj/item/clothing/glasses/meson/engine
 	back = /obj/item/storage/backpack/ert/engineer
 	belt = /obj/item/storage/belt/utility/full
 	l_pocket = /obj/item/rcd_ammo/large

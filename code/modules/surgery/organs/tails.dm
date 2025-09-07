@@ -8,7 +8,7 @@
 	slot = ORGAN_SLOT_TAIL
 	var/tail_type = "None"
 
-/obj/item/organ/tail/Remove(mob/living/carbon/human/H, special = 0)
+/obj/item/organ/tail/Remove(mob/living/carbon/human/H,  special = 0)
 	..()
 	if(H && H.dna && H.dna.species)
 		H.dna.species.stop_wagging_tail(H)
@@ -26,7 +26,7 @@
 			H.dna.features["tail_human"] = H.dna.species.mutant_bodyparts["tail_human"] = tail_type
 			H.update_body()
 
-/obj/item/organ/tail/cat/Remove(mob/living/carbon/human/H, special = 0)
+/obj/item/organ/tail/cat/Remove(mob/living/carbon/human/H,  special = 0)
 	..()
 	if(istype(H))
 		H.dna.features["tail_human"] = "None"
@@ -58,7 +58,7 @@
 			H.dna.features["spines"] = H.dna.species.mutant_bodyparts["spines"] = spines
 		H.update_body()
 
-/obj/item/organ/tail/lizard/Remove(mob/living/carbon/human/H, special = 0)
+/obj/item/organ/tail/lizard/Remove(mob/living/carbon/human/H,  special = 0)
 	..()
 	if(istype(H))
 		H.dna.species.mutant_bodyparts -= "tail_lizard"
@@ -92,7 +92,7 @@
 			H.dna.features["tail_monkey"] = tail_type
 			H.update_body()
 
-/obj/item/organ/tail/monkey/Remove(mob/living/carbon/human/H, special = 0)
+/obj/item/organ/tail/monkey/Remove(mob/living/carbon/human/H,  special = 0)
 	..()
 	if(istype(H))
 		H.dna.features["tail_monkey"] = "None"

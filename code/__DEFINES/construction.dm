@@ -74,7 +74,7 @@
 #define CAT_AMMO	"Ammunition"
 #define CAT_ROBOT	"Robots"
 #define CAT_MISC	"Misc"
-#define CAT_PRIMAL "Tribal"
+#define CAT_PRIMAL  "Tribal"
 #define CAT_TZIMISCE	"Tzimisce"
 #define CAT_CLOTHING	"Clothing"
 #define CAT_DRUGS		"Drugs"

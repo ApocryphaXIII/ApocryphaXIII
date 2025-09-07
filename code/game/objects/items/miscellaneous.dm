@@ -58,7 +58,7 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(istype(H.ears, /obj/item/radio/headset))
-			msg = "You hear something crackle in your ears for a moment before a voice speaks. \"Please stand by for a message from Central Command. Message as follows: <span class='bold'>Item request received. Your package is inbound, please stand back from the landing site.</span> Message ends.\""
+			msg = "You hear something crackle in your ears for a moment before a voice speaks.  \"Please stand by for a message from Central Command.  Message as follows: <span class='bold'>Item request received. Your package is inbound, please stand back from the landing site.</span> Message ends.\""
 	to_chat(M, msg)
 
 	new /obj/effect/pod_landingzone(get_turf(src), pod)
@@ -97,19 +97,19 @@
 /obj/item/storage/box/ingredients/wildcard/PopulateContents()
 	for(var/i in 1 to 7)
 		var/randomFood = pick(/obj/item/food/grown/chili,
-							 /obj/item/food/grown/tomato,
-							 /obj/item/food/grown/carrot,
-							 /obj/item/food/grown/potato,
-							 /obj/item/food/grown/potato/sweet,
-							 /obj/item/food/grown/apple,
-							 /obj/item/food/chocolatebar,
-							 /obj/item/food/grown/cherries,
-							 /obj/item/food/grown/banana,
-							 /obj/item/food/grown/cabbage,
-							 /obj/item/food/grown/soybeans,
-							 /obj/item/food/grown/corn,
-							 /obj/item/food/grown/mushroom/plumphelmet,
-							 /obj/item/food/grown/mushroom/chanterelle)
+							  /obj/item/food/grown/tomato,
+							  /obj/item/food/grown/carrot,
+							  /obj/item/food/grown/potato,
+							  /obj/item/food/grown/potato/sweet,
+							  /obj/item/food/grown/apple,
+							  /obj/item/food/chocolatebar,
+							  /obj/item/food/grown/cherries,
+							  /obj/item/food/grown/banana,
+							  /obj/item/food/grown/cabbage,
+							  /obj/item/food/grown/soybeans,
+							  /obj/item/food/grown/corn,
+							  /obj/item/food/grown/mushroom/plumphelmet,
+							  /obj/item/food/grown/mushroom/chanterelle)
 		new randomFood(src)
 
 /obj/item/storage/box/ingredients/fiesta

@@ -1,6 +1,6 @@
 /*
 ** WARNING: These are deprecated signals that are to be removed in future PRs.
-** At no point should you be adding signals to this file.
+** At no  point should you be adding signals to this file.
 ** If you are adding a TFN related signal, put it in the signals/tfn_signals/ directory.
 */
 
@@ -68,7 +68,7 @@
 ///from base of atom/examine(): (/mob)
 #define COMSIG_PARENT_EXAMINE "atom_examine"
 ///from base of atom/get_examine_name(): (/mob, list/overrides)
-#define COMSIG_PARENT_EXAMINE_MORE "atom_examine_more"					///from base of atom/examine_more(): (/mob)
+#define COMSIG_PARENT_EXAMINE_MORE "atom_examine_more"                    ///from base of atom/examine_more(): (/mob)
 
 ///called when a wrapped up structure is opened by hand
 #define COMSIG_STRUCTURE_UNWRAPPED "structure_unwrapped"
@@ -328,7 +328,7 @@
 ///from base of atom/CheckParts(): (list/parts_list, datum/crafting_recipe/R)
 #define COMSIG_ATOM_CHECKPARTS "atom_checkparts"
 
-#define COMSIG_ITEM_SPLIT_VALUE (1<<0)
+#define COMSIG_ITEM_SPLIT_VALUE  (1<<0)
 
 ///called when an edible ingredient is added: (datum/component/edible/ingredient)
 #define COMSIG_EDIBLE_INGREDIENT_ADDED "edible_ingredient_added"

@@ -514,7 +514,7 @@
  */
 /obj/projectile/kiss/proc/harmless_on_hit(mob/living/living_target)
 	playsound(get_turf(living_target), hitsound, 100, TRUE)
-	if(!suppressed) // direct
+	if(!suppressed)  // direct
 		living_target.visible_message(span_danger("[living_target] is hit by \a [src]."), span_userdanger("You're hit by \a [src]!"), vision_distance=COMBAT_MESSAGE_RANGE)
 
 /obj/projectile/kiss/on_hit(atom/target, blocked, pierce_hit)

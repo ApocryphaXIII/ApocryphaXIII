@@ -105,7 +105,7 @@
 	if(next_activation <= world.time)
 		activate()
 		uses--
-		next_activation = world.time + rand(cooldown_low,cooldown_high)
+		next_activation  = world.time + rand(cooldown_low,cooldown_high)
 	if(!uses)
 		active = FALSE
 

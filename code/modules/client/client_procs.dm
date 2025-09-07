@@ -19,7 +19,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 #define ADMINSWARNED_AT	5
 	/*
 	When somebody clicks a link in game, this Topic is called first.
-	It does the stuff in this proc and then is redirected to the Topic() proc for the src=[0xWhatever]
+	It does the stuff in this proc and  then is redirected to the Topic() proc for the src=[0xWhatever]
 	(if specified in the link). ie locate(hsrc).Topic()
 
 	Such links can be spoofed.
@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		- If so, does it have checks to see if the person who called it (usr.client) is an admin?
 		- Are the processes being called by Topic() particularly laggy?
 		- If so, is there any protection against somebody spam-clicking a link?
-	If you have any questions about this stuff feel free to ask. ~Carn
+	If you have any  questions about this stuff feel free to ask. ~Carn
 	*/
 
 /client/Topic(href, href_list, hsrc)

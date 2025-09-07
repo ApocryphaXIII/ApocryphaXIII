@@ -163,7 +163,7 @@
 	P.p_y = calculated_projectile_vars[3]
 	P.fire()
 
-/obj/machinery/manned_turret/ultimate // Admin-only proof of concept for autoclicker automatics
+/obj/machinery/manned_turret/ultimate  // Admin-only proof of concept for autoclicker automatics
 	name = "Infinity Gun"
 	view_range = 12
 	projectile_type = /obj/projectile/bullet/manned_turret

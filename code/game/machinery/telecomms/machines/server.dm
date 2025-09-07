@@ -61,7 +61,7 @@
 /datum/comm_log_entry
 	var/input_type = "Speech File"
 	var/name = "data packet (#)"
-	var/parameters = list() // copied from signal.data above
+	var/parameters = list()  // copied from signal.data above
 
 
 // Preset Servers

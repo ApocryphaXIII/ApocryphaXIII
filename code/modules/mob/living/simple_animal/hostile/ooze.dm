@@ -237,7 +237,7 @@
 		return FALSE
 	start_consuming(eat_target)
 
-///Start allowing this datum to process to handle the damage done to this mob.
+///Start allowing this datum to process to handle the damage done to  this mob.
 /datum/action/consume/proc/start_consuming(mob/living/target)
 	vored_mob = target
 	vored_mob.forceMove(owner) ///AAAAAAAAAAAAAAAAAAAAAAHHH!!!

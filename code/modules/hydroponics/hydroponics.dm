@@ -191,7 +191,7 @@
 				adjustHealth(rand(1,2) / rating)
 				if(myseed && prob(myseed.weed_chance))
 					adjustWeeds(myseed.weed_rate)
-				else if(prob(5)) //5 percent chance the weed population will increase
+				else if(prob(5))  //5 percent chance the weed population will increase
 					adjustWeeds(1 / rating)
 
 //Toxins/////////////////////////////////////////////////////////////////
@@ -271,10 +271,10 @@
 					harvest = TRUE
 				else
 					lastproduce = age
-			if(prob(5)) // On each tick, there's a 5 percent chance the pest population will increase
+			if(prob(5))  // On each tick, there's a 5 percent chance the pest population will increase
 				adjustPests(1 / rating)
 		else
-			if(waterlevel > 10 && reagents.total_volume > 0 && prob(10)) // If there's no plant, the percentage chance is 10%
+			if(waterlevel > 10 && reagents.total_volume > 0 && prob(10))  // If there's no plant, the percentage chance is 10%
 				adjustWeeds(1 / rating)
 
 		// Weeeeeeeeeeeeeeedddssss
@@ -487,9 +487,9 @@
 		if(!Adjacent(T) && range <= 1)
 			continue
 		if(T.myseed && !T.dead)
-			T.myseed.potency = round(clamp((T.myseed.potency+(1/10)*(myseed.potency-T.myseed.potency)),0,100))
-			T.myseed.instability = round(clamp((T.myseed.instability+(1/10)*(myseed.instability-T.myseed.instability)),0,100))
-			T.myseed.yield = round(clamp((T.myseed.yield+(1/2)*(myseed.yield-T.myseed.yield)),0,10))
+			T.myseed.potency =  round(clamp((T.myseed.potency+(1/10)*(myseed.potency-T.myseed.potency)),0,100))
+			T.myseed.instability =  round(clamp((T.myseed.instability+(1/10)*(myseed.instability-T.myseed.instability)),0,100))
+			T.myseed.yield =  round(clamp((T.myseed.yield+(1/2)*(myseed.yield-T.myseed.yield)),0,10))
 			if(myseed.instability >= 20 && prob(70) && length(T.myseed.reagents_add))
 				var/list/datum/plant_gene/reagent/possible_reagents = list()
 				for(var/datum/plant_gene/reagent/reag in T.myseed.genes)
@@ -517,7 +517,7 @@
 
 /obj/machinery/hydroponics/attackby(obj/item/O, mob/user, params)
 	//Called when mob user "attacks" it with object O
-	if(IS_EDIBLE(O) || istype(O, /obj/item/reagent_containers)) // Syringe stuff (and other reagent containers now too)
+	if(IS_EDIBLE(O) || istype(O, /obj/item/reagent_containers))  // Syringe stuff (and other reagent containers now too)
 		var/obj/item/reagent_containers/reagent_source = O
 
 		if(istype(reagent_source, /obj/item/reagent_containers/syringe))
@@ -749,7 +749,7 @@
 			var/list/fresh_mut_list = list()
 			for(var/muties in myseed.mutatelist)
 				var/obj/item/seeds/another_mut = new muties
-				fresh_mut_list[another_mut.plantname] = muties
+				fresh_mut_list[another_mut.plantname] =  muties
 			var/locked_mutation = (input(user, "Select a mutation to lock.", "Plant Mutation Locks") as null|anything in sort_list(fresh_mut_list))
 			if(!user.canUseTopic(src, BE_CLOSE) || !locked_mutation)
 				return
@@ -763,7 +763,7 @@
 		return ..()
 
 /obj/machinery/hydroponics/can_be_unfasten_wrench(mob/user, silent)
-	if (!unwrenchable) // case also covered by NODECONSTRUCT checks in default_unfasten_wrench
+	if (!unwrenchable)  // case also covered by NODECONSTRUCT checks in default_unfasten_wrench
 		return CANT_UNFASTEN
 
 	return ..()

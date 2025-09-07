@@ -6,12 +6,12 @@
  * Tiny robots which, while not lethal, seek to destroy station components in order to recycle them into more swarmers.
  * Sentient player swarmers spawn from a beacon spawned in maintenance and they can spawn melee swarmers to protect them.
  * Swarmers have the following abilities:
- * - Can melee targets to deal stamina damage. Stuns cyborgs.
- * - Can teleport friend and foe alike away using ctrl + click. Applies binds to carbons, preventing them from immediate retaliation
+ * - Can melee targets to deal stamina damage.  Stuns cyborgs.
+ * - Can teleport friend and foe alike away using ctrl + click.  Applies binds to carbons, preventing them from immediate retaliation
  * - Can shoot lasers which deal stamina damage to carbons and direct damage to simple mobs
  * - Can self repair for free, completely healing themselves
  * - Can construct traps which stun targets, and walls which block non-swarmer entites and projectiles
- * - Can create swarmer drones, which lack the above abilities sans melee stunning targets. A swarmer can order its drones around by middle-clicking a tile.
+ * - Can create swarmer drones, which lack the above abilities sans melee stunning targets.  A swarmer can order its drones around by middle-clicking a tile.
  */
 
 /mob/living/simple_animal/hostile/swarmer
@@ -208,7 +208,7 @@
 /**
  * Called when a swarmer attempts to teleport a living entity away
  *
- * Proc which finds a safe location to teleport a living entity to when a swarmer teleports it away. Also energy handcuffs carbons.
+ * Proc which finds a safe location to teleport a living entity to when a swarmer teleports it away.  Also energy handcuffs carbons.
  * Arguments:
  * * target - The entity the swarmer is trying to teleport away
  */
@@ -256,7 +256,7 @@
 /**
  * Called when a swarmer attempts to disassemble a machine
  *
- * Proc called when a swarmer attempts to disassemble a machine. Destroys the machine, and gives the swarmer metal.
+ * Proc called when a swarmer attempts to disassemble a machine.  Destroys the machine, and gives the swarmer metal.
  * Arguments:
  * * target - The machine the swarmer is attempting to disassemble
  */
@@ -288,7 +288,7 @@
 /**
  * Called when a swarmer attempts to create a trap
  *
- * Proc used to allow a swarmer to create a trap. Checks if a trap is on the tile, then if the swarmer can afford, and then places the trap.
+ * Proc used to allow a swarmer to create a trap.  Checks if a trap is on the tile, then if the swarmer can afford, and then places the trap.
  */
 /mob/living/simple_animal/hostile/swarmer/proc/create_trap()
 	set name = "Create trap"
@@ -305,12 +305,12 @@
 /**
  * Called when a swarmer attempts to create a barricade
  *
- * Proc used to allow a swarmer to create a barricade. Checks if a barricade is on the tile, then if the swarmer can afford it, and then will attempt to create a barricade after a second delay.
+ * Proc used to allow a swarmer to create a barricade.  Checks if a barricade is on the tile, then if the swarmer can afford it, and then will attempt to create a barricade after a second delay.
  */
 /mob/living/simple_animal/hostile/swarmer/proc/create_barricade()
 	set name = "Create barricade"
 	set category = "Swarmer"
-	set desc = "Creates a barricade that will stop anything but swarmers and disabler beams from passing through. Costs 4 resources."
+	set desc = "Creates a barricade that will stop anything but swarmers and disabler beams from passing through.  Costs 4 resources."
 	if(locate(/obj/structure/swarmer/blockade) in loc)
 		to_chat(src, "<span class='warning'>There is already a blockade here. Aborting.</span>")
 		return
@@ -324,7 +324,7 @@
 /**
  * Called when a swarmer attempts to create a drone
  *
- * Proc used to allow a swarmer to create a drone. Checks if the swarmer can afford the drone, then creates it after 5 seconds, and also registers it to the creating swarmer so it can command it
+ * Proc used to allow a swarmer to create a drone.  Checks if the swarmer can afford the drone, then creates it after 5 seconds, and also registers it to the creating swarmer so it can command it
  */
 /mob/living/simple_animal/hostile/swarmer/proc/create_swarmer()
 	set name = "Replicate"
@@ -357,7 +357,7 @@
 /**
  * Called when a swarmer attempts to repair itself
  *
- * Proc used to allow a swarmer self-repair. If the swarmer does not move after a period of time, then it will heal fully
+ * Proc used to allow a swarmer self-repair.  If the swarmer does not move after a period of time, then it will heal fully
  */
 /mob/living/simple_animal/hostile/swarmer/proc/repair_self()
 	if(!isturf(loc))
@@ -371,7 +371,7 @@
 /**
  * Called when a swarmer toggles its light
  *
- * Proc used to allow a swarmer to toggle its light on and off. If a swarmer has any drones, change their light settings to match their master's.
+ * Proc used to allow a swarmer to toggle its  light on and off.  If a swarmer has any drones, change their light settings to match their master's.
  */
 /mob/living/simple_animal/hostile/swarmer/proc/toggle_light()
 	if(swarmer_flags & SWARMER_LIGHT_ON)
@@ -446,7 +446,7 @@
 /**
  * # Swarmer Drone
  *
- * AI subtype of swarmers, always AI-controlled under normal circumstances. Automatically attacks nearby threats.
+ * AI subtype of swarmers, always AI-controlled under normal circumstances.  Automatically attacks nearby threats.
  */
 /mob/living/simple_animal/hostile/swarmer/drone
 	icon_state = "swarmer_melee"

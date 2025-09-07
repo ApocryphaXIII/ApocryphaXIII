@@ -15,10 +15,10 @@
 	shock - has a chance of electrocuting its target.
 */
 
-/// Overlay cache. Why isn't this just in /obj/machinery/door/airlock? Because its used just a
-/// tiny bit in door_assembly.dm Refactored so you don't have to make a null copy of airlock
+/// Overlay cache.  Why isn't this just in /obj/machinery/door/airlock?  Because its used just a
+/// tiny bit in door_assembly.dm  Refactored so you don't have to make a null copy of airlock
 /// to get to the damn thing
-/// Someone, for the love of god, profile this. Is there a reason to cache mutable_appearance
+/// Someone, for the love of god, profile this.  Is there a reason to cache mutable_appearance
 /// if so, why are we JUST doing the airlocks when we can put this in mutable_appearance.dm for
 /// everything
 /proc/get_airlock_overlay(icon_state, icon_file)
@@ -50,8 +50,8 @@
 #define AIRLOCK_INTEGRITY_MULTIPLIER 1.5 // How much reinforced doors health increases
 /// How much extra health airlocks get when braced with a seal
 #define AIRLOCK_SEAL_MULTIPLIER		 2
-#define AIRLOCK_DAMAGE_DEFLECTION_N 21 // Normal airlock damage deflection
-#define AIRLOCK_DAMAGE_DEFLECTION_R 30 // Reinforced airlock damage deflection
+#define AIRLOCK_DAMAGE_DEFLECTION_N  21  // Normal airlock damage deflection
+#define AIRLOCK_DAMAGE_DEFLECTION_R  30  // Reinforced airlock damage deflection
 
 #define AIRLOCK_DENY_ANIMATION_TIME (0.6 SECONDS) /// The amount of time for the airlock deny animation to show
 
@@ -266,7 +266,7 @@
 		return
 	locked = TRUE
 	playsound(src,boltDown,30,FALSE,3)
-	audible_message("<span class='hear'>You hear a click from the bottom of the door.</span>", null, 1)
+	audible_message("<span class='hear'>You hear a click from the bottom of the door.</span>", null,  1)
 	update_icon()
 
 /obj/machinery/door/airlock/unlock()
@@ -277,7 +277,7 @@
 		return
 	locked = FALSE
 	playsound(src,boltUp,30,FALSE,3)
-	audible_message("<span class='hear'>You hear a click from the bottom of the door.</span>", null, 1)
+	audible_message("<span class='hear'>You hear a click from the bottom of the door.</span>", null,  1)
 	update_icon()
 
 /obj/machinery/door/airlock/narsie_act()
@@ -1156,7 +1156,7 @@
 		safe = FALSE //DOOR CRUSH
 		close()
 		bolt() //Bolt it!
-		set_electrified(MACHINE_ELECTRIFIED_PERMANENT) //Shock it!
+		set_electrified(MACHINE_ELECTRIFIED_PERMANENT)  //Shock it!
 		if(origin)
 			LAZYADD(shockedby, "\[[time_stamp()]\] [key_name(origin)]")
 
@@ -1198,7 +1198,7 @@
 
 /obj/machinery/door/airlock/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	if((damage_amount >= atom_integrity) && (damage_flag == BOMB))
-		flags_1 |= NODECONSTRUCT_1 //If an explosive took us out, don't drop the assembly
+		flags_1 |= NODECONSTRUCT_1  //If an explosive took us out, don't drop the assembly
 	. = ..()
 	if(atom_integrity < (0.75 * max_integrity))
 		update_appearance()

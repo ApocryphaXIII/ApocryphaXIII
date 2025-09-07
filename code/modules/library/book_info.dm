@@ -17,7 +17,7 @@
 	author = _author
 	content = _content
 
-/datum/book_info/proc/set_title(_title, trusted = FALSE) //Trusted should only be used for books read from the db, or in cases that we can be sure the info has already been sanitized
+/datum/book_info/proc/set_title(_title, trusted = FALSE)  //Trusted should only be used for books read from the db, or in cases that we can be sure the info has already been sanitized
 	if(trusted)
 		title = _title
 		return

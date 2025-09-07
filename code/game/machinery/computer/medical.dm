@@ -285,7 +285,7 @@
 								active1.fields["gender"] = "Male"
 					if("age")
 						if(active1)
-							var/t1 = input("Please input age:", "Med. records", active1.fields["age"], null) as num
+							var/t1 = input("Please input age:", "Med. records", active1.fields["age"], null)  as num
 							if(!canUseMedicalRecordsConsole(usr, t1, a1))
 								return
 							active1.fields["age"] = t1
@@ -444,7 +444,7 @@
 
 			else if(href_list["new"])
 				if((istype(active1, /datum/data/record) && !( istype(active2, /datum/data/record) )))
-					var/datum/data/record/R = new /datum/data/record( )
+					var/datum/data/record/R = new /datum/data/record(  )
 					R.fields["name"] = active1.fields["name"]
 					R.fields["id"] = active1.fields["id"]
 					R.name = text("Medical Record #[]", R.fields["id"])

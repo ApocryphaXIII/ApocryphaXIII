@@ -83,7 +83,7 @@
 
 
 /*
-/obj/item/food/grown/holymelon/checkLiked(fraction, mob/M)	//chaplains sure love holymelons
+/obj/item/food/grown/holymelon/checkLiked(fraction, mob/M)    //chaplains sure love holymelons
 	if(!ishuman(M))
 		return
 	if(last_check_time + 5 SECONDS >= world.time)

@@ -8,7 +8,7 @@
  */
 
 // -----------------------------
-// Generic Item
+//         Generic Item
 // -----------------------------
 /obj/item/storage/secure
 	name = "secstorage"
@@ -113,7 +113,7 @@
 
 
 // -----------------------------
-// Secure Briefcase
+//        Secure Briefcase
 // -----------------------------
 /obj/item/storage/secure/briefcase
 	name = "secure briefcase"
@@ -153,7 +153,7 @@
 
 
 // -----------------------------
-// Secure Safe
+//        Secure Safe
 // -----------------------------
 
 /obj/item/storage/secure/safe

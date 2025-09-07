@@ -620,11 +620,11 @@
 		var/turf/T0 = L0[i]
 		var/turf/T1 = L1[i]
 		if(!T0 || !T1)
-			continue // out of bounds
+			continue  // out of bounds
 		if(T0.type == T0.baseturfs)
-			continue // indestructible
+			continue  // indestructible
 		if(!istype(T0.loc, area_type) || istype(T0.loc, /area/shuttle/transit))
-			continue // not part of the shuttle
+			continue  // not part of the shuttle
 		ripple_turfs += T1
 
 	return ripple_turfs
@@ -659,7 +659,7 @@
 				return
 			var/error = initiate_docking(destination, preferred_direction)
 			if(error && error & (DOCKING_NULL_DESTINATION | DOCKING_NULL_SOURCE))
-				var/msg = "A mobile dock in transit exited initiate_docking() with an error. This is most likely a mapping problem: Error: [error], ([src]) ([previous][ADMIN_JMP(previous)] -> [destination][ADMIN_JMP(destination)])"
+				var/msg = "A mobile dock in transit exited initiate_docking() with an error. This is most likely a mapping problem: Error: [error],  ([src]) ([previous][ADMIN_JMP(previous)] -> [destination][ADMIN_JMP(destination)])"
 				WARNING(msg)
 				message_admins(msg)
 				mode = SHUTTLE_IDLE
@@ -940,7 +940,7 @@
 		var/delta = initial_engines - new_value
 		var/change_per_engine = 1 //doesn't really matter should not be happening for 0 engine shuttles
 		if(initial_engines > 0)
-			change_per_engine = (ENGINE_COEFF_MAX - 1) / initial_engines //just linear drop to max delay
+			change_per_engine = (ENGINE_COEFF_MAX -  1) / initial_engines //just linear drop to max delay
 		return clamp(1 + delta * change_per_engine,ENGINE_COEFF_MIN,ENGINE_COEFF_MAX)
 
 

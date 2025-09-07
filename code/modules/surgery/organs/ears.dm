@@ -75,7 +75,7 @@
 		H.dna.features["ears"] = H.dna.species.mutant_bodyparts["ears"] = "Cat"
 		H.update_body()
 
-/obj/item/organ/ears/cat/Remove(mob/living/carbon/human/H, special = 0)
+/obj/item/organ/ears/cat/Remove(mob/living/carbon/human/H,  special = 0)
 	..()
 	if(istype(H))
 		color = H.hair_color
@@ -93,7 +93,7 @@
 		to_chat(H, "<span class='notice'>You suddenly feel like you've lost your balance.</span>")
 		H.AddElement(/datum/element/waddling)
 
-/obj/item/organ/ears/penguin/Remove(mob/living/carbon/human/H, special = 0)
+/obj/item/organ/ears/penguin/Remove(mob/living/carbon/human/H,  special = 0)
 	. = ..()
 	if(istype(H))
 		to_chat(H, "<span class='notice'>Your sense of balance comes back to you.</span>")

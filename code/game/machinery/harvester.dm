@@ -75,7 +75,7 @@
 		say("Subject is not organic.")
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 30, TRUE)
 		return
-	if(!allow_living && !(C.stat == DEAD || HAS_TRAIT(C, TRAIT_FAKEDEATH)))	 //I mean, the machines scanners arent advanced enough to tell you're alive
+	if(!allow_living && !(C.stat == DEAD || HAS_TRAIT(C, TRAIT_FAKEDEATH)))     //I mean, the machines scanners arent advanced enough to tell you're alive
 		say("Subject is still alive.")
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 30, TRUE)
 		return
@@ -85,7 +85,7 @@
 	if(!occupant || !iscarbon(occupant))
 		return
 	var/mob/living/carbon/C = occupant
-	operation_order = reverseList(C.bodyparts) //Chest and head are first in bodyparts, so we invert it to make them suffer more
+	operation_order = reverseList(C.bodyparts)   //Chest and head are first in bodyparts, so we invert it to make them suffer more
 	warming_up = TRUE
 	harvesting = TRUE
 	visible_message("<span class='notice'>The [name] begins warming up!</span>")
@@ -118,7 +118,7 @@
 		BP.drop_limb()
 		C.emote("scream")
 		if(BP.body_zone != "chest")
-			BP.forceMove(target)	//Move the limbs right next to it, except chest, that's a weird one
+			BP.forceMove(target)    //Move the limbs right next to it, except chest, that's a weird one
 			BP.drop_organs()
 		else
 			for(var/obj/item/organ/O in BP.dismember())

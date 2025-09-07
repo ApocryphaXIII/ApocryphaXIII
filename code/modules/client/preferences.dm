@@ -103,7 +103,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/job_preferences = list()
 
 		// Want randomjob if preferences already filled - Donkie
-	var/joblessrole = BERANDOMJOB //defaults to 1 for fewer assistants
+	var/joblessrole = BERANDOMJOB  //defaults to 1 for fewer assistants
 
 	// 0 = character settings, 1 = game preferences
 	var/current_tab = 0
@@ -3181,24 +3181,24 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							friendlyname += " (disabled)"
 						maplist[friendlyname] = VM.map_name
 					maplist[default] = null
-					var/pickedmap = input(user, "Choose your preferred map. This will be used to help weight random map selection.", "Character Preference") as null|anything in sort_list(maplist)
+					var/pickedmap = input(user, "Choose your preferred map. This will be used to help weight random map selection.", "Character Preference")  as null|anything in sort_list(maplist)
 					if (pickedmap)
 						preferred_map = maplist[pickedmap]
 
 				if ("clientfps")
-					var/desiredfps = input(user, "Choose your desired fps.\n-1 means recommended value (currently:[RECOMMENDED_FPS])\n0 means world fps (currently:[world.fps])", "Character Preference", clientfps) as null|num
+					var/desiredfps = input(user, "Choose your desired fps.\n-1 means recommended value (currently:[RECOMMENDED_FPS])\n0 means world fps (currently:[world.fps])", "Character Preference", clientfps)  as null|num
 					if (!isnull(desiredfps))
 						clientfps = sanitize_integer(desiredfps, -1, 1000, clientfps)
 						if(parent)
 							parent.fps = (clientfps < 0) ? RECOMMENDED_FPS : clientfps
 				if("ui")
-					var/pickedui = input(user, "Choose your UI style.", "Character Preference", UI_style) as null|anything in sort_list(GLOB.available_ui_styles)
+					var/pickedui = input(user, "Choose your UI style.", "Character Preference", UI_style)  as null|anything in sort_list(GLOB.available_ui_styles)
 					if(pickedui)
 						UI_style = pickedui
 						if (parent?.mob.hud_used)
 							parent.mob.hud_used.update_ui_style(ui_style2icon(UI_style))
 				if("pda_style")
-					var/pickedPDAStyle = input(user, "Choose your PDA style.", "Character Preference", pda_style) as null|anything in GLOB.pda_styles
+					var/pickedPDAStyle = input(user, "Choose your PDA style.", "Character Preference", pda_style)  as null|anything in GLOB.pda_styles
 					if(pickedPDAStyle)
 						pda_style = pickedPDAStyle
 				if("pda_color")
@@ -3212,7 +3212,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						phobia = phobiaType
 
 				if ("max_chat_length")
-					var/desiredlength = input(user, "Choose the max character length of shown Runechat messages. Valid range is 1 to [CHAT_MESSAGE_MAX_LENGTH] (default: [initial(max_chat_length)]))", "Character Preference", max_chat_length) as null|num
+					var/desiredlength = input(user, "Choose the max character length of shown Runechat messages. Valid range is 1 to [CHAT_MESSAGE_MAX_LENGTH] (default: [initial(max_chat_length)]))", "Character Preference", max_chat_length)  as null|num
 					if (!isnull(desiredlength))
 						max_chat_length = clamp(desiredlength, 1, CHAT_MESSAGE_MAX_LENGTH)
 

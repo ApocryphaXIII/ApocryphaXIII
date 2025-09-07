@@ -20,7 +20,7 @@
 
 /obj/item/paper/fluff/ruins/listeningstation/reports/june
 	name = "june report"
-	default_raw_text = "Nanotrasen communications have been noticeably less frequent recently. The pirate radio station I found last month has been transmitting pro-Nanotrasen propaganda. I will continue to monitor it."
+	default_raw_text = "Nanotrasen communications have been noticeably less frequent recently.  The pirate radio station I found last month has been transmitting pro-Nanotrasen propaganda. I will continue to monitor it."
 
 /obj/item/paper/fluff/ruins/listeningstation/reports/may
 	name = "may report"

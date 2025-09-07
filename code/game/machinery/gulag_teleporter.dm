@@ -173,7 +173,7 @@ The console is located at computer/gulag_teleporter.dm
 							/obj/item/stock_parts/manipulator)
 	def_components = list(/obj/item/stack/ore/bluespace_crystal = /obj/item/stack/ore/bluespace_crystal/artificial)
 
-/* beacon that receives the teleported prisoner */
+/*  beacon that receives the teleported prisoner */
 /obj/structure/gulag_beacon
 	name = "labor camp bluespace beacon"
 	desc = "A receiving beacon for bluespace teleportations."

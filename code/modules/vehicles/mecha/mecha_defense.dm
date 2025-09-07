@@ -109,7 +109,7 @@
 	. = ..()
 
 /obj/vehicle/sealed/mecha/bullet_act(obj/projectile/Proj) //wrapper
-	if(!enclosed && LAZYLEN(occupants) && !(mecha_flags & SILICON_PILOT) && !Proj.force_hit && (Proj.def_zone == BODY_ZONE_HEAD || Proj.def_zone == BODY_ZONE_CHEST)) //allows bullets to hit the pilot of open-canopy mechs
+	if(!enclosed && LAZYLEN(occupants) && !(mecha_flags  & SILICON_PILOT) && !Proj.force_hit && (Proj.def_zone == BODY_ZONE_HEAD || Proj.def_zone == BODY_ZONE_CHEST)) //allows bullets to hit the pilot of open-canopy mechs
 		for(var/m in occupants)
 			var/mob/living/hitmob = m
 			hitmob.bullet_act(Proj) //If the sides are open, the occupant can be hit

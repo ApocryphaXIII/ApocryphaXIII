@@ -10,10 +10,10 @@
  * As it's health gets lower, the head does more damage.
  * It's attacks are as follows:
  * - Charges at the target after a telegraph, throwing them across the arena should it connect.
- * - Legionnaire's head detaches, attacking as it's own entity. Has abilities of it's own later into the fight. Once dead, regenerates after a brief period. If the skill is used while the head is off, it will be killed.
- * - Leaves a pile of bones at your location. Upon using this skill again, you'll swap locations with the bone pile.
+ * - Legionnaire's head detaches, attacking as it's own entity.  Has abilities of it's own later into the fight.  Once dead, regenerates after a brief period.  If the skill is used while the head is off, it will be killed.
+ * - Leaves a pile of bones at your location.  Upon using this skill again, you'll swap locations with the bone pile.
  * - Spews a cloud of smoke from it's maw, wherever said maw is.
- * A unique fight incorporating the head mechanic of legion into a whole new beast. Combatants will need to make sure the tag-team of head and body don't lure them into a deadly trap.
+ * A unique fight incorporating the head mechanic of legion into a whole new beast.  Combatants will need to make sure the tag-team of head and body don't lure them into a deadly trap.
  */
 
 /mob/living/simple_animal/hostile/asteroid/elite/legionnaire
@@ -66,7 +66,7 @@
 /datum/action/innate/elite_attack/bonfire_teleport
 	name = "Bonfire Teleport"
 	button_icon_state = "bonfire_teleport"
-	chosen_message = "<span class='boldwarning'>You will leave a bonfire. Second use will let you swap positions with it indefintiely. Using this move on the same tile as your active bonfire removes it.</span>"
+	chosen_message = "<span class='boldwarning'>You will leave a bonfire.  Second use will let you swap positions with it indefintiely.  Using this move on the same tile as your active bonfire removes it.</span>"
 	chosen_attack_num = BONFIRE_TELEPORT
 
 /datum/action/innate/elite_attack/spew_smoke
@@ -233,10 +233,10 @@
 	smoke.set_up(2, smoke_location)
 	smoke.start()
 
-//The legionnaire's head. Basically the same as any legion head, but we have to tell our creator when we die so they can generate another head.
+//The legionnaire's head.  Basically the same as any legion head, but we have to tell our creator when we die so they can generate another head.
 /mob/living/simple_animal/hostile/asteroid/elite/legionnairehead
 	name = "legionnaire head"
-	desc = "The legionnaire's head floating by itself. One shouldn't get too close, though once it sees you, you really don't have a choice."
+	desc = "The legionnaire's head floating by itself.  One shouldn't get too close, though once it sees you, you really don't have a choice."
 	icon_state = "legionnaire_head"
 	icon_living = "legionnaire_head"
 	icon_aggro = "legionnaire_head"
@@ -263,10 +263,10 @@
 	if(body)
 		body.onHeadDeath()
 
-//The legionnaire's bonfire, which can be swapped positions with. Also sets flammable living beings on fire when they walk over it.
+//The legionnaire's bonfire, which can be swapped positions with.  Also sets flammable living beings on fire when they walk over it.
 /obj/structure/legionnaire_bonfire
 	name = "bone pile"
-	desc = "A pile of bones which seems to occasionally move a little. It's probably a good idea to smash them."
+	desc = "A pile of bones which seems to occasionally move a little.  It's probably a good idea to smash them."
 	icon = 'icons/obj/lavaland/legionnaire_bonfire.dmi'
 	icon_state = "bonfire"
 	max_integrity = 100

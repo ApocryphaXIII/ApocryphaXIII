@@ -179,7 +179,7 @@ GLOBAL_LIST_EMPTY(bodycontainers) //Let them act as spawnpoints for revenants an
 		icon_state = "morgue0"
 		return ..()
 
-	if(contents.len == 1) // Empty
+	if(contents.len == 1)  // Empty
 		icon_state = "morgue1"
 		return ..()
 

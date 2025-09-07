@@ -352,9 +352,9 @@
 
 
 //////////////////////////////////////////////
-//										 //
-//	 NATIONAL GUARD SQUAD (MIDROUND)	//
-//										 //
+//                                          //
+//       NATIONAL GUARD SQUAD (MIDROUND)    //
+//                                          //
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/national_guard

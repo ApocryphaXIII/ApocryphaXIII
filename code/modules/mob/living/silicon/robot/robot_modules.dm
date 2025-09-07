@@ -534,7 +534,7 @@
 /obj/item/robot_model/syndicate/rebuild_modules()
 	..()
 	var/mob/living/silicon/robot/Syndi = loc
-	Syndi.faction -= "silicon" //ai turrets
+	Syndi.faction  -= "silicon" //ai turrets
 
 /obj/item/robot_model/syndicate/remove_module(obj/item/I, delete_after)
 	..()

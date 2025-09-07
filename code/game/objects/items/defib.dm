@@ -476,7 +476,7 @@
 	M.Knockdown(75)
 	M.Jitter(50)
 	M.apply_status_effect(STATUS_EFFECT_CONVULSING)
-	playsound(src, 'sound/machines/defib_zap.ogg', 50, TRUE, -1)
+	playsound(src,  'sound/machines/defib_zap.ogg', 50, TRUE, -1)
 	if(HAS_TRAIT(M,MOB_ORGANIC))
 		M.emote("gasp")
 	log_combat(user, M, "zapped", src)

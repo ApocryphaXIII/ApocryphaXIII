@@ -699,7 +699,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	attack_verb_simple = list("swat", "smack")
 	hitsound = 'sound/effects/snap.ogg'
 	w_class = WEIGHT_CLASS_SMALL
-	//Things in this list will be instantly splatted. Flyman weakness is handled in the flyman species weakness proc.
+	//Things in this list will be instantly splatted.  Flyman weakness is handled in the flyman species weakness proc.
 	var/list/strong_against
 
 /obj/item/melee/flyswatter/Initialize()

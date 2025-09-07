@@ -6,11 +6,11 @@
 /**
  * # Goliath Broodmother
  *
- * A stronger, faster variation of the goliath. Has the ability to spawn baby goliaths, which it can later detonate at will.
- * When it's health is below half, tendrils will spawn randomly around it. When it is below a quarter of health, this effect is doubled.
+ * A stronger, faster variation of the goliath.  Has the ability to spawn baby goliaths, which it can later detonate at will.
+ * When it's health is below half, tendrils will spawn randomly around it.  When it is below a quarter of health, this effect is doubled.
  * It's attacks are as follows:
  * - Spawns a 3x3/plus shape of tentacles on the target location
- * - Spawns 2 baby goliaths on its tile, up to a max of 8. Children blow up when they die.
+ * - Spawns 2 baby goliaths on its tile, up to a max of 8.  Children blow up when they die.
  * - The broodmother lets out a noise, and is able to move faster for 6.5 seconds.
  * - Summons your children around you.
  * The broodmother is a fight revolving around stage control, as the activator has to manage the baby goliaths and the broodmother herself, along with all the tendrils.
@@ -18,7 +18,7 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/broodmother
 	name = "goliath broodmother"
-	desc = "An example of sexual dimorphism, this female goliath looks much different than the males of her species. She is, however, just as dangerous, if not more."
+	desc = "An example of sexual dimorphism, this female goliath looks much different than the males of her species.  She is, however, just as dangerous, if not more."
 	gender = FEMALE
 	icon_state = "broodmother"
 	icon_living = "broodmother"
@@ -59,7 +59,7 @@
 /datum/action/innate/elite_attack/spawn_children
 	name = "Spawn Children"
 	button_icon_state = "spawn_children"
-	chosen_message = "<span class='boldwarning'>You will spawn two children at your location to assist you in combat. You can have up to 8.</span>"
+	chosen_message = "<span class='boldwarning'>You will spawn two children at your location to assist you in combat.  You can have up to 8.</span>"
 	chosen_attack_num = SPAWN_CHILDREN
 
 /datum/action/innate/elite_attack/rage
@@ -157,10 +157,10 @@
 			child.forceMove(T)
 			playsound(src, 'sound/effects/bamf.ogg', 100, 1)
 
-//The goliath's children. Pretty weak, simple mobs which are able to put a single tentacle under their target when at range.
+//The goliath's children.  Pretty weak, simple mobs which are able to put a single tentacle under their target when at range.
 /mob/living/simple_animal/hostile/asteroid/elite/broodmother_child
 	name = "baby goliath"
-	desc = "A young goliath recently born from it's mother. While they hatch from eggs, said eggs are incubated in the mother until they are ready to be born."
+	desc = "A young goliath recently born from it's mother.  While they hatch from eggs, said eggs are incubated in the mother until they are ready to be born."
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "goliath_baby"
 	icon_living = "goliath_baby"
@@ -202,7 +202,7 @@
 	explosion(get_turf(loc),0,0,0,flame_range = 3, adminlog = FALSE)
 	gib()
 
-//Tentacles have less stun time compared to regular variant, to balance being able to use them much more often. Also, 10 more damage.
+//Tentacles have less stun time compared to regular variant, to balance being able to use them much more often.  Also, 10 more damage.
 /obj/effect/temp_visual/goliath_tentacle/broodmother/trip()
 	var/latched = FALSE
 	for(var/mob/living/carbon/human/L in loc)
@@ -240,7 +240,7 @@
 // Broodmother's loot: Broodmother Tongue
 /obj/item/crusher_trophy/broodmother_tongue
 	name = "broodmother tongue"
-	desc = "The tongue of a broodmother. If attached a certain way, makes for a suitable crusher trophy. It also feels very spongey, I wonder what would happen if you squeezed it?..."
+	desc = "The tongue of a broodmother. If attached a certain way, makes for a suitable crusher trophy.  It also feels very spongey, I wonder what would happen if you squeezed it?..."
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
 	icon_state = "broodmother_tongue"
 	denied_type = /obj/item/crusher_trophy/broodmother_tongue

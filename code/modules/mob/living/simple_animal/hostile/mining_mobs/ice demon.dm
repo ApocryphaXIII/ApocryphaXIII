@@ -63,7 +63,7 @@
 	if(!possible_ends.len)
 		return ..()
 	var/turf/end = pick(possible_ends)
-	do_teleport(src, end, 0, channel=TELEPORT_CHANNEL_BLUESPACE, forced = TRUE)
+	do_teleport(src, end, 0,  channel=TELEPORT_CHANNEL_BLUESPACE, forced = TRUE)
 	SLEEP_CHECK_DEATH(8)
 	return ..()
 

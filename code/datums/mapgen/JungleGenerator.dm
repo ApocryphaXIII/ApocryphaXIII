@@ -52,7 +52,7 @@
 			var/humidity = text2num(rustg_noise_get_at_coordinates("[humidity_seed]", "[drift_x]", "[drift_y]"))
 			var/heat = text2num(rustg_noise_get_at_coordinates("[heat_seed]", "[drift_x]", "[drift_y]"))
 			var/heat_level //Type of heat zone we're in LOW-MEDIUM-HIGH
-			var/humidity_level //Type of humidity zone we're in LOW-MEDIUM-HIGH
+			var/humidity_level  //Type of humidity zone we're in LOW-MEDIUM-HIGH
 
 			switch(heat)
 				if(0 to 0.25)

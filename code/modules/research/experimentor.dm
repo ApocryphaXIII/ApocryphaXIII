@@ -233,7 +233,7 @@
 	recentlyExperimented = 1
 	icon_state = "[base_icon_state]_wloop"
 	var/chosenchem
-	var/criticalReaction = is_type_in_typecache(exp_on, critical_items_typecache)
+	var/criticalReaction = is_type_in_typecache(exp_on,  critical_items_typecache)
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	if(exp == SCANTYPE_POKE)
 		visible_message("<span class='notice'>[src] prods at [exp_on] with mechanical arms.</span>")

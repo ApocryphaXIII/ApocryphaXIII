@@ -222,7 +222,7 @@
 /obj/item/melee/classic_baton/proc/get_stun_description(mob/living/target, mob/living/user)
 	. = list()
 
-	.["visible"] = "<span class ='danger'>[user] knocks [target] down with [src]!</span>"
+	.["visible"] =  "<span class ='danger'>[user] knocks [target] down with [src]!</span>"
 	.["local"] = "<span class ='userdanger'>[user] knocks you down with [src]!</span>"
 
 	return .
@@ -566,7 +566,7 @@
 	inhand_icon_state = "default"
 	worn_icon_state = "default_worn"
 	material_flags = MATERIAL_ADD_PREFIX | MATERIAL_GREYSCALE | MATERIAL_AFFECT_STATISTICS //Material type changes the prefix as well as the color.
-	custom_materials = list(/datum/material/iron = 12000) //Defaults to an Iron Mace.
+	custom_materials = list(/datum/material/iron = 12000)  //Defaults to an Iron Mace.
 	slot_flags = ITEM_SLOT_BELT
 	force = 14
 	w_class = WEIGHT_CLASS_BULKY

@@ -43,10 +43,10 @@ GLOBAL_VAR_INIT(hsboxspawn, TRUE)
 			"Spawn All-Access ID"				= "hsbaaid",
 
 			"Building Supplies",
-			"Spawn 50 Wood"					 = "hsbwood",
+			"Spawn 50 Wood"                     = "hsbwood",
 			"Spawn 50 Metal"					= "hsbmetal",
 			"Spawn 50 Plasteel"					= "hsbplasteel",
-			"Spawn 50 Reinforced Glass"		 = "hsbrglass",
+			"Spawn 50 Reinforced Glass"         = "hsbrglass",
 			"Spawn 50 Glass"					= "hsbglass",
 			"Spawn Box of Materials"			= "hsbspawn&path=[/obj/item/storage/box/material]",
 			"Spawn Full Cable Coil"				= "hsbspawn&path=[/obj/item/stack/cable_coil]",

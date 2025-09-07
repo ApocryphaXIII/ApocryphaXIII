@@ -431,7 +431,7 @@
 	var/old = dir
 	. = ..()
 	if(dir != old)
-		update_appearance() // the beaker needs to be re-positioned if we rotate
+		update_appearance()  // the beaker needs to be re-positioned if we rotate
 
 /obj/machinery/chem_dispenser/drinks/display_beaker()
 	var/mutable_appearance/b_o = beaker_overlay || mutable_appearance(icon, "disp_beaker")

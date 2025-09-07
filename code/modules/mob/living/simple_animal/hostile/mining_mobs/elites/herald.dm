@@ -6,12 +6,12 @@
 /**
  * # Herald
  *
- * A slow-moving projectile user with a few tricks up it's sleeve. Less unga-bunga than Colossus, with more cleverness in it's fighting style.
+ * A slow-moving projectile user with a few tricks up it's sleeve.  Less unga-bunga than Colossus, with more cleverness in it's fighting style.
  * As it's health gets lower, the amount of projectiles fired per-attack increases.
  * It's attacks are as follows:
  * - Fires three projectiles in a given direction.
  * - Fires a spread in every cardinal and diagonal direction at once, then does it again after a bit.
- * - Shoots a single, golden bolt. Wherever it lands, the herald will be teleported to the location.
+ * - Shoots a single, golden bolt.  Wherever it lands, the herald will be teleported to the location.
  * - Spawns a mirror which reflects projectiles directly at the target.
  * Herald is a more concentrated variation of the Colossus fight, having less projectiles overall, but more focused attacks.
  */
@@ -194,7 +194,7 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/herald/mirror
 	name = "herald's mirror"
-	desc = "This fiendish work of magic copies the herald's attacks. Seems logical to smash it."
+	desc = "This fiendish work of magic copies the herald's attacks.  Seems logical to smash it."
 	health = 60
 	maxHealth = 60
 	icon_state = "herald_mirror"

@@ -8,12 +8,12 @@
 
 /// We do some macro magic to make sure the strings are created at compile time rather than runtime
 /// We do it this way so that if someone changes any of the names of networks we don't have to hunt down
-/// all the constants though all the files for them. hurrah!
+/// all the constants though all the files for them.  hurrah!
 
 /// Ugh, couldn't get recursive stringafy to work in byond for some reason
-#define NETWORK_NAME_COMBINE(L,R) 			((L) + "." + (R))
+#define NETWORK_NAME_COMBINE(L,R)   			((L) + "." + (R))
 
-/// Station network names. Used as the root networks for main parts of the station
+/// Station network names.  Used as the root networks for main parts of the station
 #define __STATION_NETWORK_ROOT 			"SS13"
 #define __CENTCOM_NETWORK_ROOT 			"CENTCOM"
 #define __SYNDICATE_NETWORK_ROOT 		"SYNDI"
@@ -62,7 +62,7 @@
  * Helper that verifies a network name is valid.
  *
  * A valid network name (ie, SS13.ATMOS.SCRUBBERS) is all caps, no spaces with periods between
- * branches. Returns false if it doesn't meat this requirement
+ * branches.  Returns false if it doesn't meat this requirement
  *
  * Arguments:
  * * name - network text name to check
@@ -74,15 +74,15 @@
 
 
 
-/// Port protocol. A port is just a list with a few vars that are used to send signals
-/// that something is refreshed or updated. These macros make it faster rather than
+/// Port protocol.  A port is just a list with a few vars that are used to send signals
+/// that something is refreshed or updated.  These macros make it faster rather than
 /// calling procs
 #define NETWORK_PORT_DISCONNECTED(LIST) (!LIST || LIST["_disconnected"])
 #define NETWORK_PORT_UPDATED(LIST) (LIST && !LIST["_disconnected"] && LIST["_updated"])
 #define NETWORK_PORT_UPDATE(LIST) if(LIST) { LIST["_updated"] = TRUE }
 #define NETWORK_PORT_CLEAR_UPDATE(LIST) if(LIST) { LIST["_updated"] = FALSE }
 #define NETWORK_PORT_SET_UPDATE(LIST) if(LIST) { LIST["_updated"] = TRUE }
-#define NETWORK_PORT_DISCONNECT(LIST) if(LIST) { LIST["_disconnected"] = TRUE }
+#define NETWORK_PORT_DISCONNECT(LIST)  if(LIST) { LIST["_disconnected"] = TRUE }
 
 /// Error codes
 #define NETWORK_ERROR_OK null

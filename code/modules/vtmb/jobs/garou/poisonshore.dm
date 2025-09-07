@@ -42,7 +42,7 @@
 
 	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/lead
-	uniform = /obj/item/clothing/under/pentex/pentex_executive_suit
+	uniform =  /obj/item/clothing/under/pentex/pentex_executive_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
 	suit = /obj/item/clothing/suit/pentex/pentex_labcoat_alt
 	l_pocket = /obj/item/vamp/phone/endron_lead
@@ -107,7 +107,7 @@
 
 	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/executive
-	uniform = /obj/item/clothing/under/pentex/pentex_executive_suit
+	uniform =  /obj/item/clothing/under/pentex/pentex_executive_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
 	l_pocket = /obj/item/vamp/phone/endron_exec
 	r_pocket = /obj/item/vamp/keys/pentex
@@ -170,7 +170,7 @@
 
 	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/affairs
-	uniform = /obj/item/clothing/under/pentex/pentex_suit
+	uniform =  /obj/item/clothing/under/pentex/pentex_suit
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
 	l_pocket = /obj/item/vamp/phone/endron_affairs
 	r_pocket = /obj/item/vamp/keys/pentex
@@ -234,7 +234,7 @@
 
 	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/secchief
-	uniform = /obj/item/clothing/under/pentex/pentex_turtleneck
+	uniform =  /obj/item/clothing/under/pentex/pentex_turtleneck
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	gloves = /obj/item/clothing/gloves/vampire/work
 	head = /obj/item/clothing/head/pentex/pentex_beret
@@ -297,7 +297,7 @@
 
 	ears = /obj/item/p25radio // APOC EDIT ADD
 	id = /obj/item/card/id/garou/spiral/sec
-	uniform = /obj/item/clothing/under/pentex/pentex_shortsleeve
+	uniform =  /obj/item/clothing/under/pentex/pentex_shortsleeve
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	gloves = /obj/item/clothing/gloves/vampire/work
 	suit = /obj/item/clothing/suit/vampire/vest

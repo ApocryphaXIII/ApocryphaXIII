@@ -20,7 +20,7 @@
 	var/obj/machinery/requests_console/console
 	var/force_depart = FALSE
 	var/perma_docked = FALSE	//highlander with RESPAWN??? OH GOD!!!
-	var/obj/docking_port/stationary/target_dock // for badminry
+	var/obj/docking_port/stationary/target_dock  // for badminry
 
 /obj/docking_port/mobile/arrivals/Initialize(mapload)
 	. = ..()

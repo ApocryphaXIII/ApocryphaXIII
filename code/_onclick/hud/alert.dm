@@ -1,6 +1,6 @@
 //A system to manage and display alerts on screen without needing you to do it yourself
 
-//PUBLIC - call these wherever you want
+//PUBLIC -  call these wherever you want
 
 /**
  *Proc to create or update an alert. Returns the alert if the alert is new or updated, 0 if it was thrown already

@@ -5,7 +5,7 @@
 	var/climb_time = (2 SECONDS)
 	///Stun duration for when you get onto the object
 	var/climb_stun = (2 SECONDS)
-	///Assoc list of object being climbed on - climbers. This allows us to check who needs to be shoved off a climbable object when its clicked on.
+	///Assoc list of object being climbed on - climbers.  This allows us to check who needs to be shoved off a climbable object when its clicked on.
 	var/list/current_climbers
 
 /datum/element/climbable/Attach(datum/target, climb_time, climb_stun)

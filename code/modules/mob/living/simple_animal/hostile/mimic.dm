@@ -367,7 +367,7 @@ GLOBAL_LIST_INIT(protected_objects, list(/obj/structure/table, /obj/structure/ca
 
 /mob/living/simple_animal/hostile/mimic/xenobio/proc/insertion_allowed(atom/movable/AM)
 	if(ismob(AM))
-		if(!isliving(AM)) //Don't let ghosts and such get trapped in the beast.
+		if(!isliving(AM))  //Don't let ghosts and such get trapped in the beast.
 			return FALSE
 		var/mob/living/L = AM
 		if(L.anchored || L.buckled || L.incorporeal_move || L.has_buckled_mobs())

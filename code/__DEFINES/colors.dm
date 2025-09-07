@@ -282,7 +282,7 @@
 /// Bright yellow. rgb(255, 255, 150)
 #define LIGHT_COLOR_BRIGHT_YELLOW "#FFFF99"
 /// Dimmed yellow, leaning kaki. rgb(225, 225, 125)
-#define LIGHT_COLOR_YELLOW	 "#E1E17D"
+#define LIGHT_COLOR_YELLOW     "#E1E17D"
 /// Clear brown, mostly dim. rgb(150, 100, 50)
 #define LIGHT_COLOR_BROWN "#966432"
 /// Mostly pure orange. rgb(250, 150, 50)
@@ -303,7 +303,7 @@
 #define LIGHT_COLOR_LAVA "#C48A18"
 /// Bright, non-saturated red. Leaning slightly towards pink for visibility. rgb(250, 100, 75)
 #define LIGHT_COLOR_FLARE "#FA644B"
-/// Vivid red. Leans a bit darker to accentuate red colors and leave other channels a bit dry. rgb(200, 25, 25)
+/// Vivid red. Leans a bit darker to accentuate red colors and leave other channels a bit dry.  rgb(200, 25, 25)
 #define LIGHT_COLOR_INTENSE_RED "#C81919"
 /// Weird color, between yellow and green, very slimy. rgb(175, 200, 75)
 #define LIGHT_COLOR_SLIME_LAMP "#AFC84B"

@@ -67,7 +67,7 @@
 /*
  * On accidental consumption, make sure the container is partially glass, and continue to the reagent_container proc
  */
-/obj/item/reagent_containers/food/drinks/on_accidental_consumption(mob/living/carbon/M, mob/living/carbon/user, obj/item/source_item, discover_after = TRUE)
+/obj/item/reagent_containers/food/drinks/on_accidental_consumption(mob/living/carbon/M, mob/living/carbon/user, obj/item/source_item,  discover_after = TRUE)
 	if(isGlass && !custom_materials)
 		set_custom_materials(list(GET_MATERIAL_REF(/datum/material/glass) = 5))
 	return ..()
@@ -237,7 +237,7 @@
 /obj/item/reagent_containers/food/drinks/ice/prison
 	name = "dirty ice cup"
 	desc = "Either Nanotrasen's water supply is contaminated, or this machine actually vends lemon, chocolate, and cherry snow cones."
-	list_reagents = list(/datum/reagent/consumable/ice = 25, /datum/reagent/liquidgibs = 5)
+	list_reagents  = list(/datum/reagent/consumable/ice = 25, /datum/reagent/liquidgibs = 5)
 
 /obj/item/reagent_containers/food/drinks/mug // parent type is literally just so empty mug sprites are a thing
 	name = "mug"
@@ -415,7 +415,7 @@
 	var/datum/reagent/random_reagent = new reagent_id
 	list_reagents = list(random_reagent.type = 50)
 	. = ..()
-	desc += "<span class='notice'>The writing reads '[random_reagent.name]'.</span>"
+	desc +=  "<span class='notice'>The writing reads '[random_reagent.name]'.</span>"
 	update_icon()
 
 /obj/item/reagent_containers/food/drinks/beer

@@ -1,4 +1,4 @@
-//The Medical Kiosk is designed to act as a low access alernative to a medical analyzer, and doesn't require breaking into medical. Self Diagnose at your heart's content!
+//The Medical Kiosk is designed to act as a low access alernative to  a medical analyzer, and doesn't require breaking into medical. Self Diagnose at your heart's content!
 //For a fee that is. Comes in 4 flavors of medical scan.
 
 
@@ -12,27 +12,27 @@
 	circuit = /obj/item/circuitboard/machine/medical_kiosk
 	payment_department = ACCOUNT_MED
 	var/obj/item/scanner_wand
-	var/default_price = 15		 //I'm defaulting to a low price on this, but in the future I wouldn't have an issue making it more or less expensive.
-	var/active_price = 15		 //Change by using a multitool on the board.
+	var/default_price = 15          //I'm defaulting to a low price on this, but in the future I wouldn't have an issue making it more or less expensive.
+	var/active_price = 15           //Change by using a multitool on the board.
 	var/pandemonium = FALSE			//AKA: Emag mode.
 
-	var/scan_active_1 = FALSE	 //Shows if the machine is being used for a general scan.
+	var/scan_active_1 = FALSE       //Shows if the machine is being used for a general scan.
 	var/scan_active_2 = FALSE 		//as above, symptom scan
-	var/scan_active_3 = FALSE		//as above, radiological scan
+	var/scan_active_3 = FALSE    	//as above, radiological scan
 	var/scan_active_4 = FALSE		//as above, chemical/hallucinations.
 	var/paying_customer = FALSE		//Ticked yes if passing inuse()
 
-	var/datum/bank_account/account //payer's account.
-	var/mob/living/carbon/human/H //The person using the console in each instance. Used for paying for the kiosk.
-	var/mob/living/carbon/human/altPatient //If scanning someone else, this will be the target.
-	var/obj/item/card/id/C		 //the account of the person using the console.
+	var/datum/bank_account/account  //payer's account.
+	var/mob/living/carbon/human/H   //The person using the console in each instance. Used for paying for the kiosk.
+	var/mob/living/carbon/human/altPatient   //If scanning someone else, this will be the target.
+	var/obj/item/card/id/C          //the account of the person using the console.
 
 /obj/machinery/medical_kiosk/Initialize() //loaded subtype for mapping use
 	. = ..()
 	AddComponent(/datum/component/payment, active_price, SSeconomy.get_dep_account(ACCOUNT_MED), PAYMENT_FRIENDLY)
 	scanner_wand = new/obj/item/scanner_wand(src)
 
-/obj/machinery/medical_kiosk/proc/inuse() //Verifies that the user can use the interface, followed by showing medical information.
+/obj/machinery/medical_kiosk/proc/inuse()  //Verifies that the user can use the interface, followed by showing medical information.
 	if(C?.registered_account)
 		account = C.registered_account
 	if(account?.account_job?.paycheck_department == payment_department)
@@ -184,7 +184,7 @@
 
 	var/bleed_status = "Patient is not currently bleeding."
 	var/blood_status = " Patient either has no blood, or does not require it to function."
-	var/blood_percent = round((altPatient.blood_volume / BLOOD_VOLUME_NORMAL)*100)
+	var/blood_percent =  round((altPatient.blood_volume / BLOOD_VOLUME_NORMAL)*100)
 	var/blood_type = altPatient.dna.blood_type
 	var/blood_warning = " "
 
@@ -255,7 +255,7 @@
 	if (altPatient.hallucinating())
 		hallucination_status = "Subject appears to be hallucinating. Suggested treatments: bedrest, mannitol or psicodine."
 
-	if(altPatient.stat == DEAD || HAS_TRAIT(altPatient, TRAIT_FAKEDEATH) || ((brute_loss+fire_loss+tox_loss+oxy_loss+clone_loss) >= 200)) //Patient status checks.
+	if(altPatient.stat == DEAD || HAS_TRAIT(altPatient, TRAIT_FAKEDEATH) || ((brute_loss+fire_loss+tox_loss+oxy_loss+clone_loss) >= 200))  //Patient status checks.
 		patient_status = "Dead."
 	if((brute_loss+fire_loss+tox_loss+oxy_loss+clone_loss) >= 80)
 		patient_status = "Gravely Injured"
@@ -266,28 +266,28 @@
 	if(pandemonium || user.hallucinating())
 		patient_status = pick("The only kiosk is kiosk, but is the only patient, patient?", "Breathing manually.","Constact NTOS site admin.","97% carbon, 3% natural flavoring","The ebb and flow wears us all in time.","It's Lupus. You have Lupus.","Undergoing monkey disease.")
 
-	if((brain_loss) >= 100) //Brain status checks.
+	if((brain_loss) >= 100)   //Brain status checks.
 		brain_status = "Grave brain damage detected."
 	else if((brain_loss) >= 50)
 		brain_status = "Severe brain damage detected."
 	else if((brain_loss) >= 20)
 		brain_status = "Brain damage detected."
 	else if((brain_loss) >= 1)
-		brain_status = "Mild brain damage detected." //You may have a miiiild case of severe brain damage.
+		brain_status = "Mild brain damage detected."  //You may have a miiiild case of severe brain damage.
 
-	if(rad_sickness_value >= 1000) //
+	if(rad_sickness_value >= 1000)  //
 		rad_sickness_status = "Patient is suffering from extreme radiation poisoning, high toxen damage expected. Suggested treatment: Repeated dosages of Pentetic Acid or high amounts of Cold Seiver and anti-toxen"
 	else if(rad_sickness_value >= 300)
 		rad_sickness_status = "Patient is suffering from alarming radiation poisoning. Suggested treatment: Take Cold Seiver or Potassium Iodine, watch the toxen levels."
 	else if(rad_sickness_value >= 100)
 		rad_sickness_status = "Patient has moderate radioactive signatures. Symptoms will subside in a few minutes"
 
-	if(rad_contamination_value >= 400) //
-		rad_contamination_status = "Patient is wearing extremely radioactive clothing. Suggested treatment: Isolation of patient and shower, remove all clothing and objects immediatly and place in a washing machine"
+	if(rad_contamination_value >= 400)  //
+		rad_contamination_status = "Patient is wearing extremely radioactive clothing.  Suggested treatment: Isolation of patient and shower, remove all clothing and objects immediatly and place in a washing machine"
 	else if(rad_contamination_value >= 150)
 		rad_contamination_status = "Patient is wearing alarming radioactive clothing. Suggested treatment: Scan for contaminated objects and wash them with soap and water"
 	else if(rad_contamination_value >= 50)
-		rad_contamination_status = "Patient has moderate radioactive clothing. Maintain a social distance for a few minutes"
+		rad_contamination_status = "Patient has moderate radioactive clothing.  Maintain a social distance for a few minutes"
 
 
 	if(pandemonium == TRUE)

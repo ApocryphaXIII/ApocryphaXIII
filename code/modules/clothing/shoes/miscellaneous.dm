@@ -22,7 +22,7 @@
 	icon_state = "sneakboots"
 	inhand_icon_state = "sneakboots"
 	w_class = WEIGHT_CLASS_SMALL
-	resistance_flags = FIRE_PROOF | ACID_PROOF
+	resistance_flags = FIRE_PROOF |  ACID_PROOF
 	clothing_traits = list(TRAIT_SILENT_FOOTSTEPS)
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
@@ -47,12 +47,12 @@
 	desc = "A pair of magic black shoes."
 	name = "magic shoes"
 
-	resistance_flags = FIRE_PROOF | ACID_PROOF
+	resistance_flags = FIRE_PROOF |  ACID_PROOF
 
 /obj/item/clothing/shoes/sandal/magic
 	name = "magical sandals"
 	desc = "A pair of sandals imbued with magic."
-	resistance_flags = FIRE_PROOF | ACID_PROOF
+	resistance_flags = FIRE_PROOF |  ACID_PROOF
 
 /obj/item/clothing/shoes/galoshes
 	desc = "A pair of yellow rubber boots, designed to prevent slipping on wet surfaces."

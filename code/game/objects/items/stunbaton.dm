@@ -329,7 +329,7 @@
 	throwforce = 5
 	throw_range = 5
 	cell_hit_cost = 2000
-	throw_stun_chance = 99 //Have you prayed today?
+	throw_stun_chance = 99  //Have you prayed today?
 	convertible = FALSE
 	custom_materials = list(/datum/material/iron = 10000, /datum/material/glass = 4000, /datum/material/silver = 10000, /datum/material/gold = 2000)
 

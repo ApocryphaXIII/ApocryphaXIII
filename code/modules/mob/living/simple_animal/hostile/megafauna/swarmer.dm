@@ -27,7 +27,7 @@ GLOBAL_LIST_INIT(AISwarmerCapsByType, list(/mob/living/simple_animal/hostile/swa
 	LAZYINITLIST(GLOB.AISwarmersByType)
 	for(var/t in shuffle(swarmerTypes))
 		var/list/amount = GLOB.AISwarmersByType[t]
-		if(!amount || amount.len < GLOB.AISwarmerCapsByType[t])
+		if(!amount || amount.len <  GLOB.AISwarmerCapsByType[t])
 			return t
 
 

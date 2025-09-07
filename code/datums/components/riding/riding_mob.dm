@@ -213,7 +213,7 @@
 			AM.layer = ABOVE_MOB_LAYER
 		else
 			AM.layer = OBJ_LAYER
-	else // laying flat, we must be firemanning the rider
+	else  // laying flat, we must be firemanning the rider
 		if(dir == NORTH)
 			AM.layer = OBJ_LAYER
 		else

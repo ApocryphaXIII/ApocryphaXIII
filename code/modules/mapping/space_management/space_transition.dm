@@ -22,7 +22,7 @@
 				neigbours[TEXT_WEST] = P.spl
 				P.spl.neigbours[TEXT_EAST] = src
 
-/datum/space_transition_point		 //this is explicitly utilitarian datum type made specially for the space map generation and are absolutely unusable for anything else
+/datum/space_transition_point          //this is explicitly utilitarian datum type made specially for the space map generation and are absolutely unusable for anything else
 	var/list/neigbours = list()
 	var/x
 	var/y
@@ -94,8 +94,8 @@
 	//Lists below are pre-calculated values arranged in the list in such a way to be easily accessable in the loop by the counter
 	//Its either this or madness with lotsa math
 
-	var/list/x_pos_beginning = list(1, 1, world.maxx - TRANSITIONEDGE, 1) //x values of the lowest-leftest turfs of the respective 4 blocks on each side of zlevel
-	var/list/y_pos_beginning = list(world.maxy - TRANSITIONEDGE, 1, 1 + TRANSITIONEDGE, 1 + TRANSITIONEDGE) //y values respectively
+	var/list/x_pos_beginning = list(1, 1, world.maxx - TRANSITIONEDGE, 1)  //x values of the lowest-leftest turfs of the respective 4 blocks on each side of zlevel
+	var/list/y_pos_beginning = list(world.maxy - TRANSITIONEDGE, 1, 1 + TRANSITIONEDGE, 1 + TRANSITIONEDGE)  //y values respectively
 	var/list/x_pos_ending = list(world.maxx, world.maxx, world.maxx, 1 + TRANSITIONEDGE)	//x values of the highest-rightest turfs of the respective 4 blocks on each side of zlevel
 	var/list/y_pos_ending = list(world.maxy, 1 + TRANSITIONEDGE, world.maxy - TRANSITIONEDGE, world.maxy - TRANSITIONEDGE)	//y values respectively
 	var/list/x_pos_transition = list(1, 1, TRANSITIONEDGE + 2, world.maxx - TRANSITIONEDGE - 1)		//values of x for the transition from respective blocks on the side of zlevel, 1 is being translated into turfs respective x value later in the code
@@ -125,7 +125,7 @@
 				S.destination_x = x_pos_transition[side] == 1 ? S.x : x_pos_transition[side]
 				S.destination_y = y_pos_transition[side] == 1 ? S.y : y_pos_transition[side]
 				S.destination_z = zdestination
-
+				
 				// Mirage border code
 				var/mirage_dir
 				if(S.x == 1 + TRANSITIONEDGE)

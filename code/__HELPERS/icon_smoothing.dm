@@ -27,8 +27,8 @@
 //Redefinitions of the diagonal directions so they can be stored in one var without conflicts
 #define NORTH_JUNCTION		NORTH //(1<<0)
 #define SOUTH_JUNCTION		SOUTH //(1<<1)
-#define EAST_JUNCTION		EAST //(1<<2)
-#define WEST_JUNCTION		WEST //(1<<3)
+#define EAST_JUNCTION		EAST  //(1<<2)
+#define WEST_JUNCTION		WEST  //(1<<3)
 #define NORTHEAST_JUNCTION	(1<<4)
 #define SOUTHEAST_JUNCTION	(1<<5)
 #define SOUTHWEST_JUNCTION	(1<<6)
@@ -59,7 +59,7 @@ DEFINE_BITFIELD(smoothing_junction, list(
 		var/turf/neighbor = get_step(source, direction); \
 		if(!neighbor) { \
 			if(source.smoothing_flags & SMOOTH_BORDER) { \
-				junction |= direction_flag; \
+				junction |=  direction_flag; \
 			}; \
 		}; \
 		else { \

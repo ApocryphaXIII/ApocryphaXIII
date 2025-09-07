@@ -18,10 +18,10 @@
 	var/randomize_position = FALSE
 
 	/**
-	 * Fish sprite how to:
-	 * Need to be centered on 16,16 in the dmi and facing left by default.
-	 * sprite_height/sprite_width is the size it will have in aquarium and used to control animation boundaries.
-	 * source_height/source_width is the size of the original icon (ideally only the non-empty parts)
+	 *  Fish sprite how to:
+	 *  Need to be centered on 16,16 in the dmi and facing left by default.
+	 *  sprite_height/sprite_width is the size it will have in aquarium and used to control animation boundaries.
+	 *  source_height/source_width is the size of the original icon (ideally only the non-empty parts)
 	 */
 
 	/// If this is set this icon state will be used for the holder while icon_state will only be used for item/catalog. Transformation from source_width/height WON'T be applied.

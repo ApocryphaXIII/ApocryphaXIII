@@ -26,7 +26,7 @@
 		if(contained_id)
 			dat += text("<A href='byond://?src=[REF(src)];id=eject'>[contained_id]</A><br>")
 			dat += text("Collected Points: [contained_id.points]. <A href='byond://?src=[REF(src)];id=reset'>Reset.</A><br>")
-			dat += text("Card goal: [contained_id.goal]. <A href='byond://?src=[REF(src)];id=setgoal'>Set </A><br>")
+			dat += text("Card goal: [contained_id.goal].  <A href='byond://?src=[REF(src)];id=setgoal'>Set </A><br>")
 			dat += text("Space Law recommends quotas of 100 points per minute they would normally serve in the brig.<BR>")
 		else
 			dat += text("<A href='byond://?src=[REF(src)];id=insert'>Insert Prisoner ID.</A><br>")

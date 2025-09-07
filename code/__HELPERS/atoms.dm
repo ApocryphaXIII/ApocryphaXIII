@@ -137,18 +137,18 @@
 rough example of the "cone" made by the 3 dirs checked
 
 * \
-* \
-* >
-*	 <
-*	 \
-*	 \
+*  \
+*   >
+*     <
+*      \
+*       \
 *B --><-- A
-*	 /
-*	 /
-*	 <
-*	>
-* /
-* /
+*       /
+*      /
+*     <
+*    >
+*   /
+*  /
 
 
 */

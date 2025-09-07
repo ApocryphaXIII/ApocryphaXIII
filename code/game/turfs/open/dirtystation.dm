@@ -1,4 +1,4 @@
-//Janitors! Janitors, janitors, janitors! -Sayu
+//Janitors!  Janitors, janitors, janitors!  -Sayu
 
 
 //Conspicuously not-recent versions of suspicious cleanables
@@ -34,10 +34,10 @@
 		return
 
 
-	if(prob(80))	//mid dirt - 1/15
+	if(prob(80))	//mid dirt  - 1/15
 		return
 
-		//Construction zones. Blood, sweat, and oil. Oh, and dirt.
+		//Construction zones. Blood, sweat, and oil.  Oh, and dirt.
 	var/static/list/engine_dirt_areas = typecacheof(list(/area/engine,
 														/area/crew_quarters/heads/chief,
 														/area/science/robotics,
@@ -77,7 +77,7 @@
 		return
 
 
-	if(prob(75))	//low dirt - 1/60
+	if(prob(75))	//low dirt  - 1/60
 		return
 
 		//Areas where gibs will be present. Robusting probably happened some time ago.

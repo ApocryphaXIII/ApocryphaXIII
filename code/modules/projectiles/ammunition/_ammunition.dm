@@ -50,7 +50,7 @@
 /*
  * On accidental consumption, 'spend' the ammo, and add in some gunpowder
  */
-/obj/item/ammo_casing/on_accidental_consumption(mob/living/carbon/victim, mob/living/carbon/user, obj/item/source_item, discover_after = TRUE)
+/obj/item/ammo_casing/on_accidental_consumption(mob/living/carbon/victim, mob/living/carbon/user, obj/item/source_item,  discover_after = TRUE)
 	if(BB)
 		BB = null
 		update_icon()

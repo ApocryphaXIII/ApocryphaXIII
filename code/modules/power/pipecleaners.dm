@@ -22,11 +22,11 @@ GLOBAL_LIST_INIT(pipe_cleaner_colors, list(
 ////////////////////////////////
 
 /* Cable directions (d1 and d2)
- * 9 1 5
+ * 9   1   5
  *	\ | /
  * 8 - 0 - 4
  *	/ | \
- * 10 2 6
+ * 10  2   6
 
 If d1 = 0 and d2 = 0, there's no pipe_cleaner
 If d1 = 0 and d2 = dir, it's a O-X pipe_cleaner, getting from the center of the tile to dir (knot pipe_cleaner)
@@ -122,8 +122,8 @@ By design, d1 is the smallest direction and d2 is the highest
 	add_atom_colour(color, FIXED_COLOUR_PRIORITY)
 
 // Items usable on a pipe_cleaner :
-// - Wirecutters : cut it duh !
-// - pipe cleaner coil : merge pipe cleaners
+//   - Wirecutters : cut it duh !
+//   - pipe cleaner coil : merge pipe cleaners
 //
 /obj/structure/pipe_cleaner/proc/handlecable(obj/item/W, mob/user, params)
 	if(W.tool_behaviour == TOOL_WIRECUTTER)

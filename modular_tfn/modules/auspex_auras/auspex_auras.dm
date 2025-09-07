@@ -51,7 +51,7 @@
 			holder.icon = 'icons/effects/32x64.dmi' //I'm not fucking with this until GAGS are done being ported, antifrenzy aura has some weird colorized components.
 		//black aura for diablerists
 		if (diablerist)
-			holder.color = AURA_DIAB //I don't understand why someone made a specific sprite for diab aura that's just blackscaled normal aura, instead of making it a defined color. This is far more elegant.
+			holder.color = AURA_DIAB  //I don't understand why someone made a specific sprite for diab aura that's just blackscaled normal aura, instead of making it a defined color. This is far more elegant.
 
 	if(isgarou(src) || iswerewolf(src))
 		//garou have bright auras due to their spiritual potence

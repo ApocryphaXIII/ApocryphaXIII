@@ -115,7 +115,7 @@
 	name = "void jetpack"
 	desc = "It works well in a void."
 	icon_state = "jetpack-void"
-	inhand_icon_state = "jetpack-void"
+	inhand_icon_state =  "jetpack-void"
 
 /obj/item/jetpack/suit
 	name = "hardsuit jetpack upgrade"

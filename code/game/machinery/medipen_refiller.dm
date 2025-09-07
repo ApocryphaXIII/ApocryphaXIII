@@ -8,11 +8,11 @@
 	idle_power_usage = 100
 	/// list of medipen subtypes it can refill
 	var/list/allowed = list(/obj/item/reagent_containers/hypospray/medipen = /datum/reagent/medicine/epinephrine,
-							/obj/item/reagent_containers/hypospray/medipen/atropine = /datum/reagent/medicine/atropine,
-							/obj/item/reagent_containers/hypospray/medipen/salbutamol = /datum/reagent/medicine/salbutamol,
-							/obj/item/reagent_containers/hypospray/medipen/oxandrolone = /datum/reagent/medicine/oxandrolone,
-							/obj/item/reagent_containers/hypospray/medipen/salacid = /datum/reagent/medicine/sal_acid,
-							/obj/item/reagent_containers/hypospray/medipen/penacid = /datum/reagent/medicine/pen_acid)
+						    /obj/item/reagent_containers/hypospray/medipen/atropine = /datum/reagent/medicine/atropine,
+						    /obj/item/reagent_containers/hypospray/medipen/salbutamol = /datum/reagent/medicine/salbutamol,
+						    /obj/item/reagent_containers/hypospray/medipen/oxandrolone = /datum/reagent/medicine/oxandrolone,
+						    /obj/item/reagent_containers/hypospray/medipen/salacid = /datum/reagent/medicine/sal_acid,
+						    /obj/item/reagent_containers/hypospray/medipen/penacid = /datum/reagent/medicine/pen_acid)
 	/// var to prevent glitches in the animation
 	var/busy = FALSE
 
@@ -31,7 +31,7 @@
 	reagents.maximum_volume = new_volume
 	return TRUE
 
-/// handles the messages and animation, calls refill to end the animation
+///  handles the messages and animation, calls refill to end the animation
 /obj/machinery/medipen_refiller/attackby(obj/item/I, mob/user, params)
 	if(busy)
 		to_chat(user, "<span class='danger'>The machine is busy.</span>")

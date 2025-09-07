@@ -40,7 +40,7 @@ SUBSYSTEM_DEF(mapping)
 	var/list/biomes = list()
 
 	// Z-manager stuff
-	var/station_start // should only be used for maploading-related tasks
+	var/station_start  // should only be used for maploading-related tasks
 	var/space_levels_so_far = 0
 	var/list/z_list
 	var/datum/space_level/transit
@@ -208,7 +208,7 @@ Used by the AI doomsday and the self-destruct nuke.
 	. = list()
 	var/start_time = REALTIMEOFDAY
 
-	if (!islist(files)) // handle single-level maps
+	if (!islist(files))  // handle single-level maps
 		files = list(files)
 
 	// check that the total z count of all maps matches the list of traits
@@ -221,17 +221,17 @@ Used by the AI doomsday and the self-destruct nuke.
 		if (!bounds)
 			errorList |= full_path
 			continue
-		parsed_maps[pm] = total_z // save the start Z of this file
+		parsed_maps[pm] = total_z  // save the start Z of this file
 		total_z += bounds[MAP_MAXZ] - bounds[MAP_MINZ] + 1
 
-	if (!length(traits)) // null or empty - default
+	if (!length(traits))  // null or empty - default
 		for (var/i in 1 to total_z)
 			traits += list(default_traits)
-	else if (total_z != traits.len) // mismatch
+	else if (total_z != traits.len)  // mismatch
 		INIT_ANNOUNCE("WARNING: [traits.len] trait sets specified for [total_z] z-levels in [path]!")
-		if (total_z < traits.len) // ignore extra traits
+		if (total_z < traits.len)  // ignore extra traits
 			traits.Cut(total_z + 1)
-		while (total_z > traits.len) // fall back to defaults on extra levels
+		while (total_z > traits.len)  // fall back to defaults on extra levels
 			traits += list(default_traits)
 
 	// preload the relevant space_level datums

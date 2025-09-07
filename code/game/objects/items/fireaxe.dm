@@ -1,7 +1,7 @@
 /*
  * Fireaxe
  */
-/obj/item/fireaxe // DEM AXES MAN, marker -Agouri
+/obj/item/fireaxe  // DEM AXES MAN, marker -Agouri
 	icon_state = "fireaxe0"
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
@@ -64,7 +64,7 @@
 /*
  * Bone Axe
  */
-/obj/item/fireaxe/boneaxe // Blatant imitation of the fireaxe, but made out of bone.
+/obj/item/fireaxe/boneaxe  // Blatant imitation of the fireaxe, but made out of bone.
 	icon_state = "bone_axe0"
 	name = "bone axe"
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
@@ -80,7 +80,7 @@
 /*
  * Metal Hydrogen Axe
  */
-/obj/item/fireaxe/metal_h2_axe // Blatant imitation of the fireaxe, but made out of metallic hydrogen
+/obj/item/fireaxe/metal_h2_axe  // Blatant imitation of the fireaxe, but made out of metallic hydrogen
 	icon_state = "metalh2_axe0"
 	name = "metallic hydrogen axe"
 	desc = "A large, menacing axe made of an unknown substance that the eldest atmosians call Metallic Hydrogen. Truly an otherworldly weapon."

@@ -15,7 +15,7 @@
 
 //movement intent defines for the m_intent var
 #define MOVE_INTENT_WALK "walk"
-#define MOVE_INTENT_RUN "run"
+#define MOVE_INTENT_RUN  "run"
 
 //Blood levels
 #define BLOOD_VOLUME_MAX_LETHAL		2150
@@ -36,8 +36,8 @@
 #define MOB_SIZE_HUGE 4 // Use this for things you don't want bluespace body-bagged
 
 //Ventcrawling defines
-#define VENTCRAWLER_NONE 0
-#define VENTCRAWLER_NUDE 1
+#define VENTCRAWLER_NONE   0
+#define VENTCRAWLER_NUDE   1
 #define VENTCRAWLER_ALWAYS 2
 
 //Mob bio-types flags
@@ -53,11 +53,11 @@
 #define MOB_SPIRIT		(1 << 9)
 
 //Organ defines for carbon mobs
-#define ORGAN_ORGANIC 1
-#define ORGAN_ROBOTIC 2
+#define ORGAN_ORGANIC   1
+#define ORGAN_ROBOTIC   2
 
-#define BODYPART_ORGANIC 1
-#define BODYPART_ROBOTIC 2
+#define BODYPART_ORGANIC   1
+#define BODYPART_ROBOTIC   2
 
 #define DEFAULT_BODYPART_ICON_ORGANIC 'icons/mob/human_parts_greyscale.dmi'
 #define DEFAULT_BODYPART_ICON_ROBOTIC 'icons/mob/augmentation/augments.dmi'
@@ -102,12 +102,12 @@
 #define BRAIN_TRAUMA_SPECIAL /datum/brain_trauma/special
 #define BRAIN_TRAUMA_MAGIC /datum/brain_trauma/magic
 
-#define TRAUMA_RESILIENCE_BASIC 1	 //Curable with chems
-#define TRAUMA_RESILIENCE_SURGERY 2	//Curable with brain surgery
-#define TRAUMA_RESILIENCE_LOBOTOMY 3 //Curable with lobotomy
-#define TRAUMA_RESILIENCE_WOUND 4	//Curable by healing the head wound
-#define TRAUMA_RESILIENCE_MAGIC 5	 //Curable only with magic
-#define TRAUMA_RESILIENCE_ABSOLUTE 6 //This is here to stay
+#define TRAUMA_RESILIENCE_BASIC 1      //Curable with chems
+#define TRAUMA_RESILIENCE_SURGERY 2    //Curable with brain surgery
+#define TRAUMA_RESILIENCE_LOBOTOMY 3   //Curable with lobotomy
+#define TRAUMA_RESILIENCE_WOUND 4    //Curable by healing the head wound
+#define TRAUMA_RESILIENCE_MAGIC 5      //Curable only with magic
+#define TRAUMA_RESILIENCE_ABSOLUTE 6   //This is here to stay
 
 //Limit of traumas for each resilience tier
 #define TRAUMA_LIMIT_BASIC 3
@@ -229,7 +229,7 @@
 //determines if a mob can smash through it
 #define ENVIRONMENT_SMASH_NONE			0
 #define ENVIRONMENT_SMASH_STRUCTURES	(1<<0) 	//crates, lockers, ect
-#define ENVIRONMENT_SMASH_WALLS			(1<<1) //walls
+#define ENVIRONMENT_SMASH_WALLS			(1<<1)  //walls
 #define ENVIRONMENT_SMASH_RWALLS		(1<<2)	//rwalls
 
 #define NO_SLIP_WHEN_WALKING	(1<<0)
@@ -287,11 +287,11 @@
 //MINOR TWEAKS/MISC
 #define AGE_MIN				21	//youngest a character can be, DO NOT LOWER THIS
 #define AGE_MAX				122	//oldest a character can be
-#define AGE_MINOR			20 //legal age of space drinking and smoking
+#define AGE_MINOR			20  //legal age of space drinking and smoking
 #define WIZARD_AGE_MIN		30	//youngest a wizard can be
 #define APPRENTICE_AGE_MIN	29	//youngest an apprentice can be
 #define SHOES_SLOWDOWN		0	//How much shoes slow you down by default. Negative values speed you up
-#define SHOES_SPEED_SLIGHT SHOES_SLOWDOWN - 1 // slightest speed boost to movement
+#define SHOES_SPEED_SLIGHT  SHOES_SLOWDOWN - 1 // slightest speed boost to movement
 #define POCKET_STRIP_DELAY			40	//time taken (in deciseconds) to search somebody's pockets
 #define DOOR_CRUSH_DAMAGE	15	//the amount of damage that airlocks deal when they crush you
 
@@ -339,17 +339,17 @@
 //Badmin magic mirror
 #define MIRROR_BADMIN (1<<0)
 //Standard magic mirror (wizard)
-#define MIRROR_MAGIC (1<<1)
+#define MIRROR_MAGIC  (1<<1)
 //Pride ruin mirror
-#define MIRROR_PRIDE (1<<2)
+#define MIRROR_PRIDE  (1<<2)
 //Race swap wizard event
-#define RACE_SWAP	 (1<<3)
+#define RACE_SWAP     (1<<3)
 //ERT spawn template (avoid races that don't function without correct gear)
-#define ERT_SPAWN	 (1<<4)
+#define ERT_SPAWN     (1<<4)
 //xenobio black crossbreed
 #define SLIME_EXTRACT (1<<5)
 //Wabbacjack staff projectiles
-#define WABBAJACK	 (1<<6)
+#define WABBAJACK     (1<<6)
 
 // Reasons a defibrilation might fail
 #define DEFIB_POSSIBLE (1<<0)

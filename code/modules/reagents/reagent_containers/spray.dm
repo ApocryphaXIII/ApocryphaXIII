@@ -97,7 +97,7 @@
 						D.reagents.expose(M, VAPOR)
 						puff_reagent_left -= 1
 						var/contained = D.reagents.log_list() // looks like more copypasta but now the reagents are in a different place fuck you old coder
-						log_combat(user, M, "sprayed with", src, addition="which had [contained]")
+						log_combat(user, M,  "sprayed with", src, addition="which had [contained]")
 				else if(!range_left)
 					D.reagents.expose(T, VAPOR)
 			else

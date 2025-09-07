@@ -117,7 +117,7 @@
 	range = 7
 	var/custom_command = "FORGET ABOUT IT"
 
-/datum/discipline_power/dominate/command/pre_activation_checks(mob/living/target) // this pre-check includes some special checks
+/datum/discipline_power/dominate/command/pre_activation_checks(mob/living/target)  // this pre-check includes some special checks
 
 	if(!dominate_hearing_check(owner, target)) // putting the hearing check into the pre_activation so that if the target cant hear you it doesnt consume blood and alerts you
 		return FALSE
@@ -130,7 +130,7 @@
 
 	custom_command = tgui_input_text(owner, "Dominate Command", "What is your command?", "FORGET ABOUT IT")
 	if (!custom_command)
-		return // No message, no dominate
+		return  // No message, no dominate
 
 	var/word_count = length(splittext(custom_command, " "))
 	var/extra_words_difficulty = 4 + max(0, word_count - 1) // Base 4 +1 per extra word

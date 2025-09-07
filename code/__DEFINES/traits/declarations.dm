@@ -43,8 +43,8 @@
 #define TRAIT_DISFIGURED		"disfigured"
 #define TRAIT_XENO_HOST			"xeno_host"	//Tracks whether we're gonna be a baby alien's mummy.
 #define TRAIT_STUNIMMUNE		"stun_immunity"
-#define TRAIT_STUNRESISTANCE	"stun_resistance"
-#define TRAIT_IWASBATONED		"iwasbatoned" //Anti Dual-baton cooldown bypass exploit.
+#define TRAIT_STUNRESISTANCE    "stun_resistance"
+#define TRAIT_IWASBATONED    	"iwasbatoned" //Anti Dual-baton cooldown bypass exploit.
 #define TRAIT_SLEEPIMMUNE		"sleep_immunity"
 #define TRAIT_PUSHIMMUNE		"push_immunity"
 #define TRAIT_SHOCKIMMUNE		"shock_immunity"
@@ -58,7 +58,7 @@
 #define TRAIT_RESISTLOWPRESSURE	"resist_low_pressure"
 #define TRAIT_BOMBIMMUNE		"bomb_immunity"
 #define TRAIT_RADIMMUNE			"rad_immunity"
-#define TRAIT_GENELESS 		"geneless"
+#define TRAIT_GENELESS  		"geneless"
 #define TRAIT_VIRUSIMMUNE		"virus_immunity"
 #define TRAIT_PIERCEIMMUNE		"pierce_immunity"
 #define TRAIT_NODISMEMBER		"dismember_immunity"
@@ -95,19 +95,19 @@
 #define TRAIT_PARALYSIS_L_LEG	"para-l-leg"
 #define TRAIT_PARALYSIS_R_LEG	"para-r-leg"
 #define TRAIT_CANNOT_OPEN_PRESENTS "cannot-open-presents"
-#define TRAIT_PRESENT_VISION	"present-vision"
-#define TRAIT_DISK_VERIFIER	 "disk-verifier"
-#define TRAIT_NOMOBSWAP		 "no-mob-swap"
-#define TRAIT_XRAY_VISION	 "xray_vision"
-#define TRAIT_THERMAL_VISION	"thermal_vision"
+#define TRAIT_PRESENT_VISION    "present-vision"
+#define TRAIT_DISK_VERIFIER     "disk-verifier"
+#define TRAIT_NOMOBSWAP         "no-mob-swap"
+#define TRAIT_XRAY_VISION       "xray_vision"
+#define TRAIT_THERMAL_VISION    "thermal_vision"
 #define TRAIT_PROTEAN_VISION	"protean_vision"
 #define TRAIT_ABDUCTOR_TRAINING "abductor-training"
 #define TRAIT_ABDUCTOR_SCIENTIST_TRAINING "abductor-scientist-training"
-#define TRAIT_SURGEON		 "surgeon"
+#define TRAIT_SURGEON           "surgeon"
 #define	TRAIT_STRONG_GRABBER	"strong_grabber"
 #define	TRAIT_MAGIC_CHOKE		"magic_choke"
-#define TRAIT_SOOTHED_THROAT	"soothed-throat"
-#define TRAIT_BOOZE_SLIDER	 "booze-slider"
+#define TRAIT_SOOTHED_THROAT    "soothed-throat"
+#define TRAIT_BOOZE_SLIDER      "booze-slider"
 #define TRAIT_QUICK_CARRY		"quick-carry" //We place people into a fireman carry quicker than standard
 #define TRAIT_QUICKER_CARRY		"quicker-carry" //We place people into a fireman carry especially quickly compared to quick_carry
 #define TRAIT_QUICK_BUILD		"quick-build"
@@ -178,7 +178,7 @@
 #define TRAIT_WARM_AURA			"warm_aura"
 #define TRAIT_FRENETIC_AURA		"frenetic_aura"
 #define TRAIT_UNBONDABLE		"unbondable"
-#define TRAIT_DEFICIENT_VITAE "deficient_vitae"
+#define TRAIT_DEFICIENT_VITAE   "deficient_vitae"
 #define TRAIT_BLUSH_OF_HEALTH	"blush_of_health"
 #define TRAIT_POTENT_BLOOD		"potent_blood"
 #define TRAIT_CAN_EAT			"can_eat" // this is for kindred. not normal people. normal people do not need this flag.
@@ -194,14 +194,14 @@
 #define TRAIT_DIABLERIE			"diablerie"
 #define TRAIT_GULLET			"gullet"
 #define TRAIT_CHARMER			"charmer"
-#define TRAIT_UNBONDING		 "unbonding"
-#define TRAIT_PERMAFANGS		"permafangs"
+#define TRAIT_UNBONDING         "unbonding"
+#define TRAIT_PERMAFANGS        "permafangs"
 #define TRAIT_ORGANOVORE		"organovore"
 #define TRAIT_SALUBRI_EYE_OPEN	"eye_open" //This is for Salubri Stuff in regards to oepning and closing it
 #define TRAIT_SALUBRI_EYE		"salubri_eye" //This is for whhen you want to like actually know if you have the eye or not
 #define TRAIT_UNMASQUERADE		"unmasquerade"	//For tzi clothing
 #define TRAIT_NONMASQUERADE		"nonmasquerade"	//For tzi mods
-#define TRAIT_GUNFIGHTER		"gunfighter"	//Halves firing delay and cooldown between burst fire shots
+#define TRAIT_GUNFIGHTER        "gunfighter"    //Halves firing delay and cooldown between burst fire shots
 /// Makes gambling incredibly effective, and causes random beneficial events to happen for the mob.
 #define TRAIT_SUPERNATURAL_LUCK	"supernatural_luck"
 /// Lets the mob block projectiles like bullets using only their hands.
@@ -295,7 +295,7 @@
 #define TRAIT_AGEUSIA			"ageusia"
 #define TRAIT_HEAVY_SLEEPER		"heavy_sleeper"
 #define TRAIT_NIGHT_VISION		"night_vision"
-#define TRAIT_ALT_NIGHT_VISION "alt_night_vision"
+#define TRAIT_ALT_NIGHT_VISION  "alt_night_vision"
 #define TRAIT_LIGHT_STEP		"light_step"
 #define TRAIT_SPIRITUAL			"spiritual"
 #define TRAIT_FAN_CLOWN			"fan_clown"

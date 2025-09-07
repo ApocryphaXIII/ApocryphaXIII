@@ -37,7 +37,7 @@
 #define VOID		/datum/mutation/human/void
 #define TONGUESPIKE	/datum/mutation/human/tonguespike
 #define TONGUESPIKECHEM		/datum/mutation/human/tongue_spike/chem
-#define STRONG		/datum/mutation/human/strong
+#define STRONG    	/datum/mutation/human/strong
 #define STIMMED		/datum/mutation/human/stimmed
 #define FIRESWEAT	/datum/mutation/human/firebreath
 #define THERMAL		/datum/mutation/human/thermal
@@ -108,7 +108,7 @@
 #define DIGITIGRADE		10
 #define NO_UNDERWEAR	11
 #define NOSTOMACH		12
-#define NO_DNA_COPY	 13
+#define NO_DNA_COPY     13
 #define DRINKSBLOOD		14
 /// Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting
 #define DYNCOLORS		15

@@ -10,7 +10,7 @@
 	var/admin_notes
 	/// How much does this shuttle cost the cargo budget to purchase? Put in terms of CARGO_CRATE_VALUE to properly scale the cost with the current balance of cargo's income.
 	var/credit_cost = INFINITY
-	/// Can the be legitimately purchased by the station? Used by hardcoded or pre-mapped shuttles like the lavaland or cargo shuttle.
+	/// Can the  be legitimately purchased by the station? Used by hardcoded or pre-mapped shuttles like the lavaland or cargo shuttle.
 	var/can_be_bought = TRUE
 	/// If set, overrides default movement_force on shuttle
 	var/list/movement_force

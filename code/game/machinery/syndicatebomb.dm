@@ -27,7 +27,7 @@
 	var/obj/item/bombcore/payload = /obj/item/bombcore
 	var/beepsound = 'sound/items/timer.ogg'
 	var/delayedbig = FALSE	//delay wire pulsed?
-	var/delayedlittle = FALSE	//activation wire pulsed?
+	var/delayedlittle  = FALSE	//activation wire pulsed?
 	var/obj/effect/countdown/syndicatebomb/countdown
 
 	var/next_beep
@@ -161,7 +161,7 @@
 		if(payload || !wires.is_all_cut() || !open_panel)
 			return
 
-		if(!I.tool_start_check(user, amount=5)) //uses up 5 fuel
+		if(!I.tool_start_check(user, amount=5))  //uses up 5 fuel
 			return
 
 		to_chat(user, "<span class='notice'>You start to cut [src] apart...</span>")
@@ -172,7 +172,7 @@
 	else
 		var/old_integ = atom_integrity
 		. = ..()
-		if((old_integ > atom_integrity) && active && (payload in src))
+		if((old_integ > atom_integrity) && active  && (payload in src))
 			to_chat(user, span_warning("That seems like a really bad idea..."))
 
 /obj/machinery/syndicatebomb/interact(mob/user)

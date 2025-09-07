@@ -166,19 +166,19 @@
 		. += "[t_He] [t_has] [belt.get_examine_string(user)] about [t_his] waist."
 
 	//shoes
-	if(shoes && !(obscured & ITEM_SLOT_FEET) && !(shoes.item_flags & EXAMINE_SKIP))
+	if(shoes && !(obscured & ITEM_SLOT_FEET)  && !(shoes.item_flags & EXAMINE_SKIP))
 		. += "[t_He] [t_is] wearing [shoes.get_examine_string(user)] on [t_his] feet."
 
 	//mask
-	if(wear_mask && !(obscured & ITEM_SLOT_MASK) && !(wear_mask.item_flags & EXAMINE_SKIP))
+	if(wear_mask && !(obscured & ITEM_SLOT_MASK)  && !(wear_mask.item_flags & EXAMINE_SKIP))
 		. += "[t_He] [t_has] [wear_mask.get_examine_string(user)] on [t_his] face."
 
-	if(wear_neck && !(obscured & ITEM_SLOT_NECK) && !(wear_neck.item_flags & EXAMINE_SKIP))
+	if(wear_neck && !(obscured & ITEM_SLOT_NECK)  && !(wear_neck.item_flags & EXAMINE_SKIP))
 		. += "[t_He] [t_is] wearing [wear_neck.get_examine_string(user)] around [t_his] neck."
 
 	//eyes
 	if(!(obscured & ITEM_SLOT_EYES) )
-		if(glasses && !(glasses.item_flags & EXAMINE_SKIP))
+		if(glasses  && !(glasses.item_flags & EXAMINE_SKIP))
 			. += "[t_He] [t_has] [glasses.get_examine_string(user)] covering [t_his] eyes."
 		else if(eye_color == BLOODCULT_EYE && iscultist(src) && HAS_TRAIT(src, CULT_EYES))
 			. += "<span class='warning'><B>[t_His] eyes are glowing an unnatural red!</B></span>"

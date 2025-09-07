@@ -4,7 +4,7 @@
 
 /datum/antagonist/changeling
 	name = "Changeling"
-	roundend_category = "changelings"
+	roundend_category  = "changelings"
 	antagpanel_category = "Changeling"
 	job_rank = ROLE_CHANGELING
 	antag_moodlet = /datum/mood_event/focused
@@ -571,7 +571,7 @@
 	newprofile.righthand_file_list = righthand_file_list.Copy()
 	newprofile.inhand_icon_state_list = inhand_icon_state_list.Copy()
 	newprofile.underwear = underwear
-	newprofile.underwear_color = underwear_color
+	newprofile.underwear_color  = underwear_color
 	newprofile.undershirt = undershirt
 	newprofile.socks = socks
 	newprofile.age = age

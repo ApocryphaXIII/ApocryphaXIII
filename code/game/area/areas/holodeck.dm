@@ -41,7 +41,7 @@
 
 
 /*
-	This is the standard holodeck. It is intended to allow you to
+	This is the standard holodeck.  It is intended to allow you to
 	blow off steam by doing stupid things like laying down, throwing
 	spheres at holes, or bludgeoning people.
 */

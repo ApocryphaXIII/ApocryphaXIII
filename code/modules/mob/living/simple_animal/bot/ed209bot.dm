@@ -58,7 +58,7 @@
 			shootAt(t)
 	..()
 
-/mob/living/simple_animal/bot/secbot/ed209/proc/set_weapon() //used to update the projectile type and firing sound
+/mob/living/simple_animal/bot/secbot/ed209/proc/set_weapon()  //used to update the projectile type and firing sound
 	shoot_sound = 'sound/weapons/laser.ogg'
 	if(emagged == 2)
 		projectile = /obj/projectile/beam

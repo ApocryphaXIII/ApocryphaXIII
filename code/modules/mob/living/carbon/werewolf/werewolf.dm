@@ -183,7 +183,7 @@
 	melee_damage_upper = 65
 	health = 250
 	maxHealth = 250
-//	speed = -1 doesn't work on carbons
+//	speed = -1  doesn't work on carbons
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
 	var/pounce_cooldown = 0
@@ -214,7 +214,7 @@
 	melee_damage_upper = 50 // less damage for were-ravens
 	health = 200 // a lot less HP
 	maxHealth = 200
-//	speed = -1 doesn't work on carbons
+//	speed = -1  doesn't work on carbons
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
 	var/pounce_cooldown = 0

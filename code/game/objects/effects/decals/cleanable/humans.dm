@@ -55,7 +55,7 @@
 		name = dryname
 		desc = drydesc
 		bloodiness = 0
-		color = COLOR_GRAY
+		color =  COLOR_GRAY
 		STOP_PROCESSING(SSobj, src)
 		if(istype(get_area(src), /area/vtm))
 			var/area/vtm/V = get_area(src)

@@ -79,7 +79,7 @@ SUBSYSTEM_DEF(research)
 				break			//Just need one to work.
 	if (!isnull(last_income))
 		var/income_time_difference = world.time - last_income
-		science_tech.last_bitcoins = bitcoins // Doesn't take tick drift into account
+		science_tech.last_bitcoins = bitcoins  // Doesn't take tick drift into account
 		for(var/i in bitcoins)
 			bitcoins[i] *= income_time_difference / 10
 		science_tech.add_point_list(bitcoins)
@@ -187,7 +187,7 @@ SUBSYSTEM_DEF(research)
 			var/datum/techweb_node/P = techweb_nodes[p]
 			if(!istype(P))
 				WARNING("Invalid research prerequisite node with ID [p] detected in node [N.display_name]\[[N.id]\] removed.")
-				N.prereq_ids -= p
+				N.prereq_ids  -= p
 				research_node_id_error(p)
 				. = FALSE
 		for(var/d in N.design_ids)

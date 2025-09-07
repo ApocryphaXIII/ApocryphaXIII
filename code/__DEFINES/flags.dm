@@ -38,7 +38,7 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 ///Whether /atom/Initialize() has already run for the object
 #define INITIALIZED_1				(1<<14)
 /// was this spawned by an admin? used for stat tracking stuff.
-#define ADMIN_SPAWNED_1				(1<<15)
+#define ADMIN_SPAWNED_1			    (1<<15)
 /// should not get harmed if this gets caught by an explosion?
 #define PREVENT_CONTENTS_EXPLOSION_1 (1<<16)
 /// should the contents of this atom be acted upon
@@ -194,7 +194,7 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 /// can pull things
 #define MOBILITY_PULL			(1<<6)
 /// can rest
-#define MOBILITY_REST		 (1<<7)
+#define MOBILITY_REST           (1<<7)
 
 #define MOBILITY_FLAGS_DEFAULT (MOBILITY_MOVE | MOBILITY_STAND | MOBILITY_PICKUP | MOBILITY_USE | MOBILITY_UI | MOBILITY_STORAGE | MOBILITY_PULL)
 #define MOBILITY_FLAGS_CARBON_DEFAULT (MOBILITY_MOVE | MOBILITY_STAND | MOBILITY_PICKUP | MOBILITY_USE | MOBILITY_UI | MOBILITY_STORAGE | MOBILITY_PULL | MOBILITY_REST)
@@ -238,15 +238,15 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 ///Returns true if the dir is diagonal, false otherwise
 #define ISDIAGONALDIR(d) (d&(d-1))
 ///True if the dir is north or south, false therwise
-#define NSCOMPONENT(d) (d&(NORTH|SOUTH))
+#define NSCOMPONENT(d)   (d&(NORTH|SOUTH))
 ///True if the dir is east/west, false otherwise
-#define EWCOMPONENT(d) (d&(EAST|WEST))
+#define EWCOMPONENT(d)   (d&(EAST|WEST))
 ///Flips the dir for north/south directions
-#define NSDIRFLIP(d)	 (d^(NORTH|SOUTH))
+#define NSDIRFLIP(d)     (d^(NORTH|SOUTH))
 ///Flips the dir for east/west directions
-#define EWDIRFLIP(d)	 (d^(EAST|WEST))
+#define EWDIRFLIP(d)     (d^(EAST|WEST))
 ///Turns the dir by 180 degrees
-#define DIRFLIP(d)	 turn(d, 180)
+#define DIRFLIP(d)       turn(d, 180)
 
 /// 33554431 (2^24 - 1) is the maximum value our bitflags can reach.
 #define MAX_BITFLAG_DIGITS 8

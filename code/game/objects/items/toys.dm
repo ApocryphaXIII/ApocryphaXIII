@@ -17,7 +17,7 @@
  *		Toy big red button
  *		Beach ball
  *		Toy xeno
- * Kitty toys!
+ *      Kitty toys!
  *		Snowballs
  *		Clockwork Watches
  *		Toy Daggers
@@ -244,7 +244,7 @@
 	worn_icon_state = "gun"
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
-	flags_1 = CONDUCT_1
+	flags_1 =  CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=10, /datum/material/glass=10)
@@ -447,7 +447,7 @@
  */
 /obj/item/dualsaber/toy
 	name = "double-bladed toy sword"
-	desc = "A cheap, plastic replica of TWO energy swords. Double the fun!"
+	desc = "A cheap, plastic replica of TWO energy swords.  Double the fun!"
 	force = 0
 	throwforce = 0
 	throw_speed = 3
@@ -605,7 +605,7 @@
 	icon_state = "demonomicon"
 	lefthand_file = 'icons/mob/inhands/misc/books_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/books_righthand.dmi'
-	messages = list("You must challenge the devil to a dance-off!", "The devils true name is Ian", "The devil hates salt!", "Would you like infinite power?", "Would you like infinite wisdom?", " Would you like infinite healing?")
+	messages = list("You must challenge the devil to a dance-off!", "The devils true name is Ian", "The devil hates salt!", "Would you like infinite power?", "Would you like infinite  wisdom?", " Would you like infinite healing?")
 	w_class = WEIGHT_CLASS_SMALL
 	recharge_time = 60
 
@@ -1462,7 +1462,7 @@
 	desc = "May you always have a shell in your pocket and sand in your shoes. Whatever that's supposed to mean."
 	icon = 'icons/misc/beach.dmi'
 	icon_state = "shell1"
-	var/static/list/possible_colors = list("" = 2, COLOR_PURPLE_GRAY = 1, COLOR_OLIVE = 1, COLOR_PALE_BLUE_GRAY = 1, COLOR_RED_GRAY = 1)
+	var/static/list/possible_colors = list("" =  2, COLOR_PURPLE_GRAY = 1, COLOR_OLIVE = 1, COLOR_PALE_BLUE_GRAY = 1, COLOR_RED_GRAY = 1)
 
 /obj/item/toy/seashell/Initialize()
 	. = ..()

@@ -13,7 +13,7 @@
 	resistance_flags = ACID_PROOF
 	obj_flags = UNIQUE_RENAME
 	drop_sound = 'sound/items/handling/drinkglass_drop.ogg'
-	pickup_sound = 'sound/items/handling/drinkglass_pickup.ogg'
+	pickup_sound =  'sound/items/handling/drinkglass_pickup.ogg'
 	custom_price = PAYCHECK_PRISONER
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/on_reagent_change(datum/reagents/holder, ...)
@@ -56,11 +56,11 @@
 	. += reagent_overlay
 
 //Shot glasses!//
-// This lets us add shots in here instead of lumping them in with drinks because >logic //
-// The format for shots is the exact same as iconstates for the drinking glass, except you use a shot glass instead. //
-// If it's a new drink, remember to add it to Chemistry-Reagents.dm and Chemistry-Recipes.dm as well. //
-// You can only mix the ported-over drinks in shot glasses for now (they'll mix in a shaker, but the sprite won't change for glasses). //
-// This is on a case-by-case basis, and you can even make a separate sprite for shot glasses if you want. //
+//  This lets us add shots in here instead of lumping them in with drinks because >logic  //
+//  The format for shots is the exact same as iconstates for the drinking glass, except you use a shot glass instead.  //
+//  If it's a new drink, remember to add it to Chemistry-Reagents.dm  and Chemistry-Recipes.dm as well.  //
+//  You can only mix the ported-over drinks in shot glasses for now (they'll mix in a shaker, but the sprite won't change for glasses). //
+//  This is on a case-by-case basis, and you can even make a separate sprite for shot glasses if you want. //
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass
 	name = "Shot glass"

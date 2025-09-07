@@ -71,9 +71,9 @@ Difficulty: Hard
 	deathmessage = "sinks into a pool of blood, fleeing the battle. You've won, for now... "
 	deathsound = 'sound/magic/enter_blood.ogg'
 	attack_action_types = list(/datum/action/innate/megafauna_attack/triple_charge,
-							 /datum/action/innate/megafauna_attack/hallucination_charge,
-							 /datum/action/innate/megafauna_attack/hallucination_surround,
-							 /datum/action/innate/megafauna_attack/blood_warp)
+							   /datum/action/innate/megafauna_attack/hallucination_charge,
+							   /datum/action/innate/megafauna_attack/hallucination_surround,
+							   /datum/action/innate/megafauna_attack/blood_warp)
 	small_sprite_type = /datum/action/small_sprite/megafauna/bubblegum
 	faction = list("mining", "boss", "hell")
 

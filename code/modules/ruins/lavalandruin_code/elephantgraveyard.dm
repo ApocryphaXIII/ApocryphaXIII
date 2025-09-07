@@ -127,7 +127,7 @@
 	var/lead_tomb = FALSE
 	var/first_open = FALSE
 
-/obj/structure/closet/crate/grave/PopulateContents() //GRAVEROBBING IS NOW A FEATURE
+/obj/structure/closet/crate/grave/PopulateContents()  //GRAVEROBBING IS NOW A FEATURE
 	..()
 	new /obj/effect/decal/remains/human/grave(src)
 	switch(rand(1,8))
@@ -166,7 +166,7 @@
 	if(user.a_intent == INTENT_HELP) //checks to attempt to dig the grave, must be done on help intent only.
 		if(!opened)
 			if(istype(S,cutting_tool) && S.tool_behaviour == TOOL_SHOVEL)
-				to_chat(user, "<span class='notice'>You start start to dig open \the [src] with \the [S]...</span>")
+				to_chat(user, "<span class='notice'>You start start to dig open \the [src]  with \the [S]...</span>")
 				if (do_after(user,20, target = src))
 					opened = TRUE
 					locked = TRUE
@@ -188,9 +188,9 @@
 
 	else if((user.a_intent != INTENT_HELP) && opened) //checks to attempt to remove the grave entirely.
 		if(istype(S,cutting_tool) && S.tool_behaviour == TOOL_SHOVEL)
-			to_chat(user, "<span class='notice'>You start to remove \the [src] with \the [S].</span>")
+			to_chat(user, "<span class='notice'>You start to remove \the [src]  with \the [S].</span>")
 			if (do_after(user,15, target = src))
-				to_chat(user, "<span class='notice'>You remove \the [src] completely.</span>")
+				to_chat(user, "<span class='notice'>You remove \the [src]  completely.</span>")
 				SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "graverobbing", /datum/mood_event/graverobbing)
 				deconstruct(TRUE)
 				return 1
@@ -211,7 +211,7 @@
 	lead_tomb = TRUE
 	first_open = TRUE
 
-/obj/structure/closet/crate/grave/lead_researcher/PopulateContents() //ADVANCED GRAVEROBBING
+/obj/structure/closet/crate/grave/lead_researcher/PopulateContents()  //ADVANCED GRAVEROBBING
 	..()
 	new /obj/effect/decal/cleanable/blood/gibs/old(src)
 	new /obj/item/food/spaghetti/meatballspaghetti(src)
@@ -239,7 +239,7 @@
 	name = "Research Findings: Day 26"
 	desc = "Huh, this one page looks like it was torn out of a full book. How odd."
 	icon_state = "docs_part"
-	default_raw_text = "<b>Researcher name:</b> B--*--* J--*s.<BR><BR>Detailed findings:<i>Today the camp site's cond-tion has wor--ene*. The ashst--ms keep blocking us off from le-ving the sit* for m-re supplies, and it's lo-king like we're out of pl*sma to p-wer the ge-erat*r. Can't rea-*y study c-*bon *ating with no li--ts, ya know? Da-*y's been going -*f again and ag-*n a-*ut h*w the company's left us to *ie here, but I j-s* keep tell-ng him to stop che*-in* out these damn graves. We m-y b* archaeologists, but -e sho*ld have t-e dec-**cy to know these grav-s are *-l NEW.</i><BR><BR><b>The rest of the page is just semantics about carbon dating methods.</b>"
+	default_raw_text = "<b>Researcher name:</b> B--*--* J--*s.<BR><BR>Detailed findings:<i>Today the camp site's cond-tion has wor--ene*. The ashst--ms keep blocking us off from le-ving the sit* for m-re supplies, and it's lo-king like we're out of pl*sma to p-wer the ge-erat*r. Can't rea-*y study c-*bon *ating with no li--ts, ya know? Da-*y's been going -*f again and ag-*n a-*ut h*w the company's left us to *ie here, but I j-s* keep tell-ng him to stop che*-in* out these damn graves. We m-y b*  archaeologists, but -e sho*ld have t-e dec-**cy to know these grav-s are *-l NEW.</i><BR><BR><b>The rest of the page is just semantics about carbon dating methods.</b>"
 
 /obj/item/paper/crumpled/muddy/fluff/elephant_graveyard/mutiny
 	name = "hastily scribbled note"

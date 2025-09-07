@@ -206,8 +206,8 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 	. += "<span class='notice'>[src] can be linked to techfabs, circuit printers and protolathes with a multitool.</span>"
 
 /datum/ore_silo_log
-	var/name // for VV
-	var/formatted // for display
+	var/name  // for VV
+	var/formatted  // for display
 
 	var/timestamp
 	var/machine_name

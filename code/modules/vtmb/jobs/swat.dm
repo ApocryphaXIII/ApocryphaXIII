@@ -325,9 +325,9 @@
 
 
 //////////////////////////////////////////////
-//										 //
-//	 		SWAT (MIDROUND)				//
-//										 //
+//                                          //
+//       		SWAT (MIDROUND)			    //
+//                                          //
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/swat

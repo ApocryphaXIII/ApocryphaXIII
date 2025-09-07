@@ -43,7 +43,7 @@
 	jobtype = /datum/job/vamp/garou/paintedcity/council
 
 	id = /obj/item/card/id/garou/city/council
-	uniform = /obj/item/clothing/under/vampire/office
+	uniform =  /obj/item/clothing/under/vampire/office
 	shoes = /obj/item/clothing/shoes/vampire
 	l_pocket = /obj/item/vamp/phone
 	r_pocket = /obj/item/vamp/keys/children_of_gaia
@@ -100,7 +100,7 @@
 	jobtype = /datum/job/vamp/garou/paintedcity/keeper
 
 	id = /obj/item/card/id/garou/city/keeper
-	uniform = /obj/item/clothing/under/vampire/office
+	uniform =  /obj/item/clothing/under/vampire/office
 	suit = /obj/item/clothing/suit/vampire/jacket
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	l_pocket = /obj/item/vamp/phone
@@ -158,7 +158,7 @@
 	jobtype = /datum/job/vamp/garou/paintedcity/truthcatcher
 
 	id = /obj/item/card/id/garou/city/truthcatcher
-	uniform = /obj/item/clothing/under/vampire/office
+	uniform =  /obj/item/clothing/under/vampire/office
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	l_pocket = /obj/item/vamp/phone
 	r_pocket = /obj/item/vamp/keys/children_of_gaia
@@ -216,7 +216,7 @@
 	jobtype = /datum/job/vamp/garou/paintedcity/warder
 
 	id = /obj/item/card/id/garou/city/warder
-	uniform = /obj/item/clothing/under/vampire/guard
+	uniform =  /obj/item/clothing/under/vampire/guard
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	gloves = /obj/item/clothing/gloves/vampire/leather
 	belt = /obj/item/melee/classic_baton/vampire
@@ -277,7 +277,7 @@
 	jobtype = /datum/job/vamp/garou/paintedcity/guardian
 
 	id = /obj/item/card/id/garou/city/guardian
-	uniform = /obj/item/clothing/under/vampire/bouncer
+	uniform =  /obj/item/clothing/under/vampire/bouncer
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	belt = /obj/item/melee/classic_baton/vampire
 	gloves = /obj/item/clothing/gloves/vampire/leather

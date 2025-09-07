@@ -22,7 +22,7 @@
 	if(!target)
 		return
 	if(!html && !text)
-		// CRASH("Empty or null string in to_chat proc call.") // TODO: source out what causes these
+		// CRASH("Empty or null string in to_chat proc call.")  // TODO: source out what causes these
 		return
 	if(target == world)
 		target = GLOB.clients
@@ -43,8 +43,8 @@
  * Recommended way to write to_chat calls:
  * ```
  * to_chat(client,
- *	 type = MESSAGE_TYPE_INFO,
- *	 html = "You have found <strong>[object]</strong>")
+ *     type = MESSAGE_TYPE_INFO,
+ *     html = "You have found <strong>[object]</strong>")
  * ```
  */
 /proc/to_chat(

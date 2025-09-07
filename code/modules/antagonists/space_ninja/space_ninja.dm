@@ -21,9 +21,9 @@
 	remove_antag_hud(antag_hud_type, ninja)
 
 /**
- * Proc that equips the space ninja outfit on a given individual. By default this is the owner of the antagonist datum.
+ * Proc that equips the space ninja outfit on a given individual.  By default this is the owner of the antagonist datum.
  *
- * Proc that equips the space ninja outfit on a given individual. By default this is the owner of the antagonist datum.
+ * Proc that equips the space ninja outfit on a given individual.  By default this is the owner of the antagonist datum.
  * Arguments:
  * * ninja - The human to receive the gear
  * * Returns a proc call on the given human which will equip them with all the gear.
@@ -51,15 +51,15 @@
 	var/area/detonation_location
 
 /datum/objective/security_scramble
-	explanation_text = "Use your gloves on a security console to set everyone to arrest at least once. Note that the AI will be alerted once you begin!"
+	explanation_text = "Use your gloves on a security console to set everyone to arrest at least once.  Note that the AI will be alerted once you begin!"
 
 /datum/objective/terror_message
-	explanation_text = "Use your gloves on a communication console in order to bring another threat to the station. Note that the AI will be alerted once you begin!"
+	explanation_text = "Use your gloves on a communication console in order to bring another threat to the station.  Note that the AI will be alerted once you begin!"
 
 /**
  * Proc that adds all the ninja's objectives to the antag datum.
  *
- * Proc that adds all the ninja's objectives to the antag datum. Called when the datum is gained.
+ * Proc that adds all the ninja's objectives to the antag datum.  Called when the datum is gained.
  */
 /datum/antagonist/ninja/proc/addObjectives()
 	//Cyborg Hijack: Flag set to complete in the DrainAct in ninjaDrainAct.dm
@@ -87,7 +87,7 @@
 		bombobjective.detonation_location = selected_area
 		break
 	if(bombobjective.detonation_location)
-		bombobjective.explanation_text = "Detonate your starter bomb in [bombobjective.detonation_location]. Note that the bomb will not work anywhere else!"
+		bombobjective.explanation_text = "Detonate your starter bomb in [bombobjective.detonation_location].  Note that the bomb will not work anywhere else!"
 		objectives += bombobjective
 
 	//Security Scramble, set to complete upon using your gloves on a security console

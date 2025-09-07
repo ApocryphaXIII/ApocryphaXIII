@@ -1,5 +1,5 @@
 // -------------------------
-// SmartFridge. Much todo
+//  SmartFridge.  Much todo
 // -------------------------
 /obj/machinery/smartfridge
 	name = "smartfridge"
@@ -69,7 +69,7 @@
 
 
 /*******************
-* Item Adding
+*   Item Adding
 ********************/
 
 /obj/machinery/smartfridge/attackby(obj/item/O, mob/user, params)
@@ -263,7 +263,7 @@
 	else
 		to_chat(user, "<span class='notice'>[src] does not need repairs.</span>")
 // ----------------------------
-// Drying Rack 'smartfridge'
+//  Drying Rack 'smartfridge'
 // ----------------------------
 /obj/machinery/smartfridge/drying_rack
 	name = "drying rack"
@@ -373,7 +373,7 @@
 		return
 
 // ----------------------------
-// Bar drink smartfridge
+//  Bar drink smartfridge
 // ----------------------------
 /obj/machinery/smartfridge/drinks
 	name = "drink showcase"
@@ -387,7 +387,7 @@
 		return TRUE
 
 // ----------------------------
-// Food smartfridge
+//  Food smartfridge
 // ----------------------------
 /obj/machinery/smartfridge/food
 	desc = "A refrigerated storage unit for food."

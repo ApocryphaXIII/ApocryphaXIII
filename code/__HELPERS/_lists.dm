@@ -313,7 +313,7 @@
 
 	return null
 
-/proc/pickweightAllowZero(list/L) //The original pickweight proc will sometimes pick entries with zero weight. I'm not sure if changing the original will break anything, so I left it be.
+/proc/pickweightAllowZero(list/L) //The original pickweight proc will sometimes pick entries with zero weight.  I'm not sure if changing the original will break anything, so I left it be.
 	var/total = 0
 	var/item
 	for (item in L)

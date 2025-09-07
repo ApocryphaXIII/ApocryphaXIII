@@ -107,7 +107,7 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
 
 GLOBAL_LIST_INIT(diamond_recipes, list ( \
 	new/datum/stack_recipe("diamond door", /obj/structure/mineral_door/transparent/diamond, 10, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("diamond tile", /obj/item/stack/tile/mineral/diamond, 1, 4, 20), \
+	new/datum/stack_recipe("diamond tile", /obj/item/stack/tile/mineral/diamond, 1, 4, 20),  \
 	))
 
 /obj/item/stack/sheet/mineral/diamond/get_main_recipes()

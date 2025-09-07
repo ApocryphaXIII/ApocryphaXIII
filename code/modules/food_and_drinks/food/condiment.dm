@@ -219,9 +219,9 @@
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list()
 	/**
-	 * List of possible styles (list(<icon_state>, <name>, <desc>)) for condiment packs.
-	 * Since all of them differs only in color should probably be replaced with usual reagentfillings instead
-	 */
+	  * List of possible styles (list(<icon_state>, <name>, <desc>)) for condiment packs.
+	  * Since all of them differs only in color should probably be replaced with usual reagentfillings instead
+	  */
 	var/list/possible_states = list(
 		/datum/reagent/consumable/ketchup = list("condi_ketchup", "Ketchup", "You feel more American already."),
 		/datum/reagent/consumable/capsaicin = list("condi_hotsauce", "Hotsauce", "You can almost TASTE the stomach ulcers now!"),

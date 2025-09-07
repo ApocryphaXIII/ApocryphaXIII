@@ -405,7 +405,7 @@ GENE SCANNER
 				var/mob/living/carbon/human/H = C
 				if(H.is_bleeding())
 					render_list += "<span class='alert ml-1'><b>Subject is bleeding!</b></span>\n"
-			var/blood_percent = round((C.blood_volume / BLOOD_VOLUME_NORMAL)*100)
+			var/blood_percent =  round((C.blood_volume / BLOOD_VOLUME_NORMAL)*100)
 			var/blood_type = C.dna.blood_type
 			if(blood_id != /datum/reagent/blood) // special blood substance
 				var/datum/reagent/R = GLOB.chemical_reagents_list[blood_id]
@@ -595,19 +595,19 @@ GENE SCANNER
 		if (T.slime_mutation[3] == T.slime_mutation[4])
 			if (T.slime_mutation[2] == T.slime_mutation[1])
 				to_render += "\nPossible mutation: [T.slime_mutation[3]]\
-							 \nGenetic destability: [T.mutation_chance/2] % chance of mutation on splitting"
+							  \nGenetic destability: [T.mutation_chance/2] % chance of mutation on splitting"
 			else
 				to_render += "\nPossible mutations: [T.slime_mutation[1]], [T.slime_mutation[2]], [T.slime_mutation[3]] (x2)\
-							 \nGenetic destability: [T.mutation_chance] % chance of mutation on splitting"
+							  \nGenetic destability: [T.mutation_chance] % chance of mutation on splitting"
 		else
 			to_render += "\nPossible mutations: [T.slime_mutation[1]], [T.slime_mutation[2]], [T.slime_mutation[3]], [T.slime_mutation[4]]\
-						 \nGenetic destability: [T.mutation_chance] % chance of mutation on splitting"
+						  \nGenetic destability: [T.mutation_chance] % chance of mutation on splitting"
 	if (T.cores > 1)
 		to_render += "\nMultiple cores detected"
 	to_render += "\nGrowth progress: [T.amount_grown]/[SLIME_EVOLUTION_THRESHOLD]"
 	if(T.effectmod)
 		to_render += "\n<span class='notice'>Core mutation in progress: [T.effectmod]</span>\
-					 \n<span class='notice'>Progress in core mutation: [T.applied] / [SLIME_EXTRACT_CROSSING_REQUIRED]</span>"
+					  \n<span class='notice'>Progress in core mutation: [T.applied] / [SLIME_EXTRACT_CROSSING_REQUIRED]</span>"
 	to_chat(user, to_render + "\n========================")
 
 
@@ -707,7 +707,7 @@ GENE SCANNER
 	for(var/A in buffer)
 		options += get_display_name(A)
 
-	var/answer = input(user, "Analyze Potential", "Sequence Analyzer") as null|anything in sort_list(options)
+	var/answer = input(user, "Analyze Potential", "Sequence Analyzer")  as null|anything in sort_list(options)
 	if(answer && ready && user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		var/sequence
 		for(var/A in buffer) //this physically hurts but i dont know what anything else short of an assoc list
@@ -737,7 +737,7 @@ GENE SCANNER
 	if(!HM)
 		return "ERROR"
 	if(mutation in discovered)
-		return "[HM.name] ([HM.alias])"
+		return  "[HM.name] ([HM.alias])"
 	else
 		return HM.alias
 

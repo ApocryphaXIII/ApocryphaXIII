@@ -236,7 +236,7 @@
 	..()
 
 	//I tried to just put it in the allowed_containers list but
-	//if you do that it must have reagents. If you're going to
+	//if you do that it must have reagents.  If you're going to
 	//make a special case you might as well do it explicitly. -Sayu
 /obj/item/grenade/chem_grenade/large/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/slime_extract) && stage == GRENADE_WIRED)
@@ -411,7 +411,7 @@
 
 	B1.reagents.add_reagent(/datum/reagent/fluorosurfactant, 40)
 	B2.reagents.add_reagent(/datum/reagent/water, 40)
-	B2.reagents.add_reagent(/datum/reagent/space_cleaner/ez_clean, 60) //ensures a t h i c c distribution
+	B2.reagents.add_reagent(/datum/reagent/space_cleaner/ez_clean, 60) //ensures a  t h i c c  distribution
 
 	beakers += B1
 	beakers += B2

@@ -136,7 +136,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 /**
  * Called when an area loads
  *
- * Adds the item to the GLOB.areas_by_type list based on area type
+ *  Adds the item to the GLOB.areas_by_type list based on area type
  */
 /area/New()
 	// This interacts with the map loader, so it needs to be set immediately

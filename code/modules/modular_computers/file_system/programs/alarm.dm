@@ -76,7 +76,7 @@
 		if (I == A.name)
 			if (!arealevelalarm) // the traditional behaviour
 				var/list/alarm = L[I]
-				var/list/srcs = alarm[3]
+				var/list/srcs  = alarm[3]
 				if (origin in srcs)
 					srcs -= origin
 				if (srcs.len == 0)

@@ -55,7 +55,7 @@
 	color = "#973800" // rgb: 151, 56, 0
 	taste_description = "carrots"
 	glass_icon_state = "carrotjuice"
-	glass_name = "glass of carrot juice"
+	glass_name = "glass of  carrot juice"
 	glass_desc = "It's just like a carrot but without crunching."
 
 /datum/reagent/consumable/carrotjuice/on_mob_life(mob/living/carbon/M)
@@ -113,7 +113,7 @@
 	description = "This juice is VERY sour."
 	color = "#dbe45c" // rgb: 175, 175, 0
 	taste_description = "sourness"
-	glass_icon_state = "lemonglass"
+	glass_icon_state  = "lemonglass"
 	glass_name = "glass of lemon juice"
 	glass_desc = "Sour..."
 
@@ -236,7 +236,7 @@
 	description = "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?"
 	color = "#DFD7AF" // rgb: 223, 215, 175
 	taste_description = "creamy milk"
-	glass_icon_state = "glass_white"
+	glass_icon_state  = "glass_white"
 	glass_name = "glass of cream"
 	glass_desc = "Ewwww..."
 
@@ -364,7 +364,7 @@
 	description = "A refreshing beverage."
 	color = "#100800" // rgb: 16, 8, 0
 	taste_description = "cola"
-	glass_icon_state = "glass_brown"
+	glass_icon_state  = "glass_brown"
 	glass_name = "glass of Space Cola"
 	glass_desc = "A glass of refreshing Space Cola."
 
@@ -648,7 +648,7 @@
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#403010" // rgb: 64, 48, 16
 	taste_description = "creamy chocolate"
-	glass_icon_state = "chocolateglass"
+	glass_icon_state  = "chocolateglass"
 	glass_name = "glass of hot coco"
 	glass_desc = "A favorite winter drink to warm you up."
 

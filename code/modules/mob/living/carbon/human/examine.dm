@@ -478,7 +478,7 @@
 // APOC EDIT START
 		if(is_face_visible())
 			if(HAS_TRAIT(src, TRAIT_PERMAFANGS) && !(check_obscured_slots() & ITEM_SLOT_MASK))
-				msg += span_warning("[p_they(TRUE)] have sharp, elongated canine teeth.</span><br>")
+				msg += span_warning("[p_they(TRUE)] have sharp, elongated canines.</span><br>")
 
 			if(HAS_TRAIT(src, TRAIT_BRIGHTEYES) && !(check_obscured_slots() & ITEM_SLOT_EYES))
 				msg += span_warning("There's something about [p_their()] eyes...<br>") // APOC EDIT END

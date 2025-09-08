@@ -1,4 +1,7 @@
 /datum/gear/uniform/skirtleneck
+	subtype_path = /datum/gear/uniform/skirtleneck
+
+/datum/gear/uniform/skirtleneck/black
 	display_name = "skirtleneck, black"
 	description = "A black turtleneck with a skirt."
 	path = /obj/item/clothing/under/vampire/turtleneck_skirt/black

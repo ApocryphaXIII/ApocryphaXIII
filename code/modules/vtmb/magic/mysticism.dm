@@ -3,7 +3,7 @@
 	desc = "The secrets of Abyss Mysticism..."
 	icon_state = "mystic"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_SMALL
 	var/list/rituals = list()
 

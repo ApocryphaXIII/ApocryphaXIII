@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Camarilla and the Traditions. Yourself."
+	supervisors = "the Camarilla and the Traditions. Yourself" // APOC EDIT CHANGE
 	selection_color = "#bd3327"
 	req_admin_notify = 1
 	minimal_player_age = 14
@@ -30,7 +30,7 @@
 
 	minimal_masquerade = 5
 	allowed_species = list("Vampire")
-	allowed_bloodlines = list(CLAN_TREMERE, CLAN_VENTRUE, CLAN_NOSFERATU, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_BRUJAH, CLAN_LASOMBRA, CLAN_GANGREL, CLAN_TRUE_BRUJAH)
+	allowed_bloodlines = list(CLAN_TREMERE, CLAN_VENTRUE, CLAN_NOSFERATU, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_BRUJAH, CLAN_LASOMBRA, CLAN_GANGREL, CLAN_TRUE_BRUJAH, CLAN_NONE, CLAN_TZIMISCE, CLAN_DAUGHTERS_OF_CACOPHONY) //adds caitiff, tzimisce, and daughters
 
 	known_contacts = list(
 		"Sheriff",

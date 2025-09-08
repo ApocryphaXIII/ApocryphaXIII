@@ -15,7 +15,6 @@ type ExamineData = {
   headshot: string;
   ooc_notes: string;
   character_notes: string;
-  nsfw_content: BooleanLike;
 };
 
 function formatURLs(text: string) {
@@ -58,7 +57,6 @@ export const ExaminePanel = (props) => {
     headshot,
     ooc_notes,
     character_notes,
-    nsfw_content,
   } = data;
   return (
     <Window

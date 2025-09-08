@@ -367,12 +367,8 @@
 	switch(fitting)
 		if("tube")
 			brightness = 8
-			if(prob(2))
-				break_light_tube(1)
 		if("bulb")
 			brightness = 4
-			if(prob(5))
-				break_light_tube(1)
 	addtimer(CALLBACK(src, PROC_REF(update), 0), 1)
 
 /obj/machinery/light/Destroy()
@@ -880,7 +876,7 @@
 	inhand_icon_state = "c_tube"
 	brightness = 8
 	custom_price = PAYCHECK_EASY * 0.5
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 /obj/item/light/tube/broken
 	status = LIGHT_BROKEN
@@ -895,7 +891,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	brightness = 4
 	custom_price = PAYCHECK_EASY * 0.4
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 /obj/item/light/bulb/broken
 	status = LIGHT_BROKEN

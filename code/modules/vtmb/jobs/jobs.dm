@@ -120,7 +120,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id6"
 
@@ -133,7 +133,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id4"
 
@@ -146,7 +146,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id3"
 
@@ -155,13 +155,13 @@
 	id_type_name = "clerk badge"
 	desc = "A badge which shows bureaucracy qualification."
 	icon = 'code/modules/wod13/items.dmi'
-	icon_state = "id1"
+	icon_state = "id_red"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	worn_icon_state = "id1"
+	worn_icon_state = "id_red"
 
 /obj/item/card/id/clerk/harpy
 	name = "Public Relations Clerk badge"
@@ -176,10 +176,14 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "bruiser_badge"
 	registered_name_is_public = FALSE
+
+//Apoc addition
+/obj/item/card/id/bruiser/barkeep
+	name = "barkeep's badge"
 
 /obj/item/card/id/sweeper
 	name = "sweeper badge"
@@ -190,7 +194,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "sweeper_badge"
 	registered_name_is_public = FALSE
@@ -204,7 +208,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "emissary_badge"
 	registered_name_is_public = FALSE
@@ -218,7 +222,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "eagle_badge"
 	registered_name_is_public = FALSE
@@ -229,17 +233,18 @@
 	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY)
 	desc = "A badge which shows medical qualification."
 	icon = 'code/modules/wod13/items.dmi'
-	icon_state = "id2"
+	icon_state = "id_green"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	worn_icon_state = "id2"
-
+	worn_icon_state = "id_green"
+/* Apoc Edit
 /obj/item/card/id/clinic/director
 	name = "clinic director's badge"
 	desc = "A badge which shows not only medical qualification, but also an authority over the clinic."
+*/
 
 /obj/item/card/id/archive
 	name = "scholar badge"
@@ -250,7 +255,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id7"
 
@@ -263,7 +268,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id7_regent"
 
@@ -276,7 +281,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id8"
 
@@ -289,7 +294,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id8"
 
@@ -302,7 +307,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id9"
 
@@ -315,7 +320,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id10"
 
@@ -328,7 +333,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id11"
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_ID
@@ -343,7 +348,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id12"
 	registered_name_is_public = FALSE
@@ -357,7 +362,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id13"
 
@@ -366,13 +371,13 @@
 	id_type_name = "emergency dispatcher badge"
 	desc = "Sponsored by the Government."
 	icon = 'code/modules/wod13/items.dmi'
-	icon_state = "id1"
+	icon_state = "id_red"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	worn_icon_state = "id1"
+	worn_icon_state = "id_red"
 
 /obj/item/card/id/government/districtattorney
 	name = "SFPD DA Badge"
@@ -399,7 +404,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id14"
 	registered_name_is_public = FALSE
@@ -413,7 +418,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id15"
 	registered_name_is_public = FALSE
@@ -429,7 +434,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id12"
 	registered_name_is_public = FALSE
@@ -443,10 +448,15 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id12"
 	registered_name_is_public = FALSE
+
+//APOC EDIT ADD
+/obj/item/card/id/bogatyr/captain
+	name = "patinated badge"
+	desc = "You have to wear this for the guards to recognize you."
 
 // PRIMOGEN STAFF (Distributed in game by Primogen)
 
@@ -459,7 +469,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "onyxBadge"
 
@@ -472,7 +482,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "emeraldBadge"
 
@@ -485,7 +495,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "rubyBadge"
 
@@ -499,7 +509,7 @@
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "id5"
 
@@ -551,37 +561,27 @@
 
 //ENDRON
 /obj/item/card/id/garou/spiral
-	icon_state = "endronemployeeid"
-	worn_icon_state = "endronemployeeid"
+	icon_state = "id_green"
+	worn_icon_state = "id_green"
 
 /obj/item/card/id/garou/spiral/lead
 	name = "Endron Branch Leader card"
-	icon_state = "endronexecutiveid"
-	worn_icon_state = "endronexecutiveid"
 	desc = "How bad can you possibly be?"
 
 /obj/item/card/id/garou/spiral/executive
 	name = "Endron Executive card"
-	icon_state = "endronexecutiveid"
-	worn_icon_state = "endronexecutiveid"
 	desc = "All the customers are buying."
 
 /obj/item/card/id/garou/spiral/affairs
 	name = "Endron Internal Affairs card"
-	icon_state = "endroniaaid"
-	worn_icon_state = "endronemployeeid"
 	desc = "And the Lawyers are denying."
 
 /obj/item/card/id/garou/spiral/secchief
 	name = "Endron Chief of Security badge"
-	icon_state = "endronsecurityid"
-	worn_icon_state = "endronemployeeid"
 	desc = "Its not illegal if nobody finds out about it. Now if only Endron would pay for a single tank for you."
 
 /obj/item/card/id/garou/spiral/sec
 	name = "Endron Security Agent badge"
-	icon_state = "endronsecurityid"
-	worn_icon_state = "endronemployeeid"
 	desc = "Corporate Security, a step above a mall cop. Better paid than a real cop."
 
 /obj/item/card/id/garou/spiral/employee

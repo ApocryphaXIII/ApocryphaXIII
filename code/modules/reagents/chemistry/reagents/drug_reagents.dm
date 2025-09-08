@@ -40,21 +40,30 @@
 	overdose_threshold = INFINITY
 	metabolization_rate = 0.125 * REAGENTS_METABOLISM
 
-/datum/reagent/drug/cannabis/on_mob_life(mob/living/carbon/affected_mob)
-	. = ..()
-	affected_mob.set_drugginess(15)
+/datum/reagent/drug/cannabis/on_mob_metabolize(mob/living/L)
+	..()
+	SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "stoned", /datum/mood_event/stoned, name)
+	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/cannabis)
+	if(ishuman(L))
+		var/mob/living/carbon/human/got_the_munchies = L
+		got_the_munchies.physiology.hunger_mod *= 2
+
+/datum/reagent/drug/cannabis/on_mob_end_metabolize(mob/living/L)
+	..()
+	SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "stoned")
+	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/cannabis)
+	if(ishuman(L))
+		var/mob/living/carbon/human/got_the_munchies = L
+		got_the_munchies.physiology.hunger_mod /= 2
+
+/datum/reagent/drug/cannabis/on_mob_life(mob/living/carbon/M)
+	..()
+	if(prob(10))
+		var/smoke_message = pick("You feel relaxed.","You feel calmed.","Your mouth feels dry.","Your throat is warm and scratchy...","You could use some water.","You feel clumsy.","You crave junk food.","You notice you've been moving more slowly.","The world feels softer and warmer...","A humming warmth spreads across your entire body.","You get lost in your thoughts for a moment...","Everything feels a little more comfortable.","You catch yourself in the middle of smiling vacantly.")
+		to_chat(M, span_notice("[smoke_message]"))
 	if(prob(2))
-		var/smoke_message = pick("You feel relaxed.","You feel calmed.","Your mouth feels dry.","You could use some water.","Your heart beats quickly.","You feel clumsy.","You crave junk food.","You notice you've been moving more slowly.")
-		to_chat(affected_mob, span_notice("[smoke_message]"))
-	if(prob(4))
-		affected_mob.emote(pick("smile","laugh","giggle"))
-	affected_mob.adjust_nutrition(-0.15 * REM) //munchies
-	if(prob(8) && (affected_mob.body_position == LYING_DOWN) && !affected_mob.IsSleeping()) //chance to fall asleep if lying down
-		to_chat(affected_mob, span_warning("You doze off..."))
-		affected_mob.Sleeping(10 SECONDS)
-	if(prob(16) && affected_mob.buckled && (affected_mob.body_position != LYING_DOWN) && !affected_mob.IsParalyzed()) //chance to be couchlocked if sitting
-		to_chat(affected_mob, span_warning("It's too comfy to move..."))
-		affected_mob.Paralyze(5 SECONDS)
+		var/eepy_message = pick("You feel so, so tired.", "You stifle a yawn.", "You really ought to rest for a bit...", "It'd be nice to lay down a bit...","Being in a bed sounds wonderful, right now...","You shake your head to stay awake, but the feeling doesn't let up.","You really want to sleep next to someone...","You keep thinking about how nice a pillow would be, right now.")
+		to_chat(M, span_notice("[eepy_message]"))
 
 
 /datum/reagent/drug/nicotine

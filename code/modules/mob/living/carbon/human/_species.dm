@@ -220,9 +220,9 @@ GLOBAL_LIST_EMPTY(selectable_races)
  * If there are no available roundstart species, defaults to human.
  */
 /proc/generate_selectable_species()
-	//[Lucia] TODO: make this good what the fuck is wrong with the previous thing
+	//[Lucia] TODO: make this good what the fuck is wrong with the previous thing //[Fallcon] HOLY FUCK I HATE I HATE I HATE!!!
 	GLOB.roundstart_races = list("human", "kindred", "ghoul")
-	GLOB.selectable_races = list("human", "kindred", "ghoul", "garou", "kuei-jin")
+	GLOB.selectable_races = list("human", "kindred", "ghoul", "garou", "kuei-jin", "imbued") // APOC ADD - IMBUED
 	/*
 	for(var/I in subtypesof(/datum/species))
 		var/datum/species/S = new I
@@ -1226,6 +1226,9 @@ GLOBAL_LIST_EMPTY(selectable_races)
 	if(HAS_TRAIT(H, TRAIT_NOHUNGER))
 		return //hunger is for BABIES
 
+	if(H.time_spent_stationary < 10) // APOC EDIT ADD START
+		H.time_spent_stationary++	// APOC EDIT ADD END // Increments once/sec
+
 	//The fucking TRAIT_FAT mutation is the dumbest shit ever. It makes the code so difficult to work with
 	if(HAS_TRAIT_FROM(H, TRAIT_FAT, OBESITY))//I share your pain, past coder.
 		if(H.overeatduration < 100)
@@ -1262,8 +1265,10 @@ GLOBAL_LIST_EMPTY(selectable_races)
 				H.Jitter(5)
 			hunger_rate = 3 * HUNGER_FACTOR
 		hunger_rate *= H.physiology.hunger_mod
-		H.adjust_nutrition(-hunger_rate)
-
+		if(H.time_spent_stationary >= 10 && H.nutrition <= 200) // APOC EDIT ADD START // Edit H.time_spent_stationary here to change how long one needs to stand still.
+			H.adjust_nutrition(-hunger_rate/4)
+		else
+			H.adjust_nutrition(-hunger_rate) // APOC EDIT ADD END
 
 	if (H.nutrition > NUTRITION_LEVEL_FULL)
 		if(H.overeatduration < 600) //capped so people don't take forever to unfat

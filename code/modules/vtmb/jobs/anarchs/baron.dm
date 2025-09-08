@@ -1,14 +1,14 @@
 
-/datum/job/vamp/barkeeper
+/datum/job/vamp/baron //Apoc Edit
 	title = "Baron"
-	department_head = list("Justicar")
+//Apoc Edit	department_head = list("Justicar")
 	faction = "Vampire"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Anarchs and the Traditions"
+	supervisors = "the Anarchs" //Apoc Edit
 	selection_color = "#434343"
 
-	outfit = /datum/outfit/job/barkeeper
+	outfit = /datum/outfit/job/baron //Apoc Edit
 
 	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM, ACCESS_THEATRE)
 	minimal_access = list(ACCESS_BAR, ACCESS_MINERAL_STOREROOM, ACCESS_THEATRE)
@@ -28,18 +28,19 @@
 		"Bouncer",
 		"Emissary",
 		"Sweeper",
+		"Barkeep",
 		"Voivode"
 	)
 
-	v_duty = "You lead the Anarchs in the City. A Camarilla faction that values freedom and individuality. While not a fan of the traditions, you still respect the Masquerade."
+	v_duty = "You are one of the Anarchy Barons, you run the San Francisco Freestate Anarchs in the absense of others. There is a cold peace with the Camarilla in the city, but ultimately you run the show." //Apoc Edit
 	minimal_masquerade = 3
 	allowed_species = list("Vampire")
-	allowed_bloodlines = list(CLAN_DAUGHTERS_OF_CACOPHONY, CLAN_BAALI, CLAN_BANU_HAQIM, CLAN_NONE, CLAN_TZIMISCE, CLAN_TRUE_BRUJAH, CLAN_BRUJAH, CLAN_NOSFERATU, CLAN_GANGREL, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_VENTRUE, CLAN_LASOMBRA, CLAN_GARGOYLE, CLAN_SETITES)
+	allowed_bloodlines = list(CLAN_DAUGHTERS_OF_CACOPHONY, CLAN_BAALI, CLAN_BANU_HAQIM, CLAN_NONE, CLAN_TZIMISCE, CLAN_TRUE_BRUJAH, CLAN_BRUJAH, CLAN_NOSFERATU, CLAN_GANGREL, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_VENTRUE, CLAN_LASOMBRA, CLAN_RAVNOS) //apoc edit
 	experience_addition = 20
 
-/datum/outfit/job/barkeeper
+/datum/outfit/job/baron //apoc edit
 	name = "Baron"
-	jobtype = /datum/job/vamp/barkeeper
+	jobtype = /datum/job/vamp/baron //apoc edit
 
 	ears = /obj/item/p25radio
 	id = /obj/item/card/id/baron
@@ -58,6 +59,6 @@
 		uniform = /obj/item/clothing/under/vampire/bar/female
 		shoes = /obj/item/clothing/shoes/vampire/heels
 
-/obj/effect/landmark/start/barkeeper
+/obj/effect/landmark/start/baron //apoc edit
 	name = "Baron"
 	icon_state = "Barkeeper"

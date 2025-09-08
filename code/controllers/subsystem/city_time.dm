@@ -59,15 +59,15 @@ SUBSYSTEM_DEF(city_time)
 
 	if(station_time_passed() > time_till_daytime - 30 MINUTES && !first_warning)
 		first_warning = TRUE
-		to_chat(world, "<span class='ghostalert'>The night is ending...</span>")
+		to_chat(world, span_ghostalertliving("The night is ending..."))
 
 	if(station_time_passed() > time_till_daytime - 15 MINUTES && !second_warning)
 		second_warning = TRUE
-		to_chat(world, "<span class='ghostalert'>First rays of the sun illuminate the sky...</span>")
+		to_chat(world, span_ghostalertliving("First rays of the sun illuminate the sky..."))
 
 	if(station_time_passed() > time_till_daytime && !daytime_started)
 		daytime_started = TRUE
-		to_chat(world, "<span class='ghostalert'>THE NIGHT IS OVER.</span>")
+		to_chat(world, span_ghostalertliving("THE NIGHT IS OVER."))
 
 	if(station_time_passed() > time_till_roundend && !roundend_started)
 		roundend_started = TRUE

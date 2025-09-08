@@ -7,7 +7,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 	var/list/accesslocks = list(
 		"nothing"
@@ -179,19 +179,20 @@
 		"old_clan_tzimisce",
 		"tmr"
 	)
-
-/obj/item/vamp/keys/tzimisce
-	name = "Regal keys"
+//APOC EDIT Start
+/obj/item/vamp/keys/voivodate
+	name = "Family estate keys"
 	accesslocks = list(
-		"tzimisce"
+		"voivodate_citizen"
 	)
 
-/obj/item/vamp/keys/tzimisce/manor
-	name = "Manor keys"
+/obj/item/vamp/keys/voivodate/master
+	name = "Estate master keys"
 	accesslocks = list(
-		"tzimisce",
-		"tzimiscemanor"
+		"seer_voivodate",
+		"voivodate_citizen"
 	)
+//APOC EDIT End
 
 /obj/item/vamp/keys/setite
 	name = "Serpentine keys"
@@ -340,7 +341,7 @@
 	accesslocks = list(
 		"clinic"
 	)
-
+/* Apoc Edit
 /obj/item/vamp/keys/clinics_director
 	name = "Clinic director keys"
 	accesslocks = list(
@@ -349,7 +350,7 @@
 		"director",
 		"malkav"
 	)
-
+*/
 //===========================POLICE KEYS===========================
 /obj/item/vamp/keys/police
 	name = "Police keys"

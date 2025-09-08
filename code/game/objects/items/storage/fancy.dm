@@ -216,7 +216,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 10
-	STR.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter, /obj/item/cigbutt)) // ZAPOC EDIT CHANGE
+	STR.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter, /obj/item/cigbutt)) // APOC EDIT CHANGE
 
 /obj/item/storage/fancy/cigarettes/examine(mob/user)
 	. = ..()
@@ -247,7 +247,7 @@
 
 /obj/item/storage/fancy/cigarettes/update_overlays()
 	. = ..()
-	if(fancy_open && contents.len)
+	if(fancy_open && contents.len && !(istype(src, /obj/item/storage/fancy/cigarettes/cigars))) // APOC EDIT CHANGE // Will now check if the box is a cigar box
 		. += "[icon_state]_open"
 		var/cig_position = 1
 		for(var/C in contents)
@@ -408,7 +408,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 5
-	STR.set_holdable(list(/obj/item/clothing/mask/cigarette/cigar, /obj/item/cigbutt/cigarbutt)) // ZAPOC EDIT CHANGE
+	STR.set_holdable(list(/obj/item/clothing/mask/cigarette/cigar, /obj/item/cigbutt/cigarbutt)) // APOC EDIT CHANGE
 
 /obj/item/storage/fancy/cigarettes/cigars/update_icon_state()
 	. = ..()
@@ -473,7 +473,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 5
-	STR.set_holdable(list(/obj/item/food/vampire/nugget, /obj/item/trash/vampirenugget)) // ZAPOC EDIT CHANGE
+	STR.set_holdable(list(/obj/item/food/vampire/nugget, /obj/item/trash/vampirenugget)) // APOC EDIT CHANGE
 
 /obj/item/storage/fancy/hardcase
 	name = "5.56 magazine hardcase"

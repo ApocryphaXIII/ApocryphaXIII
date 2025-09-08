@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "God ... And the Patron of the Church."
+	supervisors = "God ... And the Patron of the Church" // APOC EDIT CHANGE
 	selection_color = "#fff700"
 
 	outfit = /datum/outfit/job/priest
@@ -17,7 +17,7 @@
 	display_order = JOB_DISPLAY_ORDER_PRIEST
 	exp_type_department = EXP_TYPE_CHURCH
 
-	allowed_species = list("Human", "Ghoul", "Vampire")
+	allowed_species = list("Human", "Imbued", "Ghoul", "Vampire")
 	allowed_bloodlines = list(CLAN_LASOMBRA, CLAN_TOREADOR, CLAN_MALKAVIAN, CLAN_SALUBRI, CLAN_SALUBRI_WARRIOR, CLAN_NAGARAJA, CLAN_CAPPADOCIAN, CLAN_BANU_HAQIM, CLAN_NONE)
 	species_slots = list("Vampire" = 2, "Ghoul" = 50, "Human" = 50)
 	minimal_generation = 13
@@ -51,21 +51,22 @@
 	var/list/loadouts = list("Numina", "True Faith")
 	spawn()
 		var/mob/living/carbon/human/H = src
-		if(is_species(H, /datum/species/human))
-			if(H.client)
-				var/loadout_type = input(H, "Choose what makes you special:", "Loadout") as anything in loadouts
-				remove_verb(H, /datum/job/vampire/priest/verb/choose_special)
-				switch(loadout_type)
-					if("Numina")
-						to_chat(H, "<span class='alertsyndie'>You have been blessed with psychic powers. They make you extraordinary among mortals, yet you still fear the horrors lurking unknown.</span>")
-						var/obj/effect/proc_holder/spell/targeted/numina_freeze/n_freeze = new(H)
-						var/obj/effect/proc_holder/spell/self/numina_heal/n_heal = new(H)
-						H.mind.AddSpell(n_freeze)
-						H.mind.AddSpell(n_heal)
-					if("True Faith")
-						H.mind.holy_role = HOLY_ROLE_PRIEST
-						H.resistant_to_disciplines = TRUE
-						to_chat(H, "<span class='alertsyndie'>Your faith in God is made of iron. None could shake it, and even in the darkest moments it holds you up.</span>")
+		if(ishumanbasic(H) && !isimbued(H))
+			if(!H.client)
+				return
+			var/loadout_type = input(H, "Choose what makes you special:", "Loadout") as anything in loadouts
+			remove_verb(H, /datum/job/vampire/priest/verb/choose_special)
+			switch(loadout_type)
+				if("Numina")
+					to_chat(H, "<span class='alertsyndie'>You have been blessed with psychic powers. They make you extraordinary among mortals, yet you still fear the horrors lurking unknown.</span>")
+					var/obj/effect/proc_holder/spell/targeted/numina_freeze/n_freeze = new(H)
+					var/obj/effect/proc_holder/spell/self/numina_heal/n_heal = new(H)
+					H.mind.AddSpell(n_freeze)
+					H.mind.AddSpell(n_heal)
+				if("True Faith")
+					H.mind.holy_role = HOLY_ROLE_PRIEST
+					H.resistant_to_disciplines = TRUE
+					to_chat(H, "<span class='alertsyndie'>Your faith in God is made of iron. None could shake it, and even in the darkest moments it holds you up.</span>")
 
 /obj/effect/landmark/start/priest
 	name = "Priest"

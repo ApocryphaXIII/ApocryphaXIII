@@ -95,6 +95,21 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	. = ..()
 	playsound(get_turf(AM), 'code/modules/wod13/sounds/portal_enter.ogg', 75, FALSE)
 
-
 /obj/transfer_point_vamp/debug
 	id = "debug"
+
+//APOC EDIT START
+/obj/transfer_point_vamp/voivodate
+	name = "voivodate transfer point"
+	density = 1
+	id = "estate_1"
+
+/obj/transfer_point_vamp/voivodate/one
+	id = "estate_2"
+
+/obj/transfer_point_vamp/voivodate/two
+	id = "estate_3"
+
+/obj/transfer_point_vamp/voivodate/three
+	id = "estate_4"
+//APOC EDIT END

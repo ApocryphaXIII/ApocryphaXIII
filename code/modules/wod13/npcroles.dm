@@ -818,7 +818,7 @@
 /mob/living/simple_animal/hostile/beastmaster/rat
 	name = "rat"
 	desc = "It's a rat."
-	icon = 'code/modules/wod13/icons.dmi'
+	icon = 'icons/mob/animal.dmi' // APOC EDIT CHANGE // Rats are stored here as of APOC #52
 	icon_state = "rat"
 	icon_living = "rat"
 	icon_dead = "rat_dead"
@@ -1533,8 +1533,9 @@
 	if(stat < 2)
 		if(prob(20))
 			if(istype(our_pole) && (our_pole.loc == src.loc))
-				drop_all_held_items()
-				ClickOn(our_pole)
+				return
+				//drop_all_held_items()
+				//ClickOn(our_pole)
 			else
 				for(var/obj/structure/pole/P in range(1, src))
 					our_pole = P

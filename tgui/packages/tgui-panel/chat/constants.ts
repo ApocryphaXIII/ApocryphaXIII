@@ -56,8 +56,8 @@ export const MESSAGE_TYPES = [
   {
     type: MESSAGE_TYPE_LOCALCHAT,
     name: 'Local',
-    description: 'In-character local messages (say, emote, etc)',
-    selector: '.say, .emote',
+    description: 'In-character local messages (say, emote, subtle, etc)',
+    selector: '.say, .emote, .subtle, .subtler',
   },
   {
     type: MESSAGE_TYPE_RADIO,
@@ -84,7 +84,7 @@ export const MESSAGE_TYPES = [
     name: 'Warnings',
     description: 'Urgent messages from the game and items',
     selector:
-      '.warning:not(.pm), .critical, .userdanger, .italics, .alertsyndie, .warningplain',
+      '.warning:not(.pm), .critical, .userdanger, .italics, .alertsyndie, .warningplain, .ghostalertliving',
   },
   {
     type: MESSAGE_TYPE_DEADCHAT,

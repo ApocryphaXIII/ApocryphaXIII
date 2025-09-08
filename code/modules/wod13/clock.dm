@@ -12,7 +12,7 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	slot_flags = ITEM_SLOT_GLOVES | ITEM_SLOT_ID
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	cost = 50
 
 /obj/item/cockclock/examine(mob/user)
@@ -28,22 +28,30 @@
 	icon_state = "passport1"
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_ID
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	var/closed = TRUE
 	var/owner = ""
 	var/fake = FALSE
 
 
-/obj/item/passport/Initialize()
+/obj/item/passport/Initialize() // APOC EDIT START
 	. = ..()
 	var/mob/living/carbon/human/user = null
 	if(ishuman(loc)) // In pockets
 		user = loc
 	else if(ishuman(loc?.loc)) // In backpack
 		user = loc
-	if(!isnull(user))
+	if(isnull(user))
+		return
+	if(HAS_TRAIT(user, TRAIT_ILLEGAL_IDENTITY))
+		fake = TRUE
+		if(user.dna?.species)
+			owner = user.dna.species.random_name(user.gender, unique = TRUE)
+		else
+			owner = random_unique_name(user.gender)
+	else
 		owner = user.real_name
-
+// APOC EDIT END
 
 /obj/item/passport/examine(mob/user)
 	. = ..()

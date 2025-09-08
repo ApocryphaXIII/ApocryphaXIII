@@ -8,6 +8,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	var/tool_speed = 50
 	var/remaining_uses = 3
+	var/chisel_type = /obj/structure/chisel_message
 
 /obj/item/soapstone/Initialize(mapload)
 	. = ..()
@@ -18,13 +19,15 @@
 	if(remaining_uses != -1)
 		. += "It has [remaining_uses] uses left."
 
-/obj/item/soapstone/afterattack(atom/target, mob/user, proximity)
+/obj/item/soapstone/afterattack(atom/target, mob/user, proximity, params)
 	. = ..()
 	var/turf/T = get_turf(target)
 	if(!proximity)
 		return
 
-	var/obj/structure/chisel_message/existing_message = locate() in T
+	var/obj/structure/chisel_message/existing_message
+	if(istype(target, /obj/structure/chisel_message))
+		existing_message = target
 
 	if(!remaining_uses && !existing_message)
 		to_chat(user, "<span class='warning'>[src] is too worn out to use.</span>")
@@ -36,33 +39,49 @@
 
 	if(existing_message)
 		user.visible_message("<span class='notice'>[user] starts erasing [existing_message].</span>", "<span class='notice'>You start erasing [existing_message].</span>", "<span class='hear'>You hear a chipping sound.</span>")
-		playsound(loc, 'sound/items/gavel.ogg', 50, TRUE, -1)
 		if(do_after(user, tool_speed, target = existing_message))
 			user.visible_message("<span class='notice'>[user] erases [existing_message].</span>", "<span class='notice'>You erase [existing_message][existing_message.creator_key == user.ckey ? ", refunding a use" : ""].</span>")
 			existing_message.persists = FALSE
 			qdel(existing_message)
-			playsound(loc, 'sound/items/gavel.ogg', 50, TRUE, -1)
 			if(existing_message.creator_key == user.ckey)
 				refund_use()
 		return
 
-	var/message = stripped_input(user, "What would you like to engrave?", "Leave a message")
+	// APOC ADD START - IMBUED
+	var/list/click_params = params2list(params)
+	var/clickx
+	var/clicky
+
+	if(click_params && click_params["icon-x"] && click_params["icon-y"])
+		clickx = clamp(text2num(click_params["icon-x"]) - 16, -(world.icon_size/2), world.icon_size/2)
+		clicky = clamp(text2num(click_params["icon-y"]) - 16, -(world.icon_size/2), world.icon_size/2)
+	// APOC ADD END - IMBUED
+
+	var/message = get_message(user)
 	if(!message)
 		to_chat(user, "<span class='notice'>You decide not to engrave anything.</span>")
 		return
 
+	// APOC REMOVAL START - IMBUED
+	/*
 	if(!target.Adjacent(user) && locate(/obj/structure/chisel_message) in T)
 		to_chat(user, "<span class='warning'>Someone wrote here before you chose! Find another spot.</span>")
 		return
-	playsound(loc, 'sound/items/gavel.ogg', 50, TRUE, -1)
+	*/
+	// APOC REMOVAL END - IMBUED
 	user.visible_message("<span class='notice'>[user] starts engraving a message into [T]...</span>", "<span class='notice'>You start engraving a message into [T]...</span>", "<span class='hear'>You hear a chipping sound.</span>")
 	if(can_use() && do_after(user, tool_speed, target = T) && can_use()) //This looks messy but it's actually really clever!
-		if(!locate(/obj/structure/chisel_message) in T)
-			user.visible_message("<span class='notice'>[user] leaves a message for future spacemen!</span>", "<span class='notice'>You engrave a message into [T]!</span>", "<span class='hear'>You hear a chipping sound.</span>")
-			playsound(loc, 'sound/items/gavel.ogg', 50, TRUE, -1)
-			var/obj/structure/chisel_message/M = new(T)
-			M.register(user, message)
-			remove_use()
+		user.visible_message("<span class='notice'>[user] leaves a message for future spacemen!</span>", "<span class='notice'>You engrave a message into [T]!</span>", "<span class='hear'>You hear a chipping sound.</span>")
+		var/obj/structure/chisel_message/M = new chisel_type(T)
+		M.register(user, message)
+		// APOC ADD START - IMBUED
+		M.pixel_x = clickx
+		M.pixel_y = clicky
+		// APOC END START - IMBUED
+		remove_use()
+
+/obj/item/soapstone/proc/get_message(mob/user)
+	return stripped_input(user, "What would you like to engrave?", "Leave a message")
 
 /obj/item/soapstone/proc/can_use()
 	return remaining_uses == -1 || remaining_uses >= 0
@@ -128,6 +147,8 @@ but only permanently removed with the curator's soapstone.
 
 	var/turf/original_turf
 
+	var/the_word = FALSE
+
 	/// Total vote count at or below which we won't persist.
 	var/delete_at = -5
 
@@ -154,6 +175,9 @@ but only permanently removed with the curator's soapstone.
 
 /obj/structure/chisel_message/update_appearance()
 	. = ..()
+	update_message_apperance()
+
+/obj/structure/chisel_message/proc/update_message_apperance()
 	var/hash = md5(hidden_message)
 	var/newcolor = copytext_char(hash, 1, 7)
 	add_atom_colour("#[newcolor]", FIXED_COLOUR_PRIORITY)
@@ -170,8 +194,13 @@ but only permanently removed with the curator's soapstone.
 	data["x"] = original_turf.x
 	data["y"] = original_turf.y
 	data["z"] = original_turf.z
+	// APOC ADD START - IMBUED
+	data["pixel_x"] = pixel_x
+	data["pixel_y"] = pixel_y
+	// APOC ADD END - IMBUED
 	data["like_keys"] = like_keys
 	data["dislike_keys"] = dislike_keys
+	data["the_word"] = the_word
 	return data
 
 /obj/structure/chisel_message/proc/unpack(list/data)
@@ -189,6 +218,11 @@ but only permanently removed with the curator's soapstone.
 	if(!dislike_keys)
 		dislike_keys = list()
 
+	// APOC ADD START - IMBUED
+	if(data["pixel_x"] && data["pixel_y"])
+		pixel_x = data["pixel_x"]
+		pixel_y = data["pixel_y"]
+	// APOC ADD END - IMBUED
 	var/x = data["x"]
 	var/y = data["y"]
 	var/z = data["z"]
@@ -199,7 +233,13 @@ but only permanently removed with the curator's soapstone.
 
 /obj/structure/chisel_message/examine(mob/user)
 	. = ..()
-	ui_interact(user)
+	if(can_read_message(user))
+		ui_interact(user)
+	else
+		to_chat(user, span_warning("I cant make out what this says"))
+
+/obj/structure/chisel_message/proc/can_read_message(mob/user)
+	return user.can_read(src)
 
 /obj/structure/chisel_message/Destroy()
 	if(persists)

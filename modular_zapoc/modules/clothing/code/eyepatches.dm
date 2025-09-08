@@ -83,12 +83,12 @@
 /obj/item/clothing/glasses/apoc/blindfold/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 	if((slot == ITEM_SLOT_EYES && !trick) && adjusted_state == "both")
-		user.become_blind("blindfold_[REF(src)]")
+		user.become_blind("blindfold")
 
 
 /obj/item/clothing/glasses/apoc/blindfold/dropped(mob/living/carbon/human/user)
 	..()
-	user.cure_blind("blindfold_[REF(src)]")
+	user.cure_blind("blindfold")
 
 
 /obj/item/clothing/glasses/apoc/blindfold/AltClick(mob/user)

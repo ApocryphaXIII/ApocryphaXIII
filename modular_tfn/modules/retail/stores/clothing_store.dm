@@ -125,4 +125,6 @@
 		new /datum/data/vending_product("backpack",	/obj/item/storage/backpack,		100),
 		new /datum/data/vending_product("satchel",		/obj/item/storage/backpack/satchel,		100),
 		new /datum/data/vending_product("leather satchel",		/obj/item/storage/backpack/satchel/leather,		150),
+		new /datum/data/vending_product("dress cane", /obj/item/cane, 50),
+		new /datum/data/vending_product("white cane", /obj/item/cane/white, 30)
 	)

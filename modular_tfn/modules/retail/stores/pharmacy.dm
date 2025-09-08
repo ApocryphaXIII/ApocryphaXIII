@@ -7,4 +7,8 @@
 		new /datum/data/vending_product("iron pill bottle", /obj/item/storage/pill_bottle/iron, 150),
 		new /datum/data/vending_product("ephedrine pill bottle", /obj/item/storage/pill_bottle/ephedrine, 200),
 		new /datum/data/vending_product("box of syringes", /obj/item/storage/box/syringes, 300)
+		new /datum/data/vending_product("medical eyepatch", /obj/item/clothing/glasses/apoc/eyepatch/medical, 5),
+		new /datum/data/vending_product("head bandage", /obj/item/clothing/glasses/apoc/blindfold, 5),
+		new /datum/data/vending_product("sheer head bandage", /obj/item/clothing/glasses/apoc/blindfold/trick, 5),
+		new /datum/data/vending_product("hearing aid", /obj/item/clothing/ears/hearing_aid, 5)
 	)

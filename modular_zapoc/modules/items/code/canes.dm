@@ -8,6 +8,7 @@
 	lefthand_file = 'modular_zapoc/modules/items/icons/canes_lefthand.dmi'
 	righthand_file = 'modular_zapoc/modules/items/icons/canes_righthand.dmi'
 	force = 1
+	grid_height = 2
 	w_class = WEIGHT_CLASS_SMALL
 	extended = FALSE
 
@@ -26,10 +27,12 @@
 			inhand_icon_state = "[base_icon_state]_on"
 			force = 5
 			w_class = WEIGHT_CLASS_BULKY
+			grid_height = 10
 			extended = TRUE
 		else
 			icon_state = "[base_icon_state]"
 			inhand_icon_state = "[base_icon_state]"
+			grid_height = 2
 			force = initial(force)
 			w_class = initial(w_class)
 			extended = FALSE

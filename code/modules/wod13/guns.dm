@@ -27,7 +27,7 @@
 	desc = "Feelin' lucky, punk?"
 	icon_state = "revolver"
 	inhand_icon_state = "revolver"
-	worn_icon_state = "revolver"
+	worn_icon_state = "gun"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	initial_caliber = CALIBER_44
 	fire_sound = 'code/modules/wod13/sounds/revolver.ogg'
@@ -108,7 +108,6 @@
 	desc = "a cheap Saturday night special revolver. Sometimes called a 'purse gun'. It takes 9mm rounds."
 	icon_state = "revolver_snub"
 	inhand_icon_state = "revolver_snub"
-	worn_icon_state = "revolver_snub"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev9mm
 	w_class = WEIGHT_CLASS_SMALL
 	initial_caliber = CALIBER_9MM
@@ -140,7 +139,6 @@
 	desc = "A powerful .44 handgun."
 	icon_state = "deagle"
 	inhand_icon_state = "deagle"
-	worn_icon_state = "deagle"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m44
 	recoil = 3
@@ -179,7 +177,6 @@
 	desc = "An extremely powerful, and rare, handcannon."
 	icon_state = "deagle50"
 	inhand_icon_state = "deagle"
-	worn_icon_state = "deagle"
 	weapon_weight = WEAPON_HEAVY // No dual-wielding .50 cals.
 	mag_type = /obj/item/ammo_box/magazine/m50
 	fire_sound_volume = 125 //MY EARS
@@ -202,7 +199,7 @@
 	desc = "A reliable .45 ACP handgun."
 	icon_state = "m1911"
 	inhand_icon_state = "m1911"
-	worn_icon_state = "m1911"
+	worn_icon_state = "gun"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/vamp45acp
 	burst_size = 1
@@ -240,7 +237,6 @@
 	desc = "Very fast 9mm handgun."
 	icon_state = "glock19"
 	inhand_icon_state = "glock19"
-	worn_icon_state = "glock19"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/glock9mm
 	burst_size = 3
@@ -278,7 +274,6 @@
 	desc = "Very fast 45 ACP handgun."
 	icon_state = "glock19"
 	inhand_icon_state = "glock19"
-	worn_icon_state = "glock19"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/glock45acp
 	burst_size = 3
@@ -303,7 +298,6 @@
 	desc = "A 9mm pistol favored among law enforcement and criminal alike due to it's use in action movies. Often, it is wielded in pairs."
 	icon_state = "beretta"
 	inhand_icon_state = "beretta"
-	worn_icon_state = "beretta"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/semi9mm
 	burst_size = 1
@@ -329,7 +323,6 @@
 	desc = "A handgun that has been heavily decorated and customized. The improvements seem almost supernaturally good, you feel like the engravings have given you a tactical advantage."
 	icon_state = "beretta_toreador"
 	inhand_icon_state = "beretta_toreador"
-	worn_icon_state = "beretta"
 	projectile_damage_multiplier = 2.5
 	fire_sound_volume = 110
 	cost = 666
@@ -369,7 +362,6 @@
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "uzi"
 	inhand_icon_state = "uzi"
-	worn_icon_state = "uzi"
 	mag_type = /obj/item/ammo_box/magazine/vamp9mm
 	burst_size = 5
 	spread = 11
@@ -401,7 +393,6 @@
 	icon = 'code/modules/wod13/48x32weapons.dmi'
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	inhand_icon_state = "mp5"
-	worn_icon_state = "mp5"
 	mag_type = /obj/item/ammo_box/magazine/vamp9mp5
 	burst_size = 4
 	spread = 4
@@ -432,7 +423,6 @@
 	icon = 'code/modules/wod13/48x32weapons.dmi'
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	inhand_icon_state = "mp7"
-	worn_icon_state = "mp7"
 	mag_type = /obj/item/ammo_box/magazine/vamp46mp7
 	burst_size = 4
 	spread = 2
@@ -525,7 +515,6 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "ak74"
 	inhand_icon_state = "ak74"
-	worn_icon_state = "ak74"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
 	mag_type = /obj/item/ammo_box/magazine/vamp545
@@ -560,7 +549,6 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "aug"
 	inhand_icon_state = "aug"
-	worn_icon_state = "aug"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM //Bullpup makes it easy to fire with one hand, but we still don't want these dual-wielded
 	mag_type = /obj/item/ammo_box/magazine/vampaug
@@ -595,7 +583,6 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "thompson"
 	inhand_icon_state = "thompson"
-	worn_icon_state = "thompson"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
 	mag_type = /obj/item/ammo_box/magazine/vampthompson

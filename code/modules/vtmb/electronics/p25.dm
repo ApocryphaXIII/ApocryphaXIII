@@ -571,6 +571,10 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 	return FALSE
 
 /obj/item/p25radio/proc/p25_talk_into(atom/movable/speaker, message, channel, list/spans, datum/language/language, list/message_mods = list())
+	if(HAS_TRAIT(speaker, TRAIT_SIGN_LANG)) // APOC EDIT ADD START
+		to_chat(speaker, span_warning("You sign into the radio, but nothing happens."))
+		return NONE // APOC EDIT ADD END
+
 	if(!linked_network)
 		if(ismob(speaker))
 			to_chat(speaker, "<span class='warning'>The radio fails to transmit because it is not linked to a transceiver.</span>")

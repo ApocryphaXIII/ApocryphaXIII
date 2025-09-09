@@ -108,18 +108,28 @@ Dancer
 	lose_text = "<span class='warning'>You can feed normal again.</span>"
 
 /datum/quirk/one_hand
-	name = "One Handed"
-	desc = "You've lost an arm before the embrace, and it's still unhealed."
+	name = "One Handed (Left)" // APOC EDIT CHANGE START
+	desc = "You're missing your left arm. You're definitely not a south-paw."
 	value = -3
-	gain_text = "<span class='warning'>You don't feel one of your arms.</span>"
-	lose_text = "<span class='notice'>You feel both of your arms again.</span>"
+	gain_text = "<span class='warning'>You can't feel your left arm!</span>"
+	lose_text = "<span class='notice'>Huh? Your left arm is back...</span>"
+	allowed_species = list("Vampire","Ghoul","Human","Imbued","Kuei-Jin")
+	var/arm_missing = "left"
+
+/datum/quirk/one_hand/right
+	name = "One Handed (Right)"
+	desc = "You're missing your right arm. That just ain't right."
+	value = -3
+	gain_text = "<span class='warning'>You can't feel your right arm!</span>"
+	lose_text = "<span class='notice'>Huh? Your right arm is back...</span>"
+	arm_missing = "right" // APOC EDIT CHANGE END
 
 /datum/quirk/one_hand/on_spawn()
 	if(!iswerewolf(quirk_holder))
 		var/mob/living/carbon/human/H = quirk_holder
 		var/obj/item/bodypart/B1 = H.get_bodypart(BODY_ZONE_R_ARM)
 		var/obj/item/bodypart/B2 = H.get_bodypart(BODY_ZONE_L_ARM)
-		if(prob(50))
+		if(arm_missing == "right") // APOC EDIT CHANGE
 			B1.drop_limb()
 			qdel(B1)
 		else
@@ -341,7 +351,7 @@ Dancer
 
 /datum/action/dance
 	name = "Dance"
-	desc = "Dance from dusck till dawn!"
+	desc = "Dance from dusk till dawn!" // APOC EDIT CHANGE // typo
 	button_icon_state = "dance"
 	check_flags = AB_CHECK_HANDS_BLOCKED|AB_CHECK_IMMOBILE|AB_CHECK_LYING|AB_CHECK_CONSCIOUS
 	var/last_added_humanity = 0
@@ -469,7 +479,7 @@ Dancer
 	mob_trait = TRAIT_HOMOSEXUAL
 	gain_text = "<span class='notice'>You feel gay.</span>"
 	lose_text = "<span class='notice'>You don't feel gay anymore.</span>"
-
+/* //APOC EDIT REMOVE START
 /datum/quirk/foreign
 	name = "Foreigner"
 	desc = "You don't know English language! If you don't know other languages - that means you don't know any."
@@ -485,7 +495,7 @@ Dancer
 /datum/quirk/foreign/remove()
 	var/mob/living/carbon/H = quirk_holder
 	H.remove_blocked_language(/datum/language/english)
-
+*/ // APOC EDIT REMOVE END
 /datum/quirk/espanol
 	name = "Espanol"
 	desc = "You know the Spanish language."
@@ -597,7 +607,7 @@ Dancer
 
 /datum/quirk/consumption
 	name = "Consumption"
-	desc = "Your blood is wrought with flesh eating bacteria that is literally eating you from inside out. You take some damage every random amount of time."
+	desc = "Your blood is wrought with flesh eating bacteria that is literally eating you from inside out. You take some damage roughly twice per minute." // APOC EDIT CHANGE // More clear how catastrophic this is
 	value = -4
 	gain_text = "<span class='danger'>You feel injured from inside.</span>"
 	lose_text = "<span class='notice'>You feel healthy again.</span>"
@@ -610,7 +620,7 @@ Dancer
 
 /datum/quirk/badvision
 	name = "Nearsighted"
-	desc = "Your eye illness somehow did not become cured after the Embrace, and you need to wear perception glasses."
+	desc = "Your eyes aren't quite right, forcing you to wear prescription glasses." // APOC EDIT CHANGE
 	value = -1
 	gain_text = "<span class='danger'>Things far away from you start looking blurry.</span>"
 	lose_text = "<span class='notice'>You start seeing faraway things normally again.</span>"
@@ -663,13 +673,21 @@ Dancer
 	allowed_species = list("Vampire")
 
 /datum/quirk/permafangs
-	name = "Permanent Fangs"
-	desc = "Your fangs do not retract, making it impossible for you to hide your true nature. While some mortals may think you’ve had your teeth filed or are wearing prosthetics, sooner or later you’re going to run into someone who knows what you truly are."
+	name = "Permanent Fangs" // APOC EDIT START
+	desc = "For one reason or another, your canines are sharp and elongated. Prosthetics? Body mod? You're an evil monster and you can't retract your horrible fangs? No matter what the reason, be careful who you let see your chompers."
 	value = 0
 	mob_trait = TRAIT_PERMAFANGS
-	gain_text = "<span class='notice'>Your fangs become stuck.</span>"
+	gain_text = "<span class='notice'>You feel your canines on the inside of your mouth.</span>"
+	lose_text = "<span class='notice'>You can finally close your mouth without risking your tongue.</span>"
+	allowed_species = list("Ghoul","Human","Imbued","Werewolf","Kuei-Jin")
+
+/datum/quirk/permafangs/vampire
+	name = "Permanent Fangs (Kindred)"
+	desc = "Your fangs do not retract, making it impossible for you to hide your true nature. While some mortals may think you’ve had your teeth filed or are wearing prosthetics, sooner or later you’re going to run into someone who knows what you truly are."
+	value = -1
+	gain_text = "<span class='warning'>Your fangs become stuck.</span>"
 	lose_text = "<span class='notice'>You feel your fangs retract again.</span>"
-	allowed_species = list("Vampire")
+	allowed_species = list("Vampire", "Kuei-Jin") // APOC EDIT END
 
 /datum/quirk/diablerist
 	name = "Diablerist"

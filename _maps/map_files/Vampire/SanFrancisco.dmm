@@ -368,9 +368,7 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/structure/railing,
 /obj/structure/chair/pew/left{
 	dir = 1
 	},
@@ -760,9 +758,7 @@
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/obj/structure/fluff/hedge{
-	layer = 2.8
-	},
+/obj/structure/fluff/hedge,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip)
 "aiN" = (
@@ -2087,8 +2083,7 @@
 /obj/machinery/chem_dispenser/drinks/fullupgrade{
 	dir = 8;
 	pixel_x = 3;
-	pixel_y = 8;
-	layer = 3
+	pixel_y = 8
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip)
@@ -2488,7 +2483,6 @@
 "aDw" = (
 /obj/structure/closet/crate/large,
 /obj/structure/closet/crate/large{
-	layer = 4.2;
 	pixel_y = 10
 	},
 /obj/effect/turf_decal/weather/dirt{
@@ -2652,7 +2646,6 @@
 "aFm" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/junk/alt/low/window,
@@ -3772,15 +3765,6 @@
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/voivodate)
-"aTi" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 6
-	},
-/obj/structure/railing{
-	layer = 4
-	},
-/turf/open/floor/plating/shit,
-/area/vtm/sewer/nosferatu_warren)
 "aTj" = (
 /obj/machinery/light{
 	dir = 8
@@ -4275,7 +4259,6 @@
 	},
 /obj/structure/railing{
 	dir = 4;
-	layer = 2.89;
 	pixel_x = -1
 	},
 /obj/structure/table/wood/fancy/royalblack,
@@ -4335,8 +4318,7 @@
 	color = "#4a3925"
 	},
 /obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
+	pixel_y = 2
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/interior/voivodate)
@@ -4542,7 +4524,6 @@
 	},
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars";
 	pixel_y = 32
 	},
@@ -4773,8 +4754,7 @@
 /obj/structure/railing{
 	dir = 6;
 	pixel_y = 2;
-	pixel_x = -1;
-	layer = 3.1
+	pixel_x = -1
 	},
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/carpet/vamp/redsilver,
@@ -5361,8 +5341,7 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	pixel_y = 12;
-	layer = 2.81
+	pixel_y = 12
 	},
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/voivodate)
@@ -5825,9 +5804,7 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/structure/railing,
 /obj/structure/chair/pew/right{
 	dir = 1
 	},
@@ -7492,12 +7469,10 @@
 /area/vtm/cabaret/basement)
 "bPt" = (
 /obj/structure/vampfence/corner/rich{
-	dir = 4;
-	layer = 4.61
+	dir = 4
 	},
 /obj/structure/vampfence/corner/rich{
-	dir = 8;
-	layer = 4.61
+	dir = 8
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -8448,7 +8423,6 @@
 	},
 /obj/structure/railing{
 	dir = 4;
-	layer = 2.89;
 	pixel_x = -1
 	},
 /turf/open/floor/plating/parquetry,
@@ -8599,9 +8573,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/fishermanswharf)
 "cef" = (
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/structure/railing{
 	dir = 4;
 	pixel_x = 2;
@@ -8701,7 +8673,6 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 16
 	},
 /turf/open/floor/plating/shit,
@@ -8982,8 +8953,7 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	pixel_y = 12;
-	layer = 2.91
+	pixel_y = 12
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm)
@@ -9745,7 +9715,6 @@
 	},
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars";
 	pixel_y = 32
 	},
@@ -10327,7 +10296,6 @@
 /obj/structure/railing{
 	dir = 8;
 	pixel_y = -2;
-	layer = 2.89;
 	pixel_x = 1
 	},
 /obj/structure/chair/sofa/corp{
@@ -11054,7 +11022,6 @@
 	dir = 1;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi'
 	},
 /turf/closed/wall/vampwall/painted/low/window,
@@ -11614,7 +11581,6 @@
 	dir = 8
 	},
 /obj/structure/railing{
-	layer = 4;
 	pixel_y = -2
 	},
 /obj/item/statuebust/hippocratic{
@@ -11795,8 +11761,7 @@
 /obj/structure/railing/metal{
 	dir = 4;
 	pixel_x = 1;
-	pixel_y = -1;
-	layer = 2.1
+	pixel_y = -1
 	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/techshop)
@@ -12040,8 +12005,7 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	pixel_y = 12;
-	layer = 2.91
+	pixel_y = 12
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/voivodate)
@@ -12753,7 +12717,6 @@
 /obj/structure/barricade/wooden/crude,
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/rustbad,
@@ -14558,7 +14521,6 @@
 	dir = 1;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi'
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -15155,7 +15117,6 @@
 "dEX" = (
 /obj/effect/decal/shadow{
 	icon_state = "shadow-alt";
-	layer = 3.7;
 	alpha = 125
 	},
 /obj/effect/turf_decal/siding/white{
@@ -15337,8 +15298,7 @@
 /area/vtm/park)
 "dHy" = (
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.91
+	dir = 4
 	},
 /obj/structure/chair/wood/wings{
 	dir = 8
@@ -16420,7 +16380,6 @@
 /obj/structure/railing{
 	dir = 10;
 	pixel_y = 2;
-	layer = 3.1;
 	pixel_x = 1
 	},
 /obj/structure/chair/sofa/corp/corner{
@@ -17089,12 +17048,8 @@
 	color = "#4a3925";
 	dir = 6
 	},
-/obj/item/kirbyplants/random{
-	layer = 2.9
-	},
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/item/kirbyplants/random,
+/obj/structure/railing,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "edm" = (
@@ -17416,8 +17371,7 @@
 	},
 /obj/structure/railing{
 	dir = 10;
-	pixel_y = 1;
-	layer = 2.91
+	pixel_y = 1
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm)
@@ -18322,8 +18276,7 @@
 "evj" = (
 /obj/structure/railing{
 	dir = 9;
-	pixel_y = 6;
-	layer = 2.89
+	pixel_y = 6
 	},
 /obj/structure/fluff/hedge{
 	pixel_x = 1;
@@ -18457,8 +18410,7 @@
 /obj/machinery/chem_dispenser/drinks/fullupgrade{
 	dir = 8;
 	pixel_x = 6;
-	pixel_y = 5;
-	layer = 3
+	pixel_y = 5
 	},
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/voivodate)
@@ -20142,8 +20094,7 @@
 	color = "#4a3925"
 	},
 /obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
+	pixel_y = 2
 	},
 /obj/structure/chair/sofa/corp/left{
 	dir = 1;
@@ -21684,8 +21635,7 @@
 /area/vtm/interior/chantry)
 "fmC" = (
 /obj/structure/railing{
-	dir = 4;
-	layer = 4
+	dir = 4
 	},
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -22347,7 +22297,6 @@
 	dir = 1;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi'
 	},
 /turf/closed/wall/vampwall/painted/low/window,
@@ -22389,14 +22338,6 @@
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
-"fvc" = (
-/obj/structure/fluff/hedge,
-/obj/structure/flora/ausbushes/lavendergrass,
-/obj/structure/railing{
-	layer = 3
-	},
-/turf/open/floor/plating/vampplating,
-/area/vtm/interior/voivodate)
 "fvj" = (
 /obj/structure/table/wood/poker,
 /obj/item/vamp/keys/nosferatu,
@@ -22437,7 +22378,6 @@
 	dir = 4;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi';
 	pixel_x = 4
 	},
@@ -23277,7 +23217,6 @@
 	},
 /obj/structure/fluff/hedge{
 	pixel_x = 1;
-	layer = 2.91;
 	pixel_y = 4
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -24132,7 +24071,6 @@
 	dir = 8
 	},
 /obj/structure/railing{
-	layer = 4;
 	pixel_y = 4
 	},
 /turf/open/floor/plating/vampdirt,
@@ -24555,7 +24493,6 @@
 	dir = 4;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi';
 	pixel_x = 4
 	},
@@ -25915,12 +25852,10 @@
 /obj/structure/railing{
 	dir = 1;
 	pixel_y = 12;
-	pixel_x = 1;
-	layer = 2.91
+	pixel_x = 1
 	},
 /obj/structure/railing{
-	dir = 8;
-	layer = 2.92
+	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm)
@@ -25973,9 +25908,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
 	},
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/structure/roadsign/warningpedestrian,
 /turf/open/floor/plating/shit,
 /area/vtm/sewer/nosferatu_warren)
@@ -27004,7 +26937,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/shadow{
 	icon_state = "shadow-alt";
-	layer = 3.7;
 	alpha = 125
 	},
 /obj/effect/turf_decal/siding/white{
@@ -27022,7 +26954,6 @@
 "gBm" = (
 /obj/structure/railing{
 	dir = 1;
-	layer = 2.1;
 	pixel_y = 16
 	},
 /turf/open/floor/plating/parquetry/old,
@@ -27826,8 +27757,7 @@
 /area/vtm/clinic)
 "gMb" = (
 /obj/structure/railing{
-	dir = 6;
-	layer = 3.1
+	dir = 6
 	},
 /obj/structure/chair/wood/wings{
 	dir = 8
@@ -28192,9 +28122,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_town)
 "gQe" = (
-/obj/structure/stairs/south{
-	layer = 2.01
-	},
+/obj/structure/stairs/south,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/unionsquare)
 "gQf" = (
@@ -28388,7 +28316,6 @@
 "gSk" = (
 /obj/structure/vampfence/rich{
 	dir = 1;
-	layer = 4.5;
 	pixel_y = 2;
 	pixel_x = -1
 	},
@@ -29373,8 +29300,7 @@
 	pixel_y = 1
 	},
 /obj/structure/railing{
-	dir = 4;
-	layer = 4
+	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
@@ -29614,7 +29540,6 @@
 	dir = 4;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi'
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -29814,7 +29739,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /obj/structure/railing,
@@ -30058,13 +29982,6 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
-"hoI" = (
-/obj/structure/railing{
-	dir = 4;
-	layer = 4
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm)
 "hoV" = (
 /obj/structure/table,
 /obj/structure/extinguisher_cabinet{
@@ -30081,8 +29998,7 @@
 /area/vtm/pacificheights/community)
 "hpd" = (
 /obj/structure/vampfence/corner/rich{
-	dir = 4;
-	layer = 4.61
+	dir = 4
 	},
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm)
@@ -30264,9 +30180,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/npcwall,
-/obj/structure/vampdoor/glass/nightwolf{
-	layer = 4.5
-	},
+/obj/structure/vampdoor/glass/nightwolf,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = 24;
 	pixel_y = -3;
@@ -30285,9 +30199,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
 "hrC" = (
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -31211,7 +31123,6 @@
 	},
 /obj/structure/railing{
 	dir = 4;
-	layer = 2.89;
 	pixel_x = -1
 	},
 /obj/structure/fluff/hedge{
@@ -31754,7 +31665,6 @@
 "hKk" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/rustbad,
@@ -32000,8 +31910,7 @@
 /area/vtm/clinic)
 "hOa" = (
 /obj/structure/vampfence/rich{
-	dir = 4;
-	layer = 4
+	dir = 4
 	},
 /turf/open/floor/plating/rough,
 /area/vtm/clinic)
@@ -33039,9 +32948,7 @@
 /area/vtm/hotel)
 "ibF" = (
 /obj/structure/chair/plastic,
-/obj/item/binoculars{
-	layer = 3.1
-	},
+/obj/item/binoculars,
 /turf/open/floor/plating/roofwalk,
 /area/vtm)
 "ibH" = (
@@ -33250,9 +33157,7 @@
 /area/vtm/forest)
 "iel" = (
 /obj/structure/fluff/hedge,
-/obj/structure/flora/ausbushes/lavendergrass{
-	layer = 3
-	},
+/obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/voivodate)
 "iem" = (
@@ -33667,9 +33572,7 @@
 	dir = 8
 	},
 /obj/effect/decal/shadow,
-/obj/machinery/vending/boozeomat/all_access{
-	layer = 2.8
-	},
+/obj/machinery/vending/boozeomat/all_access,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip)
 "ikJ" = (
@@ -34548,8 +34451,7 @@
 	color = "#4a3925"
 	},
 /obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
+	pixel_y = 2
 	},
 /obj/structure/bookcase/random/reference,
 /turf/open/floor/carpet/royalblack,
@@ -34742,9 +34644,7 @@
 	color = "#4a3925";
 	dir = 5
 	},
-/obj/item/kirbyplants/random{
-	layer = 2.9
-	},
+/obj/item/kirbyplants/random,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "iza" = (
@@ -34994,7 +34894,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 14
 	},
 /turf/open/floor/plating/vampdirt,
@@ -35332,7 +35231,6 @@
 "iFZ" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 8;
-	layer = 4.61;
 	pixel_y = 8
 	},
 /turf/closed/wall/vampwall/old/low,
@@ -35629,12 +35527,10 @@
 /area/vtm/fishermanswharf/lower)
 "iJJ" = (
 /obj/structure/vampfence/corner/rich{
-	dir = 8;
-	layer = 4.61
+	dir = 8
 	},
 /obj/structure/vampfence/corner/rich{
-	dir = 4;
-	layer = 4.61
+	dir = 4
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 8
@@ -36389,7 +36285,6 @@
 /obj/structure/table,
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 4;
 	pixel_y = 31
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -36438,7 +36333,6 @@
 	},
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 4;
 	pixel_y = 31
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -36995,23 +36889,19 @@
 /obj/structure/table/wood/fancy/orange,
 /obj/item/storage/pill_bottle/mannitol{
 	pixel_y = 15;
-	layer = 3.1;
 	pixel_x = -8
 	},
 /obj/item/storage/pill_bottle/penacid{
-	layer = 3.1;
 	pixel_y = 15;
 	pixel_x = -1
 	},
 /obj/item/storage/pill_bottle/multiver{
-	layer = 3.1;
 	pixel_x = 8;
 	pixel_y = 15
 	},
 /obj/item/vamp/keys/camarilla{
 	accesslocks = list("toreador","toreador1","toreador2","toreador3","toreador4");
-	name = "Master key";
-	layer = 3.1
+	name = "Master key"
 	},
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/strip/toreador)
@@ -38169,7 +38059,6 @@
 "jpF" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /obj/structure/barricade/wooden/crude,
@@ -39294,7 +39183,6 @@
 "jCB" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/junk/alt/low/window,
@@ -39686,7 +39574,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 14
 	},
 /turf/open/floor/plating/vampdirt,
@@ -39867,8 +39754,7 @@
 /obj/machinery/door/poddoor/shutters{
 	name = "Security Office Shutters";
 	max_integrity = 350;
-	id = 246;
-	layer = 5
+	id = 246
 	},
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/clinic)
@@ -41082,7 +40968,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -41243,9 +41128,7 @@
 /turf/open/floor/carpet/vamp/bluegold,
 /area/vtm/interior/voivodate)
 "kbh" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/railing{
 	dir = 8
@@ -42004,9 +41887,7 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/financialdistrict)
 "klx" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /turf/open/floor/plating/woodrough,
 /area/vtm/sewer/nosferatu_warren)
 "klB" = (
@@ -42550,8 +42431,7 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.91
+	dir = 4
 	},
 /obj/structure/railing{
 	dir = 1;
@@ -44135,7 +44015,6 @@
 	},
 /obj/structure/railing{
 	dir = 8;
-	layer = 4.2;
 	pixel_x = -4;
 	pixel_y = -3
 	},
@@ -44146,7 +44025,6 @@
 /obj/structure/hydrant{
 	icon_state = "fence";
 	pixel_x = -15;
-	layer = 4.6;
 	name = "\improper fence"
 	},
 /turf/open/floor/plating/vampdirt,
@@ -44329,7 +44207,6 @@
 	},
 /obj/structure/railing{
 	dir = 4;
-	layer = 2.89;
 	pixel_x = -1
 	},
 /obj/structure/chair/red{
@@ -45143,7 +45020,6 @@
 	},
 /obj/structure/fluff/hedge{
 	pixel_x = 1;
-	layer = 2.91;
 	pixel_y = 4
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -45976,9 +45852,7 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior)
 "llQ" = (
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
 	},
@@ -46443,9 +46317,7 @@
 /obj/structure/chair/plastic{
 	dir = 1
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/structure/railing,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "ltY" = (
@@ -47209,9 +47081,7 @@
 /area/vtm/sewer)
 "lEe" = (
 /obj/effect/turf_decal/weather/dirt,
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /turf/open/floor/plating/shit,
 /area/vtm/sewer/nosferatu_warren)
 "lEg" = (
@@ -47659,16 +47529,13 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /obj/structure/railing,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
 "lIT" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /turf/open/floor/plating/woodfancy,
 /area/vtm/sewer/nosferatu_warren)
 "lJb" = (
@@ -47766,7 +47633,6 @@
 /obj/effect/decal/wallpaper/blue/low,
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/painted/low/window,
@@ -47909,9 +47775,7 @@
 	dir = 6;
 	pixel_y = 2
 	},
-/obj/structure/fluff/hedge{
-	layer = 2.8
-	},
+/obj/structure/fluff/hedge,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip)
 "lLN" = (
@@ -48004,7 +47868,6 @@
 /obj/structure/railing/metal/corner{
 	dir = 1;
 	pixel_y = 1;
-	layer = 2.11;
 	pixel_x = 31
 	},
 /turf/open/floor/plating/parquetry,
@@ -48194,18 +48057,6 @@
 /obj/item/cigbutt/cigarbutt,
 /turf/open/floor/light,
 /area/vtm/interior/endron_facility/restricted)
-"lOZ" = (
-/obj/effect/turf_decal/bordur,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 12;
-	layer = 2.93
-	},
-/turf/open/floor/plating/sidewalk/rich,
-/area/vtm)
 "lPb" = (
 /obj/structure/railing{
 	dir = 8
@@ -48919,7 +48770,6 @@
 "lYu" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 4;
-	layer = 4.61;
 	pixel_y = 8
 	},
 /obj/effect/turf_decal/bordur{
@@ -49435,8 +49285,7 @@
 	dir = 6
 	},
 /obj/structure/flora/ausbushes/ywflowers{
-	pixel_y = 10;
-	layer = 4.3
+	pixel_y = 10
 	},
 /obj/structure/railing,
 /turf/open/floor/plating/shit,
@@ -50186,9 +50035,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
 	},
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/structure/railing{
 	dir = 4;
 	pixel_x = 2;
@@ -50558,8 +50405,7 @@
 	color = "#4a3925"
 	},
 /obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
+	pixel_y = 2
 	},
 /obj/structure/bookcase/random/nonfiction,
 /turf/open/floor/carpet/royalblack,
@@ -50868,8 +50714,7 @@
 /area/vtm/interior/endron_facility/restricted)
 "mzL" = (
 /obj/structure/railing{
-	dir = 8;
-	layer = 2.91
+	dir = 8
 	},
 /obj/structure/railing{
 	dir = 1;
@@ -51321,7 +51166,6 @@
 /obj/structure/railing{
 	dir = 4;
 	pixel_y = -2;
-	layer = 2.89;
 	pixel_x = -1
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -51440,7 +51284,6 @@
 "mGw" = (
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 16
 	},
 /turf/open/floor/plating/vampplating,
@@ -51769,9 +51612,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
 "mJX" = (
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ywflowers{
 	pixel_y = 2
@@ -52071,8 +51912,7 @@
 "mOA" = (
 /obj/structure/railing{
 	dir = 10;
-	pixel_y = 1;
-	layer = 2.91
+	pixel_y = 1
 	},
 /obj/structure/fluff/hedge{
 	pixel_y = 4;
@@ -52328,7 +52168,6 @@
 "mRD" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars";
 	pixel_y = 32
 	},
@@ -53320,12 +53159,8 @@
 /area/vtm/pacificheights)
 "ndC" = (
 /obj/structure/fluff/hedge,
-/obj/structure/flora/ausbushes/lavendergrass{
-	layer = 3
-	},
-/obj/structure/railing{
-	layer = 3
-	},
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/railing,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/voivodate)
 "ndF" = (
@@ -53888,7 +53723,6 @@
 "nld" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/bar/low/window,
@@ -53916,8 +53750,7 @@
 	},
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ywflowers{
-	pixel_y = 10;
-	layer = 4.3
+	pixel_y = 10
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/sewer/nosferatu_warren)
@@ -54010,9 +53843,7 @@
 	},
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ppflowers,
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/structure/railing{
 	dir = 4;
 	pixel_x = 2;
@@ -56302,9 +56133,7 @@
 	},
 /area/vtm/sewer/nosferatu_bar)
 "nLN" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/railing{
 	dir = 1;
 	pixel_y = 9
@@ -57379,8 +57208,7 @@
 /obj/machinery/door/poddoor/shutters{
 	name = "Security Office Shutters";
 	max_integrity = 350;
-	id = 246;
-	layer = 5
+	id = 246
 	},
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/clinic)
@@ -57674,7 +57502,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /obj/structure/railing{
@@ -58716,13 +58543,11 @@
 	pixel_x = -1
 	},
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.91
+	dir = 4
 	},
 /obj/structure/railing{
 	dir = 1;
-	pixel_y = 12;
-	layer = 2.81
+	pixel_y = 12
 	},
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/voivodate)
@@ -59054,7 +58879,6 @@
 "osr" = (
 /obj/structure/big_vamprocks{
 	icon_state = "rock4";
-	layer = 2;
 	pixel_y = 15;
 	pixel_x = -5
 	},
@@ -59330,7 +59154,6 @@
 /obj/effect/decal/wallpaper/paper/green/low,
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/junk/low/window,
@@ -59431,14 +59254,6 @@
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
-"owX" = (
-/obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 16;
-	layer = 4
-	},
-/turf/open/floor/plating/parquetry,
-/area/vtm/interior/techshop)
 "oxf" = (
 /obj/effect/decal/cleanable/trash,
 /turf/closed/wall/vampwall/city,
@@ -60106,7 +59921,6 @@
 	dir = 4;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi';
 	pixel_x = -4
 	},
@@ -60676,9 +60490,7 @@
 /area/vtm/pacificheights/forest)
 "oKN" = (
 /obj/structure/fluff/hedge,
-/obj/structure/railing{
-	layer = 3
-	},
+/obj/structure/railing,
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/voivodate)
@@ -61064,9 +60876,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
 "oPp" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/trashbag{
 	pixel_x = -9
 	},
@@ -61520,7 +61330,6 @@
 	},
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 4;
 	pixel_y = 31
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -61740,8 +61549,7 @@
 /obj/effect/turf_decal/bordur/corner,
 /obj/structure/railing{
 	dir = 10;
-	pixel_y = 1;
-	layer = 2.91
+	pixel_y = 1
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm)
@@ -62055,7 +61863,6 @@
 "paS" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/open/floor/plating/vampcanalplating,
@@ -62326,8 +62133,7 @@
 "per" = (
 /obj/structure/closet/crate/bin{
 	pixel_y = 15;
-	pixel_x = 8;
-	layer = 2.91
+	pixel_x = 8
 	},
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
@@ -63072,9 +62878,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "pnZ" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/railing{
 	dir = 1;
 	pixel_y = 9
@@ -63261,7 +63065,6 @@
 "pqa" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/open/floor/plating/vampcanalplating{
@@ -63941,13 +63744,6 @@
 /obj/effect/landmark/start/daughterof,
 /turf/open/floor/carpet/vamp/blacksilver,
 /area/vtm/cabaret)
-"pzy" = (
-/obj/structure/vampfence/rich{
-	pixel_x = -1;
-	layer = 4.4
-	},
-/turf/open/floor/plating/vampplating,
-/area/vtm/interior/voivodate/sanctum)
 "pzz" = (
 /obj/structure/table,
 /obj/structure/curtain,
@@ -64927,7 +64723,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /obj/structure/railing{
@@ -66205,9 +66000,7 @@
 /obj/structure/railing{
 	dir = 6
 	},
-/obj/structure/fluff/hedge{
-	layer = 2.8
-	},
+/obj/structure/fluff/hedge,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip)
 "qau" = (
@@ -67450,8 +67243,7 @@
 "qqm" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 1;
-	icon_state = "fence_end";
-	layer = 4.61
+	icon_state = "fence_end"
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -68953,8 +68745,7 @@
 /area/vtm/interior/setite/basement)
 "qIB" = (
 /obj/structure/railing{
-	dir = 10;
-	layer = 2.91
+	dir = 10
 	},
 /obj/structure/musician/piano{
 	icon_state = "piano"
@@ -69305,7 +69096,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /obj/structure/railing,
@@ -70366,7 +70156,6 @@
 /obj/structure/chair/sofa/old/right,
 /obj/item/vamp/keys{
 	accesslocks = list("gangrelcomm");
-	layer = 2.9;
 	name = "Watchtower keys"
 	},
 /turf/open/floor/plating/roofwalk,
@@ -70538,7 +70327,6 @@
 "qZY" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/rich/old/low/window,
@@ -71906,7 +71694,6 @@
 /obj/effect/decal/wallpaper/stone/low,
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/painted/low/window,
@@ -72385,7 +72172,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /obj/structure/railing,
@@ -72737,8 +72523,7 @@
 /area/vtm/interior/chantry)
 "rDl" = (
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.91
+	dir = 4
 	},
 /obj/structure/railing{
 	dir = 1;
@@ -73524,7 +73309,6 @@
 "rLZ" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 8;
-	layer = 4.61;
 	pixel_y = 8
 	},
 /obj/effect/turf_decal/bordur{
@@ -73627,7 +73411,6 @@
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = 25;
-	layer = 4.8;
 	pixel_y = -2;
 	name = "lab shutters";
 	closingLayer = 4.8;
@@ -75916,9 +75699,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/financialdistrict/library)
 "soT" = (
-/obj/structure/closet/secure_closet/personal/cabinet{
-	layer = 2.91
-	},
+/obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/suit/vampire/bogatyr{
 	pixel_y = -3
 	},
@@ -76077,9 +75858,7 @@
 /obj/structure/flora/ausbushes/ywflowers{
 	pixel_y = 2
 	},
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/sewer/nosferatu_warren)
 "sqA" = (
@@ -76159,8 +75938,7 @@
 /area/vtm/interior/shop)
 "srq" = (
 /obj/structure/vampfence/corner{
-	pixel_y = -2;
-	layer = 4.2
+	pixel_y = -2
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
@@ -76620,8 +76398,7 @@
 	color = "#4a3925"
 	},
 /obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
+	pixel_y = 2
 	},
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/carpet/vamp/redsilver,
@@ -76821,12 +76598,10 @@
 /obj/structure/hydrant{
 	icon_state = "fence";
 	pixel_x = -15;
-	layer = 4.1;
 	name = "\improper fence";
 	pixel_y = -2
 	},
 /obj/structure/fence/door{
-	layer = 4.2;
 	color = "#e3cFcF";
 	pixel_y = -2
 	},
@@ -76883,17 +76658,6 @@
 /obj/structure/werewolf_totem/bone_gnawer,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/gnawer)
-"syN" = (
-/obj/structure/railing{
-	layer = 4
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 10
-	},
-/turf/open/floor/plating/rough/cave{
-	icon_state = "stone8"
-	},
-/area/vtm/sewer/nosferatu_warren)
 "szf" = (
 /obj/structure/chair/wood,
 /turf/open/floor/plating/parquetry/old,
@@ -77056,9 +76820,7 @@
 /turf/open/floor/carpet/vamp/greengold,
 /area/vtm/anarch/basement)
 "sBb" = (
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/structure/railing,
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
@@ -77330,7 +77092,6 @@
 "sEE" = (
 /obj/structure/railing/metal/corner,
 /obj/structure/railing{
-	layer = 4;
 	pixel_y = 4
 	},
 /turf/open/floor/plating/vampdirt,
@@ -78033,12 +77794,6 @@
 /obj/structure/roadsign/parking,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/financialdistrict)
-"sRO" = (
-/obj/effect/decal/wallpaper/light{
-	layer = 2.07
-	},
-/turf/closed/wall/vampwall/old,
-/area/vtm/interior/techshop)
 "sRP" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
@@ -78301,9 +78056,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/setite/basement)
 "sVM" = (
-/obj/effect/decal/carpet{
-	layer = 2
-	},
+/obj/effect/decal/carpet,
 /obj/machinery/shower{
 	pixel_y = 16;
 	pixel_x = 9;
@@ -79615,8 +79368,7 @@
 /obj/effect/decal/support,
 /obj/structure/railing{
 	dir = 1;
-	pixel_y = 16;
-	layer = 4.1
+	pixel_y = 16
 	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/strip)
@@ -80271,12 +80023,8 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/giovanni)
 "tsb" = (
-/obj/structure/railing{
-	layer = 2.8
-	},
-/obj/structure/fluff/hedge{
-	layer = 2.8
-	},
+/obj/structure/railing,
+/obj/structure/fluff/hedge,
 /obj/effect/turf_decal/siding/white,
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -80640,16 +80388,13 @@
 /area/vtm/church)
 "txE" = (
 /obj/structure/railing{
-	dir = 10;
-	layer = 2.91
+	dir = 10
 	},
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925";
 	dir = 10
 	},
-/obj/item/kirbyplants/random{
-	layer = 2.9
-	},
+/obj/item/kirbyplants/random,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "txG" = (
@@ -82053,7 +81798,6 @@
 "tRf" = (
 /obj/structure/fluff/hedge,
 /obj/structure/railing{
-	layer = 4;
 	pixel_y = -1
 	},
 /obj/structure/flora/ausbushes/lavendergrass{
@@ -82883,7 +82627,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /obj/structure/railing{
@@ -83172,8 +82915,7 @@
 /area/vtm/interior/bianchiBank)
 "ueZ" = (
 /obj/structure/stairs/south{
-	dir = 1;
-	layer = 4
+	dir = 1
 	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/techshop)
@@ -83269,7 +83011,6 @@
 	dir = 4;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi';
 	pixel_y = 4
 	},
@@ -83604,9 +83345,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/forest)
 "ulZ" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/railing{
 	dir = 1;
 	pixel_y = 9
@@ -84268,9 +84007,7 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/structure/railing,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "uup" = (
@@ -85160,8 +84897,7 @@
 	},
 /obj/structure/fluff/hedge{
 	pixel_y = 3;
-	pixel_x = -2;
-	layer = 2.8
+	pixel_x = -2
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -86979,7 +86715,6 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
 	pixel_y = 12
 	},
 /obj/structure/railing,
@@ -88261,7 +87996,6 @@
 "vvz" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars";
 	pixel_y = 32
 	},
@@ -88336,9 +88070,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/strip)
 "vwb" = (
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/structure/roadblock/alt,
 /turf/open/floor/plating/grate,
 /area/vtm/sewer/nosferatu_warren)
@@ -88924,9 +88656,7 @@
 /obj/structure/railing{
 	dir = 10
 	},
-/obj/structure/fluff/hedge{
-	layer = 2.8
-	},
+/obj/structure/fluff/hedge,
 /obj/effect/turf_decal/siding/white{
 	dir = 9
 	},
@@ -89930,7 +89660,6 @@
 	dir = 1;
 	name = "emergency shutters";
 	id = 245;
-	layer = 5;
 	icon = 'icons/obj/doors/shutters_topless.dmi'
 	},
 /turf/open/floor/plating/sidewalk/poor,
@@ -90144,14 +89873,12 @@
 /obj/structure/vamprocks{
 	icon_state = "rock5";
 	pixel_x = -4;
-	pixel_y = 11;
-	layer = 4.5
+	pixel_y = 11
 	},
 /obj/structure/vamprocks{
 	icon_state = "rock5";
 	pixel_x = -9;
-	pixel_y = -4;
-	layer = 4.5
+	pixel_y = -4
 	},
 /turf/open/floor/plating/stone,
 /area/vtm/interior/voivodate/sanctum)
@@ -90483,8 +90210,7 @@
 /area/vtm/sewer)
 "vWx" = (
 /obj/structure/railing{
-	dir = 4;
-	layer = 4
+	dir = 4
 	},
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
@@ -90724,7 +90450,6 @@
 /obj/effect/decal/wallpaper/paper/low,
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/junk/low/window,
@@ -90903,12 +90628,9 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
 	},
-/obj/structure/flora/ausbushes/sparsegrass{
-	layer = 2.8
-	},
+/obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/railing{
 	dir = 8;
-	layer = 4.2;
 	pixel_y = -12;
 	pixel_x = -4
 	},
@@ -90919,7 +90641,6 @@
 /obj/structure/hydrant{
 	icon_state = "fence";
 	pixel_x = -15;
-	layer = 4.6;
 	name = "\improper fence"
 	},
 /turf/open/floor/plating/vampdirt,
@@ -91827,8 +91548,7 @@
 	icon = 'icons/obj/stairs.dmi';
 	icon_state = "stairs";
 	id = 587;
-	name = "stairs";
-	layer = 2.06
+	name = "stairs"
 	},
 /obj/machinery/camera/autoname/directional/north{
 	pixel_y = 23;
@@ -93238,12 +92958,6 @@
 	},
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
-"wEG" = (
-/obj/structure/railing{
-	layer = 4
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm)
 "wEO" = (
 /obj/structure/toilet,
 /turf/open/floor/plating/toilet,
@@ -93640,8 +93354,7 @@
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
 	dir = 8;
 	pixel_x = 6;
-	pixel_y = 20;
-	layer = 3.1
+	pixel_y = 20
 	},
 /obj/item/storage/box/drinkingglasses,
 /turf/open/floor/plating/vampplating/stone,
@@ -93767,8 +93480,7 @@
 /obj/structure/vampfence/rich{
 	dir = 1;
 	pixel_y = 2;
-	pixel_x = -1;
-	layer = 4.61
+	pixel_x = -1
 	},
 /obj/structure/vampfence/rich{
 	pixel_x = -1
@@ -94186,14 +93898,12 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.92
+	dir = 4
 	},
 /obj/structure/railing{
 	dir = 1;
 	pixel_y = 12;
-	pixel_x = -1;
-	layer = 2.91
+	pixel_x = -1
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm)
@@ -94889,9 +94599,7 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/clinic/haven)
 "wYF" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/railing{
 	dir = 8
 	},
@@ -95210,8 +94918,7 @@
 "xbS" = (
 /obj/structure/closet/crate/bin{
 	pixel_y = 15;
-	pixel_x = 8;
-	layer = 2.91
+	pixel_x = 8
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/voivodate)
@@ -95906,8 +95613,7 @@
 /obj/structure/railing{
 	dir = 10;
 	pixel_x = 1;
-	pixel_y = 2;
-	layer = 2.91
+	pixel_y = 2
 	},
 /obj/structure/pole{
 	pixel_w = -16
@@ -96041,8 +95747,7 @@
 /area/vtm/supply)
 "xmx" = (
 /obj/structure/railing/metal{
-	pixel_y = -3;
-	layer = 2.11
+	pixel_y = -3
 	},
 /turf/open/openspace,
 /area/vtm/interior/techshop)
@@ -96085,7 +95790,6 @@
 "xmW" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 4;
-	layer = 4.61;
 	pixel_y = 8
 	},
 /turf/closed/wall/vampwall/old/low,
@@ -96289,8 +95993,7 @@
 /obj/structure/railing{
 	dir = 10;
 	pixel_x = 1;
-	pixel_y = 2;
-	layer = 2.91
+	pixel_y = 2
 	},
 /obj/machinery/light/prince{
 	pixel_y = 32
@@ -99473,7 +99176,6 @@
 /obj/structure/curtain,
 /obj/machinery/shower{
 	dir = 8;
-	layer = 4;
 	pixel_y = 4
 	},
 /turf/open/floor/plating/vampplating/stone,
@@ -99697,9 +99399,7 @@
 	pixel_x = 2;
 	pixel_y = 25
 	},
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /turf/open/floor/plating/shit,
 /area/vtm/sewer)
 "yhf" = (
@@ -99731,8 +99431,7 @@
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
 	dir = 8;
 	pixel_x = 3;
-	pixel_y = 23;
-	layer = 3.1
+	pixel_y = 23
 	},
 /obj/item/reagent_containers/food/drinks/shaker{
 	pixel_x = -11;
@@ -105286,7 +104985,7 @@ bZY
 ccc
 mXv
 wSg
-aTi
+wLP
 ihY
 bsI
 nSj
@@ -106071,7 +105770,7 @@ rFV
 cLS
 cLS
 qbF
-syN
+erM
 lyY
 cvg
 cvg
@@ -208867,7 +208566,7 @@ gWy
 miO
 fNb
 gQe
-sRO
+tAC
 wmO
 gBm
 lHl
@@ -271584,7 +271283,7 @@ wBN
 hVR
 xdU
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -271841,7 +271540,7 @@ rdi
 qIU
 sbz
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -272098,7 +271797,7 @@ rdi
 qIU
 pJv
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -272612,7 +272311,7 @@ mcl
 qIU
 xdU
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -272869,7 +272568,7 @@ rdi
 duI
 xdU
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -273126,7 +272825,7 @@ tPH
 hVR
 xdU
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -273383,7 +273082,7 @@ qIU
 qIU
 ssF
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -273640,7 +273339,7 @@ wqn
 hws
 xdU
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -273897,7 +273596,7 @@ xxZ
 qGu
 xdU
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -274154,7 +273853,7 @@ kpM
 nQW
 xdU
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -274411,7 +274110,7 @@ oAX
 xdU
 xdU
 xdU
-wEG
+rqU
 ntq
 ntq
 ntq
@@ -333799,8 +333498,8 @@ hft
 hft
 hft
 hft
-hoI
-hoI
+cEq
+cEq
 hft
 hft
 hft
@@ -338388,7 +338087,7 @@ ntq
 ntq
 ntq
 oAP
-owX
+olw
 xmx
 lMV
 csx
@@ -410562,7 +410261,7 @@ oNw
 tCm
 uAp
 uAp
-pzy
+uAp
 gSk
 feT
 pls
@@ -476079,7 +475778,7 @@ jIN
 jIN
 jIN
 jIN
-lOZ
+chF
 nbA
 iXO
 avL
@@ -477625,7 +477324,7 @@ moX
 tCd
 tCd
 nng
-fvc
+ndC
 xfg
 vjy
 wgQ
@@ -478396,7 +478095,7 @@ uMt
 moX
 tCd
 nng
-fvc
+ndC
 xfg
 hRU
 bDe

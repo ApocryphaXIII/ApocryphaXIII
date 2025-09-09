@@ -488,6 +488,10 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 			return "Clinic Radio Transceiver"
 		if("tower")
 			return "Tower Radio Transceiver"
+		// APOC ADD START
+		if("endron")
+			return "Endron Radio Transceiver"
+		// APOC ADD END
 		else
 			return "Radio Transceiver"
 
@@ -514,6 +518,10 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 			return "CRT"
 		if("tower")
 			return "TRT"
+		// APOC ADD START
+		if("endron")
+			return "ERT"
+		// APOC ADD END
 		else
 			return "RT"
 

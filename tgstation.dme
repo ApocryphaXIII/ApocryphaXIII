@@ -3805,6 +3805,7 @@
 #include "modular_zapoc\modules\ncr\code\ncr.dm"
 #include "modular_zapoc\modules\ravnos\code\ravnos.dm"
 #include "modular_zapoc\modules\structures\code\p25_endron.dm"
+#include "modular_zapoc\modules\tables\code\storetables.dm"
 #include "modular_zapoc\modules\tiles\code\tiles.dm"
 #include "modular_zapoc\modules\verbs\code\layerchange.dm"
 // END_INCLUDE

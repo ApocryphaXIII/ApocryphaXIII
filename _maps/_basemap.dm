@@ -1,4 +1,5 @@
 //#define LOWMEMORYMODE //uncomment this to load just titlescreen and runtime town
+//#define SHOW_INVENTORY_ICONS //uncomment this to make mapping software use inventory icons rather then world icons
 
 #ifdef LOWMEMORYMODE
 #include "map_files\generic\titlescreen.dmm"

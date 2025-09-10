@@ -6284,6 +6284,11 @@
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm/financialdistrict/construction)
+"byr" = (
+/obj/structure/table,
+/obj/structure/retail/deli,
+/turf/open/floor/plating/concrete,
+/area/vtm/interior/shop)
 "byt" = (
 /obj/structure/trad{
 	pixel_y = 32
@@ -173986,7 +173991,7 @@ qvp
 nYv
 iTZ
 iTZ
-iTZ
+sWm
 iTZ
 iTZ
 bvc
@@ -174243,8 +174248,8 @@ bzp
 nYv
 iTZ
 fjw
-iTZ
-iTZ
+byr
+fjw
 iTZ
 bvc
 xdS

@@ -4294,11 +4294,11 @@
 /area/vtm/interior/laundromat)
 "aZE" = (
 /obj/structure/table,
-/obj/item/food/vampire/donut,
-/obj/item/food/vampire/donut,
-/obj/item/food/vampire/donut,
-/obj/item/food/vampire/donut,
-/obj/item/food/vampire/donut,
+/obj/item/food/donut/plain,
+/obj/item/food/donut/plain,
+/obj/item/food/donut/plain,
+/obj/item/food/donut/plain,
+/obj/item/food/donut/plain,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
 "aZL" = (
@@ -4514,7 +4514,7 @@
 /area/vtm/sewer)
 "bcb" = (
 /obj/structure/table/wood,
-/obj/item/food/vampire/donut{
+/obj/item/food/donut/plain{
 	pixel_y = 3;
 	pixel_x = 7
 	},
@@ -7433,7 +7433,7 @@
 "bNX" = (
 /obj/structure/table/wood,
 /obj/structure/table/wood,
-/obj/item/food/vampire/donut,
+/obj/item/food/donut/plain,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/clinic)
 "bOc" = (
@@ -22213,7 +22213,7 @@
 /area/vtm/interior/nosferatu_office)
 "ftg" = (
 /obj/structure/table,
-/obj/item/food/vampire/burger{
+/obj/item/food/burger/plain{
 	name = "stale burger"
 	},
 /turf/open/floor/plating/concrete,
@@ -34734,7 +34734,7 @@
 "iyI" = (
 /obj/structure/table/wood,
 /obj/structure/closet/mini_fridge,
-/obj/item/reagent_containers/food/condiment/vampiremilk/malk,
+/obj/item/reagent_containers/food/condiment/milk/malk,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_town)
 "iyN" = (
@@ -36216,7 +36216,7 @@
 /area/vtm/interior/bianchiBank)
 "iSD" = (
 /obj/structure/table/wood,
-/obj/item/food/vampire/donut,
+/obj/item/food/donut/plain,
 /obj/item/reagent_containers/food/drinks/coffee/vampire/robust,
 /obj/structure/coclock,
 /turf/open/floor/plating/parquetry,
@@ -37627,7 +37627,7 @@
 	pixel_y = 7;
 	pixel_x = 11
 	},
-/obj/item/food/vampire/donut{
+/obj/item/food/donut/plain{
 	pixel_y = 7;
 	pixel_x = -2
 	},
@@ -37763,8 +37763,8 @@
 /obj/structure/closet/crate/freezer/fridge,
 /obj/item/reagent_containers/food/drinks/beer/vampire,
 /obj/item/reagent_containers/food/drinks/beer/vampire,
-/obj/item/food/vampire/pizza,
-/obj/item/food/vampire/pizza,
+/obj/item/food/pizzaslice/square,
+/obj/item/food/pizzaslice/square,
 /obj/item/food/pizzaslice/moldy,
 /obj/item/food/pizzaslice/moldy,
 /obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
@@ -42843,7 +42843,7 @@
 /area/vtm/interior/strip)
 "kxP" = (
 /obj/structure/table/wood,
-/obj/item/food/vampire/burger{
+/obj/item/food/burger/plain{
 	name = "stale burger"
 	},
 /turf/open/floor/carpet/vamp/cyan,
@@ -51933,8 +51933,8 @@
 /area/vtm)
 "mMz" = (
 /obj/structure/table/wood,
-/obj/item/food/vampire/burger,
-/obj/item/food/vampire/burger,
+/obj/item/food/burger/plain,
+/obj/item/food/burger/plain,
 /obj/underplate,
 /turf/open/floor/plating/toilet/clinic,
 /area/vtm/anarch)
@@ -52253,7 +52253,7 @@
 "mQu" = (
 /obj/structure/table,
 /obj/item/trash/plate,
-/obj/item/food/vampire/burger,
+/obj/item/food/burger/plain,
 /obj/machinery/light{
 	pixel_y = 32
 	},
@@ -54513,7 +54513,7 @@
 	pixel_y = 7;
 	pixel_x = 6
 	},
-/obj/item/food/vampire/bar{
+/obj/item/food/chocolatebar{
 	pixel_y = 4;
 	pixel_x = 3
 	},
@@ -60389,7 +60389,7 @@
 /area/vtm/interior/voivodate)
 "oHs" = (
 /obj/structure/table,
-/obj/item/food/vampire/pizza,
+/obj/item/food/pizzaslice/square,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
 "oHz" = (
@@ -67152,26 +67152,26 @@
 /area/vtm/interior/giovanni/basement)
 "qlY" = (
 /obj/structure/table,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
-/obj/item/food/vampire/bar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
+/obj/item/food/chocolatebar,
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/clinic)
 "qmj" = (
@@ -68714,9 +68714,9 @@
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/vampiremilk,
-/obj/item/reagent_containers/food/condiment/vampiremilk,
-/obj/item/reagent_containers/food/condiment/vampiremilk,
+/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/milk,
 /obj/item/storage/fancy/egg_box,
 /obj/item/storage/fancy/egg_box,
 /obj/item/food/raw_sausage,
@@ -75671,7 +75671,7 @@
 	color = "#636363"
 	},
 /obj/structure/table,
-/obj/item/food/vampire/donut,
+/obj/item/food/donut/plain,
 /turf/closed/wall/vampwall/market/low,
 /area/vtm/interior/police/upstairs)
 "slw" = (
@@ -78843,11 +78843,11 @@
 /obj/item/reagent_containers/food/drinks/sillycup/smallcarton{
 	pixel_y = 10
 	},
-/obj/item/food/vampire/pizza{
+/obj/item/food/pizzaslice/square{
 	pixel_x = 10;
 	pixel_y = 10
 	},
-/obj/item/food/vampire/pizza,
+/obj/item/food/pizzaslice/square,
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/shop)
 "tbT" = (
@@ -80208,9 +80208,9 @@
 	pixel_x = -16
 	},
 /obj/structure/closet/crate/freezer/fridge,
-/obj/item/food/vampire/pizza,
-/obj/item/food/vampire/pizza,
-/obj/item/food/vampire/pizza,
+/obj/item/food/pizzaslice/square,
+/obj/item/food/pizzaslice/square,
+/obj/item/food/pizzaslice/square,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/strip)
 "try" = (
@@ -88711,7 +88711,7 @@
 "vBs" = (
 /obj/structure/table,
 /obj/item/storage/box/cups,
-/obj/item/food/vampire/pizza{
+/obj/item/food/pizzaslice/square{
 	pixel_y = 16
 	},
 /turf/open/floor/plating/concrete,
@@ -88813,7 +88813,7 @@
 /obj/machinery/light{
 	pixel_y = 15
 	},
-/obj/item/food/vampire/burger,
+/obj/item/food/burger/plain,
 /turf/open/floor/plating/concrete,
 /area/vtm/supply)
 "vCL" = (
@@ -97136,7 +97136,7 @@
 "xAB" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/beer/vampire,
-/obj/item/food/vampire/pizza,
+/obj/item/food/pizzaslice/square,
 /obj/item/paper{
 	default_raw_text = "Chetitutishes,peedor?Tvoymamuebalponyaldahuesos."
 	},
@@ -97182,7 +97182,7 @@
 /area/vtm/interior/trujah)
 "xBj" = (
 /obj/structure/table,
-/obj/item/food/vampire/donut,
+/obj/item/food/donut/plain,
 /obj/item/reagent_containers/food/drinks/coffee/vampire,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/giovanni/outside)
@@ -98058,7 +98058,7 @@
 "xLv" = (
 /obj/structure/table/wood,
 /obj/underplate,
-/obj/item/food/vampire/pizza{
+/obj/item/food/pizzaslice/square{
 	pixel_y = 10
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -98285,7 +98285,7 @@
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
 /obj/item/storage/fancy/donut_box,
-/obj/item/food/vampire/donut,
+/obj/item/food/donut/plain,
 /obj/item/food/donut/jelly/choco,
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/interior/millennium_tower)

@@ -1,6 +1,6 @@
 /obj/structure/retail/grocery_store
 	desc = "A small grocery store."
-	prize_list = list(
+	products_list = list(
 		new /datum/data/vending_product("chocolate bar", /obj/item/food/chocolatebar, 3),
 		new /datum/data/vending_product("chips", /obj/item/food/vampire/crisps, 5),
 		new /datum/data/vending_product("water bottle", /obj/item/reagent_containers/food/drinks/bottle/vampirewater, 3),
@@ -41,7 +41,7 @@
 
 /obj/structure/retail/deli
 	desc = "Meats and cheese!"
-	prize_list = list(
+	products_list = list(
 		new /datum/data/vending_product("deli cut beef", /obj/item/food/meat/slab, 4),
 		new /datum/data/vending_product("cutlet", /obj/item/food/meat/rawcutlet, 1),
 		new /datum/data/vending_product("bacon", /obj/item/food/meat/rawbacon, 1),

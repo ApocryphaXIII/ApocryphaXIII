@@ -15,8 +15,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/food/fishmeat
-	name = "carp fillet"
-	desc = "A fillet of spess carp meat."
+	name = "fish fillet"
+	desc = "A fillet of some fish meat."
 	icon_state = "fishfillet"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/toxin/carpotoxin = 2, /datum/reagent/consumable/nutriment/vitamin = 2)
 	bite_consumption = 6

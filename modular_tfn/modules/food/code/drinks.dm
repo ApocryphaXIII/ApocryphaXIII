@@ -24,13 +24,14 @@
 	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 30)
 	foodtype = GRAIN | ALCOHOL
-	custom_price = PAYCHECK_EASY
+	custom_price = 5
 
 /obj/item/reagent_containers/food/drinks/beer/vampire/blue_stripe
 	name = "blue stripe"
 	desc = "Blue stripe beer, brought to you by King Breweries and Distilleries!"
 	icon_state = "beer_blue"
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 40, /datum/reagent/toxin/amatoxin = 10)
+	custom_price = 6 // The shit that kills you costs more lol
 
 /obj/item/reagent_containers/food/drinks/beer/vampire/typhon
 	name = "Typhon's Beer"

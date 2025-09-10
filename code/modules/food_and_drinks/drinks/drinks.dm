@@ -424,7 +424,7 @@
 	icon_state = "beer"
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 30)
 	foodtype = GRAIN | ALCOHOL
-	custom_price = PAYCHECK_EASY
+	custom_price = 5
 
 /obj/item/reagent_containers/food/drinks/beer/light
 	name = "Carp Lite"

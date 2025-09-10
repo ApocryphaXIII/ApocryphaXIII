@@ -27,7 +27,7 @@
 		//new /datum/data/vending_product("bbq sauce", /obj/item/reagent_containers/food/condiment/bbq, 3),
 		new /datum/data/vending_product("soy sauce", /obj/item/reagent_containers/food/condiment/soysauce, 4),
 		new /datum/data/vending_product("mayonnaise", /obj/item/reagent_containers/food/condiment/mayonnaise, 3),
-		new /datum/data/vending_product("egg carton", /obj/item/storage/fancy/egg_box, 3),
+		new /datum/data/vending_product("egg carton", /obj/item/storage/fancy/egg_box),
 		new /datum/data/vending_product("flour bag", /obj/item/reagent_containers/food/condiment/flour, 3),
 		new /datum/data/vending_product("rice bag", /obj/item/reagent_containers/food/condiment/rice, 3),
 		new /datum/data/vending_product("beer bottle", /obj/item/reagent_containers/food/drinks/beer/vampire),

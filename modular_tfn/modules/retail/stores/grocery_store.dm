@@ -1,14 +1,14 @@
 /obj/structure/retail/grocery_store
 	desc = "A small grocery store."
 	products_list = list(
-		new /datum/data/vending_product("chocolate bar", /obj/item/food/chocolatebar, 3),
-		new /datum/data/vending_product("chips", /obj/item/food/vampire/crisps, 5),
-		new /datum/data/vending_product("water bottle", /obj/item/reagent_containers/food/drinks/bottle/vampirewater, 3),
-		new /datum/data/vending_product("soda can", /obj/item/reagent_containers/food/drinks/soda_cans/vampiresoda, 3),
-		new /datum/data/vending_product("two liter cola bottle", /obj/item/reagent_containers/food/drinks/bottle/vampirecola, 7),
-		new /datum/data/vending_product("cola can", /obj/item/reagent_containers/food/drinks/soda_cans/vampirecola, 5),
-		new /datum/data/vending_product("summer thaw", /obj/item/reagent_containers/food/drinks/bottle/vampirecola/summer_thaw, 5),
-		new /datum/data/vending_product("milk", /obj/item/reagent_containers/food/condiment/milk, 5),
+		new /datum/data/vending_product("chocolate bar", /obj/item/food/chocolatebar),
+		new /datum/data/vending_product("chips", /obj/item/food/vampire/crisps),
+		new /datum/data/vending_product("water bottle", /obj/item/reagent_containers/food/drinks/bottle/vampirewater),
+		new /datum/data/vending_product("soda can", /obj/item/reagent_containers/food/drinks/soda_cans/vampiresoda),
+		new /datum/data/vending_product("two liter cola bottle", /obj/item/reagent_containers/food/drinks/bottle/vampirecola),
+		new /datum/data/vending_product("cola can", /obj/item/reagent_containers/food/drinks/soda_cans/vampirecola),
+		new /datum/data/vending_product("summer thaw", /obj/item/reagent_containers/food/drinks/bottle/vampirecola/summer_thaw),
+		new /datum/data/vending_product("milk", /obj/item/reagent_containers/food/condiment/milk),
 		new /datum/data/vending_product("bread", /obj/item/food/bread/plain, 8),
 		new /datum/data/vending_product("spaghetti", /obj/item/food/spaghetti, 6),
 		new /datum/data/vending_product("tomato", /obj/item/food/grown/tomato, 1),
@@ -32,11 +32,11 @@
 		new /datum/data/vending_product("rice bag", /obj/item/reagent_containers/food/condiment/rice, 3),
 		new /datum/data/vending_product("beer bottle", /obj/item/reagent_containers/food/drinks/beer/vampire, 10),
 		new /datum/data/vending_product("blue stripe", /obj/item/reagent_containers/food/drinks/beer/vampire/blue_stripe, 8),
-		new /datum/data/vending_product("candle pack", /obj/item/storage/fancy/candle_box, 12),
-		new /datum/data/vending_product("bruise pack", /obj/item/stack/medical/bruise_pack, 100),
+		new /datum/data/vending_product("candle pack", /obj/item/storage/fancy/candle_box),
+		new /datum/data/vending_product("bruise pack", /obj/item/stack/medical/bruise_pack),
 		new /datum/data/vending_product("kitchen knife", /obj/item/kitchen/knife, 26),
 		new /datum/data/vending_product("rolling pin", /obj/item/kitchen/rollingpin, 8),
-		new /datum/data/vending_product("mixing bowl", /obj/item/reagent_containers/glass/mixing_bowl, 15),
+		new /datum/data/vending_product("mixing bowl", /obj/item/reagent_containers/glass/mixing_bowl),
 	)
 
 /obj/structure/retail/deli

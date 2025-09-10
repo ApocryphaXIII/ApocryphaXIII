@@ -24,6 +24,7 @@
 	foodtypes = MEAT
 	eatverbs = list("bite","chew","gnaw","swallow","chomp")
 	w_class = WEIGHT_CLASS_SMALL
+	custom_price = 2
 
 /obj/item/food/fishmeat/Initialize()
 	. = ..()

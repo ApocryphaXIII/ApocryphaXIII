@@ -53,6 +53,7 @@
 	list_reagents = list(/datum/reagent/consumable/space_cola = 100)
 	foodtype = SUGAR
 	age_restricted = FALSE
+	custom_price = 2
 
 /obj/item/reagent_containers/food/drinks/bottle/vampirecola/blue
 	desc = "Pep Cola. Put some pep in your step"
@@ -81,6 +82,7 @@
 	isGlass = FALSE
 	list_reagents = list(/datum/reagent/water = 100)
 	age_restricted = FALSE
+	custom_price = 1
 
 /obj/item/reagent_containers/food/drinks/soda_cans/vampirecola
 	name = "cola"
@@ -90,6 +92,7 @@
 	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
 	list_reagents = list(/datum/reagent/consumable/space_cola = 50)
 	foodtype = SUGAR
+	custom_price = 1
 
 /obj/item/reagent_containers/food/drinks/soda_cans/vampirecola/blue
 	desc = "Pep cola. Put some Pep in your step"
@@ -104,12 +107,14 @@
 	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
 	list_reagents = list(/datum/reagent/consumable/sodawater = 50)
 	foodtype = SUGAR
+	custom_price = 1
 
 /obj/item/reagent_containers/food/condiment/milk
 	name = "milk"
 	desc = "More milk..."
 	icon = 'modular_tfn/modules/food/icons/items.dmi'
 	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
+	custom_price = 3
 
 /obj/item/reagent_containers/food/condiment/milk/malk
 	desc = "a carton of fish-brand milk, a subsidary of malk incorporated."
@@ -124,3 +129,4 @@
 	worn_icon_state = "beaker"
 	custom_materials = list(/datum/material/glass=500)
 	fill_icon_thresholds = list(0, 10, 25, 50, 75, 80, 90)
+	custom_price = 15

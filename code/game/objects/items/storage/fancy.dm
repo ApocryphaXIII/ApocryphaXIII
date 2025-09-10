@@ -160,6 +160,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	spawn_type = /obj/item/candle
 	fancy_open = TRUE
+	custom_price = 8
 
 /obj/item/storage/fancy/candle_box/ComponentInitialize()
 	. = ..()

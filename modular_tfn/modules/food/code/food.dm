@@ -13,24 +13,27 @@
 	custom_price = 3
 	food_flags = FOOD_BITE_SPRITE
 
+/obj/item/food/donut
+	custom_price = 1
+
 /obj/item/food/donut/plain
 	icon = 'modular_tfn/modules/food/icons/items.dmi'
 	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
-	custom_price = 1
 	food_flags = FOOD_BITE_SPRITE
 
 /obj/item/food/donut/choco
 	icon = 'modular_tfn/modules/food/icons/items.dmi'
 	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
-	custom_price = 1
 	food_flags = FOOD_BITE_SPRITE
+
+/obj/item/food/pizzaslice
+	custom_price = 2
 
 /obj/item/food/pizzaslice/square
 	name = "square pizza slice"
 	icon_state = "pizza"
 	icon = 'modular_tfn/modules/food/icons/items.dmi'
 	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
-	custom_price = 2
 	food_flags = FOOD_BITE_SPRITE
 
 /obj/item/food/taco
@@ -117,6 +120,7 @@
 	food_flags = FOOD_IN_CONTAINER | FOOD_BITE_SPRITE
 	foodtypes = JUNKFOOD | FRIED
 	eatsound = 'code/modules/wod13/sounds/crisp.ogg'
+	custom_price = 1
 
 /obj/item/food/vampire/crisps/proc/open_crisps(mob/user)
 	to_chat(user, "<span class='notice'>You pull back the wrapper of \the [src].</span>")

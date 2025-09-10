@@ -3602,7 +3602,6 @@
 #include "code\modules\wod13\emote.dm"
 #include "code\modules\wod13\fire.dm"
 #include "code\modules\wod13\fishing.dm"
-#include "code\modules\wod13\food.dm"
 #include "code\modules\wod13\graveyard.dm"
 #include "code\modules\wod13\guns.dm"
 #include "code\modules\wod13\lombard.dm"

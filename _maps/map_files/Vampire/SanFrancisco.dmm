@@ -3048,6 +3048,13 @@
 "aJu" = (
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/cabaret)
+"aJy" = (
+/obj/structure/flora/ausbushes/sparsegrass{
+	pixel_y = 12
+	},
+/obj/structure/table/wood,
+/turf/open/floor/plating/vampgrass,
+/area/vtm/unionsquare)
 "aJS" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 9
@@ -22585,6 +22592,13 @@
 /obj/structure/bookcase/random/reference,
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/clinic)
+"fwP" = (
+/obj/item/kirbyplants/random{
+	pixel_y = 17;
+	pixel_x = 6
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "fwQ" = (
 /obj/structure/chair/wood,
 /turf/open/floor/plating/parquetry/old,
@@ -25839,11 +25853,31 @@
 /obj/effect/decal/garou_glyph/dancers,
 /turf/open/floor/plating/circled,
 /area/vtm/interior/wyrm_corrupted)
+"glH" = (
+/obj/effect/decal/carpet{
+	pixel_x = -7;
+	pixel_y = -8;
+	icon_state = "greencarpet"
+	},
+/obj/item/kirbyplants/random{
+	pixel_y = 13;
+	pixel_x = 7
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "glN" = (
 /obj/effect/decal/cleanable/cardboard,
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
+"glR" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/structure/table/wood,
+/obj/structure/retail/flower_shop,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "glT" = (
 /obj/structure/chair/sofa/corp{
 	dir = 1
@@ -27820,6 +27854,13 @@
 /obj/item/weedseed,
 /turf/open/floor/plating/concrete,
 /area/vtm/supply)
+"gLG" = (
+/obj/item/kirbyplants/random{
+	pixel_y = 11;
+	pixel_x = 6
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "gLX" = (
 /mob/living/carbon/human/npc/guard,
 /turf/open/floor/plating/parquetry,
@@ -31848,6 +31889,15 @@
 /obj/item/papercutter,
 /turf/closed/wall/vampwall/rich/low,
 /area/vtm/interior/millennium_tower)
+"hLR" = (
+/obj/effect/decal/carpet{
+	pixel_y = 8
+	},
+/obj/item/kirbyplants/random{
+	pixel_y = 8
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "hLS" = (
 /obj/structure/fluff/hedge,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -53752,6 +53802,10 @@
 	},
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/haven)
+"njw" = (
+/obj/structure/table/wood,
+/turf/open/floor/plating/vampgrass,
+/area/vtm/unionsquare)
 "njA" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -54712,6 +54766,13 @@
 /obj/effect/decal/wallpaper/paper/darkred,
 /turf/closed/wall/vampwall/rich/low,
 /area/vtm/jazzclub)
+"nub" = (
+/obj/item/kirbyplants/random{
+	pixel_y = 13;
+	pixel_x = -11
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "nuc" = (
 /obj/structure/table/wood,
 /obj/underplate{
@@ -62155,6 +62216,17 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
+"pcd" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/structure/table/wood,
+/obj/item/kirbyplants/random{
+	pixel_y = 12;
+	pixel_x = -6
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "pcm" = (
 /obj/structure/table,
 /obj/item/storage/firstaid/brute,
@@ -68035,6 +68107,17 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/strip)
+"qwP" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/structure/table/wood,
+/obj/item/kirbyplants/random{
+	pixel_y = 12;
+	pixel_x = 5
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "qwT" = (
 /obj/structure/table/wood/bar,
 /obj/item/vamp/keys/daughters,
@@ -70818,6 +70901,13 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
+"rdE" = (
+/obj/item/kirbyplants/random{
+	pixel_y = 6;
+	pixel_x = -10
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "rdG" = (
 /obj/machinery/light/prince/broken{
 	dir = 1
@@ -75508,6 +75598,10 @@
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/financialdistrict)
+"sjB" = (
+/mob/living/carbon/human/npc/shop,
+/turf/open/floor/plating/vampgrass,
+/area/vtm/unionsquare)
 "sjC" = (
 /obj/effect/turf_decal/bordur/corner,
 /obj/structure/lamppost/sidewalk,
@@ -76803,6 +76897,14 @@
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/oldchurch)
+"sxX" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/structure/table/wood,
+/obj/structure/retail/hardware_store,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "syd" = (
 /obj/effect/turf_decal/siding/white,
 /obj/structure/vampdoor/old{
@@ -98840,6 +98942,13 @@
 /obj/machinery/fax/endron,
 /turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility/restricted)
+"xVG" = (
+/obj/item/kirbyplants/random{
+	pixel_y = 20;
+	pixel_x = -6
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/unionsquare)
 "xVH" = (
 /obj/structure/closet/crate/coffin{
 	pixel_y = 6
@@ -201681,8 +201790,8 @@ uYT
 gWy
 gWy
 gWy
-rFS
-iog
+qwP
+hLR
 iog
 iog
 iog
@@ -201937,9 +202046,9 @@ uYT
 uYT
 oBA
 qtG
-gWy
-rFS
-iog
+sjB
+sxX
+nub
 iog
 iog
 iog
@@ -202195,9 +202304,9 @@ uYT
 jhd
 gWy
 gWy
-rFS
-iog
-iog
+glR
+gLG
+fwP
 iog
 iog
 mXC
@@ -202452,9 +202561,9 @@ uYT
 qtG
 gWy
 oBA
-rFS
-iog
-iog
+pcd
+glH
+xVG
 iog
 iog
 mXC
@@ -202711,7 +202820,7 @@ kdy
 kdy
 dml
 iog
-iog
+rdE
 iog
 iog
 mXC
@@ -207316,9 +207425,9 @@ qHD
 qHD
 qGw
 gWy
-nQp
-gWy
-gWy
+aJy
+njw
+njw
 jhd
 tAC
 lQh

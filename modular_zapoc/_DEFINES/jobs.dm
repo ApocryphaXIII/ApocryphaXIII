@@ -25,8 +25,8 @@ follow the law when the cops around."
 the laws may result in losing your job or worse."
 
 #define SUPER_SEVENTY_SIX supervisor = "the Arch"; v_duty = "This \
-city should belong to those who live in it. Your brothers and \
-sisters in the 76 got your back, you should have theirs."
+city should belong to those who live in it. Your family in the 76 \
+got your back, you should have theirs."
 
 #define SUPER_BLACK_SUITS supervisor = "the Executive"; v_duty = "Money \
 makes this city run, it can buy your freedom, and it can buy your loyalty. \
@@ -34,7 +34,7 @@ Probably."
 
 #define SUPER_ANARCHS supervisor = "the Baron"; v_duty = "The city is in \
 Anarch territory, but the Barons insist on at least a cold peace with the \
-camarilla. Keep them in check, and listen to the Barons."
+Camarilla. Keep them in check, and listen to the Barons."
 
 #define SUPER_CAMARILLA supervisor = "the Prince"; v_duty = "The Anarchs \
 think they run this City, but the Camarilla still enforce the Traditions \

@@ -13984,7 +13984,7 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 1
 	},
-/obj/structure/vampdoor/wood/apartment,
+/obj/structure/vampdoor/wood,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "dmR" = (
@@ -30040,6 +30040,14 @@
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/interior/voivodate)
+"hkO" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "hkR" = (
 /obj/structure/coclock,
 /obj/item/kirbyplants/random,
@@ -32662,6 +32670,14 @@
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/bianchiBank)
+"hSu" = (
+/obj/structure/dresser,
+/obj/item/flashlight/lamp{
+	pixel_x = 3;
+	pixel_y = 9
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "hSv" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -36249,8 +36265,8 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/voivodate)
 "iPq" = (
-/obj/structure/vampdoor/wood/apartment,
 /obj/effect/turf_decal/siding/white,
+/obj/structure/vampdoor/wood,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "iPt" = (
@@ -37900,6 +37916,9 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/storage/box/ingredients/random,
 /obj/item/reagent_containers/food/condiment/milk,
+/obj/machinery/light/small/directional/east{
+	pixel_x = -16
+	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "jja" = (
@@ -64603,6 +64622,9 @@
 /obj/item/food/meat/slab,
 /obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
 /obj/item/food/pizzaslice/moldy,
+/obj/machinery/light/small/directional/east{
+	pixel_x = -16
+	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "pBn" = (
@@ -100374,6 +100396,12 @@
 	},
 /turf/open/floor/plating/shit,
 /area/vtm/sewer)
+"yha" = (
+/obj/structure/vampdoor/wood{
+	dir = 4
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "yhf" = (
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
@@ -228895,7 +228923,7 @@ jlv
 gTM
 afe
 aqw
-vBb
+yha
 afe
 afe
 afe
@@ -228909,7 +228937,7 @@ afe
 afe
 afe
 sRs
-vBb
+yha
 afe
 afe
 aix
@@ -294442,11 +294470,11 @@ sRs
 iFP
 qMg
 iFP
-iFP
+cYj
 enC
 tGs
 iFP
-npH
+hkO
 uXF
 ntq
 ntq
@@ -295201,7 +295229,7 @@ kno
 kno
 kno
 nXD
-oNc
+hSu
 war
 pLD
 aqw

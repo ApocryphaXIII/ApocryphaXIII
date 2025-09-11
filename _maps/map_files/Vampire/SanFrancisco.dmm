@@ -1898,6 +1898,12 @@
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
+"avy" = (
+/obj/machinery/light/small/directional/east{
+	pixel_x = -16
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "avB" = (
 /obj/machinery/light{
 	dir = 4
@@ -2044,6 +2050,20 @@
 	},
 /turf/open/floor/plating/shit,
 /area/vtm/sewer/nosferatu_warren)
+"axL" = (
+/obj/structure/table,
+/obj/structure/sink{
+	pixel_y = -2;
+	dir = 4;
+	pixel_x = -6;
+	icon_state = "basin"
+	},
+/obj/effect/spawner/random/food_or_drink/refreshing_beverage{
+	pixel_x = 10;
+	pixel_y = 3
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "axN" = (
 /obj/effect/landmark/npcability,
 /turf/open/floor/plating/sidewalk,
@@ -10303,13 +10323,6 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
-"cub" = (
-/obj/structure/table/wood,
-/obj/machinery/light/small/directional/east{
-	pixel_x = -16
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/ghetto)
 "cud" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -12785,6 +12798,10 @@
 	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior)
+"cYj" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "cYl" = (
 /obj/structure/coclock,
 /turf/open/floor/plating/rough,
@@ -17007,6 +17024,7 @@
 /area/vtm/sewer)
 "eas" = (
 /obj/structure/closet/crate/freezer/fridge,
+/obj/item/storage/box/ingredients/random,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "eav" = (
@@ -27454,6 +27472,14 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/pacificheights/forest)
+"gDx" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small/directional/east{
+	pixel_x = -16
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "gDz" = (
 /obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating/shit,
@@ -31094,12 +31120,6 @@
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
-"hAw" = (
-/obj/machinery/light/small/directional/west{
-	pixel_x = 16
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/ghetto)
 "hAH" = (
 /obj/structure/chair/pew/right,
 /turf/open/floor/plating/sidewalkalt,
@@ -37878,6 +37898,8 @@
 "jiS" = (
 /obj/structure/closet/crate/freezer/fridge,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/storage/box/ingredients/random,
+/obj/item/reagent_containers/food/condiment/milk,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "jja" = (
@@ -47857,6 +47879,13 @@
 /obj/structure/gargoyle,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/financialdistrict)
+"lHc" = (
+/obj/structure/table,
+/obj/effect/spawner/random/food_or_drink/pizzaparty{
+	pixel_y = 8
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "lHf" = (
 /obj/structure/chair/sofa/corp/right{
 	color = "#CD5C5C"
@@ -49883,6 +49912,14 @@
 /obj/structure/vampfence/rich,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior)
+"mgJ" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/random/food_or_drink/booze{
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "mgM" = (
 /obj/structure/table/wood,
 /obj/item/candle/infinite{
@@ -59057,6 +59094,11 @@
 /obj/structure/sign/poster/vampire/lod,
 /obj/effect/decal/wallpaper/paper,
 /turf/closed/wall/vampwall/city,
+/area/vtm/interior/ghetto)
+"ono" = (
+/obj/structure/closet/crate/freezer/fridge,
+/obj/item/reagent_containers/food/condiment/milk,
+/turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "onp" = (
 /obj/structure/chair/sofa/corp{
@@ -71054,6 +71096,12 @@
 /obj/structure/chair,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/fishermanswharf)
+"raB" = (
+/obj/machinery/light/small/directional/west{
+	pixel_x = 16
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "raC" = (
 /obj/effect/decal/shadow,
 /obj/structure/vamprocks{
@@ -71814,12 +71862,6 @@
 	},
 /turf/open/floor/carpet/vamp/greengold,
 /area/vtm/clinic/haven)
-"rkJ" = (
-/obj/machinery/light/small/directional/east{
-	pixel_x = -16
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/ghetto)
 "rkQ" = (
 /obj/structure/chair/stool/bar,
 /turf/open/floor/plating/rough,
@@ -79687,14 +79729,6 @@
 /obj/effect/decal/wallpaper/papers/two,
 /turf/closed/wall/vampwall/bar,
 /area/vtm/anarch/basement)
-"tfR" = (
-/obj/structure/table/wood,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/directional/east{
-	pixel_x = -16
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/ghetto)
 "tfW" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/vampire/punk,
@@ -89461,6 +89495,13 @@
 /obj/structure/vampdoor/glass,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/interior/vjanitor)
+"vEc" = (
+/obj/structure/table/wood,
+/obj/machinery/light/small/directional/east{
+	pixel_x = -16
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "vEd" = (
 /obj/effect/turf_decal/bordur{
 	dir = 5
@@ -99181,6 +99222,10 @@
 	pixel_y = 5;
 	pixel_x = 8
 	},
+/obj/effect/spawner/random/food_or_drink/booze{
+	pixel_x = -4;
+	pixel_y = 6
+	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "xSG" = (
@@ -99824,10 +99869,6 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/trujah)
-"yaw" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/ghetto)
 "yax" = (
 /obj/structure/bed/maint,
 /obj/item/food/fish/crab,
@@ -227827,7 +227868,7 @@ jlv
 nXD
 jiS
 tBq
-gaZ
+axL
 uWI
 afe
 mmP
@@ -228344,13 +228385,13 @@ iFP
 iFP
 onV
 npH
-tfR
+gDx
 kgl
 iFP
 enC
 iFP
 bos
-cub
+vEc
 npH
 bCX
 iFP
@@ -228596,9 +228637,9 @@ jlv
 jlv
 jlv
 nXD
-npH
+mgJ
 iFP
-hAw
+raB
 iFP
 iFP
 iFP
@@ -228610,7 +228651,7 @@ iFP
 iFP
 iFP
 iFP
-hAw
+raB
 iFP
 bvY
 afe
@@ -229112,7 +229153,7 @@ iAF
 aqw
 ijg
 iFP
-rkJ
+avy
 iFP
 iPq
 flA
@@ -294652,7 +294693,7 @@ iFP
 aqw
 iFP
 twl
-ilh
+lHc
 mVh
 sRs
 iFP
@@ -294910,7 +294951,7 @@ iCO
 iFP
 iFP
 iFP
-yaw
+cYj
 sRs
 crb
 iFP
@@ -295167,7 +295208,7 @@ aqw
 iFP
 iFP
 chV
-eas
+ono
 sRs
 mJE
 wXS
@@ -295175,7 +295216,7 @@ ilh
 eas
 enC
 hVs
-hAw
+raB
 oNc
 afe
 kno

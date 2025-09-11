@@ -91300,6 +91300,11 @@
 /obj/elevator_door/start_closed,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower)
+"war" = (
+/obj/structure/bed,
+/obj/item/bedsheet/ian,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "wav" = (
 /obj/structure/vampdoor/wood{
 	lock_id = "banuhaqim";
@@ -99138,6 +99143,10 @@
 	},
 /obj/machinery/light/small/directional/east{
 	pixel_x = -16
+	},
+/obj/vampire_computer/prince{
+	pixel_y = 5;
+	pixel_x = 8
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -295111,7 +295120,7 @@ kno
 kno
 nXD
 oNc
-hVs
+war
 pLD
 aqw
 iFP

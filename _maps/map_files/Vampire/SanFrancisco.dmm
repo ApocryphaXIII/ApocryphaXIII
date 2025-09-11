@@ -1487,11 +1487,11 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/interior/ghetto)
 "aqx" = (
-/obj/structure/vampdoor/wood{
-	dir = 4;
-	lock_id = 12316
+/obj/machinery/light/small/directional/west{
+	pixel_x = 16;
+	pixel_y = -1
 	},
-/turf/closed/wall/vampwall/junk,
+/turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/ghetto)
 "aqG" = (
 /obj/structure/bed/maint,
@@ -6976,6 +6976,16 @@
 /obj/item/clothing/mask/cigarette/rollie,
 /turf/open/floor/plating/vampwood,
 /area/vtm/interior)
+"bGu" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/east{
+	pixel_y = 2;
+	pixel_x = -16
+	},
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/ghetto)
 "bGy" = (
 /obj/structure/table/wood,
 /obj/effect/decal/pallet,
@@ -10025,6 +10035,12 @@
 	},
 /turf/closed/wall/vampwall,
 /area/vtm/interior/vjanitor)
+"crb" = (
+/obj/machinery/light/small/directional/south{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "crd" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4;
@@ -37840,6 +37856,11 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/hotel)
+"jiS" = (
+/obj/structure/closet/crate/freezer/fridge,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "jja" = (
 /obj/effect/landmark/npcbeacon,
 /obj/effect/landmark/npcactivity,
@@ -52051,6 +52072,10 @@
 "mJz" = (
 /obj/structure/chair/sofa/old/left{
 	dir = 4
+	},
+/obj/machinery/light/small/directional/east{
+	pixel_y = 3;
+	pixel_x = -16
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -73175,6 +73200,11 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
+"rDA" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "rDE" = (
 /obj/structure/stalagmite,
 /turf/open/floor/plating/rough/cave,
@@ -89830,6 +89860,10 @@
 	},
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/sewer)
+"vIE" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "vIF" = (
 /obj/item/kirbyplants/random,
 /obj/flag/usa{
@@ -94248,6 +94282,12 @@
 /obj/effect/landmark/start/vdoctor,
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/clinic)
+"wLb" = (
+/obj/machinery/light/small/directional/south{
+	pixel_y = 28
+	},
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "wLh" = (
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/plating/vampgrass,
@@ -99095,6 +99135,9 @@
 	pixel_y = 11;
 	pixel_x = 21;
 	list_reagents = list()
+	},
+/obj/machinery/light/small/directional/east{
+	pixel_x = -16
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -227732,7 +227775,7 @@ jlv
 jlv
 jlv
 nXD
-eas
+jiS
 tBq
 gaZ
 uWI
@@ -228251,7 +228294,7 @@ iFP
 iFP
 onV
 npH
-npH
+rDA
 kgl
 iFP
 enC
@@ -229277,7 +229320,7 @@ aqw
 oNc
 iFP
 iFP
-iFP
+vIE
 tlU
 hMq
 flA
@@ -229534,7 +229577,7 @@ aqw
 fDM
 iFP
 npH
-npH
+rDA
 afe
 afe
 afe
@@ -293268,7 +293311,7 @@ ntq
 ntq
 ntq
 tlU
-oxQ
+bGu
 ogl
 afe
 mBH
@@ -293276,7 +293319,7 @@ mBH
 fAr
 fAr
 lSW
-mBH
+aqx
 eBT
 fAr
 fAr
@@ -294300,7 +294343,7 @@ xSB
 iFP
 iFP
 aqw
-iFP
+wLb
 iFP
 kYN
 kYN
@@ -294310,7 +294353,7 @@ qMg
 iFP
 iFP
 enC
-ijg
+tGs
 iFP
 npH
 uXF
@@ -294819,7 +294862,7 @@ iFP
 iFP
 iFP
 sRs
-iFP
+crb
 iFP
 iFP
 iFP
@@ -295334,7 +295377,7 @@ afe
 afe
 afe
 afe
-aqx
+afe
 afe
 afe
 afe

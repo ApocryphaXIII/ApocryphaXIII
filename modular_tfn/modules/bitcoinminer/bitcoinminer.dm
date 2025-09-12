@@ -7,8 +7,8 @@
 	var/active = FALSE
 	var/starting = FALSE
 	var/money_stored = 0
-	var/money_per_tick_min = 0.05
-	var/money_per_tick_max = 0.1
+	var/money_per_tick_min = 0.5
+	var/money_per_tick_max = 1
 
 /obj/machinery/bitcoin_miner/Initialize(mapload)
 	. = ..()

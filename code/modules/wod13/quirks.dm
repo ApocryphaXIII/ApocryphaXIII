@@ -247,7 +247,7 @@ Dancer
 		if(debtor.account_id != account.account_id)
 			continue
 		if(debtor.clan?.name == CLAN_VENTRUE)
-			moneymod * 1.25
+			moneymod = moneymod*1.25
 		else
 			account.account_balance = min(floor(account.account_balance * moneymod), 20000)
 		break

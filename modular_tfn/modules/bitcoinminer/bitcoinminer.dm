@@ -62,7 +62,7 @@
 		new /obj/item/stack/dollar(drop_location(), floor(money_stored))
 		playsound(src, 'sound/machines/eject.ogg', 30)
 		to_chat(user, span_notice("You withdraw $[money_stored] from \the [src]!"))
-		money_stored = 0
+		money_stored -= floor(money_stored)
 	else
 		to_chat(user, span_notice("The balance is less than 1 dollar!"))
 

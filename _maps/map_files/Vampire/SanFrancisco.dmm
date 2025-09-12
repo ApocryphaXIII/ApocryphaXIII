@@ -12450,6 +12450,17 @@
 /obj/effect/decal/cleanable/blood/footprints,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer)
+"cTT" = (
+/obj/machinery/light/small/directional/east{
+	pixel_y = 2;
+	pixel_x = -16
+	},
+/obj/structure/sink{
+	pixel_y = 9
+	},
+/obj/structure/mirror/directional/north,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/ghetto)
 "cTV" = (
 /obj/structure/chair/wood{
 	dir = 1
@@ -30045,6 +30056,10 @@
 /obj/item/flashlight/lamp{
 	pixel_x = -7;
 	pixel_y = 4
+	},
+/obj/item/paper_bin{
+	pixel_y = 7;
+	pixel_x = 8
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -293445,7 +293460,7 @@ fAr
 aqx
 mBH
 tlU
-bGu
+cTT
 ogl
 afe
 fGd
@@ -293702,7 +293717,7 @@ uXF
 afe
 igF
 tlU
-xOz
+flA
 flA
 afe
 ntq
@@ -293960,7 +293975,7 @@ iFP
 iFP
 tlU
 flA
-flA
+xdb
 afe
 ntq
 ntq
@@ -294729,9 +294744,9 @@ iFP
 iFP
 iFP
 enC
-ijg
 iFP
-npH
+iFP
+qMg
 uXF
 ntq
 ntq

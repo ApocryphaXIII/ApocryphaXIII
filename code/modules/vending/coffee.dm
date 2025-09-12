@@ -4,7 +4,8 @@
 	icon_state = "vend_g"
 	icon = 'modular_tfn/icons/vendors_shops.dmi'
 	products = list(
-		/obj/item/reagent_containers/food/drinks/coffee = 6,
+		/obj/item/reagent_containers/food/drinks/coffee/vampire = 10,
+		/obj/item/reagent_containers/food/drinks/coffee/vampire/robust = 5,
 		/obj/item/reagent_containers/food/drinks/mug/tea = 6,
 		/obj/item/reagent_containers/food/drinks/mug/coco = 3
 	)

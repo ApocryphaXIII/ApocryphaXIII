@@ -14,6 +14,7 @@
 	flags_cover = MASKCOVERSMOUTH | PEPPERPROOF
 	resistance_flags = NONE
 	body_worn = TRUE
+	custom_price = 15
 
 /obj/item/clothing/mask/vampire/balaclava
 	name = "balaclava"

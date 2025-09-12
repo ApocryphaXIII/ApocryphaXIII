@@ -5,7 +5,7 @@
 	//light_mask = "snack-light-mask"
 	icon = 'modular_tfn/icons/vendors_shops.dmi'
 	products = list(
-		/obj/item/food/vampire/bar = 25,
+		/obj/item/food/chocolatebar = 25,
 		/obj/item/food/vampire/crisps = 20,
 		/obj/item/reagent_containers/food/drinks/dry_ramen = 10,
 		/obj/item/storage/box/gum = 10

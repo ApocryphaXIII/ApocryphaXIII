@@ -7,8 +7,8 @@
 	var/active = FALSE
 	var/starting = FALSE
 	var/money_stored = 0
-	var/money_per_tick_min = 1
-	var/money_per_tick_max = 2
+	var/money_per_tick_min = 0.05
+	var/money_per_tick_max = 0.1
 
 /obj/machinery/bitcoin_miner/Initialize(mapload)
 	. = ..()
@@ -58,13 +58,13 @@
 	return ..()
 
 /obj/machinery/bitcoin_miner/proc/dump_loot(mob/user)
-	if(money_stored)
-		new /obj/item/stack/dollar(drop_location(), money_stored)
+	if(money_stored >= 1)
+		new /obj/item/stack/dollar(drop_location(), floor(money_stored))
 		playsound(src, 'sound/machines/eject.ogg', 30)
 		to_chat(user, span_notice("You withdraw $[money_stored] from \the [src]!"))
 		money_stored = 0
 	else
-		to_chat(user, span_notice("The balance is empty!"))
+		to_chat(user, span_notice("The balance is less than 1 dollar!"))
 
 /obj/machinery/bitcoin_miner/interact(mob/user)
 	if(!active)

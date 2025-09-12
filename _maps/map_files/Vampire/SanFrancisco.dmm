@@ -73846,7 +73846,6 @@
 	pixel_y = 32
 	},
 /obj/structure/table,
-/obj/machinery/bitcoin_miner,
 /turf/open/floor/plating/vampcarpet{
 	color = "#fFa670"
 	},

@@ -371,7 +371,7 @@
 /obj/structure/railing{
 	layer = 3.1
 	},
-/obj/structure/chair/pew/left{
+/obj/structure/chair/sofa/bench/right{
 	dir = 1
 	},
 /turf/open/floor/plating/woodrough,
@@ -5345,10 +5345,7 @@
 /turf/open/floor/plating/roofwalk,
 /area/vtm/pacificheights/forest)
 "bmu" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /obj/effect/spawner/random/occult/artifact,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/trujah)
@@ -5832,7 +5829,7 @@
 /obj/structure/railing{
 	layer = 3.1
 	},
-/obj/structure/chair/pew/right{
+/obj/structure/chair/sofa/bench/left{
 	dir = 1
 	},
 /turf/open/floor/plating/woodrough,
@@ -7266,7 +7263,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/giovanni)
 "bKP" = (
-/obj/structure/chair/pew/left{
+/obj/structure/chair/sofa/bench/right{
 	dir = 1
 	},
 /turf/open/floor/plating/vampplating,
@@ -10158,10 +10155,7 @@
 /turf/closed/wall/vampwall/bar,
 /area/vtm/anarch)
 "ctx" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -13892,7 +13886,7 @@
 /obj/effect/turf_decal/bordur{
 	dir = 10
 	},
-/obj/structure/chair/pew/left,
+/obj/structure/chair/sofa/bench/left,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm)
 "dnH" = (
@@ -14246,10 +14240,7 @@
 /obj/machinery/chem_dispenser/drinks/fullupgrade{
 	pixel_y = 17
 	},
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/cabaret)
 "drT" = (
@@ -17308,10 +17299,7 @@
 "egr" = (
 /obj/item/storage/box/drinkingglasses,
 /obj/item/storage/box/drinkingglasses,
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/cabaret)
 "egv" = (
@@ -20309,11 +20297,11 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/sewer/nosferatu_warren)
 "eUA" = (
-/obj/structure/chair/pew/right,
 /obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/effect/landmark/npcwall,
+/obj/structure/chair/sofa/bench/right,
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "eUB" = (
@@ -25177,11 +25165,11 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/anarch/basement)
 "gcN" = (
-/obj/structure/chair/pew/left{
-	dir = 1
-	},
 /obj/effect/turf_decal/bordur,
 /obj/effect/landmark/npcwall,
+/obj/structure/chair/sofa/bench/right{
+	dir = 1
+	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "gcP" = (
@@ -30814,10 +30802,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/community)
 "hyq" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /obj/vampire_computer{
 	icon_state = "computerprince"
 	},
@@ -30941,7 +30926,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights)
 "hAH" = (
-/obj/structure/chair/pew/right,
+/obj/structure/chair/sofa/bench/right,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm)
 "hAI" = (
@@ -31082,10 +31067,10 @@
 	dir = 1;
 	pixel_y = 9
 	},
-/obj/structure/chair/pew/left,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/structure/chair/sofa/bench/left,
 /turf/open/floor/plating/vampwood,
 /area/vtm)
 "hCj" = (
@@ -31522,10 +31507,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "hGK" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/millennium_tower/ventrue)
 "hGR" = (
@@ -39301,13 +39283,13 @@
 /turf/closed/wall/vampwall/rich/low/window,
 /area/vtm/interior/endron_facility/restricted)
 "jBh" = (
-/obj/structure/chair/pew/left{
-	dir = 4
-	},
 /obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /obj/effect/landmark/npcwall,
+/obj/structure/chair/sofa/bench/left{
+	dir = 4
+	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "jBj" = (
@@ -39621,10 +39603,7 @@
 	pixel_y = 6
 	},
 /obj/item/kitchen/knife,
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/cabaret)
 "jFf" = (
@@ -40033,13 +40012,13 @@
 /turf/closed/wall/vampwall/junk/alt,
 /area/vtm/interior)
 "jKI" = (
-/obj/structure/chair/pew/left{
-	dir = 8
-	},
 /obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /obj/effect/landmark/npcwall,
+/obj/structure/chair/sofa/bench/left{
+	dir = 8
+	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "jKJ" = (
@@ -40085,7 +40064,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/clinic)
 "jLo" = (
-/obj/structure/chair/pew,
+/obj/structure/chair/sofa/bench,
 /turf/open/floor/plating/vampplating,
 /area/vtm)
 "jLp" = (
@@ -45107,13 +45086,13 @@
 /turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
 "kZJ" = (
-/obj/structure/chair/pew/right{
-	dir = 8
-	},
 /obj/effect/turf_decal/bordur{
 	dir = 4
 	},
 /obj/effect/landmark/npcwall,
+/obj/structure/chair/sofa/bench/right{
+	dir = 8
+	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "kZK" = (
@@ -53340,7 +53319,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/glasswalker)
 "nbA" = (
-/obj/structure/chair/pew/right{
+/obj/structure/chair/sofa/bench/left{
 	dir = 1
 	},
 /turf/open/floor/plating/vampplating,
@@ -53874,10 +53853,7 @@
 /area/vtm/clinic/haven)
 "niJ" = (
 /obj/item/reagent_containers/food/drinks/trophy/gold_cup,
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower/f3)
 "niP" = (
@@ -59559,10 +59535,7 @@
 	},
 /area/vtm/interior/millennium_tower/f2)
 "owv" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#6488EA"
@@ -59900,11 +59873,11 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/northbeach)
 "ozQ" = (
-/obj/structure/chair/pew/left,
 /obj/effect/turf_decal/bordur{
 	dir = 1
 	},
 /obj/effect/landmark/npcwall,
+/obj/structure/chair/sofa/bench/left,
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "ozV" = (
@@ -60360,10 +60333,7 @@
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
 	pixel_y = 17
 	},
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /obj/machinery/light/blacklight{
 	dir = 4
 	},
@@ -62691,7 +62661,7 @@
 /turf/open/floor/plating/circled,
 /area/vtm/interior/wyrm_corrupted)
 "pgs" = (
-/obj/structure/chair/pew/left,
+/obj/structure/chair/sofa/bench/left,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm)
 "pgt" = (
@@ -63869,7 +63839,7 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/museum)
 "pvT" = (
-/obj/structure/chair/pew/right,
+/obj/structure/chair/sofa/bench/right,
 /turf/open/floor/plating/vampplating,
 /area/vtm)
 "pvY" = (
@@ -64086,10 +64056,7 @@
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/ghetto)
 "pze" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/trujah)
 "pzi" = (
@@ -66418,13 +66385,13 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip)
 "qau" = (
-/obj/structure/chair/pew/right{
-	dir = 4
-	},
 /obj/effect/turf_decal/bordur{
 	dir = 8
 	},
 /obj/effect/landmark/npcwall,
+/obj/structure/chair/sofa/bench/right{
+	dir = 4
+	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "qaF" = (
@@ -70847,10 +70814,7 @@
 	},
 /area/vtm/interior/voivodate/sanctum)
 "raM" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /obj/item/melee/vampirearms/eguitar{
 	name = "Replica Guitar";
 	anchored = 1;
@@ -72011,11 +71975,11 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior)
 "rqr" = (
-/obj/structure/chair/pew/right{
-	dir = 1
-	},
 /obj/effect/turf_decal/bordur,
 /obj/effect/landmark/npcwall,
+/obj/structure/chair/sofa/bench/left{
+	dir = 1
+	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "rqs" = (
@@ -74351,7 +74315,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/giovanni/outside)
 "rSR" = (
-/obj/structure/chair/pew,
+/obj/structure/chair/sofa/bench,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm)
 "rSS" = (
@@ -77361,7 +77325,7 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/chair/pew{
+/obj/structure/chair/sofa/bench{
 	dir = 1
 	},
 /turf/open/floor/plating/woodrough,
@@ -78371,7 +78335,7 @@
 /obj/effect/turf_decal/bordur{
 	dir = 6
 	},
-/obj/structure/chair/pew/right,
+/obj/structure/chair/sofa/bench/right,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm)
 "sSL" = (
@@ -79354,10 +79318,10 @@
 	dir = 5;
 	pixel_y = 5
 	},
-/obj/structure/chair/pew/right,
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
 	},
+/obj/structure/chair/sofa/bench/right,
 /turf/open/floor/plating/vampwood,
 /area/vtm)
 "tdJ" = (
@@ -79651,10 +79615,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/supply)
 "thy" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /obj/item/documents/nanotrasen{
 	desc = "A handful of papers detailing the profits and losses of various Ventrue-owned businesses in the city.";
 	name = "profit and loss reports"
@@ -84239,7 +84200,7 @@
 /turf/closed/wall/vampwall,
 /area/vtm/unionsquare)
 "ups" = (
-/obj/structure/chair/pew/left,
+/obj/structure/chair/sofa/bench/left,
 /turf/open/floor/plating/vampplating,
 /area/vtm)
 "upx" = (
@@ -88222,10 +88183,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf)
 "vpC" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/cabaret)
 "vpJ" = (
@@ -88729,10 +88687,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/forest)
 "vwj" = (
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /obj/machinery/button/curtain{
 	id = 2004
 	},
@@ -91136,10 +91091,10 @@
 	dir = 1;
 	pixel_y = 9
 	},
-/obj/structure/chair/pew,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/structure/chair/sofa/bench,
 /turf/open/floor/plating/vampwood,
 /area/vtm)
 "vZu" = (
@@ -92912,10 +92867,7 @@
 /area/vtm/interior/strip)
 "wwY" = (
 /obj/item/reagent_containers/food/drinks/trophy/silver_cup,
-/obj/structure/table/abductor{
-	name = "elegant table";
-	desc = "An extremely fancy table"
-	},
+/obj/structure/table/modern,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower/f3)
 "wxb" = (
@@ -100044,7 +99996,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/ghetto)
 "yfh" = (
-/obj/structure/chair/pew{
+/obj/structure/chair/sofa/bench{
 	dir = 1
 	},
 /turf/open/floor/plating/vampplating,

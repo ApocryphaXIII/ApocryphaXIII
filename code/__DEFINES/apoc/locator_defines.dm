@@ -1,0 +1,5 @@
+#define	LOCATOR_MASQ "Masquerade"
+#define	LOCATOR_BLOODHUNT "Bloodhunt"
+#define	LOCATOR_VEIL "Veil"
+#define LOCATOR_NORM "Normal"
+#define LOCATOR_HOWL "Garou"

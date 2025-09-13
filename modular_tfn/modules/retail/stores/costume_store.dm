@@ -23,6 +23,11 @@
 		new /datum/data/vending_product("comedy mask", /obj/item/clothing/mask/vampire/comedy,	25),
 		new /datum/data/vending_product("tragedy mask", /obj/item/clothing/mask/vampire/tragedy,	25),
 		new /datum/data/vending_product("shemagh",	 /obj/item/clothing/mask/vampire/shemagh,	20),
+		new /datum/data/vending_product("eyepatch", /obj/item/clothing/glasses/apoc/eyepatch, 5),
+		new /datum/data/vending_product("magic eye seal", /obj/item/clothing/glasses/apoc/eyepatch/medical, 5),
+		new /datum/data/vending_product("rose eyepatch", /obj/item/clothing/glasses/apoc/eyepatch/rose, 5),
+		new /datum/data/vending_product("blindfold", /obj/item/clothing/glasses/apoc/blindfold, 5),
+		new /datum/data/vending_product("trick blindfold", /obj/item/clothing/glasses/apoc/blindfold/trick, 5),
 		new /datum/data/vending_product("white robes",	/obj/item/clothing/suit/hooded/robes,	40),
 		new /datum/data/vending_product("black robes",	/obj/item/clothing/suit/hooded/robes/black,	40),
 		new /datum/data/vending_product("grey robes",	/obj/item/clothing/suit/hooded/robes/grey,	40),
@@ -40,5 +45,5 @@
 		new /datum/data/vending_product("grey wizard hat",	/obj/item/clothing/head/vampire/wizard/grey, 25),
 		new /datum/data/vending_product("white wizard hat",	/obj/item/clothing/head/vampire/wizard/white, 25),
 		new /datum/data/vending_product("black wizard hat",	/obj/item/clothing/head/vampire/wizard/black, 25),
-		new /datum/data/vending_product("purple wizard hat",	/obj/item/clothing/head/vampire/wizard/purple, 25),
+		new /datum/data/vending_product("purple wizard hat",	/obj/item/clothing/head/vampire/wizard/purple, 25)
 	)

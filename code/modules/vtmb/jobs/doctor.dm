@@ -19,7 +19,7 @@
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM)
 
-	allowed_species = list("Vampire", "Ghoul", "Human", "Werewolf", "Kuei-Jin")
+	allowed_species = SPECIES_ALL
 	display_order = JOB_DISPLAY_ORDER_DOCTOR
 	bounty_types = CIV_JOB_MED
 
@@ -53,7 +53,7 @@
 	name = "Doctor"
 	icon_state = "Doctor"
 
-/* Apoc Edit
+/* APOC EDIT REMOVE START
 /datum/job/vamp/vdirector
 	title = "Clinic Director"
 	department_head = list("Primogen Malkavian")
@@ -107,4 +107,4 @@
 /obj/effect/landmark/start/vdirector
 	name = "Clinic Director"
 	icon_state = "Doctor"
-*/
+*/ // APOC EDIT REMOVE END

@@ -41,7 +41,7 @@
 	name = "letter"
 	icon_state = "letter"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_SMALL
 	var/mob/living/carbon/human/Targ
 
@@ -49,7 +49,7 @@
 	name = "letter mark"
 	icon_state = "mark"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/letter/Initialize()

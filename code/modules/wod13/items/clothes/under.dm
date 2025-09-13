@@ -8,7 +8,7 @@
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 15)
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	body_worn = TRUE
 	fitted = NO_FEMALE_UNIFORM
 	cost = 10
@@ -449,7 +449,7 @@
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 15)
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	body_worn = TRUE
 	fitted = NO_FEMALE_UNIFORM
 	cost = 10

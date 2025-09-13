@@ -4,7 +4,7 @@
 	faction = "Vampire"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = " the SF local government."
+	supervisors = " the SF local government" // APOC EDIT CHANGE
 	selection_color = "#7e7e7e"
 
 	outfit = /datum/outfit/job/dispatcher

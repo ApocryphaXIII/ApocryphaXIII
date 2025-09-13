@@ -24,6 +24,7 @@
 	var/obj/item/inventory_head
 	var/obj/item/inventory_mask
 	gold_core_spawnable = FRIENDLY_SPAWN
+	has_hate = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/crab/Life()
 	..()

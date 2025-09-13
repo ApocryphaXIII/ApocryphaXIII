@@ -47,7 +47,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 	var/exchange_num = 415
 	var/list/contacts = list()
@@ -450,12 +450,14 @@
 									blocked_contacts -= CNT_UNBLOCK
 				if("Call History")
 					if(phone_history_list.len > 0)
+						var/list/message_list = list()
 						for(var/datum/phonehistory/PH in phone_history_list)
 							//loop through the phone_history_list searching for a phonehistory datums and display them.
 							var/display_number_first = copytext(PH.number, 1, 4)
 							var/display_number_second = copytext(PH.number, 4, 4 + SUBSCRIBER_NUMBER_LENGTH)
 							var/split_number = display_number_first + " " + display_number_second
-							to_chat(usr, "# [PH.call_type]: [PH.name] , [split_number] at [PH.time]")
+							message_list += span_notice("[PH.call_type]: [PH.name], [split_number] at [PH.time]")
+						to_chat(usr, boxed_message(jointext(message_list, "\n")))
 					else
 						to_chat(usr, "You have no call history.") //PSEUDO_M return to fix all this
 				if("Delete Call History")

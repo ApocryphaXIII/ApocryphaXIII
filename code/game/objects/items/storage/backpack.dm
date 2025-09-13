@@ -247,7 +247,7 @@
 		to_chat(H, "<span class='notice'>You [icon_hidden ? "conceal" : "reveal"] [src].</span>")
 		H.update_inv_back()
 	else if(!H.w_uniform)
-		to_chat(H, "Conceal [src] under what? Your skin?")
+		to_chat(H, span_warning("Conceal [src] under what? Your skin?"))
 
 /obj/item/storage/backpack/satchel/leather
 	name = "leather satchel"

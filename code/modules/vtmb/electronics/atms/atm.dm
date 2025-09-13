@@ -49,29 +49,29 @@
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 10000
-	max_starting_wealth = 15000
+	max_starting_wealth = 12000
 
 /obj/item/card/credit/seneschal
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 4000
-	max_starting_wealth = 8000
+	max_starting_wealth = 6000
 
 /obj/item/card/credit/elder
 	icon_state = "card3"
 	inhand_icon_state = "card3"
 	min_starting_wealth = 3000
-	max_starting_wealth = 7000
+	max_starting_wealth = 5000
 
 /obj/item/card/credit/giovanniboss
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 8000
-	max_starting_wealth = 15000
+	max_starting_wealth = 10000
 
 /obj/item/card/credit/rich
 	min_starting_wealth = 1000
-	max_starting_wealth = 4000
+	max_starting_wealth = 3000
 
 
 /obj/item/card/credit/Initialize(mapload)

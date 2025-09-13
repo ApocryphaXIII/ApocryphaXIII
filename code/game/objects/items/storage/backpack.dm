@@ -243,9 +243,11 @@
 	var/mob/living/carbon/human/H = user
 	if(src == H.back && H.w_uniform)
 		icon_hidden = !icon_hidden
-		worn_icon_state = icon_hidden ? "blank" : initial(worn_icon_state)
-		to_chat(H, "<span class='notice'>You [icon_hidden ? "conceal" : "reveal"] your [src].</span>")
+		worn_icon_state = icon_hidden ? "nothing" : initial(worn_icon_state)
+		to_chat(H, "<span class='notice'>You [icon_hidden ? "conceal" : "reveal"] [src].</span>")
 		H.update_inv_back()
+	else if(!H.w_uniform)
+		to_chat(H, "Conceal [src] under what? Your skin?")
 
 /obj/item/storage/backpack/satchel/leather
 	name = "leather satchel"

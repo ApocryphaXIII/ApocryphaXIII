@@ -160,7 +160,8 @@
 			if (mag_display_ammo && !magazine.ammo_count())
 				. += "[icon_state]_mag_empty"
 		else
-			. += "[icon_state]_mag"
+			if(mag_display)
+				. += "[icon_state]_mag"
 			if(!mag_display_ammo)
 				return
 			var/capacity_number

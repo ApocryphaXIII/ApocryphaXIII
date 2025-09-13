@@ -582,64 +582,11 @@
 			to_chat(user, "<span class='notice'>You fill [I].</span>")
 			say("Gas filled.")
 
-
 /obj/structure/reagent_dispensers/cleaningfluid
 	name = "cleaning fluid tank"
 	desc = "A container filled with cleaning fluid."
 	reagent_id = /datum/reagent/space_cleaner
 	icon_state = "water"
-
-/obj/structure/rack/tacobell
-	name = "table"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "tacobell"
-
-/obj/structure/rack/tacobell/attack_hand(mob/living/user)
-	return
-
-/obj/structure/rack/tacobell/horizontal
-	icon_state = "tacobell1"
-
-/obj/structure/rack/tacobell/vertical
-	icon_state = "tacobell2"
-
-/obj/structure/rack/tacobell/south
-	icon_state = "tacobell3"
-
-/obj/structure/rack/tacobell/north
-	icon_state = "tacobell4"
-
-/obj/structure/rack/tacobell/east
-	icon_state = "tacobell5"
-
-/obj/structure/rack/tacobell/west
-	icon_state = "tacobell6"
-
-/obj/structure/rack/bubway
-	name = "table"
-	icon = 'code/modules/wod13/props.dmi'
-	icon_state = "bubway"
-
-/obj/structure/rack/bubway/attack_hand(mob/living/user)
-	return
-
-/obj/structure/rack/bubway/horizontal
-	icon_state = "bubway1"
-
-/obj/structure/rack/bubway/vertical
-	icon_state = "bubway2"
-
-/obj/structure/rack/bubway/south
-	icon_state = "bubway3"
-
-/obj/structure/rack/bubway/north
-	icon_state = "bubway4"
-
-/obj/structure/rack/bubway/east
-	icon_state = "bubway5"
-
-/obj/structure/rack/bubway/west
-	icon_state = "bubway6"
 
 /obj/underplate
 	name = "underplate"
@@ -652,9 +599,23 @@
 /obj/underplate/stuff
 	icon_state = "stuff"
 
-/obj/matrix
+/turf/closed/indestructible/the_matrix
 	name = "matrix"
 	desc = "Suicide is no exit..."
+	icon = 'code/modules/wod13/props.dmi'
+	icon_state = "matrix"
+
+/turf/closed/indestructible/the_matrix/attack_hand(mob/user)
+	if(!user.client)
+		return FALSE
+	if(!do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
+		return FALSE
+	matrix_mob(user, src)
+	return TRUE
+
+/obj/the_matrix
+	name = "matrix (depricated)"
+	desc = "Suicide is no exit... This is an old evil version, please contact a mapper to replace this with a turf one if you are reading this"
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "matrix"
 	plane = GAME_PLANE
@@ -664,13 +625,28 @@
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 
-/obj/matrix/attack_hand(mob/user)
-	if(user.client)
-		if(do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
-			cryo_mob(user, src)
+/obj/the_matrix/attack_hand(mob/user)
+	if(!user.client)
+		return FALSE
+	if(!do_after(user, 10 SECONDS, src, interaction_key = DOAFTER_SOURCE_MATRIX))
+		return FALSE
+	matrix_mob(user, src)
 	return TRUE
 
-/obj/matrix/proc/cryo_mob(mob/living/mob_occupant)
+/proc/matrix_mob_verb(mob/living/M in world)
+	set name = "Matrix Mob"
+	set category = "Admin"
+	if(!istype(M))
+		return
+
+	var/turf/target_turf = get_turf(M)
+	var/message = "[key_name(usr)] has matrixed [M] ([M.type]) at [AREACOORD(target_turf)]"
+	message_admins(message)
+	log_admin(message)
+
+	matrix_mob(M)
+
+/proc/matrix_mob(mob/living/mob_occupant)
 	message_admins("[ADMIN_LOOKUP(mob_occupant)] has exited through the matrix.")
 	log_game("[mob_occupant] has exited through the matrix.")
 	var/list/crew_member = list()
@@ -960,7 +936,7 @@
 /obj/structure/roofstuff
 	name = "roof ventilation"
 	desc = "Air to inside."
-	icon = 'code/modules/wod13/props.dmi'
+	icon = 'code/modules/wod13/vents.dmi'
 	icon_state = "roof1"
 	plane = GAME_PLANE
 	layer = ABOVE_ALL_MOB_LAYER
@@ -984,6 +960,31 @@
 
 /obj/structure/roofstuff/alt3
 	icon_state = "roof4"
+
+// Use this instead of alt3
+/obj/structure/roofstuff/vent_end
+	icon_state = "roof4"
+	smoothing_groups = list(SMOOTH_GROUP_VENTS)
+
+/obj/structure/roofstuff/vent
+	icon_state = "vent-0"
+	base_icon_state = "vent"
+	smoothing_groups = list(SMOOTH_GROUP_VENTS)
+
+/obj/structure/roofstuff/vent/south
+	icon_state = "vent-3"
+
+/obj/structure/roofstuff/vent/autotiling
+	MAP_SWITCH(icon_state = "vent-0", icon_state = "vent_autotile")
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_VENTS)
+	canSmoothWith = list(SMOOTH_GROUP_VENTS)
+
+/obj/structure/roofstuff/vent/autotiling/update_appearance()
+	. = ..()
+	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
+		QUEUE_SMOOTH(src)
+		QUEUE_SMOOTH_NEIGHBORS(src)
 
 /obj/effect/decal/kopatich
 	name = "hide carpet"

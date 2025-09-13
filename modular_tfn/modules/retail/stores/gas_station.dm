@@ -20,5 +20,6 @@
 		new /datum/data/vending_product("blue stripe", /obj/item/reagent_containers/food/drinks/beer/vampire/blue_stripe, 8),
 		new /datum/data/vending_product("candle pack",	/obj/item/storage/fancy/candle_box,	12),
 		new /datum/data/vending_product("bruise pack", /obj/item/stack/medical/bruise_pack, 100),
-		new /datum/data/vending_product("respirator",	/obj/item/clothing/mask/vampire,	35)
+		new /datum/data/vending_product("respirator",	/obj/item/clothing/mask/vampire,	35),
+		new /datum/data/vending_product("white cane", /obj/item/cane/white, 25)
 	)

@@ -166,7 +166,7 @@
 
 /obj/item/ammo_casing/vampire
 	icon = 'code/modules/wod13/ammo.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	var/base_iconstate
 
 /obj/item/ammo_casing/vampire/c9mm
@@ -263,7 +263,7 @@
 
 /obj/item/ammo_box/vampire
 	icon = 'code/modules/wod13/ammo.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_NORMAL
 
 ///9mm/////////////

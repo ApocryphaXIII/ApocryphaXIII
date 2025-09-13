@@ -3,10 +3,11 @@
 	icon_state = "bloodhunt"
 
 /atom/movable/screen/alert/bloodhunt/Click()
-	for(var/mob/living/carbon/human/H in SSbloodhunt.hunted)
-		if(H)
-			var/area/A = get_area(H)
-			to_chat(usr, "[icon2html(getFlatIcon(H), usr)][H.true_real_name], [H.mind ? H.mind.assigned_role : "Citizen"]. Was last seen at [A.name]")
+	if(SSbloodhunt.hunted.len) // APOC EDIT START
+		var/compound
+		for(var/mob/living/carbon/human/H in SSbloodhunt.hunted)
+			compound = (compose_dir(H, usr, get_turf(H), LOCATOR_BLOODHUNT))
+			to_chat(usr, "[compound]") // APOC EDIT END
 
 SUBSYSTEM_DEF(bloodhunt)
 	name = "Blood Hunt"

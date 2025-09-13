@@ -6,7 +6,7 @@
 	icon = 'code/modules/wod13/items.dmi'
 	lefthand_file = null
 	righthand_file = null
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_TINY
 	full_w_class = WEIGHT_CLASS_TINY
 	resistance_flags = FLAMMABLE

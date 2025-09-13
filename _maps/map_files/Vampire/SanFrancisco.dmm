@@ -34074,6 +34074,10 @@
 /area/vtm/financialdistrict)
 "ilh" = (
 /obj/structure/table,
+/obj/machinery/reagentgrinder{
+	pixel_y = 9;
+	pixel_x = 7
+	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "ilj" = (
@@ -89533,10 +89537,10 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/interior/vjanitor)
 "vEc" = (
-/obj/structure/table/wood,
 /obj/machinery/light/small/directional/east{
 	pixel_x = -16
 	},
+/obj/structure/table/wood,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "vEd" = (
@@ -96161,6 +96165,17 @@
 	},
 /turf/open/floor/plating/saint,
 /area/vtm/church/interior/staff)
+"xgn" = (
+/obj/structure/closet/crate/bin{
+	pixel_x = 6;
+	pixel_y = 15
+	},
+/obj/structure/closet/crate/bin{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/ghetto/old)
 "xgt" = (
 /obj/structure/closet/crate/large,
 /obj/item/reagent_containers/food/drinks/beer/vampire,
@@ -227403,7 +227418,7 @@ ruf
 ruf
 ruf
 ruf
-ruf
+xgn
 ruf
 ruf
 ruf

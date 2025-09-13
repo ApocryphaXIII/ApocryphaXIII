@@ -207,31 +207,28 @@
 	duration_length = 3 SECONDS
 	range = 7
 	var/domination_succeeded = FALSE
+	var/custom_memory = "YOU SAW NOTHING"  // APOC EDIT START
 
 /datum/discipline_power/dominate/the_forgetful_mind/pre_activation_checks(mob/living/target)
-
-	if(!dominate_hearing_check(owner, target))
-		return FALSE
-
-	domination_succeeded = dominate_check(owner, target, base_difficulty = 6)
-	if(domination_succeeded)
+	if(dominate_hearing_check(owner, target))
 		return TRUE
-	else
-		do_cooldown(cooldown_length)
-		return FALSE
 
 /datum/discipline_power/dominate/the_forgetful_mind/activate(mob/living/target)
 	. = ..()
 
-	if(domination_succeeded)
+	custom_memory = tgui_input_text(owner, "Rewrite Memory", "What do they remember?", "YOU SAW NOTHING")
+	if (!custom_memory)
+		return  // No message, no dominate
+
+	if(dominate_check(owner, target, base_difficulty = 6))
 		to_chat(owner, span_warning("You've successfully dominated [target]'s mind!"))
-		to_chat(target, span_danger("THINK TWICE"))
-		owner.say("Think twice.")
+		to_chat(target, span_danger("Your memory bends and distorts. [span_purple(custom_memory)]"))
 		target.add_movespeed_modifier(/datum/movespeed_modifier/dominate)
 		SEND_SOUND(target, sound('code/modules/wod13/sounds/dominate.ogg'))
 	else
-		to_chat(owner, span_warning("[target]'s mind has resisted your domination!"))
+		to_chat(owner, span_warning("[target] has resisted your domination!"))
 		to_chat(target, span_warning("Your thoughts blur—[owner] tries to bend your will. You resist."))
+		do_cooldown(cooldown_length) // APOC EDIT END
 
 /datum/discipline_power/dominate/the_forgetful_mind/deactivate(mob/living/target)
 	. = ..()

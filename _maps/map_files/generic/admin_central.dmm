@@ -34,10 +34,6 @@
 "dr" = (
 /turf/closed/indestructible/splashscreen,
 /area/start)
-"eo" = (
-/obj/machinery/light_switch/directional/north,
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/movie_theatre/screening)
 "eF" = (
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/movie_theatre)
@@ -49,7 +45,8 @@
 /area/vtm/interior/movie_theatre/screening)
 "eZ" = (
 /obj/machinery/light/prince/directional/east{
-	light_power = 0.5
+	light_power = 0.5;
+	bulb_power = 0.5
 	},
 /turf/open/floor/plating/vampplating/stairs/black{
 	dir = 1
@@ -159,7 +156,8 @@
 	dir = 4;
 	locked = 1;
 	lockpick_difficulty = 1000;
-	lockpick_timer = 999
+	lockpick_timer = 999;
+	lock_id = "milleniumCommon"
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/movie_theatre/screening)
@@ -176,7 +174,8 @@
 	dir = 1;
 	locked = 1;
 	lockpick_difficulty = 1000;
-	lockpick_timer = 999
+	lockpick_timer = 999;
+	lock_id = "milleniumCommon"
 	},
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
@@ -553,7 +552,8 @@
 /area/vtm/interior/movie_theatre)
 "Zl" = (
 /obj/machinery/light/prince/directional/west{
-	light_power = 0.5
+	light_power = 0.5;
+	bulb_power = 0.5
 	},
 /turf/open/floor/plating/vampplating/stairs/black{
 	dir = 1
@@ -4187,7 +4187,7 @@ hS
 Sv
 Sv
 Ew
-eo
+UN
 UN
 UN
 Pl

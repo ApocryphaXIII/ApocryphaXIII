@@ -589,3 +589,12 @@
 	desc = "A talented fleshcrafted creature that can insert an implant or organ into its master without the hassle of extensive surgery. \
 		Its mouth is eagerly awaiting implants or organs. However, it's quite greedy, so a screwdriver must be used to pry away accidentally added items."
 	icon = 'code/modules/wod13/items.dmi'
+
+
+/obj/item/autosurgeon/organ/vicissitude/AltClick(mob/user) // APOC EDIT ADD
+	. = ..()
+	var/name_input = stripped_input(user,"What do you want to name [src]?", ,"[src.name]", MAX_NAME_LEN)
+	if(name_input)
+		name = "[name_input]" // APOC EDIT END
+	else
+		name = "[initial(name)]"

@@ -1233,7 +1233,7 @@
 	gender = PLURAL
 	name = "water"
 	icon = 'code/modules/wod13/tiles.dmi'
-	icon_state = "ocean"
+	MAP_SWITCH(icon_state = "ocean", icon_state = "ocean_crossable") // APOC EDIT ADD
 	flags_1 = NONE
 	attachment_holes = FALSE
 	bullet_bounce_sound = null

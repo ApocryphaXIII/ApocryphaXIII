@@ -932,7 +932,7 @@ VENTORY!
 	grid_height = 1 GRID_BOXES
 
 /obj/item/melee/vampirearms/katana/kosa
-	grid_width = 7 GRID_BOXES // APOC EDIT CHANGE // 3-7
+	grid_width = 6 GRID_BOXES // APOC EDIT CHANGE // 3-6
 	grid_height = 2 GRID_BOXES
 
 /obj/item/melee/vampirearms/eguitar

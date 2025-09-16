@@ -615,8 +615,7 @@
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/shop)
 "rB" = (
-/obj/the_matrix,
-/turf/open/floor/plating/asphalt,
+/turf/closed/indestructible/the_matrix,
 /area/vtm)
 "rF" = (
 /obj/effect/landmark/npcbeacon/directed{

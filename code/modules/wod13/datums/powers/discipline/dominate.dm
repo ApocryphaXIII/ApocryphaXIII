@@ -303,6 +303,7 @@
 
 
 /datum/discipline_power/dominate/possession/pre_activation_checks(mob/living/target)
+
 	if(!dominate_hearing_check(owner, target))
 		return FALSE
 

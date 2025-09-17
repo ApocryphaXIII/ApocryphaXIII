@@ -107,7 +107,4 @@
 	key = "grit"
 	key_third_person = "grits"
 	message = "forcefully grits their teeth."
-	emote_type = EMOTE_VISIBLE
-
-
-//TFN EDIT END - Small Emote Expansion #808
+	emote_type = EMOTE_VISIBLE // TFN EDIT END - Small Emote Expansion #808

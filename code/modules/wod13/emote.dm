@@ -47,10 +47,7 @@
 	message = "howls!"
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
 
-//TFN EDIT START - Small Emote Expansion #808 - Does The Thing
-
-
-/datum/emote/living/snarl
+/datum/emote/living/snarl // TFN EDIT START - Small Emote Expansion #808 - Does The Thing
 	key = "snarl"
 	key_third_person = "snarls"
 	message = "snarls!"

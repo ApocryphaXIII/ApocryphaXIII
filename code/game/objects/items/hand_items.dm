@@ -434,7 +434,8 @@
 	var/kiss_type = /obj/projectile/kiss
 	/// TRUE if the user was aiming anywhere but the mouth when they offer the kiss, if it's offered
 	var/cheek_kiss
-	var/hand_kiss //TFN EDIT - Small Emote Expansion #808 - new var
+	var/hand_kiss // TFN EDIT - Small Emote Expansion #808 - new var
+	
 /obj/item/hand_item/kisser/afterattack(atom/target, mob/living/carbon/user, proximity)
 	. = ..()
 	var/obj/projectile/blown_kiss = new kiss_type(get_turf(user))

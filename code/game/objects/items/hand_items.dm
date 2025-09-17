@@ -452,7 +452,6 @@
 	qdel(src)
 	return TRUE
 
-
 /obj/item/hand_item/kisser/on_offered(mob/living/carbon/offerer, mob/living/carbon/offered)
 	if(!(locate(/mob/living/carbon) in orange(1, offerer)))
 		return TRUE

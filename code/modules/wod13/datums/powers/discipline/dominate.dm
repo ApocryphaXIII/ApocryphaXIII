@@ -230,7 +230,7 @@
 		target.add_movespeed_modifier(/datum/movespeed_modifier/dominate)
 		SEND_SOUND(target, sound('code/modules/wod13/sounds/dominate.ogg'))
 	else
-		to_chat(owner, span_warning("[target]'s mind has resisted your domination!")) // APOC EDIT CHANGE
+		to_chat(owner, span_warning("[target]'s mind has resisted your domination!"))
 		to_chat(target, span_warning("Your thoughts blur—[owner] tries to bend your will. You resist."))
 
 /datum/discipline_power/dominate/the_forgetful_mind/deactivate(mob/living/target)

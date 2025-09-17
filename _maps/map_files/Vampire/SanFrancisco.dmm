@@ -91757,7 +91757,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/anarch/basement)
 "wbU" = (
-/obj/generator,
+/obj/warehouse_generator,
 /obj/machinery/light{
 	pixel_y = 32
 	},

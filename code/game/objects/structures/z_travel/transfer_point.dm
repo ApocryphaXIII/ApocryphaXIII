@@ -33,6 +33,17 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 /obj/transfer_point_vamp/backrooms/map
 	density = 0
 
+/obj/transfer_point_vamp/stairs
+	name = "stairs"
+	icon_state = "stairs"
+	icon = 'icons/obj/stairs.dmi'
+
+/obj/transfer_point_vamp/stairs/theatre1
+	id = "theatre1"
+
+/obj/transfer_point_vamp/stairs/theatre2
+	id = "theatre2"
+
 /obj/transfer_point_vamp/umbral
 	name = "portal"
 	icon = 'code/modules/wod13/48x48.dmi'

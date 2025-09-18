@@ -25,6 +25,7 @@
 	switching_on = FALSE
 	icon_state = "gen"
 	playsound(src.loc, 'sound/effects/supermatter.ogg', 25, TRUE)
+	var/area/A = get_area(src)
 	A.requires_power = FALSE
 	A.fire_controled = TRUE
 	for(var/obj/machinery/light/L in A)

@@ -41,9 +41,9 @@ SUBSYSTEM_DEF(carpool)
 	desc = "Stores gasoline or pure fire death."
 	icon_state = "gasoline"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	var/stored_gasoline = 0
 

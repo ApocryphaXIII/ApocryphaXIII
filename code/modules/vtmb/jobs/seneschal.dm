@@ -151,7 +151,7 @@
 	faction = "Vampire"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the Seneschal, Sheriff and Prince."
+	supervisors = "the Seneschal, Sheriff and Prince" // APOC EDIT CHANGE
 	selection_color = "#bd3327"
 	minimal_player_age = 7
 	exp_requirements = 300

@@ -243,7 +243,7 @@
 	desc = "Just blood and guts..."
 	icon_state = "guts"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/spine
@@ -251,7 +251,7 @@
 	desc = "If only I had control..."
 	icon_state = "spine"
 	icon = 'code/modules/wod13/items.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_SMALL
 
 /datum/crafting_recipe/tzi_biter
@@ -503,7 +503,7 @@
 	desc = "Boghatyrskaya sila taitsa zdies'..."
 	icon_state = "dirt"
 	icon = 'code/modules/wod13/icons.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	w_class = WEIGHT_CLASS_SMALL
 
 /datum/material/vicissitude_flesh
@@ -541,7 +541,7 @@
 	desc = "What the fuck..."
 	singular_name = "human flesh"
 	icon_state = "human"
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	mats_per_unit = list(/datum/material/vicissitude_flesh = MINERAL_MATERIAL_AMOUNT)
 	merge_type = /obj/item/stack/human_flesh
 	max_amount = 50
@@ -589,3 +589,12 @@
 	desc = "A talented fleshcrafted creature that can insert an implant or organ into its master without the hassle of extensive surgery. \
 		Its mouth is eagerly awaiting implants or organs. However, it's quite greedy, so a screwdriver must be used to pry away accidentally added items."
 	icon = 'code/modules/wod13/items.dmi'
+
+
+/obj/item/autosurgeon/organ/vicissitude/AltClick(mob/user) // APOC EDIT ADD
+	. = ..()
+	var/name_input = stripped_input(user,"What do you want to name [src]?", ,"[src.name]", MAX_NAME_LEN)
+	if(name_input)
+		name = "[name_input]" // APOC EDIT END
+	else
+		name = "[initial(name)]"

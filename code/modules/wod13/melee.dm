@@ -1,8 +1,8 @@
 /obj/item/melee/vampirearms
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	var/quieted = FALSE
 	var/datum/weakref/owner = null
 	cost = 25
@@ -23,6 +23,7 @@
 
 /obj/item/melee/vampirearms/fireaxe
 	icon = 'code/modules/wod13/48x32weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "fireaxe0"
 	name = "fire axe"
 	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
@@ -80,6 +81,7 @@
 
 /obj/item/melee/vampirearms/fireaxe/axetzi
 	icon = 'code/modules/wod13/48x32weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "axetzi0"
 	name = "living axe"
 	desc = "Truly, the weapon of a madman."
@@ -99,6 +101,7 @@
 	name = "katana"
 	desc = "An elegant weapon, its tiny edge is capable of cutting through flesh and bone with ease."
 	icon = 'code/modules/wod13/48x32weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "katana"
 	flags_1 = CONDUCT_1
 	force = 35
@@ -118,6 +121,18 @@
 	masquerade_violating = FALSE
 	cost = 250
 	is_iron = TRUE
+
+/obj/item/melee/vampirearms/katana/examine(mob/user) // APOC EDIT ADD START
+	. = ..()
+	. += span_notice("Use [src] in-hand to change how you wear it.")
+
+/obj/item/melee/vampirearms/katana/attack_self(mob/user)
+	if(alternate_worn_layer)
+		alternate_worn_layer = null
+		to_chat(user, span_notice("You readjust [src], returning it to it's initial position."))
+	else
+		alternate_worn_layer = BACK_LAYER
+		to_chat(user, span_notice("You adjust [src].")) // APOC EDIT ADD END
 
 /obj/item/melee/vampirearms/katana/fire
 	name = "burning katana"
@@ -153,6 +168,7 @@
 	name = "rapier"
 	desc = "A thin, elegant sword, the rapier is a weapon of the duelist, designed for thrusting."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "rapier"
 	flags_1 = CONDUCT_1
 	force = 35
@@ -175,6 +191,7 @@
 	name = "machete"
 	desc = "A certified chopper fit for the jungles...but you don't see any vines around. Well-weighted enough to be thrown."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "machete"
 	flags_1 = CONDUCT_1
 	force = 25
@@ -198,6 +215,7 @@
 	name = "sabre"
 	desc = "A curved sword, the sabre is a weapon of the cavalry, designed for slashing and thrusting."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "sabre"
 	flags_1 = CONDUCT_1
 	force = 30
@@ -220,6 +238,7 @@
 	name = "longsword"
 	desc = "A classic weapon of the knight, the longsword is a versatile weapon that can be used for both cutting and thrusting."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "longsword"
 	flags_1 = CONDUCT_1
 	force = 35
@@ -242,6 +261,7 @@
 	name = "The Brother's Keeper"
 	desc = "The ancient yet classic weapon of times gone, this is a longsword. This exemplar is surprisingly well taken care of, despite its age, to the point that whatever blood or vitae it may have drawn in the past is not visible at all, while still functioning as well as it first did however long ago. Upon the flat side of this blade, a simple well-worn inscription is engraved in Latin. 'In Death, I Rise.'"
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "longsword"
 	color = "#C0C0C0"
 	flags_1 = CONDUCT_1
@@ -278,10 +298,10 @@
 	worn_icon_state = "longsword_sheathe"
 	w_class = WEIGHT_CLASS_BULKY
 	icon = 'code/modules/wod13/weapons.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	component_type = /datum/component/storage/concrete/vtm/sheathe
 
 /obj/item/storage/belt/vampire/sheathe/longsword
@@ -319,10 +339,21 @@
 		/obj/item/melee/vampirearms/sabre
 		))
 
-/obj/item/storage/belt/vampire/sheathe/examine(mob/user)
+/obj/item/storage/belt/vampire/sheathe/examine(mob/user) // APOC EDIT ADD START
 	. = ..()
+
+	. += span_notice("Use [src] in-hand to change how you wear it.")
+
 	if(length(contents))
-		. += "<span class='notice'>Alt-click it to quickly draw the blade.</span>"
+		. += span_notice("Alt-click it to quickly draw the blade.")
+
+/obj/item/storage/belt/vampire/sheathe/attack_self(mob/user)
+	if(alternate_worn_layer)
+		alternate_worn_layer = null
+		to_chat(user, span_notice("You readjust [src], returning it to it's initial position."))
+	else
+		alternate_worn_layer = BACK_LAYER
+		to_chat(user, span_notice("You adjust [src].")) // APOC EDIT ADD END
 
 /obj/item/storage/belt/vampire/sheathe/AltClick(mob/user)
 	if(!user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
@@ -374,6 +405,7 @@
 	name = "baseball bat"
 	desc = "There ain't a skull in the league that can withstand a swatter."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "baseball"
 	force = 30
 	wound_bonus = 5
@@ -407,6 +439,7 @@
 	name = "tire iron"
 	desc = "Can be used as a tool or as a weapon."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "pipe"
 	force = 20
 	wound_bonus = 10
@@ -422,6 +455,7 @@
 	name = "knife"
 	desc = "Don't cut yourself accidentally."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "knife"
 	force = 30
 	wound_bonus = -5
@@ -442,6 +476,7 @@
 	name = "hand sickle"
 	desc = "Reap what they have sowed."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "handsickle"
 	force = 30
 	wound_bonus = -5
@@ -496,6 +531,7 @@
 	name = "\improper falling touch"
 	desc = "This is kind of like when you rub your feet on a shag rug so you can zap your friends, only a lot less safe."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	catchphrase = null
 	on_use_sound = 'sound/magic/disintegrate.ogg'
 	icon_state = "falling"
@@ -538,6 +574,7 @@
 	name = "chainsaw"
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "chainsaw"
 	flags_1 = CONDUCT_1
 	force = 15
@@ -609,6 +646,7 @@
 	name = "stake"
 	desc = "Paralyzes blank-bodies if aimed straight to the heart."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "stake"
 	force = 10
 //	wound_bonus = -10
@@ -645,6 +683,7 @@
 
 /obj/item/melee/vampirearms/shovel
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "shovel"
 	name = "shovel"
 	desc = "Great weapon against mortal or immortal."
@@ -672,6 +711,7 @@
 	name = "scythe"
 	desc = "More instrument, than a weapon. Instrumentally cuts heads..."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "kosa"
 	force = 35
 	w_class = WEIGHT_CLASS_NORMAL
@@ -689,6 +729,7 @@
 
 /obj/item/melee/vampirearms/eguitar
 	icon = 'code/modules/wod13/48x32weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "rock0"
 	name = "electric guitar"
 	desc = "You are pretty fly for a white guy..."
@@ -756,8 +797,9 @@
 	desc = "It opens and closes."
 	icon_state = "door"
 	icon = 'code/modules/wod13/weapons.dmi'
-	lefthand_file = 'code/modules/wod13/righthand.dmi'
-	righthand_file = 'code/modules/wod13/lefthand.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
+	lefthand_file = 'code/modules/wod13/lefthand.dmi'
+	righthand_file = 'code/modules/wod13/righthand.dmi'
 	force = 20
 	block_chance = 25
 	throwforce = 40
@@ -775,6 +817,7 @@
 	name = "police baton"
 	desc = "Blunt instrument of justice."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "baton"
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb_continuous = list("bludgeons", "bashes", "beats")
@@ -839,6 +882,7 @@
 	name = "Brick"
 	desc = "Killer of gods and men alike, builder of worlds vast."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "red_brick"
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
@@ -886,6 +930,7 @@
 	name = "armblade"
 	desc = "A monstrous weapon, made out of sharpened bone."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "armblade"
 	force = 35
 	w_class = WEIGHT_CLASS_BULKY
@@ -904,6 +949,7 @@
 	name = "nematocyst whip"
 	desc = "An elongated tendril covered with stinging cells."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "lasombra"
 	damtype = TOX
 	force = 16
@@ -923,6 +969,7 @@
 	name = "electrocyte whip"
 	desc = "An elongated tendril covered with electricity generating cells."
 	icon = 'code/modules/wod13/weapons.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "lasombra"
 	damtype = BURN
 	force = 8

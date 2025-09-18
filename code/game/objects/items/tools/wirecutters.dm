@@ -3,7 +3,7 @@
 	desc = "This cuts wires."
 	icon = 'code/modules/wod13/items.dmi'
 	icon_state = "fixer"
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	onflooricon_state = "fixer"
 	inhand_icon_state = "cutters"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'

@@ -472,7 +472,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	set desc ="Toggles seeing deadchat"
 	if(!holder)
 		return
-	// prefs.chat_toggles ^= CHAT_DEAD // [ChillRaccoon] - It will not
+	prefs.chat_toggles ^= CHAT_DEAD // [ChillRaccoon] - It will not // APOC EDIT CHANGE // [dwinters99] - It will
 	prefs.save_preferences()
 	to_chat(src, "You will [(prefs.chat_toggles & CHAT_DEAD) ? "now" : "no longer"] see deadchat.")
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Deadchat Visibility", "[prefs.chat_toggles & CHAT_DEAD ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

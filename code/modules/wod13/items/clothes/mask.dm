@@ -6,7 +6,7 @@
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	inhand_icon_state = ""
 	w_class = WEIGHT_CLASS_NORMAL
 	gas_transfer_coefficient = 0.01

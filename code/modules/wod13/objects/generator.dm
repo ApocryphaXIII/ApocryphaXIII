@@ -25,6 +25,10 @@
 	switching_on = FALSE
 	icon_state = "gen"
 	playsound(src.loc, 'sound/effects/supermatter.ogg', 25, TRUE)
+	A.requires_power = FALSE
+	A.fire_controled = TRUE
+	for(var/obj/machinery/light/L in A)
+		L.update(FALSE)
 
 /obj/warehouse_generator/attack_hand(mob/user)
 	if(!time_since_toggle+100 <= world.time && !switching_on)

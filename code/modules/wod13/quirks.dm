@@ -201,6 +201,7 @@ Dancer
 	value = 4
 	gain_text = "<span class='warning'>You feel free of fetters.</span>"
 	lose_text = "<span class='notice'>You feel echoes of misbegotten emotion.</span>"
+	allowed_species = list("Vampire","Ghoul","Human","Kuei-Jin")
 
 /datum/quirk/coffin_therapy
 	name = "Coffin Therapy"

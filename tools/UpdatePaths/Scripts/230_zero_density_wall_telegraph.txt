@@ -1,0 +1,1 @@
+/turf/closed/wall/vampwall/@SUBTYPES{density=0} : @OLD{@OLD;color="#BBBBBB"}

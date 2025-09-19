@@ -1,6 +1,6 @@
 /obj/item/clothing/shoes/sneakers
 	dying_key = DYE_REGISTRY_SNEAKERS
-	icon_state = "sneakers".
+	icon_state = "sneakers"
 	inhand_icon_state = null // APOC EDIT ADD // Doesn't need an inhand
 	greyscale_colors = "#2d2d33#ffffff"
 	greyscale_config = /datum/greyscale_config/sneakers

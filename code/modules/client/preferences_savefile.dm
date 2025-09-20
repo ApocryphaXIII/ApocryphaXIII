@@ -465,6 +465,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["torpor_count"], torpor_count)
 	READ_FILE(S["total_age"], total_age)
 	READ_FILE(S["phone_postfix"], phone_postfix)
+	READ_FILE(S["phone_autopublish"], phone_autopublish)
+	READ_FILE(S["phone_autopublish_name"], phone_autopublish_name)
 	READ_FILE(S["hair_color"], hair_color)
 	READ_FILE(S["facial_hair_color"], facial_hair_color)
 	READ_FILE(S["eye_color"], eye_color)
@@ -634,6 +636,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Extra santiziation
 	phone_postfix = text2num(phone_postfix)
 	phone_postfix = num2text(phone_postfix, SUBSCRIBER_NUMBER_LENGTH, 10)
+
+	phone_autopublish = sanitize_integer(phone_autopublish, FALSE, TRUE, initial(phone_autopublish))
+
+	phone_autopublish_name = sanitize_text(phone_autopublish_name)
 
 	slotlocked			= sanitize_integer(slotlocked, 0, 1, initial(slotlocked))
 	path_score				= sanitize_integer(path_score, 0, 10, initial(path_score))
@@ -832,6 +838,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["torpor_count"]			, torpor_count)
 	WRITE_FILE(S["total_age"]	, total_age)
 	WRITE_FILE(S["phone_postfix"] , phone_postfix)
+	WRITE_FILE(S["phone_autopublish"] , phone_autopublish)
+	WRITE_FILE(S["phone_autopublish_name"] , phone_autopublish_name)
 	WRITE_FILE(S["hair_color"]			, hair_color)
 	WRITE_FILE(S["facial_hair_color"]			, facial_hair_color)
 	WRITE_FILE(S["eye_color"]			, eye_color)

@@ -22856,7 +22856,7 @@
 "fyG" = (
 /obj/structure/vampdoor/wood{
 	dir = 4;
-	lock_id = 12316;
+	lock_id = "12316";
 	locked = 1
 	},
 /turf/open/floor/plating/parquetry/old,
@@ -30116,7 +30116,7 @@
 "hmC" = (
 /obj/structure/vampdoor/wood{
 	dir = 4;
-	lock_id = 12315;
+	lock_id = "12315";
 	locked = 1
 	},
 /turf/open/floor/plating/parquetry/old,
@@ -33184,7 +33184,7 @@
 "iaw" = (
 /obj/structure/vampdoor/wood/apartment{
 	dir = 4;
-	lock_id = 12316
+	lock_id = "12316"
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -97055,7 +97055,7 @@
 "xoD" = (
 /obj/structure/vampdoor/wood/apartment{
 	dir = 4;
-	lock_id = 12315
+	lock_id = "12315"
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)

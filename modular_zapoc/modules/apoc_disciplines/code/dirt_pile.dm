@@ -1,6 +1,6 @@
 /obj/effect/decal/dirt_pile // Should only be used for Earth Meld!
 	name = "disturbed earth"
-	icon = 'modular_zapoc/modules/mini_protean_update/icons/dirt_pile.dmi'
+	icon = 'modular_zapoc/modules/apoc_disciplines/icons/dirt_pile.dmi'
 	icon_state = "dirt_pile"
 	alpha = 64
 	var/expiring

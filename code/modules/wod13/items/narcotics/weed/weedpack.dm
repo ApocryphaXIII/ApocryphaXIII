@@ -1,4 +1,4 @@
-/obj/item/weedpack
+/*/obj/item/weedpack // APOC EDIT REMOVE // De-atomized into code/modules/wod13/items/narcotics/weed/weed.dm
 	name = "green package"
 	desc = "A small package of dried tightly packed kush. Perfect for stuffing into a bong or rolling up in paper."
 	icon_state = "package_weed"
@@ -31,3 +31,4 @@
 		to_chat(user, span_notice("You remove the [pick("sticky green", "good kush", "devil's lettuce", "weed", "reefer", "ganja", "skunk", "dope", "cannabis", "pot")] from the package and quickly roll it up.)]"))
 		return TRUE
 	return FALSE
+*/

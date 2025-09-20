@@ -138,7 +138,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/lastHolder = null
 	slot_flags = ITEM_SLOT_MASK | ITEM_SLOT_EARS // APOC EDIT ADD // So that you can put cigarettes on your ear like a badass
 	/// How long the cigarette lasts in seconds
-	var/smoketime = 360
+	var/smoketime = 720
 	var/chem_volume = 30
 	var/smoke_all = FALSE /// Should we smoke all of the chems in the cig before it runs out. Splits each puff to take a portion of the overall chems so by the end you'll always have consumed all of the chems inside.
 	var/list/list_reagents = list(/datum/reagent/drug/nicotine = 15)

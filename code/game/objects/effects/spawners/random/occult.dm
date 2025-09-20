@@ -7,6 +7,7 @@
 /obj/effect/spawner/random/occult/artifact
 	name = "random occult fetish"
 	spawn_loot_chance = 50
+	spawn_loot_double = FALSE // APOC EDIT ADD
 	loot = list(
 		/obj/item/vtm_artifact/odious_chalice,
 		/obj/item/vtm_artifact/key_of_alamut,

@@ -224,9 +224,9 @@
 	. = ..()
 
 	if(domination_succeeded)
+		var/custom_memory = input(owner, "What memories will you implant?") as text|null // APOC EDIT ADD
 		to_chat(owner, span_warning("You've successfully dominated [target]'s mind!"))
-		to_chat(target, span_danger("THINK TWICE"))
-		owner.say("Think twice.")
+		to_chat(target, span_danger("Your memory bends and distorts... [span_purple(custom_memory)]")) // APOC EDIT ADD
 		target.add_movespeed_modifier(/datum/movespeed_modifier/dominate)
 		SEND_SOUND(target, sound('code/modules/wod13/sounds/dominate.ogg'))
 	else

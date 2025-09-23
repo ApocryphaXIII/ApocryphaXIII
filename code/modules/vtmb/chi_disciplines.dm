@@ -208,6 +208,7 @@
 	stream_mode = 1
 	stream_range = 5
 	amount_per_transfer_from_this = 10
+	volume = 70
 	list_reagents = list(/datum/reagent/consumable/condensedcapsaicin = 50, /datum/reagent/blood = 20)
 
 /mob/living/simple_animal/hostile/bloodcrawler/kuei_jin

@@ -6,6 +6,9 @@
 	lose_text = "<span class='notice'>You can hear!</span>"
 
 /datum/quirk/deaf/on_process()
+	if(!iscarbon(quirk_holder))
+		return
+
 	var/mob/living/carbon/human/H = quirk_holder
 
 	if(!(HAS_TRAIT(H, TRAIT_DEAF) && HAS_TRAIT_FROM(H, TRAIT_DEAF, "quirk")) && !istype(H.ears, /obj/item/clothing/ears/hearing_aid))

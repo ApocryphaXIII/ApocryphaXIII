@@ -104,6 +104,7 @@
 		new /datum/data/vending_product("rough beanie",	/obj/item/clothing/head/vampire/beanie/homeless,	10),
 		new /datum/data/vending_product("red beret",	/obj/item/clothing/head/beret,	10),
 		new /datum/data/vending_product("black beret",	/obj/item/clothing/head/beret/black,	10),
+		new /datum/data/vending_product("white beret",	/obj/item/clothing/head/beret/colorable,	10),
 		new /datum/data/vending_product("scarf",	/obj/item/clothing/neck/vampire/scarf,	10),
 		new /datum/data/vending_product("blue tie",	/obj/item/clothing/neck/tie/blue,	10),
 		new /datum/data/vending_product("red tie",	/obj/item/clothing/neck/tie/red,	10),

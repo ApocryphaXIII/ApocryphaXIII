@@ -607,12 +607,18 @@ SUBSYSTEM_DEF(carpool)
 		if(driver)
 			if(HAS_TRAIT(driver, TRAIT_EXP_DRIVER))
 				dam = round(dam/2)
+			else if(HAS_TRAIT(driver, TRAIT_BAD_DRIVER)) // APOC EDIT ADD
+				dam = round(dam*2)
+
 		get_damage(dam)
 	else
 		var/dam = prev_speed
 		if(driver)
 			if(HAS_TRAIT(driver, TRAIT_EXP_DRIVER))
 				dam = round(dam/2)
+			else if(HAS_TRAIT(driver, TRAIT_BAD_DRIVER)) // APOC EDIT ADD
+				dam = round(dam*2)
+
 			driver.apply_damage(prev_speed, BRUTE, BODY_ZONE_CHEST)
 		get_damage(dam)
 	return
@@ -1024,6 +1030,9 @@ SUBSYSTEM_DEF(carpool)
 	if(driver)
 		if(HAS_TRAIT(driver, TRAIT_EXP_DRIVER))
 			drift = 2
+		else if(HAS_TRAIT(driver, TRAIT_BAD_DRIVER))
+			drift = 0.5
+
 	var/adjust_true = adjusting_turn
 	if(speed_in_pixels != 0)
 		movement_vector = SIMPLIFY_DEGREES(movement_vector+adjust_true)

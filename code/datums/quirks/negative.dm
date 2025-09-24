@@ -467,20 +467,20 @@
 /datum/quirk/poor_aim
 	name = "Poor Aim"
 	desc = "You're terrible with guns and can't line up a straight shot to save your life. Dual-wielding is right out. You also close your eyes when you shoot."
-	value = -4
+	value = -2 // APOC EDIT CHANGE
 	mob_trait = TRAIT_POOR_AIM
 	medical_record_text = "Patient possesses a strong tremor in both hands."
 	hardcore_value = 3
-	mood_quirk = TRUE
+	mood_quirk = FALSE // APOC EDIT CHANGE
 
 /datum/quirk/prosopagnosia
 	name = "Prosopagnosia"
 	desc = "You have a mental disorder that prevents you from being able to recognize faces at all."
-	value = -4
+	value = -2 // APOC EDIT CHANGE
 	mob_trait = TRAIT_PROSOPAGNOSIA
 	medical_record_text = "Patient suffers from prosopagnosia and cannot recognize faces."
 	hardcore_value = 5
-	mood_quirk = TRUE
+	mood_quirk = FALSE // APOC EDIT CHANGE
 
 /datum/quirk/prosthetic_limb
 	name = "Prosthetic Limb"

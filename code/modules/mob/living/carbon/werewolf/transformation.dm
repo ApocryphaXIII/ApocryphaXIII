@@ -83,7 +83,8 @@
 		var/datum/species/garou/G = trans.dna.species
 		var/mob/living/carbon/human/H = trans
 		if(G.glabro)
-			H.remove_overlay(PROTEAN_LAYER)
+			if(!HAS_TRAIT(H, TRAIT_FAIR_GLABRO))
+				H.remove_overlay(PROTEAN_LAYER)
 			G.punchdamagelow = G.punchdamagelow-15
 			G.punchdamagehigh = G.punchdamagehigh-15
 			H.physique = H.physique-2

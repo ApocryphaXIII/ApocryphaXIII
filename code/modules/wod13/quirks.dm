@@ -1,7 +1,7 @@
 /*
 Experienced Driver
 Bone Key
-Anonymous
+Anonymous // APOC EDIT REMOVE
 Bloody Lover
 Tough Flesh
 Slowpoke
@@ -45,7 +45,7 @@ Dancer
 	gain_text = "<span class='notice'>You feel more experienced about cars.</span>"
 	lose_text = "<span class='warning'>You feel more clueless about cars.</span>"
 
-/datum/quirk/annonymus
+/*/datum/quirk/annonymus // APOC EDIT REMOVE START
 	name = "Anonymous"
 	desc = "You always bring a mask."
 	value = 1
@@ -55,7 +55,7 @@ Dancer
 /datum/quirk/annonymus/on_spawn()
 	if(!iswerewolf(quirk_holder))
 		var/mob/living/carbon/human/H = quirk_holder
-		H.equip_to_slot_or_del(new /obj/item/clothing/mask/vampire/balaclava(H), ITEM_SLOT_MASK)
+		H.equip_to_slot_or_del(new /obj/item/clothing/mask/vampire/balaclava(H), ITEM_SLOT_MASK)*/ // APOC EDIT END
 
 /datum/quirk/bloody_lover
 	name = "Bloody Lover"
@@ -214,7 +214,7 @@ Dancer
 
 /datum/quirk/rubicon
 	name = "Crossing the Rubicon"
-	desc = "You are afraid of water, so you can't cross it."
+	desc = "You are afraid of water, so you can't cross it easily. Swim dramatically slower." // APOC EDIT CHANGE
 	mob_trait = TRAIT_RUBICON
 	value = -1
 	gain_text = "<span class='warning'>You feel afraid of water.</span>"
@@ -312,7 +312,7 @@ Dancer
 	value = -2
 	gain_text = "<span class='warning'>Vim runs through you.</span>"
 	lose_text = "<span class='notice'>You feel subtly enervated.</span>"
-	allowed_species = list("Ghoul","Human","Imbued")
+	allowed_species = list("Ghoul", "Human", "Werewolf", "Imbued") // APOC EDIT CHANGE
 
 /datum/quirk/potent_blood/on_spawn()
 	var/mob/living/carbon/H = quirk_holder

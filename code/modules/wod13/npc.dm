@@ -527,9 +527,9 @@
 		if(get_dist(src, CPN.walktarget) <= getaway)
 			walk(src,0)
 			CPN.walktarget = null
-	if(HAS_TRAIT(src, TRAIT_RUBICON))
-		if(istype(NewLoc, /turf/open/floor/plating/shit))
-			return
+//	if(HAS_TRAIT(src, TRAIT_RUBICON))
+//		if(istype(NewLoc, /turf/open/floor/plating/shit))
+//			return
 	. = ..()
 
 

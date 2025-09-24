@@ -483,6 +483,9 @@
 			if(HAS_TRAIT(src, TRAIT_BRIGHTEYES) && !(check_obscured_slots() & ITEM_SLOT_EYES))
 				msg += span_warning("There's something about [p_their()] eyes...<br>") // APOC EDIT END
 
+			if(HAS_TRAIT(src, TRAIT_ANIMAL_MUSK))
+				msg += span_warning("[p_they(TRUE)] smell awful...<br>") // APOC EDIT END
+
 		if(getorgan(/obj/item/organ/brain))
 			if(ai_controller?.ai_status == AI_STATUS_ON)
 				msg += span_deadsay("[t_He] do[t_es]n't appear to be [t_him]self.<br>")
@@ -532,7 +535,7 @@
 				if ((vampire.clan?.name == CLAN_BAALI) || ( (client?.prefs?.is_enlightened && (vampire.morality_path.score > 7)) || (!client?.prefs?.is_enlightened && (vampire.morality_path.score < 4)) ))
 					wyrm_taint++
 
-			if (isgarou(src) || iswerewolf(src)) //werewolves have the taint of whatever Triat member they venerate most
+			if (isgarou(src) || iswerewolf(src) || HAS_TRAIT(src, TRAIT_KINFOLK)) //werewolves have the taint of whatever Triat member they venerate most // APOC EDIT CHANGE // Kinfolk
 				var/mob/living/carbon/wolf = src
 				is_kin++
 				switch(wolf.auspice.tribe.name)
@@ -555,7 +558,7 @@
 			if(!seems_alive)
 				msg += "<span class='purple'><i>You recognize their scent as cold and lifeless.</i></span><br>"
 			if(is_kin)
-				msg += "<span class='purple'><i>You recognize their scent as Garou.</i></span><br>"
+				msg += "<span class='purple'><i>You recognize their scent as Kin.</i></span><br>"
 			if(HAS_TRAIT(user, TRAIT_SCENTTRUEFORM))
 				if(splat_sense)
 					msg += "<span class='purple'><i>[named_splat]</i></span><br>"

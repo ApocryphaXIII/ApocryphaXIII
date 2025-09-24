@@ -63,7 +63,7 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 		human.hardcore_survival_score = cli.prefs.hardcore_survival_score //Only do this if we actually asign quirks, to prevent sillicons etc from getting the points.
 
 	// Assign wayfinding pinpointer granting quirk if they're new
-	if(cli.get_exp_living(TRUE) < EXP_ASSIGN_WAYFINDER && !user.has_quirk(/datum/quirk/needswayfinder))
-		user.add_quirk(/datum/quirk/needswayfinder, TRUE)
+//	if(cli.get_exp_living(TRUE) < EXP_ASSIGN_WAYFINDER && !user.has_quirk(/datum/quirk/needswayfinder)) // APOC EDIT REMOVE
+//		user.add_quirk(/datum/quirk/needswayfinder, TRUE)
 
 #undef EXP_ASSIGN_WAYFINDER

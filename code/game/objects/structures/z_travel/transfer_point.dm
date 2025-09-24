@@ -11,6 +11,8 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	var/obj/transfer_point_vamp/exit
 	var/id = "unallocated"
+	var/one_way = FALSE
+	COOLDOWN_DECLARE(tele_cooldown)
 
 /obj/transfer_point_vamp/Initialize()
 	. = ..()
@@ -25,6 +27,44 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 				T.exit = src
 				GLOB.unallocted_transfer_points -= src
 				break
+	//RegisterSignal(loc, COMSIG_ATOM_ENTERED, PROC_REF(entered_turf))
+
+/obj/transfer_point_vamp/Destroy()
+	GLOB.unallocted_transfer_points -= src
+	if(!QDELETED(exit))
+		QDEL_NULL(exit)
+	return ..()
+
+/obj/transfer_point_vamp/attackby(obj/item/W, mob/user, list/modifiers, list/attack_modifiers)
+	if(user && Adjacent(user))
+		transfer_atom(user)
+		return TRUE
+
+/obj/transfer_point_vamp/Bumped(atom/movable/arrived)
+	transfer_atom(arrived)
+
+/obj/transfer_point_vamp/attack_hand(mob/user, list/modifiers)
+	. = ..()
+	if(.)
+		return
+	if(Adjacent(user))
+		transfer_atom(user)
+
+/obj/transfer_point_vamp/proc/entered_turf(atom/source, atom/movable/arrived, atom/old_loc)
+	if(locate(/obj/transfer_point_vamp) in old_loc)
+		return
+	transfer_atom(arrived)
+
+/obj/transfer_point_vamp/proc/transfer_atom(atom/movable/arrived)
+	if(!exit || one_way || !COOLDOWN_FINISHED(src, tele_cooldown))
+		return
+	COOLDOWN_START(src, tele_cooldown, 0.25 SECONDS)
+	COOLDOWN_START(exit, tele_cooldown, 0.25 SECONDS)
+	var/turf/T = get_step(exit, get_dir(arrived, src))
+	if(T && !T.density)
+		arrived.forceMove(T)
+	else
+		arrived.forceMove(get_turf(exit))
 
 /obj/transfer_point_vamp/backrooms
 	id = "backrooms"
@@ -32,6 +72,7 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 
 /obj/transfer_point_vamp/backrooms/map
 	density = 0
+	one_way = TRUE
 
 /obj/transfer_point_vamp/stairs
 	name = "stairs"
@@ -65,10 +106,8 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 	. = ..()
 	playsound(get_turf(AM), 'code/modules/wod13/sounds/portal_enter.ogg', 75, FALSE)
 
-/obj/transfer_point_vamp/Bumped(atom/movable/AM)
-	. = ..()
-	var/turf/T = get_step(exit, get_dir(AM, src))
-	AM.forceMove(T)
+/obj/transfer_point_vamp/debug
+	id = "debug"
 
 //APOC EDIT START
 /obj/transfer_point_vamp/voivodate

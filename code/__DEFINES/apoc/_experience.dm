@@ -1,0 +1,3 @@
+#define EXP_TYPE_ALIVE
+#define EXP_TYPE_GHOST
+#define EXP_TYPE_ADMIN

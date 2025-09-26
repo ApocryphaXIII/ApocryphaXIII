@@ -256,10 +256,22 @@
 	icon_state = "rune4"
 	word = "IN'DAR"
 
-/obj/ritualrune/identification/complete()
-	for(var/obj/item/vtm_artifact/VA in loc)
-		if(VA)
-			VA.identificate()
+/obj/ritualrune/identification/complete() // APOC EDIT START
+	for(var/obj/item/ID in loc)
+		if(istype(ID, /obj/item/vtm_artifact))
+			var/obj/item/vtm_artifact/VTMA = ID
+			if(VTMA.identified)
+				visible_message(span_warning("The rune fizzles. [src] seems to already be identified."))
+				return
+			else
+				VTMA.identificate()
+		else if(istype(ID, /obj/item/treasure))
+			var/obj/item/treasure/loot = ID
+			if(loot.appraised)
+				visible_message(span_warning("The rune fizzles. [src] seems to already be identified."))
+				return
+			else
+				loot.force_appraise() // APOC EDIT END
 			playsound(loc, 'code/modules/wod13/sounds/thaum.ogg', 50, FALSE)
 			qdel(src)
 			return
@@ -292,7 +304,7 @@
 		var/mob/dead/observer/C = pick(candidates)
 		var/mob/living/simple_animal/hostile/ghost/tremere/TR = new(loc)
 		TR.key = C.key
-		TR.name = "\improper ancestor" // APOC EDIT ADD
+		TR.name = "ancestor" // APOC EDIT ADD
 //		TR.name = C.name // APOC EDIT REMOVE
 		playsound(loc, 'code/modules/wod13/sounds/thaum.ogg', 50, FALSE)
 		qdel(src)

@@ -894,7 +894,7 @@
 	hitsound = 'sound/weapons/genhit3.ogg'
 	sharpness = SHARP_NONE
 	force = 18
-	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE
+//	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE // APOC EDIT REMOVE
 	w_class = WEIGHT_CLASS_NORMAL
 	grid_width = 2 GRID_BOXES
 	grid_height = 1 GRID_BOXES

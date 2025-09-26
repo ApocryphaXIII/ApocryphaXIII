@@ -22,3 +22,7 @@
 /datum/gear/eyewear/blindfold_thin
 	display_name = "blindfold (adjustable, thin)"
 	path = /obj/item/clothing/glasses/apoc/blindfold/trick
+
+/datum/gear/eyewear/circle_glasses
+	display_name = "glasses, circle"
+	path = /obj/item/clothing/glasses/regular/circle

@@ -89,6 +89,9 @@ SUBSYSTEM_DEF(city_time)
 					continue
 				H.apply_status_effect(/datum/status_effect/sunlight_burning)
 
+/datum/controller/subsystem/city_time/proc/extend_round(amount)
+	time_till_daytime += amount
+	time_till_roundend += amount
 /datum/status_effect/day_time_notif
 	id = "day_time_notif"
 	alert_type = /atom/movable/screen/alert/status_effect/day_time_notif

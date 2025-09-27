@@ -99,7 +99,7 @@ SUBSYSTEM_DEF(city_time)
 
 /atom/movable/screen/alert/status_effect/day_time_notif
 	name = "The sun is out"
-	desc = "God you must be tired...."
+	desc = "God, you must be tired..."
 	icon_state = "duskndawn"
 
 /datum/status_effect/sunlight_burning

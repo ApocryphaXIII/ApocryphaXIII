@@ -92,6 +92,7 @@ SUBSYSTEM_DEF(city_time)
 /datum/controller/subsystem/city_time/proc/extend_round(amount)
 	time_till_daytime += amount
 	time_till_roundend += amount
+
 /datum/status_effect/day_time_notif
 	id = "day_time_notif"
 	alert_type = /atom/movable/screen/alert/status_effect/day_time_notif
@@ -114,7 +115,7 @@ SUBSYSTEM_DEF(city_time)
 	if(SScity_time.daytime_started)
 		var/area/vtm/V = get_area(owner)
 		if(istype(V) && V.upper && (iskindred(owner) || iscathayan(owner)))
-			owner.apply_damage(5, BURN)
+			owner.apply_damage(10, BURN)
 			return TRUE
 	qdel(src)
 

@@ -1,7 +1,7 @@
 SUBSYSTEM_DEF(city_time)
 	name = "City Time"
 	init_order = INIT_ORDER_DEFAULT
-	wait = 15 SECONDS
+	wait = 5 SECONDS
 	priority = FIRE_PRIORITY_DEFAULT
 
 	var/first_warning = FALSE
@@ -80,11 +80,42 @@ SUBSYSTEM_DEF(city_time)
 
 	if(daytime_started)
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
+			H.apply_status_effect(/datum/status_effect/day_time_notif)
 			var/area/vtm/V = get_area(H)
 			if(!istype(V) || !V?.upper)
 				continue
 			if(iskindred(H) || iscathayan(H))
 				if(((H.morality_path.score >= 10) && (H.morality_path.alignment == MORALITY_HUMANITY)))
 					continue
-				to_chat(H, span_danger("THE SUN SEARS YOUR FLESH"))
-				H.apply_damage(50, BURN)
+				H.apply_status_effect(/datum/status_effect/sunlight_burning)
+
+/datum/status_effect/day_time_notif
+	id = "day_time_notif"
+	alert_type = /atom/movable/screen/alert/status_effect/day_time_notif
+
+/atom/movable/screen/alert/status_effect/day_time_notif
+	name = "The sun is out"
+	desc = "God you must be tired...."
+	icon_state = "duskndawn"
+
+/datum/status_effect/sunlight_burning
+	id = "sunlight_burning"
+	alert_type = /atom/movable/screen/alert/status_effect/sunlight_burning
+
+/datum/status_effect/sunlight_burning/on_apply()
+	. = ..()
+	to_chat(owner, span_danger("THE SUN SEARS YOUR FLESH"))
+
+/datum/status_effect/sunlight_burning/tick(seconds_per_tick)
+	. = ..()
+	if(SScity_time.daytime_started)
+		var/area/vtm/V = get_area(owner)
+		if(istype(V) && V.upper && (iskindred(owner) || iscathayan(owner)))
+			owner.apply_damage(5, BURN)
+			return TRUE
+	qdel(src)
+
+/atom/movable/screen/alert/status_effect/sunlight_burning
+	name = "YOU ARE BURNING FROM THE SUN"
+	desc = "Get inside!"
+	icon_state = "duskndawn"

@@ -58,6 +58,11 @@
 /datum/armor/proc/getList()
 	return list(MELEE = melee, BULLET = bullet, LASER = laser, ENERGY = energy, BOMB = bomb, BIO = bio, RAD = rad, FIRE = fire, ACID = acid, MAGIC = magic, WOUND = wound)
 
+// APOC EDIT ADD
+/datum/armor/proc/setArmor(datum/armor/AA)
+	return getArmor(AA.melee, AA.bullet, AA.laser, AA.energy, AA.bomb, AA.bio, AA.rad, AA.fire, AA.acid, AA.magic, AA.wound)
+// APOC EDIT END
+
 /datum/armor/proc/attachArmor(datum/armor/AA)
 	return getArmor(melee+AA.melee, bullet+AA.bullet, laser+AA.laser, energy+AA.energy, bomb+AA.bomb, bio+AA.bio, rad+AA.rad, fire+AA.fire, acid+AA.acid, magic+AA.magic, wound+AA.wound)
 

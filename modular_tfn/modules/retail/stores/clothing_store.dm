@@ -1,5 +1,5 @@
 /obj/structure/retail/clothing_store
-	desc = "Purchase all the finest outfits.. Or don't wagie.."
+	desc = "Purchase all the finest outfits... Or don't, wagie.."
 	products_list = list(new /datum/data/vending_product("crimson red dress", /obj/item/clothing/under/vampire/primogen_toreador/female	, 350),
 		new /datum/data/vending_product("black dress", /obj/item/clothing/under/vampire/business, 250),
 		new /datum/data/vending_product("leather pants", /obj/item/clothing/under/vampire/leatherpants, 200),
@@ -19,14 +19,14 @@
 		new /datum/data/vending_product("plain blue suitskirt", /obj/item/clothing/under/vampire/clerk/female, 90),
 		new /datum/data/vending_product("brown suit", /obj/item/clothing/under/vampire/archivist, 60),
 		new /datum/data/vending_product("brown suitskirt", /obj/item/clothing/under/vampire/archivist/female, 60),
-		new /datum/data/vending_product("popular outfit", 	/obj/item/clothing/under/vampire/scenepink, 	20),
-		new /datum/data/vending_product("moody attire", 	/obj/item/clothing/under/vampire/scenemoody, 	20),
-		new /datum/data/vending_product("pim attire", 	/obj/item/clothing/under/vampire/scenezim, 	20),
-		new /datum/data/vending_product("revealing outfit", 	/obj/item/clothing/under/vampire/sceneleopard, 	20),
+		new /datum/data/vending_product("popular outfit", /obj/item/clothing/under/vampire/scenepink, 20),
+		new /datum/data/vending_product("moody attire", /obj/item/clothing/under/vampire/scenemoody, 20),
+		new /datum/data/vending_product("pim attire", /obj/item/clothing/under/vampire/scenezim, 20),
+		new /datum/data/vending_product("revealing outfit", /obj/item/clothing/under/vampire/sceneleopard, 20),
 		new /datum/data/vending_product("flamboyant outfit", /obj/item/clothing/under/vampire/toreador, 30),
 		new /datum/data/vending_product("female flamboyant outfit", /obj/item/clothing/under/vampire/toreador/female, 30),
 		new /datum/data/vending_product("purple and black outfit", /obj/item/clothing/under/vampire/sexy, 25),
-		new /datum/data/vending_product("slick jacket", /obj/item/clothing/under/vampire/slickback, 	25),
+		new /datum/data/vending_product("slick jacket", /obj/item/clothing/under/vampire/slickback, 25),
 		new /datum/data/vending_product("tracksuit", /obj/item/clothing/under/vampire/sport, 25),
 		new /datum/data/vending_product("grimey pants", /obj/item/clothing/under/vampire/malkavian, 20),
 		new /datum/data/vending_product("odd goth schoolgirl attire", /obj/item/clothing/under/vampire/malkavian/female, 20),
@@ -71,7 +71,7 @@
 		new /datum/data/vending_product("brown fur boots", /obj/item/clothing/shoes/vampire/brownfur, 35),
 		new /datum/data/vending_product("knee-high sneakers", /obj/item/clothing/shoes/vampire/pumped, 35),
 		new /datum/data/vending_product("metal tip shoes", /obj/item/clothing/shoes/vampire/businesstip, 50),
-		new /datum/data/vending_product("purple fur coat", 	/obj/item/clothing/suit/vampire/slickbackcoat, 500),
+		new /datum/data/vending_product("purple fur coat", /obj/item/clothing/suit/vampire/slickbackcoat, 500),
 		new /datum/data/vending_product("too much fancy jacket", /obj/item/clothing/suit/vampire/majima_jacket, 100),
 		new /datum/data/vending_product("labcoat", /obj/item/clothing/suit/vampire/labcoat, 75),
 		new /datum/data/vending_product("fancy gray jacket", /obj/item/clothing/suit/vampire/fancy_gray, 50),
@@ -123,9 +123,9 @@
 		new /datum/data/vending_product("Nun Frock", /obj/item/clothing/suit/vampire/nun, 15),
 		new /datum/data/vending_product("Wimple", /obj/item/clothing/head/vampire/nun, 10),
 		new /datum/data/vending_product("duffelbag", /obj/item/storage/backpack/duffelbag, 100),
-		new /datum/data/vending_product("backpack", /obj/item/storage/backpack, 	100),
-		new /datum/data/vending_product("satchel", 	/obj/item/storage/backpack/satchel, 	100),
-		new /datum/data/vending_product("leather satchel", 	/obj/item/storage/backpack/satchel/leather, 	150),
+		new /datum/data/vending_product("backpack", /obj/item/storage/backpack, 100),
+		new /datum/data/vending_product("satchel", /obj/item/storage/backpack/satchel, 100),
+		new /datum/data/vending_product("leather satchel", /obj/item/storage/backpack/satchel/leather, 150),
 		new /datum/data/vending_product("dress cane", /obj/item/cane, 50),
 		new /datum/data/vending_product("white cane", /obj/item/cane/white, 30)
 	)

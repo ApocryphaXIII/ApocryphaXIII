@@ -1,5 +1,5 @@
 /obj/structure/retail/clothing_store
-	desc = "Purchase all the finest outfits... Or don't, wagie.."
+	desc = "Purchase all the finest outfits... Or don't, wagie."
 	products_list = list(new /datum/data/vending_product("crimson red dress", /obj/item/clothing/under/vampire/primogen_toreador/female	, 350),
 		new /datum/data/vending_product("black dress", /obj/item/clothing/under/vampire/business, 250),
 		new /datum/data/vending_product("leather pants", /obj/item/clothing/under/vampire/leatherpants, 200),

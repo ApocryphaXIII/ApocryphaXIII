@@ -1,7 +1,7 @@
 /obj/item/clothing/head/beret/colorable
 	name = "beret"
 	desc = "A beret. For bringing out your inner French."
-	icon_state = "beret_flat"
+	icon_state = "beret"
 	color = "#FFFFFF"
 	greyscale_colors = "#FFFFFF"
 	var/original_color = "#FFFFFF"

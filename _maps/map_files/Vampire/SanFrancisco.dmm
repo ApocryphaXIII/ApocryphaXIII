@@ -12451,11 +12451,6 @@
 /obj/structure/curtain/bounty,
 /turf/closed/wall/vampwall/rich/old/low/window,
 /area/vtm/church/interior/haven)
-"cUI" = (
-/obj/effect/decal/wallpaper/paper/green,
-/obj/structure/sign/flag/pride/trans,
-/turf/closed/wall/vampwall/junk,
-/area/vtm/interior/ghetto)
 "cUJ" = (
 /turf/open/floor/plating/rough,
 /area/vtm/interior/baali)
@@ -13833,6 +13828,11 @@
 	},
 /turf/open/floor/plating/dirt,
 /area/vtm/sewer/nosferatu_warren)
+"dlI" = (
+/obj/structure/dresser,
+/obj/item/sign/flag/pride/choose,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "dlM" = (
 /obj/machinery/light/red{
 	pixel_y = 32
@@ -37684,6 +37684,13 @@
 /obj/fusebox,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/cog/caern)
+"jgJ" = (
+/obj/structure/closet/cabinet,
+/obj/item/bedsheet/dorms,
+/obj/item/bedsheet/dorms,
+/obj/item/toy/plush/shark,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "jgK" = (
 /obj/item/clothing/suit/hooded/robes/black,
 /turf/open/indestructible/necropolis/air,
@@ -40031,13 +40038,6 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/church)
-"jIE" = (
-/obj/structure/closet/cabinet,
-/obj/item/bedsheet/dorms,
-/obj/item/bedsheet/dorms,
-/obj/item/toy/plush/shark,
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/ghetto)
 "jIL" = (
 /obj/structure/table/wood/fancy/black,
 /turf/open/floor/plating/parquetry/old,
@@ -294641,7 +294641,7 @@ xZx
 iFP
 whF
 enC
-jIE
+jgJ
 iFP
 dFD
 pRR
@@ -294897,7 +294897,7 @@ iFP
 iFP
 iFP
 iFP
-cUI
+enC
 iFP
 iFP
 xZx
@@ -295414,7 +295414,7 @@ gsj
 enC
 hVs
 wKK
-oNc
+dlI
 afe
 kno
 kno

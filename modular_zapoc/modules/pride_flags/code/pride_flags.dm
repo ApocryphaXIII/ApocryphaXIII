@@ -2,10 +2,10 @@
 /obj/structure/sign/flag
 	name = "blank flag"
 	desc = "The flag of nothing. It has nothing on it. Magnificient."
-	//icon = 'modular_skyrat/modules/aesthetics/flag/icons/flags.dmi'
 	icon_state = "flag_coder"
 	buildable_sign = FALSE
 	custom_materials = null
+	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 	var/item_flag = /obj/item/sign/flag
 
 /obj/structure/sign/flag/wrench_act(mob/living/user, obj/item/wrench/I)
@@ -38,7 +38,7 @@
 /obj/structure/sign/flag/pride/AltClick(mob/user)
 	var/init_icon_state = initial(icon_state)
 	if(icon_state == init_icon_state)
-		icon_state = "[icon_state]_verticle"
+		icon_state = "[icon_state]_vertical"
 	else
 		icon_state = init_icon_state
 	. = ..()
@@ -84,7 +84,6 @@
 /obj/item/sign/flag
 	name = "folded blank flag"
 	desc = "The folded flag of nothing. It has nothing on it. Beautiful."
-	//icon = 'modular_skyrat/modules/aesthetics/flag/icons/flags.dmi'
 	icon_state = "folded_coder"
 	sign_path = /obj/structure/sign/flag
 	is_editable = FALSE
@@ -110,6 +109,19 @@
 	name = "folded coder pride flag"
 	desc = "You probably shouldn't be seeing this. Yell at the coders about it."
 	icon = 'modular_zapoc/modules/pride_flags/icons/pride_flags.dmi'
+
+/obj/item/sign/flag/pride/choose
+	name = "folded unknown pride flag"
+	desc = "Attack in hand to choose a flag."
+
+/obj/item/sign/flag/pride/choose/attack_hand(mob/user)
+	. = ..()
+	var/obj/item/chosen_flag = tgui_input_list(user, "What pride flag did you have again?", "Choose a flag", subtypesof(/obj/item/sign/flag/pride) - /obj/item/sign/flag/pride/choose)
+	if(!ispath(chosen_flag))
+		return
+	var/obj/item/created_flag = new chosen_flag(loc)
+	qdel(src)
+	user.put_in_hands(created_flag)
 
 /obj/item/sign/flag/pride/gay
 	name = "folded gay pride flag"

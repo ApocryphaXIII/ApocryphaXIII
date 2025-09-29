@@ -14,6 +14,27 @@
 
 /obj/effect/temp_visual/phone/end
 
+/obj/effect/phone_ringing
+	name = "notes"
+
+/obj/effect/phone_ringing/Initialize(mapload)
+	. = ..()
+	particles = new /particles/phone_ringing
+
+/particles/phone_ringing
+	icon = 'icons/effects/fov/fov_effects.dmi'
+	icon_state = list("note" = 1)
+	width = 32
+	height = 48
+	count = 5
+	spawning = 0.5
+	lifespan = 2 SECONDS
+	fade = 1.5 SECONDS
+	//grow = -0.025
+	gravity = list(0, 0.1)
+	position = generator(GEN_SPHERE, 0, 16, NORMAL_RAND)
+	spin = generator(GEN_NUM, -1, 1, NORMAL_RAND)
+
 /proc/create_unique_phone_number(exchange = 415, postfix)
 	var/max_num = (10 ** SUBSCRIBER_NUMBER_LENGTH) - 1
 
@@ -48,6 +69,8 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
+
+	var/obj/effect/abstract/particle_holder/particle_generator
 
 	var/exchange_num = 415
 	var/list/contacts = list()
@@ -560,11 +583,13 @@
 				playsound(src, 'code/modules/wod13/sounds/phonestop.ogg', 25, FALSE)
 			online.online = null
 			online = null
+			QDEL_NULL(online.particle_generator)
 	if(!talking && online)
 		if(online.silence == FALSE)
 			playsound(src, 'code/modules/wod13/sounds/phone.ogg', 10, FALSE)
 			playsound(online, online.call_sound, 25, FALSE)
-			new /obj/effect/temp_visual/phone/ringing(get_turf(online))
+			if(!online.particle_generator)
+				online.particle_generator = new(online, /particles/phone_ringing, PARTICLE_ATTACH_MOB)
 		addtimer(CALLBACK(src, PROC_REF(ring_callback), online, user), 20)
 
 /obj/item/vamp/phone/proc/handle_hearing(datum/source, list/hearing_args)

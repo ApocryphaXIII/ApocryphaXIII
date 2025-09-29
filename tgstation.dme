@@ -3783,6 +3783,7 @@
 #include "modular_zapoc\modules\apoc_jobs\job_types\_job.dm"
 #include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_uniform.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\eat_food_quirk.dm"
+#include "modular_zapoc\modules\apoc_quirks\code\portuguese.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\vampirestomach.dm"
 #include "modular_zapoc\modules\apoc_smites\code\crystal.dm"
 #include "modular_zapoc\modules\apoc_smites\code\hammers.dm"

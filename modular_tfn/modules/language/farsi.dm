@@ -1,8 +1,8 @@
 /datum/language/farsi
 	name = "Persian"
-	desc = "Persian, or Farsi, is spoken by some residents of San Francisco. It is common in and around Iran and Afghanistan."
+	desc = "Persian (or Farsi) is spoken by some residents of San Francisco. It is common in and around Iran and Afghanistan."
 	flags = TONGUELESS_SPEECH
-	key = "P"
+	key = "F"
 	syllables = list(
 		"zaman","haalaa","salám","elef","est","eshgh","baleh","nah","ketáb","dídan","kār","solh",
 		"omíd","ve","máh","shab","garmá","man","shma","to","ma","chegoneh","cheh","cheh zamani",

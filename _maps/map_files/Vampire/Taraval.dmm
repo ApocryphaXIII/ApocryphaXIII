@@ -20267,6 +20267,14 @@
 /obj/structure/bookcase/random,
 /turf/open/space/basic,
 /area/space)
+"gpx" = (
+/obj/vampire_car/retro{
+	dir = 1
+	},
+/turf/open/floor/plating/asphalt{
+	density = 1
+	},
+/area/space)
 "grM" = (
 /obj/machinery/shower{
 	pixel_y = 16
@@ -20533,6 +20541,12 @@
 /obj/vampire_computer,
 /turf/open/floor/carpet/vamp,
 /area/space)
+"jJk" = (
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plating/asphalt{
+	density = 1
+	},
+/area/space)
 "jJW" = (
 /obj/structure/sink{
 	dir = 1
@@ -20678,6 +20692,29 @@
 /obj/effect/decal/wallpaper/paper/rich/low,
 /turf/closed/wall/vampwall/rich/old/low,
 /area/space)
+"lOJ" = (
+/obj/structure/table,
+/obj/item/newspaper{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/newspaper{
+	pixel_y = 6
+	},
+/obj/item/newspaper{
+	pixel_y = 3
+	},
+/obj/item/newspaper{
+	pixel_y = 17
+	},
+/obj/item/newspaper{
+	pixel_y = 9;
+	pixel_x = -6
+	},
+/turf/open/floor/plating/asphalt{
+	density = 1
+	},
+/area/space)
 "lVB" = (
 /obj/structure/chair/sofa/corp/left{
 	color = "#CD5C5C"
@@ -20748,7 +20785,13 @@
 	dir = 8;
 	icon_state = "wood-1"
 	},
-/turf/closed/wall/vampwall/rich/old,
+/obj/effect/turf_decal/siding/white{
+	dir = 8;
+	color = "#636363"
+	},
+/turf/open/floor/plating/asphalt{
+	density = 1
+	},
 /area/space)
 "mYi" = (
 /obj/structure/table/wood,
@@ -21090,6 +21133,16 @@
 "qQA" = (
 /obj/structure/fluff/hedge,
 /turf/open/floor/plating/vampgrass,
+/area/space)
+"qSt" = (
+/obj/structure/table,
+/obj/item/melee/vampirearms/tire{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/asphalt{
+	density = 1
+	},
 /area/space)
 "rbK" = (
 /obj/structure/table/modern,
@@ -142603,11 +142656,11 @@ aDT
 afr
 aTp
 aVd
-aqJ
-aqJ
-aqJ
-aqJ
-aqJ
+arO
+arO
+arO
+arO
+arO
 arO
 aqw
 aHr
@@ -142755,10 +142808,10 @@ aDT
 afr
 aTp
 aVd
-vZi
-xkd
-tVw
-rxd
+aqJ
+aqJ
+aqJ
+aqJ
 aqJ
 arO
 aqw
@@ -142908,9 +142961,9 @@ afr
 aTp
 aVd
 vZi
-pYm
-atR
-atR
+xkd
+tVw
+rxd
 aqJ
 arO
 aqw
@@ -143060,7 +143113,7 @@ afr
 aTp
 aVd
 vZi
-uOn
+pYm
 atR
 atR
 aqJ
@@ -143212,7 +143265,7 @@ afr
 aTp
 aVd
 vZi
-pQp
+uOn
 atR
 atR
 aqJ
@@ -143364,9 +143417,9 @@ afr
 aTp
 aVd
 vZi
-qxa
-bcw
-eRF
+pQp
+atR
+atR
 aqJ
 arO
 aqw
@@ -143516,8 +143569,8 @@ afr
 aTp
 aVd
 vZi
-nEJ
-atR
+qxa
+bcw
 eRF
 aqJ
 arO
@@ -143667,10 +143720,10 @@ aDT
 afr
 aTp
 aVd
-aqJ
-aqJ
-aqJ
-aqJ
+vZi
+nEJ
+atR
+eRF
 aqJ
 arO
 aqw
@@ -143819,11 +143872,11 @@ aDT
 afr
 aTp
 aVd
-arO
-arO
-arO
-arO
-arO
+aqJ
+aqJ
+aqJ
+aqJ
+aqJ
 arO
 aqw
 aHr
@@ -143972,11 +144025,11 @@ afr
 aTp
 aVd
 arO
-aHr
-aHr
-aHr
-aHr
-aHr
+arO
+arO
+arO
+arO
+arO
 aqw
 aHr
 aHr
@@ -144124,11 +144177,11 @@ afr
 aTp
 aVd
 arO
-aHr
-aHr
-aHr
-aHr
-aHr
+arO
+arO
+arO
+arO
+arO
 aqw
 aHr
 aHr
@@ -144276,11 +144329,11 @@ afr
 aTp
 aVd
 arO
-aHr
-aHr
-aHr
-aHr
-aHr
+arO
+arO
+arO
+arO
+arO
 aqw
 aHr
 aHr
@@ -144428,11 +144481,11 @@ afr
 aTp
 aVd
 arO
-aHr
-aHr
-aHr
-aHr
-aHr
+arO
+arO
+arO
+arO
+arO
 aqw
 aHr
 aHr
@@ -164169,7 +164222,7 @@ aHN
 aWO
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -164321,7 +164374,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -164473,7 +164526,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -164625,7 +164678,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -164777,7 +164830,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -164929,7 +164982,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -165081,7 +165134,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -165233,7 +165286,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -165385,7 +165438,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -165537,7 +165590,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -165689,7 +165742,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -165841,7 +165894,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -165993,7 +166046,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -166145,7 +166198,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -166297,7 +166350,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -166449,7 +166502,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -166601,7 +166654,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -166714,9 +166767,9 @@ kej
 kej
 aNI
 aDg
-aDg
-aDg
-aDg
+aHN
+aHN
+aHN
 aHN
 aoI
 aiY
@@ -166753,7 +166806,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -166866,10 +166919,10 @@ aNI
 aNI
 aNI
 aDg
-aNI
-aNI
-aDg
-aDg
+aHN
+aHN
+aHN
+aHN
 aoI
 aiY
 aWO
@@ -166905,7 +166958,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -166916,11 +166969,11 @@ aHb
 aTS
 rzP
 aTS
-aTS
-aTS
-aTS
+qSt
+lOJ
 aTS
 aGS
+aHN
 aHN
 aHN
 aHN
@@ -167018,10 +167071,10 @@ aNI
 keK
 aNI
 aDg
-aNI
-aNI
-aNI
-aDg
+aHN
+aHN
+aHN
+aHN
 aoI
 aiY
 aWO
@@ -167057,7 +167110,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -167069,10 +167122,10 @@ aTS
 rzP
 aTS
 aTS
-aTS
-aTS
+gpx
 aTS
 aGS
+aHN
 aHN
 aHN
 aHN
@@ -167170,10 +167223,10 @@ hrQ
 uZY
 adV
 aDg
-aNI
-aNI
-aNI
-aDg
+aHN
+aHN
+aHN
+aHN
 aoI
 aiY
 aWO
@@ -167209,7 +167262,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -167222,9 +167275,9 @@ rzP
 aTS
 aTS
 aTS
-aTS
-aTS
+jJk
 aGS
+aHN
 aHN
 aHN
 aHN
@@ -167322,10 +167375,10 @@ aDg
 aDg
 aDg
 aDg
-aDg
-aDg
-aDg
-aDg
+aHN
+aHN
+aHN
+aHN
 aoI
 aiY
 aWO
@@ -167361,22 +167414,22 @@ aHN
 aHN
 aWO
 aWO
+aQe
+aTS
+aTS
+aTS
+aTS
+aAF
 aWO
-aTS
-aTS
-aTS
-aTS
-aBX
-aKI
-aHb
-aTS
-rzP
-aTS
-aTS
-aTS
-aTS
-aTS
+aQe
+aHN
 aGS
+aGS
+aGS
+aGS
+aGS
+aGS
+aHN
 aHN
 aHN
 aHN
@@ -167513,7 +167566,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -167522,13 +167575,13 @@ aAF
 aWO
 aQe
 aHN
-aGS
-aGS
-aGS
-aGS
-aGS
-aGS
-aGS
+aHN
+aHN
+aHN
+aHN
+aHN
+aHN
+aHN
 aHN
 aHN
 aHN
@@ -167665,7 +167718,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -167817,7 +167870,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -167969,7 +168022,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -168121,7 +168174,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -168273,7 +168326,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -168425,7 +168478,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -168577,7 +168630,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -168729,7 +168782,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -168881,7 +168934,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -169033,7 +169086,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -169185,7 +169238,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -169337,7 +169390,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -169489,7 +169542,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -169641,7 +169694,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -169793,7 +169846,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -169945,7 +169998,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -170097,7 +170150,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -170249,7 +170302,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -170401,7 +170454,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -170553,7 +170606,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -170705,7 +170758,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -170857,7 +170910,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -171009,7 +171062,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -171161,7 +171214,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -171313,7 +171366,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -171465,7 +171518,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -171617,7 +171670,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -171769,7 +171822,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -171921,7 +171974,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -172073,7 +172126,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -172225,7 +172278,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -172377,7 +172430,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS
@@ -172529,7 +172582,7 @@ aHN
 aHN
 aWO
 aWO
-aWO
+aQe
 aTS
 aTS
 aTS

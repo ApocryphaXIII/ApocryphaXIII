@@ -201,6 +201,7 @@ Dancer
 	value = 4
 	gain_text = "<span class='warning'>You feel free of fetters.</span>"
 	lose_text = "<span class='notice'>You feel echoes of misbegotten emotion.</span>"
+	allowed_species = list("Vampire","Ghoul","Human","Kuei-Jin")
 
 /datum/quirk/coffin_therapy
 	name = "Coffin Therapy"
@@ -236,6 +237,7 @@ Dancer
 	value = -1
 	gain_text = "<span class='warning'>You feel poorer.</span>"
 	lose_text = "<span class='notice'>You feel hope for your future finances.</span>"
+	var/moneymod = 0.5
 
 /datum/quirk/debtor/add()
 	. = ..()
@@ -246,9 +248,9 @@ Dancer
 		if(debtor.account_id != account.account_id)
 			continue
 		if(debtor.clan?.name == CLAN_VENTRUE)
-			account.account_balance = 5 // Extra loss of dignitas.
+			moneymod = moneymod*1.25
 		else
-			account.account_balance = floor(account.account_balance * 0.5)
+			account.account_balance = min(floor(account.account_balance * moneymod), 20000)
 		break
 
 /datum/quirk/messy_eater

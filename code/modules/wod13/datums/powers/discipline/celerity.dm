@@ -14,15 +14,15 @@
 
 /datum/discipline_power/celerity/proc/celerity_visual(datum/discipline_power/celerity/source, atom/newloc, dir)
 	SIGNAL_HANDLER
-
-	spawn()
-		var/obj/effect/celerity/C = new(owner.loc)
-		C.name = owner.name
-		C.appearance = owner.appearance
-		C.dir = owner.dir
-		animate(C, pixel_x = rand(-16, 16), pixel_y = rand(-16, 16), alpha = 0, time = 0.5 SECONDS)
-		if(owner.CheckEyewitness(owner, owner, 7, FALSE))
-			owner.AdjustMasquerade(-1)
+	if(owner.celerity_visual)
+		spawn()
+			var/obj/effect/celerity/C = new(owner.loc)
+			C.name = owner.name
+			C.appearance = owner.appearance
+			C.dir = owner.dir
+			animate(C, pixel_x = rand(-16, 16), pixel_y = rand(-16, 16), alpha = 0, time = 0.5 SECONDS)
+			if(owner.CheckEyewitness(owner, owner, 7, FALSE))
+				owner.AdjustMasquerade(-1)
 
 /datum/discipline_power/celerity/proc/temporis_explode(datum/source, datum/discipline_power/power, atom/target)
 	SIGNAL_HANDLER
@@ -72,7 +72,7 @@
 	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(celerity_visual))
 
 	//put this out of its misery
-	owner.celerity_visual = TRUE
+//	owner.celerity_visual = TRUE // APOC EDIT REMOVE // It's good enough
 	owner.add_movespeed_modifier(/datum/movespeed_modifier/celerity)
 
 /datum/discipline_power/celerity/one/deactivate()

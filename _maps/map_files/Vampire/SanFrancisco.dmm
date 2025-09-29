@@ -12451,6 +12451,11 @@
 /obj/structure/curtain/bounty,
 /turf/closed/wall/vampwall/rich/old/low/window,
 /area/vtm/church/interior/haven)
+"cUI" = (
+/obj/effect/decal/wallpaper/paper/green,
+/obj/structure/sign/flag/pride/trans,
+/turf/closed/wall/vampwall/junk,
+/area/vtm/interior/ghetto)
 "cUJ" = (
 /turf/open/floor/plating/rough,
 /area/vtm/interior/baali)
@@ -40026,6 +40031,13 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/church)
+"jIE" = (
+/obj/structure/closet/cabinet,
+/obj/item/bedsheet/dorms,
+/obj/item/bedsheet/dorms,
+/obj/item/toy/plush/shark,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "jIL" = (
 /obj/structure/table/wood/fancy/black,
 /turf/open/floor/plating/parquetry/old,
@@ -293849,13 +293861,13 @@ flA
 afe
 xoD
 afe
-pRR
+nAb
 afe
 hmC
 afe
 fyG
 afe
-pRR
+nAb
 afe
 iaw
 tlU
@@ -294629,7 +294641,7 @@ xZx
 iFP
 whF
 enC
-bys
+jIE
 iFP
 dFD
 pRR
@@ -294885,7 +294897,7 @@ iFP
 iFP
 iFP
 iFP
-enC
+cUI
 iFP
 iFP
 xZx

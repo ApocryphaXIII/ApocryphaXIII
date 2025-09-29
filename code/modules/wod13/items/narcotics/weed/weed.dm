@@ -197,5 +197,5 @@
 	desc = "A box claiming to contain baggies."
 
 /obj/item/storage/box/baggie/PopulateContents()
-	for(var/i in 1 to 8)
+	for(var/i in 1 to 16)
 		new /obj/item/baggie(src)

@@ -34,16 +34,20 @@
 	desc = "You probably shouldn't be seeing this. Yell at the coders about it."
 	icon = 'modular_zapoc/modules/pride_flags/icons/pride_flags.dmi'
 
+// TODO: [Rebase] AltClick gets replaced with click_alt in TG
+/obj/structure/sign/flag/pride/AltClick(mob/user)
+	var/init_icon_state = initial(icon_state)
+	if(icon_state == init_icon_state)
+		icon_state = "[icon_state]_verticle"
+	else
+		icon_state = init_icon_state
+	. = ..()
+
 /obj/structure/sign/flag/pride/gay
 	name = "gay pride flag"
 	desc = "The flag of gay pride."
 	icon_state = "flag_pride"
 	item_flag = /obj/item/sign/flag/pride/gay
-
-// TODO: [Rebase] AltClick gets replaced with click_alt in TG
-/obj/structure/sign/flag/pride/gay/AltClick(mob/user)
-	icon_state = "flag_pride_vertical"
-	.=..()
 
 /obj/structure/sign/flag/pride/ace
 	name = "asexual pride flag"
@@ -51,19 +55,11 @@
 	icon_state = "flag_ace"
 	item_flag = /obj/item/sign/flag/pride/ace
 
-/obj/structure/sign/flag/pride/ace/AltClick(mob/user)
-	icon_state = "flag_ace_vertical"
-	.=..()
-
 /obj/structure/sign/flag/pride/bi
 	name = "bisexual pride flag"
 	desc = "The flag of bisexual pride."
 	icon_state = "flag_bi"
 	item_flag = /obj/item/sign/flag/pride/bi
-
-/obj/structure/sign/flag/pride/bi/AltClick(mob/user)
-	icon_state = "flag_bi_vertical"
-	.=..()
 
 /obj/structure/sign/flag/pride/lesbian
 	name = "lesbian pride flag"
@@ -71,29 +67,17 @@
 	icon_state = "flag_lesbian"
 	item_flag = /obj/item/sign/flag/pride/lesbian
 
-/obj/structure/sign/flag/pride/lesbian/AltClick(mob/user)
-	icon_state = "flag_lesbian_vertical"
-	.=..()
-
 /obj/structure/sign/flag/pride/pan
 	name = "pansexual pride flag"
 	desc = "The flag of pansexual pride."
 	icon_state = "flag_pan"
 	item_flag = /obj/item/sign/flag/pride/pan
 
-/obj/structure/sign/flag/pride/pan/AltClick(mob/user)
-	icon_state = "flag_pan_vertical"
-	.=..()
-
 /obj/structure/sign/flag/pride/trans
 	name = "trans pride flag"
 	desc = "The flag of trans pride."
 	icon_state = "flag_trans"
 	item_flag = /obj/item/sign/flag/pride/trans
-
-/obj/structure/sign/flag/pride/trans/AltClick(mob/user)
-	icon_state = "flag_trans_vertical"
-	.=..()
 
 // FOLDED
 

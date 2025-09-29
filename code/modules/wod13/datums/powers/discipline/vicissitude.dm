@@ -516,8 +516,8 @@
 			user.hairstyle = "Bald"
 			advanced_original_body_mod = user.base_body_mod
 			user.base_body_mod = ""
-			user.physiology.armor.melee += 60
-			user.physiology.armor.bullet += 60
+			user.physiology.armor.melee += 40 // APOC EDIT CHANGE START
+			user.physiology.armor.bullet += 40 // APOC EDIT CHANGE END
 		if ("Centipede legs")
 			ADD_TRAIT(user, TRAIT_NONMASQUERADE, TRAUMA_TRAIT)
 			user.remove_overlay(PROTEAN_LAYER)
@@ -561,8 +561,8 @@
 			user.skin_tone = advanced_original_skin_tone
 			user.hairstyle = advanced_original_hairstyle
 			user.base_body_mod = advanced_original_body_mod
-			user.physiology.armor.melee -= 60
-			user.physiology.armor.bullet -= 60
+			user.physiology.armor.melee -= 40 // APOC EDIT CHANGE START
+			user.physiology.armor.bullet -= 40 // APOC EDIT CHANGE END
 		if ("Centipede legs")
 			REMOVE_TRAIT(user, TRAIT_NONMASQUERADE, TRAUMA_TRAIT)
 			user.remove_overlay(PROTEAN_LAYER)

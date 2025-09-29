@@ -5,22 +5,6 @@
 /// Index to a boolean, on whether to replace role with job title (or alt-title).
 #define USE_JOB_TITLE 3
 
-/obj/effect/temp_visual/phone
-	icon = 'icons/effects/fov/fov_effects.dmi'
-	icon_state = "note"
-	duration = 1 SECONDS
-
-/obj/effect/temp_visual/phone/ringing
-
-/obj/effect/temp_visual/phone/end
-
-/obj/effect/phone_ringing
-	name = "notes"
-
-/obj/effect/phone_ringing/Initialize(mapload)
-	. = ..()
-	particles = new /particles/phone_ringing
-
 /particles/phone_ringing
 	icon = 'icons/effects/fov/fov_effects.dmi'
 	icon_state = list("note" = 1)
@@ -61,6 +45,7 @@
 	icon = 'code/modules/wod13/items.dmi'
 	icon_state = "phone0"
 	inhand_icon_state = "phone0"
+	base_icon_state =
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
 	item_flags = NOBLUDGEON
@@ -71,6 +56,10 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 	var/obj/effect/abstract/particle_holder/particle_generator
+
+	/// Sound effect for BEING called
+	var/call_sound = 'code/modules/wod13/sounds/call.ogg'
+	var/calling_sound =
 
 	var/exchange_num = 415
 	var/list/contacts = list()
@@ -85,7 +74,7 @@
 	var/talking = FALSE
 	var/choosed_number = ""
 	var/last_call = 0
-	var/call_sound = 'code/modules/wod13/sounds/call.ogg'
+
 	var/can_fold = 1
 	var/interface = "Telephone"
 	var/silence = FALSE
@@ -170,9 +159,8 @@
 		icon_state = folded_state
 		talking = FALSE
 		if(online)
-			online.online = null
-			online.talking = FALSE
-			online = null
+			online.end_call()
+			end_call()
 
 /obj/item/vamp/phone/ui_data(mob/user)
 	var/list/data = list()
@@ -244,14 +232,7 @@
 				online.phone_history_list += NEWH_caller
 			.= TRUE
 		if("decline")
-			talking = FALSE
 			if(online)
-
-				if(!silence)
-					playsound(online, 'code/modules/wod13/sounds/phonestop.ogg', 25, FALSE)
-				online.talking = FALSE
-
-
 				var/datum/phonehistory/NEWH_caller = new()
 				var/datum/phonehistory/NEWH_being_called = new()
 
@@ -279,8 +260,9 @@
 				NEWH_caller.call_type = "They declined the call"
 				online.phone_history_list += NEWH_caller
 
-				online.online = null
-				online = null
+
+				online.end_call()
+			end_call()
 
 			.= TRUE
 		if("call")
@@ -296,7 +278,7 @@
 							// Verify if the caller has their number blocked by the PHN
 							blocked = TRUE
 							// If he is, Blocked is TRUE.
-							to_chat(usr, "<span class='notice'>You have been blocked by this number.</span>")
+							to_chat(usr, span_notice("You have been blocked by this number.") )
 							break
 							// Stop loops once it is found
 					if(!blocked)
@@ -305,7 +287,7 @@
 							last_call = world.time
 							online = PHN
 							PHN.online = src
-							ring_callback(online, usr)
+							ring_callback(usr)
 							var/datum/phonehistory/NEWH_caller = new()
 							var/datum/phonehistory/NEWH_being_called = new()
 							if(PHN.number == number)
@@ -340,25 +322,25 @@
 								NEWH_being_called.call_type = "They called me"
 								PHN.phone_history_list += NEWH_being_called
 						else
-							to_chat(usr, "<span class='notice'>Abonent is busy.</span>")
+							to_chat(usr, span_notice("Caller is busy.") )
 			if(!online && !blocked)
 			// If the phone is not flipped or the phone user has left the city and they are not blocked.
 				if(choosed_number == "#111")
 					call_sound = 'code/modules/wod13/sounds/call.ogg'
-					to_chat(usr, "<span class='notice'>Settings are now reset to default.</span>")
+					to_chat(usr, span_notice("Settings are now reset to default.") )
 				else if(choosed_number == "#228")
 					call_sound = 'code/modules/wod13/sounds/nokia.ogg'
-					to_chat(usr, "<span class='notice'>Code activated.</span>")
+					to_chat(usr, span_notice("Code activated.") )
 				else if(choosed_number == "#666")
 					call_sound = 'sound/mobs/humanoids/human/scream/malescream_6.ogg'
-					to_chat(usr, "<span class='notice'>Code activated.</span>")
+					to_chat(usr, span_notice("Code activated.") )
 				else if(choosed_number == "#34")
 					if(ishuman(usr))
 						var/mob/living/carbon/human/H = usr
 						H.emote("moan")
-					to_chat(usr, "<span class='notice'>Code activated.</span>")
+					to_chat(usr, span_notice("Code activated.") )
 				else
-					to_chat(usr, "<span class='notice'>Invalid number.</span>")
+					to_chat(usr, span_notice("Invalid number.") )
 			.= TRUE
 		if("contacts")
 			var/list/options = list("Add","Remove","Choose","Block", "Unblock", "My Number", "Publish Number", "Published Numbers", "Call History", "Delete Call History")
@@ -379,7 +361,7 @@
 						else
 							GLOB.published_numbers += src.number
 							GLOB.published_number_names += name
-							to_chat(usr, "<span class='notice'>Your number is now published.</span>")
+							to_chat(usr, span_notice("Your number is now published.") )
 							for(var/obj/item/vamp/phone/PHN in GLOB.phones_list)
 							//Gather all the Phones in the game to check if they got the toggle for published contacts
 								if(PHN.toggle_published_contacts == TRUE)
@@ -399,7 +381,7 @@
 										if(!GOT_CONTACT)
 											PHN.contacts += NEWC
 					else
-						to_chat(usr, "<span class='notice'>You must input a name to publish your number.</span>")
+						to_chat(usr, span_notice("You must input a name to publish your number.") )
 
 				if ("Published Numbers")
 					var/list_length = min(length(GLOB.published_numbers), length(GLOB.published_number_names))
@@ -445,7 +427,7 @@
 							for(var/datum/phonecontact/CNTCT in contacts)
 								if(CNTCT.name == result)
 									if(CNTCT.number == "")
-										to_chat(usr, "<span class='notice'>Sorry, [CNTCT.name] does not have a number.</span>")
+										to_chat(usr, span_notice("Sorry, [CNTCT.name] does not have a number.") )
 									choosed_number = CNTCT.number
 				if("Block")
 					var/block_number = tgui_input_text(usr, "Input phone number", "Block Number")
@@ -514,10 +496,10 @@
 					if(!silence)
 						//If it is true, it will check all the other sounds for phone and disable them
 						silence = TRUE
-						to_chat(usr, "<span class='notice'>Notifications and Sounds toggled off.</span>")
+						to_chat(usr, span_notice("Notifications and Sounds toggled off.") )
 					else
 						silence = FALSE
-						to_chat(usr, "<span class='notice'>Notifications and Sounds toggled on.</span>")
+						to_chat(usr, span_notice("Notifications and Sounds toggled on.") )
 				if ("Published Numbers as Contacts Toggle")
 					if(!toggle_published_contacts)
 						var/contacts_added_lenght = published_numbers_contacts.len
@@ -527,7 +509,7 @@
 						if(contacts_added_lenght < list_length)
 						// checks the size difference between the GLOB published list and the phone published list
 							var/ADDED_CONTACTS = 0
-							to_chat(usr, "<span class='notice'>New contacts are being added to your contact list.</span>")
+							to_chat(usr, span_notice("New contacts are being added to your contact list.") )
 							for(var/i = 1 to list_length)
 								var/number_v = GLOB.published_numbers[i]
 								var/name_v = GLOB.published_number_names[i]
@@ -547,14 +529,14 @@
 										published_numbers_contacts += NEWC
 										ADDED_CONTACTS +=1
 							if(ADDED_CONTACTS > 1)
-								to_chat(usr, "<span class='notice'>New contacts are added to your contact list.</span>")
+								to_chat(usr, span_notice("New contacts are added to your contact list.") )
 						else if(contacts_added_lenght == list_length)
-							to_chat(usr, "<span class='notice'>You have all the contacts in the published list already.</span>")
+							to_chat(usr, span_notice("You have all the contacts in the published list already.") )
 						toggle_published_contacts = TRUE
-						to_chat(usr, "<span class='notice'>The toggle of the published numbers in contacts is active.</span>")
+						to_chat(usr, span_notice("The toggle of the published numbers in contacts is active.") )
 					else
 						toggle_published_contacts = FALSE
-						to_chat(usr, "<span class='notice'>The toggle of the published numbers in contacts is disabled.</span>")
+						to_chat(usr, span_notice("The toggle of the published numbers in contacts is disabled.") )
 			.= TRUE
 		if("keypad")
 			if(!silence)
@@ -575,22 +557,24 @@
 	return FALSE
 
 
-/obj/item/vamp/phone/proc/ring_callback(obj/item/vamp/phone/abonent, mob/user)
+/obj/item/vamp/phone/proc/ring_callback(mob/user)
 	if(last_call+100 <= world.time && !talking)
 		last_call = 0
 		if(online)
-			if(online.silence == FALSE)
-				playsound(src, 'code/modules/wod13/sounds/phonestop.ogg', 25, FALSE)
-			online.online = null
-			online = null
-			QDEL_NULL(online.particle_generator)
+			online.end_call()
+		end_call()
 	if(!talking && online)
 		if(online.silence == FALSE)
 			playsound(src, 'code/modules/wod13/sounds/phone.ogg', 10, FALSE)
 			playsound(online, online.call_sound, 25, FALSE)
-			if(!online.particle_generator)
-				online.particle_generator = new(online, /particles/phone_ringing, PARTICLE_ATTACH_MOB)
 		addtimer(CALLBACK(src, PROC_REF(ring_callback), online, user), 20)
+
+/obj/item/vamp/phone/proc/end_call()
+	online = null
+	talking = FALSE
+	if(!silence)
+		playsound(src, 'code/modules/wod13/sounds/phonestop.ogg', 25, FALSE)
+	QDEL_NULL(online.particle_generator)
 
 /obj/item/vamp/phone/proc/handle_hearing(datum/source, list/hearing_args)
 	var/message = hearing_args[HEARING_RAW_MESSAGE]

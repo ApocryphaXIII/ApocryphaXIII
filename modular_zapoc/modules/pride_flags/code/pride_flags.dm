@@ -14,18 +14,31 @@
 /obj/structure/sign/flag/welder_act(mob/living/user, obj/item/I)
 	return
 
-// TODO: [Rebase] MouseDrop : mouse_drop_dragged
-/obj/structure/sign/flag/MouseDrop(atom/over, mob/user, src_location, over_location, params)
-	if(over == user && Adjacent(user))
+// TODO: [Rebase] MouseDrop : mouse_drop_dragged, refactor back original implemnation
+/obj/structure/sign/flag/MouseDrop(atom/over, src_location, over_location, src_control, over_control, params)
+	if(over == usr && Adjacent(usr))
 		//if(!item_flag || src.obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION)
 		//	return
 		//if(!user.can_perform_action(src, NEED_DEXTERITY))
 		//	return
+		usr.visible_message(span_notice("[usr] grabs and folds \the [src.name]."), span_notice("You grab and fold \the [src.name]."))
+		var/obj/item/flag_item = new item_flag(loc)
+		TransferComponents(flag_item)
+		usr.put_in_hands(flag_item)
+		qdel(src)
+/*
+/obj/structure/sign/flag/mouse_drop_dragged(atom/over, mob/user, src_location, over_location, params)
+	if(over == user && Adjacent(user))
+		if(!item_flag || src.obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION)
+			return
+		if(!user.can_perform_action(src, NEED_DEXTERITY))
+			return
 		user.visible_message(span_notice("[user] grabs and folds \the [src.name]."), span_notice("You grab and fold \the [src.name]."))
 		var/obj/item/flag_item = new item_flag(loc)
 		TransferComponents(flag_item)
 		user.put_in_hands(flag_item)
 		qdel(src)
+*/
 
 // HORIZONTAL
 

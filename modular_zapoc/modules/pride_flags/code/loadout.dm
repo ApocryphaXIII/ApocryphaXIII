@@ -4,25 +4,25 @@
 // display_name : name
 
 /datum/gear/general/gaypride
-	display_name = "Rainbow Flag"
+	display_name = "flag, rainbow"
 	path = /obj/item/sign/flag/pride/gay
 
 /datum/gear/general/acepride
-	display_name = "Asexual Flag"
+	display_name = "flag, asexual"
 	path = /obj/item/sign/flag/pride/ace
 
 /datum/gear/general/bipride
-	display_name = "Bisexual Flag"
+	display_name = "flag, bisexual"
 	path = /obj/item/sign/flag/pride/bi
 
 /datum/gear/general/lesbianpride
-	display_name = "Lesbian Flag"
+	display_name = "flag, lesbian"
 	path = /obj/item/sign/flag/pride/lesbian
 
 /datum/gear/general/panpride
-	display_name = "Pansexual Flag"
+	display_name = "flag, pansexual"
 	path = /obj/item/sign/flag/pride/pan
 
 /datum/gear/general/transpride
-	display_name = "Trans Flag"
+	display_name = "flag, trans"
 	path = /obj/item/sign/flag/pride/trans

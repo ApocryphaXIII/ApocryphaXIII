@@ -49,8 +49,6 @@
 	desc = "Holds garbage inside."
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "garbage"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
 	anchored = TRUE
 	density = TRUE
 	var/internal_trash_chance = 75

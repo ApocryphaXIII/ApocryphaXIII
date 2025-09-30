@@ -19,7 +19,6 @@
 	spawning = 0.5
 	lifespan = 2 SECONDS
 	fade = 1.5 SECONDS
-	//grow = -0.025
 	gravity = list(0, 0.1)
 	position = generator(GEN_SPHERE, 0, 16, NORMAL_RAND)
 	spin = generator(GEN_NUM, -1, 1, NORMAL_RAND)
@@ -68,13 +67,13 @@
 	var/hangup_sound = 'code/modules/wod13/sounds/phonestop.ogg'
 
 	var/exchange_num = 415
+	var/number
 	var/list/contacts = list()
 	var/blocked = FALSE
 	var/list/blocked_contacts = list()
 	var/closed = TRUE
 	var/owner = ""
 	var/datum/weakref/owner_ref = null
-	var/number
 	/// The cellphone we are currently calling
 	var/obj/item/vamp/phone/online
 	var/talking = FALSE
@@ -202,9 +201,8 @@
 				talking = TRUE
 				online.online = src
 				online.talking = TRUE
-				if(particle_generator)
-					particle_generator.particles.spawning = 0.05
-
+				setup_particles(TRUE)
+				online.setup_particles(TRUE)
 				phone_history_list += new /datum/phonehistory(src, online, "I accepted the call")
 				online.phone_history_list += new /datum/phonehistory(online, src, "They accepted the call")
 			.= TRUE
@@ -219,37 +217,29 @@
 			.= TRUE
 		if("call")
 			choosed_number = replacetext(choosed_number, " ", "")
-			for(var/obj/item/vamp/phone/PHN in GLOB.phones_list)
-			//Loop through the Phone Global List
-				if(PHN.number == choosed_number)
-				// Verify if number wrote actually meets another PHN(Phone number) in the list
+			for(var/obj/item/vamp/phone/PHN in GLOB.phones_list) //Loop through the Phone Global List
+				if(PHN.number == choosed_number) // Verify if number wrote actually meets another PHN(Phone number) in the list
 					blocked = FALSE // Not blocked YET.
-					for(var/datum/phonecontact/BlockC in PHN.blocked_contacts)
-					// Loop through the blocked numbers in the PHN Blocked LIST
-						if(BlockC.number == number)
-							// Verify if the caller has their number blocked by the PHN
-							blocked = TRUE
-							// If he is, Blocked is TRUE.
+					for(var/datum/phonecontact/blocked_contact in PHN.blocked_contacts) // Loop through the blocked numbers in the PHN Blocked LIST
+						if(blocked_contact.number == number) // Verify if the caller has their number blocked by the PHN
+							blocked = TRUE // If he is, Blocked is TRUE.
 							to_chat(usr, span_notice("You have been blocked by this number."))
-							break
-							// Stop loops once it is found
-					if(!blocked)
-					// If the Caller is not blocked and the PHN is flipped and they are not talking, then the call goes through.
+							break // Stop loops once it is found
+					if(!blocked) // If the Caller is not blocked and the PHN is flipped and they are not talking, then the call goes through.
 						if(!PHN.online && !PHN.talking)
 							last_call = world.time
 							online = PHN
 							PHN.online = src
-							if(!particle_generator)
-								new particle_generator(src, /particles/phone_ringing)
+							setup_particles()
+							online.setup_particles()
 							ring_callback(usr)
 							if(PHN.number == number)
 								return
 							phone_history_list += new /datum/phonehistory(src, online, "I called")
 							PHN.phone_history_list += new /datum/phonehistory(online, src, "They called me")
 						else
-							to_chat(usr, span_notice("Caller is busy.") )
-			if(!online && !blocked)
-			// If the phone is not flipped or the phone user has left the city and they are not blocked.
+							to_chat(usr, span_notice("Caller is busy."))
+			if(!online && !blocked) // If the phone is not flipped or the phone user has left the city and they are not blocked.
 				if(choosed_number == "#111")
 					call_sound = 'code/modules/wod13/sounds/call.ogg'
 					to_chat(usr, span_notice("Settings are now reset to default.") )
@@ -282,7 +272,7 @@
 					if(name && src.number)
 						name = trim(copytext_char(sanitize(name), 1, MAX_MESSAGE_LEN))
 						if(src.number in GLOB.published_numbers)
-							to_chat(usr, "<span class ='notice'>This number is already published.</span>")
+							to_chat(usr, span_notice("This number is already published."))
 						else
 							GLOB.published_numbers += src.number
 							GLOB.published_number_names += name
@@ -297,13 +287,13 @@
 									NEWC.name = "[name]"
 									if(NEWC.number != PHN.number)
 										//Check if it is not your own number that you are adding to contacts
-										var/GOT_CONTACT = FALSE
+										var/contact_found = FALSE
 										for(var/datum/phonecontact/Contact in PHN.contacts)
 											if(Contact.number == NEWC.number)
 												//Check if the number is not already in your contact list
-												GOT_CONTACT = TRUE
+												contact_found = TRUE
 												break
-										if(!GOT_CONTACT)
+										if(!contact_found)
 											PHN.contacts += NEWC
 					else
 						to_chat(usr, span_notice("You must input a name to publish your number.") )
@@ -357,16 +347,16 @@
 				if("Block")
 					var/block_number = tgui_input_text(usr, "Input phone number", "Block Number")
 					if(block_number)
-						var/datum/phonecontact/BlockC = new()
+						var/datum/phonecontact/blocked_contact = new()
 						block_number = replacetext(block_number, " ", "") //Removes spaces
-						BlockC.number = "[block_number]"
-						blocked_contacts += BlockC
+						blocked_contact.number = "[block_number]"
+						blocked_contacts += blocked_contact
 						var/block_contact_name = tgui_input_text(usr, "Input name", "Add name of the Blocked number", encode = FALSE)
 						if(block_contact_name)
-							BlockC.name = "[block_contact_name]"
+							blocked_contact.name = "[block_contact_name]"
 						else
 							var/number = length(blocked_contacts)+1
-							BlockC.name = "Blocked [number]"
+							blocked_contact.name = "Blocked [number]"
 				if("Unblock")
 					var/list/unblocking = list()
 					for(var/datum/phonecontact/CNT_UNBLOCK in blocked_contacts)
@@ -443,13 +433,13 @@
 								NEWC.name = "[name_v]"
 								if(NEWC.number != number)
 									//Check if it is not your own number that you are adding to contacts
-									var/GOT_CONTACT = FALSE
+									var/contact_found = FALSE
 									for(var/datum/phonecontact/Contact in contacts)
 									//Check if the number is not already in your contact list
 										if(Contact.number == NEWC.number)
-											GOT_CONTACT = TRUE
+											contact_found = TRUE
 											break
-									if(!GOT_CONTACT)
+									if(!contact_found)
 										contacts += NEWC
 										published_numbers_contacts += NEWC
 										ADDED_CONTACTS +=1
@@ -500,6 +490,13 @@
 	talking = FALSE
 	if(!silence)
 		playsound(src, hangup_sound, 25, FALSE)
+
+/obj/item/vamp/phone/proc/setup_particles(weakened = FALSE)
+	if(!particle_generator)
+		particle_generator = new(src, /particles/phone_ringing, PARTICLE_ATTACH_MOB)
+	if(weakened)
+		particle_generator.particles.spawning = 0.005
+		particle_generator.particles.count = 1
 
 /obj/item/vamp/phone/proc/handle_hearing(datum/source, list/hearing_args)
 	var/message = hearing_args[HEARING_RAW_MESSAGE]

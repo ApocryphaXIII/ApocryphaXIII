@@ -14,4 +14,3 @@
 			//Verify if they have a contact with the number if so, save their name
 			name = my_contact.name
 			break
-	my_phone

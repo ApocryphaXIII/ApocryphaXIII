@@ -1,18 +1,30 @@
 // vocal sound channel define
 #define CHANNEL_VOCAL_SOUNDS 909
 
-/mob/living/carbon/human/proc/send_voice(message, skip_thingy)
+/mob/living/carbon/human/proc/send_voice(message, speech_mode)
 	if(!message || !length(message))
 		return
 	if(dna.species)
-		dna.species.send_voice(src)
+		dna.species.send_voice(src, speech_mode)
 
 /mob/living/carbon/human/send_speech(message, message_range = 6, obj/source = src, bubble_type = bubble_icon, list/spans, datum/language/message_language=null, message_mods, original_message)
 	. = ..()
-	if(!message_mods[WHISPER_MODE])
-		send_voice(message)
 
-/datum/species/proc/send_voice(mob/living/L)
+	var/speech_mode
+	var/ending = copytext_char(message, -1)
+
+	if(copytext_char(message, -2) == "!!")
+		speech_mode = "_exclaim"
+	else if(message_mods[MODE_SING])
+		speech_mode ="_sing"
+	else if(ending == "?")
+		speech_mode = "_ask"
+	else if(ending == "!")
+		speech_mode = "_exclaim"
+
+	send_voice(message, speech_mode)
+
+/datum/species/proc/send_voice(mob/living/L, speech_mode)
 	// Only play sounds for mobs with a ckey (player-controlled)
 	if(!L.ckey)
 		return
@@ -22,16 +34,16 @@
 	var/sound_file
 	switch(vocal_sound_pref)
 		if("Talk")
-			sound_file = 'modular_tfn/modules/saysounds/sounds/talk.ogg'
+			sound_file = "modular_tfn/modules/saysounds/sounds/talk[speech_mode].ogg"
 		if("Pencil")
-			sound_file = 'modular_tfn/modules/saysounds/sounds/pencil.ogg'
+			sound_file = "modular_tfn/modules/saysounds/sounds/pencil[speech_mode].ogg"
 		if("None")
 			return
 		else
 			sound_file = 'modular_tfn/modules/saysounds/sounds/talk.ogg' // Default fallback
 
 	var/vocal_frequency = rand(95, 105) / 100 // 0.95 to 1.05 (5% variation)
-	playsound(L, sound_file, 100, TRUE, 0, SOUND_FALLOFF_EXPONENT, vocal_frequency, CHANNEL_VOCAL_SOUNDS, FALSE)
+	playsound(L, "[sound_file]", 100, TRUE, 0, SOUND_FALLOFF_EXPONENT, vocal_frequency, CHANNEL_VOCAL_SOUNDS, FALSE)
 
 // playsound_local override to check for CHANNEL_VOCAL_SOUNDS
 /mob/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff_exponent = SOUND_FALLOFF_EXPONENT, channel = 0, sound/S, max_distance, falloff_distance = SOUND_DEFAULT_FALLOFF_DISTANCE, distance_multiplier = 1, use_reverb = TRUE)

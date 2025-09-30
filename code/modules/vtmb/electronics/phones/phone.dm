@@ -50,7 +50,7 @@
 	icon = 'code/modules/wod13/items.dmi'
 	icon_state = "phone0"
 	inhand_icon_state = "phone0"
-	base_icon_state =
+	base_icon_state = "phone"
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
 	item_flags = NOBLUDGEON
@@ -209,7 +209,7 @@
 		if("decline")
 			if(online)
 				phone_history_list += new /datum/phonehistory(src, online, "I declined the call")
-				online.phone_history_list += new /datum/phonehistory(online, src,"They declined the call")
+				online.phone_history_list += new /datum/phonehistory(online, src, "They declined the call")
 
 				online.end_call()
 			end_call()
@@ -228,7 +228,7 @@
 							// Verify if the caller has their number blocked by the PHN
 							blocked = TRUE
 							// If he is, Blocked is TRUE.
-							to_chat(usr, span_notice("You have been blocked by this number.") )
+							to_chat(usr, span_notice("You have been blocked by this number."))
 							break
 							// Stop loops once it is found
 					if(!blocked)
@@ -241,7 +241,7 @@
 							if(PHN.number == number)
 								return
 							phone_history_list += new /datum/phonehistory(src, online, "I called")
-							PHN.phone_history_list += new /datum/phonehistory(online, src "They called me")
+							PHN.phone_history_list += new /datum/phonehistory(online, src, "They called me")
 						else
 							to_chat(usr, span_notice("Caller is busy.") )
 			if(!online && !blocked)

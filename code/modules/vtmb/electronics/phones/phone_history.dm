@@ -4,7 +4,7 @@
 	var/time = ""
 	var/call_type = ""
 
-/datum/phonehistory/New(/obj/item/vamp/phone/my_phone, /obj/item/vamp/phone/interacting_phone, call_type)
+/datum/phonehistory/New(obj/item/vamp/phone/my_phone, obj/item/vamp/phone/interacting_phone, call_type)
 	time = "[station_time_timestamp("hh:mm")]"
 	number = interacting_phone.number
 	src.call_type = call_type

@@ -27,6 +27,7 @@ GLOBAL_VAR_INIT(voice_tags_counter, 10)
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/human)
 	GLOB.human_list += src
 	voice_tag_num = GLOB.voice_tags_counter
+	GLOB.voice_tags_counter += 1
 
 /mob/living/carbon/human/proc/setup_human_dna()
 	//initialize dna. for spawned humans; overwritten by other code

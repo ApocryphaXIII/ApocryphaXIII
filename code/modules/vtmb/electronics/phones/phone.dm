@@ -202,6 +202,8 @@
 				talking = TRUE
 				online.online = src
 				online.talking = TRUE
+				if(particle_generator)
+					particle_generator.particles.spawning = 0.05
 
 				phone_history_list += new /datum/phonehistory(src, online, "I accepted the call")
 				online.phone_history_list += new /datum/phonehistory(online, src, "They accepted the call")
@@ -237,6 +239,8 @@
 							last_call = world.time
 							online = PHN
 							PHN.online = src
+							if(!particle_generator)
+								new particle_generator(src, /particles/phone_ringing)
 							ring_callback(usr)
 							if(PHN.number == number)
 								return
@@ -491,11 +495,11 @@
 		addtimer(CALLBACK(src, PROC_REF(ring_callback), online, user), 20)
 
 /obj/item/vamp/phone/proc/end_call()
+	QDEL_NULL(particle_generator)
 	online = null
 	talking = FALSE
 	if(!silence)
 		playsound(src, hangup_sound, 25, FALSE)
-	QDEL_NULL(online.particle_generator)
 
 /obj/item/vamp/phone/proc/handle_hearing(datum/source, list/hearing_args)
 	var/message = hearing_args[HEARING_RAW_MESSAGE]

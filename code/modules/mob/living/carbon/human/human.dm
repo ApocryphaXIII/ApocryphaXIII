@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(voice_tags_counter, 10)
+
 /mob/living/carbon/human/Initialize()
 	add_verb(src, /mob/living/proc/mob_sleep)
 	add_verb(src, /mob/living/proc/toggle_resting)
@@ -24,7 +26,7 @@
 	AddComponent(/datum/component/bloodysoles/feet)
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/human)
 	GLOB.human_list += src
-	phonevoicetag = length(GLOB.human_list)+10
+	voice_tag_num = GLOB.voice_tags_counter
 
 /mob/living/carbon/human/proc/setup_human_dna()
 	//initialize dna. for spawned humans; overwritten by other code

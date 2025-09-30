@@ -5,6 +5,11 @@
 /// Index to a boolean, on whether to replace role with job title (or alt-title).
 #define USE_JOB_TITLE 3
 
+/obj/effect/temp_visual/phone
+	icon = 'icons/effects/fov/fov_effects.dmi'
+	icon_state = "note"
+	duration = 1 SECONDS
+
 /particles/phone_ringing
 	icon = 'icons/effects/fov/fov_effects.dmi'
 	icon_state = list("note" = 1)
@@ -59,7 +64,8 @@
 
 	/// Sound effect for BEING called
 	var/call_sound = 'code/modules/wod13/sounds/call.ogg'
-	var/calling_sound =
+	var/calling_sound = 'code/modules/wod13/sounds/call.ogg'
+	var/hangup_sound = 'code/modules/wod13/sounds/phonestop.ogg'
 
 	var/exchange_num = 415
 	var/list/contacts = list()
@@ -75,8 +81,7 @@
 	var/choosed_number = ""
 	var/last_call = 0
 
-	var/can_fold = 1
-	var/interface = "Telephone"
+	var/can_fold = TRUE
 	var/silence = FALSE
 	var/toggle_published_contacts = FALSE
 	var/list/published_numbers_contacts = list()
@@ -150,7 +155,7 @@
 		icon_state = open_state
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, interface, interface)
+		ui = new(user, src, "Telephone", "Phone")
 		ui.open()
 
 /obj/item/vamp/phone/AltClick(mob/user)
@@ -188,15 +193,9 @@
 	switch(action)
 		if("hang")
 			last_call = 0
-			if(talking)
-				talking = FALSE
-				if(online)
-					online.talking = FALSE
 			if(online)
-				if(!silence)
-					playsound(online, 'code/modules/wod13/sounds/phonestop.ogg', 25, FALSE)
-				online.online = null
-				online = null
+				online.end_call()
+			end_call()
 			.= TRUE
 		if("accept")
 			if(online)
@@ -204,62 +203,13 @@
 				online.online = src
 				online.talking = TRUE
 
-				var/datum/phonehistory/NEWH_caller = new()
-				var/datum/phonehistory/NEWH_being_called = new()
-
-				//Being called History
-				NEWH_being_called.name = "Unknown"
-				for(var/datum/phonecontact/Contact in contacts)
-					if(Contact.number == online.number)
-						//Verify if they have a contact with the number if so, save their name
-						NEWH_being_called.name = Contact.name
-						break
-				NEWH_being_called.number = online.number
-				NEWH_being_called.time = "[station_time_timestamp("hh:mm")]"
-				NEWH_being_called.call_type = "I accepted the call"
-				phone_history_list += NEWH_being_called
-
-				//Caller History
-				NEWH_caller.name = "Unknown"
-				for(var/datum/phonecontact/Contact in online.contacts)
-					if(Contact.number == number)
-						//Verify if they have a contact with the number if so, save their name
-						NEWH_caller.name = Contact.name
-						break
-				NEWH_caller.number = number
-				NEWH_caller.time = "[station_time_timestamp("hh:mm")]"
-				NEWH_caller.call_type = "They accepted the call"
-				online.phone_history_list += NEWH_caller
+				phone_history_list += new /datum/phonehistory(src, online, "I accepted the call")
+				online.phone_history_list += new /datum/phonehistory(online, src, "They accepted the call")
 			.= TRUE
 		if("decline")
 			if(online)
-				var/datum/phonehistory/NEWH_caller = new()
-				var/datum/phonehistory/NEWH_being_called = new()
-
-				//Being called History
-				NEWH_being_called.name = "Unknown"
-				for(var/datum/phonecontact/Contact in contacts)
-					if(Contact.number == online.number)
-						//Verify if they have a contact with the number if so, save their name
-						NEWH_being_called.name = Contact.name
-						break
-				NEWH_being_called.number = online.number
-				NEWH_being_called.time = "[station_time_timestamp("hh:mm")]"
-				NEWH_being_called.call_type = "I declined the call"
-				phone_history_list += NEWH_being_called
-
-				//Caller History
-				NEWH_caller.name = "Unknown"
-				for(var/datum/phonecontact/Contact in online.contacts)
-					if(Contact.number == number)
-						//Verify if they have a contact with the number if so, save their name
-						NEWH_caller.name = Contact.name
-						break
-				NEWH_caller.number = number
-				NEWH_caller.time = "[station_time_timestamp("hh:mm")]"
-				NEWH_caller.call_type = "They declined the call"
-				online.phone_history_list += NEWH_caller
-
+				phone_history_list += new /datum/phonehistory(src, online, "I declined the call")
+				online.phone_history_list += new /datum/phonehistory(online, src,"They declined the call")
 
 				online.end_call()
 			end_call()
@@ -288,39 +238,10 @@
 							online = PHN
 							PHN.online = src
 							ring_callback(usr)
-							var/datum/phonehistory/NEWH_caller = new()
-							var/datum/phonehistory/NEWH_being_called = new()
 							if(PHN.number == number)
-								//Verify if you are calling yourself
-								NEWH_caller.name = owner
-								NEWH_caller.call_type = "I called myself"
-								NEWH_caller.time = "[station_time_timestamp("hh:mm")]"
-								NEWH_caller.number = number
-								phone_history_list += NEWH_caller
-							else
-								//Caller History
-								NEWH_caller.name = "Unknown"
-								for(var/datum/phonecontact/Contact in contacts)
-									if(Contact.number == PHN.number)
-										//Verify if they have a contact with the number if so, save their name
-										NEWH_caller.name = Contact.name
-										break
-								NEWH_caller.number = PHN.number
-								NEWH_caller.time = "[station_time_timestamp("hh:mm")]"
-								NEWH_caller.call_type = "I called"
-								phone_history_list += NEWH_caller
-
-								//Being Called History
-								NEWH_being_called.name = "Unknown"
-								for(var/datum/phonecontact/Contact in PHN.contacts)
-									if(Contact.number == number)
-										//Verify if they have a contact with the number if so, save their name
-										NEWH_being_called.name = Contact.name
-										break
-								NEWH_being_called.number = number
-								NEWH_being_called.time = "[station_time_timestamp("hh:mm")]"
-								NEWH_being_called.call_type = "They called me"
-								PHN.phone_history_list += NEWH_being_called
+								return
+							phone_history_list += new /datum/phonehistory(src, online, "I called")
+							PHN.phone_history_list += new /datum/phonehistory(online, src "They called me")
 						else
 							to_chat(usr, span_notice("Caller is busy.") )
 			if(!online && !blocked)
@@ -565,7 +486,7 @@
 		end_call()
 	if(!talking && online)
 		if(online.silence == FALSE)
-			playsound(src, 'code/modules/wod13/sounds/phone.ogg', 10, FALSE)
+			playsound(src, calling_sound, 10, FALSE)
 			playsound(online, online.call_sound, 25, FALSE)
 		addtimer(CALLBACK(src, PROC_REF(ring_callback), online, user), 20)
 
@@ -573,7 +494,7 @@
 	online = null
 	talking = FALSE
 	if(!silence)
-		playsound(src, 'code/modules/wod13/sounds/phonestop.ogg', 25, FALSE)
+		playsound(src, hangup_sound, 25, FALSE)
 	QDEL_NULL(online.particle_generator)
 
 /obj/item/vamp/phone/proc/handle_hearing(datum/source, list/hearing_args)
@@ -591,14 +512,15 @@
 					else
 						spchspn = SPAN_ROBOT
 				if(ishuman(hearing_args[HEARING_SPEAKER]))
-					var/mob/living/carbon/human/SPK = hearing_args[HEARING_SPEAKER]
-					voice_saying = "[age2agedescription(SPK.age)] [SPK.gender] voice ([SPK.phonevoicetag])"
+					var/mob/living/carbon/human/hearing_human = hearing_args[HEARING_SPEAKER]
+					voice_saying = "[age2agedescription(hearing_human.age)] [hearing_human.gender] voice ([hearing_human.voice_tag_num])"
 
-					if(SPK.clan?.name == CLAN_LASOMBRA)
-						message = scramble_lasombra_message(message,SPK)
+					if(hearing_human.clan?.name == CLAN_LASOMBRA)
+						message = scramble_lasombra_message(message,hearing_human)
 						playsound(src, 'code/modules/wod13/sounds/lasombra_whisper.ogg', 5, FALSE, ignore_walls = FALSE)
 					else
 						playsound(online, 'code/modules/wod13/sounds/phonetalk.ogg', 50, FALSE)
+					new /obj/effect/temp_visual/phone(src.loc)
 				var/obj/phonevoice/VOIC = new(online)
 				VOIC.name = voice_saying
 				VOIC.speech_span = spchspn
@@ -610,9 +532,10 @@
 	icon = 'code/modules/wod13/props.dmi'
 	onflooricon = 'code/modules/wod13/props.dmi'
 	icon_state = "payphone"
+	base_icon_state = "payphone"
 	anchored = TRUE
 	number = "1447"
-	can_fold = 0
+	can_fold = FALSE
 
 	/// Phone icon states
 	open_state = "payphone"
@@ -623,9 +546,10 @@
 	desc = "The usual phone of a cleaning company used to communicate with employees"
 	icon = 'code/modules/wod13/onfloor.dmi'
 	icon_state = "redphone"
+	base_icon_state = "redphone"
 	anchored = TRUE
 	number = "700 4424"
-	can_fold = 0
+	can_fold = FALSE
 
 	open_state = "redphone"
 	closed_state = "redphone"
@@ -637,7 +561,7 @@
 	icon_state = "redphone"
 	anchored = TRUE
 	number = "911"
-	can_fold = 0
+	can_fold = FALSE
 	open_state = "redphone"
 	closed_state = "redphone"
 	folded_state = "redphone"

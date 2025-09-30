@@ -136,7 +136,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	mob.log_talk(raw_msg, LOG_OOC)
 	var/name_string = mob.name
 	if(mob.name != mob.real_name)
-		name_string += "([mob.real_name])"
+		name_string += " ([mob.real_name])"
 	for(var/mob/L in viewers(9, mob))
 		if(L.client)
 			if(L.client.prefs.chat_toggles & CHAT_OOC)

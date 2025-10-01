@@ -158,7 +158,7 @@
 		ui.open()
 
 /obj/item/vamp/phone/AltClick(mob/user)
-	if(can_fold && !closed)
+	if(can_fold && !closed && user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY))
 		closed = TRUE
 		icon_state = folded_state
 		talking = FALSE

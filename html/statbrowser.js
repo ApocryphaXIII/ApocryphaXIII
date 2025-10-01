@@ -478,6 +478,7 @@ function draw_listedturf() {
 			img.src = storedimages[part[1]];
 			img.id = part[1];
 			table.appendChild(img);
+		}
 		var b = document.createElement("div");
 		var clickcatcher = "";
 		b.className = "link";

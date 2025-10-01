@@ -65,6 +65,6 @@
 	path = /obj/item/clothing/under/shorts/black
 
 
-/datum/gear/uniform/shorts/cardiganskirt
+/datum/gear/uniform/cardiganskirt
 	display_name = "skirt, cardigan"
 	path = /obj/item/clothing/under/dress/skirt

@@ -5,10 +5,10 @@ SUBSYSTEM_DEF(blackout)
 	priority = FIRE_PRIORITY_VERYLOW
 
 /datum/controller/subsystem/blackout/fire()
-	for(var/obj/generator/G in GLOB.generators)
+	for(var/obj/warehouse_generator/G in GLOB.generators) // APOC EDIT START
 		if(G.on)
-			if(prob(50))
+			if(prob(5))
 				G.brek()
-			G.fuel_remain = max(0, G.fuel_remain-10)
-			if(G.fuel_remain == 0)
-				G.brek()
+//			G.fuel_remain = max(0, G.fuel_remain-10)
+//			if(G.fuel_remain == 0)
+//				G.brek() // APOC EDIT END

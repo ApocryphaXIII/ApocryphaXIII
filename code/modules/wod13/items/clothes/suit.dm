@@ -240,20 +240,25 @@
 	name = "brown coat"
 	desc = "A warm and heavy brown coat."
 	icon_state = "coat1"
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/coat/alt
 	name = "green coat"
 	desc = "A warm and heavy green coat."
 	icon_state = "coat2"
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/coat/winter
 	name = "black fur coat"
 	desc = "Warm and heavy clothing."
 	icon_state = "winter1"
+	base_icon_state = "winter1" // APOC EDIT ADD
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/coat/winter/alt
 	name = "brown fur coat"
 	icon_state = "winter2"
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/slickbackcoat
 	name = "opulent coat"
@@ -282,9 +287,12 @@
 		/obj/item/melee/classic_baton/vampire,
 		/obj/item/restraints/handcuffs
 	)
+	can_have_armor = TRUE // APOC EDIT ADD
+
 /obj/item/clothing/suit/vampire/jacket/punk
 	icon_state = "punk"
 	armor = list(MELEE = 50, BULLET = 50, LASER = 10, ENERGY = 10, BOMB = 50, BIO = 0, RAD = 0, FIRE = 25, ACID = 10, WOUND = 25)
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/jacket/better
 	name = "brown leather jacket"
@@ -300,6 +308,7 @@
 	desc = "Best noir clothes for night. Provides some kind of protection."
 	icon_state = "trench1"
 	armor = list(MELEE = 25, BULLET = 25, LASER = 10, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 25, ACID = 10, WOUND = 25)
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/trench/alt
 	name = "brown trenchcoat"
@@ -309,6 +318,7 @@
 	name = "armored trenchcoat"
 	icon_state = "trench2"
 	armor = list("melee"=50,"bullet"=50,"laser"=50,"energy"=10,"bomb"=40,"bio"=0,"rad"=0,"fire"=40,"acid"=10,"wound"=25)
+	can_have_armor = FALSE // APOC EDIT ADD
 	max_integrity = 1000;
 
 /obj/item/clothing/suit/vampire/trench/archive
@@ -316,12 +326,14 @@
 	desc = "Best choise for pleasant life... or not."
 	icon_state = "trench3"
 	armor = list(MELEE = 10, BULLET = 0, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 0, ACID = 10, WOUND = 10)
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/trench/strauss
 	name = "red trenchcoat"
 	desc = "True power lies not in wealth, but in the things it affords you."
 	icon_state = "strauss_coat"
 	armor = list(MELEE = 25, BULLET = 25, LASER = 10, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 25, ACID = 10, WOUND = 25)
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/trench/tzi
 	name = "fleshcoat"
@@ -363,6 +375,7 @@
 	name = "leopard coat"
 	desc = "This'll give PETA something to cry about."
 	icon_state = "leopard_coat"
+	can_have_armor = TRUE // APOC EDIT ADD
 //Police + Army
 /obj/item/clothing/suit/vampire/vest/police
 	name = "police duty vest"
@@ -434,16 +447,19 @@
 	name = "fancy gray jacket"
 	desc = "Gray-colored jacket"
 	icon_state = "fancy_gray_jacket"
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/fancy_red
 	name = "fancy red jacket"
 	desc = "Red-colored jacket"
 	icon_state = "fancy_red_jacket"
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/majima_jacket
 	name = "too much fancy jacket"
 	desc = "Woahhh, check it out! Two macho men havin' a tussle in the nude!? This is a world of shit I didn't know even existed..."
 	icon_state = "majima_jacket"
+	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/bahari
 	name = "dark mother's suit"

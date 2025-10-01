@@ -1,10 +1,11 @@
 // Vocal Sound Preference Verbs
 /client/verb/change_vocal_sound()
-	set name = "Change Vocal Sound"
+	set name = "Select Vocal Sound"
 	set category = "Preferences"
 	set desc = "Change what sound plays when you speak."
 
-	var/list/sound_options = list("Talk", "Pencil", "None")
+	var/list/sound_options = list("Talk", "Pencil", "Speak 1", "Speak 2", "Speak 3", "Speak 4",
+		"Blub", "Buwoo", "Cow", "Lizard", "Pug", "Pugg", "Roach", "Skelly", "None")
 	var/new_sound = tgui_input_list(usr, "Choose your vocal sound:", "Vocal Sound", sound_options, prefs.vocal_sound)
 
 	if(new_sound && new_sound != prefs.vocal_sound)

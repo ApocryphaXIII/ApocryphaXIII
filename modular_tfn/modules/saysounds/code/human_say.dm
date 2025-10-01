@@ -37,6 +37,30 @@
 			sound_file = "modular_tfn/modules/saysounds/sounds/talk[speech_mode].ogg"
 		if("Pencil")
 			sound_file = "modular_tfn/modules/saysounds/sounds/pencil[speech_mode].ogg"
+		if("Blub")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/blub[speech_mode].ogg"
+		if("Buwoo")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/buwoo[speech_mode].ogg"
+		if("Cow")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/cow[speech_mode].ogg"
+		if("Lizard")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/lizard[speech_mode].ogg"
+		if("Pug")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/pug[speech_mode].ogg"
+		if("Pugg")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/pugg[speech_mode].ogg"
+		if("Roach")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/roach[speech_mode].ogg"
+		if("Skelly")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/skelly[speech_mode].ogg"
+		if("Speak 1")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_1[speech_mode].ogg"
+		if("Speak 2")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_2[speech_mode].ogg"
+		if("Speak 3")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_3[speech_mode].ogg"
+		if("Speak 4")
+			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_4[speech_mode].ogg"
 		if("None")
 			return
 		else

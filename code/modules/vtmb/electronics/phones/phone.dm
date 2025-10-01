@@ -521,8 +521,8 @@
 						playsound(src, 'code/modules/wod13/sounds/lasombra_whisper.ogg', 5, FALSE, ignore_walls = FALSE)
 					else
 						playsound(online, 'code/modules/wod13/sounds/phonetalk.ogg', 50, FALSE)
-					new /obj/effect/temp_visual/phone(src.loc)
-				var/obj/phonevoice/VOIC = new(online)
+					//new /obj/effect/temp_visual/phone(src.loc)
+				var/obj/phonevoice/VOIC = new(get_turf(src))
 				VOIC.name = voice_saying
 				VOIC.speech_span = spchspn
 				VOIC.say("[message]")

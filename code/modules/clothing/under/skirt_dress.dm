@@ -46,8 +46,8 @@
 	greyscale_colors = "#e11f1f"
 
 /obj/item/clothing/under/dress/skirt
-	name = "black skirt"
-	desc = "A black skirt, very fancy!"
+	name = "cardigan skirt" // APOC EDIT START
+	desc = "A red skirt, very fancy!"// APOC EDIT END
 	icon_state = "cardiganskirt"
 	greyscale_config = /datum/greyscale_config/cardiganskirt
 	greyscale_config_worn = /datum/greyscale_config/cardiganskirt/worn

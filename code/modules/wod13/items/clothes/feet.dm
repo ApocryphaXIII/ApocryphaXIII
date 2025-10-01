@@ -12,7 +12,7 @@
 	icon_state = "shoes"
 	gender = PLURAL
 	can_be_tied = FALSE
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	body_worn = TRUE
 	cost = 5
 

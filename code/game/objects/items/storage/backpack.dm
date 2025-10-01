@@ -20,7 +20,7 @@
 	slot_flags = ITEM_SLOT_BACK	//ERROOOOO
 	resistance_flags = NONE
 	max_integrity = 300
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	component_type = /datum/component/storage/concrete/vtm/backpack
 	body_worn = TRUE
@@ -243,9 +243,11 @@
 	var/mob/living/carbon/human/H = user
 	if(src == H.back && H.w_uniform)
 		icon_hidden = !icon_hidden
-		worn_icon_state = icon_hidden ? "blank" : initial(worn_icon_state)
-		to_chat(H, "<span class='notice'>You [icon_hidden ? "conceal" : "reveal"] your [src].</span>")
+		worn_icon_state = icon_hidden ? "nothing" : initial(worn_icon_state)
+		to_chat(H, "<span class='notice'>You [icon_hidden ? "conceal" : "reveal"] [src].</span>")
 		H.update_inv_back()
+	else if(!H.w_uniform)
+		to_chat(H, span_warning("Conceal [src] under what? Your skin?"))
 
 /obj/item/storage/backpack/satchel/leather
 	name = "leather satchel"
@@ -359,7 +361,7 @@
 	desc = "A large duffel bag for holding extra things."
 	icon_state = "duffel"
 	inhand_icon_state = "duffel"
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	slowdown = 1
 	component_type = /datum/component/storage/concrete/vtm/duffel
 
@@ -450,34 +452,34 @@
 	desc = "A large duffel bag for holding extra medical supplies."
 	icon_state = "duffel-med"
 	inhand_icon_state = "duffel-med"
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 
 /obj/item/storage/backpack/duffelbag/med/surgery
 	name = "surgical duffel bag"
 	desc = "A large duffel bag for holding extra medical supplies - this one seems to be designed for holding surgical tools."
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 /obj/item/storage/backpack/duffelbag/explorer
 	name = "explorator's duffel bag"
 	desc = "A large duffel bag for holding extra exotic treasures."
 	icon_state = "duffel-explorer"
 	inhand_icon_state = "duffel-explorer"
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 /obj/item/storage/backpack/duffelbag/hydroponics
 	name = "hydroponic's duffel bag"
 	desc = "A large duffel bag for holding extra gardening tools."
 	icon_state = "duffel-hydroponics"
 	inhand_icon_state = "duffel-hydroponics"
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 /obj/item/storage/backpack/duffelbag/chemistry
 	name = "chemistry duffel bag"
 	desc = "A large duffel bag for holding extra chemical substances."
 	icon_state = "duffel-chemistry"
 	inhand_icon_state = "duffel-chemistry"
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 /obj/item/storage/backpack/duffelbag/genetics
 	name = "geneticist's duffel bag"

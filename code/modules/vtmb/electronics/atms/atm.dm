@@ -37,7 +37,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	onflooricon = 'code/modules/wod13/onfloor.dmi'
+	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 
 	var/registered_name
 	var/datum/bank_account/registered_account
@@ -49,29 +49,29 @@
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 10000
-	max_starting_wealth = 15000
+	max_starting_wealth = 12000
 
 /obj/item/card/credit/seneschal
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 4000
-	max_starting_wealth = 8000
+	max_starting_wealth = 6000
 
 /obj/item/card/credit/elder
 	icon_state = "card3"
 	inhand_icon_state = "card3"
 	min_starting_wealth = 3000
-	max_starting_wealth = 7000
+	max_starting_wealth = 5000
 
 /obj/item/card/credit/giovanniboss
 	icon_state = "card2"
 	inhand_icon_state = "card2"
 	min_starting_wealth = 8000
-	max_starting_wealth = 15000
+	max_starting_wealth = 10000
 
 /obj/item/card/credit/rich
 	min_starting_wealth = 1000
-	max_starting_wealth = 4000
+	max_starting_wealth = 3000
 
 
 /obj/item/card/credit/Initialize(mapload)

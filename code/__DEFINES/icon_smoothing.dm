@@ -73,8 +73,12 @@ DEFINE_BITFIELD(smoothing_flags, list(
 #define SMOOTH_GROUP_BOSS_WALLS S_TURF(29)				///turf/closed/indestructible/riveted/boss
 #define SMOOTH_GROUP_SURVIVAL_TITANIUM_WALLS S_TURF(30)	///turf/closed/wall/mineral/titanium/survival
 
-#define MAX_S_TURF SMOOTH_GROUP_SURVIVAL_TITANIUM_WALLS //Always match this value with the one above it.
+// DARKPACK EDIT START
+#define SMOOTH_GROUP_CITY_WALL S_TURF(31) ///turf/closed/wall/vampwall
+#define SMOOTH_GROUP_CITY_LOW_WALL S_TURF(32) ///turf/closed/wall/vampwall/low
 
+#define MAX_S_TURF 32 //Always match this value with the one above it.
+// DARKPACK EDIT END
 
 #define S_OBJ(num) (MAX_S_TURF + 1 + num)
 /* /obj included */
@@ -115,7 +119,10 @@ DEFINE_BITFIELD(smoothing_flags, list(
 #define SMOOTH_GROUP_BRONZE_TABLES S_OBJ(53)			///obj/structure/table/bronze
 #define SMOOTH_GROUP_ABDUCTOR_TABLES S_OBJ(54)			///obj/structure/table/abductor
 #define SMOOTH_GROUP_GLASS_TABLES S_OBJ(55)				///obj/structure/table/glass
-
+// APOC EDIT ADD
+#define SMOOTH_GROUP_BACO_TABLES S_OBJ(56)				///obj/structure/table/baco
+#define SMOOTH_GROUP_BUB_TABLES S_OBJ(57)				///obj/structure/table/bub
+// APOC EDIT ADD END
 #define SMOOTH_GROUP_ALIEN_NEST S_OBJ(59)				///obj/structure/bed/nest
 #define SMOOTH_GROUP_ALIEN_RESIN S_OBJ(60)				///obj/structure/alien/resin
 #define SMOOTH_GROUP_ALIEN_WALLS S_OBJ(61)				///obj/structure/alien/resin/wall, /obj/structure/alien/resin/membrane

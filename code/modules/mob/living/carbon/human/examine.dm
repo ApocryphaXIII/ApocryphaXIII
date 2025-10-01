@@ -475,8 +475,13 @@
 					msg += span_boldwarning("[p_they(TRUE)] [p_are()] a decayed corpse!<br>")
 				if ("rotten4")
 					msg += span_boldwarning("[p_they(TRUE)] [p_are()] a skeletonised corpse!</b><br>")
-			if (HAS_TRAIT(src, TRAIT_PERMAFANGS))
-				msg += span_warning("[p_they(TRUE)] [p_have()] visible fangs in [p_their()] mouth.</span><br>")
+// APOC EDIT START
+		if(is_face_visible())
+			if(HAS_TRAIT(src, TRAIT_PERMAFANGS) && !(check_obscured_slots() & ITEM_SLOT_MASK))
+				msg += span_warning("[p_they(TRUE)] [p_have()] sharp, elongated canines.</span><br>")
+
+			if(HAS_TRAIT(src, TRAIT_BRIGHTEYES) && !(check_obscured_slots() & ITEM_SLOT_EYES))
+				msg += span_warning("There's something about [p_their()] eyes...<br>") // APOC EDIT END
 
 		if(getorgan(/obj/item/organ/brain))
 			if(ai_controller?.ai_status == AI_STATUS_ON)

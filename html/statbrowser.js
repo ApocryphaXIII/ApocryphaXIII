@@ -462,7 +462,22 @@ function draw_listedturf() {
 				}
 				window.location.href = clickcatcher;
 			}
-		}
+		}(part);
+		if (storedimages[part[1]] == null && part[2]) {
+			var img = document.createElement("img");
+			img.src = part[2];
+			img.id = part[1];
+			storedimages[part[1]] = part[2];
+			img.onerror = iconError;
+			img.onmousedown = clickfunc;
+			table.appendChild(img);
+		} else {
+			var img = document.createElement("img");
+			img.onerror = iconError;
+			img.onmousedown = clickfunc;
+			img.src = storedimages[part[1]];
+			img.id = part[1];
+			table.appendChild(img);
 		var b = document.createElement("div");
 		var clickcatcher = "";
 		b.className = "link";

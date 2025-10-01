@@ -1,7 +1,7 @@
 /datum/gear/suit
 	subtype_path = /datum/gear/suit
 	slot = ITEM_SLOT_OCLOTHING
-	sort_category = "External Wear"
+	sort_category = "Overwear" // APOC EDIT CHANGE
 	cost = 3
 
 // Coats

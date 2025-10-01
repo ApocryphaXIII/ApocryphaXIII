@@ -12,7 +12,7 @@
 
 /obj/machinery/shower
 	name = "shower"
-	desc = "The HS-452. Installed in the 2550s by the Nanotrasen Hygiene Division, now with 2560 lead compliance! Passively replenishes itself with water when not in use."
+	desc = "The HS-452. Installed in the 1990s by Pentex subsidiary VacuWash, now with 2008 lead compliance!" // APOC EDIT CHANGE
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "shower"
 	density = FALSE
@@ -33,16 +33,25 @@
 	var/can_refill = TRUE
 	/// Whether to allow players to toggle the water reclaimer.
 	var/can_toggle_refill = TRUE
+	/// Whether the shower has infinite storage of water. If start_infinite = TRUE, this will be overwritten // APOC EDIT START
+	var/infinite = FALSE
+	/// Whether the shower should be infinite when created
+	var/start_infinite = TRUE // APOC EDIT END
 
-/obj/machinery/shower/Initialize()
+/obj/machinery/shower/Initialize(mapload) // APOC EDIT CHANGE
 	. = ..()
 	create_reagents(reagent_capacity)
 	reagents.add_reagent(reagent_id, reagent_capacity)
 	soundloop = new(list(src), FALSE)
 
+	if(mapload && start_infinite) // Placed by mapping tools and not var-edited to be finite // APOC EDIT ADD START
+		infinite = TRUE // APOC EDIT ADD END
+
 /obj/machinery/shower/examine(mob/user)
 	. = ..()
-	. += "<span class='notice'>[reagents.total_volume]/[reagents.maximum_volume] liquids remaining.</span>"
+	. += span_notice("It's [infinite ? "hooked" : "not hooked"] up to the city's water.") // APOC EDIT START
+	if(!infinite)
+		. += span_notice("[reagents.total_volume]/[reagents.maximum_volume] liquids remaining.") // APOC EDIT END
 
 /obj/machinery/shower/Destroy()
 	QDEL_NULL(soundloop)
@@ -153,7 +162,8 @@
 			if(!ismopable(movable_content)) // Mopables will be cleaned anyways by the turf wash above
 				wash_atom(movable_content)	// Reagent exposure is handled in wash_atom
 
-		reagents.remove_any(SHOWER_SPRAY_VOLUME)
+		if(!infinite) // APOC EDIT ADD START
+			reagents.remove_any(SHOWER_SPRAY_VOLUME) // APOC EDIT ADD END
 		return
 	on = FALSE
 	soundloop.stop()

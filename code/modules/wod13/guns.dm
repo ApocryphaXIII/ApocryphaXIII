@@ -27,7 +27,7 @@
 	desc = "Feelin' lucky, punk?"
 	icon_state = "revolver"
 	inhand_icon_state = "revolver"
-	worn_icon_state = "revolver"
+	worn_icon_state = "gun"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	initial_caliber = CALIBER_44
 	fire_sound = 'code/modules/wod13/sounds/revolver.ogg'
@@ -108,7 +108,6 @@
 	desc = "a cheap Saturday night special revolver. Sometimes called a 'purse gun'. It takes 9mm rounds."
 	icon_state = "revolver_snub"
 	inhand_icon_state = "revolver_snub"
-	worn_icon_state = "revolver_snub"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev9mm
 	w_class = WEIGHT_CLASS_SMALL
 	initial_caliber = CALIBER_9MM
@@ -140,7 +139,6 @@
 	desc = "A powerful .44 handgun."
 	icon_state = "deagle"
 	inhand_icon_state = "deagle"
-	worn_icon_state = "deagle"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m44
 	recoil = 3
@@ -179,7 +177,6 @@
 	desc = "An extremely powerful, and rare, handcannon."
 	icon_state = "deagle50"
 	inhand_icon_state = "deagle"
-	worn_icon_state = "deagle"
 	weapon_weight = WEAPON_HEAVY // No dual-wielding .50 cals.
 	mag_type = /obj/item/ammo_box/magazine/m50
 	fire_sound_volume = 125 //MY EARS
@@ -202,7 +199,7 @@
 	desc = "A reliable .45 ACP handgun."
 	icon_state = "m1911"
 	inhand_icon_state = "m1911"
-	worn_icon_state = "m1911"
+	worn_icon_state = "gun"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/vamp45acp
 	burst_size = 1
@@ -240,7 +237,6 @@
 	desc = "Very fast 9mm handgun."
 	icon_state = "glock19"
 	inhand_icon_state = "glock19"
-	worn_icon_state = "glock19"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/glock9mm
 	burst_size = 3
@@ -278,7 +274,6 @@
 	desc = "Very fast 45 ACP handgun."
 	icon_state = "glock19"
 	inhand_icon_state = "glock19"
-	worn_icon_state = "glock19"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/glock45acp
 	burst_size = 3
@@ -303,7 +298,6 @@
 	desc = "A 9mm pistol favored among law enforcement and criminal alike due to it's use in action movies. Often, it is wielded in pairs."
 	icon_state = "beretta"
 	inhand_icon_state = "beretta"
-	worn_icon_state = "beretta"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/semi9mm
 	burst_size = 1
@@ -329,7 +323,6 @@
 	desc = "A handgun that has been heavily decorated and customized. The improvements seem almost supernaturally good, you feel like the engravings have given you a tactical advantage."
 	icon_state = "beretta_toreador"
 	inhand_icon_state = "beretta_toreador"
-	worn_icon_state = "beretta"
 	projectile_damage_multiplier = 2.5
 	fire_sound_volume = 110
 	cost = 666
@@ -369,7 +362,6 @@
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "uzi"
 	inhand_icon_state = "uzi"
-	worn_icon_state = "uzi"
 	mag_type = /obj/item/ammo_box/magazine/vamp9mm
 	burst_size = 5
 	spread = 11
@@ -401,7 +393,6 @@
 	icon = 'code/modules/wod13/48x32weapons.dmi'
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	inhand_icon_state = "mp5"
-	worn_icon_state = "mp5"
 	mag_type = /obj/item/ammo_box/magazine/vamp9mp5
 	burst_size = 4
 	spread = 4
@@ -432,7 +423,6 @@
 	icon = 'code/modules/wod13/48x32weapons.dmi'
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	inhand_icon_state = "mp7"
-	worn_icon_state = "mp7"
 	mag_type = /obj/item/ammo_box/magazine/vamp46mp7
 	burst_size = 4
 	spread = 2
@@ -477,6 +467,7 @@
 	burst_size = 2
 	fire_delay = 2
 	spread = 4
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -498,6 +489,7 @@
 	burst_size = 1
 	fire_delay = 1
 	spread = 2
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -525,7 +517,6 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "ak74"
 	inhand_icon_state = "ak74"
-	worn_icon_state = "ak74"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
 	mag_type = /obj/item/ammo_box/magazine/vamp545
@@ -533,6 +524,7 @@
 	burst_size = 3
 	fire_delay = 3
 	spread = 8
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -560,13 +552,13 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "aug"
 	inhand_icon_state = "aug"
-	worn_icon_state = "aug"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM //Bullpup makes it easy to fire with one hand, but we still don't want these dual-wielded
 	mag_type = /obj/item/ammo_box/magazine/vampaug
 	burst_size = 3
 	fire_delay = 2
 	spread = 3
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -595,7 +587,6 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	icon_state = "thompson"
 	inhand_icon_state = "thompson"
-	worn_icon_state = "thompson"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
 	mag_type = /obj/item/ammo_box/magazine/vampthompson
@@ -603,6 +594,7 @@
 	burst_size = 5
 	fire_delay = 3
 	spread = 15
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -668,6 +660,7 @@
 	zoomable = TRUE
 	zoom_amt = 4 //It's known for having a shitty scope
 	zoom_out_amt =  1
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = TRUE
 	mag_display = TRUE
@@ -715,6 +708,7 @@
 	recoil = 6
 	fire_delay = 6
 	mag_type = /obj/item/ammo_box/magazine/internal/vampshotgun
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	can_be_sawn_off	= FALSE
 	fire_sound = 'code/modules/wod13/sounds/pomp.ogg'
 	recoil = 4
@@ -748,11 +742,11 @@
 	burst_size = 1
 	fire_delay = 2
 	spread = 4
+	slot_flags = ITEM_SLOT_BACK
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
 	fire_sound = 'code/modules/wod13/sounds/pomp.ogg'
-	slot_flags = ITEM_SLOT_BACK
 	projectile_damage_multiplier = 0.9
 	masquerade_violating = TRUE
 	recoil = 6
@@ -765,12 +759,14 @@
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
+	worn_icon_state = "crossbow0"
 	icon_state = "crossbow0"
 	inhand_icon_state = "crossbow0"
 	fire_delay = 16
 	mag_type = /obj/item/ammo_box/magazine/internal/vampcrossbow
 	fire_sound = 'sound/items/syringeproj.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	masquerade_violating = TRUE
@@ -834,7 +830,9 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
+	worn_icon_state = "flamethrower4"
 	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	masquerade_violating = TRUE
 	var/oil = 1000
 

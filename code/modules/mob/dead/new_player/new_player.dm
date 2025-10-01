@@ -56,10 +56,10 @@
 	asset_datum.send(client)
 	var/list/output = list("<center><p><a href='byond://?src=[REF(src)];show_preferences=1'>Setup Character</a></p>")
 
-	if(late_ready)
-		output += "<p>Late Party: <a href='byond://?src=[REF(src)];late_party=1'>Yes</a></p>"
-	else
-		output += "<p>Late Party: <a href='byond://?src=[REF(src)];late_party=1'>No</a></p>"
+//	if(late_ready)
+//		output += "<p>Late Party: <a href='byond://?src=[REF(src)];late_party=1'>Yes</a></p>"
+//	else
+//		output += "<p>Late Party: <a href='byond://?src=[REF(src)];late_party=1'>No</a></p>"
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		switch(ready)
@@ -248,7 +248,7 @@
 			SSbad_guys_party.candidates -= src
 		else
 			late_ready = TRUE
-			SSbad_guys_party.candidates += src
+//			SSbad_guys_party.candidates += src
 
 	if(href_list["tos"])
 		privacy_consent()

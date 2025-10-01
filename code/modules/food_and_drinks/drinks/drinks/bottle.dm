@@ -259,17 +259,17 @@
 		LAZYSET(W.data,"vintage",wine_info)
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/proc/generate_vintage()
-	return "[GLOB.year_integer + 540] Nanotrasen Light Red"
+	return "[GLOB.year_integer] Light Red" // APOC EDIT CHANGE
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled
 	name = "unlabeled wine bottle"
 	desc = "There's no label on this wine bottle."
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled/generate_vintage()
-	var/current_year = GLOB.year_integer + 540
-	var/year = rand(current_year-50,current_year)
+	var/current_year = GLOB.year_integer
+	var/year = rand(current_year-75,current_year) // APOC EDIT CHANGE
 	var/type = pick("Sparkling","Dry White","Sweet White","Rich White","Rose","Light Red","Medium Red","Bold Red","Dessert")
-	var/origin = pick("Nanotrasen","Syndicate","Local")
+	var/origin = pick("Staffelter Hof","Gallo","Winehaven","Beaulieu","Local") // APOC EDIT CHANGE
 	return "[year] [origin] [type]"
 
 /obj/item/reagent_containers/food/drinks/bottle/absinthe
@@ -295,7 +295,7 @@
 		if("A&A")
 			fullname = "Ash and Asher"
 		if("Generic")
-			fullname = "Nanotrasen Cheap Imitations"
+			fullname = "Napa Valley Cheap Imitations" // APOC EDIT CHANGE
 	var/removals = list("\[REDACTED\]", "\[EXPLETIVE DELETED\]",
 		"\[EXPUNGED\]", "\[INFORMATION ABOVE YOUR SECURITY CLEARANCE\]",
 		"\[MOVE ALONG CITIZEN\]", "\[NOTHING TO SEE HERE\]")

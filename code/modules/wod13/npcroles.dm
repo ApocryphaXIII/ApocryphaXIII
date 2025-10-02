@@ -239,7 +239,6 @@
 		"I dunno what to say.",
 		"That's all, folks."
 	)
-	var/wrong_year = rand(1990, 2030) // APOC EDIT ADD
 	neutral_phrases = list(
 		"What do you need, mate?",
 		"Do you need something?",
@@ -247,7 +246,7 @@
 		"I'm late, don't interrupt me.",
 		"Check the bar if you want somebody to bother...",
 		"Can't speak right now.",
-		"It's [wrong_year], get over it.", // APOC EDIT CHANGE
+		"It's 2008, get over it.", // APOC EDIT CHANGE
 		"Goodnight, I guess?",
 		"Guh...",
 		"I dunno what to say.",
@@ -378,7 +377,6 @@
 		"Hey.",
 		"Go away."
 	)
-	var/wrong_year = rand(1990, 2030) // APOC EDIT ADD
 	neutral_phrases = list(
 		"What do you need?",
 		"Do you need something?",
@@ -386,7 +384,7 @@
 		"I'm late.",
 		"Can't speak right now.",
 		"Buy yourself an iPhone or something.",
-		"It's [wrong_year], get over it.", // APOC EDIT CHANGE
+		"It's 2008, get over it.", // APOC EDIT CHANGE
 		"Hey.",
 		"Go away."
 	)

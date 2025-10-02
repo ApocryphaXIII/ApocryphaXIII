@@ -12,7 +12,7 @@
 
 /obj/machinery/shower
 	name = "shower"
-	desc = "The HS-452. Installed in the 1990s by Pentex subsidiary VacuWash, now with [CURRENT_STATION_YEAR] lead compliance!" // APOC EDIT CHANGE
+	desc = "The HS-452. Installed in the 1990s by Pentex subsidiary VacuWash, now with 2008 lead compliance!" // APOC EDIT CHANGE
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "shower"
 	density = FALSE

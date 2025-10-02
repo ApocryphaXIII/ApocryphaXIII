@@ -259,7 +259,7 @@
 		LAZYSET(W.data,"vintage",wine_info)
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/proc/generate_vintage()
-	return "[GLOB.year_integer] Light Red" // APOC EDIT CHANGE
+	return "[CURRENT_STATION_YEAR] Light Red" // APOC EDIT CHANGE
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled
 	name = "unlabeled wine bottle"

@@ -5,6 +5,7 @@
 
 /datum/species/human/imbued/on_species_gain(mob/living/carbon/human/C)
 	. = ..()
+	ADD_TRAIT(C, TRAIT_UNBONDABLE, IMBUED_TRAIT)
 	var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_IMBUED]
 	hud.add_hud_to(C)
 	C.update_sight()
@@ -20,6 +21,7 @@
 
 /datum/species/human/imbued/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
 	. = ..()
+	REMOVE_TRAIT(C, TRAIT_UNBONDABLE, IMBUED_TRAIT)
 	var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_IMBUED]
 	hud.remove_hud_from(C)
 	C.update_sight()

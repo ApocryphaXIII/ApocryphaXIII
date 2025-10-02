@@ -467,6 +467,7 @@
 	burst_size = 2
 	fire_delay = 2
 	spread = 4
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -488,6 +489,7 @@
 	burst_size = 1
 	fire_delay = 1
 	spread = 2
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -522,6 +524,7 @@
 	burst_size = 3
 	fire_delay = 3
 	spread = 8
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -555,6 +558,7 @@
 	burst_size = 3
 	fire_delay = 2
 	spread = 3
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -590,6 +594,7 @@
 	burst_size = 5
 	fire_delay = 3
 	spread = 15
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -655,6 +660,7 @@
 	zoomable = TRUE
 	zoom_amt = 4 //It's known for having a shitty scope
 	zoom_out_amt =  1
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = TRUE
 	mag_display = TRUE
@@ -702,6 +708,7 @@
 	recoil = 6
 	fire_delay = 6
 	mag_type = /obj/item/ammo_box/magazine/internal/vampshotgun
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	can_be_sawn_off	= FALSE
 	fire_sound = 'code/modules/wod13/sounds/pomp.ogg'
 	recoil = 4
@@ -735,11 +742,11 @@
 	burst_size = 1
 	fire_delay = 2
 	spread = 4
+	slot_flags = ITEM_SLOT_BACK
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 	mag_display = TRUE
 	fire_sound = 'code/modules/wod13/sounds/pomp.ogg'
-	slot_flags = ITEM_SLOT_BACK
 	projectile_damage_multiplier = 0.9
 	masquerade_violating = TRUE
 	recoil = 6
@@ -752,12 +759,14 @@
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
+	worn_icon_state = "crossbow0"
 	icon_state = "crossbow0"
 	inhand_icon_state = "crossbow0"
 	fire_delay = 16
 	mag_type = /obj/item/ammo_box/magazine/internal/vampcrossbow
 	fire_sound = 'sound/items/syringeproj.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	masquerade_violating = TRUE
@@ -821,7 +830,9 @@
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
+	worn_icon_state = "flamethrower4"
 	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BACK // APOC EDIT ADD
 	masquerade_violating = TRUE
 	var/oil = 1000
 

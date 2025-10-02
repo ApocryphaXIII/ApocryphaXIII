@@ -266,7 +266,7 @@
 	desc = "There's no label on this wine bottle."
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled/generate_vintage()
-	var/current_year = GLOB.year_integer
+	var/current_year = CURRENT_STATION_YEAR
 	var/year = rand(current_year-75,current_year) // APOC EDIT CHANGE
 	var/type = pick("Sparkling","Dry White","Sweet White","Rich White","Rose","Light Red","Medium Red","Bold Red","Dessert")
 	var/origin = pick("Staffelter Hof","Gallo","Winehaven","Beaulieu","Local") // APOC EDIT CHANGE

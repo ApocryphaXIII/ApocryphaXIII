@@ -3781,6 +3781,8 @@
 #include "modular_zapoc\modules\apoc_quirks\code\vampirestomach.dm"
 #include "modular_zapoc\modules\apoc_smites\code\crystal.dm"
 #include "modular_zapoc\modules\apoc_smites\code\hammers.dm"
+#include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_eyewear.dm"
+#include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_general.dm"
 #include "modular_zapoc\modules\apoc_quirks\blind_quirk.dm"
 #include "modular_zapoc\modules\apoc_quirks\bright_eyes.dm"
 #include "modular_zapoc\modules\apoc_quirks\colorblind_quirk.dm"

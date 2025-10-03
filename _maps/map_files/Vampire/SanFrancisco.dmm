@@ -85102,6 +85102,11 @@
 /obj/fusebox,
 /turf/open/floor/plating/rough,
 /area/vtm/interior/millennium_tower/f5)
+"uvo" = (
+/obj/structure/table/wood,
+/obj/structure/retail/costume_store,
+/turf/closed/wall/vampwall/wood/low,
+/area/vtm/sewer/nosferatu_town)
 "uvp" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -115672,7 +115677,7 @@ wJn
 doZ
 eir
 tFO
-pjA
+uvo
 eir
 eir
 fBM

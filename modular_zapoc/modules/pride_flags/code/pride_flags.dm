@@ -49,11 +49,12 @@
 
 // TODO: [Rebase] AltClick gets replaced with click_alt in TG
 /obj/structure/sign/flag/pride/AltClick(mob/user)
-	var/init_icon_state = initial(icon_state)
-	if(icon_state == init_icon_state)
-		icon_state = "[icon_state]_vertical"
-	else
-		icon_state = init_icon_state
+	if(user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
+		var/init_icon_state = initial(icon_state)
+		if(icon_state == init_icon_state)
+			icon_state = "[icon_state]_vertical"
+		else
+			icon_state = init_icon_state
 	. = ..()
 
 /obj/structure/sign/flag/pride/gay

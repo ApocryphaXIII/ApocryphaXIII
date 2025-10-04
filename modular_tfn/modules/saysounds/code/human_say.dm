@@ -1,6 +1,3 @@
-// vocal sound channel define
-#define CHANNEL_VOCAL_SOUNDS 909
-
 /mob/living/carbon/human/proc/send_voice(message, speech_mode)
 	if(!message || !length(message))
 		return
@@ -22,9 +19,15 @@
 	else if(ending == "!")
 		speech_mode = "_exclaim"
 
-	send_voice(message, speech_mode)
+	if(message_mods[WHISPER_MODE])
+		send_voice(message, speech_mode, 50)
+	else
+		send_voice(message, speech_mode, 100)
 
-/datum/species/proc/send_voice(mob/living/L, speech_mode)
+/datum/species/proc/send_voice(mob/living/L, speech_mode, talksound_vol)
+	if(!talksound_vol)
+		talksound_vol = 100
+
 	// Only play sounds for mobs with a ckey (player-controlled)
 	if(!L.ckey)
 		return
@@ -37,22 +40,22 @@
 			sound_file = "modular_tfn/modules/saysounds/sounds/talk[speech_mode].ogg"
 		if("Pencil")
 			sound_file = "modular_tfn/modules/saysounds/sounds/pencil[speech_mode].ogg"
-		if("Blub")
-			sound_file = "modular_tfn/modules/saysounds/sounds/goon/blub[speech_mode].ogg"
+		// if("Blub")
+		// 	sound_file = "modular_tfn/modules/saysounds/sounds/goon/blub[speech_mode].ogg"
 		if("Buwoo")
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/buwoo[speech_mode].ogg"
 		if("Cow")
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/cow[speech_mode].ogg"
-		if("Lizard")
-			sound_file = "modular_tfn/modules/saysounds/sounds/goon/lizard[speech_mode].ogg"
+		// if("Lizard")
+		// 	sound_file = "modular_tfn/modules/saysounds/sounds/goon/lizard[speech_mode].ogg"
 		if("Pug")
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/pug[speech_mode].ogg"
-		if("Pugg")
-			sound_file = "modular_tfn/modules/saysounds/sounds/goon/pugg[speech_mode].ogg"
-		if("Roach")
-			sound_file = "modular_tfn/modules/saysounds/sounds/goon/roach[speech_mode].ogg"
-		if("Skelly")
-			sound_file = "modular_tfn/modules/saysounds/sounds/goon/skelly[speech_mode].ogg"
+		// if("Pugg")
+		// 	sound_file = "modular_tfn/modules/saysounds/sounds/goon/pugg[speech_mode].ogg"
+		// if("Roach")
+		// 	sound_file = "modular_tfn/modules/saysounds/sounds/goon/roach[speech_mode].ogg"
+		// if("Skelly")
+		// 	sound_file = "modular_tfn/modules/saysounds/sounds/goon/skelly[speech_mode].ogg"
 		if("Speak 1")
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_1[speech_mode].ogg"
 		if("Speak 2")
@@ -67,7 +70,7 @@
 			sound_file = 'modular_tfn/modules/saysounds/sounds/talk.ogg' // Default fallback
 
 	var/vocal_frequency = rand(95, 105) / 100 // 0.95 to 1.05 (5% variation)
-	playsound(L, "[sound_file]", 100, TRUE, 0, SOUND_FALLOFF_EXPONENT, vocal_frequency, CHANNEL_VOCAL_SOUNDS, FALSE)
+	playsound(L, "[sound_file]", talksound_vol, TRUE, 0, SOUND_FALLOFF_EXPONENT, vocal_frequency, CHANNEL_VOCAL_SOUNDS, FALSE)
 
 // playsound_local override to check for CHANNEL_VOCAL_SOUNDS
 /mob/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff_exponent = SOUND_FALLOFF_EXPONENT, channel = 0, sound/S, max_distance, falloff_distance = SOUND_DEFAULT_FALLOFF_DISTANCE, distance_multiplier = 1, use_reverb = TRUE)

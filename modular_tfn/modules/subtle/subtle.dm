@@ -55,6 +55,10 @@
 
 	subtle_message = span_subtle("<b>[user]</b>[space]<i>[user.say_emphasis(subtle_message)]</i>")
 
+	if(user.client)
+		var/mob/living/carbon/human/H = user
+		playsound(H, "modular_tfn/modules/saysounds/sounds/emote.ogg", 50, TRUE, 0, 3, 1, CHANNEL_VOCAL_SOUNDS, FALSE)
+
 	var/list/viewers = get_hearers_in_view(SUBTLE_ONE_TILE, user)
 
 	for(var/mob/ghost as anything in GLOB.dead_mob_list)
@@ -159,12 +163,20 @@
 
 	subtler_message = span_subtler("<b>[user]</b>[space]<i>[user.say_emphasis(subtler_message)]</i>")
 
+	if(user.client)
+		var/mob/H = user
+		if(!H.client?.prefs?.disable_vocal_sounds)
+			SEND_SOUND(H, sound('modular_tfn/modules/saysounds/sounds/subtle.ogg', 0, 0, 75))
+
+
 	if(istype(target, /mob))
 		var/mob/target_mob = target
 		user.show_message(subtler_message, alt_msg = subtler_message)
 
 		if((get_dist(user.loc, target_mob.loc) <= subtler_range))
 			target_mob.show_message(subtler_message, alt_msg = subtler_message)
+			if(target_mob.client && !target_mob.client?.prefs?.disable_vocal_sounds)
+				SEND_SOUND(target_mob, sound('modular_tfn/modules/saysounds/sounds/subtle.ogg', 0, 0, 75))
 		else
 			to_chat(user, span_warning("Your emote was unable to be sent to your target: Too far away."))
 	else
@@ -172,7 +184,8 @@
 
 		for(var/mob/receiver in ghostless)
 			receiver.show_message(subtler_message, alt_msg = subtler_message)
-
+			if(receiver.client && !receiver.client?.prefs?.disable_vocal_sounds)
+				SEND_SOUND(receiver, sound('modular_tfn/modules/saysounds/sounds/subtle.ogg', 0, 0, 75))
 	return TRUE
 
 /*

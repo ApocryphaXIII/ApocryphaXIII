@@ -165,6 +165,7 @@
 #include "code\__DEFINES\wounds.dm"
 #include "code\__DEFINES\apoc\imbued.dm"
 #include "code\__DEFINES\apoc\locator_defines.dm"
+#include "code\__DEFINES\apoc\vocal_sounds.dm"
 #include "code\__DEFINES\dcs\declarations.dm"
 #include "code\__DEFINES\dcs\deprecated_signals.dm"
 #include "code\__DEFINES\dcs\helpers.dm"

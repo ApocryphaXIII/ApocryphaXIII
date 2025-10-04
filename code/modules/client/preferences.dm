@@ -3519,6 +3519,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							vocal_sound = "None"
 						if("None")
 							vocal_sound = "Talk"
+						if("Buwoo")
+							vocal_sound = "Buwoo"
+						if("Cow")
+							vocal_sound = "Cow"
+						if("Pug")
+							vocal_sound = "Pug"
+						if("Speak 1")
+							vocal_sound = "Speak 1"
+						if("Speak 2")
+							vocal_sound = "Speak 2"
+						if("Speak 3")
+							vocal_sound = "Speak 3"
+						if("Speak 4")
+							vocal_sound = "Speak 4"
 						else
 							vocal_sound = "Talk" // fallback to default
 

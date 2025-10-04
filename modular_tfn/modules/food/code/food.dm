@@ -157,6 +157,5 @@
 	tastes = list("berry" = 2, "ice cream" = 2)
 	food_reagents = list(/datum/reagent/consumable/berryjuice = 4, /datum/reagent/consumable/salt = 1,  /datum/reagent/consumable/cream = 2, /datum/reagent/consumable/vanilla = 1, /datum/reagent/consumable/sugar = 4)
 
-
-
-
+/obj/item/food/meat/slab
+	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')

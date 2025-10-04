@@ -120,14 +120,21 @@
 /obj/item/reagent_containers/food/condiment/milk/malk
 	desc = "a carton of fish-brand milk, a subsidary of malk incorporated."
 
-#warn placeholder vars
+/obj/item/reagent_containers/food/condiment/flour
+	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')
+
+/obj/item/reagent_containers/food/condiment/sugar
+	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')
+
+/obj/item/reagent_containers/food/condiment/rice
+	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')
+
 /obj/item/reagent_containers/glass/mixing_bowl
 	name = "mixing bowl"
 	desc = "A mixing bowl. It can hold up to 50 units. Perfect for cooking"
 	icon = 'icons/obj/chemical.dmi'
-	icon_state = "beaker"
-	inhand_icon_state = "beaker"
-	worn_icon_state = "beaker"
+	icon = 'modular_darkpack/modules/food/icons/items.dmi'
+	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')
+	icon_state = "mixingbowl"
 	custom_materials = list(/datum/material/glass=500)
-	fill_icon_thresholds = list(0, 10, 25, 50, 75, 80, 90)
 	custom_price = 15

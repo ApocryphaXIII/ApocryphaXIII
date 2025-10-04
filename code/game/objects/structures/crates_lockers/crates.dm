@@ -173,8 +173,6 @@
 	icon_state = "fridge"
 	anchored = TRUE
 
-
-
 /obj/structure/closet/crate/freezer/blood
 	name = "blood freezer"
 	desc = "A freezer containing packs of blood."

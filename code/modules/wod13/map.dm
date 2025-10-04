@@ -17,7 +17,13 @@
 
 /obj/structure/vampmap/attack_hand(mob/user)
 	. = ..()
-	var/static/list/map_icons = list(
+
+	var/confirmation = (alert(user, "View the map on the wiki?", "[src]", "Yes", "No")) // APOC EDIT START
+	// !!!!!!! CHANGE THIS WHEN THE CONFIG IS SET UP CORRECTLY !!!!!!! It should use interface/interface.dm's method! !!!!!!!
+	if(confirmation == "Yes")
+		user << link("https://apocryphaxiii.miraheze.org/wiki/Map") // APOC EDIT END
+
+/*	var/static/list/map_icons = list( // APOC REMOVE START
 		"supply" = "Railway Station",
 		"church" = "Church",
 		"graveyard" = "City Graveyard",
@@ -52,7 +58,7 @@
 		qdel(building_icon)
 	user << browse(dat, "window=map;size=400x600;border=1;can_resize=0;can_minimize=0")
 	onclose(user, "map", src)
-	qdel(DAMAP)
+	qdel(DAMAP)*/ // APOC REMOVE END
 
 /obj/effect/mob_spawn/human/citizen
 	name = "just a civilian"

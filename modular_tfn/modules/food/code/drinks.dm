@@ -121,20 +121,20 @@
 	desc = "a carton of fish-brand milk, a subsidary of malk incorporated."
 
 /obj/item/reagent_containers/food/condiment/flour
-	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')
+	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
 
 /obj/item/reagent_containers/food/condiment/sugar
-	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')
+	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
 
 /obj/item/reagent_containers/food/condiment/rice
-	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')
+	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
 
 /obj/item/reagent_containers/glass/mixing_bowl
 	name = "mixing bowl"
 	desc = "A mixing bowl. It can hold up to 50 units. Perfect for cooking"
 	icon = 'icons/obj/chemical.dmi'
-	icon = 'modular_darkpack/modules/food/icons/items.dmi'
-	ONFLOOR_ICON_HELPER('modular_darkpack/modules/food/icons/food_onfloor.dmi')
+	icon = 'modular_tfn/modules/food/icons/items.dmi'
+	ONFLOOR_ICON_HELPER('modular_tfn/modules/food/icons/food_onfloor.dmi')
 	icon_state = "mixingbowl"
 	custom_materials = list(/datum/material/glass=500)
 	custom_price = 15

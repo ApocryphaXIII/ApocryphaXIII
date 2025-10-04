@@ -43897,13 +43897,6 @@
 /obj/structure/filingcabinet/filingcabinet,
 /turf/open/floor/carpet/vamp,
 /area/vtm/hotel)
-"kGE" = (
-/obj/structure/flora/ausbushes/sparsegrass{
-	pixel_y = 12
-	},
-/obj/structure/table/wood,
-/turf/open/floor/plating/vampgrass,
-/area/vtm/unionsquare)
 "kGF" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -83465,10 +83458,6 @@
 /obj/machinery/light/small,
 /turf/closed/wall/vampwall/rock,
 /area/vtm/interior/cog/caern)
-"tZv" = (
-/obj/structure/table/wood,
-/turf/open/floor/plating/vampgrass,
-/area/vtm/unionsquare)
 "tZC" = (
 /obj/structure/chair/sofa/old/left{
 	dir = 1
@@ -208189,9 +208178,9 @@ qHD
 qHD
 qGw
 gWy
-kGE
-tZv
-tZv
+nQp
+gWy
+gWy
 jhd
 tAC
 lQh

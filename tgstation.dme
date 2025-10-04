@@ -3776,6 +3776,8 @@
 #include "modular_zapoc\master_files\code\modules\vtmb\kindred_species.dm"
 #include "modular_zapoc\modules\apoc_jobs\voidodate_citizen.dm"
 #include "modular_zapoc\modules\apoc_jobs\job_types\_job.dm"
+#include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_suit.dm"
+#include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_facewear.dm"
 #include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_uniform.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\eat_food_quirk.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\vampirestomach.dm"

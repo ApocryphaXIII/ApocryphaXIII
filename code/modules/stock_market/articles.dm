@@ -106,7 +106,7 @@ GLOBAL_LIST_EMPTY(FrozenAccounts)
 	var/ticksp = "[ticksc]"
 	while (length(ticksp) < 5)
 		ticksp = "0[ticksp]"
-	spacetime = "[ticksp][time2text(world.realtime, "MM")][time2text(world.realtime, "DD")][text2num(time2text(world.realtime, "YYYY"))+540]"
+	spacetime = "[ticksp][time2text(world.realtime, "MM")][time2text(world.realtime, "DD")][CURRENT_STATION_YEAR]" // APOC EDIT CHANGE
 
 /datum/article/proc/formatArticle()
 	if (spacetime == "")

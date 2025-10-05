@@ -275,7 +275,7 @@
 
 /obj/item/flashlight/flare
 	name = "flare"
-	desc = "A red Nanotrasen issued flare. There are instructions on the side, it reads 'pull cord, make light'."
+	desc = "A red Pentex issued flare. There are instructions on the side, it reads 'pull cord, make light'." // APOC EDIT CHANGE // NanoTrasen2Pentex
 	w_class = WEIGHT_CLASS_SMALL
 	light_range = 7 // Pretty bright.
 	icon_state = "flare"

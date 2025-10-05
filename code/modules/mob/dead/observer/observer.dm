@@ -66,6 +66,8 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/datum/spawners_menu/spawners_menu
 	var/aghosted = FALSE
 
+	COOLDOWN_DECLARE(move_error_debounce) // APOC EDIT ADD // For antighost candles and similar
+
 /mob/dead/observer/Initialize()
 	set_invisibility(GLOB.observer_default_invisibility)
 

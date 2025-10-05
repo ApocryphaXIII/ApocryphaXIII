@@ -1056,9 +1056,7 @@ LOW_WALL_HELPER(vampwall/wood)
 
 /obj/effect/decal/wallpaper/papers
 	name = "papers"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
+	layer = SIGN_LAYER
 
 /obj/effect/decal/wallpaper/papers/one
 	icon_state = "wall papers 1"

@@ -73,6 +73,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/age = 30						//age of character
 	var/total_age = 30
 	var/phone_postfix = "Unset"
+	var/phone_autopublish = FALSE
+	var/phone_autopublish_name = "Unset"
 	var/underwear = "Nude"				//underwear type
 	var/underwear_color = "000"			//underwear color
 	var/undershirt = "Nude"				//undershirt type
@@ -510,10 +512,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<br><b>Actual Age:</b> <a href='byond://?_src_=prefs;preference=total_age;task=input'>[max(age, total_age)]</a>"
 
 			dat += "<br><b>Phone Number:</b> <a href='byond://?_src_=prefs;preference=phone_postfix;task=input'>[phone_postfix]</a>"
+
+			dat += "<br><b>Phone Number Autopublish:</b> <a href='byond://?_src_=prefs;preference=phone_autopublish;task=input'>[phone_autopublish ? "Yes" : "No"]</a>"
+
+			dat += "<br><b>Phone Number Autopublish Name:</b> <a href='byond://?_src_=prefs;preference=phone_autopublish_name;task=input'>[phone_autopublish_name]</a>"
+
 			if(slotlocked)
 				dat += "<br><a href='byond://?_src_=prefs;preference=change_appearance;task=input'>Unlock Sheet</a>"
 			else
 				dat += "<br><a href='byond://?_src_=prefs;preference=lock_sheet;task=input'>Lock Sheet</a>"
+
 			dat += "</tr></table>"
 
 			dat += "<h2>[make_font_cool("BODY")]</h2>"
@@ -2221,6 +2229,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(!new_number)
 						return
 					phone_postfix = new_number
+
+				if("phone_autopublish")
+					if(slotlocked)
+						return
+
+					phone_autopublish = !phone_autopublish
+
+				if("phone_autopublish_name")
+					if(slotlocked)
+						return
+
+					var/new_autopublish_name = tgui_input_text(user, "Choose the name that will be associated with your published number. Cannot excede [MAX_NAME_LEN*2] characters.", "Character Preference", max_length = (MAX_NAME_LEN*2))
+					phone_autopublish_name = new_autopublish_name
 
 				if("info_choose")
 					var/new_info_known = tgui_input_list(user, "Choose who knows your character:", "Fame", list(INFO_KNOWN_UNKNOWN, INFO_KNOWN_CLAN_ONLY, INFO_KNOWN_FACTION, INFO_KNOWN_PUBLIC))

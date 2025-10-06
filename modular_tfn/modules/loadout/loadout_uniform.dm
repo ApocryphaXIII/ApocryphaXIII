@@ -2,7 +2,7 @@
 /datum/gear/uniform
 	subtype_path = /datum/gear/uniform
 	slot = ITEM_SLOT_ICLOTHING
-	sort_category = "Uniforms and Casual Dress"
+	sort_category = "Outfits" // APOC EDIT CHANGE
 	cost = 3
 
 // Suits (and suitskirts)

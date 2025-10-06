@@ -82,7 +82,7 @@
 
 	var/can_fold = TRUE
 	var/silence = FALSE
-	var/toggle_published_contacts = FALSE
+	var/toggle_published_contacts = TRUE // APOC EDIT CHANGE // Why is this opt in!!!!
 	var/list/published_numbers_contacts = list()
 	var/list/phone_history_list = list()
 
@@ -97,6 +97,8 @@
 	var/list/datum/contact_network/contact_networks = null
 	var/important_contact_of = null
 
+	var/ringing = 0
+
 /obj/item/vamp/phone/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_MOVABLE_HEAR, PROC_REF(handle_hearing))
@@ -108,6 +110,11 @@
 		number = create_unique_phone_number(exchange_num, my_number)
 		GLOB.phone_numbers_list += number
 		GLOB.phones_list += src
+		var/autopublish = owner?.client?.prefs?.phone_autopublish
+		var/autopublish_name = owner?.client?.prefs?.phone_autopublish_name
+		if(autopublish)
+			GLOB.published_numbers += number
+			GLOB.published_number_names += autopublish_name
 		if(!isnull(owner) && owner.Myself)
 			owner.Myself.phone_number = number
 
@@ -145,7 +152,8 @@
 
 /obj/item/vamp/phone/interact(mob/user)
 	. = ..()
-	ui_interact(user)
+	if(ringing) // APOC EDIT ADD
+		ui_interact(user)
 
 /obj/item/vamp/phone/ui_interact(mob/user, datum/tgui/ui)
 	. = ..()
@@ -177,7 +185,7 @@
 	data["my_number"] = choosed_number
 	data["choosed_number"] = choosed_number
 	if(online)
-		data["calling_user"] = "(+1 707) [online.number]"
+		data["calling_user"] = "(+1 [exchange_num]) [online.number]" // APOC EDIT CHANGE // Exchange number
 		for(var/datum/phonecontact/P in contacts)
 			if(P.number == online.number)
 				data["calling_user"] = P.name
@@ -258,7 +266,7 @@
 					to_chat(usr, span_notice("Invalid number.") )
 			.= TRUE
 		if("contacts")
-			var/list/options = list("Add","Remove","Choose","Block", "Unblock", "My Number", "Publish Number", "Published Numbers", "Call History", "Delete Call History")
+			var/list/options = list("Add","Remove","Choose","Block", "Unblock", "My Number", "Publish Number", "Published Numbers", "Unpublish Number", "Call History", "Delete Call History")
 			var/option =  tgui_input_list(usr, "Select an option", "Contacts Option", options)
 			var/result
 			switch(option)
@@ -297,6 +305,21 @@
 											PHN.contacts += NEWC
 					else
 						to_chat(usr, span_notice("You must input a name to publish your number.") )
+
+				if("Unpublish Number")
+					if(src.number in GLOB.published_numbers)
+						var/list/numberlist = GLOB.published_numbers
+						var/number_index = numberlist.Find(src.number)
+						GLOB.published_numbers -= src.number
+						GLOB.published_number_names -= GLOB.published_number_names[number_index]
+						to_chat(usr, span_notice("Your number has been unpublished."))
+						for(var/obj/item/vamp/phone/PHN in GLOB.phones_list)
+							if(PHN.toggle_published_contacts == TRUE)
+								for(var/datum/phonecontact/PC in PHN.contacts)
+									if(PC.number == src.number)
+										PHN.contacts -= PC
+					else
+						to_chat(usr, span_warning("Your number isn't published!"))
 
 				if ("Published Numbers")
 					var/list_length = min(length(GLOB.published_numbers), length(GLOB.published_number_names))
@@ -419,8 +442,8 @@
 					if(!toggle_published_contacts)
 						var/contacts_added_lenght = published_numbers_contacts.len
 						var/list_length = min(length(GLOB.published_numbers), length(GLOB.published_number_names))
-						log_admin(contacts_added_lenght)
-						log_admin(list_length)
+						log_admin("[contacts_added_lenght]") // APOC EDIT ADD // Runtimes without quotation marks
+						log_admin("[list_length]")
 						if(contacts_added_lenght < list_length)
 						// checks the size difference between the GLOB published list and the phone published list
 							var/ADDED_CONTACTS = 0

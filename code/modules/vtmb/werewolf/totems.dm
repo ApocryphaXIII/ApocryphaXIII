@@ -3,8 +3,6 @@
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon = 'icons/mob/32x64.dmi'
 	icon_state = "glassw"
-	plane = GAME_PLANE
-	layer = SPACEVINE_LAYER
 	anchored = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF

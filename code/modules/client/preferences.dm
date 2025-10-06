@@ -1265,6 +1265,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				else
 					dat += "High"
 			dat += "</a><br>"
+			dat += "<b>Disable Vocal Sounds: </b> <a href= 'byond://?_src_=prefs;preference=disable_vocal_sounds'>[disable_vocal_sounds ? "Yes" : "No"]</a><br>" // TFN ADDITION - Vocal Sounds
+			dat += "<b>Preferred Vocal Sound: </b> <a href= 'byond://?_src_=prefs;preference=vocal_sound'>[vocal_sound]</a><br>" // TFN ADDITION - Vocal Sounds
 			dat += "<b>Use old discipline icons:</b> <a href='byond://?_src_=prefs;preference=old_discipline'>[old_discipline ? "Yes" : "No"]</a><br>"
 			dat += "<b>Ambient Occlusion:</b> <a href='byond://?_src_=prefs;preference=ambientocclusion'>[ambientocclusion ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Fit Viewport:</b> <a href='byond://?_src_=prefs;preference=auto_fit_viewport'>[auto_fit_viewport ? "Auto" : "Manual"]</a><br>"
@@ -3528,6 +3530,45 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				if("old_discipline")
 					old_discipline = !old_discipline
+
+				// TFN ADDITION START - Vocal Sounds
+				if("vocal_sound")
+					switch(vocal_sound)
+						if("Talk")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/pencil.ogg', 0, 0, 75))
+							vocal_sound = "Pencil"
+						if("Pencil")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/buwoo.ogg', 0, 0, 75))
+							vocal_sound = "Buwoo"
+						if("Buwoo")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/cow.ogg', 0, 0, 75))
+							vocal_sound = "Cow"
+						if("Cow")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/pug.ogg', 0, 0, 75))
+							vocal_sound = "Pug"
+						if("Pug")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_1.ogg', 0, 0, 75))
+							vocal_sound = "Speak 1"
+						if("Speak 1")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_2.ogg', 0, 0, 75))
+							vocal_sound = "Speak 2"
+						if("Speak 2")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_3.ogg', 0, 0, 75))
+							vocal_sound = "Speak 3"
+						if("Speak 3")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_4.ogg', 0, 0, 75))
+							vocal_sound = "Speak 4"
+						if("Speak 4")
+							vocal_sound = "None"
+						if("None")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/talk.ogg', 0, 0, 75))
+							vocal_sound = "Talk"
+						else
+							vocal_sound = "Talk" // fallback to default
+
+				if("disable_vocal_sounds")
+					disable_vocal_sounds = !disable_vocal_sounds
+				// TFN ADDITION END - Vocal Sounds
 
 				if("widescreenpref")
 					widescreenpref = !widescreenpref

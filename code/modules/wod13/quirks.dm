@@ -1,7 +1,7 @@
 /*
 Experienced Driver
 Bone Key
-Anonymous
+Anonymous // APOC EDIT REMOVE
 Bloody Lover
 Tough Flesh
 Slowpoke
@@ -45,7 +45,7 @@ Dancer
 	gain_text = "<span class='notice'>You feel more experienced about cars.</span>"
 	lose_text = "<span class='warning'>You feel more clueless about cars.</span>"
 
-/datum/quirk/annonymus
+/*/datum/quirk/annonymus // APOC EDIT REMOVE START
 	name = "Anonymous"
 	desc = "You always bring a mask."
 	value = 1
@@ -55,7 +55,7 @@ Dancer
 /datum/quirk/annonymus/on_spawn()
 	if(!iswerewolf(quirk_holder))
 		var/mob/living/carbon/human/H = quirk_holder
-		H.equip_to_slot_or_del(new /obj/item/clothing/mask/vampire/balaclava(H), ITEM_SLOT_MASK)
+		H.equip_to_slot_or_del(new /obj/item/clothing/mask/vampire/balaclava(H), ITEM_SLOT_MASK)*/ // APOC EDIT END
 
 /datum/quirk/bloody_lover
 	name = "Bloody Lover"
@@ -606,6 +606,77 @@ Dancer
 	var/mob/living/carbon/H = quirk_holder
 	H.grant_language(/datum/language/greek)
 
+/datum/quirk/irish // APOC EDIT ADD // This is part of the TFN PR, but doesn't have comments.
+	name = "Irish"
+	desc = "You know the Irish language."
+	value = 1
+
+/datum/quirk/irish/add()
+	var/mob/living/carbon/H = quirk_holder
+	H.grant_language(/datum/language/irish)
+
+/datum/quirk/scottish
+	name = "Scottish"
+	desc = "You know the Scottish language."
+	value = 1
+
+/datum/quirk/scottish/add()
+	var/mob/living/carbon/H = quirk_holder
+	H.grant_language(/datum/language/scottish)
+
+/datum/quirk/welsh
+	name = "Welsh"
+	desc = "You know the Welsh language."
+	value = 1
+
+/datum/quirk/welsh/add()
+	var/mob/living/carbon/H = quirk_holder
+	H.grant_language(/datum/language/welsh)
+
+/datum/quirk/armenian
+	name = "Armenian"
+	desc = "You know the Armenian language."
+	value = 1
+
+/datum/quirk/armenian/add()
+	var/mob/living/carbon/H = quirk_holder
+	H.grant_language(/datum/language/armenian)
+
+/datum/quirk/farsi
+	name = "Farsi"
+	desc = "You know the Persian language."
+	value = 1
+
+/datum/quirk/farsi/add()
+	var/mob/living/carbon/H = quirk_holder
+	H.grant_language(/datum/language/farsi)
+
+/datum/quirk/korean
+	name = "Korean"
+	desc = "You know the Korean language."
+	value = 1
+
+/datum/quirk/korean/add()
+	var/mob/living/carbon/H = quirk_holder
+	H.grant_language(/datum/language/korean)
+
+/datum/quirk/tagalog
+	name = "Tagalog"
+	desc = "You know the Filipino language."
+	value = 1
+
+/datum/quirk/tagalog/add()
+	var/mob/living/carbon/H = quirk_holder
+	H.grant_language(/datum/language/tagalog) // This is where the TFN PR ends
+
+/datum/quirk/portuguese
+	name = "Portuguese"
+	desc = "You know the Portuguese language."
+	value = 1
+
+/datum/quirk/portuguese/add()
+	var/mob/living/carbon/H = quirk_holder
+	H.grant_language(/datum/language/tagalog) // APOC EDIT END
 
 /datum/quirk/consumption
 	name = "Consumption"

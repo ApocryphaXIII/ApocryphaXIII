@@ -55,6 +55,7 @@
 			C.apply_overlay(SAY_LAYER)
 
 	message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
+	playsound(usr, "modular_tfn/modules/saysounds/sounds/emote.ogg", 100, TRUE, 0, 3, 1, CHANNEL_VOCAL_SOUNDS, FALSE)
 
 	usr.emote("me", EMOTE_VISIBLE, message, TRUE)
 

@@ -92,6 +92,8 @@ SUBSYSTEM_DEF(city_time)
 /datum/controller/subsystem/city_time/proc/extend_round(amount)
 	time_till_daytime += amount * SSticker.station_time_rate_multiplier
 	time_till_roundend += amount * SSticker.station_time_rate_multiplier
+	log_admin("the round was extended to [SScity_time.time_till_roundend]/[DisplayTimeText(SScity_time.time_till_roundend)].")
+	message_admins("the round was extended to [SScity_time.time_till_roundend]/[DisplayTimeText(SScity_time.time_till_roundend)].")
 
 /datum/status_effect/day_time_notif
 	id = "day_time_notif"
@@ -100,7 +102,12 @@ SUBSYSTEM_DEF(city_time)
 /atom/movable/screen/alert/status_effect/day_time_notif
 	name = "The sun is out"
 	desc = "God, you must be tired..."
-	icon_state = "duskndawn"
+	icon_state = "asleep"
+
+/atom/movable/screen/alert/status_effect/day_time_notif/examine(mob/user)
+	. = ..()
+	if(iskindred(user) || iscathayan(user))
+		. += span_boldwarning("The sun will sear your flesh and bring final death.")
 
 /datum/status_effect/sunlight_burning
 	id = "sunlight_burning"
@@ -122,4 +129,4 @@ SUBSYSTEM_DEF(city_time)
 /atom/movable/screen/alert/status_effect/sunlight_burning
 	name = "YOU ARE BURNING FROM THE SUN"
 	desc = "Get inside!"
-	icon_state = "duskndawn"
+	icon_state = "fire"

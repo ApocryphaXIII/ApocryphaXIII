@@ -246,7 +246,7 @@
 		"I'm late, don't interrupt me.",
 		"Check the bar if you want somebody to bother...",
 		"Can't speak right now.",
-		"It's 2015, get over it.",
+		"It's 2008, get over it.", // APOC EDIT CHANGE
 		"Goodnight, I guess?",
 		"Guh...",
 		"I dunno what to say.",
@@ -384,7 +384,7 @@
 		"I'm late.",
 		"Can't speak right now.",
 		"Buy yourself an iPhone or something.",
-		"It's 2015, get over it.",
+		"It's 2008, get over it.", // APOC EDIT CHANGE
 		"Hey.",
 		"Go away."
 	)

@@ -13828,6 +13828,11 @@
 	},
 /turf/open/floor/plating/dirt,
 /area/vtm/sewer/nosferatu_warren)
+"dlI" = (
+/obj/structure/dresser,
+/obj/item/sign/flag/pride/choose,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "dlM" = (
 /obj/machinery/light/red{
 	pixel_y = 32
@@ -37679,6 +37684,13 @@
 /obj/fusebox,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/cog/caern)
+"jgJ" = (
+/obj/structure/closet/cabinet,
+/obj/item/bedsheet/dorms,
+/obj/item/bedsheet/dorms,
+/obj/item/toy/plush/shark,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/interior/ghetto)
 "jgK" = (
 /obj/item/clothing/suit/hooded/robes/black,
 /turf/open/indestructible/necropolis/air,
@@ -293854,13 +293866,13 @@ flA
 afe
 xoD
 afe
-pRR
+nAb
 afe
 hmC
 afe
 fyG
 afe
-pRR
+nAb
 afe
 iaw
 tlU
@@ -294634,7 +294646,7 @@ xZx
 iFP
 whF
 enC
-bys
+jgJ
 iFP
 dFD
 pRR
@@ -295407,7 +295419,7 @@ gsj
 enC
 hVs
 wKK
-oNc
+dlI
 afe
 kno
 kno

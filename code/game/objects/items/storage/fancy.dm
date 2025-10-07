@@ -364,7 +364,7 @@
 
 /obj/item/storage/fancy/rollingpapers
 	name = "rolling paper pack"
-	desc = "A pack of Nanotrasen brand rolling papers."
+	desc = "A pack of Pentex brand rolling papers." // APOC EDIT CHANGE // NanoTrasen2Pentex
 	w_class = WEIGHT_CLASS_TINY
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig_paper_pack"

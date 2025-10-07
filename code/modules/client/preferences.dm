@@ -73,6 +73,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/age = 30						//age of character
 	var/total_age = 30
 	var/phone_postfix = "Unset"
+	var/phone_autopublish = FALSE
+	var/phone_autopublish_name = "Unset"
 	var/underwear = "Nude"				//underwear type
 	var/underwear_color = "000"			//underwear color
 	var/undershirt = "Nude"				//undershirt type
@@ -510,10 +512,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<br><b>Actual Age:</b> <a href='byond://?_src_=prefs;preference=total_age;task=input'>[max(age, total_age)]</a>"
 
 			dat += "<br><b>Phone Number:</b> <a href='byond://?_src_=prefs;preference=phone_postfix;task=input'>[phone_postfix]</a>"
+
+			dat += "<br><b>Phone Number Autopublish:</b> <a href='byond://?_src_=prefs;preference=phone_autopublish;task=input'>[phone_autopublish ? "Yes" : "No"]</a>"
+
+			dat += "<br><b>Phone Number Autopublish Name:</b> <a href='byond://?_src_=prefs;preference=phone_autopublish_name;task=input'>[phone_autopublish_name]</a>"
+
 			if(slotlocked)
 				dat += "<br><a href='byond://?_src_=prefs;preference=change_appearance;task=input'>Unlock Sheet</a>"
 			else
 				dat += "<br><a href='byond://?_src_=prefs;preference=lock_sheet;task=input'>Lock Sheet</a>"
+
 			dat += "</tr></table>"
 
 			dat += "<h2>[make_font_cool("BODY")]</h2>"
@@ -1257,6 +1265,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				else
 					dat += "High"
 			dat += "</a><br>"
+			dat += "<b>Disable Vocal Sounds: </b> <a href= 'byond://?_src_=prefs;preference=disable_vocal_sounds'>[disable_vocal_sounds ? "Yes" : "No"]</a><br>" // TFN ADDITION - Vocal Sounds
+			dat += "<b>Preferred Vocal Sound: </b> <a href= 'byond://?_src_=prefs;preference=vocal_sound'>[vocal_sound]</a><br>" // TFN ADDITION - Vocal Sounds
 			dat += "<b>Use old discipline icons:</b> <a href='byond://?_src_=prefs;preference=old_discipline'>[old_discipline ? "Yes" : "No"]</a><br>"
 			dat += "<b>Ambient Occlusion:</b> <a href='byond://?_src_=prefs;preference=ambientocclusion'>[ambientocclusion ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Fit Viewport:</b> <a href='byond://?_src_=prefs;preference=auto_fit_viewport'>[auto_fit_viewport ? "Auto" : "Manual"]</a><br>"
@@ -2221,6 +2231,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(!new_number)
 						return
 					phone_postfix = new_number
+
+				if("phone_autopublish")
+					if(slotlocked)
+						return
+
+					phone_autopublish = !phone_autopublish
+
+				if("phone_autopublish_name")
+					if(slotlocked)
+						return
+
+					var/new_autopublish_name = tgui_input_text(user, "Choose the name that will be associated with your published number. Cannot excede [MAX_NAME_LEN*2] characters.", "Character Preference", max_length = (MAX_NAME_LEN*2))
+					phone_autopublish_name = new_autopublish_name
 
 				if("info_choose")
 					var/new_info_known = tgui_input_list(user, "Choose who knows your character:", "Fame", list(INFO_KNOWN_UNKNOWN, INFO_KNOWN_CLAN_ONLY, INFO_KNOWN_FACTION, INFO_KNOWN_PUBLIC))
@@ -3507,6 +3530,45 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				if("old_discipline")
 					old_discipline = !old_discipline
+
+				// TFN ADDITION START - Vocal Sounds
+				if("vocal_sound")
+					switch(vocal_sound)
+						if("Talk")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/pencil.ogg', 0, 0, 75))
+							vocal_sound = "Pencil"
+						if("Pencil")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/buwoo.ogg', 0, 0, 75))
+							vocal_sound = "Buwoo"
+						if("Buwoo")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/cow.ogg', 0, 0, 75))
+							vocal_sound = "Cow"
+						if("Cow")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/pug.ogg', 0, 0, 75))
+							vocal_sound = "Pug"
+						if("Pug")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_1.ogg', 0, 0, 75))
+							vocal_sound = "Speak 1"
+						if("Speak 1")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_2.ogg', 0, 0, 75))
+							vocal_sound = "Speak 2"
+						if("Speak 2")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_3.ogg', 0, 0, 75))
+							vocal_sound = "Speak 3"
+						if("Speak 3")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_4.ogg', 0, 0, 75))
+							vocal_sound = "Speak 4"
+						if("Speak 4")
+							vocal_sound = "None"
+						if("None")
+							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/talk.ogg', 0, 0, 75))
+							vocal_sound = "Talk"
+						else
+							vocal_sound = "Talk" // fallback to default
+
+				if("disable_vocal_sounds")
+					disable_vocal_sounds = !disable_vocal_sounds
+				// TFN ADDITION END - Vocal Sounds
 
 				if("widescreenpref")
 					widescreenpref = !widescreenpref

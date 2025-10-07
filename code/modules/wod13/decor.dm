@@ -464,8 +464,6 @@
 	desc = "It delivers a lot of things."
 	icon = 'code/modules/wod13/containers.dmi'
 	icon_state = "1"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 	density = FALSE
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB | PASSGLASS | PASSCLOSEDTURF
@@ -491,8 +489,6 @@
 	desc = "It delivers a lot of things."
 	icon = 'code/modules/wod13/containers.dmi'
 	icon_state = "1"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 
 
@@ -534,8 +530,6 @@
 	desc = "Recent stocks visualization."
 	icon = 'code/modules/wod13/stonks.dmi'
 	icon_state = "marketplace"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 	density = TRUE
 	pixel_w = -24
@@ -546,8 +540,6 @@
 	desc = "Fuel your car here. 50 dollars per 1000 units."
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "fuelstation"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
@@ -689,8 +681,6 @@
 	desc = "Come here, play some BALLS. I know you want it so much..."
 	icon = 'code/modules/wod13/32x48.dmi'
 	icon_state = "billiard1"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 	density = TRUE
 
@@ -763,8 +753,6 @@
 	desc = "Some kind of light and warm source..."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "barrel"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 	density = TRUE
 
@@ -777,8 +765,6 @@
 	desc = "Gothic water structure."
 	icon = 'code/modules/wod13/fountain.dmi'
 	icon_state = "fountain"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 	density = TRUE
 	pixel_w = -16
@@ -789,8 +775,6 @@
 	desc = "See the time."
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "clock"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 	pixel_z = 32
 
@@ -801,8 +785,6 @@
 /obj/structure/coclock/grandpa
 	icon = 'code/modules/wod13/grandpa_cock.dmi'
 	icon_state = "cock"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	anchored = TRUE
 	density = TRUE
 	pixel_z = 0
@@ -837,8 +819,7 @@
 	desc = "This shouldn't be used. If you see this in-game, someone has fucked up."
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "flag_usa"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
+	layer = SIGN_LAYER
 	anchored = TRUE
 
 /obj/flag/usa
@@ -916,8 +897,7 @@
 	icon = 'code/modules/wod13/32x48.dmi'
 	icon_state = "graffiti1"
 	pixel_z = 32
-	plane = GAME_PLANE
-	layer = CAR_LAYER
+	layer = SIGN_LAYER
 	anchored = TRUE
 	var/large = FALSE
 

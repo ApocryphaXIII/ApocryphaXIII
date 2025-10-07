@@ -247,6 +247,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(ismob(loc))
 		var/mob/living/M = loc
 		to_chat(M, "<span class='notice'>Your [name] goes out.</span>")
+		playsound(M, 'modular_zapoc/master_files/sound/items/cig_snuff.ogg', rand(10,50), TRUE) // APOC EDIT ADD
 		M.update_inv_wear_mask()
 		M.update_inv_hands()
 
@@ -289,6 +290,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		new type_butt(location)
 		if(ismob(loc))
 			to_chat(M, "<span class='notice'>Your [name] goes out.</span>")
+			playsound(M, 'modular_zapoc/master_files/sound/items/cig_snuff.ogg', rand(10,50), TRUE) // APOC EDIT ADD
 		qdel(src)
 		return
 	open_flame()
@@ -381,7 +383,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 					" thigh, staining [M.p_their()] flesh with the cherry",
 					" leg, leaving a noticeable burn mark",
 					" leg, ash spreads over [M.p_their()] skin"))
-		user.visible_message(span_rose("With a push of [user.p_their()] [name] onto [M], [src] is snuffed using [M.p_their()][bodypart_cigextinguish]. Damn, [user.p_theyre()] a freak."))
+		user.visible_message(span_danger("With a push of [user.p_their()] [name] onto [M] [src] is snuffed using [M.p_their()][bodypart_cigextinguish]. Damn, [user.p_theyre()] a freak."))
 		new type_butt(user.loc)
 		qdel(src)
 	else
@@ -632,6 +634,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(ismob(loc))
 			var/mob/living/M = loc
 			to_chat(M, "<span class='notice'>Your [name] goes out.</span>")
+			playsound(M, 'modular_zapoc/master_files/sound/items/cig_snuff.ogg', rand(10,50), TRUE) // APOC EDIT ADD
 			lit = FALSE
 			icon_state = icon_off
 			inhand_icon_state = icon_off

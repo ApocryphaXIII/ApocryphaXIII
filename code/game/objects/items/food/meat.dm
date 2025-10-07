@@ -224,7 +224,7 @@
 
 /obj/item/food/patty
 	name = "patty"
-	desc = "The nanotrasen patty is the patty for you and me!"
+	desc = "The Pentex patty is the patty for you and me!" // APOC EDIT CHANGE // NanoTrasen2Pentex
 	icon_state = "patty"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)
 	tastes = list("meat" = 1)

@@ -88,8 +88,6 @@ GLOBAL_LIST_INIT(caesar_cipher, list(
 	desc = "Contains elder devil..."
 	icon = 'code/modules/wod13/48x32weapons.dmi'
 	icon_state = "b_sarcophagus"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
 	density = TRUE
 	pixel_w = -8
 	var/password = "Brongus"

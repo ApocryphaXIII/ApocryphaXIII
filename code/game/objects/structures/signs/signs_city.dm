@@ -33,7 +33,6 @@
 	desc = "It says M I L L E N I U M."
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "millenium"
-	plane = GAME_PLANE
 	layer = ABOVE_ALL_MOB_LAYER
 	anchored = TRUE
 
@@ -46,7 +45,6 @@
 	desc = "It says B A R."
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "bar"
-	plane = GAME_PLANE
 	layer = ABOVE_ALL_MOB_LAYER
 	anchored = TRUE
 
@@ -64,7 +62,6 @@
 	desc = "雨天和血的机会."
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "chinese1"
-	plane = GAME_PLANE
 	layer = ABOVE_ALL_MOB_LAYER
 	anchored = TRUE
 
@@ -87,7 +84,6 @@
 	desc = "It says DO RA. Maybe it's some kind of strip club..."
 	icon = 'code/modules/wod13/48x48.dmi'
 	icon_state = "dora"
-	plane = GAME_PLANE
 	layer = ABOVE_ALL_MOB_LAYER
 	anchored = TRUE
 	pixel_w = -8
@@ -102,9 +98,8 @@
 	desc = "An enticing pair of legs... I wonder what's inside?"
 	icon = 'icons/cabaret.dmi'
 	icon_state = "cabar"
-	plane = GAME_PLANE
+	#warn check
 	layer = ABOVE_ALL_MOB_LAYER
-	anchored = TRUE
 
 /obj/structure/sign/city/cabaret_sign/Initialize()
 	. = ..()
@@ -116,9 +111,6 @@
 /obj/structure/sign/city/store
 	icon = 'code/modules/wod13/fastfood.dmi'
 	icon_state = "bacotell"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
-	anchored = TRUE
 	pixel_w = -16
 
 /obj/structure/sign/city/store/bacotell

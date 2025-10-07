@@ -24,7 +24,7 @@
 	var/list/dirswitch_buttons = list()
 
 /datum/buildmode/New(client/c)
-	mode = new /datum/buildmode_mode/basic(src)
+	mode = new /datum/buildmode_mode/advanced(src)
 	holder = c
 	buttons = list()
 	li_cb = CALLBACK(src, PROC_REF(post_login))

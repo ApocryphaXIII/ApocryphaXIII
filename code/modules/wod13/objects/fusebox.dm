@@ -4,8 +4,7 @@
 	desc = "Power the controlled area with pure electricity."
 	icon = 'code/modules/wod13/32x48.dmi'
 	icon_state = "fusebox"
-	plane = GAME_PLANE
-	layer = CAR_LAYER
+	layer = SIGN_LAYER
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	pixel_y = 32

@@ -30,3 +30,8 @@
 /datum/gear/general/candles
 	display_name = "candle pack"
 	path = /obj/item/storage/fancy/candle_box
+  
+  
+/datum/gear/general/ashtray
+	display_name = "ashtray"
+	path = /obj/item/storage/ashtray

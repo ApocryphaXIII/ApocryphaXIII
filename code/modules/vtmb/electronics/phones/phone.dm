@@ -517,9 +517,11 @@
 /obj/item/vamp/phone/proc/setup_particles(weakened = FALSE)
 	if(!particle_generator)
 		particle_generator = new(src, /particles/phone_ringing, PARTICLE_ATTACH_MOB)
+		ringing = TRUE
 	if(weakened)
 		particle_generator.particles.spawning = 0.005
 		particle_generator.particles.count = 1
+		ringing = FALSE
 
 /obj/item/vamp/phone/proc/handle_hearing(datum/source, list/hearing_args)
 	var/message = hearing_args[HEARING_RAW_MESSAGE]

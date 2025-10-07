@@ -194,6 +194,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["parallax"], parallax)
 	READ_FILE(S["ambientocclusion"], ambientocclusion)
 	READ_FILE(S["auto_fit_viewport"], auto_fit_viewport)
+	READ_FILE(S["vocal_sound"], vocal_sound) // TFN ADDITION - Vocal Sounds
 	READ_FILE(S["old_discipline"], old_discipline)
 	READ_FILE(S["widescreenpref"], widescreenpref)
 	READ_FILE(S["pixel_size"], pixel_size)
@@ -250,6 +251,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	parallax		= sanitize_integer(parallax, PARALLAX_INSANE, PARALLAX_DISABLE, null)
 	ambientocclusion	= sanitize_integer(ambientocclusion, FALSE, TRUE, initial(ambientocclusion))
 	auto_fit_viewport	= sanitize_integer(auto_fit_viewport, FALSE, TRUE, initial(auto_fit_viewport))
+	vocal_sound     = sanitize_integer(vocal_sound, FALSE, TRUE, initial(vocal_sound)) // TFN ADDITION - Vocal Sounds
 	old_discipline	= sanitize_integer(old_discipline, FALSE, TRUE, initial(old_discipline))
 	widescreenpref  = sanitize_integer(widescreenpref, FALSE, TRUE, initial(widescreenpref))
 	pixel_size		= sanitize_float(pixel_size, PIXEL_SCALING_AUTO, PIXEL_SCALING_3X, 0.5, initial(pixel_size))
@@ -332,6 +334,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["parallax"], parallax)
 	WRITE_FILE(S["ambientocclusion"], ambientocclusion)
 	WRITE_FILE(S["auto_fit_viewport"], auto_fit_viewport)
+	WRITE_FILE(S["vocal_sound"], vocal_sound) // TFN ADDITION - Vocal Sounds
 	WRITE_FILE(S["old_discipline"], old_discipline)
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["pixel_size"], pixel_size)
@@ -465,6 +468,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["torpor_count"], torpor_count)
 	READ_FILE(S["total_age"], total_age)
 	READ_FILE(S["phone_postfix"], phone_postfix)
+	READ_FILE(S["phone_autopublish"], phone_autopublish)
+	READ_FILE(S["phone_autopublish_name"], phone_autopublish_name)
 	READ_FILE(S["hair_color"], hair_color)
 	READ_FILE(S["facial_hair_color"], facial_hair_color)
 	READ_FILE(S["eye_color"], eye_color)
@@ -634,6 +639,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Extra santiziation
 	phone_postfix = text2num(phone_postfix)
 	phone_postfix = num2text(phone_postfix, SUBSCRIBER_NUMBER_LENGTH, 10)
+
+	phone_autopublish = sanitize_integer(phone_autopublish, FALSE, TRUE, initial(phone_autopublish))
+
+	phone_autopublish_name = sanitize_text(phone_autopublish_name)
 
 	slotlocked			= sanitize_integer(slotlocked, 0, 1, initial(slotlocked))
 	path_score				= sanitize_integer(path_score, 0, 10, initial(path_score))
@@ -832,6 +841,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["torpor_count"]			, torpor_count)
 	WRITE_FILE(S["total_age"]	, total_age)
 	WRITE_FILE(S["phone_postfix"] , phone_postfix)
+	WRITE_FILE(S["phone_autopublish"] , phone_autopublish)
+	WRITE_FILE(S["phone_autopublish_name"] , phone_autopublish_name)
 	WRITE_FILE(S["hair_color"]			, hair_color)
 	WRITE_FILE(S["facial_hair_color"]			, facial_hair_color)
 	WRITE_FILE(S["eye_color"]			, eye_color)

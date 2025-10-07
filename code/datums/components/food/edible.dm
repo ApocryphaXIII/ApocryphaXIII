@@ -385,11 +385,11 @@ Behavior that's still missing from this component that original food items had t
 
 	if(H.dna.species.id == "kindred")
 		if(HAS_TRAIT(H, TRAIT_ORGANOVORE) && (foodtypes & GORE))
-			SEND_SIGNAL(H, COMSIG_ADD_VITAE, 1, FALSE)
+			SEND_SIGNAL(H, COMSIG_ADD_VITAE, 3, FALSE) // APOC EDIT CHANGE // Tripled the amount of vitae added
 			return // Skip the rest, I think this is fine?
 	// APOC ADD START
 		if(HAS_TRAIT(H, TRAIT_CAN_EAT))
-			return // Line 389 has the right idea.
+			return // Line 388 has the right idea.
 	// APOC ADD END
 		if(HAS_TRAIT(H, TRAIT_AGEUSIA))
 			to_chat(H, "<span class='warning'>You don't feel so good...</span>")

@@ -120,7 +120,7 @@
 
 	if(LAZYLEN(contact_networks_pre_init))
 		LAZYINITLIST(contact_networks)
-		for(var/list/contact_network_info  as anything in contact_networks_pre_init)
+		for(var/list/contact_network_info as anything in contact_networks_pre_init)
 			var/list/network_contacts = contact_network_from_define(contact_network_info[NETWORK_ID])
 
 			var/our_role = contact_network_info[OUR_ROLE]
@@ -267,7 +267,7 @@
 			.= TRUE
 		if("contacts")
 			var/list/options = list("Add","Remove","Choose","Block", "Unblock", "My Number", "Publish Number", "Published Numbers", "Unpublish Number", "Call History", "Delete Call History")
-			var/option =  tgui_input_list(usr, "Select an option", "Contacts Option", options)
+			var/option = tgui_input_list(usr, "Select an option", "Contacts Option", options)
 			var/result
 			switch(option)
 				if("Publish Number")
@@ -428,7 +428,7 @@
 		if("settings")
 			//Wrench Icon, more focused on toggles or later more complex options.
 			var/list/options = list("Notifications and Sounds Toggle", "Published Numbers as Contacts Toggle")
-			var/option =  tgui_input_list(usr, "Select a setting", "Settings Selection", options)
+			var/option = tgui_input_list(usr, "Select a setting", "Settings Selection", options)
 			switch(option)
 				if("Notifications and Sounds Toggle")
 					if(!silence)

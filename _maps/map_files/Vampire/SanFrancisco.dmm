@@ -1757,12 +1757,9 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/cabaret)
 "atD" = (
-/obj/structure/closet/crate/bin{
-	density = 0;
-	dense_when_open = 0;
-	pixel_x = 8;
-	pixel_y = 18;
-	dense_when_closed = 0
+/obj/structure/closet/crate/bin/undense{
+	pixel_x = 9;
+	pixel_y = 18
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/anarch)

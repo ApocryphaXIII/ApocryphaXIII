@@ -6367,10 +6367,9 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/bianchiBank)
 "bwP" = (
-/obj/structure/table/wood,
-/obj/structure/table/bubway,
-/turf/open/floor/carpet/vamp,
-/area/vtm/anarch)
+/obj/machinery/light,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/northbeach)
 "bwR" = (
 /obj/structure/chair/sofa/corp{
 	dir = 4
@@ -21629,13 +21628,6 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/mansion)
-"feM" = (
-/obj/effect/turf_decal{
-	dir = 6
-	},
-/obj/structure/railing/metal,
-/turf/open/floor/plating/rough,
-/area/vtm/anarch)
 "feT" = (
 /obj/effect/turf_decal/bordur{
 	dir = 9
@@ -44204,6 +44196,13 @@
 	},
 /turf/open/floor/plating/rough,
 /area/vtm/interior/millennium_tower/f5)
+"kAK" = (
+/obj/effect/turf_decal{
+	dir = 6
+	},
+/obj/structure/railing/metal,
+/turf/open/floor/plating/rough,
+/area/vtm/anarch)
 "kAP" = (
 /obj/structure/vampdoor/reinf{
 	lock_id = "brujah";
@@ -50464,12 +50463,6 @@
 	icon_state = "stone8"
 	},
 /area/vtm/sewer/nosferatu_warren)
-"mba" = (
-/obj/machinery/light{
-	light_color = "#bd736d"
-	},
-/turf/closed/wall/vampwall/bar,
-/area/vtm/anarch)
 "mbf" = (
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/vampgrass,
@@ -67952,10 +67945,10 @@
 	},
 /area/vtm)
 "qah" = (
-/obj/effect/decal/graffiti{
-	icon_state = "graffiti12"
+/obj/machinery/light{
+	light_color = "#bd736d"
 	},
-/turf/open/floor/plating/parquetry/old,
+/turf/closed/wall/vampwall/bar,
 /area/vtm/anarch)
 "qal" = (
 /obj/structure/railing{
@@ -69776,10 +69769,6 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
-"qwd" = (
-/obj/machinery/light,
-/turf/open/floor/plating/vampbeach,
-/area/vtm/northbeach)
 "qwe" = (
 /obj/machinery/light{
 	dir = 8
@@ -184637,7 +184626,7 @@ dnj
 dnj
 mmb
 vJc
-qwd
+bwP
 qIX
 lBM
 dKL
@@ -186445,7 +186434,7 @@ nzB
 bAs
 rqQ
 aOU
-aOU
+lRq
 kGg
 thi
 pMC
@@ -186703,7 +186692,7 @@ fkk
 ngb
 nZz
 aOU
-rqQ
+lJI
 mbo
 pMC
 pMC
@@ -186959,9 +186948,9 @@ fHT
 bAs
 rqQ
 aOU
-lRq
-lJI
-qah
+aOU
+rqQ
+pMC
 eAj
 pMC
 jmc
@@ -187728,7 +187717,7 @@ vYU
 svD
 svD
 svD
-mba
+qah
 wsX
 uGs
 nlW
@@ -187737,7 +187726,7 @@ pMC
 pMC
 jmc
 sUp
-bwP
+sUp
 vjI
 xrN
 nCU
@@ -189013,7 +189002,7 @@ jSp
 vpB
 jSp
 jSp
-mba
+qah
 wsX
 wsF
 tYn
@@ -189272,7 +189261,7 @@ vpB
 jSp
 fkk
 ogD
-feM
+kAK
 jza
 pMC
 pMC

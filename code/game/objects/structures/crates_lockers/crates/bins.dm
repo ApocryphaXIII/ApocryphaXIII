@@ -8,6 +8,11 @@
 	horizontal = FALSE
 	delivery_icon = null
 
+/obj/structure/closet/crate/bin/undense // APOC EDIT ADD START
+	density = FALSE
+	dense_when_open = FALSE
+	dense_when_closed = FALSE // APOC EDIT ADD END
+
 /obj/structure/closet/crate/bin/Initialize()
 	. = ..()
 	update_appearance()

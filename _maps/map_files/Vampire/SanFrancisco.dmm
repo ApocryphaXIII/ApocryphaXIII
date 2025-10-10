@@ -1756,6 +1756,16 @@
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/cabaret)
+"atD" = (
+/obj/structure/closet/crate/bin{
+	density = 0;
+	dense_when_open = 0;
+	pixel_x = 8;
+	pixel_y = 18;
+	dense_when_closed = 0
+	},
+/turf/open/floor/carpet/vamp,
+/area/vtm/anarch)
 "atK" = (
 /obj/structure/table/wood,
 /obj/item/toy/cards/deck/tarot,
@@ -34541,9 +34551,7 @@
 	dir = 8
 	},
 /obj/effect/decal/shadow,
-/obj/machinery/vending/boozeomat/all_access{
-	layer = 2.8
-	},
+/obj/machinery/vending/boozeomat/all_access,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/strip)
 "ikJ" = (
@@ -56950,13 +56958,9 @@
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/haven)
 "nDw" = (
-/obj/structure/closet/crate/bin{
-	pixel_x = 8;
-	pixel_y = 17;
-	density = 0
-	},
-/turf/open/floor/carpet/vamp,
-/area/vtm/anarch)
+/obj/machinery/vending/boozeomat,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/northbeach)
 "nDx" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
@@ -61501,6 +61505,7 @@
 	lock_id = "anarch"
 	},
 /obj/effect/landmark/npcwall,
+/obj/machinery/vending/boozeomat,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch)
 "oCx" = (
@@ -64136,7 +64141,7 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/pacificheights/old)
 "pgA" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/boozeomat/all_access,
 /turf/open/floor/carpet/vamp,
 /area/vtm/anarch)
 "pgL" = (
@@ -184876,7 +184881,7 @@ deg
 deg
 deg
 deg
-deg
+nDw
 deg
 deg
 deg
@@ -187450,7 +187455,7 @@ pMC
 pMC
 jmc
 rOR
-nDw
+atD
 xrN
 xrN
 xrN

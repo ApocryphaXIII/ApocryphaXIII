@@ -12138,6 +12138,7 @@
 "cNO" = (
 /obj/effect/turf_decal,
 /obj/effect/decal/cleanable/blood/old,
+/obj/structure/railing/metal,
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "cNX" = (
@@ -21628,6 +21629,13 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/mansion)
+"feM" = (
+/obj/effect/turf_decal{
+	dir = 6
+	},
+/obj/structure/railing/metal,
+/turf/open/floor/plating/rough,
+/area/vtm/anarch)
 "feT" = (
 /obj/effect/turf_decal/bordur{
 	dir = 9
@@ -22750,6 +22758,7 @@
 /obj/effect/turf_decal{
 	dir = 10
 	},
+/obj/structure/railing/metal,
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "fsx" = (
@@ -50455,6 +50464,12 @@
 	icon_state = "stone8"
 	},
 /area/vtm/sewer/nosferatu_warren)
+"mba" = (
+/obj/machinery/light{
+	light_color = "#bd736d"
+	},
+/turf/closed/wall/vampwall/bar,
+/area/vtm/anarch)
 "mbf" = (
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/vampgrass,
@@ -55408,6 +55423,9 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/food/tomato_smudge,
+/obj/structure/railing/metal{
+	dir = 8
+	},
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "nlX" = (
@@ -67590,6 +67608,7 @@
 /area/space)
 "pWl" = (
 /obj/effect/turf_decal,
+/obj/structure/railing/metal,
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "pWq" = (
@@ -69757,6 +69776,10 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"qwd" = (
+/obj/machinery/light,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/northbeach)
 "qwe" = (
 /obj/machinery/light{
 	dir = 8
@@ -84935,6 +84958,9 @@
 /obj/effect/turf_decal{
 	dir = 6
 	},
+/obj/structure/railing/metal{
+	dir = 4
+	},
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "tYp" = (
@@ -87542,6 +87568,9 @@
 "uGs" = (
 /obj/effect/turf_decal{
 	icon_state = "warninglinecorner";
+	dir = 8
+	},
+/obj/structure/railing/metal/corner{
 	dir = 8
 	},
 /turf/open/floor/plating/rough,
@@ -94830,6 +94859,7 @@
 	icon_state = "warninglinecorner"
 	},
 /obj/effect/decal/cleanable/blood/old,
+/obj/structure/railing/metal/corner,
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
 "wsJ" = (
@@ -96485,9 +96515,7 @@
 /turf/open/floor/plating/church,
 /area/vtm/interior/oldchurch)
 "wLD" = (
-/obj/structure/railing/metal/corner{
-	pixel_x = 1
-	},
+/obj/structure/railing/metal/corner,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/techshop)
 "wLH" = (
@@ -184609,7 +184637,7 @@ dnj
 dnj
 mmb
 vJc
-qIX
+qwd
 qIX
 lBM
 dKL
@@ -187700,7 +187728,7 @@ vYU
 svD
 svD
 svD
-fkk
+mba
 wsX
 uGs
 nlW
@@ -188985,7 +189013,7 @@ jSp
 vpB
 jSp
 jSp
-fkk
+mba
 wsX
 wsF
 tYn
@@ -189244,7 +189272,7 @@ vpB
 jSp
 fkk
 ogD
-tYn
+feM
 jza
 pMC
 pMC

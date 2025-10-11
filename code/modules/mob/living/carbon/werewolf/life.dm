@@ -112,7 +112,7 @@
 	if((H.last_bloodpool_restore + GAROU_BP_REGEN) <= world.time)
 		H.last_bloodpool_restore = world.time
 		H.bloodpool = min(H.maxbloodpool, H.bloodpool+1)
-	if(glabro)
+	if(glabro && !HAS_TRAIT(H, TRAIT_FAIR_GLABRO))
 		if(H.CheckEyewitness(H, H, 3, FALSE))
 			H.adjust_veil(-1,random = -1)
 

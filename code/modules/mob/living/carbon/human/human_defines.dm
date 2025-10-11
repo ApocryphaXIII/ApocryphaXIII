@@ -102,7 +102,7 @@
 	var/roundstart_vampire = FALSE
 	var/last_loot_check = 0
 
-	var/phonevoicetag = 10
+	var/voice_tag_num = 10
 
 	var/hided = FALSE
 	var/additional_hands = FALSE

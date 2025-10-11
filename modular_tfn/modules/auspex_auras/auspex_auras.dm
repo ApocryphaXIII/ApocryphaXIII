@@ -14,7 +14,7 @@
 	//Should really not be here.
 	update_second_sight()
 
-	if(HAS_TRAIT(src, TRAIT_FRENETIC_AURA))
+	if(HAS_TRAIT(src, TRAIT_FRENETIC_AURA) && !HAS_TRAIT(src, TRAIT_WARM_AURA)) // APOC EDIT ADD
 		holder.icon_state = "aura_bright"
 
 	if(client)

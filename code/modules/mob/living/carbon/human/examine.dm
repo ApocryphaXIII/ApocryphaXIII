@@ -481,13 +481,10 @@
 				msg += span_warning("[p_they(TRUE)] [p_have()] sharp, elongated canines.</span><br>")
 
 			if(HAS_TRAIT(src, TRAIT_BRIGHTEYES) && !(check_obscured_slots() & ITEM_SLOT_EYES))
-				msg += span_warning("There's something about [p_their()] eyes...<br>")
+				msg += span_warning("There's something about [p_their()] eyes...<br>") // APOC EDIT END
 
 			if(HAS_TRAIT(src, TRAIT_ANIMAL_MUSK))
-				msg += span_warning("[p_they(TRUE)] smell awful...<br>")
-
-			if(HAS_TRAIT(src, TRAIT_KINFOLK) && isgarou(user) || iswerewolf(user))
-				msg += span_purple("[p_they(TRUE)] smell like kin.<br>") // APOC EDIT END
+				msg += span_warning("[p_they(TRUE)] smell awful...<br>") // APOC EDIT END
 
 		if(getorgan(/obj/item/organ/brain))
 			if(ai_controller?.ai_status == AI_STATUS_ON)
@@ -558,10 +555,12 @@
 						wyrm_taint++
 						wyld_taint--
 						weaver_taint--
+			if(HAS_TRAIT(src, TRAIT_KINFOLK))
+				msg += "<span class='purple'><i>You recognize their scent as Kin.</i></span><br>"
 			if(!seems_alive)
 				msg += "<span class='purple'><i>You recognize their scent as cold and lifeless.</i></span><br>"
 			if(is_kin)
-				msg += "<span class='purple'><i>You recognize their scent as Garou.</i></span><br>"
+				msg += "<span class='purple'><i>You recognize their scent as Kin.</i></span><br>"
 			if(HAS_TRAIT(user, TRAIT_SCENTTRUEFORM))
 				if(splat_sense)
 					msg += "<span class='purple'><i>[named_splat]</i></span><br>"

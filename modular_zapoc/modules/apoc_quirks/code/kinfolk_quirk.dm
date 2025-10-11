@@ -5,4 +5,4 @@
 	mob_trait = TRAIT_KINFOLK
 	gain_text = "<span class='notice'>You smell like wet dog.</span>"
 	lose_text = "<span class='warning'>You don't smell like wet dog anymore.</span>"
-	allowed_species = ("Human")
+	allowed_species = list("Human")

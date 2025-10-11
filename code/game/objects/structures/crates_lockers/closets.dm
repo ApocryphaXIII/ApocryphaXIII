@@ -24,6 +24,7 @@
 	var/allow_objects = FALSE
 	var/allow_dense = FALSE
 	var/dense_when_open = FALSE //if it's dense when open or not
+	var/dense_when_closed = TRUE // APOC EDIT ADD // if it's dense when closed
 	var/max_mob_size = MOB_SIZE_HUMAN //Biggest mob_size accepted by the container
 	var/mob_storage_capacity = 3 // how many human sized mob/living can fit together inside a closet.
 	var/storage_capacity = 30 //This is so that someone can't pack hundreds of items in a locker/crate then open it in a populated area to crash clients.
@@ -219,7 +220,8 @@
 	take_contents()
 	playsound(loc, close_sound, close_sound_volume, TRUE, -3)
 	opened = FALSE
-	density = TRUE
+	if(dense_when_closed) // APOC EDIT ADD
+		density = TRUE // APOC EDIT CHANGE
 	update_appearance()
 	after_close(user)
 	return TRUE

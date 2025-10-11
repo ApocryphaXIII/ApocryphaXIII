@@ -600,7 +600,7 @@ LOW_WALL_HELPER(vampwall/wood)
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/plating/vampgrass/attackby(obj/item/I, mob/living/user, params)
+/*/turf/open/floor/plating/vampgrass/attackby(obj/item/I, mob/living/user, params) // APOC EDIT REMOVE START
 	if(istype(I, /obj/item/melee/vampirearms/shovel))
 		var/obj/structure/bury_pit/P = locate() in src
 		if(P)
@@ -636,7 +636,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			if(do_mob(user, src, 10 SECONDS))
 				if(!locate(/obj/structure/bury_pit) in src)
 					user.visible_message("<span class='warning'>[user] digs a hole in [src].</span>", "<span class='warning'>You dig a hole in [src].</span>")
-					new /obj/structure/bury_pit(src)
+					new /obj/structure/bury_pit(src)*/ // APOC EDIT REMOVE END
 
 
 /turf/open/floor/plating/vampgrass/Initialize()
@@ -680,7 +680,7 @@ LOW_WALL_HELPER(vampwall/wood)
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/plating/vampdirt/attackby(obj/item/I, mob/living/user, params)
+/*/turf/open/floor/plating/vampdirt/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/melee/vampirearms/shovel))
 		var/obj/structure/bury_pit/P = locate() in src
 		if(P)
@@ -716,7 +716,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			if(do_mob(user, src, 10 SECONDS))
 				if(!locate(/obj/structure/bury_pit) in src)
 					user.visible_message("<span class='warning'>[user] digs a hole in [src].</span>", "<span class='warning'>You dig a hole in [src].</span>")
-					new /obj/structure/bury_pit(src)
+					new /obj/structure/bury_pit(src)*/
 
 /turf/open/floor/plating/vampdirt/Initialize()
 	. = ..()
@@ -1120,7 +1120,7 @@ LOW_WALL_HELPER(vampwall/wood)
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/plating/vampbeach/attackby(obj/item/I, mob/living/user, params)
+/*/turf/open/floor/plating/vampbeach/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/melee/vampirearms/shovel))
 		var/obj/structure/bury_pit/P = locate() in src
 		if(P)
@@ -1156,7 +1156,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			if(do_mob(user, src, 10 SECONDS))
 				if(!locate(/obj/structure/bury_pit) in src)
 					user.visible_message("<span class='warning'>[user] digs a hole in [src].</span>", "<span class='warning'>You dig a hole in [src].</span>")
-					new /obj/structure/bury_pit(src)
+					new /obj/structure/bury_pit(src)*/
 
 /turf/open/floor/plating/vampbeach/Initialize()
 	..()

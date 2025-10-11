@@ -623,7 +623,12 @@
 								A.addiction_stage = -15 // you're satisfied for a good while.
 				need_mob_update += R.on_mob_life(C)
 
-	if(can_overdose)
+	if(C && need_mob_update) //some of the metabolized reagents had effects on the mob that requires some updates.
+		C.updatehealth()
+		C.update_stamina()
+	update_total()
+
+/*	if(can_overdose) // APOC EDIT REMOVE START
 		if(addiction_tick == 6)
 			addiction_tick = 1
 			for(var/addiction in addiction_list)
@@ -644,11 +649,7 @@
 						remove_addiction(R)
 					else
 						SEND_SIGNAL(C, COMSIG_CLEAR_MOOD_EVENT, "[R.type]_overdose")
-		addiction_tick++
-	if(C && need_mob_update) //some of the metabolized reagents had effects on the mob that requires some updates.
-		C.updatehealth()
-		C.update_stamina()
-	update_total()
+		addiction_tick++*/ // APOC EDIT REMOVE END
 
 /// Signals that metabolization has stopped, triggering the end of trait-based effects
 /datum/reagents/proc/end_metabolization(mob/living/carbon/C, keep_liverless = TRUE)

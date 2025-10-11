@@ -214,7 +214,7 @@ Dancer
 
 /datum/quirk/rubicon
 	name = "Crossing the Rubicon"
-	desc = "You are afraid of water, so you can't cross it."
+	desc = "You are afraid of water, so you can't cross it easily. Swim dramatically slower." // APOC EDIT CHANGE
 	mob_trait = TRAIT_RUBICON
 	value = -1
 	gain_text = "<span class='warning'>You feel afraid of water.</span>"
@@ -312,7 +312,7 @@ Dancer
 	value = -2
 	gain_text = "<span class='warning'>Vim runs through you.</span>"
 	lose_text = "<span class='notice'>You feel subtly enervated.</span>"
-	allowed_species = list("Ghoul","Human","Imbued")
+	allowed_species = list("Ghoul", "Human", "Werewolf", "Imbued") // APOC EDIT CHANGE
 
 /datum/quirk/potent_blood/on_spawn()
 	var/mob/living/carbon/H = quirk_holder

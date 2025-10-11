@@ -17,6 +17,7 @@
 		REMOVE_TRAIT(H, TRAIT_DEAF, "quirk")
 
 /datum/quirk/deaf/remove()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(HAS_TRAIT(H, TRAIT_DEAF))
-		REMOVE_TRAIT(H, TRAIT_DEAF, "quirk")
+	if(iscarbon(quirk_holder))
+		var/mob/living/carbon/human/H = quirk_holder
+		if(HAS_TRAIT(H, TRAIT_DEAF))
+			REMOVE_TRAIT(H, TRAIT_DEAF, "quirk")

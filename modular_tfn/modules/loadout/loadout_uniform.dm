@@ -243,7 +243,7 @@
 	path = /obj/item/clothing/under/costume/maid
 
 /datum/gear/uniform/redeveninggown
-	display_name = "evening gown, red"
+	display_name = "dress, evening red"
 	path = /obj/item/clothing/under/dress/redeveninggown
 
 /datum/gear/uniform/baron

@@ -165,6 +165,7 @@
 
 #define TRAIT_DANCER			"dancer"
 #define TRAIT_EXP_DRIVER		"experienced_driver"
+#define TRAIT_BAD_DRIVER "bad_driver"
 #define TRAIT_BONE_KEY			"bone_key"
 #define TRAIT_BLOODY_LOVER		"bloody_lover"
 #define TRAIT_TOUGH_FLESH		"tough_flesh"
@@ -186,6 +187,7 @@
 #define TRAIT_DEBTOR			"debtor"
 #define TRAIT_ANIMAL_REPULSION	"animal_repulsion"
 #define TRAIT_WYRMTAINTED		"wyrm_tainted"
+#define TRAIT_FAIR_GLABRO		"fair_glabro"
 #define TRAIT_ILLEGAL_IDENTITY	"illegal_identity"
 #define TRAIT_LAZY				"lazy"
 #define TRAIT_HOMOSEXUAL		"homosexual"
@@ -197,6 +199,8 @@
 #define TRAIT_UNBONDING         "unbonding"
 #define TRAIT_PERMAFANGS        "permafangs"
 #define TRAIT_BRIGHTEYES "bright_eyes" // APOC EDIT ADD
+#define TRAIT_ANIMAL_MUSK "animal_musk" // APOC EDIT ADD
+#define TRAIT_KINFOLK "kinfolk" // APOC EDIT ADD
 #define TRAIT_ORGANOVORE		"organovore"
 #define TRAIT_SALUBRI_EYE_OPEN	"eye_open" //This is for Salubri Stuff in regards to oepning and closing it
 #define TRAIT_SALUBRI_EYE		"salubri_eye" //This is for whhen you want to like actually know if you have the eye or not

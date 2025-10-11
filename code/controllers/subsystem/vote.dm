@@ -139,6 +139,13 @@ SUBSYSTEM_DEF(vote)
 			if("map")
 				SSmapping.changemap(global.config.maplist[.])
 				SSmapping.map_voted = TRUE
+			if("extend")
+				if(. == "15 Minutes")
+					SScity_time.extend_round(15 MINUTES)
+				if(. == "30 Minutes")
+					SScity_time.extend_round(30 MINUTES)
+				if(. == "1 Hour")
+					SScity_time.extend_round(1 HOURS)
 	if(restart)
 		var/active_admins = FALSE
 		for(var/client/C in GLOB.admins)
@@ -201,6 +208,8 @@ SUBSYSTEM_DEF(vote)
 					if(!VM.votable || (VM.map_name in SSpersistence.blocked_maps))
 						continue
 					choices.Add(VM.map_name)
+			if("extend")
+				choices.Add("15 Minutes", "30 Minutes", "1 Hour", "I hate ApocryphaXIII")
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
 				if(!question)
@@ -291,6 +300,10 @@ SUBSYSTEM_DEF(vote)
 			. += "\t(<a href='byond://?src=[REF(src)];vote=toggle_map'>[avmap ? "Allowed" : "Disallowed"]</a>)"
 
 		. += "</li>"
+		if(trialmin)
+			. += "<li><a href='byond://?src=[REF(src)];vote=extend'>Extend Round</a></li>"
+
+		. += "</li>"
 		//custom
 		if(trialmin)
 			. += "<li><a href='byond://?src=[REF(src)];vote=custom'>Custom</a></li>"
@@ -336,6 +349,9 @@ SUBSYSTEM_DEF(vote)
 		if("map")
 			if(CONFIG_GET(flag/allow_vote_map) || usr.client.holder)
 				initiate_vote("map",usr.key)
+		if("extend")
+			if(usr.client.holder && trialmin)
+				initiate_vote("extend", usr.key)
 		if("custom")
 			if(usr.client.holder)
 				initiate_vote("custom",usr.key)

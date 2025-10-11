@@ -9,5 +9,5 @@
 /datum/quirk/animal_musk/fera
 	name = "Animal Musk (Fera)"
 	desc = "You smell like an animal, and everyone knows it."
-	value = 1
+	value = -1
 	allowed_species = list("Werewolf")

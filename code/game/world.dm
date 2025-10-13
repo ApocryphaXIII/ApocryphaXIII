@@ -276,7 +276,7 @@ GLOBAL_VAR(restart_counter)
 		if (server_name)
 			s += "<a href=\"https://discord.gg/invite/cq3gqaCTFG\"><b>[server_name] \[18+ World of Darkness\] &#8212; Apply on Discord!</b></a>"
 
-	s += "<br>Age Vetting Required. Accepting Bubber Vouches. Running modified WoD13.<br>Hosted by <b>MCI.</b>"
+	s += "<br>Chill World of Darkness RP. Age Vetting required.<br>Hosted by <b>MCI.</b>"
 
 	var/players = GLOB.clients.len
 

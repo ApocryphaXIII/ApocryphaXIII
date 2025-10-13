@@ -555,7 +555,7 @@
 						wyrm_taint++
 						wyld_taint--
 						weaver_taint--
-			if(HAS_TRAIT(src, TRAIT_KINFOLK) && HAS_TRAIT(user), TRAIT_SCENTTRUEFORM)
+			if(HAS_TRAIT(src, TRAIT_KINFOLK) && HAS_TRAIT(user, TRAIT_SCENTTRUEFORM))
 				msg += "<span class='purple'><i>You recognize their scent as Kin.</i></span><br>"
 			if(!seems_alive)
 				msg += "<span class='purple'><i>You recognize their scent as cold and lifeless.</i></span><br>"

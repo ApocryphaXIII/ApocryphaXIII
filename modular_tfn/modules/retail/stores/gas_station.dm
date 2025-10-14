@@ -7,6 +7,7 @@
 		new /datum/data/vending_product("newport", /obj/item/storage/fancy/cigarettes/cigpack_xeno, 30),
 		new /datum/data/vending_product("camel", /obj/item/storage/fancy/cigarettes/dromedaryco, 30),
 		new /datum/data/vending_product("ashtray", /obj/item/storage/ashtray, 5),
+		new /datum/data/vending_product("box of baggies", /obj/item/storage/box/baggie, 10),
 		new /datum/data/vending_product("zippo lighter", /obj/item/lighter, 20),
 		new /datum/data/vending_product("lighter", /obj/item/lighter/greyscale, 10),
 		new /datum/data/vending_product("chocolate bar", /obj/item/food/chocolatebar),

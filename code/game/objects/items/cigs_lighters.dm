@@ -465,6 +465,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	chem_volume = 50
 	list_reagents = null
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
+	var/baggie_name = "og kush leaf"
 
 /obj/item/clothing/mask/cigarette/rollie/Initialize()
 	. = ..()
@@ -472,6 +473,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		"bifta",
 		"bifter",
 		"bird",
+		"blanket", // APOC EDIT ADD
 		"blunt",
 		"bloint",
 		"boof",
@@ -485,13 +487,16 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		"doobie",
 		"dutch",
 		"fatty",
+		"good butt", // APOC EDIT ADD
 		"hogger",
 		"hooter",
 		"hootie",
+		"hot stick", // APOC EDIT ADD
 		"\improper J",
 		"jay",
 		"jimmy",
 		"joint",
+		"joy stick", // APOC EDIT ADD
 		"juju",
 		"jeebie weebie",
 		"number",
@@ -504,13 +509,16 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		"scoobie",
 		"shorty",
 		"spiff",
-		"spliff",
 		"toke",
 		"torpedo",
 		"zoot",
 		"zooter"))
 	pixel_x = rand(-5, 5)
 	pixel_y = rand(-5, 5)
+
+/obj/item/clothing/mask/cigarette/rollie/examine(mob/user) // APOC EDIT ADD START
+	. = ..()
+	. += span_notice("[src] is rolled from [baggie_name].") // APOC EDIT ADD END
 
 /obj/item/clothing/mask/cigarette/rollie/nicotine
 	list_reagents = list(/datum/reagent/drug/nicotine = 15)

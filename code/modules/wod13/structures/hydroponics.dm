@@ -1,6 +1,6 @@
 /obj/structure/weedshit
 	name = "hydroponics"
-	desc = "Definitely not for the weed."
+	desc = "Definitely not for growing weed." // APOC EDIT CHANGE
 	icon = 'code/modules/wod13/weed.dmi'
 	icon_state = "soil_dry0"
 	plane = GAME_PLANE
@@ -9,7 +9,8 @@
 	density = TRUE
 	var/wet = FALSE
 	var/growth_stage = 0
-	var/health = 3
+	var/weed_health = 10 // APOC EDIT CHANGE // Ticks until dead
+	var/strain = "og kush"
 
 /obj/structure/weedshit/buyable
 	anchored = FALSE
@@ -19,17 +20,19 @@
 	. += "<span class='notice'>Alt-click to [anchored ? "un" : ""]secure [src] [anchored ? "from" : "to"] the ground.</span>"
 	if(!wet)
 		. += "<span class='warning'>[src] is dry!</span>"
+	if(growth_stage > 0) // APOC EDIT START
+		. += span_notice("[strain] is growing in [src]") // APOC EDIT END
 	if(growth_stage == 5)
 		. += "<span class='warning'>The crop is dead!</span>"
 	else
-		if(health <= 2)
+		if(weed_health <= 5) // APOC EDIT CHANGE
 			. += "<span class='warning'>The crop is looking unhealthy.</span>"
 
 /obj/structure/weedshit/attack_hand(mob/user, params)
 	. = ..()
 	if(growth_stage == 5)
 		growth_stage = 0
-		health = 3
+		weed_health = 10
 		to_chat(user, "<span class='notice'>You rip the rotten weed out of [src].</span>")
 	if(growth_stage == 4)
 		growth_stage = 1
@@ -37,7 +40,9 @@
 		var/mob/living/carbon/human/H = user
 		var/amount
 		switch(SSroll.storyteller_roll(H.get_total_mentality(), 6, TRUE))
-			if(3 to INFINITY)
+			if(4 to INFINITY) // APOC EDIT ADD START
+				amount = 5
+			if(3) // APOC EDIT ADD END
 				amount = 4
 			if(2)
 				amount = 3
@@ -46,7 +51,8 @@
 			else
 				amount = 1
 		for(var/i = 1 to amount)
-			new /obj/item/food/vampire/weed(get_turf(user))
+			var/obj/item/food/vampire/weed/new_weed = new /obj/item/food/vampire/weed(get_turf(user))
+			new_weed.strain_name = strain
 	update_weed_icon()
 
 /obj/structure/weedshit/AltClick(mob/user)
@@ -76,8 +82,9 @@
 			to_chat(user, "<span class='warning'>[W] is empty!</span>")
 	if(istype(W, /obj/item/weedseed))
 		if(growth_stage == 0)
-			health = 3
+			weed_health = 10 // APOC EDIT CHANGE
 			growth_stage = 1
+			strain = W.name
 			qdel(W)
 	update_weed_icon()
 	return

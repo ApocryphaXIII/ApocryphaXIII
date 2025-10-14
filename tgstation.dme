@@ -3820,6 +3820,7 @@
 #include "modular_zapoc\modules\apoc_smites\code\truck_kun.dm"
 #include "modular_zapoc\modules\apoc_vehicles\code\admin_truck.dm"
 #include "modular_zapoc\modules\carpets\code\carpets.dm"
+#include "modular_zapoc\modules\clothing\code\beret_white.dm"
 #include "modular_zapoc\modules\clothing\code\bulletproofcoat.dm"
 #include "modular_zapoc\modules\clothing\code\eyepatches.dm"
 #include "modular_zapoc\modules\clothing\code\outdoorboots.dm"

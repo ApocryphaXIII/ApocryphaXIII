@@ -4,7 +4,7 @@
 	value = 2
 	gain_text = "<span class='notice'>You have the eyes of the wolf.</span>"
 	lose_text = "<span class='warning'>Your eyes aren't \'of the wolf\' anymore.</span>"
-	allowed_species = ("Werewolf")
+	allowed_species = list("Werewolf")
 
 /datum/quirk/wolf_sight/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder

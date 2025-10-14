@@ -14,7 +14,7 @@
 /obj/item/clothing/glasses/apoc/eyepatch/attack_self(mob/user)
 	wornunder = !wornunder
 	alternate_worn_layer = wornunder ? GLASSES_LAYER : UPPER_EARS_LAYER
-	to_chat(user, span_notice("You adjust the [src]."))
+	to_chat(user, span_notice("You adjust [src]."))
 
 
 /obj/item/clothing/glasses/apoc/eyepatch/examine(mob/user)

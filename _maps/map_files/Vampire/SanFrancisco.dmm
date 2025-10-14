@@ -56965,10 +56965,6 @@
 /obj/structure/railing,
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/haven)
-"nDw" = (
-/obj/machinery/vending/boozeomat,
-/turf/open/floor/plating/sidewalk,
-/area/vtm/northbeach)
 "nDx" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
@@ -60740,6 +60736,26 @@
 /obj/item/paper/fluff,
 /obj/item/pen,
 /obj/item/paper_bin,
+/obj/item/masquerade_contract{
+	pixel_x = -13;
+	pixel_y = 5
+	},
+/obj/item/masquerade_contract{
+	pixel_x = -13;
+	pixel_y = 5
+	},
+/obj/item/masquerade_contract{
+	pixel_x = -13;
+	pixel_y = 5
+	},
+/obj/item/masquerade_contract{
+	pixel_x = -13;
+	pixel_y = 5
+	},
+/obj/item/masquerade_contract{
+	pixel_x = -13;
+	pixel_y = 5
+	},
 /turf/open/floor/plating/concrete,
 /area/vtm/anarch/basement)
 "otW" = (
@@ -61513,7 +61529,6 @@
 	lock_id = "anarch"
 	},
 /obj/effect/landmark/npcwall,
-/obj/machinery/vending/boozeomat,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch)
 "oCx" = (
@@ -184895,7 +184910,7 @@ deg
 deg
 deg
 deg
-nDw
+deg
 deg
 deg
 deg

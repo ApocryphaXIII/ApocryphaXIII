@@ -5,7 +5,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
-	var/max_save_slots = 20
+	var/max_save_slots = 30 // APOC EDIT CHANGE // Further increases character slots by 10 to 30
 
 	//non-preference stuff
 	var/muted = 0
@@ -457,7 +457,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/unspaced_slots = 0
 					for(var/i=1, i<=max_save_slots, i++)
 						unspaced_slots++
-						if(unspaced_slots > 4)
+						if(unspaced_slots > 6) // APOC EDIT CHANGE
 							dat += "<br>"
 							unspaced_slots = 0
 						S.cd = "/character[i]"

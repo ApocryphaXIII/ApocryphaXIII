@@ -293,6 +293,10 @@
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"ig" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "ik" = (
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
@@ -444,6 +448,11 @@
 	connect_down = 1;
 	connect_up = 0
 	},
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
+"mG" = (
+/obj/item/kirbyplants/random,
+/obj/item/kirbyplants/random,
 /turf/open/floor/plating/vampbeach,
 /area/vtm/pacificheights)
 "mW" = (
@@ -967,6 +976,11 @@
 /obj/effect/decal/wallpaper/red,
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
+"Af" = (
+/obj/structure/table,
+/obj/structure/retail/junkfood_menu,
+/turf/closed/wall/vampwall/brick/low,
+/area/vtm/interior/shop)
 "Ak" = (
 /obj/effect/turf_decal/crosswalk{
 	dir = 1
@@ -1046,6 +1060,10 @@
 /obj/item/gun/ballistic/automatic/vampire/sniper,
 /turf/open/floor/plating/rough,
 /area/vtm/anarch)
+"Cd" = (
+/mob/living/carbon/human/npc/shop,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "Cg" = (
 /obj/structure/table/wood,
 /obj/structure/retail/library,
@@ -1278,6 +1296,11 @@
 /obj/structure/barrels/rand,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
+"GE" = (
+/obj/structure/retail/flower_shop,
+/obj/structure/table/wood,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "GF" = (
 /turf/cordon,
 /area/misc/cordon)
@@ -1554,8 +1577,14 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/sewer)
 "My" = (
-/obj/structure/retail/costume_store,
+/obj/structure/retail/costume_store{
+	pixel_x = 2;
+	pixel_y = -4
+	},
 /obj/structure/table,
+/obj/structure/retail/hot_ishu{
+	pixel_y = 10
+	},
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "MH" = (
@@ -1765,8 +1794,8 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/supply)
 "Ri" = (
-/obj/structure/retail/junkfood_menu,
 /obj/structure/table,
+/obj/structure/retail/deli,
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/interior/shop)
 "Rj" = (
@@ -1906,6 +1935,11 @@
 /obj/item/stack/dollar/hundred,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/supply)
+"UG" = (
+/obj/structure/table/wood,
+/obj/structure/retail/hardware_store,
+/turf/open/floor/plating/vampbeach,
+/area/vtm/pacificheights)
 "UJ" = (
 /obj/structure/closet/crate/dumpster,
 /turf/open/floor/plating/vampbeach,
@@ -2007,6 +2041,11 @@
 /obj/vampire_computer,
 /turf/open/floor/plating/rough,
 /area/vtm/interior/techshop)
+"Wy" = (
+/obj/structure/table,
+/obj/structure/retail/grocery_store,
+/turf/closed/wall/vampwall/brick/low,
+/area/vtm/interior/shop)
 "Wz" = (
 /obj/structure/sink{
 	dir = 4;
@@ -3322,7 +3361,7 @@ NR
 NR
 Fg
 Qv
-YJ
+Af
 Fg
 Va
 GH
@@ -3392,7 +3431,7 @@ Fg
 NR
 NR
 NR
-YJ
+Wy
 xC
 TY
 Fg
@@ -3722,10 +3761,10 @@ VJ
 Nd
 FH
 Nd
-NR
-NR
-NR
-NR
+ig
+UG
+GE
+ig
 NR
 NR
 cj
@@ -3758,10 +3797,10 @@ NR
 NR
 NR
 NR
-NR
-NR
-NR
-NR
+mG
+mG
+Cd
+ig
 NR
 NR
 cj
@@ -3794,10 +3833,10 @@ NR
 NR
 NR
 GL
-NR
-NR
-NR
-NR
+mG
+ig
+ig
+ig
 NR
 NR
 cj

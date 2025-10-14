@@ -36,6 +36,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	lefthand_file = 'code/modules/wod13/lefthand.dmi'
 	righthand_file = 'code/modules/wod13/righthand.dmi'
+	custom_price = 50
 	var/catching = FALSE
 
 /obj/item/fishing_rod/attack_self(mob/user)

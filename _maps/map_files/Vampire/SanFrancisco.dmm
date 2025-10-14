@@ -33446,6 +33446,9 @@
 	dir = 1
 	},
 /obj/structure/table,
+/obj/item/food/burger/plain{
+	name = "stale burger"
+	},
 /turf/open/floor/plating/concrete,
 /area/vtm/anarch/basement)
 "hSQ" = (
@@ -100788,17 +100791,6 @@
 	},
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/haven)
-"xLT" = (
-/obj/structure/table,
-/obj/item/food/burger/plain{
-	name = "stale burger"
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/turf/open/floor/plating/rough,
-/area/vtm/anarch/basement)
 "xMa" = (
 /obj/structure/vamptree,
 /obj/effect/turf_decal/weather/dirt,
@@ -125032,7 +125024,7 @@ klB
 klB
 klB
 klB
-xLT
+klB
 mLp
 pRw
 vzD

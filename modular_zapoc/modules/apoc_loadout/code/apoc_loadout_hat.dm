@@ -5,5 +5,6 @@
 
 
 /datum/gear/hat/cowboy
+	display_name = "cowboy hat"
 	path = /obj/item/clothing/head/vampire/cowboy/armorless
 

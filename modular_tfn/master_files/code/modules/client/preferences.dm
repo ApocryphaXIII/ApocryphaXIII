@@ -10,7 +10,7 @@
 	//Gear tab currently being viewed
 	var/gear_tab = "General"
 	///What kind of vocal sounds does the user prefer?
-	var/vocal_sound = "Talk"
+	var/chosen_vocal_sound = 1
 	var/disable_vocal_sounds = FALSE // Disable all vocal sounds preference
 
 /proc/valid_headshot_link(mob/user, value, silent = FALSE)

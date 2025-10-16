@@ -9,25 +9,25 @@
 	var/new_sound
 	switch(new_sound_text)
 		if("Talk")
-			new_sound = 1
-		if("Pencil")
 			new_sound = 2
-		if("Speak 1")
+		if("Pencil")
 			new_sound = 3
-		if("Speak 2")
+		if("Speak 1")
 			new_sound = 4
-		if("Speak 3")
+		if("Speak 2")
 			new_sound = 5
-		if("Speak 4")
+		if("Speak 3")
 			new_sound = 6
-		if("Buwoo")
+		if("Speak 4")
 			new_sound = 7
-		if("Cow")
+		if("Buwoo")
 			new_sound = 8
-		if("Pug")
+		if("Cow")
 			new_sound = 9
-		if("None")
+		if("Pug")
 			new_sound = 10
+		if("None")
+			new_sound = 1
 
 	if(new_sound && new_sound != prefs.chosen_vocal_sound)
 		prefs.chosen_vocal_sound = new_sound

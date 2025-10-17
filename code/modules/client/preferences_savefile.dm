@@ -194,7 +194,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["parallax"], parallax)
 	READ_FILE(S["ambientocclusion"], ambientocclusion)
 	READ_FILE(S["auto_fit_viewport"], auto_fit_viewport)
-	READ_FILE(S["vocal_sound"], vocal_sound) // TFN ADDITION - Vocal Sounds
 	READ_FILE(S["old_discipline"], old_discipline)
 	READ_FILE(S["widescreenpref"], widescreenpref)
 	READ_FILE(S["pixel_size"], pixel_size)
@@ -251,7 +250,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	parallax		= sanitize_integer(parallax, PARALLAX_INSANE, PARALLAX_DISABLE, null)
 	ambientocclusion	= sanitize_integer(ambientocclusion, FALSE, TRUE, initial(ambientocclusion))
 	auto_fit_viewport	= sanitize_integer(auto_fit_viewport, FALSE, TRUE, initial(auto_fit_viewport))
-	vocal_sound     = sanitize_integer(vocal_sound, FALSE, TRUE, initial(vocal_sound)) // TFN ADDITION - Vocal Sounds
 	old_discipline	= sanitize_integer(old_discipline, FALSE, TRUE, initial(old_discipline))
 	widescreenpref  = sanitize_integer(widescreenpref, FALSE, TRUE, initial(widescreenpref))
 	pixel_size		= sanitize_float(pixel_size, PIXEL_SCALING_AUTO, PIXEL_SCALING_3X, 0.5, initial(pixel_size))
@@ -334,7 +332,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["parallax"], parallax)
 	WRITE_FILE(S["ambientocclusion"], ambientocclusion)
 	WRITE_FILE(S["auto_fit_viewport"], auto_fit_viewport)
-	WRITE_FILE(S["vocal_sound"], vocal_sound) // TFN ADDITION - Vocal Sounds
+	WRITE_FILE(S["chosen_vocal_sound"], chosen_vocal_sound) // APOC EDIT ADD - Vocal Sounds saving
 	WRITE_FILE(S["old_discipline"], old_discipline)
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["pixel_size"], pixel_size)
@@ -467,6 +465,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["age"], age)
 	READ_FILE(S["torpor_count"], torpor_count)
 	READ_FILE(S["total_age"], total_age)
+	READ_FILE(S["chosen_vocal_sound"], chosen_vocal_sound) // APOC EDIT ADD - Vocal Sounds saving
 	READ_FILE(S["phone_postfix"], phone_postfix)
 	READ_FILE(S["phone_autopublish"], phone_autopublish)
 	READ_FILE(S["phone_autopublish_name"], phone_autopublish_name)
@@ -634,6 +633,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	reason_of_death	= sanitize_text(reason_of_death)
 	torpor_count				= sanitize_integer(torpor_count, 0, 6, initial(torpor_count))
 	total_age		= sanitize_integer(total_age, 18, 1120, initial(total_age))
+	chosen_vocal_sound     = sanitize_integer(chosen_vocal_sound, 1, 10, initial(chosen_vocal_sound)) // APOC EDIT ADD - Vocal Sounds saving
 
 	phone_postfix = sanitize_text(phone_postfix)
 	//Extra santiziation
@@ -840,6 +840,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["age"]			, age)
 	WRITE_FILE(S["torpor_count"]			, torpor_count)
 	WRITE_FILE(S["total_age"]	, total_age)
+	WRITE_FILE(S["chosen_vocal_sound"], chosen_vocal_sound) // APOC EDIT ADD - Vocal Sounds saving
 	WRITE_FILE(S["phone_postfix"] , phone_postfix)
 	WRITE_FILE(S["phone_autopublish"] , phone_autopublish)
 	WRITE_FILE(S["phone_autopublish_name"] , phone_autopublish_name)

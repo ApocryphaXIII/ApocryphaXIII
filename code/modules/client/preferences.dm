@@ -511,6 +511,31 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<br><b>Biological Age:</b> <a href='byond://?_src_=prefs;preference=age;task=input'>[age]</a>"
 			dat += "<br><b>Actual Age:</b> <a href='byond://?_src_=prefs;preference=total_age;task=input'>[max(age, total_age)]</a>"
 
+			var/vocal_sound_text = "Talk"
+			switch(chosen_vocal_sound)
+				if(1)
+					vocal_sound_text = "Talk"
+				if(2)
+					vocal_sound_text = "Pencil"
+				if(3)
+					vocal_sound_text = "Buwoo"
+				if(4)
+					vocal_sound_text = "Cow"
+				if(5)
+					vocal_sound_text = "Pug"
+				if(6)
+					vocal_sound_text = "Speak 1"
+				if(7)
+					vocal_sound_text = "Speak 2"
+				if(8)
+					vocal_sound_text = "Speak 3"
+				if(9)
+					vocal_sound_text = "Speak 4"
+				if(10)
+					vocal_sound_text = "None"
+
+			dat += "<br><b>Preferred Vocal Sound: </b> <a href= 'byond://?_src_=prefs;preference=vocal_sound'>[vocal_sound_text]</a><br>" // TFN ADDITION - Vocal Sounds
+
 			dat += "<br><b>Phone Number:</b> <a href='byond://?_src_=prefs;preference=phone_postfix;task=input'>[phone_postfix]</a>"
 
 			dat += "<br><b>Phone Number Autopublish:</b> <a href='byond://?_src_=prefs;preference=phone_autopublish;task=input'>[phone_autopublish ? "Yes" : "No"]</a>"
@@ -1266,7 +1291,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "High"
 			dat += "</a><br>"
 			dat += "<b>Disable Vocal Sounds: </b> <a href= 'byond://?_src_=prefs;preference=disable_vocal_sounds'>[disable_vocal_sounds ? "Yes" : "No"]</a><br>" // TFN ADDITION - Vocal Sounds
-			dat += "<b>Preferred Vocal Sound: </b> <a href= 'byond://?_src_=prefs;preference=vocal_sound'>[vocal_sound]</a><br>" // TFN ADDITION - Vocal Sounds
 			dat += "<b>Use old discipline icons:</b> <a href='byond://?_src_=prefs;preference=old_discipline'>[old_discipline ? "Yes" : "No"]</a><br>"
 			dat += "<b>Ambient Occlusion:</b> <a href='byond://?_src_=prefs;preference=ambientocclusion'>[ambientocclusion ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Fit Viewport:</b> <a href='byond://?_src_=prefs;preference=auto_fit_viewport'>[auto_fit_viewport ? "Auto" : "Manual"]</a><br>"
@@ -3533,38 +3557,40 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				// TFN ADDITION START - Vocal Sounds
 				if("vocal_sound")
-					switch(vocal_sound)
-						if("Talk")
+					if(slotlocked)
+						return
+					switch(chosen_vocal_sound)
+						if(1)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/pencil.ogg', 0, 0, 75))
-							vocal_sound = "Pencil"
-						if("Pencil")
+							chosen_vocal_sound = 2
+						if(2)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/buwoo.ogg', 0, 0, 75))
-							vocal_sound = "Buwoo"
-						if("Buwoo")
+							chosen_vocal_sound = 3
+						if(3)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/cow.ogg', 0, 0, 75))
-							vocal_sound = "Cow"
-						if("Cow")
+							chosen_vocal_sound = 4
+						if(4)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/pug.ogg', 0, 0, 75))
-							vocal_sound = "Pug"
-						if("Pug")
+							chosen_vocal_sound = 5
+						if(5)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_1.ogg', 0, 0, 75))
-							vocal_sound = "Speak 1"
-						if("Speak 1")
+							chosen_vocal_sound = 6
+						if(6)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_2.ogg', 0, 0, 75))
-							vocal_sound = "Speak 2"
-						if("Speak 2")
+							chosen_vocal_sound = 7
+						if(7)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_3.ogg', 0, 0, 75))
-							vocal_sound = "Speak 3"
-						if("Speak 3")
+							chosen_vocal_sound = 8
+						if(8)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/goon/speak_4.ogg', 0, 0, 75))
-							vocal_sound = "Speak 4"
-						if("Speak 4")
-							vocal_sound = "None"
-						if("None")
+							chosen_vocal_sound = 9
+						if(9)
+							chosen_vocal_sound = 10
+						if(10)
 							SEND_SOUND(user, sound('modular_tfn/modules/saysounds/sounds/talk.ogg', 0, 0, 75))
-							vocal_sound = "Talk"
+							chosen_vocal_sound = 1
 						else
-							vocal_sound = "Talk" // fallback to default
+							chosen_vocal_sound = 1 // fallback to default
 
 				if("disable_vocal_sounds")
 					disable_vocal_sounds = !disable_vocal_sounds

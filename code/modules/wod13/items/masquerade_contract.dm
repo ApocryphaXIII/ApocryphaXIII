@@ -16,7 +16,7 @@
 	if(GLOB.masquerade_breakers_list.len)
 		var/compound_message
 		for(var/mob/living/carbon/H in GLOB.masquerade_breakers_list) // 10-19-25 - lowered from human to carbon
-			if(ishuman(H))
+			if(!H.stat == DEAD)
 				compound_message = compose_dir(H, user, get_turf(H), method)
 
 			if(compound_message)

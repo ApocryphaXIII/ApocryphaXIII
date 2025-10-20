@@ -10685,6 +10685,13 @@
 	},
 /turf/open/floor/plating/vampplating/stone,
 /area/space)
+"lct" = (
+/obj/structure/curtain/bounty{
+	icon_state = "bounty-closed";
+	open = 0
+	},
+/turf/closed/wall/vampwall/rich/low/window,
+/area/space)
 "lcS" = (
 /obj/effect/turf_decal/bordur{
 	dir = 6
@@ -192950,7 +192957,7 @@ aWu
 aWu
 rFd
 hLx
-fFa
+lct
 bhv
 asA
 awj
@@ -193102,7 +193109,7 @@ aWu
 aWu
 aMN
 feO
-fFa
+lct
 qdB
 awj
 awj
@@ -193254,7 +193261,7 @@ aWu
 aWu
 aMN
 feO
-fFa
+lct
 woa
 awj
 awj
@@ -193406,7 +193413,7 @@ aWu
 aWu
 ePg
 kMw
-fFa
+lct
 bhv
 gnw
 qnQ

@@ -16,28 +16,34 @@
 	pickup_sound =  'sound/items/handling/drinkglass_pickup.ogg'
 	custom_price = PAYCHECK_PRISONER
 
-/obj/item/reagent_containers/food/drinks/drinkingglass/on_reagent_change(datum/reagents/holder, ...)
+/obj/item/reagent_containers/food/drinks/drinkingglass/on_reagent_change(changetype)
 	. = ..()
-	if(!length(reagents.reagent_list))
+	update_overlays()
+	if(reagents.reagent_list.len)
+		var/datum/reagent/R = reagents.get_master_reagent()
+		if(!renamedByPlayer)
+			name = R.glass_name
+			desc = R.glass_desc
+		if(R.glass_icon != initial(icon) && R.glass_icon != null) // This is extremely bad practice. Don't do this. I am just doing this because we are rebasing soon.
+			cut_overlays()
+			icon = R.glass_icon
+			fill_icon_state = null // Don't show the fill icon
+		else
+			icon = initial(icon)
+		if(R.glass_icon_state)
+			icon_state = R.glass_icon_state
+		else
+			var/mutable_appearance/reagent_overlay = mutable_appearance(icon, "glassoverlay")
+			icon_state = "collins_glass"
+			reagent_overlay.color = mix_color_from_reagents(reagents.reagent_list)
+			add_overlay(reagent_overlay)
+	else
+		icon = initial(icon)
+		icon_state = "collins_glass"
 		renamedByPlayer = FALSE //so new drinks can rename the glass
-		return
 
-	if(renamedByPlayer)
-		return
-
-	var/datum/reagent/largest_reagent = reagents.get_master_reagent()
-	name = largest_reagent.glass_name || initial(name)
-	desc = largest_reagent.glass_desc || initial(desc)
-
-/obj/item/reagent_containers/food/drinks/drinkingglass/update_icon_state()
+/obj/item/reagent_containers/food/drinks/drinkingglass/update_overlays()
 	. = ..()
-	if(!length(reagents.reagent_list))
-		fill_icon_state = initial(fill_icon_state)
-		icon_state = initial(icon_state)
-		desc = initial(desc)
-		name = initial(name)
-		return
-
 	var/datum/reagent/largest_reagent = reagents.get_master_reagent()
 	if(largest_reagent.glass_icon_state)
 		var/list/icon_states = icon_states(icon)
@@ -45,15 +51,6 @@
 			fill_icon_state = null
 			icon_state = largest_reagent.glass_icon_state
 	return NONE
-
-/obj/item/reagent_containers/food/drinks/drinkingglass/update_overlays()
-	. = ..()
-	if(icon_state != initial(icon_state))
-		return
-
-	var/mutable_appearance/reagent_overlay = mutable_appearance(icon, "glassoverlay")
-	reagent_overlay.color = mix_color_from_reagents(reagents.reagent_list)
-	. += reagent_overlay
 
 //Shot glasses!//
 //  This lets us add shots in here instead of lumping them in with drinks because >logic  //

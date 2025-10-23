@@ -28,6 +28,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/glass_name = "glass of ...what?"
 	/// desc applied to glasses with this reagent
 	var/glass_desc = "You can't really tell what this is."
+	/// Override the .dmi icon location since mixed_drinks.dmi and drinks.dmi are split
+	var/glass_icon = null
 	/// Otherwise just sets the icon to a normal glass with the mixture of the reagents in the glass.
 	var/glass_icon_state = null
 	/// used for shot glasses, mostly for alcohol

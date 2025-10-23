@@ -231,7 +231,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#CDE8F0" // rgb: 205, 232, 240
 	boozepwr = 65
 	taste_description = "grain alcohol"
-	glass_icon = 'icons/obj/drinks/drinks.dmi'
 	glass_name = "glass of vodka"
 	glass_desc = "The glass contain vodka"
 	shot_glass_icon_state = "shotglassclear"

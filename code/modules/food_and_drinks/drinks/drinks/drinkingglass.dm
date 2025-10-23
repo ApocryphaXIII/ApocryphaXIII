@@ -16,41 +16,38 @@
 	pickup_sound =  'sound/items/handling/drinkglass_pickup.ogg'
 	custom_price = PAYCHECK_PRISONER
 
-/obj/item/reagent_containers/food/drinks/drinkingglass/on_reagent_change(changetype)
+/obj/item/reagent_containers/food/drinks/drinkingglass/on_reagent_change(datum/reagents/holder, ...)
 	. = ..()
 	update_overlays()
 	if(reagents.reagent_list.len)
 		var/datum/reagent/R = reagents.get_master_reagent()
+		var/is_collins_glass = (type == /obj/item/reagent_containers/food/drinks/drinkingglass)
+		var/matching_glass_type = (R.empty_glass_icon_state == initial(icon_state))
 		if(!renamedByPlayer)
 			name = R.glass_name
 			desc = R.glass_desc
-		if(R.glass_icon != initial(icon) && R.glass_icon != null) // This is extremely bad practice. Don't do this. I am just doing this because we are rebasing soon.
+		// Only allow full icon changes for collins glass
+		if(is_collins_glass && R.glass_icon != initial(icon) && R.glass_icon != null) // This is extremely bad practice. Don't do this. I am just doing this because we are rebasing soon.
 			cut_overlays()
 			icon = R.glass_icon
 			fill_icon_state = null // Don't show the fill icon
 		else
 			icon = initial(icon)
-		if(R.glass_icon_state)
+
+		if(R.glass_icon_state && (matching_glass_type || is_collins_glass))
 			icon_state = R.glass_icon_state
+			if(matching_glass_type)
+				fill_icon_state = null
 		else
 			var/mutable_appearance/reagent_overlay = mutable_appearance(icon, "glassoverlay")
-			icon_state = "collins_glass"
+			icon_state = initial(icon_state)
 			reagent_overlay.color = mix_color_from_reagents(reagents.reagent_list)
 			add_overlay(reagent_overlay)
 	else
 		icon = initial(icon)
-		icon_state = "collins_glass"
+		icon_state = initial(icon_state)
 		renamedByPlayer = FALSE //so new drinks can rename the glass
 
-/obj/item/reagent_containers/food/drinks/drinkingglass/update_overlays()
-	. = ..()
-	var/datum/reagent/largest_reagent = reagents.get_master_reagent()
-	if(largest_reagent.glass_icon_state)
-		var/list/icon_states = icon_states(icon)
-		if((largest_reagent.empty_glass_icon_state in icon_states) && (largest_reagent.empty_glass_icon_state == initial(icon_state))) //temporary check, waiting for new cocktail sprites
-			fill_icon_state = null
-			icon_state = largest_reagent.glass_icon_state
-	return NONE
 
 //Shot glasses!//
 //  This lets us add shots in here instead of lumping them in with drinks because >logic  //

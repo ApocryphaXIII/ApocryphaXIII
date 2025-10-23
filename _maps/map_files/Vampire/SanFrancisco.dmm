@@ -24592,9 +24592,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/structure/bath{
-	density = 0
-	},
+/obj/structure/bath,
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/ghetto)
 "fMh" = (
@@ -28594,17 +28592,6 @@
 "gIt" = (
 /obj/structure/closet,
 /turf/open/floor/plating/rough,
-/area/vtm/interior)
-"gIv" = (
-/obj/structure/bath{
-	pixel_y = 11;
-	density = 0
-	},
-/obj/machinery/shower{
-	pixel_y = 20
-	},
-/obj/structure/curtain,
-/turf/open/floor/plating/toilet/clinic,
 /area/vtm/interior)
 "gIx" = (
 /obj/effect/turf_decal/weather/dirt,
@@ -59367,12 +59354,6 @@
 /obj/structure/bricks,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/sewer)
-"nYS" = (
-/obj/the_matrix{
-	alpha = 0
-	},
-/turf/open/space/basic,
-/area/space)
 "nYV" = (
 /obj/structure/vampdoor/npc{
 	lockpick_difficulty = 6
@@ -65020,9 +65001,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/structure/bath{
-	density = 0
-	},
+/obj/structure/bath,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
 "plm" = (
@@ -94605,7 +94584,6 @@
 	pixel_y = 21
 	},
 /obj/structure/bath{
-	density = 0;
 	pixel_y = 16
 	},
 /turf/open/floor/plating/vampplating/stone,
@@ -130174,7 +130152,7 @@ dhc
 dhc
 dhc
 dhc
-nYS
+dhc
 ure
 wTq
 jkT
@@ -130431,8 +130409,8 @@ dhc
 dhc
 dhc
 dhc
-nYS
-vzk
+dhc
+ure
 wTq
 rwd
 jkT
@@ -130688,9 +130666,9 @@ dhc
 dhc
 dhc
 dhc
-nYS
-vzk
-jkT
+dhc
+ure
+wTq
 jkT
 jkT
 jkT
@@ -130945,9 +130923,9 @@ dhc
 dhc
 dhc
 dhc
-nYS
-vzk
-jkT
+dhc
+ure
+wTq
 jkT
 jkT
 xOR
@@ -131202,8 +131180,8 @@ dhc
 dhc
 dhc
 dhc
-nYS
-vzk
+dhc
+ure
 wTq
 wTq
 wTq
@@ -131459,7 +131437,7 @@ dhc
 dhc
 dhc
 dhc
-nYS
+dhc
 ure
 ure
 ure
@@ -172321,7 +172299,7 @@ uRY
 cUB
 rsL
 mfd
-gIv
+clf
 oZp
 pvX
 mfd

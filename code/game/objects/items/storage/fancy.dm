@@ -137,6 +137,7 @@
 	spawn_type = /obj/item/food/egg
 	storage_max_columns = 6
 	storage_max_rows = 2
+	custom_price = COST_OF_EGGS
 
 /obj/item/storage/fancy/egg_box/ComponentInitialize()
 	. = ..()
@@ -160,6 +161,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	spawn_type = /obj/item/candle
 	fancy_open = TRUE
+	custom_price = 8
 
 /obj/item/storage/fancy/candle_box/ComponentInitialize()
 	. = ..()

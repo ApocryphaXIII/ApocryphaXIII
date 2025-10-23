@@ -535,7 +535,7 @@
 				if ((vampire.clan?.name == CLAN_BAALI) || ( (client?.prefs?.is_enlightened && (vampire.morality_path.score > 7)) || (!client?.prefs?.is_enlightened && (vampire.morality_path.score < 4)) ))
 					wyrm_taint++
 
-			if (isgarou(src) || iswerewolf(src) || HAS_TRAIT(src, TRAIT_KINFOLK)) //werewolves have the taint of whatever Triat member they venerate most // APOC EDIT CHANGE // Kinfolk
+			if (isgarou(src) || iswerewolf(src)) //werewolves have the taint of whatever Triat member they venerate most // APOC EDIT CHANGE // Kinfolk
 				var/mob/living/carbon/wolf = src
 				is_kin++
 				switch(wolf.auspice.tribe.name)
@@ -555,6 +555,8 @@
 						wyrm_taint++
 						wyld_taint--
 						weaver_taint--
+			if(HAS_TRAIT(src, TRAIT_KINFOLK) && HAS_TRAIT(user, TRAIT_SCENTTRUEFORM))
+				is_kin++
 			if(!seems_alive)
 				msg += "<span class='purple'><i>You recognize their scent as cold and lifeless.</i></span><br>"
 			if(is_kin)

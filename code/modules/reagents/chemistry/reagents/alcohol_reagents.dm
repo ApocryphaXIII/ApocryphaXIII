@@ -543,9 +543,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	boozepwr = 40
 	quality = DRINK_VERYGOOD
 	taste_description = "Bittersweet harmony."
-	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "negrino"
-	glass_name = "Negroni"
+	glass_name = "Negrino"
 	glass_desc = "Tomato juice, mixed with Vodka and a li'l bit of lime. Tastes like liquid murder."
 	empty_glass_icon_state = "whiskey_shot"
 
@@ -570,7 +569,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	quality = DRINK_GOOD
 	taste_description = ""
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
-	glass_icon_state = "old_fasioned"
+	glass_icon_state = "old_fashioned"
 	glass_name = "Old fashioned"
 	glass_desc = ""
 	empty_glass_icon_state = "vodka_shot"
@@ -1316,7 +1315,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a delightful softened punch"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "godfather"
-	glass_name = "glass of godfather"
+	glass_name = "Godfather"
 	glass_desc = "A rough cocktail with illegal connections."
 
 /datum/reagent/consumable/ethanol/godmother
@@ -1328,7 +1327,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "sweetness and a zesty twist"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "godmother"
-	glass_name = "glass of godmother"
+	glass_name = "Godmother"
 	glass_desc = "A twist on a classic, liked more by mature women."
 
 /datum/reagent/consumable/ethanol/jack_rose
@@ -1340,7 +1339,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a sweet and sour slice of apple"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "jack_rose"
-	glass_name = "glass of jack rose"
+	glass_name = "Jack Rose"
 	glass_desc = "A light cocktail perfect for sipping with a slice of pie."
 
 /datum/reagent/consumable/ethanol/amaretto_alexander
@@ -1352,7 +1351,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "sweet, creamy cacao"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "alexanderam"
-	glass_name = "glass of amaretto alexander"
+	glass_name = "Amaretto Alexander"
 	glass_desc = "A weaker version of the Alexander, what it lacks in strength it makes up for in flavor."
 
 /datum/reagent/consumable/ethanol/bahama_mama
@@ -1364,7 +1363,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "pineapple, coconut, and a hint of coffee"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "bahama_mama"
-	glass_name = "glass of bahama mama"
+	glass_name = "Bahama Mama"
 	glass_desc = "A tropical cocktail with a complex blend of flavors."
 
 /datum/reagent/consumable/ethanol/b52
@@ -1376,7 +1375,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "angry and irish"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "b52glass"
-	glass_name = "glass of fernet cola"
+	glass_name = "B-52"
 	glass_desc = "A sawed-off cola bottle filled with Fernet Cola. Nothing better after eating like a lardass."
 
 /datum/reagent/consumable/ethanol/longislandicedtea
@@ -1388,7 +1387,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a mixture of cola and alcohol"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "longislandicedteaglass"
-	glass_name = "glass of long island iced tea"
+	glass_name = "Long Island Iced Tea"
 	glass_desc = "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
 
 /datum/reagent/consumable/ethanol/amaretto_sour
@@ -1400,5 +1399,5 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "foamy lemony sweetness"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "amaretto_sour"
-	glass_name = "glass of amaretto sour"
+	glass_name = "Amaretto Sour"
 	glass_desc = "A sour made with sweet amaretto."

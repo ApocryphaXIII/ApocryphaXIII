@@ -69,9 +69,9 @@
 	name = "dinner spawner"
 	icon_state = "soup"
 	loot = list(
-		/obj/item/food/vampire/burger,
+		/obj/item/food/burger/plain,
 		/obj/item/food/vampire/nugget,
-		/obj/item/food/vampire/pizza,
+		/obj/item/food/pizzaslice/square,
 	)
 
 /obj/effect/spawner/random/food_or_drink/three_course_meal
@@ -148,7 +148,7 @@
 	icon_state = "chips"
 	loot = list(
 		/obj/item/food/vampire/crisps = 5,
-		/obj/item/food/vampire/bar = 5,
+		/obj/item/food/chocolatebar = 5,
 	)
 
 /obj/effect/spawner/random/food_or_drink/condiment

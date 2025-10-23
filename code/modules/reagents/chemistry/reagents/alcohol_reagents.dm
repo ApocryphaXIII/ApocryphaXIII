@@ -442,6 +442,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	boozepwr = 40
 	quality = DRINK_NICE
 	color = "#3E1B00"
+	glass_icon = 'icons/obj/drinks/drinks.dmi'
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Rum and Coke"
 	glass_desc = "The classic go-to of space-fratboys."
@@ -1303,3 +1304,101 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/pruno/on_mob_life(mob/living/carbon/M)
 	M.adjust_disgust(5)
 	..()
+
+//DRINKS PORTED FROM DARKPACK
+
+/datum/reagent/consumable/ethanol/godfather
+	name = "Godfather"
+	description = "A rough cocktail with illegal connections."
+	boozepwr = 50
+	color = "#E68F00"
+	quality = DRINK_GOOD
+	taste_description = "a delightful softened punch"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "godfather"
+	glass_name = "glass of godfather"
+	glass_desc = "A rough cocktail with illegal connections."
+
+/datum/reagent/consumable/ethanol/godmother
+	name = "Godmother"
+	description = "A twist on a classic, liked more by mature women."
+	boozepwr = 50
+	color = "#E68F00"
+	quality = DRINK_GOOD
+	taste_description = "sweetness and a zesty twist"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "godmother"
+	glass_name = "glass of godmother"
+	glass_desc = "A twist on a classic, liked more by mature women."
+
+/datum/reagent/consumable/ethanol/jack_rose
+	name = "Jack Rose"
+	description = "A light cocktail perfect for sipping with a slice of pie."
+	color = "#ff6633"
+	boozepwr = 15
+	quality = DRINK_NICE
+	taste_description = "a sweet and sour slice of apple"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "jack_rose"
+	glass_name = "glass of jack rose"
+	glass_desc = "A light cocktail perfect for sipping with a slice of pie."
+
+/datum/reagent/consumable/ethanol/amaretto_alexander
+	name = "Amaretto Alexander"
+	description = "A weaker version of the Alexander, what it lacks in strength it makes up for in flavor."
+	color = "#DBD5AE"
+	boozepwr = 35
+	quality = DRINK_VERYGOOD
+	taste_description = "sweet, creamy cacao"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "alexanderam"
+	glass_name = "glass of amaretto alexander"
+	glass_desc = "A weaker version of the Alexander, what it lacks in strength it makes up for in flavor."
+
+/datum/reagent/consumable/ethanol/bahama_mama
+	name = "Bahama Mama"
+	description = "A tropical cocktail with a complex blend of flavors."
+	color = "#FF7F3B" // rgb: 255, 127, 59
+	boozepwr = 35
+	quality = DRINK_GOOD
+	taste_description = "pineapple, coconut, and a hint of coffee"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "bahama_mama"
+	glass_name = "glass of bahama mama"
+	glass_desc = "A tropical cocktail with a complex blend of flavors."
+
+/datum/reagent/consumable/ethanol/b52
+	name = "B-52"
+	description = "Coffee, Irish Cream, and cognac. You will get bombed."
+	color = "#8f1733" // rgb: 143,23,51
+	boozepwr = 85
+	quality = DRINK_GOOD
+	taste_description = "angry and irish"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "b52glass"
+	glass_name = "glass of fernet cola"
+	glass_desc = "A sawed-off cola bottle filled with Fernet Cola. Nothing better after eating like a lardass."
+
+/datum/reagent/consumable/ethanol/longislandicedtea
+	name = "Long Island Iced Tea"
+	description = "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
+	color = "#ff6633" // rgb: 255,102,51
+	boozepwr = 35
+	quality = DRINK_VERYGOOD
+	taste_description = "a mixture of cola and alcohol"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "longislandicedteaglass"
+	glass_name = "glass of long island iced tea"
+	glass_desc = "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
+
+/datum/reagent/consumable/ethanol/amaretto_sour
+	name = "Amaretto Sour"
+	description = "A sour made with sweet amaretto."
+	boozepwr = 15
+	color = "#ddc28b"
+	quality = DRINK_VERYGOOD
+	taste_description = "foamy lemony sweetness"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "amaretto_sour"
+	glass_name = "glass of amaretto sour"
+	glass_desc = "A sour made with sweet amaretto."

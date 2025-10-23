@@ -799,3 +799,27 @@
 		M.drowsyness++
 	return ..()
 
+
+//DARKPACK NON-ALCOHOLIC DRINKS
+/datum/reagent/consumable/shirley_temple
+	name = "Shirley Temple"
+	description = "Here you go little girl, now you can drink like the adults."
+	color = "#F43724"
+	quality = DRINK_GOOD
+	taste_description = "sweet cherry syrup and ginger spice"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "shirleytemple"
+	glass_name = "glass of shirley temple"
+	glass_desc = "A sweet and fruity cocktail perfect for a young girl."
+
+
+/datum/reagent/consumable/agua_fresca
+	name = "Agua Fresca"
+	description = "A refreshing watermelon agua fresca. Perfect on a day at the holodeck."
+	color = "#D25B66"
+	quality = DRINK_VERYGOOD
+	taste_description = "cool refreshing watermelon"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "aguafresca"
+	glass_name = "glass of agua fresca"
+	glass_desc = "A refreshing watermelon agua fresca. Perfect on a day at the holodeck."

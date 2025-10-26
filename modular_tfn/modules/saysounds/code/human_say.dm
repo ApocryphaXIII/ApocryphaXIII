@@ -32,29 +32,29 @@
 	if(!L.ckey)
 		return
 
-	var/vocal_sound_pref = L.client?.prefs?.vocal_sound || "Talk"
+	var/vocal_sound_pref = L.client?.prefs?.chosen_vocal_sound || 1
 
 	var/sound_file
 	switch(vocal_sound_pref)
-		if("Talk")
+		if(1)
 			sound_file = "modular_tfn/modules/saysounds/sounds/talk[speech_mode].ogg"
-		if("Pencil")
+		if(2)
 			sound_file = "modular_tfn/modules/saysounds/sounds/pencil[speech_mode].ogg"
-		if("Buwoo")
+		if(3)
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/buwoo[speech_mode].ogg"
-		if("Cow")
+		if(4)
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/cow[speech_mode].ogg"
-		if("Pug")
+		if(5)
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/pug[speech_mode].ogg"
-		if("Speak 1")
+		if(6)
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_1[speech_mode].ogg"
-		if("Speak 2")
+		if(7)
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_2[speech_mode].ogg"
-		if("Speak 3")
+		if(8)
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_3[speech_mode].ogg"
-		if("Speak 4")
+		if(9)
 			sound_file = "modular_tfn/modules/saysounds/sounds/goon/speak_4[speech_mode].ogg"
-		if("None")
+		if(10)
 			return
 		else
 			sound_file = 'modular_tfn/modules/saysounds/sounds/talk.ogg' // Default fallback

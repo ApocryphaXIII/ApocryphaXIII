@@ -7,7 +7,6 @@
 	lose_text = "<span class='notice'>You feel hope for your future finances.</span>"
 	moneymod = 0
 
-
 /datum/quirk/debtor/rich
 	name = "Rich"
 	desc = "You made some savvy investments or maybe you were just born this way. Double your starting money. Starting balance cannot excede $20000."
@@ -16,7 +15,6 @@
 	gain_text = "<span class='notice'>You feel rich.</span>"
 	lose_text = "<span class='warning'>You feel poor.</span>"
 	moneymod = 2
-
 
 /datum/quirk/debtor/fabulous
 	name = "Fabulously Wealthy"

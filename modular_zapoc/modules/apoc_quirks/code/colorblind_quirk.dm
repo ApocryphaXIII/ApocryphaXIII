@@ -73,7 +73,7 @@
 	medical_record_text = "Patient is afflicted with tritanopia."
 	client_colour_path = /datum/client_colour/colorblind/tritanopia
 
-/datum/quirk/colorblind/canine // Commented out pending /datum/quirk/transfer_mob working on fera forms
+/datum/quirk/colorblind/canine // Fuck it. uncomment it. // // Commented out pending /datum/quirk/transfer_mob working on fera forms
 	name = "Colorblind (Canine)"
 	desc = "Your eyes are dichromatic, like those of a canine."
 	value = -1

@@ -69,7 +69,7 @@
 				to_chat(target, span_purple("What the hell are you talkin' about? You've added nothing to the conversation- Get in the- Get in the crystal. Sorry, buddy, get in the crystal. HAH hahahahahahaha. We're going to put you in the crystal, you're gonna be in the crystal for a minute; It's gonna feel like one week. It's only one week, man! Some of the people are in the crystal for like, a century, okay? You're going in- the minute is gonna feel like a week so you have some time to think about what you've done. And then you're going to come out of the crystal."))
 
 		crystal.freedom_timer(jailtime, felt_time)
-		var/msg = "[key_name(target)] was put in the crystal for [LOWER_TEXT(sentence_choice)]. They are charged with: [charge]."
+		var/msg = "[key_name(target)] was put in the crystal by [key_name(user)] for [LOWER_TEXT(sentence_choice)]. They are charged with: [charge]."
 		message_admins(msg)
 		log_admin(msg)
 	else

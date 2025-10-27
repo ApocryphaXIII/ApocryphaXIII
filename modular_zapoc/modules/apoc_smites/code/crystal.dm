@@ -31,6 +31,7 @@
 		charge = "ADDED NOTHING"
 		sentence_choice = "Just a second"
 		sound_choice = "Nearby"
+		abort = "Go"
 	else if(quick_crystal == "Cancel")
 		abort = "Cancel"
 

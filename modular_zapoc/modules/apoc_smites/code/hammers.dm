@@ -41,6 +41,7 @@
 		hammer_count = 5
 		sound_choice = "Nearby"
 		lethal = "Not really"
+		abort = "Go"
 	else if(quick_hammers == "No")
 		hammer_count = input(user, "How many hammers are we killing this guy with?") as num
 		sound_choice = (alert(user, "Play audio?", "hammers", "Target only", "Nearby", "No"))
@@ -117,8 +118,8 @@
 	HAM.SpinAnimation(5, 1)
 	walk(HAM, get_dir(HAM, target))
 
-	target.visible_message(span_danger("You are hit by a hammer!"), \
-		span_danger("[target] is hit by a hammer!"))
+	target.visible_message(span_danger("[target] is hit by a hammer!"), \
+		span_danger("You are hit by a hammer!"))
 
 	if(repeats > 0)
 		addtimer(CALLBACK(src, PROC_REF(spawn_hammer), user, target, damage, moblist, repeats-1), 1)

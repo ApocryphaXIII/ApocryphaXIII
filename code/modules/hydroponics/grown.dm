@@ -27,6 +27,7 @@
 	var/wine_power = 10 //Determines the boozepwr of the wine if distill_reagent is NULL.
 	///Color of the grown object
 	var/filling_color
+	custom_price = 1
 
 
 /obj/item/food/grown/Initialize(mapload, obj/item/seeds/new_seed)

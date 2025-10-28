@@ -2863,7 +2863,8 @@
 "cOZ" = (
 /obj/structure/dresser,
 /obj/item/flashlight/lamp{
-	pixel_y = 8
+	pixel_y = 8;
+	layer = 4.1
 	},
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
@@ -7978,7 +7979,9 @@
 /area/space)
 "ioz" = (
 /obj/vampire_car/retro/rand{
-	dir = 1
+	dir = 1;
+	id = "blorbo_sunset_2_door";
+	pixel_x = 16
 	},
 /turf/open/floor/plating/asphalt,
 /area/space)
@@ -10078,7 +10081,9 @@
 	dir = 1;
 	color = "#636363"
 	},
-/obj/structure/vampdoor/wood/apartment,
+/obj/structure/vampdoor/wood/apartment{
+	id = "blorbo_sunset_2_door"
+	},
 /turf/open/floor/carpet/vamp/blackgold,
 /area/space)
 "ksk" = (
@@ -11695,7 +11700,10 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/space)
 "mlb" = (
-/obj/structure/curtain/bounty,
+/obj/structure/curtain/cloth/fancy/mechanical/luxurious{
+	pixel_y = 8;
+	id = "borbo_house_2_curtain"
+	},
 /turf/closed/wall/vampwall/rich/low/window,
 /area/space)
 "mlC" = (
@@ -15568,8 +15576,8 @@
 "qls" = (
 /obj/structure/table/wood,
 /obj/machinery/reagentgrinder{
-	pixel_y = 11;
-	pixel_x = -8;
+	pixel_y = 5;
+	pixel_x = -9;
 	layer = 3
 	},
 /turf/open/floor/plating/vampplating/stone,
@@ -20899,8 +20907,14 @@
 /turf/open/floor/plating/rough/cave,
 /area/space)
 "whV" = (
-/obj/effect/decal/shadow,
-/turf/open/floor/plating/vampgrass/random/bushes,
+/obj/structure/table/wood,
+/obj/machinery/button/curtain{
+	id = "borbo_house_2_curtain";
+	pixel_y = -1;
+	pixel_x = 8;
+	name = "Back Curtains"
+	},
+/turf/open/floor/carpet/vamp/greengold,
 /area/space)
 "wju" = (
 /obj/structure/vampdoor{
@@ -169549,8 +169563,8 @@ ruE
 ruE
 iYg
 ruE
-ruE
 ioz
+ruE
 gnA
 iZg
 mTu
@@ -169861,7 +169875,7 @@ fJY
 nIk
 aeE
 asL
-mpb
+asL
 mpb
 mpb
 nvD
@@ -170013,7 +170027,7 @@ gwi
 nIk
 nIk
 nIk
-whV
+uEh
 rwH
 rwH
 rwH
@@ -171068,7 +171082,7 @@ gYF
 mWb
 hym
 mlb
-odu
+whV
 kGK
 kGK
 iCm

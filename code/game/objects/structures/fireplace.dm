@@ -16,6 +16,8 @@
 	var/fuel_added = 0
 	var/flame_expiry_timer
 
+	var/infinite = 0 // APOC EDIT ADD
+
 /obj/structure/fireplace/large
 	name = "large fireplace"
 	desc = "A large stone brick fireplace, warm and cozy."
@@ -117,7 +119,7 @@
 /obj/structure/fireplace/process(delta_time)
 	if(!lit)
 		return
-	if(world.time > flame_expiry_timer)
+	if(world.time > flame_expiry_timer && !infinite) // APOC EDIT CHANGE
 		put_out()
 		return
 

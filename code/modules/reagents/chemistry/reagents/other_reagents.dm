@@ -5,10 +5,10 @@
 	metabolization_rate = 5 //fast rate so it disappears fast.
 	taste_description = "iron"
 	taste_mult = 1.3
-	glass_icon_state = "glass_red"
+	glass_icon = 'icons/obj/drinks/drinks.dmi'
+	glass_icon_state = "bloodglass"
 	glass_name = "glass of tomato juice"
 	glass_desc = "Are you sure this is tomato juice?"
-	shot_glass_icon_state = "shotglassred"
 	penetrates_skin = NONE
 
 	// FEED ME
@@ -99,7 +99,6 @@
 	color = "#CC4633"
 	description = "You don't even want to think about what's in here."
 	taste_description = "gross iron"
-	shot_glass_icon_state = "shotglassred"
 	material = /datum/material/meat
 
 /datum/reagent/vaccine
@@ -142,10 +141,8 @@
 	color = "#AAAAAA77" // rgb: 170, 170, 170, 77 (alpha)
 	taste_description = "water"
 	var/cooling_temperature = 2
-	glass_icon_state = "glass_clear"
 	glass_name = "glass of water"
 	glass_desc = "The father of all refreshments."
-	shot_glass_icon_state = "shotglassclear"
 
 /*
  *	Water reaction to turf
@@ -210,7 +207,6 @@
 	name = "Holy Water"
 	description = "Water blessed by some deity."
 	color = "#E0E8EF" // rgb: 224, 232, 239
-	glass_icon_state  = "glass_clear"
 	glass_name = "glass of holy water"
 	glass_desc = "A glass of holy water."
 	self_consuming = TRUE //divine intervention won't be limited by the lack of a liver
@@ -297,10 +293,8 @@
 	color = "#AAAAAA77" // rgb: 170, 170, 170, 77 (alpha)
 	taste_description = "burning water"
 	var/cooling_temperature = 2
-	glass_icon_state = "glass_clear"
 	glass_name = "glass of oxygenated water"
 	glass_desc = "The father of all refreshments. Surely it tastes great, right?"
-	shot_glass_icon_state = "shotglassclear"
 
 /*
  *	Water reaction to turf
@@ -1012,7 +1006,6 @@
 	description = "Required for welders. Flammable."
 	color = "#660000" // rgb: 102, 0, 0
 	taste_description = "gross metal"
-	glass_icon_state = "dr_gibb_glass"
 	glass_name = "glass of welder fuel"
 	glass_desc = "Unless you're an industrial tool, this is probably not safe for consumption."
 	penetrates_skin = NONE

@@ -837,7 +837,6 @@
 	quality = DRINK_VERYGOOD
 	nutriment_factor = 4 * REAGENTS_METABOLISM
 	taste_description = "sweet chocolate"
-	glass_icon_state = "chocolatepudding"
 	glass_name = "chocolate pudding"
 	glass_desc = "Tasty."
 
@@ -848,7 +847,6 @@
 	quality = DRINK_VERYGOOD
 	nutriment_factor = 4 * REAGENTS_METABOLISM
 	taste_description = "sweet vanilla"
-	glass_icon_state = "vanillapudding"
 	glass_name = "vanilla pudding"
 	glass_desc = "Tasty."
 

@@ -61,7 +61,7 @@
 		if(LOCATOR_BLOODHUNT)
 			returntext = "[icon2html(getFlatIcon(target), user)][target.true_real_name], [target.mind ? target.mind.assigned_role : "Citizen"], is [disttext] away to [dirtext] in [place]."
 		if(LOCATOR_VEIL)
-			if(isgarou(target))
+			if(isgarou(target) || iswerewolf(target)) // 10-19-25 - Added iswerewolf() to catch veil-breaking dogs
 				returntext = "[target.true_real_name] is [disttext] away to [dirtext] in [place]. They have violated the Veil [violations] times."
 //		if(LOCATOR_HOWL) // Werewolf code sucks a lot. Don't feel like making this work right now.
 //			var/howltype

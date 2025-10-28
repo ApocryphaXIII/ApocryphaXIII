@@ -122,7 +122,7 @@
 // APOC EDIT START
 /obj/effect/proc_holder/spell/targeted/shapeshift/gangrel
 	name = "Gangrel Form"
-	desc = "Take on the shape a wolf."
+	desc = "Take on the shape of a wolf." // APOC EDIT CHANGE
 	charge_max = 50
 	cooldown_min = 5 SECONDS
 	revert_on_death = TRUE

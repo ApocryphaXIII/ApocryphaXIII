@@ -21,7 +21,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/tzimisce
 	name = "Tzimisce Form"
-	desc = "Take on the shape a beast."
+	desc = "Take on the shape of a beast." // APOC EDIT CHANGE
 	charge_max = 10 SECONDS
 	cooldown_min = 10 SECONDS
 	revert_on_death = TRUE
@@ -30,7 +30,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/bloodcrawler
 	name = "Blood Crawler"
-	desc = "Take on the shape a beast."
+	desc = "Take on the shape of a bloody beast." // APOC EDIT CHANGE
 	charge_max = 5 SECONDS
 	cooldown_min = 5 SECONDS
 	revert_on_death = TRUE

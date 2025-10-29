@@ -108,6 +108,9 @@ SUBSYSTEM_DEF(carpool)
 	throwforce = 150
 	glide_size = 96
 
+	MAP_SWITCH(pixel_x = 0, pixel_x = -32)
+	MAP_SWITCH(pixel_y = 0, pixel_y = -32)
+
 	var/movement_vector = 0		//0-359 degrees
 	var/speed_in_pixels = 0		// 16 pixels (turf is 2x2m) = 1 meter per 1 SECOND (process fire). Minus equals to reverse, max should be 444
 	var/last_pos = list("x" = 0, "y" = 0, "x_pix" = 0, "y_pix" = 0, "x_frwd" = 0, "y_frwd" = 0)

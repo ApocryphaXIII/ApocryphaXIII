@@ -11,7 +11,15 @@
 /obj/structure/closet/crate/bin/undense // APOC EDIT ADD START
 	density = FALSE
 	dense_when_open = FALSE
-	dense_when_closed = FALSE // APOC EDIT ADD END
+	dense_when_closed = FALSE
+
+/obj/structure/closet/crate/bin/biohazard
+	desc = "A trash bin for hazardous waste."
+	name = "biohazard bin"
+	color = "#ff623b"
+
+/obj/structure/closet/crate/bin/undense/biohazard
+	color = "#ff623b" // APOC EDIT ADD END
 
 /obj/structure/closet/crate/bin/Initialize()
 	. = ..()

@@ -58,6 +58,8 @@
 /area/misc/cordon
 	name = "CORDON"
 	icon_state = "cordon"
+	icon = 'modular_zapoc/modules/apoc_areas/icons/cordon_area.dmi'
+	icon_state = "cordon_area"
 	//static_lighting = FALSE
 	//base_lighting_alpha = 255
 	area_flags = UNIQUE_AREA|NOTELEPORT|HIDDEN_AREA

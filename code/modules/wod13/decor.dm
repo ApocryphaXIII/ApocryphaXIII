@@ -1077,10 +1077,10 @@
 	desc = "Not big enough for hiding in."
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "tub"
-	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
+//	plane = GAME_PLANE // APOC EDIT REMOVE
+//	layer = ABOVE_ALL_MOB_LAYER // APOC EDIT REMOVE
 	anchored = TRUE
-	density = TRUE
+	density = FALSE // APOC EDIT CHANGE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 
 /obj/weapon_showcase

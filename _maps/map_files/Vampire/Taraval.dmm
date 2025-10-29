@@ -12316,7 +12316,6 @@
 /obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled{
 	pixel_x = 5;
 	pixel_y = -3;
-	layer = sssssssssssssssssss
 	},
 /obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled{
 	pixel_x = 5;

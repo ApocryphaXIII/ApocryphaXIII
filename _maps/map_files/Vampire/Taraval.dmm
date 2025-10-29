@@ -6802,8 +6802,12 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/space)
 "fVR" = (
-/obj/structure/spacevine,
-/turf/open/floor/plating/vampgrass,
+/obj/vampire_car/retro/rand/voivodate{
+	dir = 1;
+	pixel_x = -32;
+	pixel_y = -32
+	},
+/turf/open/floor/plating/asphalt,
 /area/space)
 "fWL" = (
 /obj/structure/table/wood/poker,
@@ -7333,7 +7337,7 @@
 "gAt" = (
 /obj/structure/chair/sofa/bench/metal/left{
 	dir = 1;
-	color = "#3A424F"
+	color = #3A424F
 	},
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/endron_facility)
@@ -24304,14 +24308,6 @@
 	dir = 4
 	},
 /turf/closed/wall/vampwall/brick,
-/area/space)
-"vCf" = (
-/obj/vampire_car/retro/rand/voivodate{
-	dir = 1;
-	pixel_x = -32;
-	pixel_y = -32
-	},
-/turf/open/floor/plating/asphalt,
 /area/space)
 "vCv" = (
 /obj/machinery/light{
@@ -167859,7 +167855,7 @@ hym
 niN
 oMm
 nrn
-vCf
+fVR
 ruE
 thy
 oMm
@@ -181966,7 +181962,7 @@ hym
 hym
 hym
 hym
-fVR
+hym
 hym
 hym
 hym

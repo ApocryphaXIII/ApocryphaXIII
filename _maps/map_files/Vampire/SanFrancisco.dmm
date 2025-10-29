@@ -2345,9 +2345,6 @@
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/millennium_tower/f2)
-"aBb" = (
-/turf/closed/wall/vampwall/city,
-/area/vtm/ghetto/old)
 "aBi" = (
 /obj/structure/fluff/hedge,
 /obj/effect/turf_decal/siding/white{
@@ -227715,7 +227712,7 @@ ruf
 ruf
 ruf
 ruf
-aBb
+ruf
 ruf
 wCY
 ruf

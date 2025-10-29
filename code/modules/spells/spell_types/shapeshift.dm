@@ -99,7 +99,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/dragon
 	name = "Dragon Form"
-	desc = "Take on the shape a lesser ash drake."
+	desc = "Take on the shape of a lesser ash drake." // APOC EDIT CHANGE
 	invocation = "RAAAAAAAAWR!"
 	convert_damage = FALSE
 

@@ -21,8 +21,8 @@
 	var/latches = "single_latch"
 	var/has_latches = TRUE
 	wound_bonus = 5
-	storage_max_columns = 5
-	storage_max_rows = 3
+	storage_max_columns = 4
+	storage_max_rows = 4
 
 /obj/item/storage/toolbox/Initialize()
 	. = ..()

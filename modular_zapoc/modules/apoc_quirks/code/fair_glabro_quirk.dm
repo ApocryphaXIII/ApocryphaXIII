@@ -3,5 +3,7 @@
 	desc = "Your Glabro Form is less bestial than others, making it not breach the veil when seen."
 	mob_trait = TRAIT_FAIR_GLABRO
 	value = 2
+	gain_text = "<span class='notice'>You feel less hairy.</span>"
+	lose_text = "<span class='warning'>You feel hairy.</span>"
 	allowed_species = list("Werewolf")
 	allowed_tribes = list("Galestalkers","Ronin", "Glass Walkers", "Ghost Council", "Hart Wardens", "Children of Gaia", "Bone Gnawers", "Get of Fenris", "Black Furies", "Silver Fangs", "Silent Striders", "Shadow Lords", "Red Talons", "Stargazers", "Black Spiral Dancers")

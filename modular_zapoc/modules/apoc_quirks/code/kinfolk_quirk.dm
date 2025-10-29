@@ -10,4 +10,4 @@
 /datum/quirk/kinfolk/add()
 	var/mob/living/carbon/H = quirk_holder
 	H.grant_language(/datum/language/garou_tongue)
-	H.grant_language(/datum/language/primal_tongue)
+//	H.grant_language(/datum/language/primal_tongue) // Bandaid

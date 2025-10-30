@@ -5,7 +5,7 @@
 
 /datum/map_config
 	// Metadata
-	var/config_filename = "_maps/kindredcity.json"
+	var/config_filename = "_maps/spookyfrancisco.json"
 	var/defaulted = TRUE  // set to FALSE by LoadConfig() succeeding
 	// Config from maps.txt
 	var/config_max_users = 0
@@ -14,9 +14,9 @@
 	var/votable = FALSE
 
 	// Config actually from the JSON - should default to Meta
-	var/map_name = "San Francisco"
+	var/map_name = "Spooky Francisco"
 	var/map_path = "map_files/Vampire"
-	var/map_file = "SanFrancisco.dmm"
+	var/map_file = "spooky_francisco.dmm"
 
 	var/traits = null
 	var/space_ruin_levels = 0
@@ -146,7 +146,7 @@
 			log_world("map_config \"job_changes\" field is missing or invalid!")
 			return
 		job_changes = json["job_changes"]
-	
+
 	if("library_areas" in json)
 		if(!islist(json["library_areas"]))
 			log_world("map_config \"library_areas\" field is missing or invalid!")

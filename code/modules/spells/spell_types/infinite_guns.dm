@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/targeted/infinite_guns
 	name = "Lesser Summon Guns"
-	desc = "Why reload when you have infinite guns? Summons an unending stream of bolt action rifles that deal little damage, but will knock targets down. Requires both hands free to use. Learning this spell makes you unable to learn Arcane Barrage."
+	desc = "Why reload when you have infinite guns? Summons an unending stream of revolvers that deal little damage, but will knock targets down. Requires both hands free to use. Learning this spell makes you unable to learn Arcane Barrage."
 	invocation_type = "none"
 	include_user = TRUE
 	range = -1
@@ -10,7 +10,7 @@
 	clothes_req = TRUE
 	cooldown_min = 10 //Gun wizard
 	action_icon_state = "bolt_action"
-	var/summon_path = /obj/item/gun/ballistic/rifle/enchanted
+	var/summon_path = /obj/item/gun/ballistic/rifle/enchanted/revolver
 
 /obj/effect/proc_holder/spell/targeted/infinite_guns/cast(list/targets, mob/user = usr)
 	for(var/mob/living/carbon/C in targets)

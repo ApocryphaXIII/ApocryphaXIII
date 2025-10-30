@@ -221,3 +221,21 @@
 		user.put_in_hands(gun)
 	else
 		user.dropItemToGround(src, TRUE)
+
+/obj/item/gun/ballistic/rifle/enchanted/revolver // APOC EDIT ADD - Yes, I know rifle.dm is a weird place for this. It's the halloween event. Buzz off.
+	name = "\improper magnum revolver"
+	desc = "Feelin' lucky, punk?"
+	icon_state = "revolver"
+	inhand_icon_state = "revolver"
+	worn_icon_state = "gun"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
+	initial_caliber = CALIBER_44
+	fire_sound = 'code/modules/wod13/sounds/revolver.ogg'
+	load_sound = 'sound/weapons/gun/revolver/load_bullet.ogg'
+	eject_sound = 'sound/weapons/gun/revolver/empty.ogg'
+	vary_fire_sound = FALSE
+	fire_sound_volume = 85
+	dry_fire_sound = 'sound/weapons/gun/revolver/dry_fire.ogg'
+	casing_ejector = FALSE
+	internal_magazine = TRUE
+	bolt_type = BOLT_TYPE_NO_BOLT

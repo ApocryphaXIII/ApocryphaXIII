@@ -66,7 +66,7 @@
 			for(var/mob/living/carbon/C in GLOB.player_list)
 				if(iswerewolf(C) || isgarou(C))
 					if(C.stat != DEAD)
-						if(C.auspice.tribe.name== tribe)
+						if(C.auspice.tribe.name == tribe) // APOC EDIT CHANGE
 							if(last_rage+50 < world.time)
 								last_rage = world.time
 								to_chat(C, "<span class='userdanger'><b>YOUR TOTEM IS BREAKING DOWN</b></span>")
@@ -162,3 +162,8 @@
 					qdel(prev)
 		else
 			adjust_totem_health(round(C.melee_damage_lower/2))
+
+// APOC ADD START
+/obj/structure/werewolf_totem/generic
+	icon_state = "wendigo"
+// APOC ADD END

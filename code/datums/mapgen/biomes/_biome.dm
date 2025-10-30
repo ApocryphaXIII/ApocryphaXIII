@@ -42,11 +42,11 @@
 	)
 	flora_density = 50
 	fauna_types = list(
-	/mob/living/simple_animal/butterfly = 6,
-	/mob/living/simple_animal/deer = 3,
+	/mob/living/simple_animal/butterfly = 2,
+	/mob/living/simple_animal/deer = 2,
 	/mob/living/simple_animal/pet/fox = 1,
 	)
-	fauna_density = 10
+	fauna_density = 5
 
 /datum/biome/jungle
 	turf_type = /turf/open/floor/plating/vampgrass
@@ -58,11 +58,11 @@
 	)
 	flora_density = 40
 	fauna_types = list(
-	/mob/living/simple_animal/butterfly = 6,
-	/mob/living/simple_animal/deer = 3,
+	/mob/living/simple_animal/butterfly = 2,
+	/mob/living/simple_animal/deer = 2,
 	/mob/living/simple_animal/pet/fox = 1,
 	)
-	fauna_density = 10
+	fauna_density = 5
 
 /datum/biome/jungle/deep
 	flora_density = 65
@@ -75,9 +75,6 @@
 		/obj/structure/big_vamprocks = 1,
 	)
 	flora_density = 5
-
-/datum/biome/water
-	turf_type = /turf/open/floor/plating/vampbeach
 
 /datum/biome/mountain
 	turf_type = /turf/closed/wall/vampwall/rock

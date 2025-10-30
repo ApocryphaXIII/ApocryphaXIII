@@ -42,11 +42,13 @@
 	)
 	flora_density = 50
 	fauna_types = list(
-	/mob/living/simple_animal/butterfly = 2,
-	/mob/living/simple_animal/deer = 2,
-	/mob/living/simple_animal/pet/fox = 1,
+	/mob/living/simple_animal/butterfly = 3,
+	/mob/living/simple_animal/deer = 1,
+	/mob/living/simple_animal/hostile/retaliate/goose = 0.5,
+	/mob/living/simple_animal/hostile/retaliate/frog = 0.5,
+	/mob/living/simple_animal/pet/fox = 0.1,
 	)
-	fauna_density = 5
+	fauna_density = 1
 
 /datum/biome/jungle
 	turf_type = /turf/open/floor/plating/vampgrass
@@ -58,11 +60,13 @@
 	)
 	flora_density = 40
 	fauna_types = list(
-	/mob/living/simple_animal/butterfly = 2,
-	/mob/living/simple_animal/deer = 2,
-	/mob/living/simple_animal/pet/fox = 1,
+	/mob/living/simple_animal/butterfly = 3,
+	/mob/living/simple_animal/deer = 1,
+	/mob/living/simple_animal/hostile/retaliate/goose = 0.5,
+	/mob/living/simple_animal/hostile/retaliate/frog = 0.5,
+	/mob/living/simple_animal/pet/fox = 0.1,
 	)
-	fauna_density = 5
+	fauna_density = 1
 
 /datum/biome/jungle/deep
 	flora_density = 65

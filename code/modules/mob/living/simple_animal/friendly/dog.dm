@@ -145,8 +145,7 @@
 	desc = "This dog can tell something smells around here, and that something is CRIME!"
 
 /mob/living/simple_animal/pet/dog/wolfkin
-	name = "Lupus Wolfkin"
-	real_name = "Lupus Wolfkin"
+	name = "lupus wolfkin"
 	desc = "It's an actual wolf."
 	icon = 'code/modules/wod13/tfn_lupus.dmi'
 	icon_state = "white"

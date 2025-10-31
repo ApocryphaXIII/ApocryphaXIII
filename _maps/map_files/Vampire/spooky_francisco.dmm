@@ -5711,6 +5711,10 @@
 /obj/structure/chair/stool/bar,
 /turf/open/floor/plating/parquetry,
 /area/vtm/jazzclub)
+"dTQ" = (
+/obj/machinery/jukebox,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/anarch)
 "dTW" = (
 /obj/structure/chair/green{
 	dir = 1;
@@ -54049,7 +54053,7 @@ qlp
 rgY
 rgY
 idq
-mUF
+dTQ
 mUF
 sYE
 wUl

@@ -26933,9 +26933,6 @@
 	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/police)
-"rVA" = (
-/turf/open/floor/black,
-/area/vtm/forest/sept)
 "rVB" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -104428,7 +104425,7 @@ qqa
 (4,1,7) = {"
 seh
 seh
-rVA
+seh
 vUj
 vUj
 gWO

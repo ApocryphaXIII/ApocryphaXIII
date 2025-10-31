@@ -2508,9 +2508,7 @@
 /obj/effect/turf_decal/bordur{
 	dir = 1
 	},
-/turf/open/floor/plating/sidewalk/old{
-	density = 1
-	},
+/turf/open/space/basic,
 /area/vtm)
 "bPl" = (
 /obj/structure/punching_bag,
@@ -3275,14 +3273,6 @@
 	},
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior/millennium_tower/f4)
-"clG" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
-	},
-/turf/open/floor/plating/sidewalk/old{
-	density = 1
-	},
-/area/vtm)
 "clL" = (
 /obj/structure/table/bacotell,
 /turf/open/floor/plating/bacotell,
@@ -5405,14 +5395,6 @@
 /obj/effect/decal/wallpaper/grey,
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/shop)
-"dPg" = (
-/obj/effect/turf_decal/bordur{
-	dir = 5
-	},
-/turf/open/floor/plating/sidewalk/old{
-	density = 1
-	},
-/area/vtm)
 "dPw" = (
 /obj/effect/decal/wallpaper/blue,
 /turf/closed/wall/vampwall/rich,
@@ -6544,8 +6526,7 @@
 	dir = 1
 	},
 /obj/item/kirbyplants/random{
-	pixel_x = -5;
-	pixel_y = 0
+	pixel_x = -5
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -11179,9 +11160,7 @@
 "hIt" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/bordur,
-/turf/open/floor/plating/sidewalk/old{
-	density = 1
-	},
+/turf/open/space/basic,
 /area/vtm)
 "hIy" = (
 /obj/machinery/vending/boozeomat/all_access,
@@ -12549,9 +12528,7 @@
 /area/vtm/interior/techshop)
 "iDY" = (
 /obj/structure/table,
-/obj/effect/turf_decal/siding{
-	dir = 2
-	},
+/obj/effect/turf_decal/siding,
 /obj/structure/sink{
 	pixel_y = -2;
 	dir = 4;
@@ -16885,14 +16862,6 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/voivodate)
-"lIX" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
-	},
-/turf/open/floor/plating/sidewalk/old{
-	density = 1
-	},
-/area/vtm)
 "lJx" = (
 /obj/structure/vampipe,
 /turf/closed/wall/vampwall/bar,
@@ -22064,9 +22033,7 @@
 /obj/item/storage/box/ingredients/grains,
 /obj/item/storage/box/ingredients/vegetarian,
 /obj/item/reagent_containers/food/condiment/milk,
-/obj/effect/turf_decal/siding{
-	dir = 2
-	},
+/obj/effect/turf_decal/siding,
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/ghetto)
 "pmS" = (
@@ -22781,12 +22748,6 @@
 	},
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior/millennium_tower/f4)
-"pIR" = (
-/obj/effect/turf_decal/siding{
-	dir = 2
-	},
-/turf/open/floor/plating/toilet,
-/area/vtm/interior/ghetto)
 "pIW" = (
 /obj/structure/table,
 /obj/item/paper{
@@ -26164,14 +26125,6 @@
 	},
 /turf/open/floor/carpet/vamp/cyan,
 /area/vtm/clinic)
-"rUx" = (
-/obj/effect/turf_decal/bordur{
-	dir = 9
-	},
-/turf/open/floor/plating/sidewalk/old{
-	density = 1
-	},
-/area/vtm)
 "rUB" = (
 /obj/structure/railing{
 	dir = 1;
@@ -31064,11 +31017,6 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/voivodate)
-"vdw" = (
-/turf/open/floor/plating/sidewalk/old{
-	density = 1
-	},
-/area/vtm)
 "vdN" = (
 /obj/effect/decal/wallpaper,
 /turf/closed/wall/vampwall/market,
@@ -33206,10 +33154,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
 "wBI" = (
-/obj/structure/table/bubway{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/structure/table/bubway,
 /obj/structure/sink{
 	pixel_y = -1;
 	dir = 4;
@@ -41457,7 +41402,7 @@ pmH
 jpx
 hdl
 gCr
-pIR
+wsi
 lea
 lea
 lea
@@ -114352,12 +114297,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -114459,12 +114404,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 pyl
 aAH
 aAH
@@ -114566,12 +114511,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -114673,12 +114618,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -114780,12 +114725,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 pyl
 aAH
 aAH
@@ -114887,12 +114832,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -114994,12 +114939,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -115101,12 +115046,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 pyl
 aAH
 aAH
@@ -115208,12 +115153,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -115315,12 +115260,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -115422,12 +115367,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 pyl
 aAH
 aAH
@@ -115529,12 +115474,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -115636,12 +115581,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -115743,12 +115688,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 pyl
 aAH
 aAH
@@ -115850,12 +115795,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 pGl
 rqh
 aPT
 uVm
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -116385,12 +116330,12 @@ aAH
 aAH
 aAH
 aAH
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 pyl
 aAH
 aAH
@@ -116492,12 +116437,12 @@ hxQ
 aAH
 aAH
 aAH
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 aAn
 aAH
 aAH
@@ -116599,12 +116544,12 @@ hxQ
 hxQ
 hxQ
 hxQ
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 urN
 hxQ
 hxQ
@@ -116706,12 +116651,12 @@ eSK
 hxQ
 hxQ
 hxQ
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 nfG
 hxQ
 hxQ
@@ -116813,12 +116758,12 @@ hPV
 tnO
 cjD
 lMz
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 ceq
 lMz
 lMz
@@ -116920,12 +116865,12 @@ sWP
 sWP
 sWP
 oQC
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 wUf
 oQC
 oQC
@@ -117027,12 +116972,12 @@ sWP
 sWP
 sWP
 oQC
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 wUf
 oQC
 oQC
@@ -117134,12 +117079,12 @@ sWP
 sWP
 oQC
 oQC
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 wUf
 oQC
 oQC
@@ -117241,12 +117186,12 @@ sWP
 sWP
 oQC
 oQC
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 wUf
 oQC
 oQC
@@ -117348,12 +117293,12 @@ sWP
 sWP
 oQC
 oQC
-bPj
+ggc
 tEv
 hYA
 lQA
 qka
-hIt
+hKN
 oQC
 oQC
 oQC
@@ -117454,8 +117399,8 @@ sWP
 sWP
 sWP
 kiO
-clG
-rUx
+hmZ
+hHe
 tEv
 hYA
 lQA
@@ -117561,8 +117506,8 @@ sWP
 sWP
 sWP
 kiO
-vdw
-vdw
+xJx
+xJx
 tEv
 hYA
 lQA
@@ -117668,8 +117613,8 @@ sWP
 sWP
 sWP
 kiO
-vdw
-vdw
+xJx
+xJx
 tEv
 hYA
 lQA
@@ -117775,8 +117720,8 @@ sWP
 sWP
 sWP
 kiO
-vdw
-vdw
+xJx
+xJx
 tEv
 hYA
 lQA
@@ -117882,8 +117827,8 @@ sWP
 sWP
 sWP
 kiO
-vdw
-vdw
+xJx
+xJx
 tEv
 hYA
 lQA
@@ -117989,7 +117934,7 @@ kiO
 kiO
 kiO
 kiO
-vdw
+xJx
 xJx
 tEv
 hYA
@@ -118035,68 +117980,68 @@ jiP
 xhI
 xhI
 xhI
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
 xJx
 tEv
 hYA
@@ -118140,70 +118085,70 @@ jiP
 jiP
 xhI
 xhI
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
-vdw
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
+xJx
 xJx
 tEv
 hYA
@@ -118246,71 +118191,71 @@ jiP
 jiP
 jiP
 xhI
-vdw
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-lIX
-dPg
+xJx
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+fDw
+hFM
 xJx
 tEv
 hYA

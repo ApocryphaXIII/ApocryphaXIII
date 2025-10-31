@@ -35783,6 +35783,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
+/obj/machinery/vending/coffee/private,
 /turf/open/floor/carpet/vamp/cyan,
 /area/vtm/clinic)
 "xBf" = (

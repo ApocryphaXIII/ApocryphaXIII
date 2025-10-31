@@ -446,6 +446,12 @@
 /obj/effect/landmark/start/citizen,
 /turf/open/floor/plating/granite/black,
 /area/vtm)
+"aoZ" = (
+/obj/effect/turf_decal/siding{
+	dir = 2
+	},
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/ghetto)
 "apj" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -2508,7 +2514,9 @@
 /obj/effect/turf_decal/bordur{
 	dir = 1
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating/sidewalk/old{
+	density = 1
+	},
 /area/vtm)
 "bPl" = (
 /obj/structure/punching_bag,
@@ -6526,7 +6534,8 @@
 	dir = 1
 	},
 /obj/item/kirbyplants/random{
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 0
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
@@ -11160,7 +11169,9 @@
 "hIt" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/bordur,
-/turf/open/space/basic,
+/turf/open/floor/plating/sidewalk/old{
+	density = 1
+	},
 /area/vtm)
 "hIy" = (
 /obj/machinery/vending/boozeomat/all_access,
@@ -12528,7 +12539,9 @@
 /area/vtm/interior/techshop)
 "iDY" = (
 /obj/structure/table,
-/obj/effect/turf_decal/siding,
+/obj/effect/turf_decal/siding{
+	dir = 2
+	},
 /obj/structure/sink{
 	pixel_y = -2;
 	dir = 4;
@@ -21137,6 +21150,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/stone,
 /area/vtm/interior/endron_facility/forest)
+"oGt" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/obj/structure/lamppost/one,
+/turf/open/floor/plating/sidewalk/old,
+/area/vtm)
 "oGM" = (
 /obj/structure/bookcase/random/reference,
 /turf/open/floor/plating/parquetry/old,
@@ -22033,7 +22053,9 @@
 /obj/item/storage/box/ingredients/grains,
 /obj/item/storage/box/ingredients/vegetarian,
 /obj/item/reagent_containers/food/condiment/milk,
-/obj/effect/turf_decal/siding,
+/obj/effect/turf_decal/siding{
+	dir = 2
+	},
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/ghetto)
 "pmS" = (
@@ -27269,6 +27291,15 @@
 /obj/item/ammo_box/vampire/c12g,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
+"sDl" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/obj/structure/lamppost/one{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/old,
+/area/vtm)
 "sDz" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -33154,7 +33185,10 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
 "wBI" = (
-/obj/structure/table/bubway,
+/obj/structure/table/bubway{
+	pixel_x = 0;
+	pixel_y = 0
+	},
 /obj/structure/sink{
 	pixel_y = -1;
 	dir = 4;
@@ -41402,7 +41436,7 @@ pmH
 jpx
 hdl
 gCr
-wsi
+aoZ
 lea
 lea
 lea
@@ -114297,12 +114331,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -114404,12 +114438,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 pyl
 aAH
 aAH
@@ -114511,12 +114545,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -114618,12 +114652,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -114725,12 +114759,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 pyl
 aAH
 aAH
@@ -114832,12 +114866,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -114939,12 +114973,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -115046,12 +115080,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 pyl
 aAH
 aAH
@@ -115153,12 +115187,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -115260,12 +115294,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -115367,12 +115401,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 pyl
 aAH
 aAH
@@ -115474,12 +115508,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -115581,12 +115615,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -115688,12 +115722,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 pyl
 aAH
 aAH
@@ -115795,12 +115829,12 @@ aAH
 aAH
 aAH
 aAH
-ggc
+bPj
 pGl
 rqh
 aPT
 uVm
-hKN
+hIt
 aAn
 aAH
 aAH
@@ -117399,14 +117433,14 @@ sWP
 sWP
 sWP
 kiO
-hmZ
+oGt
 hHe
 tEv
 hYA
 lQA
 qka
 luq
-hmZ
+sDl
 emd
 oQC
 sWP
@@ -118152,7 +118186,7 @@ xJx
 xJx
 tEv
 hYA
-lQA
+hYA
 qka
 xJx
 xJx
@@ -118191,7 +118225,7 @@ jiP
 jiP
 jiP
 xhI
-xJx
+fDw
 fDw
 fDw
 fDw
@@ -118259,7 +118293,7 @@ hFM
 xJx
 tEv
 hYA
-lQA
+hYA
 qka
 xJx
 wHi
@@ -118366,7 +118400,7 @@ bRk
 xJx
 tEv
 hYA
-lQA
+hYA
 qka
 xJx
 uGP
@@ -118473,7 +118507,7 @@ bRk
 xJx
 tEv
 hYA
-lQA
+hYA
 qka
 xJx
 uGP
@@ -118580,7 +118614,7 @@ bRk
 xJx
 tEv
 hYA
-lQA
+hYA
 qka
 xJx
 uGP
@@ -118687,7 +118721,7 @@ bRk
 xJx
 tEv
 hYA
-lQA
+hYA
 qka
 xJx
 uGP
@@ -118794,7 +118828,7 @@ bRk
 xJx
 tEv
 hYA
-lQA
+hYA
 qka
 xJx
 uGP

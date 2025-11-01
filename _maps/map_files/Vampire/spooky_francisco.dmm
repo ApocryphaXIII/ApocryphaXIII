@@ -6067,7 +6067,7 @@
 	id = 12;
 	dir = 1
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower/f4)
 "ecA" = (
 /obj/item/storage/box/masks{
@@ -12073,9 +12073,6 @@
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
-"hTt" = (
-/turf/closed/indestructible/the_matrix,
-/area/space)
 "hTQ" = (
 /obj/structure/curtain,
 /turf/open/floor/plating/toilet,
@@ -19224,6 +19221,12 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
+"mMK" = (
+/obj/structure/bodycontainer/crematorium{
+	id = "medbay_crema"
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/clinic)
 "mMX" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 4
@@ -22334,9 +22337,6 @@
 /obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
-"oPd" = (
-/turf/closed/wall/vampwall/rich,
-/area/space)
 "oPj" = (
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/millennium_tower/f2)
@@ -24175,7 +24175,8 @@
 	color = "#BD3327"
 	},
 /obj/structure/statue/sandstone/venus{
-	pixel_y = 10
+	pixel_y = 10;
+	anchored = 1
 	},
 /turf/closed/wall/vampwall/rich/low,
 /area/vtm/interior/millennium_tower)
@@ -24517,6 +24518,13 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm)
+"qho" = (
+/obj/machinery/button/crematorium{
+	pixel_y = 32;
+	id = "medbay_crema"
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/clinic)
 "qhM" = (
 /obj/structure/chair/sofa/corp/right{
 	color = "#50C878";
@@ -25583,9 +25591,6 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
-"qQQ" = (
-/turf/closed/wall/vampwall/rock,
-/area/space)
 "qRc" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -37720,7 +37725,7 @@ bWz
 bWz
 bWz
 bWz
-bWz
+wrk
 wrk
 nlL
 iie
@@ -37827,10 +37832,10 @@ bWz
 bWz
 bWz
 bWz
-bWz
 wrk
 nlL
-uCc
+nlL
+qho
 uCc
 uCc
 nlL
@@ -37934,9 +37939,9 @@ bWz
 bWz
 bWz
 bWz
-bWz
 wrk
 nlL
+mMK
 uCc
 uCc
 pda
@@ -38042,7 +38047,7 @@ bWz
 bWz
 wrk
 wrk
-wrk
+nlL
 nlL
 uCc
 gBG
@@ -112304,13 +112309,13 @@ seh
 qqa
 qqa
 qoG
+xOc
 qoG
 qoG
+xOc
+xOc
 qoG
-qoG
-qoG
-qoG
-qoG
+xOc
 qoG
 qoG
 qoG
@@ -112411,14 +112416,14 @@ seh
 seh
 qqa
 qoG
-qoG
-qoG
-qoG
-qoG
-qoG
-qoG
-qoG
-qoG
+xOc
+xOc
+xOc
+xOc
+xOc
+xOc
+xOc
+xOc
 qoG
 qoG
 qoG
@@ -112520,14 +112525,14 @@ qqa
 qqa
 pkR
 xOc
-qoG
-qoG
-qoG
-qoG
-qoG
-qoG
-qoG
-qoG
+xOc
+xOc
+xOc
+xOc
+xOc
+xOc
+xOc
+xOc
 qoG
 qoG
 qoG
@@ -112629,12 +112634,12 @@ xOc
 xOc
 xOc
 xOc
-qoG
-qoG
-qoG
-qoG
-qoG
-qoG
+xOc
+xOc
+xOc
+xOc
+xOc
+xOc
 qoG
 qoG
 qoG
@@ -112740,9 +112745,9 @@ xOc
 xOc
 xOc
 xOc
-qoG
-qoG
-qoG
+xOc
+xOc
+xOc
 qoG
 qoG
 qoG
@@ -112947,8 +112952,8 @@ seh
 qqa
 qoG
 qoG
-qoG
-qoG
+xOc
+xOc
 xOc
 xOc
 xOc
@@ -113054,9 +113059,9 @@ seh
 qqa
 qoG
 qoG
-qoG
-qoG
-qoG
+xOc
+xOc
+xOc
 qoG
 qoG
 xOc
@@ -117058,7 +117063,7 @@ aAH
 "}
 (12,1,8) = {"
 wrk
-tdF
+xhI
 xhI
 jiP
 pND
@@ -120054,7 +120059,7 @@ wrk
 "}
 (40,1,8) = {"
 wrk
-qQQ
+tdF
 mnu
 mnu
 mnu
@@ -120161,7 +120166,7 @@ wrk
 "}
 (41,1,8) = {"
 wrk
-qQQ
+tdF
 mnu
 hmz
 hmz
@@ -120268,7 +120273,7 @@ wrk
 "}
 (42,1,8) = {"
 wrk
-qQQ
+tdF
 mnu
 hmz
 mnu
@@ -120375,7 +120380,7 @@ wrk
 "}
 (43,1,8) = {"
 wrk
-qQQ
+tdF
 mnu
 hmz
 hmz
@@ -120482,7 +120487,7 @@ wrk
 "}
 (44,1,8) = {"
 wrk
-qQQ
+tdF
 mnu
 mnu
 mnu
@@ -120589,7 +120594,7 @@ wrk
 "}
 (45,1,8) = {"
 wrk
-qQQ
+tdF
 oeb
 oeb
 oeb
@@ -120696,7 +120701,7 @@ wrk
 "}
 (46,1,8) = {"
 wrk
-qQQ
+tdF
 oeb
 fBn
 cey
@@ -120803,8 +120808,8 @@ wrk
 "}
 (47,1,8) = {"
 wrk
-oPd
-oPd
+fnb
+fnb
 qmj
 azy
 jrM
@@ -120904,13 +120909,13 @@ qmj
 qmj
 qmj
 qmj
-oPd
-oPd
+fnb
+fnb
 wrk
 "}
 (48,1,8) = {"
 wrk
-oPd
+fnb
 ndC
 qmj
 qlp
@@ -121012,12 +121017,12 @@ qmj
 qmj
 qmj
 ndC
-oPd
+fnb
 wrk
 "}
 (49,1,8) = {"
 wrk
-oPd
+fnb
 ndC
 bTi
 bTi
@@ -121119,12 +121124,12 @@ bTi
 bTi
 bTi
 ndC
-oPd
+fnb
 wrk
 "}
 (50,1,8) = {"
 wrk
-oPd
+fnb
 ndC
 hYA
 hYA
@@ -121226,12 +121231,12 @@ hYA
 hYA
 hYA
 ndC
-oPd
+fnb
 wrk
 "}
 (51,1,8) = {"
 wrk
-oPd
+fnb
 ndC
 hYA
 hYA
@@ -121333,12 +121338,12 @@ hYA
 hYA
 hYA
 ndC
-oPd
+fnb
 wrk
 "}
 (52,1,8) = {"
 wrk
-oPd
+fnb
 ndC
 pWy
 pWy
@@ -121440,12 +121445,12 @@ pWy
 pWy
 pWy
 ndC
-oPd
+fnb
 wrk
 "}
 (53,1,8) = {"
 wrk
-oPd
+fnb
 ndC
 qmj
 qmj
@@ -121547,13 +121552,13 @@ qmj
 qmj
 qmj
 ndC
-oPd
+fnb
 wrk
 "}
 (54,1,8) = {"
 wrk
-oPd
-oPd
+fnb
+fnb
 jrM
 jrM
 jrM
@@ -121653,13 +121658,13 @@ jrM
 jrM
 jrM
 jrM
-oPd
-oPd
+fnb
+fnb
 wrk
 "}
 (55,1,8) = {"
 wrk
-qQQ
+tdF
 tdF
 oeb
 oeb
@@ -126927,15 +126932,15 @@ wrk
 wrk
 wrk
 wrk
-qQQ
-qQQ
+tdF
+tdF
 kSM
 qmj
 qmj
 wDE
-hTt
-hTt
-hTt
+ndC
+ndC
+ndC
 wDE
 qmj
 qmj
@@ -127035,17 +127040,17 @@ wrk
 wrk
 wrk
 wrk
-qQQ
-qQQ
-qQQ
-qQQ
+tdF
+tdF
+tdF
+tdF
 wDE
 wDE
 wDE
 wDE
 wDE
-qQQ
-qQQ
+tdF
+tdF
 kgP
 kgP
 kgP

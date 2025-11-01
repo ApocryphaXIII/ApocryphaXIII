@@ -21,12 +21,23 @@ SUBSYSTEM_DEF(masquerade)
 			return "STABLE"
 
 /datum/controller/subsystem/masquerade/fire()
+	var/real_masquerade_violators = 0
+
+	for(var/mob/M in GLOB.masquerade_breakers_list)
+		if(M.client)
+			real_masquerade_violators++
+
+	var/alive_players = 0
+	for(var/mob/living/L in GLOB.player_list)
+		if(!L.stat == DEAD)
+			alive_players++
+
 	var/masquerade_violators = 0
 	var/sabbat = 0
 	if(length(GLOB.masquerade_breakers_list))
-		masquerade_violators = (2000/length(GLOB.player_list))*length(GLOB.masquerade_breakers_list)
+		masquerade_violators = (2000/alive_players)*real_masquerade_violators
 	if(length(GLOB.sabbatites))
-		sabbat = (2000/length(GLOB.player_list))*length(GLOB.sabbatites)
+		sabbat = (2000/alive_players)*length(GLOB.sabbatites)
 
 	total_level = max(0, min(1000, 1000 + dead_level + manual_adjustment - masquerade_violators - sabbat))
 

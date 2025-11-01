@@ -24,12 +24,12 @@ SUBSYSTEM_DEF(masquerade)
 	var/real_masquerade_violators = 0
 
 	for(var/mob/M in GLOB.masquerade_breakers_list)
-		if(client)
+		if(M.client)
 			real_masquerade_violators++
 
 	var/alive_players = 0
-	for(var/mob/living/L in GLOB.players_list)
-		if(!H.stat == DEAD)
+	for(var/mob/living/L in GLOB.player_list)
+		if(!L.stat == DEAD)
 			alive_players++
 
 	var/masquerade_violators = 0

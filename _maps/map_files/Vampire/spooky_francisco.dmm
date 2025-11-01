@@ -3258,15 +3258,6 @@
 	},
 /turf/open/floor/plating/circled,
 /area/vtm/interior/endron_facility)
-"ceF" = (
-/obj/structure/sink{
-	pixel_y = 12
-	},
-/obj/structure/mirror/directional/north{
-	layer = 2.8
-	},
-/turf/open/floor/plating/vampplating,
-/area/vtm)
 "ceN" = (
 /obj/effect/turf_decal/bordur,
 /obj/structure/chair/green{
@@ -5617,13 +5608,6 @@
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/millennium_tower/f4)
-"dKI" = (
-/obj/effect/decal/rugs{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/turf/open/floor/plating/vampplating,
-/area/vtm)
 "dKS" = (
 /obj/structure/table/wood,
 /obj/item/vampirebook/quran{
@@ -12553,19 +12537,6 @@
 /obj/item/pen/fourcolor,
 /turf/closed/wall/vampwall/junk/alt/low,
 /area/vtm/interior/shop)
-"ifQ" = (
-/obj/structure/closet/crate/bin{
-	pixel_y = 16;
-	pixel_x = -11
-	},
-/obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 16
-	},
-/obj/structure/coclock,
-/obj/effect/decal/cleanable/litter,
-/turf/open/floor/plating/vampplating,
-/area/vtm)
 "igg" = (
 /obj/structure/vampdoor/cleaning{
 	lock_id = "clinic";
@@ -34678,13 +34649,6 @@
 	},
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/ghetto)
-"wwr" = (
-/obj/structure/toilet{
-	dir = 8;
-	pixel_y = 16
-	},
-/turf/open/floor/plating/vampplating,
-/area/vtm)
 "wwF" = (
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/techshop)
@@ -50663,8 +50627,8 @@ qmj
 qmj
 qmj
 anT
-ceF
-dKI
+bEF
+fnz
 jbS
 uij
 hhF
@@ -50770,8 +50734,8 @@ jsI
 wKx
 czf
 anT
-ifQ
-wwr
+fIf
+mdQ
 sGN
 fJS
 xRc

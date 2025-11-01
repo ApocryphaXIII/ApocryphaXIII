@@ -355,6 +355,7 @@
 								if(CNT_REMOVE.name == result)
 									contacts -= CNT_REMOVE
 				if("Choose")
+					update_publish_contacts() // APOC EDIT ADD
 					var/list/personal_contacts = list()
 					for(var/datum/phonecontact/CNTCT in contacts)
 						if(CNTCT)
@@ -447,7 +448,7 @@
 						if(contacts_added_lenght < list_length)
 						// checks the size difference between the GLOB published list and the phone published list
 							var/ADDED_CONTACTS = 0
-							to_chat(usr, span_notice("New contacts are being added to your contact list.") )
+							to_chat(usr, span_notice("Refreshing contact list...") ) // APOC EDIT CHANGE
 							for(var/i = 1 to list_length)
 								var/number_v = GLOB.published_numbers[i]
 								var/name_v = GLOB.published_number_names[i]
@@ -467,7 +468,7 @@
 										published_numbers_contacts += NEWC
 										ADDED_CONTACTS +=1
 							if(ADDED_CONTACTS > 1)
-								to_chat(usr, span_notice("New contacts are added to your contact list.") )
+								to_chat(usr, span_notice("[ADDED_CONTACTS] have been added to your contact list.") ) // APOC EDIT CHANGE
 						else if(contacts_added_lenght == list_length)
 							to_chat(usr, span_notice("You have all the contacts in the published list already.") )
 						toggle_published_contacts = TRUE
@@ -910,6 +911,30 @@
 		our_contact = GLOB.important_contacts[important_contact_of]
 		if (!isnull(our_contact) && our_contact.number == number)
 			our_contact.number = null
+
+/obj/item/vamp/phone/proc/update_publish_contacts() // APOC EDIT ADD START
+	if(toggle_published_contacts)
+		var/contacts_added_lenght = published_numbers_contacts.len
+		var/list_length = min(length(GLOB.published_numbers), length(GLOB.published_number_names))
+		if(contacts_added_lenght < list_length)
+		// checks the size difference between the GLOB published list and the phone published list
+			for(var/i = 1 to list_length)
+				var/number_v = GLOB.published_numbers[i]
+				var/name_v = GLOB.published_number_names[i]
+				var/datum/phonecontact/NEWC = new()
+				NEWC.number = "[number_v]"
+				NEWC.name = "[name_v]"
+				if(NEWC.number != number)
+					//Check if it is not your own number that you are adding to contacts
+					var/contact_found = FALSE
+					for(var/datum/phonecontact/Contact in contacts)
+					//Check if the number is not already in your contact list
+						if(Contact.number == NEWC.number)
+							contact_found = TRUE
+							break
+					if(!contact_found)
+						contacts += NEWC
+						published_numbers_contacts += NEWC // APOC EDIT ADD END
 
 #undef NETWORK_ID
 #undef OUR_ROLE

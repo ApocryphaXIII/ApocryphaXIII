@@ -224,9 +224,9 @@
 		user.dropItemToGround(src, TRUE)
 
 	if(gun.despawn)
-			animate(src, alpha = 0, time = 5 SECONDS) // Fade out
-			spawn(7 SECONDS)
-			qdel(src)
+		animate(src, alpha = 0, time = 5 SECONDS) // Fade out
+		spawn(7 SECONDS)
+		qdel(src)
 
 /obj/item/gun/ballistic/rifle/enchanted/revolver // APOC EDIT ADD - Yes, I know rifle.dm is a weird place for this. It's the halloween event. Buzz off.
 	name = "\improper God's Caliber"

@@ -62,6 +62,7 @@
 	canSmoothWith = list(SMOOTH_GROUP_CITY_WALL)
 
 	var/obj/effect/addwall/addwall
+	var/frill_icon = /obj/effect/addwall::icon
 	var/low = FALSE
 	var/window
 
@@ -112,6 +113,7 @@
 		W.layer = ABOVE_ALL_MOB_LAYER
 	else if(!low)
 		addwall = new(get_step(src, NORTH))
+		addwall.icon = frill_icon
 		addwall.icon_state = icon_state
 		addwall.name = name
 		addwall.desc = desc
@@ -223,10 +225,11 @@ LOW_WALL_HELPER(vampwall/brick)
 /turf/closed/wall/vampwall/rock
 	name = "rock wall"
 	desc = "A huge chunk of rocks separating whole territory."
-	icon_state = "rock-0"
-	base_icon_state = "rock"
+	icon = 'modular_zapoc/modules/apoc_walls/icons/rockwall/rock_wall.dmi'
 	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_MINERAL_WALLS)
 	canSmoothWith = list(SMOOTH_GROUP_MINERAL_WALLS)
+	frill_icon = 'modular_zapoc/modules/apoc_walls/icons/rockwall/frill.dmi'
+
 
 /turf/closed/wall/vampwall/city
 	name = "wall"

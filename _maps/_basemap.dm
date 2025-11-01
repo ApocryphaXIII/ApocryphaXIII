@@ -13,6 +13,7 @@
 	#ifdef ALL_MAPS
 		#include "map_files\Vampire\runtimetown.dmm"
 		#include "map_files\Vampire\SanFrancisco.dmm"
+		#include "map_files\Vampire\spooky_francisco.dmm"
 		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif

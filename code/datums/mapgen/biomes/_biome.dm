@@ -22,29 +22,64 @@
 		var/obj/structure/flora = pick(flora_types)
 		new flora(gen_turf)
 
+// DARKPACK EDIT CHANGE START
 /datum/biome/mudlands
-	turf_type = /turf/open/floor/plating/dirt/jungle/dark
-	flora_types = list(/obj/structure/flora/grass/jungle,/obj/structure/flora/grass/jungle/b, /obj/structure/flora/rock/jungle, /obj/structure/flora/rock/pile/largejungle)
+	turf_type = /turf/open/floor/plating/vampdirt
+	flora_types = list(
+		/obj/structure/small_vamprocks = 2,
+		/obj/structure/vamprocks = 1,
+		/obj/structure/big_vamprocks = 1,
+	)
 	flora_density = 3
 
 /datum/biome/plains
-	turf_type = /turf/open/floor/plating/grass/jungle
-	flora_types = list(/obj/structure/flora/grass/jungle,/obj/structure/flora/grass/jungle/b, /obj/structure/flora/tree/jungle, /obj/structure/flora/rock/jungle, /obj/structure/flora/junglebush, /obj/structure/flora/junglebush/b, /obj/structure/flora/junglebush/c, /obj/structure/flora/junglebush/large, /obj/structure/flora/rock/pile/largejungle)
-	flora_density = 15
+	turf_type = /turf/open/floor/plating/vampgrass
+	flora_types = list(
+		/obj/structure/flora/ausbushes/sparsegrass = 5,
+		/obj/structure/vamptree/pine = 1,
+		/obj/structure/small_vamprocks = 1,
+		/obj/structure/vamprocks = 1,
+	)
+	flora_density = 50
+	fauna_types = list(
+	/mob/living/simple_animal/butterfly = 3,
+	/mob/living/simple_animal/deer = 1,
+	/mob/living/simple_animal/hostile/retaliate/goose = 0.5,
+	/mob/living/simple_animal/hostile/retaliate/frog = 0.5,
+	/mob/living/simple_animal/pet/fox = 0.1,
+	)
+	fauna_density = 1
 
 /datum/biome/jungle
-	turf_type = /turf/open/floor/plating/grass/jungle
-	flora_types = list(/obj/structure/flora/grass/jungle,/obj/structure/flora/grass/jungle/b, /obj/structure/flora/tree/jungle, /obj/structure/flora/rock/jungle, /obj/structure/flora/junglebush, /obj/structure/flora/junglebush/b, /obj/structure/flora/junglebush/c, /obj/structure/flora/junglebush/large, /obj/structure/flora/rock/pile/largejungle)
+	turf_type = /turf/open/floor/plating/vampgrass
+	flora_types = list(
+		/obj/structure/flora/ausbushes/sparsegrass = 1,
+		/obj/structure/vamptree/pine = 2,
+		/obj/structure/small_vamprocks = 1,
+		/obj/structure/vamprocks = 1,
+	)
 	flora_density = 40
+	fauna_types = list(
+	/mob/living/simple_animal/butterfly = 3,
+	/mob/living/simple_animal/deer = 1,
+	/mob/living/simple_animal/hostile/retaliate/goose = 0.5,
+	/mob/living/simple_animal/hostile/retaliate/frog = 0.5,
+	/mob/living/simple_animal/pet/fox = 0.1,
+	)
+	fauna_density = 1
 
 /datum/biome/jungle/deep
 	flora_density = 65
 
 /datum/biome/wasteland
-	turf_type = /turf/open/floor/plating/dirt/jungle/wasteland
-
-/datum/biome/water
-	turf_type = /turf/open/water/jungle
+	turf_type = /turf/open/floor/plating/vampdirt
+	flora_types = list(
+		/obj/structure/small_vamprocks = 10,
+		/obj/structure/vamprocks = 2,
+		/obj/structure/big_vamprocks = 1,
+	)
+	flora_density = 5
 
 /datum/biome/mountain
-	turf_type = /turf/closed/mineral/random/jungle
+	turf_type = /turf/closed/wall/vampwall/rock
+// DARKPACK EDIT CHANGE END

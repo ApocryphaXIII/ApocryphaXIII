@@ -913,7 +913,6 @@
 			our_contact.number = null
 
 /obj/item/vamp/phone/proc/update_publish_contacts() // APOC EDIT ADD START
-	. = ..()
 	if(toggle_published_contacts)
 		var/contacts_added_lenght = published_numbers_contacts.len
 		var/list_length = min(length(GLOB.published_numbers), length(GLOB.published_number_names))

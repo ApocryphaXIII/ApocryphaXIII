@@ -21,13 +21,20 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 		SetupQuirks()
 
 	quirk_blacklist = list(list("Blind","Nearsighted"), \
-							list("Jolly","Depression","Apathetic","Hypersensitive"), \
-							list("Ageusia","Vegetarian","Deviant Tastes"), \
-							list("Ananas Affinity","Ananas Aversion"), \
-							list("Alcohol Tolerance","Light Drinker"), \
-							list("Clown Fan","Mime Fan"), \
-							list("Bad Touch", "Friendly"), \
-							list("Extrovert", "Introvert"))
+		list("Jolly","Depression","Apathetic","Hypersensitive"), \
+		list("Ageusia","Vegetarian","Deviant Tastes"), \
+		list("Ananas Affinity","Ananas Aversion"), \
+		list("Alcohol Tolerance","Light Drinker"), \
+		list("Clown Fan","Mime Fan"), \
+		list("Broke", "Debtor", "Rich", "Fabulously Wealthy"), \
+		list("Deathly Aura", "Lively Aura", "Frenetic Aura (Mortal)", "Frenetic Aura (Undead)", "Deceptive Aura"), \
+		list("Diablerist", "Lively Aura", "Frenetic Aura (Mortal)", "Deceptive Aura"), \
+		list("Crossing the Rubicon", "Non-Swimmer"), \
+		list("Crossing the Rubicon", "Non-Swimmer"), \
+		list("Permanent Fangs", "Permanent Fangs (Kindred)"), \
+		list("Permanent Fangs", "Permanent Fangs (Kindred)"), \
+		list("Bright Eyes", "Bright Eyes (Fera)"), \
+		list("Extrovert", "Introvert"))
 	return ..()
 
 /datum/controller/subsystem/processing/quirks/proc/SetupQuirks()

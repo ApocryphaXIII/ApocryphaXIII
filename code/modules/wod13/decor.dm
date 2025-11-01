@@ -332,7 +332,7 @@
 
 /obj/machinery/light/prince/ghost/Crossed(atom/movable/AM)
 	. = ..()
-	if(ishuman(AM))
+	if(isliving(AM))
 		var/mob/living/L = AM
 		if(L.client)
 			var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread

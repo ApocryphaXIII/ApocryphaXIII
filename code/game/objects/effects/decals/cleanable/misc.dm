@@ -104,6 +104,11 @@
 	QUEUE_SMOOTH_NEIGHBORS(src)
 
 /obj/effect/decal/cleanable/gasoline/Crossed(atom/movable/AM, oldloc)
+	if(istype(AM, /obj/effect/particle_effect/sparks))
+		var/obj/effect/fire/F = locate() in get_turf(src)
+		if(!F)
+			new /obj/effect/fire(get_turf(src))
+
 	if(isliving(AM))
 		var/mob/living/L = AM
 		if(L.on_fire)

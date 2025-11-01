@@ -15094,7 +15094,6 @@
 /turf/closed/wall/vampwall/metal/glass,
 /area/vtm/interior/endron_facility)
 "jTm" = (
-/obj/effect/turf_decal/bordur,
 /obj/structure/table,
 /obj/structure/retail/junkfood_menu,
 /turf/open/floor/plating/sidewalk/rich,
@@ -26181,7 +26180,6 @@
 	},
 /area/vtm/sewer)
 "rmh" = (
-/obj/effect/turf_decal/bordur,
 /obj/structure/table,
 /obj/structure/retail/hot_ishu,
 /turf/open/floor/plating/sidewalk/rich,
@@ -27782,7 +27780,6 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/forest/sept)
 "sjB" = (
-/obj/effect/turf_decal/bordur,
 /obj/structure/table,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm)
@@ -28690,7 +28687,6 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm)
 "sIU" = (
-/obj/effect/turf_decal/bordur,
 /obj/structure/table,
 /obj/structure/retail/flower_shop,
 /turf/open/floor/plating/sidewalk/rich,

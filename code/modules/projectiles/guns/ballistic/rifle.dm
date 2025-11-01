@@ -220,10 +220,12 @@
 		discard_gun(user)
 		user.swap_hand()
 		user.put_in_hands(gun)
+		if(gun.despawn)
+			animate(src, alpha = 0, time = 5 SECONDS) // Fade out
+			spawn(7 SECONDS)
+			qdel(src)
 	else
 		user.dropItemToGround(src, TRUE)
-
-	if(gun.despawn)
 		animate(src, alpha = 0, time = 5 SECONDS) // Fade out
 		spawn(7 SECONDS)
 		qdel(src)

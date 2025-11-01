@@ -5051,6 +5051,16 @@
 	},
 /turf/open/floor/plating/vampwood,
 /area/vtm/interior/chantry)
+"dmU" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/effect/turf_decal/bordur,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm)
 "dnd" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -21588,6 +21598,13 @@
 	},
 /turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility)
+"onf" = (
+/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm)
 "ono" = (
 /obj/structure/fluff/hedge,
 /obj/machinery/light{
@@ -65666,7 +65683,7 @@ xqo
 mqV
 rdj
 rdj
-rdj
+dmU
 rdj
 rdj
 rdj
@@ -65773,7 +65790,7 @@ xqo
 mqV
 rdj
 rdj
-rdj
+onf
 rdj
 rdj
 rdj
@@ -65880,7 +65897,7 @@ fcc
 fMo
 rdj
 rdj
-rdj
+onf
 rdj
 rdj
 rdj
@@ -65987,7 +66004,7 @@ rdj
 rdj
 rdj
 rdj
-rdj
+onf
 rdj
 rdj
 rdj
@@ -66094,7 +66111,7 @@ rdj
 rdj
 rdj
 rdj
-rdj
+onf
 rdj
 rdj
 rdj
@@ -66201,7 +66218,7 @@ rdj
 rdj
 rdj
 rdj
-rdj
+onf
 rdj
 rdj
 rdj
@@ -66308,7 +66325,7 @@ rdj
 rdj
 rdj
 rdj
-rdj
+onf
 rdj
 rdj
 rdj
@@ -66415,7 +66432,7 @@ rdj
 rdj
 rdj
 rdj
-rdj
+onf
 rdj
 rdj
 rdj
@@ -66522,7 +66539,7 @@ rdj
 rdj
 rdj
 rdj
-rdj
+onf
 rdj
 rdj
 rdj
@@ -68725,9 +68742,9 @@ nPE
 nPE
 nPE
 nPE
-stq
-stq
-stq
+nPE
+rdj
+rdj
 rdj
 rdj
 rdj
@@ -68831,10 +68848,10 @@ kfR
 fGo
 kfR
 kfR
+kfR
 nPE
 nPE
-nPE
-stq
+rdj
 rdj
 rdj
 rdj

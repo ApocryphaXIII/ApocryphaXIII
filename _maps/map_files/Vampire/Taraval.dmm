@@ -6011,9 +6011,9 @@
 	pixel_x = -16
 	},
 /obj/structure/closet/crate/freezer/fridge,
-/obj/item/food/vampire/pizza,
-/obj/item/food/vampire/pizza,
-/obj/item/food/vampire/pizza,
+/obj/item/food/pizzaslice/square,
+/obj/item/food/pizzaslice/square,
+/obj/item/food/pizzaslice/square,
 /turf/open/floor/plating/vampplating,
 /area/space)
 "gsp" = (
@@ -16442,7 +16442,7 @@
 	dir = 8
 	},
 /obj/structure/table,
-/obj/item/food/vampire/donut,
+/obj/item/food/donut/plain,
 /turf/closed/wall/vampwall/market/low,
 /area/space)
 "rci" = (
@@ -16617,9 +16617,9 @@
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/vampiremilk,
-/obj/item/reagent_containers/food/condiment/vampiremilk,
-/obj/item/reagent_containers/food/condiment/vampiremilk,
+/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/milk,
 /obj/item/storage/fancy/egg_box,
 /obj/item/storage/fancy/egg_box,
 /obj/item/food/raw_sausage,
@@ -20114,7 +20114,7 @@
 /area/space)
 "vrn" = (
 /obj/structure/table,
-/obj/item/food/vampire/pizza,
+/obj/item/food/pizzaslice/square,
 /turf/open/floor/plating/bacotell,
 /area/space)
 "vrD" = (

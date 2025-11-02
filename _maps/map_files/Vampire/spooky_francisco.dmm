@@ -5088,12 +5088,6 @@
 /obj/structure/barrels/rand,
 /turf/open/floor/plating/rough,
 /area/vtm)
-"cVL" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 2
-	},
-/turf/open/floor/plating/vampdirt,
-/area/vtm)
 "cVT" = (
 /obj/effect/decal/carpet{
 	pixel_x = -14;
@@ -14576,7 +14570,6 @@
 	pixel_y = 20
 	},
 /obj/structure/bath{
-	density = 0;
 	pixel_y = 10
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -17088,12 +17081,6 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/interior)
-"jQZ" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 2
-	},
-/turf/open/floor/plating/vampdirt,
-/area/vtm/interior)
 "jRl" = (
 /obj/structure/chair/sofa/old/right{
 	dir = 1
@@ -19113,9 +19100,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/structure/bath{
-	density = 0
-	},
+/obj/structure/bath,
 /turf/closed/wall/vampwall/junk/low,
 /area/vtm/interior/ghetto)
 "lgf" = (
@@ -26040,7 +26025,6 @@
 	dir = 1
 	},
 /obj/structure/bath{
-	density = 0;
 	pixel_y = 10
 	},
 /obj/machinery/shower{
@@ -27686,7 +27670,6 @@
 /area/vtm/interior/ghetto)
 "pVT" = (
 /obj/structure/bath{
-	density = 0;
 	pixel_y = 10
 	},
 /obj/machinery/shower{
@@ -31715,7 +31698,6 @@
 /area/vtm/interior/police)
 "sjq" = (
 /obj/structure/bath{
-	density = 0;
 	pixel_y = 10
 	},
 /obj/machinery/shower{
@@ -35386,9 +35368,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/structure/bath{
-	density = 0
-	},
+/obj/structure/bath,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
 "una" = (
@@ -39558,6 +39538,12 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/techshop)
+"wIA" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/turf/closed/wall/vampwall,
+/area/vtm)
 "wIW" = (
 /obj/effect/decal/cleanable/trash,
 /mob/living/simple_animal/hostile/fister/hostile,
@@ -40008,7 +39994,6 @@
 /area/vtm)
 "wWG" = (
 /obj/structure/bath{
-	density = 0;
 	pixel_y = 10
 	},
 /obj/machinery/shower{
@@ -63971,7 +63956,7 @@ bCz
 hdl
 cGy
 tOl
-jQZ
+bmi
 brp
 bdA
 bdA
@@ -64421,7 +64406,7 @@ puI
 tlj
 oLt
 qBs
-igS
+gdF
 oQC
 oQC
 gdF
@@ -64742,12 +64727,12 @@ xaR
 xaR
 xaR
 nnH
-gdF
-oQC
-oQC
-gdF
-mRS
-rgY
+nnH
+nnH
+nnH
+nnH
+wIA
+nnH
 nnH
 "}
 
@@ -123792,7 +123777,7 @@ hYA
 qka
 hKN
 wUf
-cVL
+cdY
 lrK
 sWP
 sWP
@@ -123899,7 +123884,7 @@ hYA
 qka
 hKN
 wUf
-cVL
+cdY
 pcS
 sWP
 sWP
@@ -124006,7 +123991,7 @@ hYA
 qka
 hKN
 wUf
-cVL
+cdY
 nFc
 sWP
 sWP

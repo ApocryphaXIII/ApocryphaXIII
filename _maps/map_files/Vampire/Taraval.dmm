@@ -524,6 +524,15 @@
 /obj/machinery/vending/snack,
 /turf/open/floor/plating/vampcarpet,
 /area/space)
+"azW" = (
+/obj/structure/table/wood,
+/obj/machinery/button/curtain{
+	id = "borbo_house_2_curtain";
+	pixel_y = -1;
+	pixel_x = 8
+	},
+/turf/open/floor/carpet/vamp/greengold,
+/area/space)
 "aAc" = (
 /obj/structure/sink{
 	dir = 8;
@@ -1754,6 +1763,14 @@
 	dir = 4
 	},
 /turf/open/floor/plating/parquetry,
+/area/space)
+"bOZ" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 8;
+	color = "#636363"
+	},
+/obj/item/kirbyplants/random,
+/turf/open/floor/carpet/vamp/greengold,
 /area/space)
 "bPq" = (
 /obj/structure/tank_holder/extinguisher{
@@ -3682,10 +3699,10 @@
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "dJv" = (
-/obj/structure/vampdoor/npc,
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
+/obj/structure/vampdoor/wood,
 /turf/open/floor/plating/toilet/clinic,
 /area/space)
 "dJL" = (
@@ -4687,10 +4704,10 @@
 /turf/open/floor/plating/bacotell,
 /area/space)
 "ePg" = (
-/obj/effect/turf_decal/bordur/corner{
+/obj/structure/roofstuff/alt1,
+/obj/effect/turf_decal/bordur{
 	dir = 1
 	},
-/obj/structure/roofstuff/alt1,
 /turf/open/floor/plating/roofwalk,
 /area/space)
 "ePs" = (
@@ -5434,7 +5451,8 @@
 /area/space)
 "fJY" = (
 /obj/structure/vampdoor/npc{
-	dir = 8
+	dir = 8;
+	lock_id = "blorbo_sunset_2_door"
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -9304,6 +9322,12 @@
 	},
 /turf/open/floor/plating/bacotell,
 /area/space)
+"jCP" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/turf/closed/wall/vampwall/rich,
+/area/space)
 "jCU" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
@@ -9920,7 +9944,8 @@
 /area/space)
 "kiz" = (
 /obj/structure/vampdoor/npc{
-	lockpick_difficulty = 18
+	lockpick_difficulty = 18;
+	lock_id = "blorbo_sunset_2_door"
 	},
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/vampplating/stone,
@@ -10790,7 +10815,7 @@
 /area/space)
 "ljp" = (
 /obj/structure/sink{
-	pixel_y = 11;
+	pixel_y = 8;
 	dir = 1;
 	icon_state = "basin"
 	},
@@ -11292,7 +11317,7 @@
 /area/space)
 "lLf" = (
 /obj/effect/decal/shadow,
-/turf/open/floor/plating/vampgrass/random/grass,
+/turf/open/floor/plating/vampgrass,
 /area/space)
 "lLA" = (
 /obj/effect/decal/wallpaper/paper/darkgreen,
@@ -11424,6 +11449,16 @@
 	dir = 4
 	},
 /turf/open/floor/plating/toilet,
+/area/space)
+"lVP" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/obj/structure/curtain/cloth/fancy/mechanical/luxurious{
+	pixel_y = 8;
+	id = "borbo_house_2_curtain"
+	},
+/turf/closed/wall/vampwall/rich/low/window,
 /area/space)
 "lVQ" = (
 /obj/effect/turf_decal/bordur{
@@ -12001,12 +12036,6 @@
 "mDR" = (
 /obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalk,
-/area/space)
-"mFc" = (
-/obj/structure/fence{
-	pixel_y = 0
-	},
-/turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "mFv" = (
 /obj/effect/turf_decal/siding/white{
@@ -15574,12 +15603,11 @@
 /turf/open/floor/plating/gummaguts,
 /area/space)
 "qls" = (
-/obj/structure/table/wood,
 /obj/machinery/reagentgrinder{
-	pixel_y = 5;
-	pixel_x = -9;
-	layer = 3
+	pixel_y = 4;
+	pixel_x = -9
 	},
+/obj/structure/table/wood,
 /turf/open/floor/plating/vampplating/stone,
 /area/space)
 "qlB" = (
@@ -16775,8 +16803,8 @@
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "ryk" = (
-/obj/structure/vampdoor/npc{
-	dir = 8
+/obj/structure/vampdoor/wood{
+	dir = 4
 	},
 /turf/open/floor/plating/parquetry,
 /area/space)
@@ -16914,7 +16942,8 @@
 /area/space)
 "rHP" = (
 /obj/structure/vampdoor/npc{
-	dir = 8
+	dir = 8;
+	lock_id = "blorbo_sunset_2_door"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8;
@@ -19370,9 +19399,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/space)
 "uBF" = (
-/obj/structure/vampfence/rich{
-	pixel_y = 0
-	},
+/obj/structure/vampfence/rich,
 /turf/closed/wall/vampwall/rich/old/low,
 /area/space)
 "uBS" = (
@@ -19397,7 +19424,7 @@
 /area/space)
 "uEh" = (
 /obj/effect/decal/support,
-/turf/open/floor/plating/vampgrass/random/bushes,
+/turf/open/floor/plating/vampgrass,
 /area/space)
 "uEp" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -20618,10 +20645,6 @@
 	},
 /turf/open/floor/plating/parquetry,
 /area/space)
-"vWI" = (
-/obj/effect/decal/support,
-/turf/open/floor/plating/vampgrass/random/grass,
-/area/space)
 "vWX" = (
 /obj/structure/bath{
 	layer = 3
@@ -20871,7 +20894,8 @@
 /area/space)
 "wgL" = (
 /obj/structure/vampdoor/npc{
-	dir = 8
+	dir = 8;
+	lock_id = "blorbo_sunset_2_door"
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -20905,16 +20929,6 @@
 "whs" = (
 /obj/effect/decal/support,
 /turf/open/floor/plating/rough/cave,
-/area/space)
-"whV" = (
-/obj/structure/table/wood,
-/obj/machinery/button/curtain{
-	id = "borbo_house_2_curtain";
-	pixel_y = -1;
-	pixel_x = 8;
-	name = "Back Curtains"
-	},
-/turf/open/floor/carpet/vamp/greengold,
 /area/space)
 "wju" = (
 /obj/structure/vampdoor{
@@ -20964,18 +20978,12 @@
 /turf/open/floor/plating/parquetry,
 /area/space)
 "woa" = (
+/obj/item/toy/crayon/spraycan,
 /obj/item/toy/crayon/spraycan{
-	pixel_y = 10;
-	pixel_x = 2
+	pixel_x = 9
 	},
 /obj/item/toy/crayon/spraycan{
-	pixel_y = 17;
-	pixel_x = 10
-	},
-/obj/item/toy/crayon/spraycan{
-	pixel_x = -8;
-	pixel_y = 12;
-	layer = 2.9
+	pixel_x = -9
 	},
 /obj/structure/closet/crate,
 /turf/open/floor/plating/parquetry,
@@ -21236,7 +21244,6 @@
 /area/space)
 "wDR" = (
 /obj/structure/sink{
-	pixel_y = -1;
 	dir = 8;
 	icon_state = "basin";
 	pixel_x = -7
@@ -21604,13 +21611,13 @@
 /turf/closed/wall/vampwall/old/low,
 /area/space)
 "wWl" = (
-/obj/structure/closet,
 /obj/item/storage/box/drinkingglasses,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey,
 /obj/item/reagent_containers/food/drinks/soda_cans/cola,
 /obj/item/reagent_containers/food/drinks/soda_cans/cola,
 /obj/item/reagent_containers/food/drinks/soda_cans/cola,
 /obj/item/reagent_containers/food/drinks/soda_cans/cola,
+/obj/structure/closet/cabinet,
 /turf/open/floor/plating/vampplating/stone,
 /area/space)
 "wWt" = (
@@ -22209,6 +22216,10 @@
 	color = "#636363"
 	},
 /area/space)
+"xHe" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/carpet/vamp/greengold,
+/area/space)
 "xIp" = (
 /obj/structure/vampdoor{
 	baseicon = "wood";
@@ -22252,8 +22263,7 @@
 /area/space)
 "xKZ" = (
 /obj/structure/vampfence/rich{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/open/floor/plating/vampgrass,
 /area/space)
@@ -22659,6 +22669,17 @@
 /area/space)
 "yfB" = (
 /turf/open/floor/plating/vampcrossableocean,
+/area/space)
+"ygy" = (
+/obj/structure/curtain/cloth/fancy/mechanical/luxurious{
+	pixel_y = 8;
+	id = "borbo_house_2_curtain"
+	},
+/obj/structure/curtain/cloth/fancy/mechanical/luxurious{
+	pixel_y = 8;
+	id = "borbo_house_2_curtain"
+	},
+/turf/closed/wall/vampwall/rich/low/window,
 /area/space)
 "ygP" = (
 /obj/structure/stairs/north,
@@ -55207,7 +55228,7 @@ dNc
 dNc
 mmU
 gey
-mFc
+rrd
 mmU
 rrd
 ssM
@@ -57335,7 +57356,7 @@ dNc
 dNc
 mmU
 gey
-mFc
+rrd
 mmU
 rrd
 ssM
@@ -169723,7 +169744,7 @@ mTu
 nIk
 rml
 ihN
-vWI
+uEh
 mpb
 mpb
 mpb
@@ -170624,12 +170645,12 @@ ruE
 uom
 gYF
 mWb
-gug
-gug
+jCP
+lVP
 gnA
 sQJ
 sQJ
-sQJ
+eML
 eML
 eML
 eML
@@ -170776,12 +170797,12 @@ ruE
 uom
 gYF
 mWb
-hym
 mlb
-mlb
+bOZ
 kFh
 mmW
 nbB
+eML
 eML
 eML
 nIk
@@ -170928,12 +170949,12 @@ ruE
 uom
 gYF
 mWb
-hym
 mlb
 pcD
 kGK
 kGK
 iCm
+eML
 eML
 eML
 tpY
@@ -171080,12 +171101,12 @@ ruE
 uom
 gYF
 mWb
-hym
 mlb
-whV
+azW
 kGK
 kGK
 iCm
+eML
 eML
 eML
 tpY
@@ -171232,12 +171253,12 @@ ruE
 uom
 gYF
 mWb
-hym
 mlb
-mlb
+xHe
 sha
 cdh
 tRk
+eML
 eML
 eML
 tpY
@@ -171384,8 +171405,8 @@ ruE
 uom
 gYF
 mWb
-hym
-hym
+nIk
+ygy
 nIk
 nIk
 nIk
@@ -193426,7 +193447,7 @@ aWu
 aWu
 aWu
 ePg
-kMw
+feO
 lct
 bhv
 gnw
@@ -193577,7 +193598,7 @@ aWu
 aWu
 aWu
 aWu
-aWu
+aMN
 nIk
 nIk
 nIk
@@ -193729,7 +193750,7 @@ aWu
 aWu
 aWu
 aWu
-aWu
+aMN
 tpY
 kkJ
 hxd
@@ -193881,7 +193902,7 @@ aWu
 aWu
 aWu
 aWu
-aWu
+aMN
 tpY
 wsf
 fXp
@@ -194033,7 +194054,7 @@ aWu
 aWu
 aWu
 aWu
-aWu
+aMN
 nIk
 tpY
 hMr
@@ -194185,8 +194206,8 @@ aWu
 aWu
 aWu
 aWu
-aWu
-aWu
+ant
+kMw
 nIk
 nIk
 nIk

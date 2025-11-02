@@ -5,12 +5,34 @@
 	set desc = "Change what sound plays when you speak."
 
 	var/list/sound_options = list("Talk", "Pencil", "Speak 1", "Speak 2", "Speak 3", "Speak 4", "Buwoo", "Cow", "Pug", "None")
-	var/new_sound = tgui_input_list(usr, "Choose your vocal sound:", "Vocal Sound", sound_options, prefs.vocal_sound)
+	var/new_sound_text = tgui_input_list(usr, "Choose your vocal sound:", "Vocal Sound", sound_options, prefs.chosen_vocal_sound)
+	var/new_sound
+	switch(new_sound_text)
+		if("Talk")
+			new_sound = 1
+		if("Pencil")
+			new_sound = 2
+		if("Buwoo")
+			new_sound = 3
+		if("Cow")
+			new_sound = 4
+		if("Pug")
+			new_sound = 5
+		if("Speak 1")
+			new_sound = 6
+		if("Speak 2")
+			new_sound = 7
+		if("Speak 3")
+			new_sound = 8
+		if("Speak 4")
+			new_sound = 9
+		if("None")
+			new_sound = 10
 
-	if(new_sound && new_sound != prefs.vocal_sound)
-		prefs.vocal_sound = new_sound
+	if(new_sound && new_sound != prefs.chosen_vocal_sound)
+		prefs.chosen_vocal_sound = new_sound
 		prefs.save_preferences()
-		to_chat(usr, "Your vocal sound has been changed to: [new_sound]")
+		to_chat(usr, "Your vocal sound has been changed to: [new_sound_text]")
 		SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Change Vocal Sound", new_sound))
 
 /client/verb/toggle_vocal_sounds()

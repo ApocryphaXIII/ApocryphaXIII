@@ -241,13 +241,14 @@
 	if(!ishuman(user) || !user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
 		return ..()
 	var/mob/living/carbon/human/H = user
-	if(src == H.back && H.w_uniform)
+	if(src == H.back && H.w_uniform && !user.get_active_held_item()) // APOC EDIT CHANGE - Only conceal if we have an empty hand
+		add_fingerprint(H) // APOC EDIT ADD - FORENSICS!
 		icon_hidden = !icon_hidden
 		worn_icon_state = icon_hidden ? "nothing" : initial(worn_icon_state)
 		to_chat(H, "<span class='notice'>You [icon_hidden ? "conceal" : "reveal"] [src].</span>")
 		H.update_inv_back()
-	else if(!H.w_uniform)
-		to_chat(H, span_warning("Conceal [src] under what? Your skin?"))
+	else // APOC EDIT CHANGE START - Just open the backpack instead of throwing an error. Also works when the bag is on the ground.
+		return ..() // APOC EDIT CHANGE END
 
 /obj/item/storage/backpack/satchel/leather
 	name = "leather satchel"

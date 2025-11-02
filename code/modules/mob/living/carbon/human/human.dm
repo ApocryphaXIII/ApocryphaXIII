@@ -1273,6 +1273,7 @@ GLOBAL_VAR_INIT(voice_tags_counter, 10)
 
 /mob/living/carbon/human/species/vamp_mannequin
 	race = /datum/species/vamp_mannequin
+	toxic_blood = TRUE // APOC EDIT ADD
 
 /mob/living/carbon/human/species/vamp_mannequin/napoleon
 

@@ -25,6 +25,7 @@
 	speed = 1
 	AIStatus = AI_OFF
 	var/mob/living/target_to_zombebe
+	toxic_blood = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/hostile/zombie/Destroy()
 	. = ..()

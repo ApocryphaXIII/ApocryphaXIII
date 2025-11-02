@@ -4719,7 +4719,6 @@
 /area/space)
 "ePU" = (
 /obj/structure/bath{
-	density = 0;
 	pixel_y = 10
 	},
 /obj/machinery/shower{
@@ -7661,9 +7660,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/structure/bath{
-	density = 0
-	},
+/obj/structure/bath,
 /turf/open/floor/plating/vampplating/stone,
 /area/space)
 "hYT" = (
@@ -7998,8 +7995,8 @@
 "ioz" = (
 /obj/vampire_car/retro/rand{
 	dir = 1;
-	id = "blorbo_sunset_2_door";
-	pixel_x = 16
+	pixel_x = 16;
+	access = "blorbo_sunset_2_door"
 	},
 /turf/open/floor/plating/asphalt,
 /area/space)
@@ -9152,7 +9149,6 @@
 	dir = 1
 	},
 /obj/structure/bath{
-	density = 0;
 	pixel_y = 10
 	},
 /obj/machinery/shower{

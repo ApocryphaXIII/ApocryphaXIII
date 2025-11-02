@@ -39712,6 +39712,10 @@
 /obj/structure/table/wood,
 /turf/closed/wall/vampwall/old/low,
 /area/vtm/interior/techshop)
+"wOn" = (
+/obj/machinery/roulette,
+/turf/open/floor/eighties,
+/area/vtm/interior/shop)
 "wOt" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 6
@@ -47845,7 +47849,7 @@ jhF
 iFQ
 wZM
 pQK
-xWB
+cMY
 pQK
 ogS
 ogS
@@ -48164,9 +48168,9 @@ qmj
 jhF
 jhF
 iFQ
-xWB
+cMY
 pQK
-xWB
+wOn
 pQK
 pQK
 mJA

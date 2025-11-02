@@ -5157,6 +5157,7 @@
 /obj/item/candle{
 	pixel_y = 6
 	},
+/obj/effect/landmark/npcwall,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/jazzclub)
 "cXA" = (
@@ -12962,6 +12963,14 @@
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm/sewer)
+"hwM" = (
+/obj/effect/turf_decal/siding/white{
+	color = "#BD3327";
+	dir = 4
+	},
+/obj/effect/landmark/npcwall,
+/turf/open/floor/plating/sidewalk/old,
+/area/vtm)
 "hwN" = (
 /obj/machinery/light/prince{
 	dir = 4
@@ -13039,6 +13048,7 @@
 /obj/structure/chair/sofa/bench/metal/left{
 	dir = 8
 	},
+/obj/effect/landmark/npcwall,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/anarch)
 "hAt" = (
@@ -17049,6 +17059,7 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
+/obj/effect/landmark/npcwall,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm)
 "jQs" = (
@@ -24503,6 +24514,14 @@
 /obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/shop)
+"ohr" = (
+/obj/effect/turf_decal/siding/white{
+	color = "#434343";
+	dir = 8
+	},
+/obj/effect/landmark/npcwall,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm)
 "ohF" = (
 /obj/structure/curtain/bounty{
 	pixel_x = -32;
@@ -30969,7 +30988,6 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 1
 	},
-/obj/effect/landmark/npcwall,
 /turf/open/floor/plating/parquetry,
 /area/vtm/jazzclub)
 "rPU" = (
@@ -31903,7 +31921,6 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 1
 	},
-/obj/effect/landmark/npcwall,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch)
 "spq" = (
@@ -58913,7 +58930,7 @@ hYA
 vkQ
 jrM
 vqi
-xJx
+mmZ
 xJx
 rPH
 cyd
@@ -59020,7 +59037,7 @@ hYA
 wdW
 xJx
 xJx
-xJx
+mmZ
 xJx
 dCA
 cyd
@@ -59127,7 +59144,7 @@ hYA
 iIv
 oHC
 oHC
-oHC
+hwM
 oHC
 beH
 upz
@@ -59234,7 +59251,7 @@ hYA
 txc
 kQO
 kQO
-kQO
+ohr
 kQO
 xzk
 pmB
@@ -59341,7 +59358,7 @@ hYA
 aTT
 rgY
 rgY
-rgY
+qfK
 rgY
 idq
 mUF
@@ -59448,7 +59465,7 @@ hYA
 fBn
 xSX
 xgb
-rgY
+qfK
 rgY
 spc
 mUF
@@ -59555,7 +59572,7 @@ hYA
 kSM
 qmj
 qlp
-rgY
+qfK
 rgY
 idq
 dTQ

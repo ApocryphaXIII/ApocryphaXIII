@@ -1,12 +1,12 @@
 /obj/structure/werewolf_totem
-	name = "Tribe Totem"
+	name = "tribe totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon = 'icons/mob/32x64.dmi'
 	icon_state = "glassw"
 	anchored = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-	var/tribe
+	var/list/tribe
 	var/totem_health = 500
 	var/obj/effect/overlay/totem_light_overlay
 	var/totem_overlay_color = "#FFFFFF"
@@ -27,6 +27,9 @@
 
 /obj/structure/werewolf_totem/Initialize()
 	. = ..()
+	if(!islist(tribe))
+		tribe = list(tribe)
+
 	for(var/obj/effect/landmark/teleport_mark/T in GLOB.landmarks_list)
 		if(T.tribe == tribe)
 			teleport_turf = get_turf(T)
@@ -53,7 +56,7 @@
 			for(var/mob/living/carbon/C in GLOB.player_list)
 				if(iswerewolf(C) || isgarou(C))
 					if(C.stat != DEAD)
-						if(C.auspice.tribe.name == tribe)
+						if(C.auspice.tribe.name in tribe)
 							set_light(0)
 							to_chat(C, "<span class='userdanger'><b>YOUR TOTEM IS DESTROYED</b></span>")
 							SEND_SOUND(C, sound('sound/effects/tendril_destroyed.ogg', 0, 0, 75))
@@ -66,7 +69,7 @@
 			for(var/mob/living/carbon/C in GLOB.player_list)
 				if(iswerewolf(C) || isgarou(C))
 					if(C.stat != DEAD)
-						if(C.auspice.tribe.name== tribe)
+						if(C.auspice.tribe.name in tribe) // APOC EDIT CHANGE
 							if(last_rage+50 < world.time)
 								last_rage = world.time
 								to_chat(C, "<span class='userdanger'><b>YOUR TOTEM IS BREAKING DOWN</b></span>")
@@ -79,7 +82,7 @@
 				for(var/mob/living/carbon/C in GLOB.player_list)
 					if(iswerewolf(C) || isgarou(C))
 						if(C.stat != DEAD)
-							if(C.auspice.tribe.name == tribe)
+							if(C.auspice.tribe.name in tribe)
 								to_chat(C, "<span class='userhelp'><b>YOUR TOTEM IS RESTORED</b></span>")
 								SEND_SOUND(C, sound('code/modules/wod13/sounds/inspire.ogg', 0, 0, 75))
 								adjust_gnosis(1, C, FALSE)
@@ -92,28 +95,28 @@
 	name = "Galestalkers Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon_state = "wendigo"
-	tribe = "Galestalkers"
+	tribe = list(TRIBE_GALESTALKERS)
 	totem_overlay_color = "#81ff4f"
 
 /obj/structure/werewolf_totem/children_of_gaia
 	name = "Children of Gaia Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon_state = "wendigo"
-	tribe = "Children of Gaia"
+	tribe = list(TRIBE_CHILDRENOFGAIA)
 	totem_overlay_color = "#00CEC8"
 
 /obj/structure/werewolf_totem/bone_gnawer
 	name = "Bone Gnawer Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon_state = "wendigo"
-	tribe = "Bone Gnawers"
+	tribe = list(TRIBE_BONEGNAWERS)
 	totem_overlay_color = "#FFA500"
 
 /obj/structure/werewolf_totem/glasswalker
 	name = "Glasswalker Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon_state = "glassw"
-	tribe = "Glass Walkers"
+	tribe = list(TRIBE_GLASSWALKERS)
 	totem_overlay_color = "#35b0ff"
 
 /obj/structure/werewolf_totem/spiral
@@ -121,7 +124,7 @@
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon = 'code/modules/wod13/64x32.dmi'
 	icon_state = "spiral"
-	tribe = "Black Spiral Dancers"
+	tribe = list(TRIBE_BLACKSPIRALDANCERS)
 	totem_overlay_color = "#ff5235"
 
 /obj/effect/landmark/teleport_mark
@@ -162,3 +165,23 @@
 					qdel(prev)
 		else
 			adjust_totem_health(round(C.melee_damage_lower/2))
+
+// APOC ADD START
+/obj/structure/werewolf_totem/generic
+	icon_state = "wendigo"
+	tribe = TRIBE_GAIA
+
+/obj/structure/werewolf_totem/generic/wyld
+	tribe = TRIBE_WYLD
+
+/obj/structure/werewolf_totem/generic/weaver
+	icon_state = "glassw"
+	tribe = TRIBE_WEAVER
+
+/obj/structure/werewolf_totem/generic/wyrm
+	icon_state = "spiral"
+	tribe = TRIBE_WYRM
+
+/obj/structure/werewolf_totem/generic/alltribes
+	tribe = TRIBE_ALL
+// APOC ADD END

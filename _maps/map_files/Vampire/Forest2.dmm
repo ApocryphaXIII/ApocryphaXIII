@@ -40,7 +40,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "v" = (
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/space)
 "w" = (
 /obj/structure/flora/ausbushes/lavendergrass,

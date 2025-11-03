@@ -3968,7 +3968,7 @@
 	dir = 4;
 	name = "window bars"
 	},
-/turf/closed/wall/vampwall/low/window,
+/turf/closed/wall/vampwall/brick_old/low/window,
 /area/space)
 "ecN" = (
 /obj/structure/railing/metal/corner{
@@ -8888,7 +8888,7 @@
 /area/space)
 "jvx" = (
 /obj/effect/decal/wallpaper/red,
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/space)
 "jvV" = (
 /obj/structure/chair/sofa/corp/right{
@@ -10692,7 +10692,7 @@
 /area/space)
 "ltr" = (
 /obj/effect/decal/wallpaper/grey,
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/space)
 "ltX" = (
 /obj/effect/turf_decal/bordur/corner{
@@ -11234,7 +11234,7 @@
 /turf/open/floor/plating/parquetry,
 /area/space)
 "mfi" = (
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/space)
 "mfs" = (
 /obj/machinery/light/prince{
@@ -11381,7 +11381,7 @@
 /obj/structure/fence{
 	pixel_y = -15
 	},
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/space)
 "mnd" = (
 /obj/structure/table/wood,

@@ -1585,7 +1585,7 @@
 	},
 /area/vtm/interior/penumbra)
 "sp" = (
-/turf/closed/wall/vampwall{
+/turf/closed/wall/vampwall/brick_old{
 	umbra = 1
 	},
 /area/vtm/interior/penumbra)
@@ -2876,7 +2876,7 @@
 	},
 /area/vtm/interior/penumbra)
 "FW" = (
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/vtm/interior/penumbra)
 "Gg" = (
 /obj/effect/decal/carpet{

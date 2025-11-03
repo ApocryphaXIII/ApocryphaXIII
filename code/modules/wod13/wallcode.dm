@@ -135,7 +135,7 @@ LOW_WALL_HELPER(vampwall)
 
 /turf/closed/wall/vampwall/low/window
 	icon_state = "wall-window"
-
+/* // APOC EDIT REMOVE START - Darkpack autocut fix
 /turf/closed/wall/vampwall/rich
 	name = "rich-looking wall"
 	desc = "A huge chunk of expensive bricks used to separate rooms."
@@ -317,7 +317,7 @@ LOW_WALL_HELPER(vampwall/wood)
 	desc = "A huge chunk of red bricks used to separate rooms."
 	icon_state = "redbrick-0"
 	base_icon_state = "redbrick"
-
+*/ // APOC EDIT REMOVE END
 //TURFS
 
 /obj/effect/turf_decal/asphalt

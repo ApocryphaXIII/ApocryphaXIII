@@ -269,7 +269,7 @@
 /turf/open/floor/plating/vampplating/stairs/black/left,
 /area/vtm/interior/movie_theatre)
 "ww" = (
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/awaymission/errorroom)
 "wR" = (
 /obj/effect/decal/cleanable/cobweb,

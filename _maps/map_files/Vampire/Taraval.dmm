@@ -7337,7 +7337,7 @@
 "gAt" = (
 /obj/structure/chair/sofa/bench/metal/left{
 	dir = 1;
-	color = #3A424F
+	color = "#3A424F"
 	},
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/endron_facility)

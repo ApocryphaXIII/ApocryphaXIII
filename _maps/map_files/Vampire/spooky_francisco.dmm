@@ -16062,6 +16062,13 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/millennium_tower/f4)
+"jlj" = (
+/obj/item/paper{
+	default_raw_text = "Branch Leader - 0666 | Executive - 0333 | Internal Affairs - 0432"
+	},
+/obj/structure/noticeboard/directional/north,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility)
 "jlC" = (
 /obj/structure/table/wood/fancy/green,
 /obj/machinery/fax/endron,
@@ -24143,6 +24150,16 @@
 /obj/structure/table,
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/ghetto)
+"nWk" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = 10
+	},
+/obj/structure/mirror/directional/north{
+	layer = 2.8
+	},
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility)
 "nWo" = (
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/machinery/iv_drip,
@@ -27372,11 +27389,6 @@
 	pixel_y = 15;
 	pixel_x = 16
 	},
-/obj/effect/decal/carpet{
-	icon_state = "greencarpet";
-	pixel_y = 15;
-	pixel_x = 16
-	},
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/police)
 "pNb" = (
@@ -28675,6 +28687,11 @@
 	pixel_x = -11
 	},
 /obj/item/folder/blue,
+/obj/effect/decal/carpet{
+	icon_state = "greencarpet";
+	pixel_y = 15;
+	pixel_x = 16
+	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
 "qBs" = (
@@ -39385,6 +39402,14 @@
 "wDE" = (
 /turf/closed/wall/vampwall/rich/old,
 /area/vtm)
+"wDW" = (
+/obj/structure/vampdoor/npc{
+	dir = 8;
+	lockpick_difficulty = 12;
+	locked = 0
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/sewer/nosferatu_town)
 "wEc" = (
 /obj/structure/table/wood,
 /turf/open/floor/plating/woodrough,
@@ -42149,9 +42174,6 @@
 /area/vtm/interior)
 "yhG" = (
 /obj/structure/filingcabinet/chestdrawer,
-/obj/item/paper{
-	default_raw_text = "Branch Leader - 0666 | Executive - 0333 | Internal Affairs - 0432"
-	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility)
 "yib" = (
@@ -50779,7 +50801,7 @@ lNg
 lNg
 lNg
 lNg
-mKG
+wDW
 lNg
 lNg
 rtV
@@ -54411,7 +54433,7 @@ vFD
 goD
 nCx
 aIh
-mXA
+jlj
 nCx
 hwE
 nUO
@@ -55386,7 +55408,7 @@ nCx
 nCx
 oMY
 aIh
-fZg
+nWk
 fZg
 mna
 hLI

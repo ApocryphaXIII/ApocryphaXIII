@@ -62,6 +62,7 @@
 	canSmoothWith = list(SMOOTH_GROUP_CITY_WALL)
 
 	var/obj/effect/addwall/addwall
+	var/frill_icon = /obj/effect/addwall::icon
 	var/low = FALSE
 	var/window
 
@@ -113,6 +114,7 @@
 	else if(!low)
 		addwall = new(get_step(src, NORTH))
 		addwall.icon_state = icon_state
+		addwall.icon = frill_icon
 		addwall.name = name
 		addwall.desc = desc
 

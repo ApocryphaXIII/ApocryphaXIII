@@ -1220,7 +1220,7 @@ LOW_WALL_HELPER(vampwall/wood)
 	..()
 	set_light(1, 0.5, "#1b7c4c")
 
-
+/* APOC EDIT REMOVE - This shit sucks
 /turf/open/floor/plating/vampacid/Entered(atom/movable/AM)
 	if(acid_burn(AM))
 		START_PROCESSING(SSobj, src)
@@ -1232,7 +1232,7 @@ LOW_WALL_HELPER(vampwall/wood)
 		L.apply_damage(10, CLONE)
 		L.apply_damage(30, TOX)
 		to_chat(L, "<span class='warning'>Your flesh burns!</span>")
-
+*/ // APOC EDIT REMOVE
 
 
 /obj/effect/decal/coastline

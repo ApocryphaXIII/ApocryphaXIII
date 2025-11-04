@@ -14,7 +14,7 @@
 	var/votable = FALSE
 
 	// Config actually from the JSON - should default to Meta
-	var/map_name = "Spooky Francisco"
+	var/map_name = "San Francisco"
 	var/map_path = "map_files/Vampire"
 	var/map_file = "spooky_francisco.dmm"
 

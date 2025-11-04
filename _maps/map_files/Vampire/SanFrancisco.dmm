@@ -6649,7 +6649,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf/lower)
 "bAb" = (
-/mob/living/simple_animal/hostile/crinos_beast,
+/mob/living/simple_animal/hostile/bear/wod13,
 /turf/open/floor/plating/stone,
 /area/vtm/forest)
 "bAl" = (

@@ -47,6 +47,7 @@
 	/mob/living/simple_animal/hostile/retaliate/goose = 0.5,
 	/mob/living/simple_animal/hostile/retaliate/frog = 0.5,
 	/mob/living/simple_animal/pet/fox = 0.1,
+	/mob/living/simple_animal/pet/dog/wolfkin = 0.01,
 	)
 	fauna_density = 1
 
@@ -65,6 +66,7 @@
 	/mob/living/simple_animal/hostile/retaliate/goose = 0.5,
 	/mob/living/simple_animal/hostile/retaliate/frog = 0.5,
 	/mob/living/simple_animal/pet/fox = 0.1,
+	/mob/living/simple_animal/pet/dog/wolfkin = 0.01,
 	)
 	fauna_density = 1
 

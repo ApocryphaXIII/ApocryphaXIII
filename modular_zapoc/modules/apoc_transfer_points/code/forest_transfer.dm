@@ -22,3 +22,6 @@
 
 /obj/transfer_point_vamp/forest/caern/four
 	id = "caern_4"
+
+/obj/transfer_point_vamp/forest/pentex
+	id = "pentex_logging"

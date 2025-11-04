@@ -102,7 +102,7 @@
 	icon = "hierophant"
 
 /datum/award/achievement/boss/legion_crusher
-	name = "Legion Crusher"
+	name = "Gray Crusher"
 	desc = "We were many... now we are none."
 	database_id = BOSS_MEDAL_LEGION_CRUSHER
 

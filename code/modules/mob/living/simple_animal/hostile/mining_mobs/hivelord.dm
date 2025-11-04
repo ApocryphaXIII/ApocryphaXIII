@@ -95,7 +95,7 @@
 
 //Legion
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion
-	name = "legion"
+	name = "gray man" // APOC EDIT CHANGE - Lavaland2Umbra
 	desc = "You can still see what was once a human under the shifting mass of corruption."
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion"
@@ -114,7 +114,7 @@
 	attack_sound = 'sound/weapons/pierce.ogg'
 	throw_message = "bounces harmlessly off of"
 	crusher_loot = /obj/item/crusher_trophy/legion_skull
-	loot = list(/obj/item/organ/regenerative_core/legion)
+//	loot = list(/obj/item/organ/regenerative_core/legion)
 	brood_type = /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion
 	del_on_death = 1
 	stat_attack = HARD_CRIT
@@ -129,7 +129,7 @@
 		return INITIALIZE_HINT_QDEL
 
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf
-	name = "dwarf legion"
+	name = "small gray man" // APOC EDIT CHANGE - Lavaland2Umbra
 	desc = "You can still see what was once a rather small human under the shifting mass of corruption."
 	icon_state = "dwarf_legion"
 	icon_living = "dwarf_legion"
@@ -142,7 +142,7 @@
 	dwarf_mob = TRUE
 
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion/death(gibbed)
-	visible_message("<span class='warning'>The skulls on [src] wail in anger as they flee from their dying host!</span>")
+	visible_message("<span class='warning'>The spores on [src] wail in anger as they flee from their dying host!</span>") // APOC EDIT CHANGE - Lavaland2Umbra
 	var/turf/T = get_turf(src)
 	if(T)
 		if(stored_mob)
@@ -161,8 +161,8 @@
 
 //Legion skull
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion
-	name = "legion"
-	desc = "One of many."
+	name = "gray spore blob" // APOC EDIT CHANGE - Lavaland2Umbra
+	desc = "A mass of evil spores." // APOC EDIT CHANGE - Lavaland2Umbra
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_head"
 	icon_living = "legion_head"
@@ -237,7 +237,7 @@
 
 //Legion that spawns Legions
 /mob/living/simple_animal/hostile/big_legion
-	name = "legion"
+	name = "enormous gray man" // APOC EDIT CHANGE - Lavaland2Umbra
 	desc = "One of many."
 	icon = 'icons/mob/lavaland/64x64megafauna.dmi'
 	icon_state = "legion"
@@ -289,7 +289,49 @@
 	. = ..()
 	H.dna.add_mutation(DWARFISM)
 
-/obj/effect/mob_spawn/human/corpse/damaged/legioninfested/Initialize()
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested/Initialize() // APOC EDIT START
+	var/type = pickweight(list("EndronSci" = 66, "EndronSec" = 10, "Garou" = 10, "Police" = 10, pick(list("Ciz1", "Ciz2", "Ciz3", "Ciz4")) = 4))
+	switch(type)
+		if("EndronSci")
+			uniform = /obj/item/clothing/under/pentex/pentex_turtleneck
+			suit = /obj/item/clothing/suit/vampire/labcoat
+			gloves = /obj/item/clothing/gloves/vampire/latex
+			shoes = /obj/item/clothing/shoes/vampire
+			l_pocket = /obj/item/vamp/phone
+		if("EndronSec")
+			shoes = /obj/item/clothing/shoes/vampire/jackboots
+			uniform = /obj/item/clothing/under/pentex/pentex_turtleneck
+			r_pocket = /obj/item/stack/dollar/rand
+			gloves = /obj/item/clothing/gloves/vampire/work
+			suit = /obj/item/clothing/suit/vampire/vest
+			glasses = /obj/item/clothing/glasses/vampire/sun
+			hat = /obj/item/clothing/head/beret/black
+			mask = /obj/item/clothing/mask/vampire/balaclava
+		if("Garou")
+			id = /obj/item/card/id/garou/glade/guardian
+			uniform =  /obj/item/clothing/under/vampire/biker
+			shoes = /obj/item/clothing/shoes/vampire/jackboots
+			head = /obj/item/clothing/head/vampire/baseballcap
+			belt = /obj/item/melee/classic_baton/vampire
+			gloves = /obj/item/clothing/gloves/vampire/leather
+			suit = /obj/item/clothing/suit/vampire/jacket
+		if("Police")
+			shoes = /obj/item/clothing/shoes/vampire/jackboots
+			uniform = /obj/item/clothing/under/vampire/police
+			hat = /obj/item/clothing/head/vampire/police
+			suit = /obj/item/clothing/suit/vampire/vest/police
+			r_pocket = /obj/item/stack/dollar/rand
+		if("Ciz1")
+			outfit = /datum/outfit/civillian1
+		if("Ciz2")
+			outfit = /datum/outfit/civillian2
+		if("Ciz3")
+			outfit = /datum/outfit/civillian3
+		if("Ciz4")
+			outfit = /datum/outfit/civillian4
+	. = ..() // APOC EDIT END
+
+/*/obj/effect/mob_spawn/human/corpse/damaged/legioninfested/Initialize()
 	var/type = pickweight(list("Miner" = 66, "Ashwalker" = 10, "Golem" = 10,"Clown" = 10, pick(list("Shadow", "YeOlde","Operative", "Cultist")) = 4))
 	switch(type)
 		if("Miner")
@@ -386,7 +428,7 @@
 			l_pocket = /obj/item/melee/cultblade/dagger
 			glasses =  /obj/item/clothing/glasses/hud/health/night/cultblind
 			backpack_contents = list(/obj/item/reagent_containers/glass/beaker/unholywater = 1, /obj/item/cult_shift = 1, /obj/item/flashlight/flare/culttorch = 1, /obj/item/stack/sheet/runed_metal = 15)
-	. = ..()
+	. = ..()*/
 
 // Snow Legion
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion/snow

@@ -12,3 +12,6 @@
 
 /area/vtm/forest/interior/cabin
 	name = "Forest Cabin"
+
+/area/vtm/forest/interior/abandoned_cabin
+	name = "Abandoned Cabin"

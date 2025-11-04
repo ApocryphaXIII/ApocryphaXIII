@@ -229,8 +229,6 @@ LOW_WALL_HELPER(vampwall/brick)
 	base_icon_state = "rock"
 	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_MINERAL_WALLS)
 	canSmoothWith = list(SMOOTH_GROUP_MINERAL_WALLS)
-	frill_icon = 'modular_zapoc/modules/apoc_walls/icons/rockwall/frill.dmi'
-
 
 /turf/closed/wall/vampwall/city
 	name = "wall"

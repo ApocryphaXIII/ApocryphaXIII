@@ -1,8 +1,8 @@
 {
 	"version": 1,
-	"map_name": "Spooky Francisco",
+	"map_name": "Special Francisco",
 	"map_path": "map_files/Vampire",
-	"map_file": "spooky_francisco.dmm",
+	"map_file": "special_francisco.dmm",
 	"traits": [
 		{
 			"Up": 1,

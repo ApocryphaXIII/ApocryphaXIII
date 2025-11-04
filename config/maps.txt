@@ -14,11 +14,10 @@ Format:
 endmap
 
 map kindredcity
+default
 endmap
 
-map spookyfrancisco
-	votable
-	default
+map specialfrancisco
 endmap
 
 map runtimetown

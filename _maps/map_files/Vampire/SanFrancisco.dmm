@@ -9894,7 +9894,9 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
 "cnA" = (
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "cnG" = (
@@ -19740,10 +19742,6 @@
 /obj/structure/chair/sofa/corp/right,
 /turf/open/floor/carpet/vamp/greengold,
 /area/vtm/anarch)
-"eGB" = (
-/obj/structure/werewolf_totem/generic,
-/turf/closed/wall/vampwall/wood/low,
-/area/vtm/forest/sept)
 "eGE" = (
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/concrete,
@@ -19968,6 +19966,12 @@
 /obj/structure/fuelstation,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/unionsquare)
+"eJm" = (
+/obj/item/flashlight/lantern{
+	on = 1
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior)
 "eJr" = (
 /obj/structure/glowshroom,
 /turf/open/floor/plating/vampgrass,
@@ -29070,7 +29074,9 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/forest)
 "gRK" = (
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /obj/structure/railing{
 	dir = 8
 	},
@@ -39078,7 +39084,9 @@
 /turf/open/floor/carpet/purple,
 /area/vtm/interior/millennium_tower/ventrue)
 "jnl" = (
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/plating/vampgrass/random/grass,
 /area/vtm/forest)
 "jnp" = (
@@ -53564,10 +53572,6 @@
 /obj/structure/fermenting_barrel,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/forest/sept)
-"mMh" = (
-/obj/item/reagent_containers/food/drinks/beer/vampire,
-/turf/open/floor/plating/vampbeach,
-/area/vtm/forest)
 "mMl" = (
 /obj/structure/vampipe{
 	pixel_y = 32
@@ -69195,7 +69199,9 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/millennium_tower/f4)
 "qlg" = (
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm/forest/sept)
 "qlh" = (
@@ -70985,7 +70991,9 @@
 /turf/closed/wall/vampwall/brick_old,
 /area/vtm)
 "qGK" = (
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /obj/structure/small_vamprocks,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
@@ -71541,7 +71549,9 @@
 /area/vtm)
 "qMh" = (
 /obj/effect/decal/carpet,
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest/sept)
 "qMp" = (
@@ -72220,7 +72230,9 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/anarch/basement)
 "qUc" = (
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/plating/rough/cave,
 /area/vtm/forest/interior/cave)
 "qUl" = (
@@ -82656,7 +82668,9 @@
 /turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/setite)
 "trn" = (
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
 	},
@@ -87207,7 +87221,9 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/voivodate/sanctum)
 "uyM" = (
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /obj/structure/railing{
 	dir = 4
 	},
@@ -93219,7 +93235,9 @@
 /area/vtm/interior)
 "vVH" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern{
+	on = 1
+	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest)
 "vVV" = (
@@ -267059,7 +267077,7 @@ jps
 jps
 jps
 jps
-dsr
+eJm
 eyq
 mTj
 mTj
@@ -501562,8 +501580,8 @@ gQK
 gQK
 inj
 inj
-inj
-inj
+hrb
+veg
 inj
 gQK
 gQK
@@ -501819,8 +501837,8 @@ gQK
 inj
 inj
 inj
-eGB
-inj
+sNn
+skG
 inj
 inj
 gQK
@@ -502076,8 +502094,8 @@ gQK
 gQK
 inj
 inj
-inj
-inj
+taf
+veg
 inj
 gQK
 gQK
@@ -503904,8 +503922,8 @@ pGE
 nwa
 bDj
 bDj
-hrb
-veg
+bDj
+bDj
 bDj
 cYG
 bDj
@@ -504161,8 +504179,8 @@ bDj
 bDj
 bDj
 bDj
-sNn
-skG
+bDj
+bDj
 bDj
 bDj
 bDj
@@ -504418,8 +504436,8 @@ bsk
 mwj
 bDj
 bDj
-taf
-veg
+bDj
+bDj
 bDj
 wCo
 pGE
@@ -505329,7 +505347,7 @@ qia
 qia
 qia
 hvl
-mMh
+hvl
 hvl
 hvl
 hvl

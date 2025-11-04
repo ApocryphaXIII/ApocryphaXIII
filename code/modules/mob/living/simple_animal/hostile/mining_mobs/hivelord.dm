@@ -305,7 +305,7 @@
 			gloves = /obj/item/clothing/gloves/vampire/work
 			suit = /obj/item/clothing/suit/vampire/vest
 			glasses = /obj/item/clothing/glasses/vampire/sun
-			hat = /obj/item/clothing/head/beret/black
+			head = /obj/item/clothing/head/beret/black
 			mask = /obj/item/clothing/mask/vampire/balaclava
 		if("Garou")
 			id = /obj/item/card/id/garou/glade/guardian
@@ -318,7 +318,7 @@
 		if("Police")
 			shoes = /obj/item/clothing/shoes/vampire/jackboots
 			uniform = /obj/item/clothing/under/vampire/police
-			hat = /obj/item/clothing/head/vampire/police
+			head = /obj/item/clothing/head/vampire/police
 			suit = /obj/item/clothing/suit/vampire/vest/police
 			r_pocket = /obj/item/stack/dollar/rand
 		if("Ciz1")

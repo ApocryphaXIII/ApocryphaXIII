@@ -3826,6 +3826,8 @@
 #include "modular_zapoc\modules\apoc_smites\code\crystal.dm"
 #include "modular_zapoc\modules\apoc_smites\code\hammers.dm"
 #include "modular_zapoc\modules\apoc_smites\code\truck_kun.dm"
+#include "modular_zapoc\modules\apoc_transfer_points\code\forest_transfer.dm"
+#include "modular_zapoc\modules\apoc_transfer_points\code\voivode_transfer.dm"
 #include "modular_zapoc\modules\apoc_vehicles\code\admin_truck.dm"
 #include "modular_zapoc\modules\carpets\code\carpets.dm"
 #include "modular_zapoc\modules\clothing\code\beret_white.dm"

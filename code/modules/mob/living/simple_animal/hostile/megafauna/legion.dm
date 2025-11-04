@@ -17,7 +17,7 @@
  *SHITCODE AHEAD. BE ADVISED. Also comment extravaganza
  */
 /mob/living/simple_animal/hostile/megafauna/legion
-	name = "Legion"
+	name = "gray mass ultraspore"
 	health = 700
 	maxHealth = 700
 	icon_state = "mega_legion"
@@ -232,7 +232,7 @@
 			pixel_y = 0
 			maxHealth = 200
 	adjustHealth(0) //Make the health HUD look correct.
-	visible_message("<span class='boldannounce'>This is getting out of hands. Now there are three of them!</span>")
+	visible_message("<span class='boldannounce'>This is getting out of hand. Now there are three of them!</span>") // APOC EDIT CHANGE
 	for(var/i in 1 to 2) //Create three skulls in total
 		var/mob/living/simple_animal/hostile/megafauna/legion/L = new(loc)
 		L.setVarsAfterSplit(src)
@@ -253,7 +253,7 @@
 
 ///A basic turret that shoots at nearby mobs. Intended to be used for the legion megafauna.
 /obj/structure/legionturret
-	name = "\improper Legion sentinel"
+	name = "\improper gray Mass sentinel"
 	desc = "The eye pierces your soul."
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_turret"

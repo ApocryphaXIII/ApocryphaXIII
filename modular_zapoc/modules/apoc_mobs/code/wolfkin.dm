@@ -89,7 +89,7 @@
 			base_icon_state = "spiral[coat]"
 			icon_dead = "spiral[coat]_rest"
 
-/mob/living/simple_animal/pet/dog/wolfkin/spiral
+/mob/living/simple_animal/pet/dog/wolfkin
 	spiral = TRUE
 
 /mob/living/simple_animal/pet/dog/wolfkin/spiral/red

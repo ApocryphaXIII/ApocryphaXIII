@@ -1,4 +1,4 @@
-/obj/effect/turf_decal/apoc // These open a massive can of worms. Maybe keep their use to when it's needed only?
+/obj/effect/turf_decal/apoc
 	name = "detail"
 	icon = 'modular_zapoc/modules/apoc_decals/icons/natural_turf_borders.dmi'
 	mouse_opacity = 0
@@ -12,7 +12,7 @@
 /obj/effect/turf_decal/apoc/vampbeach
 	icon_state = "vampbeach_side"
 
-/obj/effect/turf_decal/apoc/vampbeach/corner
+/obj/effect/turf_decal/apoc/vampdirt/beach
 	icon_state = "vampbeach_corner"
 
 /obj/effect/turf_decal/apoc/vampgrass
@@ -24,7 +24,7 @@
 /obj/effect/turf_decal/apoc/rough
 	icon_state = "rough_side"
 
-/obj/effect/turf_decal/apoc/rough/corner
+/obj/effect/turf_decal/apoc/vampdirt/corner
 	icon_state = "rough_corner"
 
 /obj/effect/turf_decal/apoc/cave

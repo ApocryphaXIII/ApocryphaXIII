@@ -191,8 +191,8 @@
 /obj/effect/decal/cleanable/blood/gibs/old/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
 	setDir(pick(1,2,4,8))
-//	icon_state += "-old"
-	color = "#777777"
+//	icon_state += "-old" // APOC EDIT REMOVE
+	color = "#777777" // APOC EDIT ADD
 	add_blood_DNA(list("Non-human DNA" = random_blood_type()))
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_SLUDGE, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 10)
 

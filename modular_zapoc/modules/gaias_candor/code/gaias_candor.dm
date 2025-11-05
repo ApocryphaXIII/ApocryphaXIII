@@ -41,6 +41,8 @@
 
 			if(mypower > theirpower) // Test of wills
 				call_input(L, user)
+				to_chat(user, span_warning("[L]'s scent is uncertain. You can't determine the truth one way or the other."))
+				qdel(src)
 			return ..()
 
 

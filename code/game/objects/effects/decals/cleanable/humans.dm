@@ -182,16 +182,17 @@
 
 /obj/effect/decal/cleanable/blood/gibs/old
 	name = "old rotting gibs"
-	desc = "Space Jesus, why didn't anyone clean this up? They smell terrible."
-	icon_state = "gib1-old"
+	desc = "Jesus, why didn't anyone clean this up? They smell terrible." // APOC EDIT CHANGE
+	icon_state = "gib1"
 	bloodiness = 0
 	dryname = "old rotting gibs"
-	drydesc = "Space Jesus, why didn't anyone clean this up? They smell terrible."
+	drydesc = "Jesus, why didn't anyone clean this up? They smell terrible." // APOC EDIT CHANGE
 
 /obj/effect/decal/cleanable/blood/gibs/old/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
 	setDir(pick(1,2,4,8))
-	icon_state += "-old"
+//	icon_state += "-old"
+	color = "#777777"
 	add_blood_DNA(list("Non-human DNA" = random_blood_type()))
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_SLUDGE, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 10)
 

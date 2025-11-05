@@ -1,5 +1,5 @@
 /obj/item/clothing/shoes/vampire/jackboots/work/jimbs
-	name = "jimberton boots"
+	name = "bimberton boots"
 	desc = "For walking in the Appalachian mountains. Or Chicago."
 	icon = 'modular_zapoc/modules/clothing/icons/outdoorboots.dmi'
 	icon_state = "jimbs"

@@ -9,7 +9,6 @@
 	description = "Both delicious AND rich in Vitamin C, what more do you need?"
 	color = "#E78108" // rgb: 231, 129, 8
 	taste_description = "oranges"
-	glass_icon_state = "glass_orange"
 	glass_name = "glass of orange juice"
 	glass_desc = "Vitamins! Yay!"
 
@@ -24,7 +23,6 @@
 	description = "Tomatoes made into juice. What a waste of big, juicy tomatoes, huh?"
 	color = "#731008" // rgb: 115, 16, 8
 	taste_description = "tomatoes"
-	glass_icon_state = "glass_red"
 	glass_name = "glass of tomato juice"
 	glass_desc = "Are you sure this is tomato juice?"
 
@@ -39,7 +37,6 @@
 	description = "The sweet-sour juice of limes."
 	color = "#365E30" // rgb: 54, 94, 48
 	taste_description = "unbearable sourness"
-	glass_icon_state = "glass_green"
 	glass_name = "glass of lime juice"
 	glass_desc = "A glass of sweet-sour lime juice."
 
@@ -54,7 +51,6 @@
 	description = "It is just like a carrot but without crunching."
 	color = "#973800" // rgb: 151, 56, 0
 	taste_description = "carrots"
-	glass_icon_state = "carrotjuice"
 	glass_name = "glass of  carrot juice"
 	glass_desc = "It's just like a carrot but without crunching."
 
@@ -75,7 +71,6 @@
 	description = "A delicious blend of several different kinds of berries."
 	color = "#863333" // rgb: 134, 51, 51
 	taste_description = "berries"
-	glass_icon_state = "berryjuice"
 	glass_name = "glass of berry juice"
 	glass_desc = "Berry juice. Or maybe it's jam. Who cares?"
 
@@ -90,7 +85,6 @@
 	description = "A tasty juice blended from various kinds of very deadly and toxic berries."
 	color = "#863353" // rgb: 134, 51, 83
 	taste_description = "berries"
-	glass_icon_state = "poisonberryjuice"
 	glass_name = "glass of berry juice"
 	glass_desc = "Berry juice. Or maybe it's poison. Who cares?"
 
@@ -104,7 +98,6 @@
 	description = "Delicious juice made from watermelon."
 	color = "#863333" // rgb: 134, 51, 51
 	taste_description = "juicy watermelon"
-	glass_icon_state = "glass_red"
 	glass_name = "glass of watermelon juice"
 	glass_desc = "A glass of watermelon juice."
 
@@ -113,7 +106,6 @@
 	description = "This juice is VERY sour."
 	color = "#dbe45c" // rgb: 175, 175, 0
 	taste_description = "sourness"
-	glass_icon_state  = "lemonglass"
 	glass_name = "glass of lemon juice"
 	glass_desc = "Sour..."
 
@@ -122,7 +114,6 @@
 	description = "The raw essence of a banana. HONK"
 	color = "#dbce57" // rgb: 175, 175, 0
 	taste_description = "banana"
-	glass_icon_state = "banana"
 	glass_name = "glass of banana juice"
 	glass_desc = "The raw essence of a banana. HONK."
 
@@ -137,7 +128,6 @@
 	name = "Nothing"
 	description = "Absolutely nothing."
 	taste_description = "nothing"
-	glass_icon_state = "nothing"
 	glass_name = "nothing"
 	glass_desc = "Absolutely nothing."
 	shot_glass_icon_state = "shotglass"
@@ -181,7 +171,6 @@
 	nutriment_factor = 2 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "irish sadness"
-	glass_icon_state = "glass_brown"
 	glass_name = "glass of potato juice"
 	glass_desc = "Bleh..."
 
@@ -196,7 +185,6 @@
 	description = "An opaque white liquid produced by the mammary glands of mammals."
 	color = "#DFDFDF" // rgb: 223, 223, 223
 	taste_description = "milk"
-	glass_icon_state = "glass_white"
 	glass_name = "glass of milk"
 	glass_desc = "White and nutritious goodness!"
 
@@ -221,7 +209,6 @@
 	description = "An opaque white liquid made from soybeans."
 	color = "#DFDFC7" // rgb: 223, 223, 199
 	taste_description = "soy milk"
-	glass_icon_state = "glass_white"
 	glass_name = "glass of soy milk"
 	glass_desc = "White and nutritious soy goodness!"
 
@@ -236,7 +223,6 @@
 	description = "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?"
 	color = "#DFD7AF" // rgb: 223, 215, 175
 	taste_description = "creamy milk"
-	glass_icon_state  = "glass_white"
 	glass_name = "glass of cream"
 	glass_desc = "Ewwww..."
 
@@ -253,7 +239,6 @@
 	nutriment_factor = 0
 	overdose_threshold = 80
 	taste_description = "bitterness"
-	glass_icon_state = "glass_brown"
 	glass_name = "glass of coffee"
 	glass_desc = "Don't drop it, or you'll send scalding liquid and glass shards everywhere."
 
@@ -278,6 +263,7 @@
 	color = "#101000" // rgb: 16, 16, 0
 	nutriment_factor = 0
 	taste_description = "tart black tea"
+	glass_icon = 'icons/obj/drinks/drinks.dmi'
 	glass_icon_state = "teaglass"
 	glass_name = "glass of tea"
 	glass_desc = "Drinking it from here would not seem right."
@@ -299,6 +285,7 @@
 	color = "#FFE978"
 	quality = DRINK_NICE
 	taste_description = "sunshine and summertime"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "lemonpitcher"
 	glass_name = "pitcher of lemonade"
 	glass_desc = "This drink leaves you feeling nostalgic for some reason."
@@ -310,6 +297,7 @@
 	quality = DRINK_NICE
 	nutriment_factor = 2
 	taste_description = "bitter tea"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "arnold_palmer"
 	glass_name = "Arnold Palmer"
 	glass_desc = "You feel like taking a few golf swings after a few swigs of this."
@@ -326,6 +314,7 @@
 	color = "#102838" // rgb: 16, 40, 56
 	nutriment_factor = 0
 	taste_description = "bitter coldness"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "icedcoffeeglass"
 	glass_name = "iced coffee"
 	glass_desc = "A drink to perk you up and refresh you!"
@@ -345,6 +334,7 @@
 	color = "#104038" // rgb: 16, 64, 56
 	nutriment_factor = 0
 	taste_description = "sweet tea"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "icedteaglass"
 	glass_name = "iced tea"
 	glass_desc = "All natural, antioxidant-rich flavour sensation."
@@ -364,7 +354,6 @@
 	description = "A refreshing beverage."
 	color = "#100800" // rgb: 16, 8, 0
 	taste_description = "cola"
-	glass_icon_state  = "glass_brown"
 	glass_name = "glass of Space Cola"
 	glass_desc = "A glass of refreshing Space Cola."
 
@@ -379,6 +368,7 @@
 	color = "#EEFF00" // rgb: 238, 255, 0
 	quality = DRINK_VERYGOOD
 	taste_description = "carbonated oil"
+	glass_icon = 'icons/obj/drinks/drinks.dmi'
 	glass_icon_state = "grey_bull_glass"
 	glass_name = "glass of Grey Bull"
 	glass_desc = "Surprisingly it isn't grey."
@@ -404,6 +394,7 @@
 	description = "Blows right through you like a space wind."
 	color = "#102000" // rgb: 16, 32, 0
 	taste_description = "sweet citrus soda"
+	glass_icon = 'icons/obj/drinks/drinks.dmi'
 	glass_icon_state = "Space_mountain_wind_glass"
 	glass_name = "glass of Space Mountain Wind"
 	glass_desc = "Space Mountain Wind. As you know, there are no mountains in space, only wind."
@@ -421,6 +412,7 @@
 	description = "A delicious blend of 42 different flavours."
 	color = "#102000" // rgb: 16, 32, 0
 	taste_description = "cherry soda" // FALSE ADVERTISING
+	glass_icon = 'icons/obj/drinks/drinks.dmi'
 	glass_icon_state = "dr_gibb_glass"
 	glass_name = "glass of Dr. Gibb"
 	glass_desc = "Dr. Gibb. Not as dangerous as the glass_name might imply."
@@ -435,6 +427,7 @@
 	description = "Tastes like a hull breach in your mouth."
 	color = "#00FF00" // rgb: 0, 255, 0
 	taste_description = "cherry soda"
+	glass_icon = 'icons/obj/drinks/drinks.dmi'
 	glass_icon_state = "space-up_glass"
 	glass_name = "glass of Space-Up"
 	glass_desc = "Space-up. It helps you keep your cool."
@@ -449,7 +442,6 @@
 	description = "A tangy substance made of 0.5% natural citrus!"
 	color = "#8CFF00" // rgb: 135, 255, 0
 	taste_description = "tangy lime and lemon soda"
-	glass_icon_state = "glass_yellow"
 	glass_name = "glass of lemon-lime"
 	glass_desc = "You're pretty certain a real fruit has never actually touched this."
 
@@ -464,7 +456,6 @@
 	description = "The only drink with the PWR that true gamers crave."
 	color = "#9385bf" // rgb: 58, 52, 75
 	taste_description = "sweet and salty tang"
-	glass_icon_state = "glass_red"
 	glass_name = "glass of Pwr Game"
 	glass_desc = "Goes well with a Vlad's salad."
 
@@ -486,7 +477,6 @@
 	description = "~Shake me up some of that Shambler's Juice!~"
 	color = "#f00060" // rgb: 94, 0, 38
 	taste_description = "carbonated metallic soda"
-	glass_icon_state = "glass_red"
 	glass_name = "glass of Shambler's juice"
 	glass_desc = "Mmm mm, shambly."
 
@@ -498,7 +488,6 @@
 	description = "A can of club soda. Why not make a scotch and soda?"
 	color = "#619494" // rgb: 97, 148, 148
 	taste_description = "carbonated water"
-	glass_icon_state = "glass_clear"
 	glass_name = "glass of soda water"
 	glass_desc = "Soda water. Why not make a scotch and soda?"
 
@@ -522,7 +511,6 @@
 	description = "It tastes strange but at least the quinine keeps the Space Malaria at bay."
 	color = "#0064C8" // rgb: 0, 100, 200
 	taste_description = "tart and fresh"
-	glass_icon_state = "glass_clear"
 	glass_name = "glass of tonic water"
 	glass_desc = "Quinine tastes funny, but at least it'll keep that Space Malaria away."
 
@@ -540,7 +528,6 @@
 	color = "#f39b03" // rgb: 243, 155, 3
 	overdose_threshold = 60
 	taste_description = "barbecue and nostalgia"
-	glass_icon_state = "monkey_energy_glass"
 	glass_name = "glass of Monkey Energy"
 	glass_desc = "You can unleash the ape, but without the pop of the can?"
 
@@ -572,7 +559,6 @@
 	reagent_state = SOLID
 	color = "#619494" // rgb: 97, 148, 148
 	taste_description = "ice"
-	glass_icon_state = "iceglass"
 	glass_name = "glass of ice"
 	glass_desc = "Generally, you're supposed to put something else in there too..."
 
@@ -586,7 +572,6 @@
 	color = "#664300" // rgb: 102, 67, 0
 	quality = DRINK_NICE
 	taste_description = "bitter cream"
-	glass_icon_state = "cafe_latte"
 	glass_name = "cafe latte"
 	glass_desc = "A nice, strong and refreshing beverage while you're reading."
 
@@ -619,6 +604,7 @@
 	color = "#EEFF00"
 	quality = DRINK_NICE
 	taste_description = "extreme bitterness"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "triplecitrus" //needs own sprite mine are trash //your sprite is great tho
 	glass_name = "glass of triple citrus"
 	glass_desc = "A mixture of citrus juices. Tangy, yet smooth."
@@ -648,7 +634,6 @@
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#403010" // rgb: 64, 48, 16
 	taste_description = "creamy chocolate"
-	glass_icon_state  = "chocolateglass"
 	glass_name = "glass of hot coco"
 	glass_desc = "A favorite winter drink to warm you up."
 
@@ -669,7 +654,6 @@
 	description = "Alleviates coughing symptoms one might have."
 	color = "#80AF9C"
 	taste_description = "mint"
-	glass_icon_state = "glass_green"
 	glass_name = "glass of menthol"
 	glass_desc = "Tastes naturally minty, and imparts a very mild numbing sensation."
 
@@ -713,6 +697,7 @@
 	color = "#dcb137"
 	quality = DRINK_VERYGOOD
 	taste_description = "fizzy vanilla"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "cream_soda"
 	glass_name = "Cream Soda"
 	glass_desc = "A classic space-American vanilla flavored soft drink."
@@ -740,6 +725,7 @@
 	color = "#e6ddc3"
 	quality = DRINK_GOOD
 	taste_description = "wonder"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "red_queen"
 	glass_name = "Red Queen"
 	glass_desc = "DRINK ME."
@@ -768,7 +754,6 @@
 	color = "#F9E43D"
 	description = "Exotic! You feel like you are on vacation already."
 	taste_description = "succulent bungo"
-	glass_icon_state = "glass_yellow"
 	glass_name = "glass of bungo juice"
 	glass_desc = "Exotic! You feel like you are on vacation already."
 
@@ -777,7 +762,6 @@
 	color = "#E78108"
 	description = "Fruit, sugar, yeast, and water pulped together into a pungent slurry."
 	taste_description = "garbage"
-	glass_icon_state = "glass_orange"
 	glass_name = "glass of pruno mixture"
 	glass_desc = "Fruit, sugar, yeast, and water pulped together into a pungent slurry."
 
@@ -786,7 +770,6 @@
 	color = "#A3C48B"
 	description = "A healthy and refreshing juice."
 	taste_description = "vegetable"
-	glass_icon_state = "glass_yellow"
 	glass_name = "glass of aloe juice"
 	glass_desc = "A healthy and refreshing juice."
 
@@ -802,6 +785,7 @@
 	color = "#DE55ED"
 	quality = DRINK_NICE
 	taste_description = "purple and a hint of opioid."
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
 	glass_icon_state = "lean"
 	glass_name = "Lean"
 	glass_desc = "A drink that makes your life less miserable."
@@ -815,3 +799,27 @@
 		M.drowsyness++
 	return ..()
 
+
+//DARKPACK NON-ALCOHOLIC DRINKS
+/datum/reagent/consumable/shirley_temple
+	name = "Shirley Temple"
+	description = "Here you go little girl, now you can drink like the adults."
+	color = "#F43724"
+	quality = DRINK_GOOD
+	taste_description = "sweet cherry syrup and ginger spice"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "shirleytemple"
+	glass_name = "glass of shirley temple"
+	glass_desc = "A sweet and fruity cocktail perfect for a young girl."
+
+
+/datum/reagent/consumable/agua_fresca
+	name = "Agua Fresca"
+	description = "A refreshing watermelon agua fresca. Perfect on a day at the holodeck."
+	color = "#D25B66"
+	quality = DRINK_VERYGOOD
+	taste_description = "cool refreshing watermelon"
+	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	glass_icon_state = "aguafresca"
+	glass_name = "glass of agua fresca"
+	glass_desc = "A refreshing watermelon agua fresca. Perfect on a day at the holodeck."

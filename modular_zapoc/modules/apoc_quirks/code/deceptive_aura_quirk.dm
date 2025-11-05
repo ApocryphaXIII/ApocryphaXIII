@@ -4,4 +4,4 @@
 	value = 3
 	gain_text = "<span class='notice'>You feel calmer.</span>"
 	lose_text = "<span class='warning'>You feel erratic.</span>"
-	allowed_species = ("Werewolf")
+	allowed_species = list("Werewolf")

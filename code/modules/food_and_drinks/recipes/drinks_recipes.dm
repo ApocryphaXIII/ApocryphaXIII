@@ -239,3 +239,45 @@
 /datum/chemical_reaction/cream_soda
 	results = list(/datum/reagent/consumable/cream_soda = 4)
 	required_reagents = list(/datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/sodawater = 2, /datum/reagent/consumable/vanilla = 1)
+
+// DARKPACK DRINKS
+
+/datum/chemical_reaction/godfather
+	results = list(/datum/reagent/consumable/ethanol/godfather = 2)
+	required_reagents = list(/datum/reagent/consumable/ethanol/amaretto = 1, /datum/reagent/consumable/ethanol/whiskey = 1)
+
+/datum/chemical_reaction/godmother
+	results = list(/datum/reagent/consumable/ethanol/godmother = 2)
+	required_reagents = list(/datum/reagent/consumable/ethanol/amaretto = 1, /datum/reagent/consumable/ethanol/vodka = 1)
+
+/datum/chemical_reaction/jack_rose
+	results = list(/datum/reagent/consumable/ethanol/jack_rose = 4)
+	required_reagents = list(/datum/reagent/consumable/grenadine = 1, /datum/reagent/consumable/ethanol/applejack = 2, /datum/reagent/consumable/limejuice = 1)
+
+/datum/chemical_reaction/amaretto_alexander
+	results = list(/datum/reagent/consumable/ethanol/amaretto_alexander = 3)
+	required_reagents = list(/datum/reagent/consumable/ethanol/amaretto = 1, /datum/reagent/consumable/ethanol/creme_de_cacao = 1, /datum/reagent/consumable/cream = 1)
+
+/datum/chemical_reaction/bahama_mama
+	results = list(/datum/reagent/consumable/ethanol/bahama_mama = 5)
+	required_reagents = list(/datum/reagent/consumable/ethanol/creme_de_coconut = 1, /datum/reagent/consumable/ethanol/kahlua = 1, /datum/reagent/consumable/ethanol/rum = 2, /datum/reagent/consumable/pineapplejuice = 1)
+
+/datum/chemical_reaction/b52
+	results = list(/datum/reagent/consumable/ethanol/b52 = 3)
+	required_reagents = list(/datum/reagent/consumable/ethanol/irish_cream = 1, /datum/reagent/consumable/ethanol/kahlua = 1, /datum/reagent/consumable/ethanol/cognac = 1)
+
+/datum/chemical_reaction/longislandicedtea
+	results = list(/datum/reagent/consumable/ethanol/longislandicedtea = 4)
+	required_reagents = list(/datum/reagent/consumable/ethanol/vodka = 1, /datum/reagent/consumable/ethanol/gin = 1, /datum/reagent/consumable/ethanol/tequila = 1, /datum/reagent/consumable/ethanol/cuba_libre = 1)
+
+/datum/chemical_reaction/amaretto_sour
+	results = list(/datum/reagent/consumable/ethanol/amaretto_sour = 3)
+	required_reagents = list(/datum/reagent/consumable/ethanol/amaretto = 2, /datum/reagent/consumable/lemonjuice = 1)
+
+/datum/chemical_reaction/drink/shirley_temple
+	results = list(/datum/reagent/consumable/shirley_temple = 3)
+	required_reagents = list(/datum/reagent/consumable/sol_dry = 2, /datum/reagent/consumable/grenadine = 1)
+
+/datum/chemical_reaction/agua_fresca
+	results = list(/datum/reagent/consumable/agua_fresca = 10)
+	required_reagents = list(/datum/reagent/consumable/watermelonjuice = 4, /datum/reagent/consumable/ice = 1, /datum/reagent/water = 2, /datum/reagent/consumable/limejuice = 2, /datum/reagent/consumable/menthol = 1)

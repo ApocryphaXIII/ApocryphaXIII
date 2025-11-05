@@ -476,15 +476,14 @@
 				if ("rotten4")
 					msg += span_boldwarning("[p_they(TRUE)] [p_are()] a skeletonised corpse!</b><br>")
 // APOC EDIT START
+		if(HAS_TRAIT(src, TRAIT_ANIMAL_MUSK))
+			msg += span_warning("[p_they(TRUE)] smell[p_s()] awful...<br>")
 		if(is_face_visible())
 			if(HAS_TRAIT(src, TRAIT_PERMAFANGS) && !(check_obscured_slots() & ITEM_SLOT_MASK))
 				msg += span_warning("[p_they(TRUE)] [p_have()] sharp, elongated canines.</span><br>")
 
 			if(HAS_TRAIT(src, TRAIT_BRIGHTEYES) && !(check_obscured_slots() & ITEM_SLOT_EYES))
 				msg += span_warning("There's something about [p_their()] eyes...<br>") // APOC EDIT END
-
-			if(HAS_TRAIT(src, TRAIT_ANIMAL_MUSK))
-				msg += span_warning("[p_they(TRUE)] smell awful...<br>") // APOC EDIT END
 
 		if(getorgan(/obj/item/organ/brain))
 			if(ai_controller?.ai_status == AI_STATUS_ON)
@@ -535,7 +534,7 @@
 				if ((vampire.clan?.name == CLAN_BAALI) || ( (client?.prefs?.is_enlightened && (vampire.morality_path.score > 7)) || (!client?.prefs?.is_enlightened && (vampire.morality_path.score < 4)) ))
 					wyrm_taint++
 
-			if (isgarou(src) || iswerewolf(src) || HAS_TRAIT(src, TRAIT_KINFOLK)) //werewolves have the taint of whatever Triat member they venerate most // APOC EDIT CHANGE // Kinfolk
+			if (isgarou(src) || iswerewolf(src)) //werewolves have the taint of whatever Triat member they venerate most // APOC EDIT CHANGE // Kinfolk
 				var/mob/living/carbon/wolf = src
 				is_kin++
 				switch(wolf.auspice.tribe.name)
@@ -555,6 +554,8 @@
 						wyrm_taint++
 						wyld_taint--
 						weaver_taint--
+			if(HAS_TRAIT(src, TRAIT_KINFOLK) && HAS_TRAIT(user, TRAIT_SCENTTRUEFORM))
+				is_kin++
 			if(!seems_alive)
 				msg += "<span class='purple'><i>You recognize their scent as cold and lifeless.</i></span><br>"
 			if(is_kin)

@@ -81,8 +81,8 @@
 	fancy_open = TRUE
 	appearance_flags = KEEP_TOGETHER
 	custom_premium_price = PAYCHECK_HARD * 1.75
-	storage_max_columns = 6
-	storage_max_rows = 2
+	storage_max_columns = 3
+	storage_max_rows = 3
 
 /obj/item/storage/fancy/donut_box/ComponentInitialize()
 	. = ..()
@@ -135,8 +135,9 @@
 	name = "egg box"
 	desc = "A carton for containing eggs."
 	spawn_type = /obj/item/food/egg
-	storage_max_columns = 6
-	storage_max_rows = 2
+	storage_max_columns = 4
+	storage_max_rows = 4
+	custom_price = COST_OF_EGGS
 
 /obj/item/storage/fancy/egg_box/ComponentInitialize()
 	. = ..()
@@ -160,6 +161,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	spawn_type = /obj/item/candle
 	fancy_open = TRUE
+	custom_price = 8
 
 /obj/item/storage/fancy/candle_box/ComponentInitialize()
 	. = ..()

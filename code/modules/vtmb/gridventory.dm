@@ -48,12 +48,12 @@ VENTORY!
 	screen_max_rows = 6
 
 /datum/component/storage/concrete/vtm/backpack
-	screen_max_columns = 6
+	screen_max_columns = 7
 	screen_max_rows = 7
 
 /datum/component/storage/concrete/vtm/duffel
 	screen_max_columns = 8
-	screen_max_rows = 6
+	screen_max_rows = 8
 
 /datum/component/storage/concrete/vtm/firstaid
 	screen_max_columns = 4
@@ -71,8 +71,8 @@ VENTORY!
 	screen_max_rows = 2
 
 /datum/component/storage/concrete/vtm/belt
-	screen_max_columns = 2
-	screen_max_rows = 4
+	screen_max_columns = 3
+	screen_max_rows = 3
 
 /datum/component/storage/concrete/vtm/hardcase
 	screen_max_columns = 4
@@ -80,7 +80,7 @@ VENTORY!
 
 /datum/component/storage/concrete/vtm/car
 	max_w_class = WEIGHT_CLASS_HUGE
-	screen_max_columns = 7
+	screen_max_columns = 9
 	screen_max_rows = 9
 
 /datum/component/storage/concrete/vtm/car/track

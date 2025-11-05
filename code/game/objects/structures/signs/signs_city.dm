@@ -98,7 +98,6 @@
 	desc = "An enticing pair of legs... I wonder what's inside?"
 	icon = 'icons/cabaret.dmi'
 	icon_state = "cabar"
-	#warn check
 	layer = ABOVE_ALL_MOB_LAYER
 
 /obj/structure/sign/city/cabaret_sign/Initialize()

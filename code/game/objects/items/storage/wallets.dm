@@ -7,8 +7,8 @@
 	slot_flags = ITEM_SLOT_ID
 	component_type = /datum/component/storage/concrete/wallet
 
-	storage_max_columns = 4
-	storage_max_rows = 1
+	storage_max_columns = 2
+	storage_max_rows = 2
 
 	var/obj/item/card/id/front_id = null
 	var/list/combined_access

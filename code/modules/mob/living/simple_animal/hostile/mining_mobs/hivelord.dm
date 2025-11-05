@@ -114,7 +114,7 @@
 	attack_sound = 'sound/weapons/pierce.ogg'
 	throw_message = "bounces harmlessly off of"
 	crusher_loot = /obj/item/crusher_trophy/legion_skull
-//	loot = list(/obj/item/organ/regenerative_core/legion)
+	loot = list(/obj/item/stack/dollar/rand)
 	brood_type = /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion
 	del_on_death = 1
 	stat_attack = HARD_CRIT
@@ -290,7 +290,7 @@
 	H.dna.add_mutation(DWARFISM)
 
 /obj/effect/mob_spawn/human/corpse/damaged/legioninfested/Initialize() // APOC EDIT START
-	var/type = pickweight(list("EndronSci" = 66, "EndronSec" = 10, "Garou" = 10, "Police" = 10, pick(list("Ciz1", "Ciz2", "Ciz3", "Ciz4")) = 4))
+	var/type = pickweight(list("EndronSci" = 46, "EndronSec" = 30, "Garou" = 10, "Police" = 10, pick(list("Ciz1", "Ciz2", "Ciz3", "Ciz4")) = 4))
 	switch(type)
 		if("EndronSci")
 			uniform = /obj/item/clothing/under/pentex/pentex_turtleneck

@@ -292,3 +292,5 @@
 
 	//If we are currently leaning on something, and what that object is
 	var/atom/leaned_object
+
+	var/toxic_blood = FALSE // APOC EDIT ADD - undrinkable mobs

@@ -40,7 +40,7 @@
 	id = /obj/item/card/id/bogatyr
 	uniform = /obj/item/clothing/under/vampire/bogatyr
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
-// Apoc Edit belt = /obj/item/storage/belt/vampire/sheathe/longsword
+//	belt = /obj/item/storage/belt/vampire/sheathe/longsword // APOC EDIT REMOVE
 	l_pocket = /obj/item/vamp/phone/bogatyr
 	r_pocket = /obj/item/cockclock
 
@@ -52,8 +52,8 @@
 //APOC EDIT START
 /datum/job/vamp/bogatyr/captain
 	title = "Bogatyr Captain"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	outfit = /datum/outfit/job/bogatyr/captain
 	v_duty = "Captain of the Bogatyri, protectors of the Seer's Voivodate. You lead them in the protection of your family and the Voivode-in-Waiting who sleeps in the basement. Serve the Voivodes, and enforce the Hospitality on your family's lands."
 
@@ -67,4 +67,4 @@
 
 /obj/effect/landmark/start/bogatyr/captain
 	name = "Bogatyr Captain"
-//APOC EDIT End
+// APOC EDIT END

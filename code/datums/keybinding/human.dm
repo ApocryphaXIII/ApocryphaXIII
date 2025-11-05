@@ -136,7 +136,12 @@
 					SEND_SOUND(BD, sound('code/modules/wod13/sounds/need_blood.ogg', 0, 0, 75))
 					to_chat(BD, "<span class='warning'>Eww, that is <b>GROSS</b>.</span>")
 					return
+
 				var/mob/living/LV = BD.pulling
+				if(LV.toxic_blood) // APOC EDIT ADD START
+					SEND_SOUND(BD, sound('code/modules/wod13/sounds/need_blood.ogg', 0, 0, 75))
+					to_chat(BD, "<span class='warning'>Eww, that is <b>GROSS</b>.</span>")
+					return // APOC EDIT ADD END
 				if(LV.bloodpool <= 0 && (!iskindred(BD.pulling) || !iskindred(BD)))
 					SEND_SOUND(BD, sound('code/modules/wod13/sounds/need_blood.ogg', 0, 0, 75))
 					to_chat(BD, "<span class='warning'>There is no <b>BLOOD</b> in this creature.</span>")

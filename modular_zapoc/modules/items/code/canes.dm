@@ -9,6 +9,7 @@
 	righthand_file = 'modular_zapoc/modules/items/icons/canes_righthand.dmi'
 	force = 1
 	grid_height = 2
+	grid_width = 1
 	w_class = WEIGHT_CLASS_SMALL
 	extended = FALSE
 

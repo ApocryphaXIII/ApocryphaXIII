@@ -147,7 +147,7 @@
 //RAT SHAPESHIFT
 /obj/effect/proc_holder/spell/targeted/shapeshift/animalism
 	name = "Animalism Form"
-	desc = "Take on the shape a bat."
+	desc = "Take on the shape of a bat." // APOC EDIT CHANGE
 	charge_max = 5 SECONDS
 	cooldown_min = 5 SECONDS
 	revert_on_death = TRUE

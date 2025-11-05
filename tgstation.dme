@@ -3793,6 +3793,7 @@
 #include "modular_zapoc\modules\apoc_decals\code\natural_turf_borders.dm"
 #include "modular_zapoc\master_files\code\modules\vtmb\kindred_species.dm"
 #include "modular_zapoc\modules\apoc_decor\code\burial_mound.dm"
+#include "modular_zapoc\modules\apoc_decor\code\glowshroom.dm"
 #include "modular_zapoc\modules\apoc_doors\code\pentex_doors.dm"
 #include "modular_zapoc\master_files\code\modules\wod13\wallcode.dm"
 #include "modular_zapoc\modules\apoc_decor\code\ashtray.dm"

@@ -29,7 +29,7 @@
 /datum/discipline_power/protean/eyes_of_the_beast/activate()
 	. = ..()
 	ADD_TRAIT(owner, TRAIT_PROTEAN_VISION, TRAIT_GENERIC)
-	owner.add_client_colour(/datum/client_colour/glass_colour/red)
+//	owner.add_client_colour(/datum/client_colour/glass_colour/red) // APOC EDIT REMOVE - Nobody in history has ever enjoyed this.
 	owner.update_sight()
 	original_eye_color = owner.eye_color
 	owner.eye_color = "#ff0000"
@@ -43,7 +43,7 @@
 /datum/discipline_power/protean/eyes_of_the_beast/deactivate()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_PROTEAN_VISION, TRAIT_GENERIC)
-	owner.remove_client_colour(/datum/client_colour/glass_colour/red)
+//	owner.remove_client_colour(/datum/client_colour/glass_colour/red) // APOC EDIT REMOVE
 	owner.update_sight()
 	owner.eye_color = original_eye_color
 	var/obj/item/organ/eyes/organ_eyes = owner.getorganslot(ORGAN_SLOT_EYES)
@@ -122,7 +122,7 @@
 // APOC EDIT START
 /obj/effect/proc_holder/spell/targeted/shapeshift/gangrel
 	name = "Gangrel Form"
-	desc = "Take on the shape a wolf."
+	desc = "Take on the shape of a wolf." // APOC EDIT CHANGE
 	charge_max = 50
 	cooldown_min = 5 SECONDS
 	revert_on_death = TRUE

@@ -21,7 +21,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/tzimisce
 	name = "Tzimisce Form"
-	desc = "Take on the shape a beast."
+	desc = "Take on the shape of a beast." // APOC EDIT CHANGE
 	charge_max = 10 SECONDS
 	cooldown_min = 10 SECONDS
 	revert_on_death = TRUE
@@ -30,7 +30,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/bloodcrawler
 	name = "Blood Crawler"
-	desc = "Take on the shape a beast."
+	desc = "Take on the shape of a bloody beast." // APOC EDIT CHANGE
 	charge_max = 5 SECONDS
 	cooldown_min = 5 SECONDS
 	revert_on_death = TRUE
@@ -315,6 +315,8 @@
 	bloodpool = 2
 	maxbloodpool = 2
 
+	toxic_blood = TRUE // APOC EDIT ADD
+
 /mob/living/simple_animal/hostile/fister
 	name = "szlachta"
 	desc = "A perversion of human form, waddling on a pair of overdeveloped arms."
@@ -341,6 +343,7 @@
 	bloodquality = BLOOD_QUALITY_LOW
 	bloodpool = 5
 	maxbloodpool = 5
+	toxic_blood = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/hostile/tanker
 	name = "szlachta"
@@ -367,6 +370,7 @@
 	bloodquality = BLOOD_QUALITY_LOW
 	bloodpool = 7
 	maxbloodpool = 7
+	toxic_blood = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/hostile/gargoyle
 	name = CLAN_GARGOYLE
@@ -396,6 +400,7 @@
 	held_items = list(null, null)
 	possible_a_intents = list(INTENT_HELP, INTENT_GRAB, INTENT_DISARM, INTENT_HARM)
 	faction = list(CLAN_TREMERE)
+	toxic_blood = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/hostile/gargoyle/proc/gain_sentience()
 	set waitfor = FALSE
@@ -464,6 +469,7 @@
 	bloodpool = 10
 	maxbloodpool = 10
 	dodging = TRUE
+	toxic_blood = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/hostile/bloodcrawler
 	name = "bloodcrawler"
@@ -488,6 +494,7 @@
 	minbodytemp = 0
 	bloodpool = 20
 	maxbloodpool = 20
+	toxic_blood = TRUE // APOC EDIT ADD
 
 /mob/living/simple_animal/hostile/biter/hostile
 	faction = list("hostile")

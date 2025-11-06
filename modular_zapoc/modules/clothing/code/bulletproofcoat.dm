@@ -1,5 +1,5 @@
-/obj/item/clothing/suit/vampire
-	var/can_have_armor = TRUE
+/obj/item/clothing/suit
+	var/can_have_armor = FALSE
 	var/is_armored = FALSE
 	var/mutable_appearance/vest_underlay
 

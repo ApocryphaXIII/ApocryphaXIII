@@ -1,5 +1,5 @@
 /obj/effect/realistic_fog
-    icon = 'modular_darkpack/modules/weather/icons/fog.dmi'
+    icon = 'code/modules/wod13/fog.dmi'
     icon_state = "fog"
     alpha = 0
     plane = GAME_PLANE

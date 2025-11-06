@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/cockroach
 	name = "cockroach"
-	desc = "This station is just crawling with bugs."
+	desc = "This city is just crawling with bugs." // APOC EDIT CHANGE
 	icon_state = "cockroach"
 	icon_dead = "cockroach"
 	health = 1
@@ -43,7 +43,7 @@
 /mob/living/simple_animal/hostile/cockroach/proc/make_squashable()
 	AddComponent( \
 		/datum/component/squashable, \
-		squash_chance = 50, \
+		squash_chance = squish_chance, \ // APOC EDIT CHANGE
 		squash_damage = 1, \
 		squash_flags = SQUASHED_SHOULD_BE_GIBBED|SQUASHED_ALWAYS_IF_DEAD|SQUASHED_DONT_SQUASH_IN_CONTENTS, \
 	)

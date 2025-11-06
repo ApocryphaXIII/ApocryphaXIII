@@ -26,7 +26,8 @@ GLOBAL_LIST_EMPTY(unallocated_agility_shortcuts)
 	var/user_power = user.get_total_athletics()
 	var/time = 80 - (user_power*10)
 	if(isgarou(user) || iswerewolf(user)) // Snowflaked because this repo DIES soon
-		if(user.auspice.tribe.name in TRIBE_GAIA)
+		var/mob/living/carbon/C = user
+		if(C.auspice.tribe.name in TRIBE_GAIA)
 			to_chat(user, span_notice("You start crawling through the tunnel..."))
 			if(do_after(user, max(3 SECONDS, time), src))
 				user.forceMove(get_turf(exit))

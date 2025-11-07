@@ -152,7 +152,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/cobra
 	name = "Cobra"
-	desc = "Take on the shape a beast."
+	desc = "Take on the shape of a beast." // APOC EDIT CHANGE
 	charge_max = 15 SECONDS
 	cooldown_min = 15 SECONDS
 	revert_on_death = TRUE

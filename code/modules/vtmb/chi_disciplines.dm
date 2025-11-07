@@ -1312,7 +1312,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/werewolf_like
 	name = "Crinos Form"
-	desc = "Take on the shape a Crinos."
+	desc = "Take on the shape of a Crinos beast." // APOC EDIT CHANGE
 	charge_max = 50
 	cooldown_min = 50
 	revert_on_death = TRUE
@@ -1409,7 +1409,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/smoke_form
 	name = "Smoke Form"
-	desc = "Take on the shape a Smoke."
+	desc = "Take on the shape of a cloud of smoke." // APOC EDIT CHANGE
 	charge_max = 50
 	cooldown_min = 50
 	revert_on_death = TRUE
@@ -1418,7 +1418,7 @@
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/hidden_smoke_form
 	name = "Smoke Form"
-	desc = "Take on the shape a Smoke."
+	desc = "Take on the shape of a cloud of smoke." // APOC EDIT CHANGE
 	charge_max = 50
 	cooldown_min = 50
 	revert_on_death = TRUE

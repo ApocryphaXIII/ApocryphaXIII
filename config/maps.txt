@@ -14,10 +14,8 @@ Format:
 endmap
 
 map kindredcity
-default
-endmap
-
-map specialfrancisco
+	votable
+	default
 endmap
 
 map runtimetown

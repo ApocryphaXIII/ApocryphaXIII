@@ -366,6 +366,40 @@
 	slowdown = 1
 	component_type = /datum/component/storage/concrete/vtm/duffel
 
+
+/obj/item/storage/backpack/duffelbag/AltClick(mob/user) // APOC EDIT ADD START
+	var/datum/component/storage/component_ref = GetComponent(component_type)
+
+	if(!ishuman(user) || !user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
+		return ..()
+	var/mob/living/carbon/human/H = user
+	if(src == H.back && H.w_uniform && !user.get_active_held_item())
+		add_fingerprint(H)
+		var/zip_speed = 70 - (((H.get_total_athletics()+H.get_total_dexterity())/2)*10)
+		to_chat(H, span_notice("You start to [component_ref.locked ? "un" : ""]zip [src]..."))
+
+		if(do_after(H, max(2 SECONDS, zip_speed)))
+			if(component_ref.locked)
+				component_ref.locked= FALSE
+				slowdown = initial(slowdown)
+				name = "[initial(name)]"
+			else
+				component_ref.locked = TRUE
+				slowdown = min(slowdown, 0)
+				name = "zipped [initial(name)]"
+				H.update_equipment_speed_mods()
+			H.update_equipment_speed_mods()
+		else
+			to_chat(H, span_warning("You stop [component_ref.locked ? "un" : ""]zipping [src]."))
+
+	else
+		return ..() // APOC EDIT ADD END
+
+/obj/item/storage/backpack/duffelbag/examine(mob/user)
+	. = ..()
+	var/datum/component/storage/component_ref = GetComponent(component_type)
+	. += span_notice("Alt-click to [component_ref.locked ? "un" : ""]zip [src] and [component_ref.locked ? "gain access to the contents" : "move at full speed"].")
+
 //obj/item/storage/backpack/duffelbag/ComponentInitialize()
 //	. = ..()
 //	var/datum/component/storage/STR = GetComponent(/datum/component/storage)

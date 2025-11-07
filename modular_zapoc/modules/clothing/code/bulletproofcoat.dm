@@ -18,7 +18,7 @@
 		. += vest_underlay
 
 
-/obj/item/clothing/suit/vampire/proc/upgrade_icon(datum/source, amount, maxamount)
+/obj/item/clothing/suit/proc/upgrade_icon(datum/source, amount, maxamount)
 	SIGNAL_HANDLER
 
 	var/datum/component/armor_plate/component_ref = GetComponent(/datum/component/armor_plate)

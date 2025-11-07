@@ -35,7 +35,7 @@
 			var/mob/living/carbon/C = loc
 			C.regenerate_icons()
 
-/obj/item/clothing/suit/vampire/AltClick(mob/user)
+/obj/item/clothing/suit/AltClick(mob/user)
 	. = ..()
 	if(isliving(user))
 		var/mob/living/living_mob = user

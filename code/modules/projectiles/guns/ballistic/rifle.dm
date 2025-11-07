@@ -221,34 +221,3 @@
 		user.put_in_hands(gun)
 	else
 		user.dropItemToGround(src, TRUE)
-		animate(src, alpha = 0, time = 5 SECONDS) // Fade out
-		spawn(7 SECONDS)
-		qdel(src)
-
-/obj/item/gun/ballistic/rifle/enchanted/revolver // APOC EDIT ADD - Yes, I know rifle.dm is a weird place for this. It's the halloween event. Buzz off.
-	name = "\improper God's Caliber"
-	desc = "A reliable .45 ACP handgun."
-	icon_state = "m1911"
-	inhand_icon_state = "m1911"
-	worn_icon_state = "gun"
-	w_class = WEIGHT_CLASS_SMALL
-	mag_type = /obj/item/ammo_box/magazine/vamp45acp
-	burst_size = 1
-	fire_delay = 0
-	actions_types = list()
-	bolt_type = BOLT_TYPE_LOCKING
-	fire_sound = 'code/modules/wod13/sounds/m1911.ogg'
-	dry_fire_sound = 'sound/weapons/gun/pistol/dry_fire.ogg'
-	load_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'
-	load_empty_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'
-	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg'
-	eject_empty_sound = 'sound/weapons/gun/pistol/mag_release.ogg'
-	vary_fire_sound = FALSE
-	rack_sound = 'sound/weapons/gun/pistol/rack_small.ogg'
-	lock_back_sound = 'sound/weapons/gun/pistol/lock_small.ogg'
-	bolt_drop_sound = 'sound/weapons/gun/pistol/drop_small.ogg'
-	icon = 'code/modules/wod13/weapons.dmi'
-	lefthand_file = 'code/modules/wod13/lefthand.dmi'
-	righthand_file = 'code/modules/wod13/righthand.dmi'
-	worn_icon = 'code/modules/wod13/worn.dmi'
-	despawn = TRUE

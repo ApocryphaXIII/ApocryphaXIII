@@ -4,14 +4,14 @@
 	var/mutable_appearance/vest_underlay
 
 
-/obj/item/clothing/suit/vampire/Initialize(mapload)
+/obj/item/clothing/suit/Initialize(mapload)
 	. = ..()
 	if(can_have_armor)
 		AddComponent(/datum/component/armor_plate, _maxamount = 1, _upgrade_item = /obj/item/clothing/suit/vampire/vest, _added_armor = list(MELEE = 55, BULLET = 55, LASER = 10, ENERGY = 10, BOMB = 55, BIO = 0, RAD = 0, FIRE = 45, ACID = 10, WOUND = 25))
 		RegisterSignal(src, COMSIG_ARMOR_PLATED, PROC_REF(upgrade_icon))
 
 
-/obj/item/clothing/suit/vampire/worn_overlays(isinhands = FALSE)
+/obj/item/clothing/suit/worn_overlays(isinhands = FALSE)
 	. = ..()
 	if(vest_underlay && !isinhands)
 		vest_underlay.icon = worn_icon

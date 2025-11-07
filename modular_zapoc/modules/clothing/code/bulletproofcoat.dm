@@ -14,7 +14,11 @@
 /obj/item/clothing/suit/worn_overlays(isinhands = FALSE)
 	. = ..()
 	if(vest_underlay && !isinhands)
-		vest_underlay.icon = worn_icon
+		// if(worn_icon)
+		vest_underlay.icon = initial(worn_icon) || 'icons/mob/clothing/suit.dmi'
+		// else
+		// 	vest_underlay.icon = 'icons/mob/clothing/suit.dmi'
+
 		. += vest_underlay
 
 
@@ -23,13 +27,15 @@
 
 	var/datum/component/armor_plate/component_ref = GetComponent(/datum/component/armor_plate)
 	var/obj/item/clothing/suit/vampire/vest/vest_type = component_ref.upgrade_item_used
-	var/vest_icon = vest_type::icon_state
+	var/vest_worn_icon = vest_type::worn_icon
+	var/vest_icon_state = vest_type::icon_state
 
 	if(amount)
 		name = "armored [initial(name)]"
-		worn_icon_state = vest_icon
+		worn_icon = vest_worn_icon
+		worn_icon_state = vest_icon_state
 		desc = "[initial(desc)] Has a durable, lightweight vest. Slay. Alt-click to seperate the vest from [src]."
-		vest_underlay = mutable_appearance(worn_icon, "[initial(icon_state)]")
+		vest_underlay = mutable_appearance(worn_icon || 'icons/mob/clothing/suit.dmi', "[initial(icon_state)]")
 		is_armored = TRUE
 		if(iscarbon(loc))
 			var/mob/living/carbon/C = loc
@@ -51,6 +57,7 @@
 		name = initial(name)
 		desc = initial(desc)
 		vest_underlay = null
+		worn_icon = initial(worn_icon)
 		worn_icon_state = initial(worn_icon_state)
 		armor.detachArmor(vest_type_used.armor)
 		if(iscarbon(loc))

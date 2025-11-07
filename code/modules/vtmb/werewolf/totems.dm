@@ -121,7 +121,7 @@
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon = 'code/modules/wod13/64x32.dmi'
 	icon_state = "spiral"
-	tribe = list("Black Spiral Dancers")
+	tribe = "Black Spiral Dancers"
 	totem_overlay_color = "#ff5235"
 
 /obj/effect/landmark/teleport_mark

@@ -45,13 +45,10 @@
 	flora_density = 65
 
 /datum/biome/wasteland
-	turf_type = /turf/open/floor/plating/vampdirt
-	flora_types = list(
-		/obj/structure/small_vamprocks = 10,
-		/obj/structure/vamprocks = 2,
-		/obj/structure/big_vamprocks = 1,
-	)
-	flora_density = 5
+	turf_type = /turf/open/floor/plating/dirt/jungle/wasteland
+
+/datum/biome/water
+	turf_type = /turf/open/water/jungle
 
 /datum/biome/mountain
 	turf_type = /turf/closed/wall/vampwall/rock

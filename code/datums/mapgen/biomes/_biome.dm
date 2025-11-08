@@ -28,22 +28,9 @@
 	flora_density = 3
 
 /datum/biome/plains
-	turf_type = /turf/open/floor/plating/vampgrass
-	flora_types = list(
-		/obj/structure/flora/ausbushes/sparsegrass = 5,
-		/obj/structure/vamptree/pine = 1,
-		/obj/structure/small_vamprocks = 1,
-		/obj/structure/vamprocks = 1,
-	)
-	flora_density = 50
-	fauna_types = list(
-	/mob/living/simple_animal/butterfly = 3,
-	/mob/living/simple_animal/deer = 1,
-	/mob/living/simple_animal/hostile/retaliate/goose = 0.5,
-	/mob/living/simple_animal/hostile/retaliate/frog = 0.5,
-	/mob/living/simple_animal/pet/fox = 0.1,
-	)
-	fauna_density = 1
+	turf_type = /turf/open/floor/plating/grass/jungle
+	flora_types = list(/obj/structure/flora/grass/jungle,/obj/structure/flora/grass/jungle/b, /obj/structure/flora/tree/jungle, /obj/structure/flora/rock/jungle, /obj/structure/flora/junglebush, /obj/structure/flora/junglebush/b, /obj/structure/flora/junglebush/c, /obj/structure/flora/junglebush/large, /obj/structure/flora/rock/pile/largejungle)
+	flora_density = 15
 
 /datum/biome/jungle
 	turf_type = /turf/open/floor/plating/vampgrass

@@ -46,5 +46,4 @@
 	turf_type = /turf/open/water/jungle
 
 /datum/biome/mountain
-	turf_type = /turf/closed/wall/vampwall/rock
 	turf_type = /turf/closed/mineral/random/jungle

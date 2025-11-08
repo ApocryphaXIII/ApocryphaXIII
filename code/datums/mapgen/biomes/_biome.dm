@@ -22,7 +22,6 @@
 		var/obj/structure/flora = pick(flora_types)
 		new flora(gen_turf)
 
-// DARKPACK EDIT CHANGE START
 /datum/biome/mudlands
 	flora_types = list(/obj/structure/flora/grass/jungle,/obj/structure/flora/grass/jungle/b, /obj/structure/flora/rock/jungle, /obj/structure/flora/rock/pile/largejungle)
 	flora_density = 3

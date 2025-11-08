@@ -24,12 +24,7 @@
 
 // DARKPACK EDIT CHANGE START
 /datum/biome/mudlands
-	turf_type = /turf/open/floor/plating/vampdirt
-	flora_types = list(
-		/obj/structure/small_vamprocks = 2,
-		/obj/structure/vamprocks = 1,
-		/obj/structure/big_vamprocks = 1,
-	)
+	flora_types = list(/obj/structure/flora/grass/jungle,/obj/structure/flora/grass/jungle/b, /obj/structure/flora/rock/jungle, /obj/structure/flora/rock/pile/largejungle)
 	flora_density = 3
 
 /datum/biome/plains

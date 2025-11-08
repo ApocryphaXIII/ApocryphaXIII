@@ -41,14 +41,6 @@
 		/obj/structure/vamprocks = 1,
 	)
 	flora_density = 40
-	fauna_types = list(
-	/mob/living/simple_animal/butterfly = 3,
-	/mob/living/simple_animal/deer = 1,
-	/mob/living/simple_animal/hostile/retaliate/goose = 0.5,
-	/mob/living/simple_animal/hostile/retaliate/frog = 0.5,
-	/mob/living/simple_animal/pet/fox = 0.1,
-	)
-	fauna_density = 1
 
 /datum/biome/jungle/deep
 	flora_density = 65

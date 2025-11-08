@@ -77,4 +77,4 @@
 
 /datum/biome/mountain
 	turf_type = /turf/closed/wall/vampwall/rock
-// DARKPACK EDIT CHANGE END
+	turf_type = /turf/closed/mineral/random/jungle

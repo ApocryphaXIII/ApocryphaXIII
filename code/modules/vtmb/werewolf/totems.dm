@@ -1,12 +1,12 @@
 /obj/structure/werewolf_totem
-	name = "tribe totem"
+	name = "Tribe Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon = 'icons/mob/32x64.dmi'
 	icon_state = "glassw"
 	anchored = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-	var/list/tribe
+	var/tribe
 	var/totem_health = 500
 	var/obj/effect/overlay/totem_light_overlay
 	var/totem_overlay_color = "#FFFFFF"
@@ -53,7 +53,7 @@
 			for(var/mob/living/carbon/C in GLOB.player_list)
 				if(iswerewolf(C) || isgarou(C))
 					if(C.stat != DEAD)
-						if(C.auspice.tribe.name in tribe)
+						if(C.auspice.tribe.name == tribe)
 							set_light(0)
 							to_chat(C, "<span class='userdanger'><b>YOUR TOTEM IS DESTROYED</b></span>")
 							SEND_SOUND(C, sound('sound/effects/tendril_destroyed.ogg', 0, 0, 75))
@@ -66,7 +66,7 @@
 			for(var/mob/living/carbon/C in GLOB.player_list)
 				if(iswerewolf(C) || isgarou(C))
 					if(C.stat != DEAD)
-						if(C.auspice.tribe.name in tribe) // APOC EDIT CHANGE
+						if(C.auspice.tribe.name== tribe)
 							if(last_rage+50 < world.time)
 								last_rage = world.time
 								to_chat(C, "<span class='userdanger'><b>YOUR TOTEM IS BREAKING DOWN</b></span>")
@@ -79,7 +79,7 @@
 				for(var/mob/living/carbon/C in GLOB.player_list)
 					if(iswerewolf(C) || isgarou(C))
 						if(C.stat != DEAD)
-							if(C.auspice.tribe.name in tribe)
+							if(C.auspice.tribe.name == tribe)
 								to_chat(C, "<span class='userhelp'><b>YOUR TOTEM IS RESTORED</b></span>")
 								SEND_SOUND(C, sound('code/modules/wod13/sounds/inspire.ogg', 0, 0, 75))
 								adjust_gnosis(1, C, FALSE)
@@ -92,28 +92,28 @@
 	name = "Galestalkers Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon_state = "wendigo"
-	tribe = list("Galestalkers")
+	tribe = "Galestalkers"
 	totem_overlay_color = "#81ff4f"
 
 /obj/structure/werewolf_totem/children_of_gaia
 	name = "Children of Gaia Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon_state = "wendigo"
-	tribe = list("Children of Gaia")
+	tribe = "Children of Gaia"
 	totem_overlay_color = "#00CEC8"
 
 /obj/structure/werewolf_totem/bone_gnawer
 	name = "Bone Gnawer Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon_state = "wendigo"
-	tribe = list("Bone Gnawers")
+	tribe = "Bone Gnawers"
 	totem_overlay_color = "#FFA500"
 
 /obj/structure/werewolf_totem/glasswalker
 	name = "Glasswalker Totem"
 	desc = "Gives power to all Garou of that tribe and steals it from others."
 	icon_state = "glassw"
-	tribe = list("Glass Walkers")
+	tribe = "Glass Walkers"
 	totem_overlay_color = "#35b0ff"
 
 /obj/structure/werewolf_totem/spiral

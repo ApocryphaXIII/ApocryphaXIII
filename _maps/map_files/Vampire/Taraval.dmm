@@ -87,15 +87,6 @@
 "aeE" = (
 /turf/open/floor/plating/woodfancy,
 /area/space)
-"aff" = (
-/obj/effect/decal/support,
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 16;
-	layer = 4.1
-	},
-/turf/open/floor/plating/granite/black,
-/area/space)
 "afX" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 4;
@@ -399,14 +390,8 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.92
-	},
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 12;
-	pixel_x = -1;
-	layer = 2.91
+	dir = 5;
+	pixel_y = 4
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/space)
@@ -594,8 +579,7 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.91
+	dir = 4
 	},
 /obj/structure/railing{
 	dir = 1;
@@ -1171,11 +1155,8 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
-	},
 /obj/structure/table/wood/fancy/royalblack,
+/obj/structure/railing/highlayer,
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
 "bhv" = (
@@ -3132,14 +3113,8 @@
 	dir = 8
 	},
 /obj/structure/railing{
-	dir = 1;
-	pixel_y = 12;
-	pixel_x = 1;
-	layer = 2.91
-	},
-/obj/structure/railing{
-	dir = 8;
-	layer = 2.92
+	dir = 9;
+	pixel_y = 3
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/space)
@@ -3975,8 +3950,7 @@
 /area/space)
 "dVR" = (
 /obj/structure/railing{
-	dir = 8;
-	layer = 2.91
+	dir = 8
 	},
 /obj/structure/railing{
 	dir = 1;
@@ -5323,10 +5297,7 @@
 	pixel_y = 14
 	},
 /obj/structure/railing{
-	dir = 10;
-	pixel_x = 1;
-	pixel_y = 2;
-	layer = 2.91
+	dir = 10
 	},
 /obj/machinery/light/prince{
 	pixel_y = 32
@@ -6904,15 +6875,12 @@
 	color = "#4a3925";
 	dir = 10
 	},
-/obj/structure/railing{
-	dir = 10;
-	pixel_y = 2;
-	layer = 3.1;
-	pixel_x = 1
-	},
 /obj/structure/chair/sofa/corp/corner{
 	dir = 1;
 	color = "#CD5C5C"
+	},
+/obj/structure/railing/highlayer{
+	dir = 10
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
@@ -7279,9 +7247,7 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/structure/railing/highlayer,
 /turf/open/floor/plating/woodrough,
 /area/space)
 "hHY" = (
@@ -7313,9 +7279,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "hJA" = (
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/effect/turf_decal/siding/white{
 	dir = 10
 	},
@@ -7692,14 +7656,11 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
-	},
 /obj/structure/chair/sofa/corp/left{
 	dir = 1;
 	color = "#CD5C5C"
 	},
+/obj/structure/railing/highlayer,
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
 "iaI" = (
@@ -7799,16 +7760,11 @@
 	color = "#4a3925";
 	dir = 1
 	},
+/obj/structure/railing{
+	dir = 9
+	},
 /obj/structure/fluff/hedge{
 	pixel_x = 2
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 12;
-	layer = 2.81
 	},
 /turf/open/floor/carpet/royalblack,
 /area/space)
@@ -8652,9 +8608,7 @@
 /turf/open/floor/plating/vampplating/stone,
 /area/space)
 "iTx" = (
-/obj/structure/railing{
-	layer = 2.8
-	},
+/obj/structure/railing,
 /obj/structure/fluff/hedge{
 	layer = 2.8
 	},
@@ -8997,8 +8951,7 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	pixel_y = 12;
-	layer = 2.91
+	pixel_y = 16
 	},
 /turf/open/floor/plating/toilet,
 /area/space)
@@ -9636,20 +9589,17 @@
 /turf/open/floor/plating/vampplating/stone,
 /area/space)
 "jVZ" = (
-/obj/structure/railing{
-	dir = 10;
-	layer = 2.91
-	},
 /obj/structure/musician/piano{
 	icon_state = "piano"
+	},
+/obj/structure/railing{
+	dir = 10
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
 "jWk" = (
+/obj/structure/coclock/grandpa,
 /obj/structure/railing,
-/obj/structure/coclock/grandpa{
-	pixel_y = 10
-	},
 /turf/open/floor/plating/vampplating,
 /area/space)
 "jWT" = (
@@ -9842,11 +9792,8 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
-	},
 /obj/structure/bookcase/random/reference,
+/obj/structure/railing/highlayer,
 /turf/open/floor/carpet/royalblack,
 /area/space)
 "keB" = (
@@ -9881,9 +9828,7 @@
 	dir = 5
 	},
 /obj/structure/railing{
-	dir = 10;
-	pixel_y = 1;
-	layer = 2.91
+	dir = 10
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/space)
@@ -11194,18 +11139,6 @@
 /obj/item/storage/fancy/donut_box,
 /turf/open/floor/plating/parquetry/old,
 /area/space)
-"lES" = (
-/obj/effect/turf_decal/bordur,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 12;
-	layer = 2.93
-	},
-/turf/open/floor/plating/sidewalk/rich,
-/area/space)
 "lFv" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
@@ -11994,8 +11927,7 @@
 	},
 /obj/structure/railing{
 	dir = 1;
-	pixel_y = 12;
-	layer = 2.91
+	pixel_y = 14
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/space)
@@ -12848,12 +12780,11 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/space)
 "nud" = (
-/obj/structure/railing{
-	dir = 6;
-	layer = 3.1
-	},
 /obj/structure/chair/wood/wings{
 	dir = 8
+	},
+/obj/structure/railing/highlayer{
+	dir = 6
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
@@ -13188,15 +13119,12 @@
 	color = "#4a3925";
 	dir = 8
 	},
-/obj/structure/railing{
-	dir = 8;
-	pixel_y = -2;
-	layer = 2.89;
-	pixel_x = 1
-	},
 /obj/structure/chair/sofa/corp{
 	dir = 4;
 	color = "#CD5C5C"
+	},
+/obj/structure/railing{
+	dir = 8
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
@@ -13982,9 +13910,7 @@
 /obj/structure/chair/plastic{
 	dir = 1
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/structure/railing/highlayer,
 /turf/open/floor/plating/woodrough,
 /area/space)
 "otl" = (
@@ -14633,9 +14559,7 @@
 "pcu" = (
 /obj/structure/fluff/hedge,
 /obj/structure/flora/ausbushes/lavendergrass,
-/obj/structure/railing{
-	layer = 3
-	},
+/obj/structure/railing,
 /turf/open/floor/plating/vampplating,
 /area/space)
 "pcD" = (
@@ -14811,14 +14735,12 @@
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "pmd" = (
-/obj/structure/railing{
-	dir = 10;
-	pixel_y = 1;
-	layer = 2.91
-	},
 /obj/structure/fluff/hedge{
 	pixel_y = 4;
 	pixel_x = 1
+	},
+/obj/structure/railing{
+	dir = 10
 	},
 /obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/vampplating/mono,
@@ -15003,10 +14925,8 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
-/obj/structure/chair/pew/left{
+/obj/structure/railing/highlayer,
+/obj/structure/chair/sofa/bench/right{
 	dir = 1
 	},
 /turf/open/floor/plating/woodrough,
@@ -15228,9 +15148,7 @@
 /area/space)
 "pRy" = (
 /obj/structure/railing{
-	dir = 9;
-	pixel_y = 6;
-	layer = 2.89
+	dir = 9
 	},
 /obj/structure/fluff/hedge{
 	pixel_x = 1;
@@ -15397,16 +15315,13 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/space)
 "qaY" = (
-/obj/structure/railing{
-	dir = 10;
-	pixel_x = 1;
-	pixel_y = 2;
-	layer = 2.91
-	},
 /obj/structure/pole{
 	pixel_w = -16
 	},
 /mob/living/carbon/human/npc/stripper,
+/obj/structure/railing/highlayer{
+	dir = 10
+	},
 /turf/open/floor/light,
 /area/space)
 "qbu" = (
@@ -15661,12 +15576,10 @@
 	color = "#4a3925";
 	dir = 4
 	},
-/obj/structure/railing{
-	dir = 4;
-	layer = 2.89;
-	pixel_x = -1
-	},
 /obj/structure/table/wood/fancy/royalblack,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/open/floor/plating/parquetry,
 /area/space)
 "qpg" = (
@@ -15856,15 +15769,15 @@
 /area/space)
 "qBe" = (
 /obj/structure/railing{
-	dir = 10;
-	layer = 2.91
+	dir = 10
 	},
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925";
 	dir = 10
 	},
 /obj/item/kirbyplants/random{
-	layer = 2.9
+	pixel_x = 4;
+	pixel_y = 14
 	},
 /turf/open/floor/plating/woodrough,
 /area/space)
@@ -15898,10 +15811,7 @@
 	dir = 6
 	},
 /obj/structure/railing{
-	dir = 6;
-	pixel_y = 2;
-	pixel_x = -1;
-	layer = 3.1
+	dir = 6
 	},
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/carpet/vamp/redsilver,
@@ -15971,18 +15881,13 @@
 /turf/open/floor/plating/concrete,
 /area/space)
 "qFn" = (
-/obj/structure/railing{
-	dir = 4;
-	layer = 2.91
-	},
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 11
-	},
 /obj/item/kirbyplants/random,
 /obj/machinery/light{
 	dir = 8;
 	light_color = "#6488EA"
+	},
+/obj/structure/railing{
+	dir = 5
 	},
 /turf/open/floor/carpet/vamp/bluesilver,
 /area/space)
@@ -16305,12 +16210,10 @@
 	color = "#4a3925";
 	dir = 4
 	},
-/obj/structure/railing{
-	dir = 4;
-	layer = 2.89;
-	pixel_x = -1
-	},
 /obj/structure/chair/red{
+	dir = 4
+	},
+/obj/structure/railing{
 	dir = 4
 	},
 /turf/open/floor/plating/parquetry,
@@ -16722,9 +16625,7 @@
 	},
 /obj/effect/turf_decal/bordur/corner,
 /obj/structure/railing{
-	dir = 10;
-	pixel_y = 1;
-	layer = 2.91
+	dir = 10
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/space)
@@ -16785,17 +16686,11 @@
 	color = "#4a3925";
 	dir = 1
 	},
+/obj/structure/railing{
+	dir = 5
+	},
 /obj/structure/fluff/hedge{
 	pixel_x = -1
-	},
-/obj/structure/railing{
-	dir = 4;
-	layer = 2.91
-	},
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 12;
-	layer = 2.81
 	},
 /turf/open/floor/carpet/royalblack,
 /area/space)
@@ -17269,9 +17164,7 @@
 	dir = 4
 	},
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.89;
-	pixel_x = -1
+	dir = 4
 	},
 /turf/open/floor/plating/parquetry,
 /area/space)
@@ -17421,11 +17314,8 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
-	},
 /obj/structure/bookcase/random/nonfiction,
+/obj/structure/railing/highlayer,
 /turf/open/floor/carpet/royalblack,
 /area/space)
 "siZ" = (
@@ -17491,9 +17381,7 @@
 /obj/structure/flora/ausbushes/lavendergrass{
 	layer = 3
 	},
-/obj/structure/railing{
-	layer = 3
-	},
+/obj/structure/railing,
 /turf/open/floor/plating/vampplating,
 /area/space)
 "smf" = (
@@ -17644,9 +17532,7 @@
 /obj/item/kirbyplants/random{
 	layer = 2.9
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
+/obj/structure/railing/highlayer,
 /turf/open/floor/plating/woodrough,
 /area/space)
 "sxh" = (
@@ -17805,10 +17691,10 @@
 /obj/structure/pole{
 	pixel_w = -16
 	},
-/obj/structure/railing{
-	dir = 4
-	},
 /mob/living/carbon/human/npc/stripper,
+/obj/structure/railing/highlayer{
+	dir = 6
+	},
 /turf/open/floor/light,
 /area/space)
 "sGZ" = (
@@ -17922,13 +17808,11 @@
 /turf/open/floor/plating/vampgrass,
 /area/space)
 "sOt" = (
-/obj/structure/railing{
-	layer = 3.1
-	},
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/chair/pew{
+/obj/structure/railing/highlayer,
+/obj/structure/chair/sofa/bench{
 	dir = 1
 	},
 /turf/open/floor/plating/woodrough,
@@ -17983,10 +17867,7 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	pixel_y = 2;
-	layer = 3.1
-	},
+/obj/structure/railing/highlayer,
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
 "sTJ" = (
@@ -19325,8 +19206,7 @@
 /area/space)
 "utV" = (
 /obj/structure/railing{
-	dir = 4;
-	layer = 2.91
+	dir = 4
 	},
 /obj/structure/chair/wood/wings{
 	dir = 8
@@ -19521,9 +19401,7 @@
 /area/space)
 "uIt" = (
 /obj/effect/turf_decal/siding/white,
-/obj/structure/railing{
-	layer = 4
-	},
+/obj/structure/railing,
 /obj/effect/turf_decal/stripes/white/line,
 /turf/open/floor/plating/rough,
 /area/space)
@@ -19710,12 +19588,6 @@
 /turf/open/floor/plating/concrete,
 /area/space)
 "uTz" = (
-/obj/structure/railing{
-	dir = 4;
-	pixel_y = -2;
-	layer = 2.89;
-	pixel_x = -1
-	},
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925";
 	dir = 4
@@ -19723,6 +19595,9 @@
 /obj/structure/chair/comfy/black{
 	dir = 8;
 	color = "#CD5C5C"
+	},
+/obj/structure/railing{
+	dir = 4
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
@@ -20638,13 +20513,11 @@
 	color = "#4a3925";
 	dir = 4
 	},
-/obj/structure/railing{
-	dir = 4;
-	layer = 2.89;
-	pixel_x = -1
-	},
 /obj/structure/fluff/hedge{
 	pixel_x = -4
+	},
+/obj/structure/railing{
+	dir = 4
 	},
 /turf/open/floor/plating/parquetry,
 /area/space)
@@ -21067,14 +20940,6 @@
 /obj/structure/bed/roller,
 /turf/open/floor/plating/toilet,
 /area/space)
-"wrc" = (
-/obj/structure/fluff/hedge,
-/obj/structure/railing{
-	layer = 3
-	},
-/obj/structure/flora/ausbushes/lavendergrass,
-/turf/open/floor/plating/vampplating,
-/area/space)
 "wrl" = (
 /obj/structure/vampdoor{
 	baseicon = "wood";
@@ -21226,6 +21091,13 @@
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/space)
+"wBZ" = (
+/obj/structure/chair/comfy/black{
+	dir = 8;
+	color = "#CD5C5C"
+	},
+/turf/open/openspace,
+/area/space)
 "wCh" = (
 /obj/structure/chair/sofa/corp/left,
 /obj/machinery/light/small/pink{
@@ -21301,10 +21173,8 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#4a3925"
 	},
-/obj/structure/railing{
-	layer = 3.1
-	},
-/obj/structure/chair/pew/right{
+/obj/structure/railing/highlayer,
+/obj/structure/chair/sofa/bench/left{
 	dir = 1
 	},
 /turf/open/floor/plating/woodrough,
@@ -51497,7 +51367,7 @@ kZG
 pqn
 cLp
 sFW
-aff
+aRc
 kZG
 dFA
 kZG
@@ -53473,7 +53343,7 @@ bYV
 pqn
 oHQ
 qaY
-aff
+aRc
 bYV
 odp
 bYV
@@ -165512,7 +165382,7 @@ qxc
 qxc
 qxc
 qxc
-lES
+mBj
 pWP
 qiE
 otW
@@ -166732,7 +166602,7 @@ whe
 sNL
 sNL
 oVX
-wrc
+pcu
 xVS
 qDL
 cIv
@@ -190152,7 +190022,7 @@ aWu
 aWu
 aWu
 aWu
-aWu
+wBZ
 aWu
 aWu
 aWu

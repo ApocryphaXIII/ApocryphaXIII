@@ -802,7 +802,7 @@
 	clawfootstep = FOOTSTEP_WATER
 	heavyfootstep = FOOTSTEP_WATER
 
-/turf/open/floor/plating/bloodshit/Initialize()
+/*/turf/open/floor/plating/bloodshit/Initialize() // APOC EDIT REMOVE - Wtf
 	. = ..()
 	for(var/mob/living/L in src)
 		if(L)
@@ -810,7 +810,7 @@
 	spawn(5)
 		for(var/turf/T in range(1, src))
 			if(T && !istype(T, /turf/open/floor/plating/bloodshit))
-				new /turf/open/floor/plating/bloodshit(T)
+				new /turf/open/floor/plating/bloodshit(T)*/ // APOC EDIT REMOVE END
 
 //flags
 

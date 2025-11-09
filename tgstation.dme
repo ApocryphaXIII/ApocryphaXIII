@@ -3798,6 +3798,7 @@
 #include "modular_zapoc\modules\apoc_decor\code\ashtray.dm"
 #include "modular_zapoc\modules\apoc_decor\code\burial_mound.dm"
 #include "modular_zapoc\modules\apoc_decor\code\glowshroom.dm"
+#include "modular_zapoc\modules\apoc_decor\code\superhigh_railing.dm"
 #include "modular_zapoc\modules\apoc_decor\code\torch.dm"
 #include "modular_zapoc\modules\apoc_doors\code\pentex_doors.dm"
 #include "modular_zapoc\modules\apoc_helpers\code\locklevel_helper.dm"

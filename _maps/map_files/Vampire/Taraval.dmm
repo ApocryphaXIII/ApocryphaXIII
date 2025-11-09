@@ -1697,7 +1697,6 @@
 /turf/open/floor/plating/vampplating,
 /area/space)
 "bNJ" = (
-/obj/structure/lattice,
 /obj/structure/lattice/grate,
 /obj/structure/railing/metal{
 	dir = 6
@@ -2623,7 +2622,6 @@
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "cJU" = (
-/obj/structure/lattice,
 /obj/structure/lattice/grate,
 /obj/structure/railing/metal/corner,
 /turf/open/openspace,
@@ -4254,11 +4252,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/plating/vampcarpet,
-/area/space)
-"esv" = (
-/obj/structure/table/wood,
-/obj/structure/table/wood,
 /turf/open/floor/plating/vampcarpet,
 /area/space)
 "esH" = (
@@ -9931,7 +9924,6 @@
 /turf/open/floor/carpet/vamp/bluesilver,
 /area/space)
 "ksB" = (
-/obj/structure/lattice,
 /obj/structure/lattice/grate,
 /obj/structure/railing/metal/corner{
 	dir = 8
@@ -11101,7 +11093,6 @@
 /turf/closed/wall/vampwall/junk,
 /area/space)
 "lMl" = (
-/obj/structure/lattice,
 /obj/structure/lattice/grate,
 /obj/structure/railing/metal{
 	dir = 10
@@ -11679,11 +11670,6 @@
 	pixel_y = 8
 	},
 /turf/open/floor/carpet/red,
-/area/space)
-"mvl" = (
-/obj/structure/table,
-/obj/structure/table,
-/turf/open/floor/plating/bacotell,
 /area/space)
 "mvp" = (
 /obj/structure/mirror/directional/north,
@@ -13014,11 +13000,6 @@
 	dir = 4
 	},
 /turf/open/floor/plating/vampplating/mono,
-/area/space)
-"nLZ" = (
-/obj/structure/table/wood,
-/obj/structure/table/wood,
-/turf/open/floor/plating/concrete,
 /area/space)
 "nMh" = (
 /obj/structure/chair/office{
@@ -15957,7 +15938,6 @@
 /turf/open/floor/plating/parquetry/old,
 /area/space)
 "qSQ" = (
-/obj/structure/lattice,
 /obj/structure/lattice/grate,
 /turf/open/openspace,
 /area/space)
@@ -19392,7 +19372,6 @@
 /turf/open/floor/plating/sidewalk,
 /area/space)
 "uWM" = (
-/obj/structure/lattice,
 /obj/structure/lattice/grate,
 /obj/structure/railing/metal,
 /turf/open/openspace,
@@ -55190,7 +55169,7 @@ eoc
 eoc
 eoc
 ofk
-esv
+luh
 trr
 kYG
 gYF
@@ -180686,7 +180665,7 @@ uKS
 vHt
 vPu
 xlA
-mvl
+xlA
 mWo
 kup
 eYp
@@ -201508,7 +201487,7 @@ mWo
 ngD
 yjw
 kFD
-nLZ
+kGy
 oyw
 yjw
 kFD

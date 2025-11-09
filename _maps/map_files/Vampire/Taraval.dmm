@@ -41,9 +41,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/space)
 "acA" = (
-/turf/open/floor/plating/sidewalk/poor,
-/turf/open/floor/plating/sidewalk/poor,
-/area/space)
+/turf/open/floor/plating/sidewalk/poor/area/space)
 "acC" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/toilet{

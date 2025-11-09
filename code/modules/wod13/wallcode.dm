@@ -1,14 +1,17 @@
 #define LOW_WALL_HELPER(wall_type)						\
 	/turf/closed/wall/##wall_type/low {					\
-		icon = 'code/modules/wod13/lowwalls.dmi'; 		\
+		icon = 'modular_darkpack/modules/walls/icons/lowwalls.dmi'; \
 		opacity = FALSE;								\
 		low = TRUE;										\
 		blocks_air = FALSE;								\
-		smoothing_groups = list(SMOOTH_GROUP_CITY_LOW_WALL);\
-		canSmoothWith = list(SMOOTH_GROUP_CITY_LOW_WALL);\
+		smoothing_groups = SMOOTH_GROUP_CITY_LOW_WALL;	\
+		canSmoothWith = SMOOTH_GROUP_CITY_LOW_WALL;		\
+		pass_flags_self = PASSTABLE | LETPASSTHROW;		\
 	}	\
 	/turf/closed/wall/##wall_type/low/window {			\
 		window = /obj/structure/window/fulltile;		\
+		WHEN_MAP(icon = 'modular_darkpack/modules/walls/icons/lowwalls.dmi'); \
+		WHEN_MAP(icon_state = "window_spawner"); 		\
 	}	\
 	/turf/closed/wall/##wall_type/low/window/reinforced { \
 		window = /obj/structure/window/reinforced/fulltile; \

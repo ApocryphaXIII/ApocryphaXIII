@@ -2713,15 +2713,6 @@
 	name = "Emergency Lockdown";
 	req_one_access_txt = "5"
 	},
-/obj/structure/window{
-	name = "button cover";
-	desc = "Break in case of emergency.";
-	icon = 'icons/obj/stationobjs.dmi';
-	icon_state = "doorctrl";
-	color = "#8be0fc";
-	can_be_unanchored = 0;
-	max_integrity = 5
-	},
 /turf/closed/wall/vampwall/painted,
 /area/space)
 "cMK" = (
@@ -14039,7 +14030,6 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/space)
 "oHe" = (
-/obj/structure/lattice,
 /obj/structure/railing,
 /obj/effect/decal/pallet,
 /obj/effect/decal/pallet{
@@ -18703,7 +18693,6 @@
 /turf/open/floor/plating/circled,
 /area/space)
 "ukq" = (
-/obj/structure/lattice,
 /obj/structure/railing,
 /obj/effect/decal/pallet,
 /obj/effect/decal/pallet{

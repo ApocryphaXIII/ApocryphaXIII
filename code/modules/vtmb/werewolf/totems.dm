@@ -162,9 +162,3 @@
 					qdel(prev)
 		else
 			adjust_totem_health(round(C.melee_damage_lower/2))
-
-// APOC ADD START
-/obj/structure/werewolf_totem/generic
-	icon_state = "wendigo"
-	tribe = TRIBE_GAIA
-// APOC ADD END

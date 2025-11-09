@@ -113,7 +113,6 @@
 		W.layer = ABOVE_ALL_MOB_LAYER
 	else if(!low)
 		addwall = new(get_step(src, NORTH))
-		addwall.icon = frill_icon
 		addwall.icon_state = icon_state
 		addwall.name = name
 		addwall.desc = desc

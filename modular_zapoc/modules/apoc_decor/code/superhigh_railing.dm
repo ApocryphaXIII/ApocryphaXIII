@@ -8,5 +8,5 @@
 /obj/structure/railing/metal/highlayer
 	layer = ABOVE_MOB_LAYER
 
-/obj/structure/railing/metal/highlayer/corner
+/obj/structure/railing/metal/corner/highlayer
 	layer = ABOVE_MOB_LAYER

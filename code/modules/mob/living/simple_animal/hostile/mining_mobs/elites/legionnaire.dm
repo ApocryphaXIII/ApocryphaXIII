@@ -39,6 +39,7 @@
 	deathsound = 'sound/magic/curse.ogg'
 	deathmessage = "'s arms reach out before it falls apart onto the floor, lifeless."
 //	loot_drop = /obj/item/crusher_trophy/legionnaire_spine // APOC EDIT REMOVE
+	stat_attack = SOFT_CRIT // APOC EDIT ADD - Don't execute
 
 	attack_action_types = list(/datum/action/innate/elite_attack/legionnaire_charge,
 								/datum/action/innate/elite_attack/head_detach,

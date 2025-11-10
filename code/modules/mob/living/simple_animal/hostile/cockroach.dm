@@ -40,12 +40,12 @@
 	add_cell_sample()
 	make_squashable()
 
-/mob/living/simple_animal/hostile/cockroach/proc/make_squashable() // APOC EDIT CHANGE - Squish chance
+/mob/living/simple_animal/hostile/cockroach/proc/make_squashable() // APOC EDIT CHANGE - Squish chance // 11-10-25 Removed SQUASHED_SHOULD_BE_GIBBED
 	AddComponent( \
 		/datum/component/squashable, \
 		squash_chance = squish_chance, \
 		squash_damage = 1, \
-		squash_flags = SQUASHED_SHOULD_BE_GIBBED|SQUASHED_ALWAYS_IF_DEAD|SQUASHED_DONT_SQUASH_IN_CONTENTS, \
+		squash_flags = SQUASHED_ALWAYS_IF_DEAD|SQUASHED_DONT_SQUASH_IN_CONTENTS, \
 	)
 
 /mob/living/simple_animal/hostile/cockroach/add_cell_sample()

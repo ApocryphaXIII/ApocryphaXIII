@@ -27,7 +27,7 @@
 	mask = /obj/item/clothing/mask/gas/explorer/pentex/endron
 
 
-/obj/effect/mob_spawn/human/corpse/damaged/garou/guardian
+/obj/effect/mob_spawn/human/corpse/damaged/garou
 	id = /obj/item/card/id/garou/glade/guardian
 	uniform =  /obj/item/clothing/under/vampire/biker
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
@@ -37,7 +37,7 @@
 	suit = /obj/item/clothing/suit/vampire/jacket
 
 
-/obj/effect/mob_spawn/human/corpse/damaged/civilian/police
+/obj/effect/mob_spawn/human/corpse/damaged/police
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
 	uniform = /obj/item/clothing/under/vampire/police
 	head = /obj/item/clothing/head/vampire/police

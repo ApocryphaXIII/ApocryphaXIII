@@ -253,7 +253,7 @@
 
 ///A basic turret that shoots at nearby mobs. Intended to be used for the legion megafauna.
 /obj/structure/legionturret
-	name = "\improper gray Mass sentinel"
+	name = "\improper gray mass sentinel"
 	desc = "The eye pierces your soul."
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_turret"

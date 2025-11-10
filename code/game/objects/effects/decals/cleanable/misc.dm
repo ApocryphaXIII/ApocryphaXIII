@@ -335,6 +335,7 @@
 	layer = OBJ_LAYER //To display the decal over wires.
 	density = TRUE
 	anchored = TRUE
+	max_integrity = 50
 
 /obj/structure/trashbag/Initialize()
 	. = ..()

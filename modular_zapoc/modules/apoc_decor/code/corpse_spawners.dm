@@ -19,6 +19,7 @@
 
 /obj/effect/mob_spawn/human/corpse/damaged/endron/cbrn
 	shoes = /obj/item/clothing/shoes/vampire/jackboots
+	head = /obj/item/clothing/head/hooded/heisenberg_hood
 	uniform = /obj/item/clothing/under/pentex/pentex_turtleneck
 	r_pocket = /obj/item/stack/dollar/rand
 	gloves = /obj/item/clothing/gloves/vampire/latex

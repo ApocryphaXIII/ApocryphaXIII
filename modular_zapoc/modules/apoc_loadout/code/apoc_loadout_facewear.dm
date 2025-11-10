@@ -98,3 +98,8 @@
 	display_name = "theatre mask, tragedy"
 	description = "A tragedy mask. Theatre!"
 	path = /obj/item/clothing/mask/vampire/tragedy
+
+/datum/gear/facewear/pentex
+	display_name = "pentex gas mask"
+	description = "PSA: Don't buy surplus filters from the '90s. They have more asbestos than normal."
+	path = /obj/item/clothing/mask/gas/explorer/pentex

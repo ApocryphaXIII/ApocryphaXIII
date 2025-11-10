@@ -26,7 +26,7 @@
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 10
 	robust_searching = 1
-	stat_attack = HARD_CRIT
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute
 	faction = list("skeleton")
 	see_in_dark = 8
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE

@@ -117,7 +117,7 @@
 	loot = list(/obj/item/stack/dollar/rand)
 	brood_type = /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion
 	del_on_death = 1
-	stat_attack = SOFT_CRIT // APOC EDIT ADD - Don't execute
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute
 	robust_searching = 1
 	var/dwarf_mob = FALSE
 	var/mob/living/carbon/human/stored_mob
@@ -183,7 +183,7 @@
 	attack_sound = 'sound/weapons/pierce.ogg'
 	throw_message = "is shrugged off by"
 	del_on_death = TRUE
-	stat_attack = SOFT_CRIT // APOC EDIT ADD - Don't execute
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute
 	robust_searching = 1
 	var/can_infest_dead = FALSE
 

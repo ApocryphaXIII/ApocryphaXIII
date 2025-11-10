@@ -1126,7 +1126,7 @@
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "smallrock1"
 	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
+//	layer = ABOVE_ALL_MOB_LAYER // APOC EDIT CHANGE - Layer sanity i think
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 

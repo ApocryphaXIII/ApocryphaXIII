@@ -101,5 +101,5 @@
 
 /datum/gear/facewear/pentex
 	display_name = "pentex gas mask"
-	description = "PSA: Don't buy surplus filters from the '90s. They have more asbestos than normal."
+	description = "A gas mask manufactured by Pentex."
 	path = /obj/item/clothing/mask/gas/explorer/pentex

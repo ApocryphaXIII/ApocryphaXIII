@@ -15,3 +15,7 @@
 
 /area/vtm/forest/interior/abandoned_cabin
 	name = "Abandoned Cabin"
+
+
+/area/vtm/forest/interior/cave/bane
+	name = "Forbidden Burial Site"

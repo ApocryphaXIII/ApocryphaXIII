@@ -204,7 +204,7 @@
 	if(last_legion)
 		elimination = FALSE
 	else if(prob(20)) //20% chance for sick lootz.
-		loot = list(/obj/structure/closet/crate/necropolis/tendril)
+		loot = list(/obj/item/paper) // APOC EDIT CHANGE - No loot yet
 		if(!true_spawn)
 			loot = null
 	return ..()

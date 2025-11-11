@@ -56,7 +56,7 @@
 							   /datum/action/innate/megafauna_attack/charge_target,
 							   /datum/action/innate/megafauna_attack/create_turrets)
 	small_sprite_type = /datum/action/small_sprite/megafauna/legion
-	stat_attack = SOFT CRIT // APOC EDIT ADD - Don't execute
+	stat_attack = SOFT_CRIT // APOC EDIT ADD - Don't execute
 	var/size = 3
 	var/charging = FALSE
 

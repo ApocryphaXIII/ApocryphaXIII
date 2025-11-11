@@ -3802,6 +3802,7 @@
 #include "modular_zapoc\modules\apoc_decor\code\superhigh_railing.dm"
 #include "modular_zapoc\modules\apoc_decor\code\torch.dm"
 #include "modular_zapoc\modules\apoc_doors\code\pentex_doors.dm"
+#include "modular_zapoc\modules\apoc_helpers\code\deleter.dm"
 #include "modular_zapoc\modules\apoc_helpers\code\locklevel_helper.dm"
 #include "modular_zapoc\modules\apoc_helpers\code\startlocked_helper.dm"
 #include "modular_zapoc\modules\apoc_helpers\code\viewport_helper.dm"

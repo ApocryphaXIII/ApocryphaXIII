@@ -3,7 +3,7 @@
 	desc = "This city is just crawling with bugs." // APOC EDIT CHANGE
 	icon = 'code/modules/wod13/mobs.dmi'
 	icon_state = "cockroach"
-	icon_dead = "cockroach"
+	icon_dead = "cockroach_dead"
 	del_on_death = FALSE
 	faction = list("rat")
 	squish_chance = 50

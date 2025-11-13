@@ -25,6 +25,28 @@
 /area/vtm/interior/movie_theatre)
 "ci" = (
 /obj/structure/closet/cardboard,
+/mob/living/simple_animal/pet/cat/vampire{
+	name = "Drimbus"
+	},
+/mob/living/simple_animal/pet/cat/vampire{
+	name = "Glimbus"
+	},
+/mob/living/simple_animal/pet/cat/vampire{
+	name = "Mr Chef"
+	},
+/mob/living/simple_animal/pet/cat/vampire{
+	name = "Roginald"
+	},
+/mob/living/simple_animal/pet/cat/vampire{
+	name = "Spoingus";
+	desc = "A stray cat thats taken up residence on the clinic's roof. Likes to be fed bits of cereal."
+	},
+/mob/living/simple_animal/pet/cat/vampire{
+	name = "Thorgax"
+	},
+/mob/living/simple_animal/pet/cat/vampire{
+	name = "Zloopus"
+	},
 /turf/open/floor/carpet,
 /area/awaymission/errorroom)
 "cT" = (

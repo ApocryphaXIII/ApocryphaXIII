@@ -50,7 +50,7 @@
 			else
 				animate(owner, alpha = 36, time = 1.5 SECONDS, loop = 0)
 		else
-			animate(owner, alpha = 255, time = 1.5 SECONDS, loop = 0, flags = ANIMATION_SLICE)
+			animate(owner, alpha = 255, time = 1.5 SECONDS, loop = 0)
 
 
 /obj/item/vtm_artifact/nyxs_bangle/Initialize(mapload)

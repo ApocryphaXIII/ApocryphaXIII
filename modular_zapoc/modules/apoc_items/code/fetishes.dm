@@ -26,6 +26,10 @@
 	var/spirit_name = "Glitchimus"
 	var/spirit_type = "ahelp"
 
+/obj/item/vtm_artifact/nyxs_bangle/identificate()
+	. = ..()
+	say("I am [spirit_name]... Hide now, in shadow.")
+
 
 /obj/item/vtm_artifact/nyxs_bangle/remove_powers()
 	..()
@@ -104,6 +108,10 @@
 	spirit_type = SPIRIT_VENGEANCE
 	spirit_name = generate_spirit_name(spirit_type)
 
+
+/obj/item/vtm_artifact/dagger_of_retribution/identificate()
+	. = ..()
+	say("I am [spirit_name]... That which is lost will be found...")
 
 /obj/item/vtm_artifact/dagger_of_retribution/examine(mob/user)
 	. = ..()

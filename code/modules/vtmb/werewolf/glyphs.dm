@@ -200,3 +200,27 @@
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "rite"
 	color = "#000000"
+
+/obj/effect/decal/garou_glyph/rite/AltClick(mob/user)
+	. = ..()
+	var/timer
+	if(isgarou(user) || iswerewolf(user))
+		var/mob/living/carbon/C = user
+		if(locate(/obj/item/vtm_artifact) in loc)
+			C.say("Spirits...")
+			if(C.auspice.name == "Theurge")
+				timer = 3 SECONDS
+				C.Immobilize(timer, TRUE)
+			else
+				timer = 10 SECONDS
+				C.Immobilize(timer, TRUE)
+
+			if(do_after(C, timer, src))
+				C.say("I beckon you!", spans = list(SPAN_YELL))
+				for(var/obj/item/vtm_artifact/VA in loc)
+					VA.identificate()
+					playsound(loc, 'code/modules/wod13/sounds/rage_decrease.ogg', 50, FALSE)
+					qdel(src)
+					return
+		else
+			to_chat(C, span_warning("You're missing an integral part of the rite."))

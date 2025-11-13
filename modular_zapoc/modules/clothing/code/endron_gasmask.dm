@@ -10,4 +10,5 @@
 /obj/item/clothing/mask/gas/explorer/pentex/yumco
 	name = "yumco! gas mask"
 	icon = 'modular_zapoc/modules/clothing/icons/yumco_clothing.dmi'
+	worn_icon 'modular_zapoc/modules/clothing/icons/yumco_clothing_worn.dmi'
 	desc = "An intimidating gas mask with the YumCo! logo on the filters and yellow lenses."

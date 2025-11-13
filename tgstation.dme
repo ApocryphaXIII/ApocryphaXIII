@@ -3819,6 +3819,7 @@
 #include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_hat.dm"
 #include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_suit.dm"
 #include "modular_zapoc\modules\apoc_loadout\code\apoc_loadout_uniform.dm"
+#include "modular_zapoc\modules\apoc_mobs\code\gray_masses.dm"
 #include "modular_zapoc\modules\apoc_mobs\code\roach.dm"
 #include "modular_zapoc\modules\apoc_mobs\code\wolfkin.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\animal_musk_quirk.dm"

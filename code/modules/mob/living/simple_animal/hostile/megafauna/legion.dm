@@ -256,7 +256,7 @@
 /obj/structure/legionturret
 	name = "\improper gray mass sentinel"
 	desc = "The eye pierces your soul."
-	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	icon_state = "legion_turret"
 	light_power = 0.5
 	light_range = 2

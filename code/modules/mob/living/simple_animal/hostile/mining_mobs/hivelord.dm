@@ -114,7 +114,7 @@
 	attack_sound = 'sound/weapons/pierce.ogg'
 	throw_message = "bounces harmlessly off of"
 	crusher_loot = /obj/item/crusher_trophy/legion_skull
-	loot = list(/obj/item/stack/dollar/rand)
+	loot = list(/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion = 3)
 	brood_type = /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion
 	del_on_death = 1
 	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute

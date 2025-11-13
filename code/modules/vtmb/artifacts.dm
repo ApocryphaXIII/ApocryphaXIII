@@ -1,26 +1,40 @@
+/// Helper proc for telling a machine to start processing
+/obj/item/vtm_artifact/proc/begin_processing()
+	var/datum/controller/subsystem/processing/subsystem = locate(subsystem_type) in Master.subsystems
+	START_PROCESSING(subsystem, src)
+
+
+/obj/item/vtm_artifact/proc/end_processing()
+	var/datum/controller/subsystem/processing/subsystem = locate(subsystem_type) in Master.subsystems
+	STOP_PROCESSING(subsystem, src)
+
+
 /obj/item/vtm_artifact/pickup(mob/user)
 	..()
 	if(identified)
 		owner = user
-		START_PROCESSING(SSobj, src)
+		begin_processing()
 		get_powers()
+
 
 /obj/item/vtm_artifact/dropped(mob/user)
 	..()
 	if(identified)
 		if(isturf(loc))
-			STOP_PROCESSING(SSobj, src)
+			end_processing()
 			if(owner)
 				remove_powers()
 				owner = null
 
+
 /obj/item/vtm_artifact/process(delta_time)
 	if(owner != loc && owner != loc.loc)
 		forceMove(get_turf(src))
-		STOP_PROCESSING(SSobj, src)
+		end_processing()
 		if(owner)
 			remove_powers()
 			owner = null
+
 
 /obj/item/vtm_artifact
 	name = "unidentified occult fetish"
@@ -35,6 +49,7 @@
 	var/true_desc = "Debug"
 	var/identified = FALSE
 	var/gained_boosts = FALSE
+	var/subsystem_type = /datum/controller/subsystem/processing/obj
 
 /obj/item/vtm_artifact/proc/identificate()
 	if(!identified)

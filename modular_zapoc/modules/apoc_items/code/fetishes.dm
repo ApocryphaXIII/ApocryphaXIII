@@ -74,6 +74,8 @@
 	true_name = "dagger of retribution"
 	true_desc = "An ugly iron dagger imbued with a vengeance-spirit."
 	icon = 'modular_zapoc/modules/apoc_items/icons/fetishes.dmi'
+	worn_icon = 'code/modules/wod13/worn.dmi'
+	worn_icon_state = "knife"
 	lefthand_file = 'modular_zapoc/modules/apoc_items/icons/fetishes_lefthand.dmi'
 	righthand_file = 'modular_zapoc/modules/apoc_items/icons/fetishes_righthand.dmi'
 	ONFLOOR_ICON_HELPER('modular_zapoc/modules/apoc_items/icons/fetishes_onfloor.dmi')
@@ -88,7 +90,7 @@
 	armour_penetration = 35
 	block_chance = 5
 	sharpness = SHARP_EDGED
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
 	resistance_flags = FIRE_PROOF
 	is_iron = TRUE

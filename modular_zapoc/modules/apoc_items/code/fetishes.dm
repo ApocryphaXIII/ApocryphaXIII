@@ -10,6 +10,8 @@
 
 /* Nyx's Bangle */
 /obj/item/vtm_artifact/nyxs_bangle
+	name = "silver bracelet"
+	desc = "A chain bracelet made of silver."
 	true_name = "Nyx's Bangle"
 	true_desc = "A silver bracelet with numerous glyphs."
 	icon = 'modular_zapoc/modules/apoc_items/icons/fetishes.dmi'
@@ -63,8 +65,10 @@
 
 /* Dagger of Retribution */
 /obj/item/vtm_artifact/dagger_of_retribution
+	name = "iron knife"
+	desc = "A crude knife wrought from iron."
 	true_name = "dagger of retribution"
-	true_desc = "An ugly iron dagger imbued with a vengeance-spirit. "
+	true_desc = "An ugly iron dagger imbued with a vengeance-spirit."
 	icon = 'modular_zapoc/modules/apoc_items/icons/fetishes.dmi'
 	lefthand_file = 'modular_zapoc/modules/apoc_items/icons/fetishes_lefthand.dmi'
 	righthand_file = 'modular_zapoc/modules/apoc_items/icons/fetishes_righthand.dmi'

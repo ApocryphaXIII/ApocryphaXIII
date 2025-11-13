@@ -272,28 +272,17 @@
 	desc = "True clothing for any punk. Provides some kind of protection."
 	icon_state = "jacket1"
 	armor = list(MELEE = 25, BULLET = 25, LASER = 10, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 25, ACID = 10, WOUND = 25)
-	allowed = list(
-		/obj/item/card/id,
-		/obj/item/flashlight,
-	)
 
 /obj/item/clothing/suit/vampire/jacket/fbi
 	name = "Federal Bureau of Investigation jacket"
 	desc = "\"FBI OPEN UP!!\""
 	icon_state = "fbi"
 	armor = list(MELEE = 25, BULLET = 25, LASER = 10, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 25, ACID = 10, WOUND = 25)
-	allowed = list(
-		/obj/item/card/id,
-		/obj/item/flashlight,
-		/obj/item/melee/classic_baton/vampire,
-		/obj/item/restraints/handcuffs
-	)
 	can_have_armor = TRUE // APOC EDIT ADD
 
 /obj/item/clothing/suit/vampire/jacket/punk
 	icon_state = "punk"
-	armor = list(MELEE = 50, BULLET = 50, LASER = 10, ENERGY = 10, BOMB = 50, BIO = 0, RAD = 0, FIRE = 25, ACID = 10, WOUND = 25)
-	can_have_armor = TRUE // APOC EDIT ADD
+		armor = list(MELEE = 55, BULLET = 55, LASER = 10, ENERGY = 10, BOMB = 55, BIO = 0, RAD = 0, FIRE = 45, ACID = 10, WOUND = 25)
 
 /obj/item/clothing/suit/vampire/jacket/better
 	name = "brown leather jacket"
@@ -318,7 +307,7 @@
 /obj/item/clothing/suit/vampire/trench/alt/armored
 	name = "armored trenchcoat"
 	icon_state = "trench2"
-	armor = list("melee"=50,"bullet"=50,"laser"=50,"energy"=10,"bomb"=40,"bio"=0,"rad"=0,"fire"=40,"acid"=10,"wound"=25)
+	armor = list(MELEE = 55, BULLET = 55, LASER = 10, ENERGY = 10, BOMB = 55, BIO = 0, RAD = 0, FIRE = 45, ACID = 10, WOUND = 25)
 	can_have_armor = FALSE // APOC EDIT ADD
 	max_integrity = 1000;
 
@@ -340,26 +329,20 @@
 	name = "fleshcoat"
 	desc = "HUMAN LEATHER JACKET."
 	icon_state = "trench_tzi"
-	armor = list(MELEE = 50, BULLET = 50, LASER = 10, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 0, ACID = 10, WOUND = 50)
+	armor = list(MELEE = 55, BULLET = 55, LASER = 10, ENERGY = 10, BOMB = 55, BIO = 0, RAD = 0, FIRE = 45, ACID = 10, WOUND = 25)
 	clothing_traits = list(TRAIT_UNMASQUERADE)
 
 /obj/item/clothing/suit/vampire/trench/voivode
 	name = "regal coat"
 	desc = "A beautiful jacket. Whoever owns this must be important."
 	icon_state = "voicoat"
-	armor = list(MELEE = 60, BULLET = 60, LASER = 10, ENERGY = 10, BOMB = 55, BIO = 0, RAD = 0, FIRE = 45, ACID = 10, WOUND = 25)
+	armor = list(MELEE = 55, BULLET = 55, LASER = 10, ENERGY = 10, BOMB = 55, BIO = 0, RAD = 0, FIRE = 45, ACID = 10, WOUND = 25)
 
 /obj/item/clothing/suit/vampire/vest
 	name = "bulletproof vest"
 	desc = "Durable, lightweight vest designed to protect against most threats efficiently."
 	icon_state = "vest"
 	armor = list(MELEE = 55, BULLET = 55, LASER = 10, ENERGY = 10, BOMB = 55, BIO = 0, RAD = 0, FIRE = 45, ACID = 10, WOUND = 25)
-	allowed = list(
-		/obj/item/card/id,
-		/obj/item/flashlight,
-		/obj/item/melee/classic_baton/vampire,
-		/obj/item/restraints/handcuffs
-	)
 
 /obj/item/clothing/suit/vampire/vest/medieval
 	name = "medieval vest"

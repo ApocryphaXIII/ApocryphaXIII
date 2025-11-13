@@ -40,7 +40,7 @@
 		/obj/structure/small_vamprocks = 1,
 		/obj/structure/vamprocks = 1,
 	)
-	flora_density = 50
+	flora_density = 45
 	fauna_types = list(
 	/mob/living/simple_animal/butterfly = 3,
 	/mob/living/simple_animal/deer = 1,
@@ -59,7 +59,7 @@
 		/obj/structure/small_vamprocks = 1,
 		/obj/structure/vamprocks = 1,
 	)
-	flora_density = 40
+	flora_density = 35
 	fauna_types = list(
 	/mob/living/simple_animal/butterfly = 3,
 	/mob/living/simple_animal/deer = 1,
@@ -71,7 +71,7 @@
 	fauna_density = 1
 
 /datum/biome/jungle/deep
-	flora_density = 65
+	flora_density = 60
 
 /datum/biome/wasteland
 	turf_type = /turf/open/floor/plating/vampdirt

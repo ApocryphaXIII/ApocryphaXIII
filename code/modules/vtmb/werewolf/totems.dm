@@ -148,7 +148,7 @@
 						if(do_mob(user, src, 10 SECONDS))
 							playsound(loc, 'code/modules/wod13/sounds/portal.ogg', 75, FALSE)
 							var/obj/umbra_portal/U = new (get_step(src, SOUTH))
-							U.id = "[tribe][rand(1, 999)]"
+							U.id = "[pick(tribe)][rand(1, 999)]"
 							U.later_initialize()
 							var/obj/umbra_portal/P = new (teleport_turf)
 							P.id = U.id

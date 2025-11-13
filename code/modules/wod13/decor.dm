@@ -1029,6 +1029,7 @@
 	layer = SPACEVINE_LAYER
 	anchored = TRUE
 	density = TRUE
+	pixel_x = -14
 	pixel_w = -24
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 

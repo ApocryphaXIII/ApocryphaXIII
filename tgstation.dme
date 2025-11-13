@@ -3809,6 +3809,7 @@
 #include "modular_zapoc\modules\apoc_helpers\code\startlocked_helper.dm"
 #include "modular_zapoc\modules\apoc_helpers\code\viewport_helper.dm"
 #include "modular_zapoc\modules\apoc_items\code\fetishes.dm"
+#include "modular_zapoc\modules\apoc_items\code\garden_crate.dm"
 #include "modular_zapoc\modules\apoc_items\code\poi_keys.dm"
 #include "modular_zapoc\modules\apoc_jobs\voidodate_citizen.dm"
 #include "modular_zapoc\modules\apoc_jobs\job_types\_job.dm"

@@ -97,7 +97,7 @@
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion
 	name = "gray man" // APOC EDIT CHANGE - Lavaland2Umbra
 	desc = "You can still see what was once a human under the shifting mass of corruption."
-	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	icon_state = "legion"
 	icon_living = "legion"
 	icon_aggro = "legion"
@@ -163,7 +163,7 @@
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion
 	name = "gray spore blob" // APOC EDIT CHANGE - Lavaland2Umbra
 	desc = "A mass of evil spores." // APOC EDIT CHANGE - Lavaland2Umbra
-	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	icon_state = "legion_head"
 	icon_living = "legion_head"
 	icon_aggro = "legion_head"
@@ -239,7 +239,7 @@
 /mob/living/simple_animal/hostile/big_legion
 	name = "enormous gray man" // APOC EDIT CHANGE - Lavaland2Umbra
 	desc = "One of many."
-	icon = 'icons/mob/lavaland/64x64megafauna.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses_64x64.dmi'
 	icon_state = "legion"
 	icon_living = "legion"
 	icon_dead = "legion"
@@ -267,6 +267,7 @@
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 	see_in_dark = 8
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
+	pixel_x = -16
 
 
 /mob/living/simple_animal/hostile/big_legion/Initialize()

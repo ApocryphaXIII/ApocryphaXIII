@@ -19,6 +19,7 @@
 /mob/living/simple_animal/hostile/asteroid/elite/legionnaire
 	name = "tall gray man" // APOC EDIT CHANGE
 	desc = "A towering skeleton, embodying the terrifying power of the Gray Masses." // APOC EDIT CHANGE
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses_tall.dmi'
 	icon_state = "legionnaire"
 	icon_living = "legionnaire"
 	icon_aggro = "legionnaire"
@@ -236,8 +237,9 @@
 
 //The legionnaire's head.  Basically the same as any legion head, but we have to tell our creator when we die so they can generate another head.
 /mob/living/simple_animal/hostile/asteroid/elite/legionnairehead
-	name = "gray man sporeskull"
+	name = "spore sac"
 	desc = "The gray man's head floating by itself.  One shouldn't get too close, though once it sees you, you really don't have a choice."
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses_tall.dmi'
 	icon_state = "legionnaire_head"
 	icon_living = "legionnaire_head"
 	icon_aggro = "legionnaire_head"

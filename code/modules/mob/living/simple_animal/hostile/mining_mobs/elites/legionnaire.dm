@@ -270,7 +270,7 @@
 /obj/structure/legionnaire_bonfire
 	name = "bone pile"
 	desc = "A pile of bones which seems to occasionally move a little.  It's probably a good idea to smash them."
-	icon = 'icons/obj/lavaland/legionnaire_bonfire.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	icon_state = "bonfire"
 	max_integrity = 100
 	move_resist = MOVE_FORCE_EXTREMELY_STRONG

@@ -485,7 +485,9 @@
 /obj/item/storage/backpack/duffelbag/med
 	name = "medical duffel bag"
 	desc = "A large duffel bag for holding extra medical supplies."
+	worn_icon = 'icons/mob/clothing/back/backpack.dmi'
 	icon_state = "duffel-med"
+	worn_icon_state = "duffel-medical"
 	inhand_icon_state = "duffel-med"
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 

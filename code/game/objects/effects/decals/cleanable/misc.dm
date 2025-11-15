@@ -104,12 +104,13 @@
 	QUEUE_SMOOTH_NEIGHBORS(src)
 
 /obj/effect/decal/cleanable/gasoline/Crossed(atom/movable/AM, oldloc)
+	if(istype(AM, /obj/effect/particle_effect/sparks)) // APOC EDIT START
+		fire_act()
+
 	if(isliving(AM))
 		var/mob/living/L = AM
 		if(L.on_fire)
-			var/obj/effect/fire/F = locate() in get_turf(src)
-			if(!F)
-				new /obj/effect/fire(get_turf(src))
+			fire_act() // APOC EDIT END
 	..(AM)
 
 /obj/effect/decal/cleanable/gasoline/Initialize()
@@ -334,6 +335,7 @@
 	layer = OBJ_LAYER //To display the decal over wires.
 	density = TRUE
 	anchored = TRUE
+	max_integrity = 50
 
 /obj/structure/trashbag/Initialize()
 	. = ..()

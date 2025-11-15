@@ -7,7 +7,7 @@
 	var/set_armor // APOC EDIT ADD START
 	var/upgrade_item_used // APOC EDIT ADD END
 
-/datum/component/armor_plate/Initialize(_maxamount,obj/item/_upgrade_item,datum/armor/_added_armor,set_armor) // APOC EDIT ADD
+/datum/component/armor_plate/Initialize(_maxamount,obj/item/_upgrade_item,datum/armor/_added_armor, set_armor) // APOC EDIT ADD
 	if(!isobj(parent))
 		return COMPONENT_INCOMPATIBLE
 

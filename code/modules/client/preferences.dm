@@ -3741,7 +3741,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		character.morality_path = MOR
 		character.clan.current_accessory = clan_accessory
 		character.maxbloodpool = 10 + ((13 - generation) * 3)
-		character.bloodpool = rand(2, character.maxbloodpool)
+		character.bloodpool = rand(floor(character.maxbloodpool/2), character.maxbloodpool)
 		character.generation = generation
 		character.max_yin_chi = character.maxbloodpool
 		character.yin_chi = character.max_yin_chi

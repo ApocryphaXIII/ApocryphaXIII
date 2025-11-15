@@ -802,7 +802,7 @@
 	clawfootstep = FOOTSTEP_WATER
 	heavyfootstep = FOOTSTEP_WATER
 
-/turf/open/floor/plating/bloodshit/Initialize()
+/*/turf/open/floor/plating/bloodshit/Initialize() // APOC EDIT REMOVE - Wtf
 	. = ..()
 	for(var/mob/living/L in src)
 		if(L)
@@ -810,7 +810,7 @@
 	spawn(5)
 		for(var/turf/T in range(1, src))
 			if(T && !istype(T, /turf/open/floor/plating/bloodshit))
-				new /turf/open/floor/plating/bloodshit(T)
+				new /turf/open/floor/plating/bloodshit(T)*/ // APOC EDIT REMOVE END
 
 //flags
 
@@ -1029,6 +1029,7 @@
 	layer = SPACEVINE_LAYER
 	anchored = TRUE
 	density = TRUE
+	pixel_x = -14
 	pixel_w = -24
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 
@@ -1126,7 +1127,7 @@
 	icon = 'code/modules/wod13/props.dmi'
 	icon_state = "smallrock1"
 	plane = GAME_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
+//	layer = ABOVE_ALL_MOB_LAYER // APOC EDIT CHANGE - Layer sanity i think
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 

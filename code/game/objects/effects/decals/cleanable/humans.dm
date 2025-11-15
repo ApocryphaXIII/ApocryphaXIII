@@ -55,7 +55,7 @@
 		name = dryname
 		desc = drydesc
 		bloodiness = 0
-		color =  COLOR_GRAY
+		color =  "#36140F"
 		STOP_PROCESSING(SSobj, src)
 		if(istype(get_area(src), /area/vtm))
 			var/area/vtm/V = get_area(src)
@@ -113,6 +113,7 @@
 	mergeable_decal = FALSE
 	dryname = "rotting gibs"
 	drydesc = "They look bloody and gruesome while some terrible smell fills the air."
+	color = "#950A00"
 
 /obj/effect/decal/cleanable/blood/gibs/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
@@ -182,16 +183,17 @@
 
 /obj/effect/decal/cleanable/blood/gibs/old
 	name = "old rotting gibs"
-	desc = "Space Jesus, why didn't anyone clean this up? They smell terrible."
-	icon_state = "gib1-old"
+	desc = "Jesus, why didn't anyone clean this up? They smell terrible." // APOC EDIT CHANGE
+	icon_state = "gib1"
 	bloodiness = 0
 	dryname = "old rotting gibs"
-	drydesc = "Space Jesus, why didn't anyone clean this up? They smell terrible."
+	drydesc = "Jesus, why didn't anyone clean this up? They smell terrible." // APOC EDIT CHANGE
 
 /obj/effect/decal/cleanable/blood/gibs/old/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
 	setDir(pick(1,2,4,8))
-	icon_state += "-old"
+//	icon_state += "-old" // APOC EDIT REMOVE
+	color = "#36140F" // APOC EDIT ADD
 	add_blood_DNA(list("Non-human DNA" = random_blood_type()))
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_SLUDGE, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 10)
 

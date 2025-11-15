@@ -100,7 +100,7 @@
 		/obj/effect/decal/cleanable/garbage = 4,
 		/obj/effect/decal/cleanable/vomit/old = 3,
 		/obj/effect/spawner/random/trash/cigbutt = 2,
-		/mob/living/simple_animal/hostile/cockroach = 1,
+		/mob/living/simple_animal/hostile/cockroach/apoc = 1,
 	)
 
 /obj/effect/spawner/random/trash/moisture

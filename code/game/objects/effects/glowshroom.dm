@@ -29,17 +29,21 @@
 	/turf/open/lava,
 	/turf/open/floor/plating/beach/water))
 
+	var/shroom_color = "#E5F28C" // APOC EDIT ADD - Make them actually glow without navigating the hellhole that is the commented-out proc below me
+
 /obj/structure/glowshroom/glowcap
 	name = "glowcap"
 	desc = "Mycena Ruthenia, a species of mushroom that, while it does glow in the dark, is not actually bioluminescent."
 	icon_state = "glowcap"
 	myseed = /obj/item/seeds/glowshroom/glowcap
+	shroom_color = "#CD2858" // APOC EDIT ADD
 
 /obj/structure/glowshroom/shadowshroom
 	name = "shadowshroom"
 	desc = "Mycena Umbra, a species of mushroom that emits shadow instead of light."
 	icon_state = "shadowshroom"
 	myseed = /obj/item/seeds/glowshroom/shadowshroom
+	shroom_color = "#6171A2" // APOC EDIT ADD
 
 /obj/structure/glowshroom/single/Spread()
 	return

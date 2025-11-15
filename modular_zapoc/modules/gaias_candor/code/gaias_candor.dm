@@ -36,11 +36,13 @@
 			return ..()
 
 		if(!ishumanbasic(target)) // Impossible to know if a human knows of the Garou, so we'll assume humans are powerless to resist.
-			var/theirpower = SSroll.storyteller_roll(L.get_total_mentality(), difficulty = 0, mobs_to_show_output = null, numerical = TRUE)
+			var/theirpower = SSroll.storyteller_roll(L.get_total_mentality(), difficulty = 6, mobs_to_show_output = null, numerical = TRUE)
 			var/mypower = SSroll.storyteller_roll(user.get_total_social(), difficulty = theirpower, mobs_to_show_output = user, numerical = TRUE)
 
 			if(mypower > theirpower) // Test of wills
 				call_input(L, user)
+				to_chat(user, span_warning("[L]'s scent is uncertain. You can't determine the truth one way or the other."))
+				qdel(src)
 			return ..()
 
 

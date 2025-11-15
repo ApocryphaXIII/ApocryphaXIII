@@ -5,7 +5,7 @@
 	maxHealth = 1000
 	a_intent = INTENT_HARM
 	sentience_type = SENTIENCE_BOSS
-	environment_smash = ENVIRONMENT_SMASH_RWALLS
+	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 	mob_biotypes = MOB_ORGANIC|MOB_EPIC
 	obj_damage = 400
 	light_range = 3

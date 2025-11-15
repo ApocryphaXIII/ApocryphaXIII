@@ -409,10 +409,11 @@
 	)
 	color = "#466a72"
 
-/obj/item/vamp/keys/pentex
+/obj/item/vamp/keys/pentex // APOC EDIT CHANGE - Added the POI key access
 	name = "Endron Facility keys"
 	accesslocks = list(
-		"pentex"
+		"pentex",
+		"pentex_poi"
 	)
 	color = "#062e03"
 

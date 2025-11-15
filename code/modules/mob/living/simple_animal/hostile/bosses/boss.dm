@@ -2,7 +2,7 @@
 	name = "\improper A Perfectly Generic Boss Placeholder"
 	desc = ""
 	robust_searching = 1
-	stat_attack = HARD_CRIT
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute
 	status_flags = 0
 	a_intent = INTENT_HARM
 	sentience_type = SENTIENCE_BOSS

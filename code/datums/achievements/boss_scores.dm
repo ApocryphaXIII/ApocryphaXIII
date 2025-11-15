@@ -39,7 +39,7 @@
 	database_id = HIEROPHANT_SCORE
 
 /datum/award/score/legion_score
-	name = "Legions Killed"
+	name = "Gray Masses Killed"
 	desc = "You've killed HOW many?"
 	database_id = LEGION_SCORE
 

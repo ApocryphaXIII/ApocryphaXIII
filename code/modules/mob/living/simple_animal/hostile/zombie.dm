@@ -6,7 +6,7 @@
 	icon_living = "zombie"
 	mob_biotypes = MOB_UNDEAD
 	speak_chance = 0
-	stat_attack = HARD_CRIT //braains
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute //braains
 	maxHealth = 50
 	health = 50
 	harm_intent_damage = 5
@@ -90,7 +90,7 @@
 	icon_dead = "zombie_dead"
 	mob_biotypes = MOB_UNDEAD
 	speak_chance = 0
-	stat_attack = HARD_CRIT //braains
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute //braains
 	maxHealth = 35 //Threshold to be killed by one sword hit, as it used to.
 	health = 35
 	speed = 1

@@ -421,10 +421,10 @@
 	. = ..()
 	var/mob/living/carbon/werewolf/crinos/C = owner
 	if(C.stat == CONSCIOUS)
-		if(C.sprite_apparel == 4)
+		if(C.sprite_apparel == 12)
 			C.sprite_apparel = 0
 		else
-			C.sprite_apparel = min(4, C.sprite_apparel+1)
+			C.sprite_apparel = min(12, C.sprite_apparel+1)
 
 /datum/action/gift/hispo
 	name = "Hispo Form"

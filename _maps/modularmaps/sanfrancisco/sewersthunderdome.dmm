@@ -208,7 +208,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
 "wU" = (
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/vtm/sewer)
 "xH" = (
 /obj/effect/decal/cleanable/glass,

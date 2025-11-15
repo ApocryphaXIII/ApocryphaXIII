@@ -109,7 +109,7 @@
 	a_intent = INTENT_HARM
 	speak_emote = list("telepathically cries")
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	stat_attack = HARD_CRIT
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute
 	is_flying_animal = TRUE
 	robust_searching = 1
 	crusher_loot = /obj/item/crusher_trophy/watcher_wing

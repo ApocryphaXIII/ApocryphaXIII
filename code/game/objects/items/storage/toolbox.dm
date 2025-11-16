@@ -76,12 +76,12 @@
 	/// If FALSE, someone with a ensouled soulstone can sacrifice a spirit to change the sprite of this toolbox.
 	var/has_soul = FALSE
 
-/obj/item/storage/toolbox/mechanical/PopulateContents()
+/*/obj/item/storage/toolbox/mechanical/PopulateContents() // APOC EDIT REMOVE START - We don't have sandbox mechanics yet
 	new /obj/item/screwdriver(src)
 	new /obj/item/wrench(src)
 	new /obj/item/weldingtool(src)
 	new /obj/item/crowbar(src)
-	new /obj/item/wirecutters(src)
+	new /obj/item/wirecutters(src)*/ // APOC EDIT REMOVE END
 
 /obj/item/storage/toolbox/mechanical/old
 	name = "rusty blue toolbox"

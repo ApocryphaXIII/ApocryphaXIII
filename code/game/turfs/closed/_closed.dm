@@ -242,7 +242,7 @@
 	icon_state = "paperwall"
 
 /turf/closed/indestructible/necropolis
-	name = "necropolis wall"
+	name = "horrifying wall"
 	desc = "A seemingly impenetrable wall."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "necro"
@@ -266,7 +266,7 @@
 	opacity = FALSE
 
 /turf/closed/indestructible/riveted/boss
-	name = "necropolis wall"
+	name = "horrifying wall"
 	desc = "A thick, seemingly indestructible stone wall."
 	icon = 'icons/turf/walls/boss_wall.dmi'
 	icon_state = "boss_wall-0"

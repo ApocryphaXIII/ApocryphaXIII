@@ -666,10 +666,10 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "sb" = (
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/vtm/pacificheights)
 "se" = (
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/vtm)
 "sg" = (
 /obj/structure/table/reinforced,
@@ -1951,7 +1951,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
 "UL" = (
-/turf/closed/wall/vampwall,
+/turf/closed/wall/vampwall/brick_old,
 /area/vtm/supply)
 "UQ" = (
 /obj/structure/vampdoor/salubri{

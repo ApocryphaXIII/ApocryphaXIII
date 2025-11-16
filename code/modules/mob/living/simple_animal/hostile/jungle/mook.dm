@@ -26,7 +26,7 @@
 	ranged_cooldown_time = 10
 	pass_flags_self = LETPASSTHROW
 	robust_searching = TRUE
-	stat_attack = HARD_CRIT
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute
 	attack_sound = 'sound/weapons/rapierhit.ogg'
 	deathsound = 'sound/voice/mook_death.ogg'
 	aggro_vision_range = 15 //A little more aggressive once in combat to balance out their really low HP

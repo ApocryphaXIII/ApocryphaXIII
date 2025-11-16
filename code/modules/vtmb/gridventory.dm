@@ -120,7 +120,7 @@ VENTORY!
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	// ! THESE SHOULD BE ARGS YOU PASS INTO ADDCOMPONENT
 	STR.max_w_class = WEIGHT_CLASS_HUGE
-	STR.max_items = 40 //max grid
+	STR.max_items = 64 //max grid
 	STR.max_combined_w_class = 100
 
 /datum/component/storage/Initialize(datum/component/storage/concrete/master, _screen_max_columns, _screen_max_rows)

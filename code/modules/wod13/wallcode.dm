@@ -62,6 +62,7 @@
 	canSmoothWith = list(SMOOTH_GROUP_CITY_WALL)
 
 	var/obj/effect/addwall/addwall
+	var/frill_icon = /obj/effect/addwall::icon
 	var/low = FALSE
 	var/window
 
@@ -113,6 +114,7 @@
 	else if(!low)
 		addwall = new(get_step(src, NORTH))
 		addwall.icon_state = icon_state
+		addwall.icon = frill_icon
 		addwall.name = name
 		addwall.desc = desc
 
@@ -133,7 +135,7 @@ LOW_WALL_HELPER(vampwall)
 
 /turf/closed/wall/vampwall/low/window
 	icon_state = "wall-window"
-
+/* // APOC EDIT REMOVE START - Darkpack autocut fix
 /turf/closed/wall/vampwall/rich
 	name = "rich-looking wall"
 	desc = "A huge chunk of expensive bricks used to separate rooms."
@@ -315,7 +317,7 @@ LOW_WALL_HELPER(vampwall/wood)
 	desc = "A huge chunk of red bricks used to separate rooms."
 	icon_state = "redbrick-0"
 	base_icon_state = "redbrick"
-
+*/ // APOC EDIT REMOVE END
 //TURFS
 
 /obj/effect/turf_decal/asphalt
@@ -1218,7 +1220,7 @@ LOW_WALL_HELPER(vampwall/wood)
 	..()
 	set_light(1, 0.5, "#1b7c4c")
 
-
+/* APOC EDIT REMOVE - This shit sucks
 /turf/open/floor/plating/vampacid/Entered(atom/movable/AM)
 	if(acid_burn(AM))
 		START_PROCESSING(SSobj, src)
@@ -1230,7 +1232,7 @@ LOW_WALL_HELPER(vampwall/wood)
 		L.apply_damage(10, CLONE)
 		L.apply_damage(30, TOX)
 		to_chat(L, "<span class='warning'>Your flesh burns!</span>")
-
+*/ // APOC EDIT REMOVE
 
 
 /obj/effect/decal/coastline

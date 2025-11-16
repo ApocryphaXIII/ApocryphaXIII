@@ -264,7 +264,7 @@
 		lock_id = pick(K.accesslocks)
 
 	if(!K.accesslocks)
-		to_chat(usr, span_warning("Your key doesn't fit this lock!"))
+		to_chat(usr, span_warning("That key doesn't fit this lock!"))
 		return
 
 	for(var/i in K.accesslocks) // APOC EDIT END

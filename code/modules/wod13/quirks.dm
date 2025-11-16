@@ -676,7 +676,7 @@ Dancer
 
 /datum/quirk/portuguese/add()
 	var/mob/living/carbon/H = quirk_holder
-	H.grant_language(/datum/language/tagalog) // APOC EDIT END
+	H.grant_language(/datum/language/portuguese) // APOC EDIT END
 
 /datum/quirk/consumption
 	name = "Consumption"

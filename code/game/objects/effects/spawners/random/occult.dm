@@ -16,5 +16,7 @@
 		/obj/item/vtm_artifact/fae_charm,
 		/obj/item/vtm_artifact/galdjum,
 		/obj/item/vtm_artifact/mummywrap_fetish,
-		/obj/item/vtm_artifact/weekapaug_thistle
+		/obj/item/vtm_artifact/weekapaug_thistle,
+		/obj/item/vtm_artifact/nyxs_bangle,
+		/obj/item/vtm_artifact/dagger_of_retribution
 	)

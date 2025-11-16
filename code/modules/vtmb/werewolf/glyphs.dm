@@ -39,7 +39,7 @@
 	. = ..()
 
 /obj/effect/decal/garou_glyph
-	name = "Odd Glyph"
+	name = "odd glyph"
 	desc = "An odd collection of symbols drawn in what seems to be charcoal."
 	var/garou_name = "basic glyph"
 	var/garou_desc = "a basic glyph with no meaning." // This is shown to werewolves who examine the glyph in order to determine its true meaning.
@@ -57,137 +57,170 @@
 		"<b>Description:</b> [garou_desc]\n"
 
 /obj/effect/decal/garou_glyph/wyrm
-	name = "Creepy Glyph"
-	garou_name = "Wyrm Glyph"
+	name = "creepy glyph"
+	garou_name = "wyrm glyph"
 	garou_desc = "A glyph that represents the Wyrm, a force of corruption and destruction."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "wyrm"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/vampire
-	name = "Weird Glyph"
-	garou_name = "Vampire Glyph"
+	name = "weird glyph"
+	garou_name = "vampire glyph"
 	garou_desc = "A glyph that represents the Kindred, leeches of the Weaver and Wyrm."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "vampire"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/kinfolk
-	name = "Uncanny Glyph"
-	garou_name = "Kinfolk Glyph"
+	name = "uncanny glyph"
+	garou_name = "kinfolk glyph"
 	garou_desc = "A glyph that represents the Kinfolk, the human relatives of the Garou."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "kinfolk"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/dance
-	name = "Funky Glyph"
-	garou_name = "Dancing Glyph"
+	name = "funky glyph"
+	garou_name = "dancing glyph"
 	garou_desc = "A glyph that represents the spiritual dancing of the Garou."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "dance"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/caern
-	name = "Eerie Glyph"
-	garou_name = "Caern Glyph"
+	name = "eerie glyph"
+	garou_name = "caern glyph"
 	garou_desc = "A glyph that represents the Caern, a sacred location that naturally flows with spiritual energy."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "caern"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/danger
-	name = "Peculiar Glyph"
-	garou_name = "Danger Glyph"
+	name = "peculiar glyph"
+	garou_name = "danger glyph"
 	garou_desc = "A glyph that represents danger! Proceed with caution."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "danger"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/garou
-	name = "Freakish Glyph"
-	garou_name = "Garou Glyph"
+	name = "freakish glyph"
+	garou_name = "garou glyph"
 	garou_desc = "A glyph that represents the Garou, the warriors of Gaia."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "garou"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/conceal
-	name = "Mysterious Glyph"
-	garou_name = "Conceal Glyph"
+	name = "mysterious glyph"
+	garou_name = "conceal glyph"
 	garou_desc = "A glyph that represents the obfuscation of something. What may be hidden from you?"
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "conceal"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/hive
-	name = "Outlandish Glyph"
-	garou_name = "Hive Glyph"
+	name = "outlandish glyph"
+	garou_name = "hive glyph"
 	garou_desc = "A glyph that represents a Hive, the foul home of a Black Spiral Dancer pack."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "hive"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/howl
-	name = "Unusual Glyph"
-	garou_name = "Howling Glyph"
+	name = "unusual glyph"
+	garou_name = "howling glyph"
 	garou_desc = "A glyph that represents the natural song of the Garou, the howl."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "howl"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/remembrance
-	name = "Morose Glyph"
-	garou_name = "Remembrance Glyph"
+	name = "morose glyph"
+	garou_name = "remembrance glyph"
 	garou_desc = "A glyph that represents the mourning and remembrance of the fallen."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "remembrance"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/watch
-	name = "Odd Glyph"
-	garou_name = "Watch Glyph"
+	name = "odd glyph"
+	garou_name = "watch glyph"
 	garou_desc = "A glyph that marks something as in need of monitoring"
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "watch"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/toxic
-	name = "Foul Glyph"
-	garou_name = "Toxic Glyph"
+	name = "foul glyph"
+	garou_name = "toxic glyph"
 	garou_desc = "A glyph that represents toxicity, the material corruption of the Wyrm on the Earth."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "toxic"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/dancers
-	name = "Alien Glyph"
-	garou_name = "Black Spiral Dancer Glyph"
+	name = "alien glyph"
+	garou_name = "black spiral dancer glyph"
 	garou_desc = "A glyph that represents the tribe of the Black Spiral Dancers."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "black_spiral_dancers"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/glasswalkers
-	name = "Quirky Glyph"
-	garou_name = "Glasswalkers Glyph"
+	name = "quirky glyph"
+	garou_name = "glasswalkers glyph"
 	garou_desc = "A glyph that represents the Glasswalkers tribe."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "glasswalkers"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/galestalkers
-	name = "Abnormal Glyph"
-	garou_name = "Younger Brother Glyph"
+	name = "abnormal glyph"
+	garou_name = "younger brother glyph"
 	garou_desc = "A glyph that represents the Galestalkers tribe."
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "younger_brother"
 	color = "#000000"
 
 /obj/effect/decal/garou_glyph/war_against_wyrm
-	name = "Terrifying Glyph"
-	garou_name = "War Against Wyrm Glyph"
+	name = "terrifying glyph"
+	garou_name = "war against wyrm glyph"
 	garou_desc = "A glyph that represents the apocalyptic war of the Garou against the Wyrm."
 	icon = 'code/modules/wod13/icons.dmi'
-	icon_state = "war_against_wyrm	"
+	icon_state = "war_against_wyrm"
 	color = "#000000"
+
+
+/obj/effect/decal/garou_glyph/rite
+	name = "tidy glyph"
+	garou_name = "rite glyph"
+	garou_desc = "A glyph used to channel words into power."
+	icon = 'code/modules/wod13/icons.dmi'
+	icon_state = "rite"
+	color = "#000000"
+
+/obj/effect/decal/garou_glyph/rite/AltClick(mob/user)
+	. = ..()
+	var/timer
+	if(isgarou(user) || iswerewolf(user))
+		var/mob/living/carbon/C = user
+		if(locate(/obj/item/vtm_artifact) in loc)
+			C.say("Spirits...")
+			if(C.auspice.name == "Theurge")
+				timer = 3 SECONDS
+				C.Immobilize(timer, TRUE)
+			else
+				timer = 10 SECONDS
+				C.Immobilize(timer, TRUE)
+
+			if(do_after(C, timer, src))
+				C.say("I beckon you!", spans = list(SPAN_YELL))
+				for(var/obj/item/vtm_artifact/VA in loc)
+					VA.identificate()
+					playsound(loc, 'code/modules/wod13/sounds/rage_decrease.ogg', 50, FALSE)
+					qdel(src)
+					return
+		else
+			to_chat(C, span_warning("You're missing an integral part of the rite."))

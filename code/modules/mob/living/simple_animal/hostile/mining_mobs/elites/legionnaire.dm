@@ -17,8 +17,9 @@
  */
 
 /mob/living/simple_animal/hostile/asteroid/elite/legionnaire
-	name = "legionnaire"
-	desc = "A towering skeleton, embodying the terrifying power of Legion."
+	name = "tall gray man" // APOC EDIT CHANGE
+	desc = "A towering skeleton, embodying the terrifying power of the Gray Masses." // APOC EDIT CHANGE
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses_tall.dmi'
 	icon_state = "legionnaire"
 	icon_living = "legionnaire"
 	icon_aggro = "legionnaire"
@@ -38,7 +39,8 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	deathsound = 'sound/magic/curse.ogg'
 	deathmessage = "'s arms reach out before it falls apart onto the floor, lifeless."
-	loot_drop = /obj/item/crusher_trophy/legionnaire_spine
+//	loot_drop = /obj/item/crusher_trophy/legionnaire_spine // APOC EDIT REMOVE
+	stat_attack = CONSCIOUS // APOC EDIT ADD - Don't execute
 
 	attack_action_types = list(/datum/action/innate/elite_attack/legionnaire_charge,
 								/datum/action/innate/elite_attack/head_detach,
@@ -235,8 +237,9 @@
 
 //The legionnaire's head.  Basically the same as any legion head, but we have to tell our creator when we die so they can generate another head.
 /mob/living/simple_animal/hostile/asteroid/elite/legionnairehead
-	name = "legionnaire head"
-	desc = "The legionnaire's head floating by itself.  One shouldn't get too close, though once it sees you, you really don't have a choice."
+	name = "spore sac"
+	desc = "The gray man's head floating by itself.  One shouldn't get too close, though once it sees you, you really don't have a choice."
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses_tall.dmi'
 	icon_state = "legionnaire_head"
 	icon_living = "legionnaire_head"
 	icon_aggro = "legionnaire_head"
@@ -267,7 +270,7 @@
 /obj/structure/legionnaire_bonfire
 	name = "bone pile"
 	desc = "A pile of bones which seems to occasionally move a little.  It's probably a good idea to smash them."
-	icon = 'icons/obj/lavaland/legionnaire_bonfire.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	icon_state = "bonfire"
 	max_integrity = 100
 	move_resist = MOVE_FORCE_EXTREMELY_STRONG

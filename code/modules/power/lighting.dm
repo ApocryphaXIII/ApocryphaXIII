@@ -986,5 +986,10 @@
 	light_type = /obj/item/light/bulb
 	fitting = "bulb"
 
+
+/obj/machinery/light/floor/broken // APOC EDIT ADD START
+	status = LIGHT_BROKEN
+	icon_state = "floor-broken" // APOC EDIT ADD END
+
 #undef LIGHT_DRAIN_TIME
 #undef LIGHT_POWER_GAIN

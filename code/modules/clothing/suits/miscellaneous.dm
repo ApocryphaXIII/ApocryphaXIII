@@ -441,6 +441,7 @@
 	icon_state = "militaryjacket"
 	inhand_icon_state = "militaryjacket"
 	allowed = list(/obj/item/flashlight, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/revolver, /obj/item/radio)
+	can_have_armor = TRUE
 
 /obj/item/clothing/suit/jacket/letterman
 	name = "letterman jacket"

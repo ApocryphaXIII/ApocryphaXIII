@@ -149,7 +149,7 @@
 			new /obj/item/melee/vampirearms/baseball/hand(src)
 
 		if(6)
-			new /obj/item/ravnos(src)
+			new /obj/item/argemia(src) // APOC EDIT CHANGE
 		if(7)
 			new /obj/item/clothing/glasses/vampire/sun(src)
 			new /obj/item/clothing/mask/cigarette/rollie(src)

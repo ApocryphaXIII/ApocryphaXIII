@@ -17,7 +17,7 @@
  *SHITCODE AHEAD. BE ADVISED. Also comment extravaganza
  */
 /mob/living/simple_animal/hostile/megafauna/legion
-	name = "Legion"
+	name = "gray mass ultraspore"
 	health = 700
 	maxHealth = 700
 	icon_state = "mega_legion"
@@ -46,7 +46,7 @@
 	base_pixel_x = -32
 	pixel_y = -16
 	base_pixel_y = -16
-	loot = list(/obj/item/stack/sheet/bone = 3)
+	loot = list(/obj/effect/spawner/random/occult/artifact = 3)
 	vision_range = 13
 	wander = FALSE
 	elimination = TRUE
@@ -56,6 +56,7 @@
 							   /datum/action/innate/megafauna_attack/charge_target,
 							   /datum/action/innate/megafauna_attack/create_turrets)
 	small_sprite_type = /datum/action/small_sprite/megafauna/legion
+	stat_attack = SOFT_CRIT // APOC EDIT ADD - Don't execute
 	var/size = 3
 	var/charging = FALSE
 
@@ -75,7 +76,7 @@
 
 /datum/action/innate/megafauna_attack/create_turrets
 	name = "Create Sentinels"
-	icon_icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
+	icon_icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	button_icon_state = "legion_turret"
 	chosen_message = "<span class='colossus'>You are now creating legion sentinels.</span>"
 	chosen_attack_num = 3
@@ -204,7 +205,7 @@
 	if(last_legion)
 		elimination = FALSE
 	else if(prob(20)) //20% chance for sick lootz.
-		loot = list(/obj/structure/closet/crate/necropolis/tendril)
+		loot = list(/obj/item/paper) // APOC EDIT CHANGE - No loot yet
 		if(!true_spawn)
 			loot = null
 	return ..()
@@ -232,7 +233,7 @@
 			pixel_y = 0
 			maxHealth = 200
 	adjustHealth(0) //Make the health HUD look correct.
-	visible_message("<span class='boldannounce'>This is getting out of hands. Now there are three of them!</span>")
+	visible_message("<span class='boldannounce'>This is getting out of hand. Now there are three of them!</span>") // APOC EDIT CHANGE
 	for(var/i in 1 to 2) //Create three skulls in total
 		var/mob/living/simple_animal/hostile/megafauna/legion/L = new(loc)
 		L.setVarsAfterSplit(src)
@@ -253,9 +254,9 @@
 
 ///A basic turret that shoots at nearby mobs. Intended to be used for the legion megafauna.
 /obj/structure/legionturret
-	name = "\improper Legion sentinel"
+	name = "\improper gray mass sentinel"
 	desc = "The eye pierces your soul."
-	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	icon_state = "legion_turret"
 	light_power = 0.5
 	light_range = 2
@@ -327,10 +328,10 @@
 
 ///Used for the legion turret tracer.
 /obj/effect/projectile/tracer/legion/tracer
-	icon = 'icons/effects/beam.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	icon_state = "blood_light"
 
 ///Used for the legion turret beam.
 /obj/effect/projectile/tracer/legion
-	icon = 'icons/effects/beam.dmi'
+	icon = 'modular_zapoc/modules/apoc_mobs/icons/gray_masses.dmi'
 	icon_state = "blood"

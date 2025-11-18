@@ -25,7 +25,7 @@
 			for(var/obj/structure/werewolf_totem/W in GLOB.totems)
 				if(W)
 					if(W.totem_health)
-						if(W.tribe == auspice.tribe.name)
+						if(auspice.tribe.name in W.tribe)
 							if(get_area(W) == get_area(src) && client)
 								gaining_rage = FALSE
 								if(last_gnosis_buff+300 < world.time)
@@ -89,12 +89,12 @@
 				last_veil_restore = world.time
 
 		if("Bone Gnawers", "Children of Gaia", "Shadow Lords", "Corax")
-			if(istype(get_area(src), /area/vtm/interior/cog/caern))
+			if((istype(get_area(src), /area/vtm/interior/cog/caern) || istype(get_area(src), /area/vtm/forest)) && masquerade < 5)
 				adjust_veil(1, random = -1)
 				last_veil_restore = world.time
 
 		if("Glass Walkers", "Corax")
-			if(istype(get_area(src), /area/vtm/interior/glasswalker))
+			if((istype(get_area(src), /area/vtm/interior/glasswalker) || istype(get_area(src), /area/vtm/forest)) && masquerade < 5)
 				adjust_veil(1, random = -1)
 				last_veil_restore = world.time
 
@@ -231,7 +231,7 @@
 			current_value = max(0, current_value + amount)
 			if(renownrank > AuspiceRankCheck(src))
 				renownrank = AuspiceRankCheck(src)
-				to_chat(vessel, span_userdanger("You are now ai  [RankName(src.renownrank)]."))
+				to_chat(vessel, span_userdanger("You are now a [RankName(src.renownrank)].")) // APOC EDIT CHANGE - Spellcheck
 
 		if(amount > 0)
 			if(threshold && current_value >= threshold)

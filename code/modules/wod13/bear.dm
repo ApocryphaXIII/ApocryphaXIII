@@ -28,3 +28,5 @@
 
 	melee_damage_lower = 35
 	melee_damage_upper = 40 //Good luck lol
+
+	pixel_x = -16

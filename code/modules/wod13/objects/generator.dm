@@ -12,6 +12,7 @@
 	var/switching_on = FALSE
 	var/time_since_toggle = 0 // APOC EDIT START
 	var/last_sound_played = 0
+	var/init_on = 1
 //	var/fuel_remain = 1000
 
 /obj/warehouse_generator/proc/start_on(mob/user)
@@ -100,6 +101,8 @@
 	. = ..()
 	GLOB.generators += src
 	START_PROCESSING(SSobj, src)
+	if(!init_on)
+		brek()
 
 /obj/warehouse_generator/Destroy()
 	. = ..()

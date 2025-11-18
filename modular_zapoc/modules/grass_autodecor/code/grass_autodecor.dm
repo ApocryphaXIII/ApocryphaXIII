@@ -1,5 +1,5 @@
 /turf/open/floor/plating/vampgrass/random // All
-	MAP_SWITCH(icon_state = "grass1", icon_state = "grass_autodec_all")
+	MAP_SWITCH(icon_state = "grass1", icon_state = "grass_autodec")
 	var/autodecor = list(/obj/structure/flora/ausbushes,
 		/obj/structure/small_vamprocks)
 	var/autodecor_list = list()

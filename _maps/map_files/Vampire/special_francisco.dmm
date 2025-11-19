@@ -343,6 +343,18 @@
 	},
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/apartment)
+"ajB" = (
+/obj/structure/sign/directions/security{
+	dir = 4;
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/evac{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 35
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/restricted)
 "ajC" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/turf_decal/weather/dirt,
@@ -13452,6 +13464,18 @@
 	},
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/millennium_tower/f4)
+"hfC" = (
+/obj/effect/turf_decal/trimline/purple/warning{
+	dir = 8
+	},
+/obj/machinery/button/door{
+	id = "endron_cells_blast_doors_one";
+	pixel_y = 21;
+	pixel_x = 0;
+	name = "blast door one"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/restricted)
 "hfF" = (
 /obj/effect/decal/pallet,
 /obj/effect/decal/cleanable/cardboard,
@@ -17227,6 +17251,11 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/millennium_tower/f4)
+"jlf" = (
+/obj/structure/table,
+/obj/item/police_radio,
+/turf/open/floor/plating/parquetry,
+/area/vtm/interior)
 "jlj" = (
 /obj/structure/noticeboard/directional/north,
 /obj/item/paper{
@@ -18924,6 +18953,12 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/millennium_tower/f4)
+"kiE" = (
+/obj/effect/turf_decal/siding/red{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/restricted)
 "kiG" = (
 /obj/structure/chair{
 	dir = 8
@@ -26902,6 +26937,16 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/techshop)
+"ows" = (
+/obj/effect/turf_decal/siding/red{
+	dir = 4
+	},
+/obj/structure/guncase,
+/obj/item/gun/ballistic/automatic/vampire/m1911,
+/obj/item/gun/ballistic/automatic/vampire/m1911,
+/obj/item/gun/ballistic/automatic/vampire/m1911,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/restricted)
 "owF" = (
 /obj/vampire_car/retro{
 	dir = 1
@@ -27204,6 +27249,18 @@
 "oFp" = (
 /turf/open/space/basic,
 /area/space)
+"oFt" = (
+/obj/effect/turf_decal/trimline/purple/warning{
+	dir = 8
+	},
+/obj/machinery/button/door{
+	id = "endron_cells_blast_doors_two";
+	pixel_y = 21;
+	pixel_x = 0;
+	name = "blast door two"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/restricted)
 "oFN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -31251,14 +31308,14 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/financialdistrict/library)
 "qOc" = (
+/obj/machinery/light{
+	pixel_y = 32
+	},
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
 /obj/effect/turf_decal/trimline/red/warning{
 	dir = 1
-	},
-/obj/machinery/light{
-	pixel_y = 32
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
@@ -32047,6 +32104,15 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
+"rhD" = (
+/obj/machinery/button/door{
+	id = "endron_cells_blast_doors_three";
+	name = "corruption door button";
+	pixel_y = 30;
+	pixel_x = 0
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/wyrm_corrupted)
 "rhR" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -36795,7 +36861,7 @@
 	},
 /obj/structure/table/wood,
 /obj/item/vamp/phone/emergency{
-	number = "0827";
+	number = "0872";
 	desc = "The Evil and Rotten Endron phone";
 	pixel_y = 4;
 	pixel_x = 1
@@ -37283,6 +37349,14 @@
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
+"tQM" = (
+/obj/machinery/door/poddoor{
+	id = "endron_cells_blast_doors_three"
+	},
+/turf/open/floor/plating/vampplating/stairs/middle{
+	dir = 4
+	},
+/area/vtm/interior/wyrm_corrupted)
 "tRa" = (
 /obj/effect/decal/pallet,
 /obj/item/toy/crayon/spraycan,
@@ -42824,10 +42898,10 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/interior)
 "wQb" = (
-/obj/machinery/door/poddoor{
-	id = "endron_cells_blast_doors_three"
+/turf/closed/wall/vampwall/metal/reinforced{
+	density = 0;
+	color = "#BBBBBB"
 	},
-/turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/wyrm_corrupted)
 "wQh" = (
 /obj/structure/vampfence/rich{
@@ -42897,12 +42971,12 @@
 /area/vtm/interior/apartment)
 "wRm" = (
 /obj/structure/guncase,
-/obj/effect/turf_decal/siding/red,
 /obj/item/gun/ballistic/automatic/vampire/mp5,
 /obj/item/gun/ballistic/automatic/vampire/mp5,
 /obj/item/gun/ballistic/automatic/vampire/mp5,
-/obj/item/gun/ballistic/automatic/vampire/m1911,
-/obj/item/gun/ballistic/automatic/vampire/m1911,
+/obj/effect/turf_decal/siding/red/corner{
+	dir = 2
+	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
 "wRo" = (
@@ -46808,8 +46882,8 @@ bWz
 bWz
 bWz
 wrk
-xHz
-eDm
+bco
+ajB
 cAb
 cAb
 cAb
@@ -47023,7 +47097,7 @@ bco
 bco
 bco
 bco
-bco
+xHz
 eDm
 eDm
 bco
@@ -47141,8 +47215,8 @@ cAb
 gUM
 bco
 bEh
-jIL
-jIL
+bEh
+bEh
 bco
 eJR
 nQQ
@@ -47247,7 +47321,7 @@ nHg
 gcf
 jag
 wiO
-eQD
+hfC
 rnq
 eQD
 bco
@@ -47568,7 +47642,7 @@ fjv
 kFs
 jVg
 wiO
-eQD
+oFt
 rnq
 eQD
 bco
@@ -47770,8 +47844,8 @@ bWz
 (22,1,1) = {"
 bco
 wRm
-cAb
-cAb
+kiE
+ows
 bco
 eDm
 eDm
@@ -49067,7 +49141,7 @@ bWz
 wrk
 wrk
 tqI
-ceA
+tQM
 tqI
 wrk
 wrk
@@ -49280,7 +49354,7 @@ bWz
 bWz
 wrk
 tqI
-sWq
+rhD
 sWq
 sWq
 tqI
@@ -50083,7 +50157,7 @@ jJb
 nJn
 nJn
 nJn
-nJn
+fmn
 eTc
 mrQ
 nYX
@@ -50401,7 +50475,7 @@ wrk
 wrk
 eTc
 iDE
-hJF
+jlf
 eTc
 eTc
 jtP

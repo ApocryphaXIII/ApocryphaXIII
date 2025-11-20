@@ -281,7 +281,7 @@
 
 /obj/item/ammo_box/vampire/c9mm/moonclip
 	name = "ammo clip (9mm)"
-	desc = "a 3 round clip to hold 9mm rounds. For once, calling it a clip is accurate."
+	desc = "A 3 round clip to hold 9mm rounds. For once, calling it a clip is accurate."
 	icon_state = "9moonclip"
 	max_ammo = 3
 	w_class = WEIGHT_CLASS_TINY
@@ -311,6 +311,14 @@
 	icon_state = "44box"
 	ammo_type = /obj/item/ammo_casing/vampire/c44
 	max_ammo = 60
+
+/obj/item/ammo_box/vampire/c44/speedloader // DARKPACK EDIT ADD START
+	name = ".44 speedloader"
+	icon = 'icons/obj/ammo.dmi'
+	icon_state = "38"
+	ammo_type = /obj/item/ammo_casing/vampire/c44
+	max_ammo = 6 // DARKPACK EDIT ADD END
+	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /obj/item/ammo_box/vampire/c50
 	name = "ammo box (.50)"

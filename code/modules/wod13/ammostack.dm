@@ -316,6 +316,7 @@
 	name = ".44 speedloader"
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "38"
+	onflooricon = null
 	ammo_type = /obj/item/ammo_casing/vampire/c44
 	max_ammo = 6 // DARKPACK EDIT ADD END
 	multiple_sprites = AMMO_BOX_PER_BULLET

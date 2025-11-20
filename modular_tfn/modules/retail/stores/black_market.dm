@@ -29,7 +29,7 @@
 	if(prob(25))
 		products_list += new /datum/data/vending_product("silver .45 ACP ammo", /obj/item/ammo_box/vampire/c45acp/silver, 6000)
 	if(prob(25))
-		product_list += new /datum/data/vending_product("silver .44 ammo", /obj/item/ammo_box/vampire/c44/silver, 7000)
+		products_list += new /datum/data/vending_product("silver .44 ammo", /obj/item/ammo_box/vampire/c44/silver, 7000)
 	if(prob(25))
 		products_list += new /datum/data/vending_product("silver 5.56 ammo", /obj/item/ammo_box/vampire/c556/silver, 8000)
 	if(prob(25))

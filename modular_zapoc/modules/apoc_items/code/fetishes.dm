@@ -34,23 +34,24 @@
 /obj/item/vtm_artifact/nyxs_bangle/remove_powers()
 	..()
 	var/mob/living/carbon/human/H = owner
-	animate(owner, H.alpha = 255, time = 1.5 SECONDS, loop = 0)
+	playsound(owner, 'sound/hallucinations/growl1.ogg', 5)
+	H.alpha = 255
 
 
 /obj/item/vtm_artifact/nyxs_bangle/process(delta_time)
 	. = ..()
 	if(identified && iscarbon(owner))
+		var/mob/living/carbon/C = owner
 		var/turf/T = get_turf(owner)
 		var/light_amount = T.get_lumcount()
 
 		if(light_amount <= 0.2)
-			var/mob/living/carbon/C = owner
-			if(!src == C.gloves && !src == C.wear_id && !src == C.get_active_held_item() && !src == C.get_inactive_held_item())
-				return
+			if(src == C.gloves || src == C.wear_id || src == C.get_active_held_item() || src == C.get_inactive_held_item())
+				C.alpha = max(C.alpha-12.75, 25.5)
 			else
-				animate(owner, alpha = 36, time = 1.5 SECONDS, loop = 0)
+				C.alpha = min (C.alpha+25.5, 255)
 		else
-			animate(owner, alpha = 255, time = 1.5 SECONDS, loop = 0)
+			C.alpha = min (C.alpha+25.5, 255)
 
 
 /obj/item/vtm_artifact/nyxs_bangle/Initialize(mapload)
@@ -65,7 +66,6 @@
 		. += span_nicegreen("Hide everything but your bestial eyes in shadow.")
 		. += span_notice("<b>EQUIP</b> [src] in the <b>ID</b> slot or <b>GLOVES</b> slot or <b>HOLD</b> it in your hand to become partially invisible in shadow.")
 		. += span_purple("Imbued with [spirit_name].")
-
 
 /* Dagger of Retribution */
 /obj/item/vtm_artifact/dagger_of_retribution
@@ -147,14 +147,41 @@
 
 /obj/item/vtm_artifact/dagger_of_retribution/pre_attack(atom/target, mob/living/user)
 	. = ..()
-	if(identified && !bound_item)
-		if(istype(target, /obj) && user.a_intent == INTENT_GRAB)
-			bound_item = target
-			start_live_tracking(user)
-			return TRUE
-		else
-			to_chat(user, span_warning("[src] is already bound to [bound_item]!"))
+	if(user.a_intent == INTENT_HARM) // If we're attacking something, skip all of this stuff.
 		return FALSE
+
+	if(!identified)
+		return FALSE
+	else
+		if(istype(target, /obj/item/storage) && !user.a_intent == INTENT_GRAB) // We're trying to store it.
+			return FALSE
+
+		if(!istype(target, /obj)) // is it an object?
+			if(!istype(target, /turf))
+				to_chat(user, span_warning("[src] refuses to be bound to [target]!"))
+			return TRUE
+
+		if(!user.a_intent == INTENT_GRAB) // are we on grab intent?
+			to_chat(user, span_warning("You need to <b>GRAB</b> [src] tighter if you want to bind it to [target]."))
+			return FALSE
+
+		if(bound_item) // do we have an item bound to us already?
+			to_chat(user, span_warning("[src] is already bound to [bound_item]!"))
+			return TRUE
+
+		// We are clicking on an object, we're on the right intent, and we're not bound.
+		bound_item = target
+		start_live_tracking(user)
+		return TRUE
+
+/obj/item/vtm_artifact/dagger_of_retribution/attackby(obj/item/I, mob/living/user)
+	if(!bound_item)
+		bound_item = I
+		start_live_tracking()
+		return
+	else
+		. = ..()
+
 
 
 /obj/item/vtm_artifact/dagger_of_retribution/Destroy()
@@ -166,9 +193,8 @@
 /obj/item/vtm_artifact/dagger_of_retribution/proc/start_live_tracking(mob/user)
 	RegisterSignal(bound_item, COMSIG_QDELETING, PROC_REF(stop_live_tracking))
 
-	if(bound_item)
-		if(user)
-			to_chat(user, span_notice("[src] starts tugging you towards [bound_item]."))
+	if(bound_item && user)
+		to_chat(user, span_notice("[src] starts tugging you towards [bound_item]."))
 
 		START_PROCESSING(SSfastprocess, src)
 

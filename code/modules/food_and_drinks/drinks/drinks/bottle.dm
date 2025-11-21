@@ -22,11 +22,11 @@
 	age_restricted = TRUE // wrryy can't set an init value to see if foodtype contains ALCOHOL so here we go
 	///Directly relates to the 'knockdown' duration. Lowered by armor (i.e. helmets)
 	var/bottle_knockdown_duration = 1.3 SECONDS
-
+/* APOC EDIT REMOVE START - This is the source of error values and it's extremely low impact so bleh
 /obj/item/reagent_containers/food/drinks/bottle/update_overlays()
 	. = ..()
 	. += "[initial(icon_state)]shine"
-
+*/ // APOC EDIT REMOVE END
 /obj/item/reagent_containers/food/drinks/bottle/small
 	name = "small glass bottle"
 	desc = "This blank bottle is unyieldingly anonymous, offering no clues to its contents."

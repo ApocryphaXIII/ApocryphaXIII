@@ -772,6 +772,10 @@
 	masquerade_violating = TRUE
 	is_iron = FALSE
 
+/obj/item/gun/ballistic/shotgun/toy/crossbow/vampire/update_overlays()
+	. = ..()
+	. += "[icon_state]"
+
 /obj/item/ammo_box/magazine/internal/vampcrossbow
 	ammo_type = /obj/item/ammo_casing/caseless/bolt
 	caliber = CALIBER_FOAM

@@ -200,14 +200,17 @@
 	icon = 'code/modules/wod13/icons.dmi'
 	icon_state = "rite"
 	color = "#000000"
+	var/ritualing
 
-/obj/effect/decal/garou_glyph/rite/AltClick(mob/user)
+/obj/effect/decal/garou_glyph/rite/attack_hand(mob/living/user)
 	. = ..()
 	var/timer
 	if(isgarou(user) || iswerewolf(user))
 		var/mob/living/carbon/C = user
 		if(locate(/obj/item/vtm_artifact) in loc)
-			C.say("Spirits...")
+			if(!ritualing)
+				C.say("Spirits...")
+			ritualing = TRUE
 			if(C.auspice.name == "Theurge")
 				timer = 3 SECONDS
 				C.Immobilize(timer, TRUE)

@@ -44,7 +44,7 @@
 		if(!istype(H.wear_suit, /obj/item/clothing/suit/hooded/heisenberg))
 			H.apply_damage(5, BURN)
 			to_chat(H, span_userdanger("The spores burn you!"))
-	else
+	else if(iscarbon(M))
 		M.apply_damage(5, BURN)
 		to_chat(M, span_userdanger("The spores burn you!"))
 

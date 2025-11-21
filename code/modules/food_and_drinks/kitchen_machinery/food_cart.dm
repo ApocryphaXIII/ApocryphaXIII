@@ -133,3 +133,4 @@
 	icon = 'icons/obj/3x3.dmi'
 	icon_state = "stand"
 	layer = ABOVE_MOB_LAYER//big mobs will still go over the tent, this is fine and cool
+	anchored = TRUE // APOC EDIT CHANGE - This makes food carts not work but who cares

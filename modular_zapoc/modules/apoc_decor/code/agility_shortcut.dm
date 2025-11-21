@@ -5,6 +5,7 @@ GLOBAL_LIST_EMPTY(unallocated_agility_shortcuts)
 	desc = "It looks too small to fit through."
 	icon = 'modular_zapoc/modules/apoc_decor/icons/agility_shortcut.dmi'
 	icon_state = "shortcut"
+	anchored = TRUE
 	var/obj/agility_shortcut/exit
 	var/id
 

@@ -320,6 +320,9 @@
 	ammo_type = /obj/item/ammo_casing/vampire/c44
 	max_ammo = 6 // DARKPACK EDIT ADD END
 	multiple_sprites = AMMO_BOX_PER_BULLET
+	grid_width = 1 GRID_BOXES
+	grid_height = 1 GRID_BOXES
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/ammo_box/vampire/c50
 	name = "ammo box (.50)"

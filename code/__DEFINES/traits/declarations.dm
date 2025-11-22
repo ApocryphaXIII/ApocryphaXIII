@@ -152,6 +152,9 @@
 /// A transforming item that is actively extended / transformed
 #define TRAIT_TRANSFORM_ACTIVE "active_transform"
 
+/// TFN EDIT - Protean Rework #718 - Shitty trait done to help with easier checks for transforming with vampire discs
+#define TRAIT_CURRENTLY_TRANSFORMING "currently_transforming"
+
 #define TRAIT_NOBLEED "nobleed" //This carbon doesn't bleed
 
 ///generic atom traits

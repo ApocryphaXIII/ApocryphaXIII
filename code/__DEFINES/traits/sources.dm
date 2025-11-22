@@ -144,6 +144,9 @@
 //salubri stuff
 #define SALUBRI_EYE_TRAIT "Salubri Eye"
 
+/// Trait given by a discipline (Part of a TFN refactor that was never used until Protean Rework #718 so I'm adding this now while I'm porting that :3)
+#define DISCIPLINE_TRAIT "discipline"
+
 /// Trait aquired from being painted a certain color
 #define ATOM_COLOR_TRAIT "atom_color"
 

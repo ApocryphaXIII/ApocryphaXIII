@@ -364,10 +364,9 @@
 
 	check_flags = DISC_CHECK_IMMOBILE | DISC_CHECK_CAPABLE
 
+	vitae_cost = 2
 	violates_masquerade = TRUE
 
-	cancelable = TRUE
-	duration_length = 20 SECONDS
 	cooldown_length = 20 SECONDS
 
 	grouped_powers = list(
@@ -376,17 +375,25 @@
 		/datum/discipline_power/protean/shape_of_the_beast
 	)
 
-	var/obj/effect/proc_holder/spell/targeted/shapeshift/mist/GA // ZAPOC EDIT CHANGE
+	var/obj/effect/proc_holder/spell/targeted/shapeshift/mist/GMA // ZAPOC EDIT CHANGE
+
+/datum/discipline_power/protean/mist_form/pre_activation_checks()
+	. = ..()
+	if(HAS_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING))
+		to_chat(owner, span_warning("YOU ALREADY ARE TRANSFORMING!"))
+		return FALSE
+	else
+		ADD_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING, DISCIPLINE_TRAIT)
+	to_chat(owner, span_warning("You begin transforming..."))
+	if (do_after(owner, 6 SECONDS, timed_action_flags = (IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE | IGNORE_HELD_ITEM )))
+		REMOVE_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING, DISCIPLINE_TRAIT)
+		return TRUE
 
 /datum/discipline_power/protean/mist_form/activate()
 	. = ..()
-	if (!GA)
-		GA = new(owner)
+	if (!GMA)
+		GMA = new(owner)
 	owner.drop_all_held_items()
-	GA.Shapeshift(owner)
-
-/datum/discipline_power/protean/mist_form/deactivate()
-	. = ..()
-	GA.Restore(GA.myshape)
-	owner.Stun(1 SECONDS)
-	owner.do_jitter_animation(15)
+	GMA.cast(list(owner), owner)
+	if(GMA.myshape)
+		ADD_TRAIT(GMA.myshape, TRAIT_PACIFISM, MAGIC_TRAIT)

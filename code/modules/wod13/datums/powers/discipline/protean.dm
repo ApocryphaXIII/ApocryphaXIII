@@ -8,6 +8,18 @@
 /datum/discipline_power/protean
 	name = "Protean power name"
 	desc = "Protean power description"
+	var/obj/effect/proc_holder/spell/targeted/shapeshift/gangrel/GA
+
+/// TFN ADDITION - Protean Rework #718 - Handles shapeshifting and associated vars
+/datum/discipline_power/protean/post_gain()
+	. = ..()
+	RegisterSignal(owner, COMSIG_MOB_RETURNED_TO_FORM, PROC_REF(on_form_restored))
+
+/datum/discipline_power/protean/proc/on_form_restored()
+	SIGNAL_HANDLER
+	if(GA)
+		if(GA.shapeshift_type)
+			GA.shapeshift_type = null
 
 	activate_sound = 'code/modules/wod13/sounds/protean_activate.ogg'
 	deactivate_sound = 'code/modules/wod13/sounds/protean_deactivate.ogg'
@@ -91,6 +103,7 @@
 	owner.remove_client_colour(/datum/client_colour/glass_colour/red)
 	owner.remove_movespeed_modifier(/datum/movespeed_modifier/protean2)
 
+/// TFN EDIT - Protean Rework #718 - This is depreciated, but still keeping it available to be spawned and such
 /mob/living/simple_animal/hostile/gangrel
 	name = "warform"
 	desc = "A horrid man-beast abomination."
@@ -119,20 +132,21 @@
 	held_items = list(null, null)
 	possible_a_intents = list(INTENT_HELP, INTENT_GRAB, INTENT_DISARM, INTENT_HARM)
 
-// APOC EDIT START
-/obj/effect/proc_holder/spell/targeted/shapeshift/gangrel
-	name = "Gangrel Form"
-	desc = "Take on the shape of a wolf." // APOC EDIT CHANGE
-	charge_max = 50
-	cooldown_min = 5 SECONDS
-	revert_on_death = TRUE
-	die_with_shapeshifted_form = FALSE
-	shapeshift_type = /mob/living/simple_animal/hostile/gangrel
+/// TFN EDIT - Protean Rework #718
+
+/mob/living/simple_animal/hostile/gangrel/best
+	icon_state = "gangrel_m"
+	icon_living = "gangrel_m"
+	maxHealth = 400
+	health = 400
+	melee_damage_lower = 40
+	melee_damage_upper = 40
+	speed = -0.8
 
 //EARTH MELD
 /datum/discipline_power/protean/earth_meld
 	name = "Earth Meld"
-	desc = "Hide yourself in the earth itself."
+	desc = "Hide yourself in the earth."
 
 	level = 3
 
@@ -212,8 +226,88 @@
 	speed = -0.6
 
 //SHAPE OF THE BEAST
-/obj/effect/proc_holder/spell/targeted/shapeshift/gangrel/better
-	shapeshift_type = /mob/living/simple_animal/hostile/gangrel/better
+/// TFN EDIT START - Protean Rework #718
+/obj/effect/proc_holder/spell/targeted/shapeshift/gangrel
+	name = "Gangrel Form"
+	desc = "Take on the shape a wolf."
+	charge_max = 50
+	cooldown_min = 5 SECONDS
+	revert_on_death = TRUE
+	die_with_shapeshifted_form = FALSE
+	shapeshift_type = null
+	possible_shapes = list(
+		/mob/living/simple_animal/hostile/bear/wod13/vampire, \
+		/mob/living/simple_animal/hostile/beastmaster/rat/flying/vampire, \
+		/mob/living/simple_animal/hostile/shapeshift, \
+		/mob/living/simple_animal/pet/dog/corgi, \
+		/mob/living/simple_animal/hostile/shapeshift/wolf, \
+		/mob/living/simple_animal/hostile/shapeshift/wolf/gray, \
+		/mob/living/simple_animal/hostile/shapeshift/wolf/red, \
+		/mob/living/simple_animal/hostile/shapeshift/wolf/white, \
+		/mob/living/simple_animal/hostile/shapeshift/wolf/ginger, \
+		/mob/living/simple_animal/hostile/shapeshift/wolf/brown, \
+		/mob/living/simple_animal/hostile/shapeshift/dog, \
+		/mob/living/simple_animal/hostile/shapeshift/dog/gray, \
+		/mob/living/simple_animal/hostile/shapeshift/dog/red, \
+		/mob/living/simple_animal/hostile/shapeshift/dog/white, \
+		/mob/living/simple_animal/hostile/shapeshift/dog/ginger, \
+		/mob/living/simple_animal/hostile/shapeshift/dog/brown, \
+		/mob/living/simple_animal/hostile/shapeshift/bird/flying, \
+		/mob/living/simple_animal/hostile/shapeshift/bird/flying/black, \
+		/mob/living/simple_animal/hostile/shapeshift/bird/flying/white, \
+		/mob/living/simple_animal/hostile/shapeshift/bird/flying/gray, \
+		/mob/living/simple_animal/hostile/shapeshift/bird/flying/red, \
+		/mob/living/simple_animal/hostile/shapeshift/cat, \
+		/mob/living/simple_animal/hostile/shapeshift/cat/gray, \
+		/mob/living/simple_animal/hostile/shapeshift/cat/brown, \
+		/mob/living/simple_animal/hostile/shapeshift/cat/white, \
+		/mob/living/simple_animal/hostile/shapeshift/cat/browntabby, \
+		/mob/living/simple_animal/hostile/shapeshift/cat/graytabby, \
+		/mob/living/simple_animal/hostile/shapeshift/cat/blacktabby
+	)
+	var/non_gangrel_shapes = list(
+		/mob/living/simple_animal/hostile/beastmaster/rat/flying, \
+		/mob/living/simple_animal/hostile/shapeshift/wolf
+	)
+	var/is_gangrel = FALSE
+
+/obj/effect/proc_holder/spell/targeted/shapeshift/gangrel/cast(list/targets,mob/user = usr)
+	if(src in user.mob_spell_list)
+		LAZYREMOVE(user.mob_spell_list, src)
+		user.mind.AddSpell(src)
+	if(user.buckled)
+		user.buckled.unbuckle_mob(src,force=TRUE)
+	for(var/mob/living/M in targets)
+		if(!shapeshift_type)
+			var/list/animal_list = list()
+			var/list/display_animals = list()
+			if(!is_gangrel)
+				for(var/path in non_gangrel_shapes)
+					var/mob/living/simple_animal/animal = path
+					animal_list[initial(animal.name)] = path
+					var/image/animal_image = image(icon = initial(animal.icon), icon_state = initial(animal.icon_state))
+					display_animals += list(initial(animal.name) = animal_image)
+			else
+				for(var/path in possible_shapes)
+					var/mob/living/simple_animal/animal = path
+					animal_list[initial(animal.name)] = path
+					var/image/animal_image = image(icon = initial(animal.icon), icon_state = initial(animal.icon_state))
+					display_animals += list(initial(animal.name) = animal_image)
+
+			sort_list(display_animals)
+			var/new_shapeshift_type = show_radial_menu(M, M, display_animals, custom_check = CALLBACK(src, PROC_REF(check_menu), user), radius = 38, require_near = TRUE)
+			if(shapeshift_type)
+				return
+			shapeshift_type = new_shapeshift_type
+			if(!shapeshift_type) //If you aren't gonna decide I am!
+				shapeshift_type = pick(animal_list)
+			shapeshift_type = animal_list[shapeshift_type]
+
+		var/obj/shapeshift_holder/S = locate() in M
+		if(S)
+			M = Restore(M)
+		else
+			M = Shapeshift(M)
 
 /datum/discipline_power/protean/shape_of_the_beast
 	name = "Shape of the Beast"
@@ -221,12 +315,12 @@
 
 	level = 4
 
-	check_flags = DISC_CHECK_IMMOBILE | DISC_CHECK_CAPABLE
+	check_flags = DISC_CHECK_CAPABLE
 
 	violates_masquerade = TRUE
 
-	cancelable = TRUE
-	duration_length = 20 SECONDS
+	vitae_cost = 2
+
 	cooldown_length = 20 SECONDS
 
 	grouped_powers = list(
@@ -235,29 +329,26 @@
 		/datum/discipline_power/protean/mist_form
 	)
 
-	var/obj/effect/proc_holder/spell/targeted/shapeshift/gangrel/better/GA
+/datum/discipline_power/protean/shape_of_the_beast/pre_activation_checks()
+	. = ..()
+	if(HAS_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING))
+		to_chat(owner, span_warning("YOU ALREADY ARE TRANSFORMING!"))
+		return FALSE
+	else
+		ADD_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING, DISCIPLINE_TRAIT)
+	to_chat(owner, span_warning("You begin transforming..."))
+	if (do_after(owner, 6 SECONDS, timed_action_flags = (IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE | IGNORE_HELD_ITEM )))
+		REMOVE_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING, DISCIPLINE_TRAIT)
+		return TRUE
 
 /datum/discipline_power/protean/shape_of_the_beast/activate()
 	. = ..()
 	if (!GA)
 		GA = new(owner)
 	owner.drop_all_held_items()
-	GA.Shapeshift(owner)
-
-/datum/discipline_power/protean/shape_of_the_beast/deactivate()
-	. = ..()
-	GA.Restore(GA.myshape)
-	owner.Stun(1 SECONDS)
-	owner.do_jitter_animation(15)
-
-/mob/living/simple_animal/hostile/gangrel/best
-	icon_state = "gangrel_m"
-	icon_living = "gangrel_m"
-	maxHealth = 400 //More in line with new health values.
-	health = 400
-	melee_damage_lower = 40
-	melee_damage_upper = 40
-	speed = -0.8
+	if(owner.clan?.name == CLAN_GANGREL)
+		GA.is_gangrel = TRUE
+	GA.cast(list(owner), owner)
 
 //MIST FORM
 /* APOC EDIT REMOVE

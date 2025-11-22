@@ -1,3 +1,5 @@
+#define COMSIG_MOB_RETURNED_TO_FORM "mob_returned_to_form" /// TFN EDIT ADDITION - Protean Rework #718
+
 /obj/effect/proc_holder/spell/targeted/shapeshift
 	name = "Shapechange"
 	desc = "Take on the shape of another for a time to use their natural abilities. Once you've made your choice it cannot be changed."
@@ -82,6 +84,13 @@
 		hostile.my_creator = caster
 	H = new(shape,src,caster)
 
+/// TFN EDIT START - Protean Rework #718
+	var/newgen = caster.generation
+	shape.generation = newgen
+	var/datum/action/transform_back/restore = new()
+	restore.Grant(shape)
+/// TFN EDIT END - Protean Rework #718
+
 	clothes_req = FALSE
 	human_req = FALSE
 	return shape
@@ -96,6 +105,29 @@
 
 	clothes_req = initial(clothes_req)
 	human_req = initial(human_req)
+
+/// TFN EDIT START - Protean Rework #718 - Abilities for Vampire-related shapeshifting
+
+/datum/action/transform_back
+	name = "Return to Form"
+	desc = "Transform back to your original form."
+	button_icon_state = "protean"
+	button_icon = 'code/modules/wod13/UI/actions.dmi'
+	background_icon_state = "gift"
+	icon_icon = 'code/modules/wod13/UI/actions.dmi'
+	check_flags = AB_CHECK_CONSCIOUS
+
+/datum/action/transform_back/Trigger(trigger_flags)
+	. = ..()
+	var/obj/shapeshift_holder/Shape = locate() in owner
+	if(Shape)
+		. =  Shape.stored
+		SEND_SIGNAL(Shape.stored, COMSIG_MOB_RETURNED_TO_FORM)
+		Shape.restore()
+	else
+		to_chat(owner, span_warning("You are already in your original form!"))
+
+/// TFN EDIT END - Protean Rework #718
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/dragon
 	name = "Dragon Form"

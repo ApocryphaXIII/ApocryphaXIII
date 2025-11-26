@@ -35,25 +35,26 @@
 
 /obj/effect/particle_effect/smoke/gray_masses/smoke_mob(mob/living/carbon/M)
 	if(..())
-		M.apply_damage(10, OXY)
-		M.apply_damage(10, STAMINA)
 		to_chat(M, span_userdanger("The spores fill your lungs!"))
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			if(!istype(H.wear_suit, /obj/item/clothing/suit/hooded/heisenberg))
+				H.apply_damage(10, BURN)
+				M.apply_damage(15, OXY)
+				M.apply_damage(15, STAMINA)
+				to_chat(H, span_userdanger("The spores burn you!"))
+		else if(iscarbon(M))
+			M.apply_damage(10, BURN)
+			M.apply_damage(15, OXY)
+			M.apply_damage(15, STAMINA)
+			to_chat(M, span_userdanger("The spores burn you!"))
 
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		if(!istype(H.wear_suit, /obj/item/clothing/suit/hooded/heisenberg))
-			H.apply_damage(5, BURN)
-			to_chat(H, span_userdanger("The spores burn you!"))
-	else
-		M.apply_damage(5, BURN)
-		to_chat(M, span_userdanger("The spores burn you!"))
+			if(prob(50))
+				M.emote("scream")
+			else
+				M.emote("whimper")
 
-		if(prob(50))
-			M.emote("scream")
-		else
-			M.emote("whimper")
-
-		return 1
+			return 1
 
 /obj/effect/particle_effect/smoke/gray_masses/Destroy()
 	if(prob(25))
@@ -69,4 +70,4 @@
 
 /obj/effect/decal/cleanable/ash/gray_masses/Initialize()
 	. = ..()
-	animate(src, alpha = 255, time = 2 SECONDS, loop = 0)
+	animate(src, alpha = 255, time = 3 SECONDS, loop = 0)

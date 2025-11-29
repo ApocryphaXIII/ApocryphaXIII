@@ -85,16 +85,6 @@
 	desc = "Stay in Wonderland and I'll show you how deep the rabbit hole goes."
 	icon_state = "sun_thin"
 
-/obj/item/clothing/glasses/vampire/eyepatch_white
-	name = "right white eyepatch"
-	desc = "The less menacing option."
-	icon_state = "eyepatch_white"
-
-/obj/item/clothing/glasses/vampire/eyepatch_white_alt
-	name = "left white eyepatch"
-	desc = "The less menacing option."
-	icon_state = "eyepatch_white_1"
-
 /obj/item/clothing/glasses/vampire/aviator
 	name = "aviators"
 	desc = "What's our vector, Victor?"

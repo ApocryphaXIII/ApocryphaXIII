@@ -413,16 +413,6 @@
 	desc = "The cornerstone of a reporter's style, or a poor attempt at looking cool."
 	icon_state = "fedora"
 
-/obj/item/clothing/head/vampire/beret_grey
-	name = "grey beret"
-	desc = "A grey beret, perfect for war veterans and morally ambiguous mimes."
-	icon_state = "beret_grey"
-
-/obj/item/clothing/head/vampire/beret_white
-	name = "white beret"
-	desc = "A white beret, perfect for redeemed mimes."
-	icon_state = "beret_white"
-
 /obj/item/clothing/head/vampire/mariner
 	name = "mariner's cap"
 	desc = "For sailors, fiddlers, and revolutionaries."

@@ -355,26 +355,26 @@
 	icon_state = "cowboyhat"
 	flags_cover = HEADCOVERSEYES
 
-/obj/item/clothing/head/vampire/cowboy_black
+/obj/item/clothing/head/vampire/cowboy/armorless/cowboy_black
 	name = "black cowboy hat"
 	desc = "For the villainous stranger."
 	icon_state = "cowboy_black"
 	flags_cover = HEADCOVERSEYES
 
-/obj/item/clothing/head/vampire/cowboy_wide
+/obj/item/clothing/head/vampire/cowboy/armorless/cowboy_wide
 	name = "wide-brimmed cowboy hat"
 	desc = "For the nameless stranger."
 	icon_state = "cowboy_wide"
 	flags_cover = HEADCOVERSEYES
 
-/obj/item/clothing/head/vampire/cowboy_white
+/obj/item/clothing/head/vampire/cowboy/armorless/cowboy_white
 
 	name = "white cowboy hat"
 	desc = "For the heroic stranger."
 	icon_state = "cowboy_white"
 	flags_cover = HEADCOVERSEYES
 
-/obj/item/clothing/head/vampire/cowboy_white_wide
+/obj/item/clothing/head/vampire/cowboy/armorless/cowboy_white_wide
 	name = "white wide cowboy hat"
 	desc = "For the jovial stranger."
 	icon_state = "cowboy_white_wide"

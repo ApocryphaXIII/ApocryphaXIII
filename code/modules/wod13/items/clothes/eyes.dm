@@ -37,7 +37,7 @@
 	inhand_icon_state = "glasses"
 	vision_correction = TRUE
 
-/obj/item/clothing/glasses/vampire/white_veil
+/obj/item/clothing/glasses/vampire/white_veil // APOC EDIT START
 	name = "white veil"
 	desc = "A white lace veil that covers the eyes."
 	icon_state = "white_veil"
@@ -85,16 +85,6 @@
 	desc = "Stay in Wonderland and I'll show you how deep the rabbit hole goes."
 	icon_state = "sun_thin"
 
-/obj/item/clothing/glasses/vampire/eyepatch
-	name = "right eyepatch"
-	desc = "Black and menacing."
-	icon_state = "eyepatch"
-
-/obj/item/clothing/glasses/vampire/eyepatch_alt
-	name = "left eyepatch"
-	desc = "Black and menacing."
-	icon_state = "eyepatch_1"
-
 /obj/item/clothing/glasses/vampire/eyepatch_white
 	name = "right white eyepatch"
 	desc = "The less menacing option."
@@ -123,4 +113,4 @@
 /obj/item/clothing/glasses/vampire/aviator_red
 	name = "red aviators"
 	desc = "Absolutely do not make you look like a vampire."
-	icon_state = "aviator_red"
+	icon_state = "aviator_red" // APOC EDIT END

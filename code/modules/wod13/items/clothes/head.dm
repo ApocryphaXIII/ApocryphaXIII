@@ -349,7 +349,7 @@
 	icon_state = "dredsoft"
 	flags_cover = HEADCOVERSEYES
 
-/obj/item/clothing/head/vampire/cowboyhat
+/obj/item/clothing/head/vampire/cowboy/armorless/cowboyhat
 	name = "brown cowboy hat"
 	desc = "The prevailing style of the Old West."
 	icon_state = "cowboyhat"
@@ -447,7 +447,7 @@
 	icon_state = "sailorcap"
 	flags_cover = HEADCOVERSEYES
 
-/obj/item/clothing/head/vampire/cowboy_small
+/obj/item/clothing/head/vampire/cowboy/armorless/cowboy_small
 	name = "small cowboy hat"
 	desc = "This town ain't tiny enough for the two of us."
 	icon_state = "cowboy_small"
@@ -488,7 +488,7 @@
 	desc = "Knitted for those chilly nights."
 	icon_state = "woolhat"
 
-/obj/item/clothing/head/vampire/woolhat_blue
+/obj/item/clothing/head/vampire/woolhat/woolhat_blue
 	name = "blue and white wool hat"
 	desc = "Knitted for those chilly nights."
 	icon_state = "woolhat_blue"
@@ -498,14 +498,12 @@
 	desc = "An old-fashioned black hat with a low enough brim to cover your eyes."
 	icon_state = "picture"
 	flags_cover = HEADCOVERSEYES
-	dynamic_hair_suffix = ""
 
-/obj/item/clothing/head/vampire/picture_red
+/obj/item/clothing/head/vampire/picture_hat/picture_red
 	name = "picture hat, red"
 	desc = "An old-fashioned red hat with a low enough brim to cover your eyes."
 	icon_state = "picture_red"
 	flags_cover = HEADCOVERSEYES
-	dynamic_hair_suffix = ""
 
 //OTHER
 /obj/item/clothing/head/pagecap

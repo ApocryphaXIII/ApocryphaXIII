@@ -505,19 +505,19 @@
 	icon_state = "pentex_labcoat_alt"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 90, WOUND = 10)
 
-/obj/item/clothing/suit/vampire/greatcoat
+/obj/item/clothing/suit/vampire/coat/greatcoat
 	name = "greatcoat"
 	desc = "A heavy greatcoat."
 	icon_state = "gentlecoat"
 	inhand_icon_state = "black_coat"
 
-/obj/item/clothing/suit/vampire/det_trench
+/obj/item/clothing/suit/vampire/trench/det_trench
 	name = "classic trenchcoat"
 	desc = "A rugged brown trenchcoat for the less-than-modern investigator."
 	icon_state = "detective"
 	inhand_icon_state = "detective"
 
-/obj/item/clothing/suit/vampire/det_trench_grey
+/obj/item/clothing/suit/vampire/trench/det_trench_grey
 	name = "grey trenchcoat"
 	desc = "A long grey trenchcoat for the less-than-modern investigator."
 	icon_state = "detective2"
@@ -528,31 +528,31 @@
 	desc = "A long silk shawl, to be draped over the arms."
 	icon_state = "shawl_white"
 
-/obj/item/clothing/suit/vampire/charcoalsuit
+/obj/item/clothing/suit/vampire/jacket/charcoalsuit
 	name = "charcoal suit jacket"
 	desc = "A charcoal suit jacket."
 	icon_state = "suitjacket_charcoal"
 	inhand_icon_state = "suit_black"
 
-/obj/item/clothing/suit/vampire/navysuit
+/obj/item/clothing/suit/vampire/jacket/navysuit
 	name = "navy suit jacket"
 	desc = "A navy suit jacket."
 	icon_state = "suitjacket_navy"
 	inhand_icon_state = "suit_navy"
 
-/obj/item/clothing/suit/vampire/burgundysuit
+/obj/item/clothing/suit/vampire/jacket/burgundysuit
 	name = "burgundy suit jacket"
 	desc = "A burgundy suit jacket."
 	icon_state = "suitjacket_burgundy"
 	inhand_icon_state = "suit_red"
 
-/obj/item/clothing/suit/vampire/checkeredsuit
+/obj/item/clothing/suit/vampire/jacket/checkeredsuit
 	name = "checkered suit jacket"
 	desc = "A checkered suit jacket."
 	icon_state = "suitjacket_checkered"
 	inhand_icon_state = "suit_grey"
 
-/obj/item/clothing/suit/vampire/tansuit
+/obj/item/clothing/suit/vampire/jacket/tansuit
 	name = "tan suit jacket"
 	desc = "A tan suit jacket."
 	icon_state = "suitjacket_tan"
@@ -585,102 +585,77 @@
 	desc = "True clothing for any punk."
 	icon_state = "leather_jacket"
 
-/obj/item/clothing/suit/vampire/toggle/leather_brown
+/obj/item/clothing/suit/vampire/toggle/leather/brown
 	name = "brown leather jacket"
 	desc = "True clothing for any biker."
 	icon_state = "brown_jacket"
 
-/obj/item/clothing/suit/vampire/toggle/leather_sleeveless
+/obj/item/clothing/suit/vampire/toggle/leather/sleeveless
 	name = "black leather vest"
 	desc = "True clothing for any punk."
 	icon_state = "leather_jacket_sleeveless"
 
-/obj/item/clothing/suit/vampire/toggle/leather_brown_sleeveless
+/obj/item/clothing/suit/vampire/toggle/leather/brown_sleeveless
 	name = "brown leather vest"
 	desc = "True clothing for any biker."
 	icon_state = "brown_jacket_sleeveless"
 
-/obj/item/clothing/suit/vampire/toggle/hoodie_grey
+/obj/item/clothing/suit/hooded/hoodie/grey
 	name = "grey zipper hoodie"
 	desc = "A simple grey hoodie."
 	icon_state = "grey_hoodie"
 
-/obj/item/clothing/suit/vampire/toggle/hoodie_black
+/obj/item/clothing/suit/hooded/hoodie/black
 	name = "black zipper hoodie"
 	desc = "A simple black hoodie."
 	icon_state = "black_hoodie"
 
-/obj/item/clothing/suit/vampire/toggle/hoodie_red
+/obj/item/clothing/suit/hooded/hoodie/red
 	name = "red zipper hoodie"
 	desc = "A simple red hoodie."
 	icon_state = "red_hoodie"
 
-/obj/item/clothing/suit/vampire/toggle/hoodie_blue
+/obj/item/clothing/suit/hooded/hoodie/blue
 	name = "blue zipper hoodie"
 	desc = "A simple blue hoodie."
 	icon_state = "blue_hoodie"
 
-/obj/item/clothing/suit/vampire/toggle/hoodie_orange
+/obj/item/clothing/suit/hooded/hoodie/orange
 	name = "orange zipper hoodie"
 	desc = "A simple orange hoodie."
 	icon_state = "orange_hoodie"
 
-/obj/item/clothing/suit/vampire/toggle/hoodie_pink
+/obj/item/clothing/suit/hooded/hoodie/pink
 	name = "pink zipper hoodie"
 	desc = "A simple pink hoodie."
 	icon_state = "pink_hoodie"
 
-/obj/item/clothing/suit/vampire/toggle/trackjacket
-	name = "black track jacket"
-	desc = "A light, breathable athletic jacket."
-	icon_state = "trackjacket"
-
-/obj/item/clothing/suit/vampire/toggle/trackjacketblue
-	name = "blue track jacket"
-	desc = "A light, breathable athletic jacket."
-	icon_state = "trackjacketblue"
-
-/obj/item/clothing/suit/vampire/toggle/trackjacketgreen
-	name = "green track jacket"
-	desc = "A light, breathable athletic jacket."
-	icon_state = "trackjacketgreen"
-
-/obj/item/clothing/suit/vampire/toggle/trackjacketred
-	name = "red track jacket"
-	desc = "A light, breathable athletic jacket."
-	icon_state = "trackjacketred"
-
-/obj/item/clothing/suit/vampire/toggle/trackjacketwhite
-	name = "white track jacket"
-	desc = "A light, breathable athletic jacket."
-	icon_state = "trackjacketwhite"
-
-/obj/item/clothing/suit/vampire/toggle/yellow_dep_jacket
-	name = "yellow fur-lined jacket"
-	desc = "A warm wool-lined jacket."
-	icon_state = "engi_dep_jacket"
-
-/obj/item/clothing/suit/vampire/toggle/red_dep_jacket
-	name = "red fur-lined jacket"
-	desc = "A warm wool-lined jacket."
-	icon_state = "sec_dep_jacket"
-
-/obj/item/clothing/suit/vampire/toggle/white_dep_jacket
-	name = "white fur-lined jacket"
-	desc = "A warm wool-lined jacket."
-	icon_state = "med_dep_jacket"
-
-/obj/item/clothing/suit/vampire/toggle/brown_dep_jacket
-	name = "brown fur-lined jacket"
-	desc = "A warm wool-lined jacket."
-	icon_state = "supply_dep_jacket"
-
-/obj/item/clothing/suit/vampire/toggle/grey_dep_jacket
+/obj/item/clothing/suit/vampire/toggle/dep_jacket
 	name = "grey fur-lined jacket"
 	desc = "A warm wool-lined jacket."
 	icon_state = "grey_dep_jacket"
 
-/obj/item/clothing/suit/vampire/toggle/blue_dep_jacket
+/obj/item/clothing/suit/vampire/toggle/dep_jacket/yellow
+	name = "yellow fur-lined jacket"
+	desc = "A warm wool-lined jacket."
+	icon_state = "engi_dep_jacket"
+
+/obj/item/clothing/suit/vampire/toggle/dep_jacket/red
+	name = "red fur-lined jacket"
+	desc = "A warm wool-lined jacket."
+	icon_state = "sec_dep_jacket"
+
+/obj/item/clothing/suit/vampire/toggle/dep_jacket/white
+	name = "white fur-lined jacket"
+	desc = "A warm wool-lined jacket."
+	icon_state = "med_dep_jacket"
+
+/obj/item/clothing/suit/vampire/toggle/dep_jacket/brown
+	name = "brown fur-lined jacket"
+	desc = "A warm wool-lined jacket."
+	icon_state = "supply_dep_jacket"
+
+/obj/item/clothing/suit/vampire/toggle/dep_jacket/blue
 	name = "blue fur-lined jacket"
 	desc = "A warm wool-lined jacket."
 	icon_state = "blue_dep_jacket"
@@ -690,7 +665,7 @@
 	desc = "A classic leather and wool jacket popular in WW2."
 	icon_state = "bomber"
 
-/obj/item/clothing/suit/vampire/toggle/retro_bomber
+/obj/item/clothing/suit/vampire/toggle/bomber/retro_bomber
 	name = "asymmetical aviator jacket"
 	desc = "A classic leather and wool jacket in the style of early aviators."
 	icon_state = "retro_bomber"
@@ -777,61 +752,61 @@
 
 //Letterman jackets
 
-/obj/item/clothing/suit/vampire/letterman_c
+/obj/item/clothing/suit/jacket/letterman_red/c
 	name = "letterman jacket, UCLA"
 	desc = "A blue and gold UCLA varsity jacket."
 	icon_state = "letterman_c"
 
-/obj/item/clothing/suit/vampire/letterman_black
+/obj/item/clothing/suit/jacket/letterman_red/black
 	name = "black letterman jacket"
 	desc = "A letterman jacket in a moody black and white."
 	icon_state = "varsity"
 
-/obj/item/clothing/suit/vampire/letterman_purple
+/obj/item/clothing/suit/jacket/letterman_red/purple
 	name = "purple letterman jacket"
 	desc = "A letterman jacket in a deep purple."
 	icon_state = "varsity_purple"
 
 //Military jacket
 
-/obj/item/clothing/suit/vampire/military_white
+/obj/item/clothing/suit/jacket/miljacket/white
 	name = "white military jacket"
 	desc = "A white canvas jacket styled after classic American military garb. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket_white"
 
-/obj/item/clothing/suit/vampire/military_tan
+/obj/item/clothing/suit/jacket/miljacket/tan
 	name = "tan military jacket"
 	desc = "A tan canvas jacket styled after classic American military garb. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket_tan"
 
-/obj/item/clothing/suit/vampire/military_navy
+/obj/item/clothing/suit/jacket/miljacket/navy
 	name = "navy military jacket"
 	desc = "A navy canvas jacket styled after classic American military garb. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket_navy"
 
-/obj/item/clothing/suit/vampire/military_grey
+/obj/item/clothing/suit/jacket/miljacket/grey
 	name = "grey military jacket"
 	desc = "A grey canvas jacket styled after classic American military garb. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket_grey"
 
-/obj/item/clothing/suit/vampire/military_black
+/obj/item/clothing/suit/jacket/miljacket/black
 	name = "black military jacket"
 	desc = "A black canvas jacket styled after classic American military garb. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket_black"
 
 
-/obj/item/clothing/suit/hooded/hoodie/parka_yellow
+/obj/item/clothing/suit/hooded/hoodie/parka
 	name = "yellow parka"
 	desc = "A heavy fur-lined winter coat, for all the snow in LA."
 	icon_state = "yellowpark"
-	hoodtype = /obj/item/clothing/head/hooded/hood_hood/parka_yellow
+	hoodtype = /obj/item/clothing/head/hooded/hood_hood/parka
 
-/obj/item/clothing/head/hooded/hood_hood/parka_yellow
+/obj/item/clothing/head/hooded/hood_hood/parka
 	name = "yellow parka hood"
 	desc = "A heavy fur-lined hood, for all the snow in LA."
 	icon_state = "yellowpark_hood"
 
-/obj/item/clothing/suit/hooded/hoodie/parka_red
+/obj/item/clothing/suit/hooded/hoodie/parka/red
 	name = "red parka"
 	desc = "A heavy fur-lined winter coat, for all the snow in LA."
 	icon_state = "redpark"
@@ -842,7 +817,7 @@
 	desc = "A heavy fur-lined hood, for all the snow in LA."
 	icon_state = "redpark_hood"
 
-/obj/item/clothing/suit/hooded/hoodie/parka_purple
+/obj/item/clothing/suit/hooded/hoodie/parka/purple
 	name = "purple parka"
 	desc = "A heavy fur-lined winter coat, for all the snow in LA."
 	icon_state = "purplepark"
@@ -853,7 +828,7 @@
 	desc = "A heavy fur-lined hood, for all the snow in LA."
 	icon_state = "purplepark_hood"
 
-/obj/item/clothing/suit/hooded/hoodie/parka_green
+/obj/item/clothing/suit/hooded/hoodie/parka/green
 	name = "green parka"
 	desc = "A heavy fur-lined winter coat, for all the snow in LA."
 	icon_state = "greenpark"
@@ -864,7 +839,7 @@
 	desc = "A heavy fur-lined hood, for all the snow in LA."
 	icon_state = "greenpark_hood"
 
-/obj/item/clothing/suit/hooded/hoodie/parka_blue
+/obj/item/clothing/suit/hooded/hoodie/parka/blue
 	name = "blue parka"
 	desc = "A heavy fur-lined winter coat, for all the snow in LA."
 	icon_state = "bluepark"
@@ -875,7 +850,7 @@
 	desc = "A heavy fur-lined hood, for all the snow in LA."
 	icon_state = "bluepark_hood"
 
-/obj/item/clothing/suit/hooded/hoodie/parka_vintage
+/obj/item/clothing/suit/hooded/hoodie/parka/vintage
 	name = "vintage parka"
 	desc = "A heavy fur-lined winter coat, for all the snow in LA."
 	icon_state = "vintagepark"

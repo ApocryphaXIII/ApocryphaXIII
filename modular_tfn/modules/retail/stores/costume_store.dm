@@ -68,8 +68,6 @@
 		new /datum/data/mining_equipment("beaver hat", /obj/item/clothing/head/vampire/beaver_hat, 20),
 		new /datum/data/mining_equipment("frilly headband", /obj/item/clothing/head/vampire/frillyheadband, 20),
 		new /datum/data/mining_equipment("black headdress", /obj/item/clothing/head/vampire/black_headdress, 20),
-		new /datum/data/mining_equipment("right eyepatch", /obj/item/clothing/glasses/vampire/eyepatch, 15),
-		new /datum/data/mining_equipment("left eyepatch", /obj/item/clothing/glasses/vampire/eyepatch_alt, 15),
 		new /datum/data/mining_equipment("two-tone glasses", /obj/item/clothing/glasses/vampire/threedee, 15),
 		new /datum/data/mining_equipment("panama hat", /obj/item/clothing/head/vampire/panama, 15),
 		new /datum/data/mining_equipment("authentic maid dress", /obj/item/clothing/under/vampire/maid, 60),

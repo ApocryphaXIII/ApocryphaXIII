@@ -9,6 +9,8 @@
 	}	\
 	/turf/closed/wall/##wall_type/low/window {			\
 		window = /obj/structure/window/fulltile;		\
+		WHEN_MAP(icon = 'code/modules/wod13/lowwalls.dmi'); \
+		WHEN_MAP(icon_state = "window_spawner"); 		\
 	}	\
 	/turf/closed/wall/##wall_type/low/window/reinforced { \
 		window = /obj/structure/window/reinforced/fulltile; \

@@ -4434,6 +4434,14 @@
 	},
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/voivodate)
+"cuV" = (
+/obj/effect/decal/cleanable/trash,
+/obj/structure/closet/crate/large{
+	pixel_x = -7;
+	pixel_y = -21
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm)
 "cvg" = (
 /obj/effect/decal/pallet{
 	pixel_x = 4;
@@ -20384,10 +20392,6 @@
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/ghetto)
 "lbr" = (
-/obj/structure/closet/crate/large{
-	pixel_x = 4;
-	pixel_y = 18
-	},
 /obj/structure/closet/crate/large{
 	pixel_x = 4
 	},
@@ -67475,7 +67479,7 @@ bBZ
 rgY
 rgY
 nze
-elV
+cuV
 lbr
 acY
 pMx

@@ -9389,7 +9389,6 @@
 /area/vtm)
 "fgY" = (
 /obj/structure/table/wood,
-/obj/structure/table/wood,
 /obj/item/paper_bin,
 /obj/item/pen/fourcolor,
 /turf/open/floor/carpet/vamp/purplegold,
@@ -17122,7 +17121,6 @@
 /area/vtm/interior/voivodate/sanctum)
 "jjx" = (
 /obj/structure/table/wood,
-/obj/structure/table/wood,
 /obj/item/paper_bin,
 /obj/item/pen/fourcolor,
 /turf/open/floor/plating/parquetry/old,
@@ -24788,11 +24786,6 @@
 	},
 /turf/open/floor/plating/circled,
 /area/vtm/sewer)
-"nsj" = (
-/obj/structure/table/wood,
-/obj/structure/table/wood,
-/turf/open/floor/stone,
-/area/vtm/interior/shop)
 "nsm" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/trophy/gold_cup{
@@ -41260,7 +41253,6 @@
 "waj" = (
 /obj/item/flashlight/lamp/green,
 /obj/structure/table/wood,
-/obj/structure/table/wood,
 /turf/closed/wall/vampwall/rich/old/low,
 /area/vtm/interior)
 "waD" = (
@@ -43112,7 +43104,6 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/northbeach)
 "wZg" = (
-/obj/structure/table/wood,
 /obj/structure/table/wood,
 /turf/closed/wall/vampwall/old/low,
 /area/vtm/interior/techshop)
@@ -130958,7 +130949,7 @@ tMU
 qrf
 nUN
 tzA
-nsj
+xnz
 lrd
 oJe
 xnz

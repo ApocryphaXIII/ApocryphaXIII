@@ -2799,9 +2799,7 @@
 /obj/structure/sink{
 	pixel_y = 12
 	},
-/obj/structure/mirror/directional/north{
-	layer = 2.8
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/shop)
 "bEO" = (
@@ -3122,9 +3120,7 @@
 	icon_state = "basin"
 	},
 /obj/effect/decal/wallpaper/light/low,
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/closed/wall/vampwall/rich/low,
 /area/vtm/interior/apartment)
 "bLQ" = (
@@ -3569,9 +3565,7 @@
 /obj/structure/sink{
 	pixel_y = 12
 	},
-/obj/structure/mirror/directional/north{
-	layer = 2.8
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/shop)
 "bXy" = (
@@ -3692,8 +3686,7 @@
 /area/vtm/interior/banu)
 "cbc" = (
 /obj/structure/sink{
-	pixel_y = 16;
-	layer = 2.91
+	pixel_y = 16
 	},
 /obj/machinery/light{
 	pixel_y = 30
@@ -4132,9 +4125,7 @@
 /obj/structure/sink{
 	pixel_y = 16
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/techshop)
 "clj" = (
@@ -5408,6 +5399,7 @@
 "cUF" = (
 /obj/effect/decal/wallpaper/red,
 /obj/effect/decal/wallpaper/red,
+/obj/effect/decal/wallpaper/papers/six,
 /turf/closed/wall/vampwall/bar,
 /area/vtm/anarch/basement)
 "cUH" = (
@@ -5896,9 +5888,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/anarch/basement)
 "dhL" = (
-/obj/effect/decal/wallpaper/papers/eight{
-	layer = 2.6
-	},
+/obj/effect/decal/wallpaper/papers/eight,
 /turf/closed/wall/vampwall/bar,
 /area/vtm/interior/shop)
 "dhO" = (
@@ -7093,9 +7083,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
 "dVn" = (
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /obj/structure/sink{
 	pixel_y = 16
 	},
@@ -7492,7 +7480,6 @@
 	},
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/structure/vampdoor/glass/nightwolf{
-	layer = 4.5;
 	name = "Nightwolf Radio"
 	},
 /obj/effect/landmark/npcwall,
@@ -9173,9 +9160,7 @@
 /obj/structure/sink{
 	pixel_y = 12
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_x = -16
@@ -11391,9 +11376,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/forest/interior/cabin)
 "ghV" = (
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /obj/structure/sink{
 	pixel_y = 16
 	},
@@ -11413,9 +11396,6 @@
 "gid" = (
 /obj/machinery/light/small{
 	pixel_y = 32
-	},
-/obj/effect/decal/wallpaper/papers/six{
-	pixel_y = 30
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch/basement)
@@ -12434,9 +12414,7 @@
 /obj/structure/sink{
 	pixel_y = 16
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
 "gHF" = (
@@ -12928,13 +12906,6 @@
 	},
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/millennium_tower/f4)
-"gTB" = (
-/obj/structure/dresser,
-/obj/effect/decal/wallpaper/papers/five{
-	pixel_y = 30
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/anarch/basement)
 "gTD" = (
 /obj/structure/table/wood,
 /obj/structure/fluff/tv{
@@ -16238,15 +16209,6 @@
 /obj/effect/landmark/start/assamite,
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/banu)
-"iLJ" = (
-/obj/structure/mirror{
-	pixel_y = 32
-	},
-/obj/structure/sink{
-	pixel_y = 16
-	},
-/turf/open/floor/plating/toilet,
-/area/vtm/interior)
 "iLS" = (
 /obj/structure/sign/city/order{
 	pixel_y = 32
@@ -19232,9 +19194,6 @@
 /obj/machinery/light/small{
 	pixel_y = 32
 	},
-/obj/effect/decal/wallpaper/papers/eight{
-	pixel_y = 29
-	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch/basement)
 "kvb" = (
@@ -20285,6 +20244,9 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm/sewer)
 "laH" = (
+/obj/structure/mirror/directional/north{
+	pixel_x = -8
+	},
 /obj/structure/sink{
 	pixel_y = 12;
 	pixel_x = -8
@@ -20292,10 +20254,6 @@
 /obj/structure/closet/crate/bin{
 	pixel_y = 16;
 	pixel_x = 7
-	},
-/obj/structure/mirror/directional/north{
-	pixel_x = -8;
-	layer = 2.8
 	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/clinic)
@@ -20423,9 +20381,7 @@
 	icon_state = "basin"
 	},
 /obj/effect/decal/wallpaper/paper/rich/low,
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/closed/wall/vampwall/rich/old/low,
 /area/vtm/interior/apartment)
 "leU" = (
@@ -21345,9 +21301,7 @@
 /obj/structure/sink{
 	pixel_y = 16
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "lCL" = (
@@ -23398,9 +23352,7 @@
 /obj/structure/sink{
 	pixel_y = 16
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /obj/effect/turf_decal/siding/white{
 	pixel_y = -1
 	},
@@ -24824,9 +24776,7 @@
 /obj/structure/sink{
 	pixel_y = 12
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/gummaguts,
 /area/vtm/interior/ghetto)
 "nwB" = (
@@ -25804,9 +25754,7 @@
 	dir = 8;
 	pixel_x = 10
 	},
-/obj/structure/mirror/directional/north{
-	layer = 2.8
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/industrial/factory,
 /area/vtm/interior/endron_facility)
 "nWo" = (
@@ -26442,8 +26390,7 @@
 /area/vtm/interior)
 "onv" = (
 /obj/structure/sink{
-	pixel_y = 16;
-	layer = 2.91
+	pixel_y = 16
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/vjanitor)
@@ -28189,9 +28136,7 @@
 /obj/structure/sink{
 	pixel_y = 16
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
@@ -30889,9 +30834,7 @@
 /obj/structure/sink{
 	pixel_y = 12
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/police)
 "qKp" = (
@@ -31118,9 +31061,7 @@
 /obj/structure/sink{
 	pixel_y = 16
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
 "qPI" = (
@@ -33481,6 +33422,10 @@
 /obj/item/grenade/firecracker,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
+"rXV" = (
+/obj/effect/decal/wallpaper/papers/eight,
+/turf/closed/wall/vampwall/bar,
+/area/vtm/anarch/basement)
 "rYb" = (
 /obj/structure/railing{
 	dir = 4
@@ -37514,9 +37459,7 @@
 /obj/structure/sink{
 	pixel_y = 16
 	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/ghetto)
 "ubG" = (
@@ -40824,14 +40767,12 @@
 /turf/closed/wall/vampwall/old,
 /area/vtm/interior/techshop)
 "vSn" = (
-/obj/structure/sink{
-	pixel_y = 13
-	},
-/obj/structure/mirror/directional/north{
-	pixel_y = 33
-	},
 /obj/machinery/light/small/directional/west{
 	pixel_x = 16
+	},
+/obj/structure/mirror/directional/north,
+/obj/structure/sink{
+	pixel_y = 13
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
@@ -42946,9 +42887,7 @@
 /obj/structure/sink{
 	pixel_y = 12
 	},
-/obj/structure/mirror/directional/north{
-	layer = 2.8
-	},
+/obj/structure/mirror/directional/north,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/banu)
 "wZb" = (
@@ -50794,7 +50733,7 @@ rJC
 wrk
 wrk
 wrk
-xPy
+rXV
 kuK
 jRU
 bHU
@@ -50901,8 +50840,8 @@ rJC
 wrk
 bWz
 wrk
-xPy
-gTB
+tFw
+bpB
 nrq
 fuf
 xPy
@@ -65813,7 +65752,7 @@ iZL
 nJn
 nJn
 fQe
-iLJ
+urt
 dpB
 qsw
 pKQ

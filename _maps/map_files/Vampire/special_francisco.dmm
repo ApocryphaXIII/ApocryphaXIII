@@ -3938,14 +3938,13 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
+/obj/item/toy/crayon/spraycan{
+	pixel_x = -8;
+	pixel_y = 12
+	},
 /obj/item/storage/crayons{
 	pixel_y = 2;
 	pixel_x = -4
-	},
-/obj/item/toy/crayon/spraycan{
-	pixel_x = -8;
-	pixel_y = 12;
-	layer = 2.9
 	},
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/interior/shop)
@@ -11687,15 +11686,6 @@
 	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
-"goJ" = (
-/obj/structure/chair/wood{
-	dir = 1
-	},
-/obj/structure/chair/wood{
-	dir = 1
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/ghetto)
 "goL" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1;
@@ -14709,13 +14699,12 @@
 /area/vtm/interior/millennium_tower/f2)
 "hUb" = (
 /obj/structure/table,
+/obj/item/stack/medical/gauze/twelve{
+	pixel_x = 1;
+	pixel_y = 6
+	},
 /obj/item/gas_can/full,
 /obj/item/melee/vampirearms/tire,
-/obj/item/stack/medical/gauze/twelve{
-	pixel_x = 8;
-	pixel_y = 4;
-	layer = 2.8
-	},
 /turf/open/floor/plating/concrete,
 /area/vtm/clinic)
 "hUy" = (
@@ -27375,11 +27364,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/plating/granite,
 /area/vtm/interior/millennium_tower/f2)
-"oQK" = (
-/obj/structure/table,
-/obj/structure/table,
-/turf/open/floor/plating/bacotell,
-/area/vtm/interior/ghetto)
 "oQW" = (
 /obj/structure/table,
 /obj/structure/sink{
@@ -91082,7 +91066,7 @@ vwx
 rtp
 grM
 rtp
-oFp
+grM
 lXk
 lXk
 mRZ
@@ -132248,7 +132232,7 @@ mUg
 eGe
 bnQ
 eSn
-goJ
+tSZ
 opP
 lWt
 uNj
@@ -134052,7 +134036,7 @@ eGe
 lzC
 vHt
 xtH
-oQK
+xtH
 kkm
 bEV
 lRF

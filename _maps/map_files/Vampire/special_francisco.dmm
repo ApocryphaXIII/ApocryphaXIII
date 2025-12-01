@@ -1784,12 +1784,10 @@
 /obj/structure/table/wood/fancy/red,
 /obj/item/blood_hunt,
 /obj/effect/turf_decal/bot_red,
-/obj/structure/window{
-	can_be_unanchored = 0;
-	name = "BREAK IN CASE OF EMERGENCY";
-	dir = 8
-	},
 /obj/effect/turf_decal/bot_red,
+/obj/structure/window/spawner/west{
+	name = "BREAK IN CASE OF EMERGENCY"
+	},
 /turf/open/floor/plasteel/dark,
 /area/vtm/interior/millennium_tower/f4)
 "bbP" = (
@@ -7331,7 +7329,6 @@
 /area/vtm/interior/endron_facility)
 "ech" = (
 /obj/structure/lattice/pentex,
-/obj/structure/lattice/pentex,
 /obj/machinery/door/poddoor/shutters/armory{
 	damage_deflection = 60;
 	max_integrity = 300;
@@ -8203,12 +8200,10 @@
 "eyG" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/table/wood/fancy/black,
-/obj/structure/window{
-	dir = 1
-	},
 /obj/item/clothing/head/crown/fancy{
 	desc = "A crown that bears a striking resemblance to the missing Portugese crown jewels."
 	},
+/obj/structure/window/spawner/north,
 /turf/open/floor/carpet/vamp/blacksilver,
 /area/vtm/interior/millennium_tower/f4)
 "eyH" = (

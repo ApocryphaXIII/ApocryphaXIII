@@ -10038,11 +10038,6 @@
 	desc = "An Ascot Gold Cup with the year 1896 engraved in it."
 	},
 /obj/structure/table/wood/fancy,
-/obj/structure/window{
-	can_be_unanchored = 0
-	},
-/obj/structure/window,
-/obj/structure/window,
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior/millennium_tower/f4)
 "fws" = (
@@ -15102,7 +15097,6 @@
 /obj/structure/curtain,
 /obj/machinery/shower{
 	dir = 8;
-	layer = 4;
 	pixel_y = 4
 	},
 /turf/open/floor/plating/vampplating/stone,
@@ -19630,11 +19624,6 @@
 	desc = "A silver Football Association Challenge Cup, this one is engraved with the year 1976."
 	},
 /obj/structure/table/wood/fancy,
-/obj/structure/window{
-	can_be_unanchored = 0
-	},
-/obj/structure/window,
-/obj/structure/window,
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior/millennium_tower/f4)
 "kIF" = (
@@ -39238,9 +39227,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower/f4)
 "uZZ" = (
-/obj/structure/closet/crate/dumpster{
-	layer = 3
-	},
+/obj/structure/closet/crate/dumpster,
 /obj/item/vampire_stake,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/unionsquare)
@@ -41605,11 +41592,6 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
-"wqB" = (
-/obj/structure/chair/stool/bar,
-/obj/structure/chair/stool/bar,
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/apartment)
 "wqN" = (
 /obj/structure/sign/departments/medbay/alt,
 /turf/closed/wall/vampwall/metal/reinforced,
@@ -132839,7 +132821,7 @@ ykR
 tHO
 tHO
 vOV
-wqB
+hZN
 soR
 sNt
 sNt

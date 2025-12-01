@@ -835,9 +835,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict)
 "azh" = (
-/obj/structure/stairs/north{
-	dir = 4
-	},
+/obj/structure/stairs/east,
 /turf/open/floor/plating/industrial/factory,
 /area/vtm/interior/techshop)
 "azv" = (
@@ -953,8 +951,7 @@
 /area/vtm/interior/shop)
 "aDN" = (
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3
+	dir = 4
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 4;
@@ -1208,9 +1205,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm)
 "aKa" = (
-/obj/structure/stairs/north{
-	dir = 4
-	},
+/obj/structure/stairs/east,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/church/interior/haven)
 "aKg" = (
@@ -1694,8 +1689,7 @@
 	dir = 4
 	},
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3.1
+	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
@@ -3102,8 +3096,7 @@
 /area/vtm/sewer)
 "bLh" = (
 /obj/structure/railing/metal{
-	dir = 1;
-	layer = 3.2
+	dir = 1
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
@@ -4040,9 +4033,7 @@
 /turf/closed/wall/vampwall/bar,
 /area/vtm/sewer)
 "cin" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/lattice,
 /obj/structure/railing{
 	dir = 1;
@@ -5035,11 +5026,6 @@
 	pixel_x = 7
 	},
 /obj/effect/decal/cleanable/cardboard,
-/obj/transfer_point_vamp{
-	alpha = 0;
-	density = 0;
-	id = 671
-	},
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/interior)
 "cJB" = (
@@ -5992,9 +5978,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/fishermanswharf/ghetto)
 "dlL" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/lattice,
 /obj/structure/railing{
 	dir = 1;
@@ -6449,8 +6433,7 @@
 "dzj" = (
 /obj/structure/stairs/north,
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3
+	dir = 4
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
@@ -6491,9 +6474,7 @@
 	dir = 1;
 	pixel_y = 16
 	},
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/railing,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
@@ -7126,8 +7107,7 @@
 	color = "#636363"
 	},
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3
+	dir = 4
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
@@ -7197,12 +7177,10 @@
 /area/vtm/northbeach)
 "dXd" = (
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3
+	dir = 4
 	},
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3
+	dir = 4
 	},
 /turf/open/openspace,
 /area/vtm/interior/police)
@@ -7342,7 +7320,7 @@
 /obj/machinery/door/poddoor/shutters/armory{
 	damage_deflection = 60;
 	max_integrity = 300;
-	name = "panic room shutters";
+	name = "Panic Room shutters";
 	id = 12;
 	dir = 1
 	},
@@ -7767,9 +7745,7 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/millennium_tower/f4)
 "emV" = (
-/obj/structure/stairs/north{
-	dir = 4
-	},
+/obj/structure/stairs/east,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/techshop)
 "eny" = (
@@ -8815,8 +8791,7 @@
 "eRo" = (
 /obj/structure/stairs/north,
 /obj/structure/railing/metal{
-	dir = 8;
-	layer = 3
+	dir = 8
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
@@ -9091,9 +9066,7 @@
 	dir = 1;
 	pixel_y = 16
 	},
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "eWJ" = (
@@ -12172,9 +12145,7 @@
 	dir = 8;
 	pixel_y = 5
 	},
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "gBb" = (
@@ -12827,9 +12798,7 @@
 	dir = 1;
 	pixel_y = 16
 	},
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -12858,9 +12827,7 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower/f4)
 "gQx" = (
-/obj/structure/stairs/north{
-	dir = 4
-	},
+/obj/structure/stairs/east,
 /turf/open/floor/plating/church,
 /area/vtm/interior)
 "gQD" = (
@@ -13168,9 +13135,7 @@
 /turf/open/floor/plating/toilet/clinic,
 /area/vtm/interior)
 "gYO" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/lattice,
 /obj/structure/railing{
 	dir = 4
@@ -13630,15 +13595,6 @@
 	},
 /turf/open/water,
 /area/vtm/forest)
-"hnU" = (
-/obj/structure/stairs/north,
-/obj/structure/railing/metal{
-	dir = 8;
-	pixel_x = -1
-	},
-/obj/structure/stairs/north,
-/turf/open/floor/plating/concrete,
-/area/vtm/interior/techshop)
 "hoh" = (
 /obj/structure/table/wood,
 /obj/item/stack/cable_coil/five,
@@ -14710,8 +14666,7 @@
 	dir = 1
 	},
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3.1
+	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
@@ -15145,8 +15100,7 @@
 /area/vtm/sewer)
 "icH" = (
 /obj/structure/railing/metal{
-	dir = 8;
-	layer = 3.1
+	dir = 8
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
@@ -15194,9 +15148,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "idV" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/lattice,
 /obj/structure/railing{
 	dir = 8
@@ -15432,9 +15384,7 @@
 /turf/open/floor/plating/shit,
 /area/vtm/sewer)
 "ikB" = (
-/obj/structure/stairs/north{
-	dir = 4
-	},
+/obj/structure/stairs/east,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
 "ikH" = (
@@ -16137,13 +16087,6 @@
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower)
-"iHc" = (
-/obj/structure/railing/metal{
-	dir = 8;
-	layer = 3
-	},
-/turf/open/openspace,
-/area/vtm/interior/ghetto)
 "iHw" = (
 /obj/effect/landmark/start{
 	name = "Police Sergeant"
@@ -17718,13 +17661,6 @@
 	},
 /turf/open/floor/plating/toilet,
 /area/vtm/sewer)
-"jBS" = (
-/obj/structure/railing/metal{
-	dir = 8;
-	layer = 3
-	},
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/police)
 "jCe" = (
 /mob/living/carbon/human/npc/shop,
 /turf/open/floor/plating/vampwood,
@@ -17985,7 +17921,9 @@
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
 "jJY" = (
-/obj/machinery/door/poddoor/shutters/armory,
+/obj/machinery/door/poddoor/shutters/armory{
+	name = "Armory shutters"
+	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower/f4)
 "jKc" = (
@@ -18328,8 +18266,7 @@
 /area/space)
 "jRB" = (
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3.1
+	dir = 4
 	},
 /turf/open/openspace,
 /area/vtm/interior/ghetto)
@@ -18381,8 +18318,7 @@
 /area/vtm)
 "jTN" = (
 /obj/structure/railing/metal{
-	dir = 1;
-	layer = 3.2
+	dir = 1
 	},
 /obj/structure/chair/sofa/old/left{
 	dir = 4
@@ -18811,9 +18747,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
 "kfS" = (
-/obj/structure/stairs/north{
-	dir = 8
-	},
+/obj/structure/stairs/west,
 /turf/open/floor/plating/sidewalk,
 /area/vtm)
 "kfY" = (
@@ -19404,9 +19338,7 @@
 /area/vtm/financialdistrict)
 "kxC" = (
 /obj/effect/decal/cleanable/litter,
-/obj/effect/decal/cleanable/oil{
-	layer = 2.07
-	},
+/obj/effect/decal/cleanable/oil,
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = 11;
@@ -20649,7 +20581,6 @@
 "lir" = (
 /obj/structure/railing/metal{
 	dir = 4;
-	layer = 3;
 	pixel_y = 5
 	},
 /turf/open/openspace,
@@ -21653,9 +21584,6 @@
 "lLc" = (
 /obj/structure/closet/crate/bin/undense{
 	pixel_x = 7
-	},
-/obj/structure/closet/crate/bin/undense{
-	pixel_x = -9
 	},
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/interior)
@@ -25961,8 +25889,7 @@
 "nYM" = (
 /obj/structure/stairs/north,
 /obj/structure/railing/metal{
-	dir = 8;
-	layer = 3
+	dir = 8
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
@@ -26317,14 +26244,10 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "oip" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/lattice,
 /obj/structure/railing,
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "oiA" = (
@@ -27693,12 +27616,6 @@
 /obj/structure/vampdoor/wood/old/voivodate_citizen,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/voivodate)
-"oVO" = (
-/obj/effect/decal/cleanable/oil{
-	layer = 2.07
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/interior/techshop)
 "oWf" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
@@ -28185,12 +28102,9 @@
 /area/vtm/financialdistrict)
 "pkt" = (
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3
+	dir = 4
 	},
-/obj/structure/stairs/north{
-	layer = 2.9
-	},
+/obj/structure/stairs/south,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "pkJ" = (
@@ -28771,7 +28685,6 @@
 "pzz" = (
 /obj/structure/railing/metal{
 	dir = 8;
-	layer = 3;
 	pixel_x = -2
 	},
 /obj/item/wheelchair{
@@ -29247,8 +29160,7 @@
 	dir = 4
 	},
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3.1
+	dir = 4
 	},
 /obj/structure/railing/metal,
 /turf/open/floor/plating/sidewalk/poor,
@@ -30518,8 +30430,7 @@
 "qwe" = (
 /obj/structure/stairs/north,
 /obj/structure/railing/metal{
-	dir = 4;
-	layer = 3
+	dir = 4
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
@@ -31724,9 +31635,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/forest)
 "rbM" = (
-/obj/structure/stairs/north{
-	dir = 8
-	},
+/obj/structure/stairs/west,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
 "rbS" = (
@@ -31974,9 +31883,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "riG" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/lattice,
 /obj/structure/railing,
 /obj/structure/railing{
@@ -31996,9 +31903,7 @@
 /area/vtm/interior/shop)
 "rjm" = (
 /obj/effect/decal/cleanable/litter,
-/obj/effect/decal/cleanable/oil{
-	layer = 2.07
-	},
+/obj/effect/decal/cleanable/oil,
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = 11
@@ -32008,6 +31913,11 @@
 "rjn" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
+	},
+/obj/transfer_point_vamp{
+	alpha = 0;
+	density = 0;
+	id = 671
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior)
@@ -32407,12 +32317,9 @@
 /area/vtm/unionsquare)
 "rsR" = (
 /obj/structure/railing/metal{
-	dir = 8;
-	layer = 3
+	dir = 8
 	},
-/obj/structure/stairs/north{
-	layer = 2.9
-	},
+/obj/structure/stairs/south,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
 "rsT" = (
@@ -33080,10 +32987,7 @@
 /turf/open/floor/plating/woodrough,
 /area/vtm)
 "rMh" = (
-/obj/structure/stairs/south{
-	dir = 1;
-	layer = 4
-	},
+/obj/structure/stairs/north,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/techshop)
 "rMi" = (
@@ -37216,8 +37120,7 @@
 /area/vtm/interior/wyrm_corrupted)
 "tSr" = (
 /obj/structure/railing/metal{
-	dir = 8;
-	layer = 3.1
+	dir = 8
 	},
 /turf/open/openspace,
 /area/vtm/interior/ghetto)
@@ -37844,13 +37747,6 @@
 	},
 /turf/open/floor/eighties,
 /area/vtm/interior/shop)
-"ujx" = (
-/obj/structure/railing/metal{
-	dir = 4;
-	layer = 3
-	},
-/turf/open/openspace,
-/area/vtm/interior/ghetto)
 "ujV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -38445,6 +38341,14 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior)
+"uyT" = (
+/obj/structure/stairs/north,
+/obj/structure/railing/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/interior/techshop)
 "uyW" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 4
@@ -39944,9 +39848,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "vqR" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/lattice,
 /obj/structure/railing{
 	dir = 8;
@@ -40185,9 +40087,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/endron_facility/restricted)
 "vuZ" = (
-/obj/effect/decal/pallet{
-	layer = 2
-	},
+/obj/effect/decal/pallet,
 /obj/structure/lattice,
 /obj/structure/railing{
 	dir = 8;
@@ -41096,9 +40996,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
 "vWW" = (
-/obj/structure/stairs/north{
-	dir = 8
-	},
+/obj/structure/stairs/west,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
 "vXb" = (
@@ -41573,9 +41471,7 @@
 /area/vtm/interior/ghetto)
 "wlI" = (
 /obj/effect/decal/cleanable/litter,
-/obj/effect/decal/cleanable/oil{
-	layer = 2.07
-	},
+/obj/effect/decal/cleanable/oil,
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = 11
@@ -51237,7 +51133,7 @@ wrk
 wrk
 wwe
 una
-oVO
+dvz
 ybx
 ybx
 vYk
@@ -51776,7 +51672,7 @@ oIx
 eRK
 rtP
 wwe
-rNg
+uyT
 ybx
 ybx
 wwe
@@ -51883,7 +51779,7 @@ wwe
 wwe
 wwe
 wwe
-hnU
+rNg
 ybx
 dxE
 wwe
@@ -75973,7 +75869,7 @@ bqE
 vun
 lVj
 lVj
-jBS
+icH
 icH
 lVj
 lVj
@@ -76889,7 +76785,7 @@ hcS
 hcS
 hcS
 hcS
-iHc
+tSr
 tSr
 eSf
 iFe
@@ -76996,7 +76892,7 @@ hcS
 hcS
 hcS
 kFx
-ujx
+jRB
 jRB
 rxW
 rxW

@@ -350,7 +350,6 @@
 	},
 /obj/structure/sign/directions/evac{
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = 35
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -4343,7 +4342,6 @@
 /obj/machinery/button/door{
 	id = "endron_cells_blast_doors_two";
 	pixel_y = 4;
-	pixel_x = 0;
 	name = "blast door two"
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -4826,7 +4824,6 @@
 /obj/structure/rack,
 /obj/item/roller,
 /obj/item/roller{
-	pixel_x = 0;
 	pixel_y = 4
 	},
 /obj/item/clothing/suit/straight_jacket,
@@ -5351,7 +5348,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/white{
-	dir = 2;
 	color = "#636363"
 	},
 /turf/open/floor/carpet/vamp/bluesilver,
@@ -7058,7 +7054,6 @@
 "dUg" = (
 /obj/structure/table,
 /obj/item/kirbyplants/fullysynthetic{
-	pixel_x = 0;
 	pixel_y = 17
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -8195,8 +8190,7 @@
 	},
 /obj/effect/turf_decal/trimline/red/warning{
 	dir = 1;
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /turf/open/floor/plating/circled,
 /area/space)
@@ -9494,9 +9488,7 @@
 "fjv" = (
 /obj/machinery/button/door{
 	id = "endron_cell_1_doors";
-	name = "cell door 1 button";
-	pixel_x = 0;
-	pixel_y = 0
+	name = "cell door 1 button"
 	},
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/vampplating/mono,
@@ -13065,7 +13057,6 @@
 /obj/machinery/button/door{
 	id = "endron_cells_blast_doors_one";
 	pixel_y = 4;
-	pixel_x = 0;
 	name = "blast door one"
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -13471,7 +13462,6 @@
 /obj/machinery/button/door{
 	id = "endron_cells_blast_doors_one";
 	pixel_y = 21;
-	pixel_x = 0;
 	name = "blast door one"
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -16100,7 +16090,6 @@
 /turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility/restricted)
 "iDE" = (
-/obj/structure/table/wood,
 /obj/item/paper_bin{
 	pixel_y = 6
 	},
@@ -17251,11 +17240,6 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/millennium_tower/f4)
-"jlf" = (
-/obj/structure/table,
-/obj/item/police_radio,
-/turf/open/floor/plating/parquetry,
-/area/vtm/interior)
 "jlj" = (
 /obj/structure/noticeboard/directional/north,
 /obj/item/paper{
@@ -18068,8 +18052,7 @@
 /area/vtm/unionsquare)
 "jKD" = (
 /obj/machinery/light/small/red/directional/west{
-	pixel_x = 16;
-	pixel_y = 0
+	pixel_x = 16
 	},
 /turf/open/floor/plating/industrial/factory,
 /area/vtm/interior/techshop)
@@ -18501,8 +18484,7 @@
 /obj/machinery/button/door{
 	id = "endron_cells_blast_doors_three";
 	name = "corruption door button";
-	pixel_y = 4;
-	pixel_x = 0
+	pixel_y = 4
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
@@ -19725,9 +19707,7 @@
 "kFs" = (
 /obj/machinery/button/door{
 	id = "endron_cell_2_doors";
-	name = "cell 2 door button";
-	pixel_y = 0;
-	pixel_x = 0
+	name = "cell 2 door button"
 	},
 /obj/structure/table/reinforced,
 /obj/machinery/light{
@@ -20638,12 +20618,10 @@
 "lgs" = (
 /obj/structure/sign/directions/science{
 	dir = 4;
-	pixel_y = 28;
-	pixel_x = 0
+	pixel_y = 28
 	},
 /obj/structure/sign/directions/evac{
 	dir = 8;
-	pixel_x = 0;
 	pixel_y = 36
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -24131,7 +24109,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/white{
-	dir = 2;
 	color = "#636363"
 	},
 /turf/open/floor/carpet/vamp/bluesilver,
@@ -27256,7 +27233,6 @@
 /obj/machinery/button/door{
 	id = "endron_cells_blast_doors_two";
 	pixel_y = 21;
-	pixel_x = 0;
 	name = "blast door two"
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -27493,10 +27469,7 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 6
 	},
-/obj/effect/decal/rugs{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/effect/decal/rugs,
 /turf/open/floor/noslip,
 /area/vtm/interior)
 "oMD" = (
@@ -27743,16 +27716,6 @@
 	},
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/interior/voivodate/sanctum)
-"oUd" = (
-/obj/effect/decal/rugs{
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/obj/machinery/shower{
-	dir = 4
-	},
-/turf/open/floor/noslip,
-/area/vtm/interior/endron_facility/restricted)
 "oUe" = (
 /obj/machinery/light{
 	dir = 4
@@ -28297,11 +28260,9 @@
 "pkf" = (
 /obj/structure/sign/directions/security{
 	dir = 1;
-	pixel_y = 36;
-	pixel_x = 0
+	pixel_y = 36
 	},
 /obj/structure/sign/directions/medical{
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -31566,7 +31527,6 @@
 	pixel_y = -7
 	},
 /obj/item/newspaper{
-	pixel_x = 0;
 	pixel_y = 7
 	},
 /turf/open/floor/plating/sidewalk/poor,
@@ -31770,7 +31730,6 @@
 /area/vtm/interior/chantry)
 "qYA" = (
 /obj/effect/turf_decal/siding/white/corner{
-	dir = 2;
 	color = "#636363"
 	},
 /turf/open/floor/plating/toilet/clinic,
@@ -32108,8 +32067,7 @@
 /obj/machinery/button/door{
 	id = "endron_cells_blast_doors_three";
 	name = "corruption door button";
-	pixel_y = 30;
-	pixel_x = 0
+	pixel_y = 30
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/wyrm_corrupted)
@@ -33827,10 +33785,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict/library)
 "rZz" = (
-/obj/effect/decal/rugs{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/effect/decal/rugs,
 /obj/structure/sink{
 	pixel_y = 1;
 	dir = 4;
@@ -35160,7 +35115,6 @@
 	},
 /obj/structure/table/wood,
 /obj/item/toy/cards/deck/tarot{
-	pixel_x = 0;
 	pixel_y = 1
 	},
 /turf/closed/wall/vampwall/rich/old/low,
@@ -39883,7 +39837,6 @@
 	pixel_y = 23
 	},
 /obj/item/screwdriver{
-	pixel_x = 0;
 	pixel_y = 18
 	},
 /obj/item/stock_parts/cell/high/plus,
@@ -40589,11 +40542,9 @@
 /obj/structure/rack,
 /obj/item/chair/greyscale,
 /obj/item/chair/greyscale{
-	pixel_x = 0;
 	pixel_y = 3
 	},
 /obj/item/chair/greyscale{
-	pixel_x = 0;
 	pixel_y = 6
 	},
 /turf/open/floor/plating/vampplating/mono,
@@ -40814,8 +40765,7 @@
 /obj/structure/table/bacotell,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker{
-	pixel_x = -10;
-	pixel_y = 0
+	pixel_x = -10
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
@@ -42974,9 +42924,7 @@
 /obj/item/gun/ballistic/automatic/vampire/mp5,
 /obj/item/gun/ballistic/automatic/vampire/mp5,
 /obj/item/gun/ballistic/automatic/vampire/mp5,
-/obj/effect/turf_decal/siding/red/corner{
-	dir = 2
-	},
+/obj/effect/turf_decal/siding/red/corner,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
 "wRo" = (
@@ -45733,8 +45681,8 @@ gYk
 vGl
 vWU
 rZz
-oUd
-oUd
+reF
+reF
 rZz
 bco
 bco
@@ -50475,7 +50423,7 @@ wrk
 wrk
 eTc
 iDE
-jlf
+hJF
 eTc
 eTc
 jtP

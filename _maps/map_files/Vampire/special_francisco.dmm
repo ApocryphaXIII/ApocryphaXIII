@@ -31621,11 +31621,6 @@
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
-"rbd" = (
-/obj/structure/table/modern,
-/obj/structure/table/modern,
-/turf/open/floor/carpet/green,
-/area/vtm/anarch)
 "rbz" = (
 /obj/transfer_point_vamp/voivodate,
 /turf/open/floor/plating/asphalt,
@@ -60120,7 +60115,7 @@ ahd
 unL
 dVT
 hmX
-rbd
+tku
 ahd
 csB
 pOG

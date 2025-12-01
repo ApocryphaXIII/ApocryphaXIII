@@ -8291,7 +8291,6 @@
 	pixel_y = -4
 	},
 /obj/structure/lattice,
-/obj/structure/lattice,
 /obj/structure/railing{
 	dir = 1;
 	pixel_y = 16
@@ -9076,7 +9075,6 @@
 	pixel_y = -4
 	},
 /obj/structure/lattice,
-/obj/structure/lattice,
 /obj/structure/railing{
 	dir = 1;
 	pixel_y = 16
@@ -9400,20 +9398,6 @@
 /obj/item/stack/rods,
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
-"fif" = (
-/obj/effect/decal/pallet{
-	pixel_x = 3;
-	pixel_y = 4
-	},
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/structure/railing{
-	dir = 1;
-	pixel_y = 16
-	},
-/obj/structure/railing,
-/turf/open/floor/plating/woodrough,
-/area/vtm)
 "fiA" = (
 /obj/effect/decal/carpet{
 	pixel_x = -14;
@@ -12170,12 +12154,10 @@
 /area/vtm/interior/voivodate/sanctum)
 "gAT" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /obj/structure/railing{
 	dir = 8;
 	pixel_y = 5
 	},
-/obj/structure/lattice,
 /obj/effect/decal/pallet{
 	layer = 2
 	},
@@ -12536,7 +12518,6 @@
 	pixel_y = 4
 	},
 /obj/structure/lattice,
-/obj/structure/lattice,
 /obj/structure/railing,
 /turf/open/floor/plating/woodrough,
 /area/vtm)
@@ -12827,7 +12808,6 @@
 	pixel_x = -3;
 	pixel_y = -4
 	},
-/obj/structure/lattice,
 /obj/structure/lattice,
 /obj/structure/railing{
 	dir = 1;
@@ -26672,7 +26652,6 @@
 	pixel_y = 4
 	},
 /obj/structure/lattice,
-/obj/structure/lattice,
 /obj/effect/turf_decal/bordur{
 	dir = 1
 	},
@@ -28506,19 +28485,6 @@
 /obj/structure/vamptree/pine,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/sewer)
-"pry" = (
-/obj/effect/decal/pallet{
-	pixel_x = -3;
-	pixel_y = -4
-	},
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/structure/railing{
-	dir = 8;
-	pixel_y = 5
-	},
-/turf/open/floor/plating/woodrough,
-/area/vtm)
 "prK" = (
 /obj/structure/table/modern,
 /obj/item/storage/fancy/cigarettes/cigars/cohiba{
@@ -36540,19 +36506,6 @@
 /obj/effect/landmark/start/assamite,
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/banu)
-"tzu" = (
-/obj/effect/decal/pallet{
-	pixel_x = 3;
-	pixel_y = 4
-	},
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/structure/railing{
-	dir = 8;
-	pixel_y = 5
-	},
-/turf/open/floor/plating/woodrough,
-/area/vtm)
 "tzA" = (
 /obj/structure/chair/wood,
 /turf/open/floor/stone,
@@ -39488,7 +39441,6 @@
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/structure/lattice,
 /obj/structure/lattice,
 /obj/structure/railing,
 /obj/structure/railing{
@@ -70746,7 +70698,7 @@ rdj
 rdj
 rdj
 rdj
-fif
+pvh
 rdj
 rdj
 rdj
@@ -71616,8 +71568,8 @@ xqo
 xqo
 mqV
 vuZ
-tzu
-pry
+tpK
+lzm
 vuZ
 lzm
 vuZ
@@ -78025,9 +77977,9 @@ rdj
 rdj
 rdj
 vqR
-tzu
+tpK
 gAT
-pry
+lzm
 qHs
 xqo
 xqo

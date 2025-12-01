@@ -5806,9 +5806,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
 "ddF" = (
-/obj/structure/table/wood{
-	density = 0
-	},
+/obj/structure/table/wood,
 /obj/structure/fluff/tv{
 	pixel_y = 12
 	},
@@ -15040,7 +15038,6 @@
 /area/vtm/sewer)
 "hZv" = (
 /obj/underplate,
-/obj/structure/table/bubway,
 /obj/structure/table/bubway,
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior)
@@ -26524,15 +26521,6 @@
 	dir = 4
 	},
 /turf/open/floor/plating/vampplating/mono,
-/area/vtm/interior/endron_facility/restricted)
-"omX" = (
-/obj/structure/chair/comfy/black{
-	dir = 8
-	},
-/obj/structure/chair/comfy/black{
-	dir = 8
-	},
-/turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility/restricted)
 "onf" = (
 /obj/effect/turf_decal/bordur,
@@ -42323,9 +42311,7 @@
 /turf/open/floor/carpet/vamp/purplegold,
 /area/vtm/interior/apartment)
 "wFH" = (
-/obj/structure/table/wood{
-	density = 0
-	},
+/obj/structure/table/wood,
 /obj/effect/turf_decal/siding/white{
 	color = "#636363"
 	},
@@ -81181,7 +81167,7 @@ eeP
 dMJ
 lxK
 hpl
-omX
+hpl
 lxK
 lxK
 eeP

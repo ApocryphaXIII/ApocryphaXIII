@@ -124,6 +124,10 @@
 		chamber_round()
 	else
 		chamber_round(replace_new_round = TRUE)
+	if(istype(loc, /turf))
+		show_bolt_icon = FALSE
+		mag_display = FALSE
+		mag_display_ammo = FALSE
 	update_icon()
 
 /obj/item/gun/ballistic/vv_edit_var(vname, vval)
@@ -142,9 +146,9 @@
 	. = ..()
 	if(show_bolt_icon)
 		if (bolt_type == BOLT_TYPE_LOCKING)
-			. += "[icon_state]_bolt[bolt_locked ? "_locked" : ""]"
+			. += mutable_appearance(icon, "[icon_state]_bolt[bolt_locked ? "_locked" : ""]")
 		if (bolt_type == BOLT_TYPE_OPEN && bolt_locked)
-			. += "[icon_state]_bolt"
+			. += mutable_appearance(icon, "[icon_state]_bolt")
 	if (suppressed)
 		var/mutable_appearance/MA = mutable_appearance(icon, "[icon_state]_suppressor")
 		if(suppressor_x_offset)
@@ -153,15 +157,15 @@
 			MA.pixel_y = suppressor_y_offset
 		. += MA
 	if(!chambered && empty_indicator) //this is duplicated in c20's update_overlayss due to a layering issue with the select fire icon.
-		. += "[icon_state]_empty"
+		. += mutable_appearance(icon, "[icon_state]_empty")
 	if (magazine && !internal_magazine)
 		if (special_mags)
-			. += "[icon_state]_mag_[initial(magazine.icon_state)]"
+			. += mutable_appearance(icon, "[icon_state]_mag_[initial(magazine.icon_state)]")
 			if (mag_display_ammo && !magazine.ammo_count())
-				. += "[icon_state]_mag_empty"
+				. += mutable_appearance(icon, "[icon_state]_mag_empty")
 		else
 			if(mag_display)
-				. += "[icon_state]_mag"
+				. += mutable_appearance(icon, "[icon_state]_mag")
 			if(!mag_display_ammo)
 				return
 			var/capacity_number
@@ -177,7 +181,7 @@
 				if(0.2 to 0.4)
 					capacity_number = 20
 			if (capacity_number)
-				. += "[icon_state]_mag_[capacity_number]"
+				. += mutable_appearance(icon, "[icon_state]_mag_[capacity_number]")
 
 
 /obj/item/gun/ballistic/process_chamber(empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE)

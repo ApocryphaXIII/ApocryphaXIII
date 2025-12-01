@@ -204,7 +204,7 @@
 		new /datum/data/mining_equipment("grey fur-linked jacket", /obj/item/clothing/suit/vampire/toggle/dep_jacket, 45),
 		new /datum/data/mining_equipment("blue fur-lined jacket", /obj/item/clothing/suit/vampire/toggle/dep_jacket/blue, 45),
 		new /datum/data/mining_equipment("bomber jacket", /obj/item/clothing/suit/vampire/toggle/bomber, 45),
-		new /datum/data/mining_equipment("asymmetrical bomber jacket", /obj/item/clothing/suit/vampire/toggle/retro_bomber, 45),
+		new /datum/data/mining_equipment("asymmetrical bomber jacket", /obj/item/clothing/suit/vampire/toggle/bomber/retro_bomber, 45),
 		new /datum/data/mining_equipment("grey flannel shirt", /obj/item/clothing/suit/vampire/flannel, 45),
 		new /datum/data/mining_equipment("red flannel shirt", /obj/item/clothing/suit/vampire/flannel/red, 45),
 		new /datum/data/mining_equipment("aqua flannel shirt", /obj/item/clothing/suit/vampire/flannel/aqua, 45),

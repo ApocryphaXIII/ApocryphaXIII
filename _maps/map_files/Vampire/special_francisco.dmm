@@ -31142,11 +31142,6 @@
 /obj/structure/dresser,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/mansion)
-"qMW" = (
-/obj/structure/lattice/pentex,
-/obj/effect/decal/wallpaper/stone,
-/turf/closed/wall/vampwall/rich,
-/area/vtm/interior/millennium_tower/f4)
 "qNh" = (
 /obj/item/kirbyplants,
 /obj/effect/turf_decal/bordur{
@@ -85586,7 +85581,7 @@ obl
 bTa
 vnx
 jVD
-qMW
+uwK
 pGG
 jGT
 ech

@@ -566,8 +566,7 @@
 /area/vtm/fishermanswharf/ghetto)
 "apI" = (
 /obj/structure/vampfence/corner/rich{
-	dir = 8;
-	layer = 4.61
+	dir = 8
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm/financialdistrict/library)
@@ -1537,8 +1536,6 @@
 /obj/structure/table/wood,
 /obj/effect/decal/wallpaper/paper/rich/low,
 /obj/structure/vampfence/rich{
-	alpha = 155;
-	density = 0;
 	dir = 4;
 	pixel_y = 8
 	},
@@ -2197,8 +2194,7 @@
 /area/vtm/interior/millennium_tower)
 "bpm" = (
 /obj/structure/vampfence/rich{
-	dir = 4;
-	layer = 4
+	dir = 4
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm)
@@ -3600,8 +3596,7 @@
 "bXH" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 1;
-	icon_state = "fence_end";
-	layer = 4.61
+	icon_state = "fence_end"
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm)
@@ -4830,7 +4825,6 @@
 /obj/effect/turf_decal/bordur/corner,
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 4;
 	pixel_y = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -6541,7 +6535,6 @@
 /obj/structure/table,
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 5;
 	name = "window bars"
 	},
 /turf/closed/wall/vampwall/bar/low,
@@ -9234,8 +9227,7 @@
 /area/vtm/interior/endron_facility/restricted)
 "fbO" = (
 /obj/structure/vampfence/rich{
-	dir = 4;
-	layer = 4
+	dir = 4
 	},
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/rich,
@@ -9804,8 +9796,7 @@
 /area/vtm/interior/ghetto)
 "fqQ" = (
 /obj/structure/vampfence/corner/rich{
-	dir = 4;
-	layer = 4.61
+	dir = 4
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -10226,7 +10217,6 @@
 "fzl" = (
 /obj/effect/turf_decal/bordur,
 /obj/structure/vampfence/rich{
-	alpha = 155;
 	dir = 4;
 	pixel_y = 8
 	},
@@ -17707,8 +17697,7 @@
 /area/vtm/interior)
 "jAv" = (
 /obj/structure/vampfence/rich{
-	dir = 4;
-	layer = 4
+	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/financialdistrict)
@@ -18031,7 +18020,6 @@
 /obj/structure/vampfence/corner/rich{
 	dir = 4;
 	icon_state = "fence_end";
-	layer = 3;
 	pixel_y = 8;
 	pixel_x = -8
 	},
@@ -18581,15 +18569,14 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
 "jZI" = (
+/obj/structure/vampfence/rich{
+	dir = 4
+	},
 /obj/structure/vampfence/corner/rich{
-	icon_state = "fence_end";
-	layer = 4.61
+	icon_state = "fence_end"
 	},
 /obj/effect/turf_decal/bordur/corner{
 	dir = 8
-	},
-/obj/structure/vampfence/rich{
-	dir = 4
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm/financialdistrict)
@@ -20609,9 +20596,7 @@
 /turf/open/floor/plating/vampbeach,
 /area/vtm/northbeach)
 "lhR" = (
-/obj/structure/vampfence/corner/rich{
-	layer = 4.61
-	},
+/obj/structure/vampfence/corner/rich,
 /obj/effect/turf_decal/bordur{
 	dir = 8
 	},
@@ -21376,8 +21361,7 @@
 "lAs" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 4;
-	icon_state = "fence_end";
-	layer = 4.61
+	icon_state = "fence_end"
 	},
 /obj/structure/gargoyle{
 	dir = 1
@@ -22288,8 +22272,7 @@
 /area/vtm/interior/millennium_tower/f2)
 "mbO" = (
 /obj/structure/vampfence/rich{
-	dir = 4;
-	layer = 4
+	dir = 4
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 10
@@ -26032,7 +26015,6 @@
 "oaB" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 8;
-	layer = 4.61;
 	pixel_y = 8
 	},
 /turf/open/floor/plating/vampgrass,
@@ -29677,7 +29659,6 @@
 "pXx" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 8;
-	layer = 4.61;
 	pixel_y = 8
 	},
 /obj/effect/turf_decal/bordur/corner,
@@ -35023,8 +35004,7 @@
 /area/vtm/interior/police)
 "sIH" = (
 /obj/structure/vampfence/corner/rich{
-	dir = 8;
-	layer = 4.61
+	dir = 8
 	},
 /obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/vampgrass,
@@ -38503,7 +38483,6 @@
 	},
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 4;
 	pixel_y = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -43116,7 +43095,6 @@
 	},
 /obj/structure/vampfence/rich{
 	dir = 4;
-	layer = 4;
 	pixel_y = 8
 	},
 /turf/open/floor/plating/sidewalk/rich,
@@ -43196,8 +43174,7 @@
 /area/vtm)
 "xaE" = (
 /obj/structure/vampfence/corner/rich{
-	dir = 8;
-	layer = 4.61
+	dir = 8
 	},
 /obj/effect/turf_decal/bordur{
 	dir = 8
@@ -43288,8 +43265,7 @@
 "xdn" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 4;
-	icon_state = "fence_end";
-	layer = 4.61
+	icon_state = "fence_end"
 	},
 /obj/structure/gargoyle{
 	dir = 1

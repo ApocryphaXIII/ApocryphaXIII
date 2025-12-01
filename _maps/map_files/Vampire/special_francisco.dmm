@@ -29346,12 +29346,6 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/endron_facility/restricted)
-"pNk" = (
-/obj/structure/closet/crate/dumpster,
-/obj/structure/closet/crate/dumpster,
-/obj/effect/decal/cleanable/trash,
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/fishermanswharf/ghetto)
 "pNo" = (
 /obj/effect/decal/graffiti,
 /turf/open/floor/plating/sidewalk/poor,
@@ -133565,7 +133559,7 @@ mUg
 uZu
 rAo
 rTe
-pNk
+rTe
 qed
 tJF
 scK

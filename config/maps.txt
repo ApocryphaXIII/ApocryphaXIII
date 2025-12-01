@@ -15,6 +15,10 @@ endmap
 
 map kindredcity
 	votable
+endmap
+
+map special_francisco
+	votable
 	default
 endmap
 

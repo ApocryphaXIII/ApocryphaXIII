@@ -7308,7 +7308,7 @@
 /obj/machinery/door/poddoor/shutters/armory{
 	damage_deflection = 60;
 	max_integrity = 300;
-	name = "Panic Room shutters";
+	name = "Panic Room Shutters";
 	id = 12;
 	dir = 1
 	},
@@ -17878,7 +17878,7 @@
 /area/vtm/park)
 "jJY" = (
 /obj/machinery/door/poddoor/shutters/armory{
-	name = "Armory shutters"
+	name = "Armory Shutters"
 	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower/f4)
@@ -132928,7 +132928,7 @@ rfM
 tHO
 tHO
 cDQ
-soR
+hZN
 soR
 sNt
 sNt

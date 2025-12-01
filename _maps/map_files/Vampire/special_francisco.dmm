@@ -3384,15 +3384,6 @@
 	name = "Emergency Lockdown";
 	req_one_access_txt = "5"
 	},
-/obj/structure/window{
-	name = "button cover";
-	desc = "Break in case of emergency.";
-	icon = 'icons/obj/stationobjs.dmi';
-	icon_state = "doorctrl";
-	color = "#8be0fc";
-	can_be_unanchored = 0;
-	max_integrity = 5
-	},
 /turf/closed/wall/vampwall/painted,
 /area/vtm/clinic)
 "bTa" = (
@@ -9795,6 +9786,16 @@
 /obj/effect/landmark/start/vdoctor,
 /obj/structure/chair/office{
 	dir = 8
+	},
+/obj/structure/window{
+	name = "button cover";
+	desc = "Break in case of emergency.";
+	icon = 'icons/obj/stationobjs.dmi';
+	icon_state = "doorctrl";
+	color = "#8be0fc";
+	can_be_unanchored = 0;
+	max_integrity = 5;
+	pixel_y = 32
 	},
 /turf/open/floor/carpet/vamp/cyan,
 /area/vtm/clinic)
@@ -43085,7 +43086,6 @@
 "xdH" = (
 /obj/structure/table,
 /obj/item/pen/fourcolor,
-/obj/structure/table,
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/decal/wallpaper/blue/low,
 /turf/closed/wall/vampwall/rich/low,

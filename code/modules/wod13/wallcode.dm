@@ -534,8 +534,18 @@ LOW_WALL_HELPER(vampwall/wood)
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
 
+/obj/effect/turf_decal/bordur/inverse // DARKPACK TODO: needs a snow sprite
+	name = "sidewalk"
+	icon = 'modular_darkpack/modules/decor/icons/decals.dmi'
+	icon_state = "border_inverse"
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
 /obj/effect/turf_decal/bordur/corner
 	icon_state = "border_corner"
+
+/obj/effect/turf_decal/bordur/corner/inverse // DARKPACK TODO: needs a snow sprite
+	icon = 'modular_darkpack/modules/decor/icons/decals.dmi'
+	icon_state = "border_corner_inverse"
 
 //OTHER TURFS
 

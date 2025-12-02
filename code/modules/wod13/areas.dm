@@ -672,19 +672,26 @@
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
+/area/vtm/voivodate // APOC EDIT ADD
+	name = "Seer's Estate Grounds"
+
 /area/vtm/interior/voivodate //APOC EDIT
-	name = "Seer's Voivodate Estate" 
+	name = "Seer's Estate"
 	icon_state = "old_clan_tzimisce"
 	zone_type = "elysium"
 	music_index = MUSIC_PRINCE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/interior/voivodate/sanctum //APOC EDIT
-	name = "Seer's Voivodate Sanctum"
+	name = "Seer's Estate Sanctum"
 	icon_state = "old_clan_sanctum"
 	zone_type = "elysium"
 	musictracks = list('sound/musictracks/nosferatu.ogg')
 	wall_rating = LOW_WALL_RATING
+
+/area/vtm/interior/voivodate/cave // APOC EDIT ADD
+	name = "Seer's Estate Cave"
+	zone_type = "battle"
 
 /area/vtm/interior/setite
 	name = "Community Center"

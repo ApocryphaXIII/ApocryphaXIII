@@ -40,9 +40,6 @@
 		},
 		{
 			"Baseturf": "/turf/open/floor/plating/vampdirt"
-		},
-		{
-			"Baseturf": "/turf/open/floor/plating/vampdirt"
 		}
 	]
 }

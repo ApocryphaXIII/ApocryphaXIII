@@ -5,6 +5,7 @@
 #include "map_files\generic\titlescreen.dmm"
 #else
 #include "map_files\generic\admin_central.dmm"
+#include "map_files\generic\apoc_residential.dmm"
 #endif
 
 // #include "map_files\Mining\Lavaland.dmm"

@@ -4,7 +4,7 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/interior/ghetto)
 "aax" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 10
 	},
 /turf/open/floor/plating/asphalt,
@@ -430,7 +430,9 @@
 "aoy" = (
 /obj/effect/turf_decal/crosswalk,
 /obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "aoN" = (
@@ -789,9 +791,7 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "aCR" = (
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict/library)
 "aDc" = (
@@ -1311,7 +1311,9 @@
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/techshop)
 "aSP" = (
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "aST" = (
@@ -1452,12 +1454,9 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "aYC" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
-	},
-/obj/effect/landmark/npcwall,
-/turf/open/floor/plating/sidewalk,
-/area/vtm/interior)
+/obj/effect/turf_decal/bordur/corner/inverse,
+/turf/open/floor/plating/asphalt,
+/area/vtm/pacificheights)
 "aYD" = (
 /obj/effect/turf_decal/bordur{
 	dir = 8
@@ -1978,8 +1977,8 @@
 	dir = 4
 	},
 /obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -2202,7 +2201,7 @@
 /turf/open/floor/carpet/vamp/greengold,
 /area/vtm/interior/endron_facility/restricted)
 "bxy" = (
-/obj/effect/turf_decal/bordur/corner,
+/obj/effect/turf_decal/bordur/corner/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "bxH" = (
@@ -2916,14 +2915,14 @@
 /turf/closed/wall/vampwall/rich,
 /area/vtm/interior/millennium_tower/f4)
 "bTc" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 6
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "bTi" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -3873,8 +3872,8 @@
 /obj/effect/turf_decal/asphaltline/alt{
 	dir = 8
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
@@ -4158,8 +4157,8 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm)
 "cFo" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior)
@@ -4690,7 +4689,9 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 1
 	},
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "cUW" = (
@@ -6681,16 +6682,12 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/shop)
 "eoc" = (
-/obj/effect/turf_decal/bordur{
-	dir = 1
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
-/obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
-/area/vtm/pacificheights)
+/area/vtm/unionsquare)
 "eoB" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
-	},
 /obj/structure/railing{
 	dir = 4
 	},
@@ -6813,7 +6810,9 @@
 /area/vtm/interior/voivodate)
 "esU" = (
 /obj/vampire_car/rand,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "etm" = (
@@ -6929,9 +6928,7 @@
 /area/vtm/sewer)
 "ewx" = (
 /obj/effect/landmark/npcwall,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "ewz" = (
@@ -7277,8 +7274,8 @@
 /area/vtm/interior/police)
 "eIM" = (
 /obj/effect/landmark/npcwall,
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -7319,7 +7316,7 @@
 /obj/structure/roadblock{
 	dir = 1
 	},
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/corner/inverse{
 	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
@@ -7424,8 +7421,8 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "eNb" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
@@ -7449,10 +7446,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior/ghetto)
 "eOr" = (
-/obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "eOQ" = (
@@ -8313,9 +8307,7 @@
 "fnM" = (
 /obj/effect/turf_decal/crosswalk,
 /obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "fnW" = (
@@ -8927,8 +8919,8 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm)
 "fDE" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior/millennium_tower)
@@ -8988,7 +8980,7 @@
 /turf/open/floor/carpet/vamp/cyan,
 /area/vtm/clinic)
 "fEZ" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 5
 	},
 /turf/open/floor/plating/asphalt,
@@ -9142,8 +9134,8 @@
 /area/vtm/unionsquare)
 "fJL" = (
 /obj/effect/landmark/npcwall,
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -9198,9 +9190,7 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/sewer)
 "fLi" = (
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "fLp" = (
@@ -10201,7 +10191,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/vtm/clinic)
 "gpK" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 5
 	},
 /turf/open/floor/plating/asphalt,
@@ -10434,8 +10424,8 @@
 /area/vtm/forest)
 "gyj" = (
 /obj/effect/landmark/npcwall,
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior)
@@ -10593,8 +10583,8 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/ghetto)
 "gCs" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
@@ -12334,7 +12324,7 @@
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/interior/police)
 "hGN" = (
-/obj/effect/turf_decal/bordur/corner,
+/obj/effect/turf_decal/bordur/corner/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "hGP" = (
@@ -12544,9 +12534,7 @@
 "hMr" = (
 /obj/effect/turf_decal/crosswalk,
 /obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "hME" = (
@@ -12641,7 +12629,9 @@
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/interior)
 "hQk" = (
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "hQy" = (
@@ -13013,7 +13003,9 @@
 /area/vtm/forest)
 "iaa" = (
 /obj/effect/landmark/npcwall,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "iaR" = (
@@ -13119,7 +13111,9 @@
 /area/vtm)
 "idA" = (
 /obj/effect/turf_decal/crosswalk,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "idV" = (
@@ -13137,7 +13131,7 @@
 /turf/open/floor/carpet/green,
 /area/vtm/anarch)
 "ieg" = (
-/obj/effect/turf_decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner/inverse{
 	dir = 1
 	},
 /turf/open/floor/plating/asphalt,
@@ -14383,8 +14377,8 @@
 /area/space)
 "iYD" = (
 /obj/effect/landmark/npc_spawn_point,
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
@@ -14445,15 +14439,14 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
 "jaN" = (
+/obj/effect/turf_decal/crosswalk,
+/obj/effect/landmark/npcability,
 /obj/effect/turf_decal/bordur{
 	dir = 1
 	},
-/obj/effect/turf_decal/bordur,
-/obj/structure/roadblock{
-	dir = 1
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/pacificheights)
+/obj/effect/turf_decal/bordur/inverse,
+/turf/open/floor/plating/asphalt,
+/area/vtm/financialdistrict)
 "jaS" = (
 /obj/structure/sink{
 	dir = 4;
@@ -15669,7 +15662,7 @@
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior/millennium_tower)
 "jOd" = (
-/obj/effect/turf_decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner/inverse{
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
@@ -16093,8 +16086,8 @@
 /turf/closed/wall/vampwall/old/low,
 /area/vtm/interior/voivodate)
 "kaU" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
@@ -17606,7 +17599,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/forest)
 "lcx" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 6
 	},
 /turf/open/floor/plating/asphalt,
@@ -18983,7 +18976,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/ghetto)
 "lWv" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 10
 	},
 /turf/open/floor/plating/asphalt,
@@ -19086,9 +19079,6 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/interior/laundromat)
 "lYG" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
-	},
 /obj/structure/railing{
 	dir = 4
 	},
@@ -19234,8 +19224,8 @@
 	dir = 4
 	},
 /obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
@@ -19859,8 +19849,8 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/interior)
 "myg" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior/millennium_tower)
@@ -21645,7 +21635,7 @@
 /turf/open/floor/carpet/vamp/redsilver,
 /area/vtm/anarch/basement)
 "nzJ" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 9
 	},
 /turf/open/floor/plating/asphalt,
@@ -23096,8 +23086,8 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
@@ -24806,9 +24796,6 @@
 /area/vtm/anarch/basement)
 "pxB" = (
 /obj/effect/turf_decal/bordur,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
 /obj/structure/roadblock{
 	dir = 1
 	},
@@ -25013,9 +25000,7 @@
 /turf/open/floor/carpet/green,
 /area/vtm/anarch/basement)
 "pGl" = (
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt{
 	density = 1
 	},
@@ -25193,9 +25178,7 @@
 /obj/effect/turf_decal/asphaltline/alt{
 	dir = 8
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "pKV" = (
@@ -25391,8 +25374,8 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -25401,8 +25384,8 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
@@ -25455,8 +25438,8 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/techshop)
 "pSr" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior)
@@ -25550,8 +25533,8 @@
 /turf/open/floor/plating/bloodshit,
 /area/vtm/interior/wyrm_corrupted)
 "pWy" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -25566,8 +25549,8 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
@@ -25689,8 +25672,8 @@
 /area/vtm/supply)
 "qas" = (
 /obj/effect/landmark/npc_spawn_point,
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -25772,8 +25755,8 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
 "qdp" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
@@ -25825,10 +25808,14 @@
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/chantry)
 "qfs" = (
-/obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur,
-/turf/open/floor/plating/asphalt,
-/area/vtm/unionsquare)
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 8
+	},
+/obj/effect/turf_decal/bordur{
+	dir = 4
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/shop)
 "qfK" = (
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/sidewalk/poor,
@@ -25866,7 +25853,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/clinic)
 "qhD" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 10
 	},
 /turf/open/floor/plating/asphalt,
@@ -25913,7 +25900,9 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
 "qka" = (
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "qke" = (
@@ -26218,8 +26207,8 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower)
 "qsj" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
@@ -26494,7 +26483,7 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/museum)
 "qBd" = (
-/obj/effect/turf_decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner/inverse{
 	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
@@ -26585,12 +26574,9 @@
 /turf/open/floor/plating/circled,
 /area/vtm/interior/endron_facility/restricted)
 "qDE" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
-	},
-/obj/effect/landmark/npcactivity,
-/turf/open/floor/plating/sidewalk,
-/area/vtm/unionsquare)
+/obj/effect/turf_decal/bordur/inverse,
+/turf/closed/wall/vampwall/city,
+/area/vtm/interior/laundromat)
 "qEq" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -26705,7 +26691,7 @@
 	},
 /area/vtm/interior/police)
 "qJM" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 5
 	},
 /turf/open/floor/plating/asphalt,
@@ -27545,9 +27531,7 @@
 /area/vtm/interior/millennium_tower)
 "riE" = (
 /obj/effect/turf_decal/crosswalk,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "riG" = (
@@ -27809,7 +27793,9 @@
 "rpj" = (
 /obj/effect/landmark/npcability,
 /obj/effect/turf_decal/crosswalk,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
 "rpZ" = (
@@ -27971,9 +27957,7 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 1
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "rtv" = (
@@ -28224,7 +28208,7 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/forest)
 "rCm" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 9
 	},
 /turf/open/floor/plating/asphalt,
@@ -28753,13 +28737,6 @@
 /obj/item/clothing/under/vampire/bouncer,
 /turf/open/floor/carpet/vamp/bluesilver,
 /area/vtm/anarch/basement)
-"rRf" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
-	},
-/obj/effect/landmark/npcability,
-/turf/open/floor/plating/sidewalk,
-/area/vtm/unionsquare)
 "rRD" = (
 /obj/structure/closet/crate/bin{
 	pixel_y = 15;
@@ -29609,7 +29586,9 @@
 "stx" = (
 /obj/effect/turf_decal/crosswalk,
 /obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "stC" = (
@@ -30359,9 +30338,7 @@
 /obj/effect/turf_decal/asphaltline/alt{
 	pixel_x = -14
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "sOd" = (
@@ -31146,8 +31123,8 @@
 	dir = 4
 	},
 /obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
@@ -31340,7 +31317,7 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/laundromat)
 "twf" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 10
 	},
 /turf/open/floor/plating/asphalt,
@@ -31412,7 +31389,9 @@
 /area/vtm/interior/laundromat)
 "tyg" = (
 /obj/effect/landmark/npc_spawn_point,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
 "tyq" = (
@@ -31666,9 +31645,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "tEv" = (
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "tEy" = (
@@ -31994,11 +31971,12 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/endron_facility/restricted)
 "tPH" = (
-/obj/effect/turf_decal/bordur{
-	dir = 1
+/obj/structure/lamppost/one{
+	dir = 8
 	},
-/turf/open/floor/plating/asphalt,
-/area/vtm/unionsquare)
+/obj/effect/turf_decal/bordur,
+/turf/open/floor/plating/sidewalk,
+/area/vtm)
 "tPJ" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/turf_decal/siding/white{
@@ -32044,8 +32022,8 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/pacificheights)
@@ -32234,8 +32212,8 @@
 /area/vtm)
 "tVf" = (
 /obj/effect/landmark/npc_spawn_point,
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
@@ -32636,7 +32614,9 @@
 /area/vtm)
 "uhQ" = (
 /obj/structure/ladder/manhole/down,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "uhT" = (
@@ -32938,9 +32918,7 @@
 "usO" = (
 /obj/effect/turf_decal/crosswalk,
 /obj/effect/landmark/npcability,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict/library)
 "usS" = (
@@ -32963,7 +32941,7 @@
 /turf/open/floor/eighties,
 /area/vtm/interior/shop)
 "utO" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 9
 	},
 /turf/open/floor/plating/asphalt,
@@ -33419,9 +33397,6 @@
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/voivodate)
 "uEE" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
-	},
 /obj/structure/railing{
 	dir = 4
 	},
@@ -33553,7 +33528,7 @@
 /turf/closed/wall/vampwall/brick/low/window,
 /area/vtm/supply)
 "uJk" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 6
 	},
 /turf/open/floor/plating/asphalt,
@@ -33733,7 +33708,7 @@
 /turf/open/floor/carpet/vamp/blackgold,
 /area/vtm/interior/millennium_tower/f4)
 "uPM" = (
-/obj/effect/turf_decal/bordur{
+/obj/effect/turf_decal/bordur/inverse{
 	dir = 6
 	},
 /turf/open/floor/plating/asphalt,
@@ -33900,7 +33875,9 @@
 /turf/open/floor/plating/circled,
 /area/vtm/interior/endron_facility/restricted)
 "uVm" = (
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt{
 	density = 1
 	},
@@ -34121,8 +34098,8 @@
 /area/vtm/interior/voivodate)
 "vdK" = (
 /obj/effect/landmark/npc_spawn_point,
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -34273,8 +34250,8 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict)
@@ -34574,9 +34551,7 @@
 /area/vtm/interior/voivodate)
 "vtD" = (
 /obj/effect/landmark/npc_spawn_point,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm)
 "vtI" = (
@@ -34629,8 +34604,8 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm)
@@ -34659,7 +34634,9 @@
 /area/vtm/interior)
 "vuF" = (
 /obj/effect/landmark/npcwall,
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "vuL" = (
@@ -34777,9 +34754,7 @@
 /area/vtm/interior)
 "vyu" = (
 /obj/effect/landmark/npcwall,
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
+/obj/effect/turf_decal/bordur/inverse,
 /turf/open/floor/plating/asphalt,
 /area/vtm/financialdistrict/library)
 "vyB" = (
@@ -34849,7 +34824,7 @@
 /obj/effect/turf_decal/asphaltline/alt{
 	dir = 8
 	},
-/obj/effect/turf_decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner/inverse{
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
@@ -36431,8 +36406,8 @@
 /area/vtm/interior/voivodate)
 "wEK" = (
 /obj/effect/landmark/npcwall,
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/interior)
@@ -36901,8 +36876,8 @@
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
 "wRx" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
@@ -37262,8 +37237,8 @@
 /obj/effect/turf_decal/crosswalk{
 	dir = 4
 	},
-/obj/effect/turf_decal/bordur{
-	dir = 4
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
@@ -37614,7 +37589,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/sewer/nosferatu_town)
 "xlj" = (
-/obj/effect/turf_decal/bordur/corner{
+/obj/effect/turf_decal/bordur/corner/inverse{
 	dir = 4
 	},
 /turf/open/floor/plating/asphalt,
@@ -37761,7 +37736,9 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior)
 "xpT" = (
-/obj/effect/turf_decal/bordur,
+/obj/effect/turf_decal/bordur/inverse{
+	dir = 1
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/unionsquare)
 "xqa" = (
@@ -51840,8 +51817,8 @@ trU
 trU
 trU
 fwZ
-dIU
-dIU
+eoc
+eoc
 vpu
 xJb
 xJb
@@ -51947,8 +51924,8 @@ trU
 trU
 trU
 fwZ
-qRU
-qRU
+puy
+puy
 vpu
 fLp
 fLp
@@ -52142,8 +52119,8 @@ evn
 evn
 evn
 nlL
-gCt
-gCt
+eoc
+eoc
 anT
 anT
 fOy
@@ -52151,7 +52128,7 @@ anT
 anT
 rjk
 jwa
-jwa
+qfs
 jwa
 jwa
 aFq
@@ -52566,7 +52543,7 @@ puy
 dJh
 puy
 puy
-tPH
+eOr
 aSK
 xpT
 puy
@@ -52673,7 +52650,7 @@ puy
 puy
 fJD
 puy
-tPH
+eOr
 aSK
 xpT
 puy
@@ -52780,7 +52757,7 @@ puy
 puy
 puy
 puy
-tPH
+eOr
 aSK
 xpT
 puy
@@ -52797,7 +52774,7 @@ puy
 puy
 puy
 puy
-tPH
+eOr
 aCs
 xss
 aSK
@@ -53084,7 +53061,7 @@ aSK
 aSK
 aSK
 rtA
-aSK
+jKt
 jKt
 jKt
 jKt
@@ -53436,7 +53413,7 @@ cFs
 idA
 puy
 puy
-tPH
+eOr
 cHG
 xss
 aSK
@@ -53451,8 +53428,8 @@ puy
 puy
 puy
 puy
-rRf
-qDE
+jFS
+iVt
 ezz
 "}
 (30,1,2) = {"
@@ -53538,7 +53515,7 @@ mqL
 mqL
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -53645,7 +53622,7 @@ eTH
 rVO
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -53747,12 +53724,12 @@ hmU
 hmU
 hmU
 hmU
-hmU
+qDE
 hmU
 hmU
 arz
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -53859,7 +53836,7 @@ gVP
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -53966,7 +53943,7 @@ gVP
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54073,7 +54050,7 @@ gVP
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54180,7 +54157,7 @@ uhb
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54287,7 +54264,7 @@ hmU
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54394,7 +54371,7 @@ vbw
 hmU
 cUW
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54501,7 +54478,7 @@ wPl
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54608,7 +54585,7 @@ hyp
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54715,7 +54692,7 @@ vbw
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54822,7 +54799,7 @@ sqX
 hmU
 mqL
 mqL
-tPH
+eOr
 aSK
 xpT
 puy
@@ -54929,7 +54906,7 @@ hmU
 hmU
 iIT
 iIT
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55036,7 +55013,7 @@ dIU
 dIU
 dIU
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55143,7 +55120,7 @@ dIU
 dIU
 hsF
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55250,7 +55227,7 @@ eTc
 wty
 dIU
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55357,7 +55334,7 @@ eTc
 mzI
 dIU
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55464,7 +55441,7 @@ eTc
 wty
 dIU
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55571,7 +55548,7 @@ eTc
 fUX
 dIU
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55678,7 +55655,7 @@ eTc
 umf
 dIU
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55785,7 +55762,7 @@ eTc
 dIU
 dIU
 dIU
-tPH
+eOr
 aSK
 uhQ
 puy
@@ -55892,7 +55869,7 @@ eTc
 wty
 dIU
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -55999,7 +55976,7 @@ eTc
 fUX
 hpw
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -56106,7 +56083,7 @@ eTc
 dIU
 dIU
 gkr
-tPH
+eOr
 aSK
 xpT
 puy
@@ -56213,7 +56190,7 @@ eTc
 dIU
 bhh
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -56320,7 +56297,7 @@ eTc
 dIU
 ezz
 dIU
-tPH
+eOr
 aSK
 xpT
 puy
@@ -56427,7 +56404,7 @@ eTc
 dIU
 dIU
 dIU
-tPH
+eOr
 aSK
 xpT
 lls
@@ -56534,7 +56511,7 @@ eTc
 dIU
 dIU
 wPw
-tPH
+eOr
 aSK
 xpT
 wPw
@@ -56609,7 +56586,7 @@ vFg
 bmT
 wdp
 evz
-hMr
+jaN
 qny
 cFs
 cFs
@@ -56643,7 +56620,7 @@ dIU
 iQs
 eOr
 aSK
-qfs
+xpT
 iQs
 hpw
 dIU
@@ -57748,8 +57725,8 @@ pWy
 pWy
 pWy
 pWy
-fEZ
-bTc
+hYA
+hYA
 pWy
 pWy
 pWy
@@ -57854,10 +57831,10 @@ xmP
 nMG
 qmj
 qmj
-qmj
-tEv
-qka
-jrM
+qlp
+hYA
+hYA
+vkQ
 jrM
 jrM
 qmj
@@ -57961,8 +57938,8 @@ qmj
 qmj
 qmj
 aMe
-dDy
-tEv
+tPH
+hYA
 hYA
 hYA
 kSu
@@ -58068,8 +58045,8 @@ qmj
 qmj
 qmj
 qmj
-qmj
-tEv
+qlp
+hYA
 hYA
 hYA
 kSu
@@ -60070,7 +60047,7 @@ pSr
 pSr
 pSr
 pSr
-qdp
+aYC
 pxB
 igS
 siC
@@ -60177,8 +60154,8 @@ eib
 eib
 eib
 eib
-mSl
-eoc
+hQk
+aSa
 igS
 siC
 xdw
@@ -60285,7 +60262,7 @@ cFo
 cFo
 cFo
 eJP
-jaN
+pxB
 igS
 siC
 abN
@@ -60377,7 +60354,7 @@ cQA
 oOf
 kmG
 cQA
-aYC
+eYF
 jhF
 jhF
 jhF

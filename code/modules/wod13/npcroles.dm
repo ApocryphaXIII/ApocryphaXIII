@@ -871,6 +871,11 @@
 	speed = -0.8
 	see_in_dark = 10
 
+/// TFN ADDITION - Protean Rework #718
+/mob/living/simple_animal/hostile/beastmaster/rat/flying/vampire
+	melee_damage_type = CLONE
+	damage_coeff = list(BRUTE = 0.5, BURN = 2, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 0)
+
 /mob/living/simple_animal/hostile/beastmaster/rat/flying/UnarmedAttack(atom/A)
 	. = ..()
 	if(ishuman(A))

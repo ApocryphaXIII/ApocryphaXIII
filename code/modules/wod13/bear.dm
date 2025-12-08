@@ -4,6 +4,7 @@
 	icon = 'code/modules/wod13/64x64.dmi'
 	emote_hear = list("roars.")
 	emote_see = list("shakes its head.", "stomps.")
+	attack_sound = 'code/modules/wod13/sounds/werewolf_bite.ogg'
 	butcher_results = list(/obj/item/food/meat/slab = 7)
 	response_help_continuous = "pokes"
 	response_help_simple = "poke"
@@ -30,3 +31,10 @@
 	melee_damage_upper = 40 //Good luck lol
 
 	pixel_x = -16
+
+/// TFN ADDITION - Protean Rework #718
+
+/mob/living/simple_animal/hostile/bear/wod13/vampire
+	bloodquality = BLOOD_QUALITY_HIGH
+	melee_damage_type = CLONE
+	damage_coeff = list(BRUTE = 0.5, BURN = 2, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 0)

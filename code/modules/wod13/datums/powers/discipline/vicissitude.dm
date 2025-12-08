@@ -601,10 +601,22 @@
 
 	violates_masquerade = TRUE
 
-	duration_length = 20 SECONDS
 	cooldown_length = 20 SECONDS
 
 	var/obj/effect/proc_holder/spell/targeted/shapeshift/tzimisce/horrid_form_shapeshift
+
+/// TFN EDIT - Protean Rework #718 - Also handles transformations here
+/datum/discipline_power/vicissitude/horrid_form/pre_activation_checks()
+	. = ..()
+	if(HAS_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING))
+		to_chat(owner, span_warning("YOU ALREADY ARE TRANSFORMING!"))
+		return FALSE
+	else
+		ADD_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING, DISCIPLINE_TRAIT)
+	to_chat(owner, span_warning("You begin transforming..."))
+	if (do_after(owner, 6 SECONDS, timed_action_flags = (IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE | IGNORE_HELD_ITEM )))
+		REMOVE_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING, DISCIPLINE_TRAIT)
+		return TRUE
 
 /datum/discipline_power/vicissitude/horrid_form/activate()
 	. = ..()
@@ -612,12 +624,6 @@
 		horrid_form_shapeshift = new(owner)
 
 	horrid_form_shapeshift.Shapeshift(owner)
-
-/datum/discipline_power/vicissitude/horrid_form/deactivate()
-	. = ..()
-	horrid_form_shapeshift.Restore(horrid_form_shapeshift.myshape)
-	owner.Stun(2 SECONDS)
-	owner.do_jitter_animation(50)
 
 /datum/discipline_power/vicissitude/horrid_form/post_gain()
 	. = ..()
@@ -635,11 +641,21 @@
 
 	violates_masquerade = TRUE
 
-	duration_length = 20 SECONDS
 	cooldown_length = 20 SECONDS
 
 	var/obj/effect/proc_holder/spell/targeted/shapeshift/bloodcrawler/bloodform_shapeshift
 
+/datum/discipline_power/vicissitude/bloodform/pre_activation_checks()
+	. = ..()
+	if(HAS_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING))
+		to_chat(owner, span_warning("YOU ALREADY ARE TRANSFORMING!"))
+		return FALSE
+	else
+		ADD_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING, DISCIPLINE_TRAIT)
+	to_chat(owner, span_warning("You begin transforming..."))
+	if (do_after(owner, 6 SECONDS, timed_action_flags = (IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE | IGNORE_HELD_ITEM )))
+		REMOVE_TRAIT(owner, TRAIT_CURRENTLY_TRANSFORMING, DISCIPLINE_TRAIT)
+		return TRUE
 
 /datum/discipline_power/vicissitude/bloodform/activate()
 	. = ..()
@@ -647,14 +663,6 @@
 		bloodform_shapeshift = new(owner)
 
 	bloodform_shapeshift.Shapeshift(owner)
-
-/datum/discipline_power/vicissitude/bloodform/deactivate()
-	. = ..()
-	var/mob/living/simple_animal/hostile/bloodcrawler/bloodform = bloodform_shapeshift.myshape
-	owner.bloodpool = min(owner.bloodpool + round(bloodform.collected_blood / 2), owner.maxbloodpool)
-	bloodform_shapeshift.Restore(bloodform_shapeshift.myshape)
-	owner.Stun(1.5 SECONDS)
-	owner.do_jitter_animation(30)
 
 /datum/discipline_power/vicissitude/bloodform/post_gain()
 	. = ..()

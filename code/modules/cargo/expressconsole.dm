@@ -114,11 +114,6 @@
 		))
 
 /obj/machinery/computer/cargo/express/ui_interact(mob/living/user, datum/tgui/ui)
-	if(iskindred(user))
-		var/mob/living/carbon/human/H = user
-		if(H.clan)
-			if(H.clan.name == CLAN_LASOMBRA)
-				return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "CargoExpress", name)
@@ -357,3 +352,14 @@
 							update_appearance()
 							CHECK_TICK
 */
+
+/obj/machinery/computer/cargo/express/attack_hand(mob/living/user)
+	if(iskindred(user)) // APOC EDIT START
+		var/mob/living/carbon/human/H = user
+		if(H.clan)
+			if(H.clan.name == CLAN_LASOMBRA)
+				to_chat(user, span_warning("You start interacting with [src]. Confounded machine..."))
+				if(!do_after(user, 5 SECONDS, src))
+					to_chat(user, span_warning("Bah! You didn't need the machine anyways."))
+					return // APOC EDIT END
+	. = ..()

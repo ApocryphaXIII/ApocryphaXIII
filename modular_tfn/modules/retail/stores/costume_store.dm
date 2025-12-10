@@ -71,4 +71,5 @@
 		new /datum/data/vending_product("two-tone glasses", /obj/item/clothing/glasses/vampire/threedee, 15),
 		new /datum/data/vending_product("panama hat", /obj/item/clothing/head/vampire/panama, 15),
 		new /datum/data/vending_product("authentic maid dress", /obj/item/clothing/under/vampire/maid, 60),
+		new /datum/data/vending_product("dracula coat", /obj/item/clothing/suit/dracula, 60),
 	)

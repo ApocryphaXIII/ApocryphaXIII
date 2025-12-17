@@ -43,7 +43,10 @@
 		var/mob/living/carbon/human/H = user
 		if(H.clan)
 			if(H.clan.name == CLAN_LASOMBRA)
-				return
+				to_chat(user, span_warning("You start interacting with [src]. Confounded machine...")) // APOC EDIT START
+				if(!do_after(user, 5 SECONDS, src))
+					to_chat(user, span_warning("Bah! You didn't need the machine anyways."))
+					return // APOC EDIT END
 	..()
 	on = !on
 	playsound(user, on ? 'sound/weapons/magin.ogg' : 'sound/weapons/magout.ogg', 40, TRUE)

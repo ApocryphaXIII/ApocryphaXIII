@@ -327,7 +327,6 @@ LOW_WALL_HELPER(vampwall/wood)
 	mouse_opacity = 0
 
 /obj/effect/turf_decal/asphalt/Initialize()
-	..()
 	icon_state = "decal[rand(1, 24)]"
 	update_appearance()
 	if(GLOB.winter)
@@ -335,6 +334,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				alpha = 25
+	. = ..()
 
 /obj/effect/decal/snow_overlay
 	name = "snow"
@@ -354,7 +354,6 @@ LOW_WALL_HELPER(vampwall/wood)
 	icon_state = "line_alt"
 
 /obj/effect/turf_decal/asphaltline/Initialize()
-	..()
 	icon_state = "[initial(icon_state)][rand(1, 3)]"
 	update_appearance()
 	if(GLOB.winter)
@@ -362,6 +361,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				icon_state = "[initial(icon_state)][rand(1, 3)]-snow"
+	. = ..()
 
 /obj/effect/turf_decal/crosswalk
 	name = "asphalt"
@@ -370,7 +370,6 @@ LOW_WALL_HELPER(vampwall/wood)
 	mouse_opacity = 0
 
 /obj/effect/turf_decal/crosswalk/Initialize()
-	..()
 	icon_state = "crosswalk[rand(1, 3)]"
 	update_appearance()
 	if(GLOB.winter)
@@ -378,6 +377,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				icon_state = "crosswalk[rand(1, 3)]-snow"
+	. = ..()
 
 /turf/open/floor/plating/asphalt
 	gender = PLURAL
@@ -525,12 +525,12 @@ LOW_WALL_HELPER(vampwall/wood)
 	mouse_opacity = 0
 
 /obj/effect/turf_decal/bordur/Initialize()
-	. = ..()
 	if(GLOB.winter)
 		if(istype(get_area(src), /area/vtm))
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
+	. = ..()
 
 /obj/effect/turf_decal/bordur/corner
 	icon_state = "border_corner"

@@ -34,12 +34,15 @@
 			"Linkage": "Cross"
 		},
 		{
+			"Up": 1,
 			"Down": -1,
 			"Baseturf": "/turf/open/floor/plating/vampdirt",
 			"Linkage": "Cross"
 		},
 		{
-			"Baseturf": "/turf/open/floor/plating/vampdirt"
+			"Down": -1,
+			"Baseturf": "/turf/open/floor/plating/vampdirt",
+			"Linkage": "Cross"
 		}
 	]
 }

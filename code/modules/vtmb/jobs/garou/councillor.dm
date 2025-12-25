@@ -33,6 +33,11 @@
 
 	v_duty = "Veterans of the Fera Council with the highest esteem, your word within the " + SEPT_NAME + " is law. Make sure the Litany is upheld, and that your caern does not fall prey to the Wyrm."
 	experience_addition = 25
+	alt_titles = list(
+		"Master of the Rite",
+		"Mistress of the Rite",
+		"Ambassador"
+		)
 
 /datum/outfit/job/councillor
 	name = "Councillor"

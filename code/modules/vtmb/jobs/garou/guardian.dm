@@ -8,8 +8,8 @@
 	allowed_species = list("Werewolf")
 	allowed_tribes = TRIBE_GAIA
 
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 5
+	spawn_positions = 5
 	supervisors = "the Litany and the Council" // APOC EDIT CHANGE
 
 	req_admin_notify = 1
@@ -32,6 +32,15 @@
 	known_contacts = null
 
 	v_duty = "You are the bottom of the Sept's pecking order, but also the frontline offense and defense, serving directly under the Warder and Wyrmfoe to ensure the caern's safety and well-being."
+
+	alt_titles = list(
+		"Caller of the Wyld", // Theurge
+		"Gatekeeper", // Theurge
+		"Keeper of the Land",
+		"Master of the Challenge",
+		"Master of the Howl",
+		"Talesinger" // Galliard
+	)
 
 /datum/outfit/job/guardian
 	name = "City Sept Guardian"

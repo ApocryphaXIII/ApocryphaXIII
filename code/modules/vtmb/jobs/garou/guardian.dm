@@ -33,15 +33,6 @@
 
 	v_duty = "You are the bottom of the Sept's pecking order, but also the frontline offense and defense, serving directly under the Warder and Wyrmfoe to ensure the caern's safety and well-being."
 
-	alt_titles = list(
-		"Caller of the Wyld", // Theurge
-		"Gatekeeper", // Theurge
-		"Keeper of the Land",
-		"Master of the Challenge",
-		"Master of the Howl",
-		"Talesinger" // Galliard
-	)
-
 /datum/outfit/job/guardian
 	name = "City Sept Guardian"
 	jobtype = /datum/job/vamp/guardian

@@ -3553,6 +3553,7 @@
 #include "code\modules\vtmb\jobs\bloodlines\salubri.dm"
 #include "code\modules\vtmb\jobs\bloodlines\trujah.dm"
 #include "code\modules\vtmb\jobs\garou\councillor.dm"
+#include "code\modules\vtmb\jobs\garou\guardian.dm"
 #include "code\modules\vtmb\jobs\garou\poisonshore.dm"
 #include "code\modules\vtmb\jobs\garou\warder.dm"
 #include "code\modules\vtmb\jobs\garou\wyrmfoe.dm"

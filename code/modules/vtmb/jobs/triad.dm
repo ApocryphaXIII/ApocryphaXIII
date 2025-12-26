@@ -1,5 +1,5 @@
 /datum/job/vamp/triad_soldier
-	title = "Ocean 76 Ganger"
+	title = "Ocean 76er"
 	department_head = list("the Ocean 76 gang bosses")
 	faction = "Vampire"
 	total_positions = 6

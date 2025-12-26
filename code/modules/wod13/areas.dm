@@ -706,6 +706,121 @@
 	yang_chi = 0
 	yin_chi = 2
 
+// SpecialFran Areas // APOC EDIT ADD START
+
+/area/vtm/interior/shop/gummaguts
+	name = "Gummaguts"
+
+/area/vtm/interior/shop/bubway
+	name = "Bubway"
+
+/area/vtm/interior/shop/bacotell
+	name = "Baco Tell"
+
+
+/area/vtm/interior/shop/ishu
+	name = "Hot Ishu"
+
+/area/vtm/interior/shop/newspaper
+	name = "Pacific Papers"
+
+/area/vtm/interior/shop/grocery
+	name = "Grocery Store"
+
+/area/vtm/interior/shop/gasstation
+	name = "Gas Station"
+
+/area/vtm/interior/shop/pawnshop
+	name = "Pawn Shop"
+
+/area/vtm/interior/shop/gunshop
+	name = "Gun Store"
+
+//Specialfran Mall
+
+/area/vtm/interior/mallunderground
+	name = "Underground Mall"
+	icon_state = "shop"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/mallbank
+	name = "Mall Bank"
+	icon_state = "shop"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/mallarcade
+	name = "Mall Arcade"
+	icon_state = "shop"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/mallclothes
+	name = "Mall Clothing Shop"
+	icon_state = "shop"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+//Workplaces
+
+/area/vtm/interior/vet
+	name = "Vet"
+	icon_state = "clinic"
+	music_index = MUSIC_SAFE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/pizza
+	name = "Pizza Store"
+	icon_state = "mansion"
+	music_index = MUSIC_SAFE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/smoke
+	name = "Smoke Shop"
+	icon_state = "shop"
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/coffee
+	name = "Coffee Shop"
+	icon_state = "shop"
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/radio
+	name = "Nightwolf Radio"
+	icon_state = "shop"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/tattoo
+	name = "Tattoo Parlor"
+	icon_state = "shop"
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/gang
+	name = "76er Bar"
+	icon_state = "shop"
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/gangbasement
+	name = "76er Basement"
+	icon_state = "shop"
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+//APOC EDIT ADD END
+
 #undef VERY_HIGH_WALL_RATING
 #undef HIGH_WALL_RATING
 #undef LOW_WALL_RATING

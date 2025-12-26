@@ -277,6 +277,9 @@ Used by the AI doomsday and the self-destruct nuke.
 
 	if(config.minetype == "lavaland")
 		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm")
+		LoadGroup(FailedZs, "Forest", "map_files/generic", "apoc_forest.dmm")
+		LoadGroup(FailedZs, "Neighborhood", "map_files/generic", "apoc_residential.dmm")
+		LoadGroup(FailedZs, "Facility", "map_files/generic", "apoc_endron_ruin.dmm")
 	else if (!isnull(config.minetype) && config.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 #endif

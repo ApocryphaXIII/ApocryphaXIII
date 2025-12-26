@@ -588,6 +588,10 @@
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/financialdistrict)
+"auM" = (
+/obj/structure/lamppost/four,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/financialdistrict/library)
 "auS" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/parquetry/old,
@@ -11848,15 +11852,6 @@
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
-"hLG" = (
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
-/obj/structure/lamppost/sidewalk/chinese{
-	dir = 8
-	},
-/turf/open/floor/plating/sidewalkalt,
-/area/vtm/unionsquare)
 "hLI" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/parquetry/old,
@@ -11971,13 +11966,6 @@
 /obj/structure/table,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/sewer)
-"hQg" = (
-/obj/effect/turf_decal/bordur{
-	dir = 1
-	},
-/mob/living/carbon/human/npc/hobo,
-/turf/open/floor/plating/sidewalkalt,
-/area/vtm/unionsquare)
 "hQh" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 8
@@ -51785,7 +51773,7 @@ mqL
 mqL
 mqL
 mqL
-hQg
+rkl
 mqL
 mqL
 kaA
@@ -51892,7 +51880,7 @@ mqL
 mqL
 mqL
 mqL
-hLG
+rVO
 gzL
 mqL
 mqL
@@ -56771,7 +56759,7 @@ hYA
 kSu
 qka
 czf
-rZg
+nts
 rZg
 jfl
 hmb
@@ -56878,7 +56866,7 @@ hYA
 hYA
 qka
 qmj
-nts
+auM
 rZg
 jfl
 hmb

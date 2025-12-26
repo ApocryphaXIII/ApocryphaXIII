@@ -16,6 +16,7 @@
 	display_order = JOB_DISPLAY_ORDER_TRIAD_GANGSTER
 	exp_type_department = EXP_TYPE_GANG
 
+	allowed_species = SPECIES_ALL
 	minimal_generation = 13
 
 	duty = "This city should belong to those who live in it. Your family in the 76 got your back, you should have theirs."

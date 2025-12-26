@@ -42,5 +42,48 @@
 			"Baseturf": "/turf/open/openspace",
 			"Linkage": "Cross"
 		}
-	]
+	],
+		"job_changes": {
+		"Taxi Driver": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"Cabaret Worker": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"Church Curator": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"Church Caretaker": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"Counselor": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"Barkeep": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"Antique Worker": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"Club Worker": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"District Attorney": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		},
+		"Emergency Dispatcher": {
+			"spawn_positions": 0,
+			"total_positions": 0
+		}
+	},
+	"max_npcs": 120
 }

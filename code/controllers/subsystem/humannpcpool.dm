@@ -4,10 +4,9 @@ SUBSYSTEM_DEF(humannpcpool)
 	flags = SS_POST_FIRE_TIMING|SS_NO_INIT|SS_BACKGROUND
 	priority = FIRE_PRIORITY_VERYLOW
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
-	wait = 30
+	wait = 0.3 SECONDS
 
 	var/list/currentrun = list()
-	var/npc_max = 220
 
 /datum/controller/subsystem/humannpcpool/stat_entry(msg)
 	var/list/activelist = GLOB.npc_list
@@ -40,7 +39,7 @@ SUBSYSTEM_DEF(humannpcpool)
 		NPC.handle_automated_movement()
 
 /datum/controller/subsystem/humannpcpool/proc/npclost()
-	while(length(GLOB.alive_npc_list) < npc_max)
+	while(length(GLOB.alive_npc_list) < SSmapping.config.max_npcs)
 		var/atom/kal
 		if(length(GLOB.npc_spawn_points) > 0)
 			kal = pick(GLOB.npc_spawn_points)

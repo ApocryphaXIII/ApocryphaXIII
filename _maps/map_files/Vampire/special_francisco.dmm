@@ -23770,10 +23770,6 @@
 	},
 /turf/open/floor/plating/rough,
 /area/vtm/sewer)
-"oyr" = (
-/obj/structure/lattice/grate,
-/turf/closed/wall/vampwall/rust,
-/area/vtm/interior/voivodate/cave)
 "oys" = (
 /obj/effect/decal/wallpaper/papers/two,
 /turf/closed/wall/vampwall/brick,
@@ -36037,11 +36033,6 @@
 "vJC" = (
 /obj/structure/dresser,
 /turf/open/floor/plating/sidewalk/poor,
-/area/vtm/interior/ghetto)
-"vJN" = (
-/obj/structure/table,
-/obj/structure/table,
-/turf/closed/wall/vampwall/rich/low,
 /area/vtm/interior/ghetto)
 "vKd" = (
 /obj/machinery/shower{
@@ -81821,7 +81812,7 @@ awi
 awi
 fcU
 vQh
-vJN
+huR
 kuE
 dly
 mRu
@@ -93703,7 +93694,7 @@ olZ
 olZ
 jQp
 tjQ
-oyr
+olZ
 olZ
 vIj
 vIj

@@ -45,7 +45,13 @@
 	key = "howl"
 	key_third_person = "howls"
 	message = "howls!"
+	message_param = "howls for %t!"
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
+
+/datum/emote/living/howl/run_emote(mob/user, params , type_override, intentional)
+	. = ..()
+	if(isgarou(user) || iswerewolf(user))
+		playsound(get_turf(user), pick('code/modules/wod13/sounds/awo1.ogg', 'code/modules/wod13/sounds/awo2.ogg'), 100, FALSE)
 
 /datum/emote/living/snarl // TFN EDIT START - Small Emote Expansion #808 - Does The Thing
 	key = "snarl"
@@ -59,7 +65,6 @@
 	key_third_person = "barks"
 	message = "barks."
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
-
 
 /datum/emote/living/whine
 	key = "whine"

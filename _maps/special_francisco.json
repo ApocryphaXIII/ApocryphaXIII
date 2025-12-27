@@ -43,44 +43,44 @@
 			"Linkage": "Cross"
 		}
 	],
-		"job_changes": {
-		"Taxi Driver": {
+	"job_changes": {
+		"taxi": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Cabaret Worker": {
+		"daughterof": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Church Curator": {
+		"kiasyd": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Church Caretaker": {
+		"lasombra": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Counselor": {
+		"baali": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Barkeep": {
+		"barkeep": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Antique Worker": {
+		"trujah": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Club Worker": {
+		"strip": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"District Attorney": {
+		"districtattorney": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Emergency Dispatcher": {
+		"dispatcher": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		}

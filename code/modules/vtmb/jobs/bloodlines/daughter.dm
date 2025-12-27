@@ -1,4 +1,4 @@
-/datum/job/vamp/daughterof
+/*/datum/job/vamp/daughterof
 	title = "Cabaret Worker"
 	faction = "Vampire"
 	total_positions = 10
@@ -52,7 +52,7 @@
 		if(H.gender == MALE)
 			shoes = /obj/item/clothing/shoes/vampire
 		else
-			shoes = /obj/item/clothing/shoes/vampire/heels
+			shoes = /obj/item/clothing/shoes/vampire/heels*/
 
 /obj/effect/landmark/start/daughterof
 	name = "Cabaret Worker"

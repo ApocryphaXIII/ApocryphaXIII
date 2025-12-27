@@ -3,6 +3,9 @@
 
 /datum/job/vamp/citizen
 	alt_titles = list(
+		"Barista",
+		"Counselor",
+		"Veterinarian",
 		"Private Investigator",
 		"Private Security",
 		"Tourist",
@@ -18,6 +21,7 @@
 
 /datum/job/vamp/vdoctor
 	alt_titles = list(
+		"Mortuary Attendant",
 		"Medical Student",
 		"Intern",
 		"Nurse",
@@ -49,6 +53,8 @@
 		"Reverend",
 		"Preacher",
 		"Rabbi",
+		"Church Curator",
+		"Church Caretaker"
 	)
 
 /datum/job/vamp/strip
@@ -56,7 +62,8 @@
 		"Stripper",
 		"Club Bouncer",
 		"Club Bartender",
-		"Club Attendant"
+		"Club Attendant",
+		"Cabaret Worker"
 	)
 
 /datum/job/vamp/towerwork

@@ -1,4 +1,4 @@
-/datum/job/vamp/nagaraja
+/*/datum/job/vamp/nagaraja
 	title = "Mortuary Attendant"
 	faction = "Vampire"
 	total_positions = 6
@@ -51,7 +51,7 @@
 		if(H.gender == MALE)
 			shoes = /obj/item/clothing/shoes/vampire
 		else
-			shoes = /obj/item/clothing/shoes/vampire/heels
+			shoes = /obj/item/clothing/shoes/vampire/heels*/
 
 /obj/effect/landmark/start/nagaraja
 	name = "Mortuary Attendant"

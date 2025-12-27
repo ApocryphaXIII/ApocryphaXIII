@@ -31,19 +31,12 @@ GLOBAL_LIST_INIT(anarch_positions, list(
 	"Emissary",
 	"Sweeper",
 	"Bruiser",
-	"Barkeep"
+	"Hireling"
 	))
 
 GLOBAL_LIST_INIT(citizen_positions, list(
 	"Citizen",
-	"Barista",
-	"Mortuary Attendant",
-	"Counselor",
-	"Cabaret Worker",
-	"Church Curator",
-	"Church Caretaker",
-	"Veterinarian",
-	"Antique Worker"
+	"Club Worker",
 ))
 
 GLOBAL_LIST_INIT(police_positions, list(
@@ -59,15 +52,13 @@ GLOBAL_LIST_INIT(national_security_positions, list(
 ))
 
 GLOBAL_LIST_INIT(services_positions, list(
-	"Graveyard Keeper",
-	"Club Worker",
 	"Street Janitor",
 	"Taxi Driver"
 ))
 
 GLOBAL_LIST_INIT(clinic_positions, list(
 //Apoc Edit	"Clinic Director",
-	"Doctor"
+	"Doctor",
 ))
 
 GLOBAL_LIST_INIT(neutral_positions, list())
@@ -104,7 +95,7 @@ GLOBAL_LIST_INIT(church_positions, list(
 ))
 
 GLOBAL_LIST_INIT(gang_positions, list(
-	"Triad Soldier",
+	"Ocean 76er",
 ))
 
 GLOBAL_LIST_INIT(sept_positions, list(
@@ -143,7 +134,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_SERVICES = list("jobs" = services_positions, "color" = "#e8e6e6"),
 	EXP_TYPE_CHURCH = list("jobs" = church_positions, "color" = " #fff700"),
 	EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#1d22cc"),
-	EXP_TYPE_NATIONAL_SECURITY = list("jobs" = national_security_positions, "color" = " #000491"), //APOC EDIT
+	EXP_TYPE_NATIONAL_SECURITY = list("jobs" = national_security_positions, "color" = "#000491"), //APOC EDIT
 	EXP_TYPE_GANG = list("jobs" = gang_positions, "color" = "#837524"),
 	EXP_TYPE_VOIVODATE = list("jobs" = voivodate_positions, "color" = "#fa0207"),
 	EXP_TYPE_SEPT = list("jobs" = sept_positions, "color" = "#69e430"),

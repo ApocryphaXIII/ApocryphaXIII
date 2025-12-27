@@ -28,7 +28,7 @@
 		"Bouncer",
 		"Emissary",
 		"Sweeper",
-		"Barkeep",
+		"Hireling",
 		"Voivode"
 	)
 

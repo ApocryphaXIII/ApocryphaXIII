@@ -1,4 +1,4 @@
-/datum/job/vamp/kiasyd
+/*/datum/job/vamp/kiasyd
 	title = "Church Curator"
 	faction = "Vampire"
 	total_positions = 4
@@ -51,8 +51,8 @@
 		if(H.gender == MALE)
 			shoes = /obj/item/clothing/shoes/vampire
 		else
-			shoes = /obj/item/clothing/shoes/vampire/heels
+			shoes = /obj/item/clothing/shoes/vampire/heels*/
 
 /obj/effect/landmark/start/kiasyd
-	name = "Museum Groundskeeper"
+	name = "Church Curator"
 	icon_state = "Assistant"

@@ -51,7 +51,7 @@
 //This is a bandaid job until the real jobenning with the remap. Remove when that happens.
 
 /datum/job/vamp/bruiser/barkeep
-	title = "Barkeep"
+	title = "Hireling"
 	department_head = list("Baron")
 	total_positions = 2
 	spawn_positions = 2
@@ -59,9 +59,29 @@
 	display_order = JOB_DISPLAY_ORDER_BARKEEP
 
 	v_duty = "You are a human within the Anarchs. If you aren't a ghoul you'll likely rouse suspicion if you don't have connections or protection. Keep your head down, don't rat on your community."
+	minimal_masquerade = 2
+	experience_addition = 15
+	department_head = list("Baron")
+	faction = "Vampire"
+	total_positions = 7
+	spawn_positions = 7
+	supervisors = "the Baron"
+	selection_color = "#434343"
+
+	outfit = /datum/outfit/job/bruiser
+
+	access = list(ACCESS_LAWYER, ACCESS_COURT, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_LAWYER, ACCESS_COURT, ACCESS_SEC_DOORS)
+	paycheck = PAYCHECK_EASY
+	paycheck_department = ACCOUNT_SRV
+
+	mind_traits = list(TRAIT_DONUT_LOVER)
+	liver_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
+
+	known_contacts = list("Baron","Bruiser","Emissary","Sweeper")
 
 /datum/outfit/job/bruiser/barkeep
-	name = "Barkeep"
+	name = "Hireling"
 	jobtype = /datum/job/vamp/bruiser/barkeep
 
 	ears = /obj/item/p25radio
@@ -76,7 +96,7 @@
 
 
 /obj/effect/landmark/start/barkeep
-	name = "Barkeep"
+	name = "Hireling"
 	icon_state = "Bouncer"
 
 //Apoc addition end

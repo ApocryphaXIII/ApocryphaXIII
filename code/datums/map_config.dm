@@ -36,6 +36,8 @@
 	/// List of additional areas that count as a part of the library
 	var/library_areas = list()
 
+	var/max_npcs = 220
+
 /proc/load_map_config(filename = "data/next_map.json", default_to_box, delete_after, error_if_missing = TRUE)
 	var/datum/map_config/config = new
 	if (default_to_box)
@@ -146,7 +148,7 @@
 			log_world("map_config \"job_changes\" field is missing or invalid!")
 			return
 		job_changes = json["job_changes"]
-	
+
 	if("library_areas" in json)
 		if(!islist(json["library_areas"]))
 			log_world("map_config \"library_areas\" field is missing or invalid!")
@@ -157,6 +159,11 @@
 				stack_trace("Invalid path in mapping config for additional library areas: \[[path_as_text]\]")
 				continue
 			library_areas += path
+
+	// DARKPACK EDIT ADD START - NPC
+	if ("max_npcs" in json)
+		max_npcs = json["max_npcs"]
+	// DARKPACK EDIT ADD END
 
 	defaulted = FALSE
 	return TRUE

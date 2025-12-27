@@ -9,6 +9,8 @@
 	}	\
 	/turf/closed/wall/##wall_type/low/window {			\
 		window = /obj/structure/window/fulltile;		\
+		WHEN_MAP(icon = 'code/modules/wod13/lowwalls.dmi'); \
+		WHEN_MAP(icon_state = "window_spawner"); 		\
 	}	\
 	/turf/closed/wall/##wall_type/low/window/reinforced { \
 		window = /obj/structure/window/reinforced/fulltile; \
@@ -327,7 +329,6 @@ LOW_WALL_HELPER(vampwall/wood)
 	mouse_opacity = 0
 
 /obj/effect/turf_decal/asphalt/Initialize()
-	..()
 	icon_state = "decal[rand(1, 24)]"
 	update_appearance()
 	if(GLOB.winter)
@@ -335,6 +336,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				alpha = 25
+	. = ..()
 
 /obj/effect/decal/snow_overlay
 	name = "snow"
@@ -354,7 +356,6 @@ LOW_WALL_HELPER(vampwall/wood)
 	icon_state = "line_alt"
 
 /obj/effect/turf_decal/asphaltline/Initialize()
-	..()
 	icon_state = "[initial(icon_state)][rand(1, 3)]"
 	update_appearance()
 	if(GLOB.winter)
@@ -362,6 +363,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				icon_state = "[initial(icon_state)][rand(1, 3)]-snow"
+	. = ..()
 
 /obj/effect/turf_decal/crosswalk
 	name = "asphalt"
@@ -370,7 +372,6 @@ LOW_WALL_HELPER(vampwall/wood)
 	mouse_opacity = 0
 
 /obj/effect/turf_decal/crosswalk/Initialize()
-	..()
 	icon_state = "crosswalk[rand(1, 3)]"
 	update_appearance()
 	if(GLOB.winter)
@@ -378,6 +379,7 @@ LOW_WALL_HELPER(vampwall/wood)
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				icon_state = "crosswalk[rand(1, 3)]-snow"
+	. = ..()
 
 /turf/open/floor/plating/asphalt
 	gender = PLURAL
@@ -525,15 +527,25 @@ LOW_WALL_HELPER(vampwall/wood)
 	mouse_opacity = 0
 
 /obj/effect/turf_decal/bordur/Initialize()
-	. = ..()
 	if(GLOB.winter)
 		if(istype(get_area(src), /area/vtm))
 			var/area/vtm/V = get_area(src)
 			if(V.upper)
 				icon_state = "[initial(icon_state)]-snow"
+	. = ..()
+
+/obj/effect/turf_decal/bordur/inverse // DARKPACK TODO: needs a snow sprite
+	name = "sidewalk"
+	icon = 'modular_darkpack/modules/decor/icons/decals.dmi'
+	icon_state = "border_inverse"
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/turf_decal/bordur/corner
 	icon_state = "border_corner"
+
+/obj/effect/turf_decal/bordur/corner/inverse // DARKPACK TODO: needs a snow sprite
+	icon = 'modular_darkpack/modules/decor/icons/decals.dmi'
+	icon_state = "border_corner_inverse"
 
 //OTHER TURFS
 

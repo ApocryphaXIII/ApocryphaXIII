@@ -3,6 +3,14 @@
 	icon = 'modular_zapoc/modules/apoc_decals/icons/natural_turf_borders.dmi'
 	mouse_opacity = 0
 
+/obj/effect/turf_decal/apoc/Initialize()
+	if(GLOB.winter)
+		if(istype(get_area(src), /area/vtm))
+			var/area/vtm/V = get_area(src)
+			if(V.upper)
+				return INITIALIZE_HINT_QDEL
+	. = ..()
+
 /obj/effect/turf_decal/apoc/vampdirt
 	icon_state = "vampdirt_side"
 

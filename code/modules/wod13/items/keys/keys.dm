@@ -89,7 +89,8 @@
 /obj/item/vamp/keys/anarch
 	name = "Anarch keys"
 	accesslocks = list(
-		"anarch"
+		"anarch",
+		"smoke"
 	)
 	color = "#434343"
 
@@ -474,3 +475,42 @@
 	name = "Apartment keys"
 	desc = "The key to someone's home. Hope it's not lost."
 	accesslocks = "apartment"
+
+//SpecialFran Keys // APOC EDIT ADD
+
+/obj/item/vamp/keys/veterinarian
+	name = "veterinarian keys"
+	accesslocks = list(
+		"veterinarian"
+	)
+
+/obj/item/vamp/keys/coffee
+	name = "coffee shop keys"
+	accesslocks = list(
+		"coffee"
+	)
+
+/obj/item/vamp/keys/pizza
+	name = "pizzaria keys"
+	accesslocks = list(
+		"pizza"
+	)
+
+/obj/item/vamp/keys/radio
+	name = "nightwolf radio keys"
+	accesslocks = list(
+		"radio"
+	)
+
+/obj/item/vamp/keys/tattoo
+	name = "tattoo parlor keys"
+	accesslocks = list(
+		"tattoo"
+	)
+
+/obj/item/vamp/keys/ocean
+	name = "gang keys"
+	accesslocks = list(
+		"ocean"
+	)
+

@@ -1,0 +1,11433 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ad" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"ae" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"an" = (
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"ap" = (
+/obj/structure/chair/stool/bar,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"aA" = (
+/obj/structure/fence,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"aC" = (
+/mob/living/simple_animal/hostile/bear/wod13{
+	name = "cocaine bear";
+	health = 1250;
+	faction = list("hostile")
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"aD" = (
+/obj/effect/turf_decal/trimline/red/line,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"aE" = (
+/obj/structure/table,
+/obj/machinery/light/broken{
+	dir = 8
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"aF" = (
+/obj/machinery/door/poddoor{
+	name = "noisemaker";
+	id = "pentexpoi_boss_layer3"
+	},
+/turf/cordon/secret,
+/area/misc/cordon)
+"aI" = (
+/obj/structure/vampdoor/glass/pentex{
+	lock_id = "pentex_poi";
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"aR" = (
+/obj/structure/rack,
+/obj/item/storage/box/lights/bulbs,
+/obj/item/wirecutters,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"aZ" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"bb" = (
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"bf" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"bi" = (
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 9
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"bp" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/obj/machinery/light/floor/broken,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"bw" = (
+/obj/effect/spawner/random/vending/colavend,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"by" = (
+/obj/structure/sign/directions/engineering{
+	dir = 8;
+	pixel_y = 32
+	},
+/obj/structure/small_vamprocks{
+	name = "cleared debris"
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"bL" = (
+/obj/structure/flora/tree/dead,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"bP" = (
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/mob_spawn/human/corpse/damaged/endron/security,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"bV" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"bW" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"cb" = (
+/obj/effect/spawner/random/trash/grime,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"cg" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 10
+	},
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 5
+	},
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 6
+	},
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 9
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"ci" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/advanced,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"co" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"cp" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 10
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"cq" = (
+/obj/structure/flora/rock/jungle,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"cr" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/light/red{
+	dir = 8
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/interior/endron_facility/forest)
+"cD" = (
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"cP" = (
+/obj/structure/table,
+/obj/item/stack/dollar/thousand,
+/obj/item/stack/dollar/thousand,
+/obj/item/ammo_box/vampire/c9mm/silver{
+	pixel_y = 8
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"cS" = (
+/turf/closed/wall/vampwall/rock,
+/area/vtm/forest)
+"cU" = (
+/obj/structure/table,
+/obj/item/trash/plate,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"cV" = (
+/obj/machinery/light{
+	pixel_y = 32;
+	pixel_x = 16
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"cW" = (
+/obj/effect/turf_decal/apoc/cave,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"db" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 6
+	},
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"di" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 9
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"dr" = (
+/obj/structure/glowshroom,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"dA" = (
+/obj/structure/flora/stump,
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"dD" = (
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_layer2"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"dU" = (
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 4
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_x = -16
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"eb" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 6
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"ed" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 1
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"ee" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 10
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"ef" = (
+/obj/structure/small_vamprocks{
+	name = "cleared debris"
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"eg" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/turf_decal/trimline/blue/line,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"ev" = (
+/obj/effect/turf_decal/apoc/cave,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"ez" = (
+/obj/structure/vampdoor/glass/pentex{
+	lock_id = "pentex_poi"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"eD" = (
+/obj/effect/decal/cleanable/litter,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"eI" = (
+/obj/structure/vampipe{
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"eJ" = (
+/obj/structure/lattice/catwalk,
+/obj/effect/spawner/random/trash/grime{
+	spawn_loot_count = 20;
+	spawn_scatter_radius = 3
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/interior/endron_facility/forest)
+"eK" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 8
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"eR" = (
+/obj/structure/filingcabinet/chestdrawer,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"eS" = (
+/obj/effect/spawner/random/trash/hobo_squat,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"eT" = (
+/obj/machinery/shower{
+	pixel_y = 20
+	},
+/obj/structure/curtain,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"eZ" = (
+/obj/effect/decal/cleanable/gasoline,
+/obj/effect/turf_decal/trimline/yellow/line,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"fd" = (
+/obj/structure/table,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell/crap,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"fg" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/turf_decal/trimline/red/line,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"fm" = (
+/obj/structure/lattice/pentex,
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_layer3"
+	},
+/turf/open/floor/plating/industrial,
+/area/vtm/interior/endron_facility/forest)
+"fn" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"fw" = (
+/obj/structure/table,
+/obj/machinery/microwave{
+	desc = "Cooks and boils stuff, somehow.";
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/machinery/light{
+	pixel_y = 32;
+	pixel_x = 16
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"fE" = (
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 8
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"fF" = (
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"fL" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 10
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"fS" = (
+/obj/structure/glowshroom/shadowshroom,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"fW" = (
+/obj/item/reagent_containers/glass/rag,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"gf" = (
+/obj/structure/table,
+/obj/item/flashlight/lamp,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"gm" = (
+/obj/structure/mopbucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"gp" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"gv" = (
+/obj/effect/mob_spawn/human/corpse/damaged/endron/security,
+/obj/item/vamp/keys/poi/pentex_poi{
+	pixel_y = 10;
+	pixel_x = 2
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"gB" = (
+/obj/effect/spawner/random/trash/garbage,
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"gG" = (
+/obj/structure/table,
+/obj/item/melee/vampirearms/chainsaw,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"gI" = (
+/obj/structure/statue/bone/rib,
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"gK" = (
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"gM" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 10
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 10
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 9
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"gT" = (
+/obj/effect/decal/cleanable/greenglow,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"gV" = (
+/obj/machinery/button/door{
+	pixel_x = -8;
+	pixel_y = 35;
+	id = "pentexpoi_northwest_blast";
+	name = "north blast door button";
+	use_power = 0
+	},
+/obj/machinery/button/door{
+	pixel_x = -8;
+	pixel_y = 26;
+	name = "north shutter button";
+	id = "pentexpoi_northwest_shutter";
+	use_power = 0
+	},
+/obj/machinery/button/door{
+	pixel_x = 8;
+	pixel_y = 35;
+	id = "pentexpoi_southwest_blast";
+	name = "south blast door button";
+	use_power = 0
+	},
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 1
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"gX" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/purple/line,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"ha" = (
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_northwest_blast"
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"hc" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"hm" = (
+/obj/effect/decal/cleanable/greenglow,
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 10
+	},
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 6
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"hp" = (
+/obj/effect/spawner/random/trash/mess,
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"hP" = (
+/obj/structure/bonfire/torch{
+	pixel_y = 48
+	},
+/turf/closed/wall/vampwall/rock,
+/area/vtm/forest/interior/cave/bane)
+"hR" = (
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"hY" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"if" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 9
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"il" = (
+/obj/structure/chair/office,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"ir" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 9
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"iG" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 4
+	},
+/obj/structure/closet/crate/grave/fancy,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"iN" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave/bane)
+"iQ" = (
+/obj/structure/table,
+/obj/item/paper_bin{
+	pixel_y = 6
+	},
+/obj/item/pen/fourcolor,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"iU" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"iV" = (
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 5
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"iW" = (
+/obj/structure/flora/rock/jungle,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"iY" = (
+/obj/structure/closet{
+	icon_state = "armory"
+	},
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/under/pentex/pentex_turtleneck,
+/obj/item/clothing/gloves/vampire/work,
+/obj/item/clothing/suit/vampire/vest,
+/obj/item/clothing/mask/vampire/balaclava,
+/obj/item/clothing/head/pentex/pentex_beret,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"iZ" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 10
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"jf" = (
+/obj/structure/table,
+/obj/item/trash/raisins,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"jl" = (
+/obj/structure/table,
+/obj/item/stack/medical/gauze/twelve,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"jm" = (
+/obj/effect/spawner/random/trash/grime,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"jo" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 6
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"jA" = (
+/obj/structure/table,
+/obj/machinery/cell_charger{
+	pixel_y = 10
+	},
+/obj/item/defibrillator/compact,
+/obj/item/defibrillator/compact,
+/obj/item/defibrillator/compact,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"jD" = (
+/obj/structure/table,
+/obj/item/papercutter,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"jE" = (
+/obj/effect/decal/cleanable/cardboard,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"jI" = (
+/obj/structure/flora/stump,
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 5
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"jN" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/apoc/cave/corner,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"jR" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"jS" = (
+/obj/structure/lattice/catwalk,
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/turf/open/floor/plating/vampacid,
+/area/vtm/interior/endron_facility/forest)
+"jX" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 1
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"jZ" = (
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_x = -16
+	},
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"kf" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"kh" = (
+/obj/effect/decal/garou_glyph/wyrm,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"ki" = (
+/obj/effect/turf_decal/caution,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"ks" = (
+/obj/machinery/iv_drip,
+/obj/machinery/button/door{
+	pixel_x = -9;
+	pixel_y = 30;
+	id = "pentexpoi_boss_layer1";
+	name = "layer 1 redundancy blast door button";
+	use_power = 0
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"ky" = (
+/obj/effect/decal/garou_glyph/dancers,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"kF" = (
+/obj/effect/decal/cleanable/greenglow,
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 1
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"kH" = (
+/obj/effect/turf_decal/siding/white/end,
+/obj/structure/vampdoor/reinf/pentex/poi,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"kK" = (
+/turf/open/floor/plating/rough,
+/area/vtm/forest/interior/cave)
+"kL" = (
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"kP" = (
+/obj/machinery/light/floor,
+/obj/effect/realistic_fog/dense,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"kT" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/machinery/light{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"kW" = (
+/obj/structure/small_vamprocks{
+	name = "cleared debris"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"lc" = (
+/obj/machinery/shower{
+	dir = 8;
+	name = "safety shower"
+	},
+/obj/effect/turf_decal/stock{
+	dir = 8
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"lu" = (
+/obj/effect/spawner/random/vending/snackvend,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"lw" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 4
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"ly" = (
+/obj/structure/table,
+/obj/item/stack/medical/bone_gel,
+/obj/item/stack/medical/bone_gel,
+/obj/item/stack/sticky_tape/surgical,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"lA" = (
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 8
+	},
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_layer2"
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"lD" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"lN" = (
+/obj/effect/turf_decal/trimline/red/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"lU" = (
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 1
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"lZ" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/turf_decal/trimline/red/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"md" = (
+/obj/structure/stone_tile/slab/cracked,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave/bane)
+"mg" = (
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/obj/effect/decal/garou_glyph/howl,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"mh" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 10
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"mk" = (
+/obj/structure/table,
+/obj/item/charcoal_stick{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"mm" = (
+/obj/effect/turf_decal/siding/thinplating/light{
+	dir = 6
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"mw" = (
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"mz" = (
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 5
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"mC" = (
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"mE" = (
+/obj/structure/table,
+/obj/item/clothing/suit/apron/surgical,
+/obj/item/clothing/suit/apron/surgical,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"mK" = (
+/turf/open/space/basic,
+/area/space)
+"mN" = (
+/obj/effect/decal/cleanable/greenglow,
+/obj/effect/turf_decal/trimline/blue/line,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"mV" = (
+/obj/structure/glowshroom/glowcap,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"na" = (
+/obj/effect/decal/cleanable/gasoline,
+/obj/structure/vampipe{
+	icon_state = "piping3";
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"nb" = (
+/obj/structure/vampdoor/reinf/pentex/poi{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"nl" = (
+/obj/effect/turf_decal/apoc/cave,
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"nv" = (
+/obj/machinery/shower{
+	dir = 1;
+	pixel_y = 16
+	},
+/obj/structure/curtain,
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"nw" = (
+/obj/effect/realistic_fog/dense/extreme,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"nz" = (
+/obj/structure/sign/directions/science{
+	dir = 1;
+	pixel_y = 34
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"nE" = (
+/obj/structure/flora/stump,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"nG" = (
+/obj/effect/turf_decal/apoc/vampgrass/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"nJ" = (
+/obj/structure/flora/tree/dead,
+/obj/effect/turf_decal/apoc/vampgrass,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"nL" = (
+/obj/structure/bury_pit,
+/turf/open/floor/plating/vampgrass,
+/area/vtm/forest)
+"nM" = (
+/obj/structure/table/optable,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"nZ" = (
+/obj/item/clothing/suit/hooded/heisenberg,
+/obj/item/clothing/suit/hooded/heisenberg,
+/obj/item/clothing/suit/hooded/heisenberg,
+/obj/structure/closet{
+	icon_door = "eng_rad";
+	icon_state = "eng";
+	name = "\improper PPE closet"
+	},
+/obj/item/clothing/mask/gas/explorer/pentex/endron,
+/obj/item/clothing/mask/gas/explorer/pentex/endron,
+/obj/item/clothing/mask/gas/explorer/pentex/endron,
+/obj/item/clothing/gloves/vampire/latex,
+/obj/item/clothing/gloves/vampire/latex,
+/obj/item/clothing/gloves/vampire/latex,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"of" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#6488EA"
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"oh" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"ok" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 10
+	},
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"on" = (
+/obj/structure/chair/sofa/corp/left{
+	color = "#50C878";
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"ov" = (
+/obj/effect/gibspawner/human/bodypartless,
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/obj/effect/decal/cleanable/gasoline,
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"ox" = (
+/obj/machinery/door/poddoor/shutters/window{
+	id = "pentexpoi_northwest_shutter"
+	},
+/turf/closed/wall/vampwall/metal/glass,
+/area/vtm/interior/endron_facility/forest)
+"oy" = (
+/obj/item/clothing/mask/gas/explorer/pentex/endron{
+	pixel_y = -9;
+	pixel_x = -2
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"oB" = (
+/obj/item/flashlight{
+	dir = 4;
+	on = 1;
+	light_on = 1;
+	light_color = "#FF0000"
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"oD" = (
+/obj/effect/spawner/random/occult/artifact,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"oF" = (
+/obj/effect/mob_spawn/human/corpse/damaged/endron/security,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave/bane)
+"oK" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 1
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"pc" = (
+/obj/structure/table,
+/obj/item/melee/vampirearms/fireaxe,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"pg" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 8
+	},
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"pl" = (
+/obj/structure/flora/stump,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"pn" = (
+/obj/structure/table/rolling,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"po" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 4
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"pr" = (
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#6488EA"
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"ps" = (
+/obj/machinery/iv_drip,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"pC" = (
+/obj/machinery/door/poddoor{
+	name = "noisemaker";
+	id = "pentexpoi_boss_layer2"
+	},
+/turf/cordon/secret,
+/area/misc/cordon)
+"pD" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 8
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"pG" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"pL" = (
+/obj/effect/spawner/random/trash/mess,
+/obj/effect/turf_decal/apoc/cave/corner,
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"pP" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 9
+	},
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"pT" = (
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_northeast_blast"
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"pU" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 9
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"pW" = (
+/obj/effect/turf_decal/caution/stand_clear/red{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"qe" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"qf" = (
+/obj/structure/flora/rock/jungle,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"ql" = (
+/obj/structure/bed,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"qu" = (
+/obj/effect/spawner/random/trash/mess,
+/obj/effect/turf_decal/trimline/red/line,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"qz" = (
+/obj/machinery/light,
+/turf/closed/wall/vampwall/metal/reinforced,
+/area/vtm/interior/endron_facility/forest)
+"qH" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"qK" = (
+/obj/structure/rack,
+/obj/item/storage/firstaid/advanced{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"qP" = (
+/obj/structure/fluff/hedge{
+	pixel_y = 5
+	},
+/obj/effect/turf_decal/siding/thinplating/light,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"qS" = (
+/obj/structure/table,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"rg" = (
+/obj/structure/necropolis_arch,
+/obj/structure/necropolis_gate/legion_gate,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"rk" = (
+/obj/structure/chair/office,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"rl" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 1
+	},
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 4
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"rm" = (
+/obj/structure/closet{
+	icon_door = "eng_rad";
+	icon_state = "eng";
+	name = "\improper PPE closet"
+	},
+/obj/item/clothing/suit/hooded/heisenberg,
+/obj/item/clothing/shoes/vampire/white,
+/obj/item/clothing/gloves/vampire/cleaning,
+/obj/item/clothing/mask/vampire,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"rr" = (
+/obj/machinery/door/poddoor/shutters/window{
+	id = "pentexpoi_southeast_shutter"
+	},
+/turf/closed/wall/vampwall/metal/glass,
+/area/vtm/interior/endron_facility/forest)
+"rs" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 8
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"ru" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"rv" = (
+/obj/effect/turf_decal/apoc/cave/corner,
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"rx" = (
+/obj/machinery/shower{
+	dir = 1;
+	pixel_y = 16
+	},
+/obj/structure/curtain,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"rQ" = (
+/obj/structure/table,
+/obj/item/stack/sheet/mineral/wood/fifty,
+/obj/item/clothing/under/pentex/pentex_longleeve,
+/obj/item/clothing/head/pentex/pentex_yellowhardhat,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"se" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 1
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"sk" = (
+/mob/living/simple_animal/hostile/cockroach/apoc,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"sm" = (
+/obj/structure/mirror{
+	icon_state = "mirror_broke";
+	pixel_y = 32
+	},
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"su" = (
+/obj/effect/mob_spawn/human/corpse/damaged/endron/cbrn,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"sw" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"sC" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"sE" = (
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"sK" = (
+/obj/structure/closet/crate/large,
+/obj/item/clothing/shoes/vampire/jackboots/high,
+/obj/item/clothing/under/pentex/pentex_turtleneck,
+/obj/item/clothing/gloves/tackler/combat,
+/obj/item/clothing/suit/vampire/vest/army,
+/obj/item/clothing/mask/gas/explorer/pentex,
+/obj/item/clothing/head/vampire/helmet,
+/obj/item/storage/fancy/hardcase/mp5,
+/obj/machinery/button/door{
+	pixel_y = 30;
+	id = "pentexpoi_boss_layer3";
+	name = "layer 3 redundancy blast door button";
+	use_power = 0
+	},
+/obj/item/gun/ballistic/automatic/vampire/mp5,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"sL" = (
+/obj/effect/turf_decal/trimline/red/line,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"sM" = (
+/obj/structure/vampdoor/glass/pentex{
+	lock_id = "pentex_poi";
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/red/line,
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"sR" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"sT" = (
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"sU" = (
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"tb" = (
+/obj/structure/vampdoor/simple{
+	name = "Bathroom";
+	dir = 8
+	},
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"tc" = (
+/obj/machinery/shower{
+	dir = 8;
+	name = "safety shower"
+	},
+/obj/effect/turf_decal/stock{
+	dir = 8
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"tk" = (
+/obj/effect/turf_decal/caution/stand_clear/red{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"to" = (
+/obj/effect/turf_decal/trimline/yellow/corner{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"tw" = (
+/obj/structure/lattice/catwalk,
+/turf/open/floor/plating/vampacid,
+/area/vtm/interior/endron_facility/forest)
+"tx" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/obj/structure/sign/warning/securearea,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"ty" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/trash/janitor_supplies,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"tE" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 8
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"tG" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/molten_object/large,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"tJ" = (
+/mob/living/simple_animal/hostile/big_legion,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"tL" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 8
+	},
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"tM" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"tQ" = (
+/obj/structure/vampdoor/reinf/pentex/poi,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"uc" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"uf" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"uz" = (
+/obj/effect/turf_decal/apoc/vampgrass/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"uB" = (
+/obj/structure/vampdoor/wood/pentex{
+	lock_id = "pentex_poi"
+	},
+/obj/effect/turf_decal/siding/thinplating/dark,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"uI" = (
+/obj/structure/closet/crate/large,
+/obj/item/clothing/head/pentex/pentex_yellowhardhat,
+/obj/item/clothing/head/pentex/pentex_yellowhardhat,
+/obj/item/clothing/head/pentex/pentex_yellowhardhat,
+/obj/item/lighter,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"uK" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/pallet,
+/obj/structure/railing/metal{
+	dir = 8
+	},
+/obj/structure/railing/metal,
+/obj/structure/railing/metal/corner{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -28
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"uM" = (
+/obj/effect/spawner/random/trash/moisture,
+/obj/effect/turf_decal/trimline/yellow/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"uO" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 5
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"uR" = (
+/turf/closed/wall/vampwall/rock,
+/area/vtm/interior/endron_facility/forest)
+"uS" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"uU" = (
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"ve" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 6
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"vm" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"vn" = (
+/obj/structure/closet,
+/obj/item/clothing/under/pentex/pentex_shortsleeve,
+/obj/item/clothing/under/pentex/pentex_shortsleeve,
+/obj/item/clothing/under/pentex/pentex_shortsleeve,
+/obj/item/clothing/shoes/vampire,
+/obj/item/clothing/shoes/vampire,
+/obj/item/clothing/shoes/vampire,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"vw" = (
+/obj/structure/flora/rock/pile/largejungle,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"vy" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"vA" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"vC" = (
+/obj/structure/glowshroom,
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"vF" = (
+/obj/structure/lattice/catwalk,
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/turf/open/floor/plating/vampacid,
+/area/vtm/interior/endron_facility/forest)
+"wb" = (
+/obj/effect/realistic_fog/dense,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"wg" = (
+/obj/structure/sign/directions/science{
+	dir = 1;
+	pixel_y = 34
+	},
+/obj/structure/sign/directions/security{
+	dir = 1;
+	pixel_y = 28
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"wh" = (
+/obj/structure/vampdoor/reinf/pentex/poi{
+	dir = 4
+	},
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"wo" = (
+/obj/structure/closet/crate/bin,
+/obj/machinery/light/small/broken{
+	dir = 1;
+	pixel_y = -16
+	},
+/obj/effect/spawner/random/trash/cigbutt,
+/obj/effect/spawner/random/trash/cigbutt,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"wp" = (
+/obj/structure/fence/door,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"ws" = (
+/obj/structure/small_vamprocks{
+	name = "cleared debris"
+	},
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_layer1"
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"ww" = (
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough,
+/area/vtm/forest/interior/cave)
+"wx" = (
+/obj/structure/table,
+/obj/item/screwdriver{
+	pixel_y = 9
+	},
+/obj/item/screwdriver{
+	pixel_y = 11;
+	pixel_x = 3
+	},
+/obj/item/stack/sticky_tape/surgical{
+	pixel_y = 12;
+	pixel_x = -5
+	},
+/obj/item/stack/sticky_tape/surgical{
+	pixel_y = 12;
+	pixel_x = -5
+	},
+/obj/item/stack/sticky_tape/surgical{
+	pixel_y = 12;
+	pixel_x = -5
+	},
+/obj/item/stack/sticky_tape/surgical{
+	pixel_y = 12;
+	pixel_x = -5
+	},
+/obj/item/stack/medical/bone_gel{
+	pixel_y = 15;
+	pixel_x = 6
+	},
+/obj/item/stack/medical/bone_gel{
+	pixel_y = 15;
+	pixel_x = 6
+	},
+/obj/item/stack/medical/bone_gel{
+	pixel_y = 15;
+	pixel_x = 6
+	},
+/obj/item/stack/medical/bone_gel{
+	pixel_y = 15;
+	pixel_x = 6
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"wD" = (
+/turf/closed/wall/vampwall/metal/reinforced,
+/area/vtm/interior/endron_facility/forest)
+"wI" = (
+/obj/structure/glowshroom,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"wS" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"xc" = (
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/trimline/blue/line,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"xf" = (
+/obj/item/melee/vampirearms/shovel,
+/turf/open/floor/plating/vampgrass,
+/area/vtm/forest)
+"xg" = (
+/obj/structure/rack,
+/obj/item/storage/firstaid/brute{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"xn" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 10
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"xr" = (
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_southeast_blast"
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"xt" = (
+/obj/structure/lattice/pentex,
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_layer1"
+	},
+/turf/open/floor/plating/industrial,
+/area/vtm/interior/endron_facility/forest)
+"xu" = (
+/obj/effect/turf_decal/apoc/vampgrass/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"xx" = (
+/turf/closed/indestructible/necropolis,
+/area/vtm/forest/interior/cave/bane)
+"xB" = (
+/obj/structure/closet{
+	icon_state = "armory"
+	},
+/obj/effect/spawner/random/trash/food_packaging,
+/obj/effect/spawner/random/trash/food_packaging,
+/obj/effect/spawner/random/trash/food_packaging,
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"xG" = (
+/obj/structure/table,
+/obj/item/reagent_containers/food/drinks/bottle/vampirewater,
+/obj/effect/turf_decal/siding/thinplating/light{
+	dir = 4
+	},
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"xT" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"yi" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"yj" = (
+/obj/structure/small_vamprocks{
+	name = "cleared debris"
+	},
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_layer1"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"yo" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 4
+	},
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"yp" = (
+/obj/machinery/light{
+	pixel_y = 26
+	},
+/obj/structure/vampipe{
+	icon_state = "piping7";
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"yt" = (
+/obj/structure/glowshroom,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"yx" = (
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_southwest_blast"
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"yD" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 4
+	},
+/obj/structure/chair/sofa/corp/right{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"yF" = (
+/obj/machinery/light{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"yH" = (
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"yI" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"yM" = (
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 10
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"za" = (
+/turf/closed/wall/vampwall/rock,
+/area/vtm/forest/interior/cave/bane)
+"zn" = (
+/obj/structure/rack{
+	density = 0;
+	icon = 'icons/obj/tank.dmi';
+	icon_state = "holder";
+	name = "tank rack"
+	},
+/obj/item/anesthetic_tank,
+/obj/item/clothing/mask/breath/medical,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"zx" = (
+/mob/living/simple_animal/hostile/megafauna/legion,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"zF" = (
+/obj/effect/turf_decal/siding/thinplating/light,
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"zI" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 6
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"zK" = (
+/obj/effect/turf_decal/apoc/cave/corner,
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/advanced,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"zO" = (
+/obj/structure/sign/directions/medical{
+	dir = 4;
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"zW" = (
+/obj/structure/fence/door{
+	open = 1
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"Ab" = (
+/obj/effect/turf_decal/trimline/red/corner,
+/obj/effect/turf_decal/trimline/red/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Ad" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Ak" = (
+/obj/structure/stone_tile/slab,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave/bane)
+"At" = (
+/obj/structure/vampdoor/glass/pentex{
+	lock_id = "pentex_poi"
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Aw" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"Ax" = (
+/obj/machinery/light{
+	pixel_y = 30
+	},
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"AB" = (
+/obj/structure/lattice/grate,
+/mob/living/simple_animal/hostile/asteroid/elite/legionnaire,
+/turf/open/floor/plating/shit,
+/area/vtm/interior/endron_facility/forest)
+"AL" = (
+/obj/effect/spawner/random/trash/hobo_squat,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"AO" = (
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"AU" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 4
+	},
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"AX" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 9
+	},
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"Bl" = (
+/obj/effect/turf_decal/trimline/purple/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Bo" = (
+/obj/structure/closet/crate/large,
+/obj/item/clothing/mask/gas/explorer/pentex/endron,
+/obj/item/clothing/mask/gas/explorer/pentex/yumco,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Bp" = (
+/obj/structure/bonfire/torch{
+	pixel_x = -19
+	},
+/turf/closed/wall/vampwall/rock,
+/area/vtm/forest/interior/cave/bane)
+"Bs" = (
+/obj/structure/small_vamprocks{
+	name = "cleared debris"
+	},
+/obj/structure/vamprocks{
+	icon_state = "rock6";
+	pixel_y = -5;
+	pixel_x = -4
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"Bt" = (
+/turf/closed/wall/vampwall/rich,
+/area/vtm/interior/endron_facility/forest)
+"Bu" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"Bx" = (
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 4
+	},
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/random,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Bz" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 9
+	},
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"BD" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/light/red{
+	dir = 4
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/interior/endron_facility/forest)
+"BE" = (
+/obj/structure/closet{
+	icon_state = "armory"
+	},
+/obj/effect/mob_spawn/human/corpse/damaged/endron/security,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"BF" = (
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/science{
+	dir = 1;
+	pixel_y = 34
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"BK" = (
+/obj/machinery/shower{
+	dir = 4;
+	name = "safety shower"
+	},
+/obj/effect/turf_decal/stock{
+	dir = 4
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"BN" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/random,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"BR" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 9
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"BS" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 4
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"BU" = (
+/obj/effect/turf_decal/siding/thinplating/dark,
+/turf/closed/wall/vampwall/metal/reinforced,
+/area/vtm/interior/endron_facility/forest)
+"Cc" = (
+/obj/structure/mirror{
+	icon_state = "mirror_broke";
+	pixel_y = 32
+	},
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Cl" = (
+/obj/structure/closet/crate/freezer/blood,
+/obj/item/organ/ears,
+/obj/item/organ/eyes,
+/obj/item/organ/tongue,
+/obj/item/organ/heart,
+/obj/item/organ/heart,
+/obj/item/organ/lungs,
+/obj/item/organ/stomach,
+/obj/item/organ/stomach,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Cm" = (
+/obj/structure/closet,
+/obj/item/clothing/under/pentex/pentex_suit,
+/obj/item/clothing/under/pentex/pentex_suit,
+/obj/item/clothing/under/pentex/pentex_suit,
+/obj/item/clothing/shoes/vampire,
+/obj/item/clothing/shoes/vampire,
+/obj/item/clothing/shoes/vampire,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"CL" = (
+/obj/effect/turf_decal/siding/thinplating/light,
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"CX" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"CY" = (
+/obj/structure/closet{
+	icon_state = "armory"
+	},
+/obj/item/weedseed,
+/obj/item/weedseed,
+/obj/item/weedseed,
+/obj/item/weedseed,
+/obj/item/weedseed,
+/obj/item/bailer,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Dg" = (
+/obj/machinery/light/small/broken{
+	pixel_y = 32
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Dh" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 1
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"Dl" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 6
+	},
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"Dm" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 6
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"DA" = (
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"DI" = (
+/obj/machinery/light/broken{
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"DN" = (
+/obj/structure/chair/office,
+/obj/effect/spawner/random/trash/garbage,
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"DR" = (
+/obj/structure/lattice/pentex,
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_layer2"
+	},
+/turf/open/floor/plating/industrial,
+/area/vtm/interior/endron_facility/forest)
+"DS" = (
+/obj/effect/spawner/random/trash/food_packaging,
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"DT" = (
+/obj/effect/turf_decal/trimline/purple/corner,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"DU" = (
+/obj/machinery/computer/operating{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"DW" = (
+/obj/structure/table,
+/obj/item/clothing/gloves/vampire/latex,
+/obj/item/clothing/gloves/vampire/latex,
+/obj/structure/sink{
+	pixel_y = -1;
+	dir = 8;
+	icon_state = "basin";
+	pixel_x = 6
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"DZ" = (
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Eb" = (
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/mob_spawn/human/corpse/damaged/endron,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Ee" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"Ef" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"Ek" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 4
+	},
+/turf/open/floor/plating/vampgrass,
+/area/vtm/forest)
+"Em" = (
+/obj/structure/table,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Er" = (
+/obj/structure/table,
+/obj/item/paper{
+	default_raw_text = "Branch Leader - 0666 | Executive - 0333 | Internal Affairs - 0432"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Es" = (
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"EE" = (
+/obj/structure/bonfire/torch{
+	pixel_y = -30
+	},
+/turf/closed/indestructible/necropolis,
+/area/vtm/forest/interior/cave/bane)
+"EL" = (
+/obj/structure/glowshroom/glowcap,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"EO" = (
+/obj/structure/statue/bone/rib,
+/obj/effect/turf_decal/apoc/cave{
+	dir = 6
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"EQ" = (
+/obj/effect/turf_decal/siding/white/end{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"EU" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 6
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"Fc" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 1
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"Fe" = (
+/obj/structure/table,
+/obj/vampire_computer{
+	owner = "Clerk"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Ff" = (
+/obj/effect/spawner/random/trash/moisture,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Fp" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 1
+	},
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"Fq" = (
+/obj/structure/vampipe,
+/turf/closed/wall/vampwall/metal/reinforced,
+/area/vtm/interior/endron_facility/forest)
+"Fr" = (
+/obj/machinery/shower{
+	dir = 4;
+	name = "safety shower"
+	},
+/obj/effect/turf_decal/stock{
+	dir = 4
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Fv" = (
+/turf/open/floor/plating/vampgrass,
+/area/vtm/forest)
+"Fx" = (
+/obj/structure/statue/bone/rib{
+	dir = 1
+	},
+/obj/effect/turf_decal/apoc/cave{
+	dir = 10
+	},
+/obj/effect/turf_decal/apoc/cave{
+	dir = 9
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"FD" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"FG" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/yellow/line,
+/obj/structure/extinguisher_cabinet{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"FM" = (
+/obj/item/gun/ballistic/automatic/vampire/ar15{
+	pixel_x = -2
+	},
+/obj/item/storage/firstaid/medical{
+	pixel_x = 9;
+	pixel_y = -12
+	},
+/obj/item/ammo_box/magazine/vamp556{
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/item/ammo_box/magazine/vamp556{
+	pixel_x = -7;
+	pixel_y = -8
+	},
+/obj/item/ammo_box/magazine/vamp556{
+	pixel_x = 13;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/vamp556{
+	pixel_x = 2;
+	pixel_y = 15
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave/bane)
+"FR" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/apoc/cave{
+	dir = 8
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"FU" = (
+/obj/effect/decal/cleanable/gasoline,
+/mob/living/simple_animal/hostile/big_legion,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"FV" = (
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/decal/cleanable/gasoline,
+/obj/effect/realistic_fog/dense,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"FW" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/obj/structure/sign/warning/securearea,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"FX" = (
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"Gb" = (
+/obj/machinery/button/door{
+	pixel_x = -8;
+	pixel_y = 35;
+	id = "pentexpoi_northeast_blast";
+	name = "north blast door button";
+	use_power = 0
+	},
+/obj/machinery/button/door{
+	pixel_x = 8;
+	pixel_y = 35;
+	id = "pentexpoi_southeast_blast";
+	name = "south blast door button";
+	use_power = 0
+	},
+/obj/machinery/button/door{
+	pixel_x = 8;
+	pixel_y = 26;
+	id = "pentexpoi_southeast_shutter";
+	name = "south shutter button";
+	use_power = 0
+	},
+/obj/machinery/light/floor,
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 1
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Gh" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_y = 15
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Gl" = (
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Gm" = (
+/obj/effect/turf_decal/siding/thinplating/light,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Gs" = (
+/obj/structure/table,
+/obj/effect/mob_spawn/human/corpse/damaged/endron/security,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"GB" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 4
+	},
+/obj/structure/chair/sofa/corp{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"GD" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/obj/machinery/shower{
+	dir = 4
+	},
+/obj/item/gun/ballistic/automatic/vampire/glock21{
+	pixel_x = 1;
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/glock9mm{
+	pixel_x = -5;
+	pixel_y = -7
+	},
+/obj/item/ammo_box/magazine/glock9mm{
+	pixel_x = 4;
+	pixel_y = 10
+	},
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/turf/open/floor/plating/toilet/clinic,
+/area/vtm/interior/endron_facility/forest)
+"GU" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 10
+	},
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"GV" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 4
+	},
+/obj/effect/turf_decal/apoc/vampgrass,
+/obj/effect/spawner/random/trash/grime,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"Hm" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"Hy" = (
+/obj/structure/filingcabinet/security,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"HB" = (
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"HH" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"HO" = (
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"HR" = (
+/turf/open/floor/plating/vampgrass/random/bushes,
+/area/vtm/forest)
+"HT" = (
+/obj/machinery/light{
+	pixel_y = 30
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Ih" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 4
+	},
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"Ij" = (
+/obj/structure/table,
+/obj/underplate,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Ip" = (
+/turf/open/floor/plating/vampgrass/random/rocks,
+/area/vtm/forest)
+"It" = (
+/obj/structure/glowshroom/glowcap,
+/obj/machinery/light/broken{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Iu" = (
+/obj/structure/filingcabinet,
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Iv" = (
+/obj/structure/lattice/pentex,
+/turf/open/floor/plating/industrial,
+/area/vtm/interior/endron_facility/forest)
+"IA" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 10
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"IC" = (
+/obj/structure/table,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"IE" = (
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"IM" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 8
+	},
+/obj/effect/turf_decal/apoc/vampgrass/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"IU" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/apoc/vampdirt/corner,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"IX" = (
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = -2
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = -12;
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = 4;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = 11;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = 11;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"IY" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Jd" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 6
+	},
+/obj/effect/turf_decal/apoc/vampdirt/corner,
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"Jf" = (
+/obj/structure/big_vamprocks{
+	icon_state = "rock3"
+	},
+/turf/open/floor/plating/vampgrass,
+/area/vtm/forest)
+"Jh" = (
+/obj/structure/statue/bone/rib{
+	dir = 1
+	},
+/obj/effect/turf_decal/apoc/cave{
+	dir = 9
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"Jk" = (
+/obj/structure/bonfire/torch{
+	pixel_x = 21
+	},
+/turf/closed/wall/vampwall/rock,
+/area/vtm/forest/interior/cave/bane)
+"Ju" = (
+/obj/effect/turf_decal/siding/thinplating/light{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"JB" = (
+/obj/effect/turf_decal/apoc/vampgrass/corner{
+	dir = 8
+	},
+/turf/closed/wall/vampwall/rock,
+/area/vtm/forest)
+"JP" = (
+/obj/item/wallframe/noticeboard,
+/turf/closed/wall/vampwall/metal/reinforced,
+/area/vtm/interior/endron_facility/forest)
+"JR" = (
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_final"
+	},
+/obj/structure/lattice/pentex,
+/turf/open/floor/plating/industrial,
+/area/vtm/interior/endron_facility/forest)
+"JZ" = (
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Kc" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 6
+	},
+/turf/open/floor/plating/vampgrass,
+/area/vtm/forest)
+"Ky" = (
+/obj/effect/turf_decal/trimline/red/line,
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"KK" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 5
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"KL" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"KM" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"KN" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 6
+	},
+/obj/structure/chair/sofa/corp/left{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"KP" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"KT" = (
+/obj/structure/table/reinforced,
+/obj/item/crowbar,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"KX" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 4
+	},
+/obj/effect/realistic_fog/dense,
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"KY" = (
+/obj/item/food/fish/catfish,
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 1
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"Lb" = (
+/obj/structure/rack,
+/obj/item/roller,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Ld" = (
+/obj/machinery/shower{
+	dir = 8;
+	name = "safety shower";
+	on = 1
+	},
+/obj/effect/turf_decal/stock{
+	dir = 8
+	},
+/obj/effect/mob_spawn/human/corpse/damaged/endron/cbrn,
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Li" = (
+/obj/structure/chair/stool/bar,
+/obj/effect/turf_decal/siding/thinplating/light{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Lp" = (
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave/bane)
+"Ls" = (
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"Lv" = (
+/obj/structure/fence,
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 8
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"Lz" = (
+/obj/structure/table,
+/obj/item/trash/plate,
+/obj/item/food/burger/plain,
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"LB" = (
+/obj/structure/rack,
+/obj/item/storage/firstaid/medical{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"LD" = (
+/turf/closed/wall/vampwall/green,
+/area/vtm/forest)
+"LE" = (
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"LF" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/random,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"LL" = (
+/obj/machinery/photocopier,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"LO" = (
+/obj/structure/table,
+/obj/item/reagent_containers/food/drinks/meth{
+	pixel_x = 1
+	},
+/obj/item/reagent_containers/food/drinks/meth{
+	pixel_x = -10
+	},
+/obj/item/reagent_containers/food/drinks/meth{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/food/drinks/meth{
+	pixel_x = -2;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/drinks/meth{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/food/drinks/meth{
+	pixel_x = -5;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/food/drinks/meth{
+	pixel_x = 3;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/food/drinks/meth{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Ma" = (
+/obj/structure/closet/crate/freezer/blood,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Me" = (
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"Mf" = (
+/turf/cordon/secret,
+/area/misc/cordon)
+"Mh" = (
+/obj/effect/turf_decal/trimline/red/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Mi" = (
+/obj/structure/vampdoor/glass/pentex{
+	lockpick_difficulty = 6;
+	lock_id = "pentex_poi"
+	},
+/obj/effect/turf_decal/siding/thinplating/dark,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Mr" = (
+/obj/structure/closet/crate/freezer/surplus_limbs/organs,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Mx" = (
+/obj/structure/werewolf_totem/spiral{
+	pixel_x = -16
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"MC" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 8
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"MF" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"MG" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/pallet,
+/obj/structure/railing/metal{
+	dir = 8
+	},
+/obj/item/grown/log/tree,
+/obj/item/grown/log/tree,
+/obj/item/grown/log/tree,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"MX" = (
+/obj/structure/closet,
+/obj/item/clothing/under/pentex/pentex_turtleneck,
+/obj/item/clothing/under/pentex/pentex_turtleneck,
+/obj/item/clothing/under/pentex/pentex_turtleneck,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/clothing/under/vampire/turtleneck_skirt/endron,
+/obj/item/clothing/under/vampire/turtleneck_skirt/endron,
+/obj/item/clothing/under/vampire/turtleneck_skirt/endron,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/shoes/vampire/jackboots,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Nj" = (
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Nm" = (
+/obj/structure/glowshroom,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"Nv" = (
+/turf/open/floor/plating/vampgrass/random/grass,
+/area/vtm/forest)
+"Nw" = (
+/obj/effect/spawner/random/trash/mess,
+/obj/effect/turf_decal/apoc/cave/corner,
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 1
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"ND" = (
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"NJ" = (
+/obj/structure/vampdoor/wood/pentex{
+	name = "Endron Tree Planting Outpost";
+	lock_id = "pentex_poi";
+	lockpick_difficulty = 8
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "pentexpoi_boss_final"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"NN" = (
+/obj/structure/table,
+/obj/machinery/griddle,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"NR" = (
+/obj/machinery/light{
+	pixel_y = 26
+	},
+/obj/structure/vampipe{
+	icon_state = "piping7";
+	pixel_y = 32
+	},
+/obj/structure/vamprocks{
+	icon_state = "rock6";
+	pixel_y = 7;
+	pixel_x = 3
+	},
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"NS" = (
+/obj/structure/closet/crate/dumpster,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"NT" = (
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"NY" = (
+/obj/structure/closet,
+/obj/item/clothing/under/pentex/pentex_suitskirt,
+/obj/item/clothing/under/pentex/pentex_suitskirt,
+/obj/item/clothing/under/pentex/pentex_suitskirt,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/clothing/shoes/vampire/heels,
+/obj/item/clothing/shoes/vampire/heels,
+/obj/item/clothing/shoes/vampire/heels,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Od" = (
+/mob/living/simple_animal/hostile/cockroach/apoc,
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Og" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Ox" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"OA" = (
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"OD" = (
+/mob/living/simple_animal/pet/dog/wolfkin/spiral{
+	faction = list("hostile")
+	},
+/turf/open/floor/plating/vampgrass,
+/area/vtm/forest)
+"OF" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/toolbox{
+	color = "#009D53"
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"OJ" = (
+/obj/effect/turf_decal/siding/white/end{
+	dir = 4
+	},
+/obj/structure/glowshroom,
+/obj/machinery/light/broken{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"OK" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 9
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 10
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"OL" = (
+/obj/structure/lattice/grate,
+/obj/machinery/shower{
+	name = "safety shower";
+	on = 1;
+	pixel_y = 14
+	},
+/turf/open/floor/plating/shit/border,
+/area/vtm/interior/endron_facility/forest)
+"OM" = (
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"OO" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 4
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"OU" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 9
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"OV" = (
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 1
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Pb" = (
+/obj/structure/lattice/grate,
+/turf/open/floor/plating/shit,
+/area/vtm/interior/endron_facility/forest)
+"Pg" = (
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"Ph" = (
+/obj/warehouse_generator{
+	init_on = 0
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Pu" = (
+/obj/structure/vampdoor/simple{
+	dir = 8
+	},
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Pw" = (
+/turf/closed/wall/vampwall/metal/glass,
+/area/vtm/interior/endron_facility/forest)
+"PH" = (
+/obj/effect/turf_decal/siding/white/corner,
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 8
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"PJ" = (
+/obj/structure/glowshroom,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"PM" = (
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"PN" = (
+/obj/effect/realistic_fog/dense/extreme,
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"PQ" = (
+/obj/structure/flora/rock/pile/largejungle,
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"PU" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 1
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"PW" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 5
+	},
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"Qe" = (
+/obj/effect/decal/graffiti/large,
+/turf/closed/wall/vampwall/metal/reinforced,
+/area/vtm/interior/endron_facility/forest)
+"Qh" = (
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"Qr" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Qt" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/obj/effect/decal/garou_glyph/danger,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"QH" = (
+/obj/effect/spawner/random/trash/mess,
+/obj/effect/turf_decal/apoc/cave{
+	dir = 6
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"QI" = (
+/obj/machinery/light/small/broken{
+	pixel_y = 32
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"QK" = (
+/obj/effect/turf_decal/siding/thinplating/dark,
+/obj/structure/vampdoor/glass/pentex{
+	lock_id = "pentex_poi"
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"QL" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 10
+	},
+/obj/effect/turf_decal/apoc/cave{
+	dir = 6
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"QP" = (
+/obj/structure/chair/office,
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Rb" = (
+/obj/structure/glowshroom/glowcap,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"Rh" = (
+/obj/structure/mirror/directional/north,
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Ri" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/floor/plating/industrial/factory,
+/area/vtm/interior/endron_facility/forest)
+"Ro" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Rp" = (
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Rq" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 9
+	},
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 6
+	},
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 5
+	},
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 10
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"Rs" = (
+/obj/effect/turf_decal/caution/stand_clear/red{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"RA" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 1
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"RM" = (
+/obj/effect/realistic_fog/dense,
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest/interior/cave)
+"RP" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"RR" = (
+/obj/structure/closet/crate/freezer/fridge,
+/obj/item/storage/box/ingredients/american,
+/obj/item/storage/box/ingredients/vegetarian,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/food/condiment/milk{
+	name = "full cream milk"
+	},
+/obj/item/reagent_containers/food/condiment/milk{
+	name = "full cream milk"
+	},
+/obj/item/storage/box/ingredients/carnivore,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"RS" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave/bane)
+"RW" = (
+/obj/structure/vampdoor/glass/pentex{
+	lock_id = "pentex_poi";
+	dir = 4
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"RZ" = (
+/obj/effect/decal/cleanable/greenglow,
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"Sc" = (
+/obj/structure/rack,
+/obj/item/storage/firstaid/o2{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Sd" = (
+/obj/effect/turf_decal/siding/white/end{
+	dir = 1
+	},
+/obj/structure/vampdoor/reinf/pentex/poi,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Su" = (
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"Sz" = (
+/obj/structure/reagent_dispensers/water_cooler,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"SD" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/machinery/button/door{
+	pixel_y = 30;
+	id = "pentexpoi_boss_layer2";
+	name = "layer 2 redundancy blast door button";
+	use_power = 0
+	},
+/obj/structure/glowshroom,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"SQ" = (
+/obj/effect/spawner/random/trash/grime,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"SR" = (
+/obj/effect/decal/cleanable/garbage,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"SS" = (
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"SV" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 4
+	},
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Tf" = (
+/obj/effect/mob_spawn/human/corpse/damaged/endron/security,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Ti" = (
+/obj/item/food/fish/catfish,
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 5
+	},
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"To" = (
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 6
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Tq" = (
+/obj/effect/turf_decal/apoc/vampgrass/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"Tt" = (
+/obj/structure/small_vamprocks{
+	name = "cleared debris"
+	},
+/obj/structure/vampdoor/glass/pentex{
+	lock_id = "pentex_poi";
+	dir = 4
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"Tv" = (
+/obj/structure/sign/directions/security{
+	dir = 1;
+	pixel_y = 34
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Ty" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 4
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"TA" = (
+/obj/effect/turf_decal/trimline/blue/line,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"TC" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 4
+	},
+/obj/machinery/door/poddoor{
+	id = "pentexpoi_boss_layer2"
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"TD" = (
+/obj/effect/decal/garou_glyph/wyrm,
+/turf/closed/wall/vampwall/rock,
+/area/vtm/forest)
+"TE" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/red/line,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"TH" = (
+/obj/effect/spawner/random/trash/grime,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"TL" = (
+/obj/effect/turf_decal/trimline/yellow/line,
+/obj/effect/decal/cleanable/gasoline,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Uf" = (
+/obj/machinery/button/door{
+	pixel_y = 32;
+	name = "final lockdown override button";
+	id = "pentexpoi_boss_final";
+	sync_doors = 0;
+	use_power = 0
+	},
+/obj/structure/lattice/pentex,
+/turf/open/floor/plating/industrial,
+/area/vtm/interior/endron_facility/forest)
+"Ul" = (
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Ux" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"UA" = (
+/obj/machinery/light/broken{
+	pixel_y = 32
+	},
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"UE" = (
+/obj/effect/turf_decal/apoc/vampgrass,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"UL" = (
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 4
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 8
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"UR" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/turf/open/genturf,
+/area/vtm/planetgeneration)
+"UT" = (
+/obj/effect/turf_decal/apoc/vampdirt,
+/obj/effect/turf_decal/apoc/vampgrass{
+	dir = 4
+	},
+/obj/effect/turf_decal/apoc/vampdirt/corner,
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"UW" = (
+/obj/structure/coclock,
+/obj/effect/spawner/random/occult/artifact,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Vi" = (
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Vk" = (
+/obj/effect/decal/cleanable/glass,
+/turf/open/floor/plating/asphalt,
+/area/vtm/interior/endron_facility/forest)
+"Vm" = (
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion,
+/obj/effect/turf_decal/trimline/red/line,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Vp" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/random,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/endron_facility/forest)
+"Vr" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Vs" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/open/floor/plating/vampacid,
+/area/vtm/forest)
+"VB" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"VF" = (
+/obj/effect/spawner/random/trash/food_packaging,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"VI" = (
+/obj/structure/rack,
+/obj/item/gas_can/rand,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"VJ" = (
+/obj/effect/decal/garou_glyph/remembrance,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"VM" = (
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 5
+	},
+/obj/effect/turf_decal/apoc/vampdirt{
+	dir = 9
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"Wb" = (
+/obj/effect/turf_decal/trimline/red/corner{
+	dir = 8
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Wi" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/bloodshit,
+/area/vtm/forest/interior/cave/bane)
+"Ww" = (
+/obj/effect/turf_decal/trimline/purple/corner,
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Wx" = (
+/obj/effect/spawner/random/trash/garbage,
+/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced,
+/turf/open/indestructible/necropolis/air,
+/area/vtm/forest/interior/cave/bane)
+"Wy" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"WH" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"WM" = (
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 9
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"WQ" = (
+/obj/machinery/defibrillator_mount/charging{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"WR" = (
+/obj/machinery/door/poddoor{
+	name = "noisemaker";
+	id = "pentexpoi_boss_layer1"
+	},
+/turf/cordon/secret,
+/area/misc/cordon)
+"WW" = (
+/obj/structure/flora/rock/pile/largejungle,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"WY" = (
+/obj/machinery/recycler/lumbermill,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"WZ" = (
+/obj/structure/table,
+/obj/item/storage/crayons,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Xa" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion,
+/obj/effect/turf_decal/trimline/red/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/red/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Xi" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Xp" = (
+/obj/structure/big_vamprocks{
+	pixel_y = 2;
+	name = "fallen rubble";
+	desc = "It's blocking your path.";
+	max_integrity = 99999
+	},
+/obj/structure/vamprocks{
+	icon_state = "rock6";
+	pixel_y = -7;
+	pixel_x = 14
+	},
+/obj/structure/vamprocks{
+	icon_state = "rock6";
+	pixel_y = -8;
+	pixel_x = -4
+	},
+/obj/structure/vamprocks{
+	icon_state = "rock6";
+	pixel_y = 1;
+	pixel_x = -20
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Xu" = (
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"XA" = (
+/obj/structure/chair/stool/bar{
+	pixel_y = 9
+	},
+/obj/effect/turf_decal/siding/thinplating/light,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"XH" = (
+/obj/effect/turf_decal/apoc/vampgrass,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+"XJ" = (
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/mob_spawn/human/corpse/ciz4,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"XL" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"XM" = (
+/turf/closed/wall/vampwall/rock,
+/area/vtm/forest/interior/cave)
+"XO" = (
+/obj/effect/mob_spawn/human/corpse/damaged/endron/cbrn,
+/obj/effect/gibspawner/human/bodypartless,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"XS" = (
+/obj/transfer_point_vamp/forest/pentex,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"Yg" = (
+/obj/structure/chair/sofa/corp/right{
+	color = "#50C878";
+	dir = 1
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Yh" = (
+/obj/structure/table,
+/obj/machinery/light/broken{
+	dir = 4
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Ym" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Yt" = (
+/obj/structure/sink{
+	pixel_y = 16;
+	dir = 1
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Yv" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/plating/toilet/clinic,
+/area/vtm/interior/endron_facility/forest)
+"YF" = (
+/obj/effect/spawner/random/trash/grime,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"YM" = (
+/obj/structure/table,
+/obj/item/flashlight/lamp/green,
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"YQ" = (
+/obj/structure/closet/cardboard,
+/obj/item/grown/log/tree,
+/obj/item/grown/log/tree,
+/obj/item/grown/log/tree,
+/obj/item/clothing/head/pentex/pentex_yellowhardhat,
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"YT" = (
+/obj/structure/lattice/catwalk,
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/plating/vampacid,
+/area/vtm/interior/endron_facility/forest)
+"YY" = (
+/obj/structure/curtain,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"Zk" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"Zp" = (
+/obj/structure/table,
+/obj/item/folder/blue{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/folder/red{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/interior/endron_facility/forest)
+"Zr" = (
+/obj/machinery/light/broken{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"ZH" = (
+/obj/structure/rack,
+/obj/item/defibrillator/loaded,
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"ZK" = (
+/mob/living/simple_animal/pet/dog/wolfkin/spiral{
+	faction = list("hostile")
+	},
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest)
+"ZL" = (
+/obj/effect/spawner/random/trash/garbage,
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 1
+	},
+/turf/open/floor/plating/circled,
+/area/vtm/interior/endron_facility/forest)
+"ZQ" = (
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 8
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/interior/endron_facility/forest)
+"ZZ" = (
+/obj/effect/turf_decal/apoc/vampdirt/corner,
+/obj/effect/turf_decal/apoc/vampdirt,
+/turf/open/floor/plating/vampdirt{
+	base_icon_state = "greenerdirt";
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "greenerdirt"
+	},
+/area/vtm/forest)
+
+(1,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(2,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+XM
+XM
+XM
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(3,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+XM
+XM
+XM
+Nm
+XM
+XM
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(4,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+XM
+XM
+Nm
+mV
+Xu
+fS
+XM
+XM
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(5,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+XM
+XM
+mV
+Xu
+OU
+xn
+Xu
+Nm
+XM
+XM
+XM
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(6,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+XM
+mV
+Xu
+OU
+rv
+wS
+xn
+Xu
+Xu
+Nm
+XM
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(7,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+XM
+mV
+Xu
+aZ
+jR
+RM
+wS
+QL
+Xu
+Nm
+XM
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(8,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+XM
+XM
+Xu
+mV
+aZ
+OO
+EU
+Xu
+mV
+XM
+XM
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(9,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+XM
+fS
+wD
+wD
+Pw
+Pw
+wD
+wD
+XM
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(10,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+wD
+wD
+wD
+wD
+wD
+Iu
+xT
+iQ
+gf
+wD
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(11,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+WM
+Gh
+fL
+Pw
+Vr
+oD
+DN
+Fe
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(12,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+Lz
+qS
+cU
+qP
+bV
+tw
+sL
+Pw
+Ul
+Vr
+eR
+Er
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(13,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+ap
+ap
+ap
+Gm
+HO
+vF
+aD
+Mi
+Ox
+yI
+Qr
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(14,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+bw
+NT
+yi
+CL
+HO
+tw
+sL
+JP
+DZ
+Ox
+iQ
+gf
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+cS
+cS
+cS
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(15,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+NN
+NT
+Ij
+XA
+bV
+tw
+fg
+wD
+UW
+Vr
+il
+Fe
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+cS
+cS
+cS
+cS
+cS
+Me
+cS
+cS
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(16,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+fw
+yi
+jf
+XA
+HO
+tw
+sL
+Pw
+Vr
+tJ
+Ul
+cP
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+cS
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(17,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+Sz
+NT
+cU
+XA
+HO
+jS
+sL
+Pw
+Ul
+Nj
+Qr
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+OF
+ty
+ty
+MF
+DS
+wD
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+cS
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(18,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+RR
+hc
+Og
+Gm
+bV
+tw
+sL
+qz
+Ox
+Vr
+iQ
+gf
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+aR
+LF
+hc
+jm
+gK
+wD
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(19,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+lu
+NT
+Vi
+zF
+LE
+tw
+Ky
+wD
+yI
+Vr
+il
+Fe
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+SD
+jm
+bP
+NT
+TH
+gK
+VI
+VI
+VI
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(20,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+Ij
+ap
+Ff
+Gm
+HO
+tw
+sL
+wD
+LL
+jD
+eR
+qS
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+gm
+NT
+LF
+NT
+NT
+NT
+NT
+oB
+VB
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(21,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+cU
+ap
+NT
+CL
+HO
+tw
+fg
+wD
+Bt
+Pw
+Pw
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+uI
+jm
+gK
+NT
+ae
+BN
+NT
+Ph
+NT
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(22,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+xG
+Li
+Ju
+mm
+LE
+tw
+aD
+uB
+Ul
+Nj
+Vr
+Qr
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+Bo
+NT
+hc
+hc
+AL
+wD
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+AU
+cS
+cS
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+"}
+(23,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+bi
+Mh
+YT
+sL
+Pw
+Nj
+gp
+eR
+qS
+wD
+Mf
+mK
+Mf
+Mf
+Mf
+pC
+wD
+KT
+vm
+NT
+gK
+wD
+wD
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+UR
+Fc
+cS
+cS
+cS
+cS
+cS
+cS
+Mf
+mK
+"}
+(24,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+wD
+hp
+tw
+tw
+sL
+Pw
+Ul
+Vr
+il
+Fe
+wD
+Mf
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+wD
+nb
+wD
+wD
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+AU
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+Fp
+Me
+Me
+Me
+Me
+UR
+Fc
+fn
+uc
+VJ
+iG
+ve
+cS
+Mf
+mK
+"}
+(25,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+LE
+eJ
+Ul
+Ox
+qz
+LL
+Hy
+iQ
+gf
+wD
+Mf
+mK
+Mf
+uR
+yH
+yH
+yH
+YF
+yH
+ZQ
+OM
+wD
+wD
+Mf
+Mf
+XM
+XM
+XM
+XM
+XM
+Mf
+Mf
+mK
+mK
+mK
+mK
+Mf
+Mf
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+AU
+Dl
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+PW
+yo
+yo
+yo
+yo
+Dl
+Fc
+fn
+Wy
+dA
+ve
+bb
+cS
+Mf
+mK
+"}
+(26,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+HO
+tw
+Vm
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+Mf
+mK
+Mf
+uR
+Xp
+hc
+NT
+hc
+hc
+jm
+to
+co
+wD
+Mf
+XM
+XM
+mV
+Xu
+Nm
+XM
+XM
+Mf
+mK
+mK
+mK
+Mf
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+UR
+bb
+bb
+bb
+bb
+bb
+pl
+ru
+bb
+bb
+bb
+bb
+bb
+bb
+di
+uf
+fn
+ad
+bb
+bb
+cb
+cS
+Mf
+Mf
+"}
+(27,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+DI
+tw
+qu
+wD
+iY
+Zk
+iY
+wD
+Mf
+Mf
+Mf
+Mf
+Mf
+uR
+uR
+tw
+tw
+tw
+tw
+tw
+DA
+TL
+wD
+Mf
+XM
+Nm
+qf
+FX
+Qh
+Xu
+XM
+Mf
+mK
+mK
+mK
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+AU
+Dl
+bb
+bb
+bb
+ZK
+bb
+bb
+bb
+bb
+ru
+bb
+bb
+bb
+bb
+uO
+nE
+fn
+Hm
+bb
+cb
+bb
+cS
+cS
+Mf
+"}
+(28,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+bV
+tw
+sL
+wD
+iY
+AO
+xB
+wD
+wD
+wD
+wD
+wD
+Mf
+Mf
+uR
+uR
+NT
+NT
+NT
+tw
+DA
+uR
+XM
+XM
+XM
+Xu
+ov
+PJ
+cq
+PJ
+XM
+Mf
+Mf
+mK
+mK
+Mf
+cS
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+UR
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+ru
+bb
+bb
+Fc
+FW
+ad
+bb
+bb
+bb
+XS
+cS
+Mf
+"}
+(29,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+aF
+wD
+sE
+tw
+aD
+wD
+sK
+yi
+hc
+wD
+dU
+wD
+jZ
+wD
+Mf
+Mf
+Mf
+uR
+Ro
+uM
+NT
+tw
+uR
+uR
+kK
+fS
+FX
+Rb
+vC
+FX
+Qh
+Qh
+XM
+XM
+Mf
+mK
+mK
+Mf
+cS
+Me
+Me
+Me
+Me
+Me
+Me
+AU
+Dl
+bb
+bb
+bb
+bb
+bb
+pl
+bb
+iW
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+Fc
+wp
+Qt
+oy
+XJ
+bb
+cS
+cS
+Mf
+"}
+(30,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+cV
+tw
+fg
+wD
+OL
+Pb
+Tf
+wD
+tb
+wD
+tb
+wD
+Mf
+mK
+Mf
+uR
+wD
+yp
+DA
+tw
+cD
+dr
+ww
+FX
+FX
+Qh
+FX
+FV
+PQ
+FX
+FX
+XM
+Mf
+mK
+mK
+Mf
+cS
+Me
+Me
+Me
+Me
+Me
+AU
+Dl
+bb
+bb
+bb
+pl
+bb
+Su
+bb
+bb
+bb
+bb
+bb
+pl
+bb
+bb
+bb
+ir
+uf
+FW
+sw
+mh
+bb
+bb
+cS
+Mf
+Mf
+"}
+(31,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+hp
+tw
+Ky
+wD
+OL
+AB
+VB
+BU
+Dg
+Gl
+Ri
+wD
+Mf
+mK
+Mf
+Mf
+wD
+eI
+KP
+hR
+dr
+dr
+ww
+ww
+Rb
+FX
+vw
+FU
+FX
+Qh
+Rb
+XM
+Mf
+mK
+mK
+Mf
+cS
+Me
+Me
+Me
+Me
+AU
+Dl
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+ru
+bb
+bb
+bb
+bb
+WW
+bb
+Fc
+OA
+fn
+nE
+Hm
+bb
+Ls
+cS
+Mf
+mK
+"}
+(32,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+HO
+tw
+sL
+wD
+OL
+Pb
+yi
+wD
+Rh
+gB
+uS
+wD
+Mf
+mK
+mK
+Mf
+wD
+na
+DA
+dr
+hR
+uR
+XM
+XM
+XM
+Xu
+Qh
+FX
+vC
+FX
+XM
+XM
+Mf
+mK
+mK
+Mf
+cS
+Me
+Me
+Me
+AU
+Dl
+bb
+ZK
+bb
+bb
+bb
+ZK
+bb
+bb
+bb
+bb
+bb
+bb
+ZK
+bb
+bb
+bb
+bb
+jI
+KL
+fn
+OA
+ad
+bb
+bb
+cS
+Mf
+mK
+"}
+(33,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+HO
+tw
+aD
+tQ
+Tf
+hc
+NT
+wD
+Rh
+Ad
+Gl
+wD
+Mf
+mK
+mK
+Mf
+wD
+eI
+Eb
+cD
+KP
+eZ
+wD
+Mf
+XM
+qf
+PJ
+Qh
+an
+XM
+XM
+Mf
+Mf
+mK
+mK
+Mf
+cS
+Me
+AU
+yo
+Dl
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+pl
+bb
+bb
+bb
+bb
+pl
+bb
+bb
+ru
+bb
+bb
+OA
+fn
+Wy
+db
+bb
+cS
+cS
+Mf
+mK
+"}
+(34,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+za
+za
+za
+za
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+UA
+tw
+qu
+wD
+iY
+yi
+BE
+wD
+Rh
+Gl
+uS
+wD
+Mf
+mK
+mK
+Mf
+wD
+eI
+jm
+tw
+DA
+eZ
+wD
+Mf
+XM
+XM
+Nm
+kL
+XM
+XM
+Mf
+Mf
+mK
+mK
+mK
+Mf
+cS
+Ek
+Kc
+bb
+bb
+bb
+bb
+pl
+bb
+pl
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+iW
+ru
+bb
+bb
+bb
+bb
+Fc
+fn
+ad
+bb
+cS
+cS
+Mf
+Mf
+mK
+"}
+(35,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+za
+AX
+ok
+za
+za
+za
+Mf
+za
+za
+za
+za
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+HO
+tw
+sL
+wD
+CY
+lD
+iY
+wD
+QI
+uS
+wo
+wD
+Mf
+Mf
+Mf
+Mf
+wD
+NR
+kW
+tw
+NT
+FG
+wD
+Mf
+Mf
+XM
+XM
+XM
+XM
+Mf
+Mf
+mK
+mK
+mK
+mK
+Mf
+cS
+bb
+bb
+bb
+bb
+bL
+bb
+bb
+bb
+bb
+OK
+pl
+gM
+bb
+bb
+WW
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+uO
+fn
+cS
+cS
+cS
+Mf
+Mf
+mK
+mK
+"}
+(36,1,1) = {"
+mK
+mK
+mK
+Mf
+Mf
+Mf
+za
+za
+za
+za
+za
+Ef
+FR
+iZ
+za
+Jk
+za
+RS
+Lp
+za
+za
+za
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+HO
+tw
+qu
+wD
+wD
+wD
+wD
+wD
+wD
+wh
+wD
+wD
+wD
+wD
+Mf
+Mf
+wD
+wD
+yj
+ws
+ws
+wD
+wD
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+cS
+cb
+eS
+bb
+bb
+bb
+bb
+bb
+bb
+pU
+Ih
+MC
+ZZ
+ru
+bb
+bb
+bb
+bb
+pl
+bb
+bb
+Me
+Me
+tL
+pg
+cS
+cS
+Mf
+Mf
+Mf
+mK
+mK
+mK
+"}
+(37,1,1) = {"
+mK
+mK
+Mf
+Mf
+za
+za
+za
+Fx
+za
+za
+za
+za
+Dh
+wb
+IA
+Lp
+Lp
+Lp
+RS
+iN
+RS
+za
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+wD
+HO
+tw
+sL
+wD
+bi
+Rp
+Rp
+wD
+HT
+Rp
+Rp
+fE
+yM
+wD
+wD
+Mf
+Mf
+wD
+Pw
+Tt
+Pw
+wD
+Mf
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+Mf
+Mf
+cS
+cS
+wD
+wD
+wD
+wD
+wD
+aA
+aA
+Lv
+wD
+Wy
+ve
+bb
+bb
+bb
+pl
+bb
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+"}
+(38,1,1) = {"
+mK
+Mf
+Mf
+za
+za
+Jh
+rs
+jN
+cp
+za
+za
+za
+CX
+Ux
+tE
+eK
+pD
+eK
+ee
+Lp
+Lp
+hP
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+wD
+wD
+wD
+wD
+wD
+iV
+Ab
+To
+wD
+BF
+tw
+NT
+ez
+NT
+tw
+tw
+tw
+lN
+yM
+wD
+Mf
+wD
+wD
+by
+ef
+Bs
+wD
+wD
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+wD
+nZ
+Zr
+SQ
+wD
+wD
+Mf
+Mf
+Mf
+wD
+gG
+rQ
+pc
+wD
+wD
+NS
+fF
+vA
+ad
+bb
+bb
+bb
+ZK
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(39,1,1) = {"
+mK
+Mf
+za
+za
+pP
+pL
+HB
+Wx
+cW
+za
+za
+EE
+Ak
+CX
+Ux
+bf
+Pg
+Pg
+Wi
+IA
+Lp
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+Rp
+Rp
+yM
+wD
+wD
+sM
+wD
+wD
+hp
+tw
+Ul
+wD
+Tv
+Ul
+Ul
+tw
+tw
+TE
+wD
+wD
+wD
+wg
+cD
+tw
+Ul
+SQ
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+nZ
+yi
+yt
+Ul
+wD
+wD
+Mf
+Mf
+wD
+It
+hc
+NT
+hc
+wD
+Vk
+fW
+tG
+ad
+bb
+bb
+pl
+bb
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(40,1,1) = {"
+mK
+Mf
+za
+if
+zK
+SS
+ci
+SS
+cW
+za
+xx
+xx
+Ak
+md
+ed
+Pg
+wb
+tM
+Pg
+nl
+Lp
+JR
+Iv
+cr
+Iv
+fm
+Iv
+cr
+Iv
+DR
+Iv
+cr
+Iv
+xt
+IE
+tw
+lN
+Rp
+Rp
+Xa
+Rp
+Rp
+lZ
+tw
+Ox
+Pw
+Ul
+Em
+Xi
+Ul
+tw
+Wb
+lA
+Pw
+Ul
+Ox
+tw
+tw
+tw
+Ul
+Ul
+wD
+BK
+Fr
+EQ
+Fr
+Fr
+wD
+yt
+NT
+Ox
+Ul
+Vr
+wD
+wD
+wD
+wD
+YQ
+gv
+NT
+NT
+wD
+Es
+eD
+tx
+ad
+bb
+bb
+bb
+ru
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(41,1,1) = {"
+Mf
+Mf
+za
+se
+Mx
+nw
+Aw
+zx
+cW
+SS
+SS
+rg
+Ak
+Ak
+ed
+tM
+Pg
+Pg
+Pg
+ev
+Lp
+wD
+Uf
+tw
+Iv
+Pw
+Iv
+tw
+Iv
+Pw
+Iv
+tw
+Iv
+Pw
+ky
+tw
+tw
+tw
+tw
+tw
+tw
+tw
+tw
+tw
+Vr
+wD
+IY
+QP
+Gs
+Vr
+tw
+tw
+dD
+aI
+NT
+tw
+tw
+kP
+tw
+tw
+NT
+Sd
+kf
+kf
+PH
+kf
+kf
+kH
+NT
+NT
+NT
+wI
+NT
+jm
+NT
+NT
+ez
+NT
+NT
+NT
+mw
+NJ
+ki
+kh
+zW
+sw
+mh
+bb
+bb
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(42,1,1) = {"
+Mf
+za
+za
+se
+ci
+SS
+ci
+SS
+cW
+za
+xx
+xx
+Ak
+Ak
+ed
+Pg
+Pg
+tM
+Pg
+ev
+iN
+JR
+Iv
+BD
+Iv
+fm
+Iv
+BD
+Iv
+DR
+Iv
+BD
+Iv
+xt
+Ul
+tw
+DT
+KM
+KM
+vy
+KM
+sC
+Bl
+tw
+Ul
+Pw
+Ul
+Em
+Zp
+Ul
+tw
+DT
+TC
+Pw
+Ul
+Ul
+tw
+tw
+YT
+Ul
+EL
+wD
+Ld
+tc
+OJ
+lc
+tc
+wD
+Ul
+wI
+XO
+Vr
+Ul
+wD
+wD
+wD
+wD
+Ym
+iU
+iU
+iU
+wD
+mg
+fF
+tx
+OA
+ad
+ru
+pl
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(43,1,1) = {"
+Mf
+za
+Bz
+Nw
+HB
+HB
+HB
+HB
+cW
+za
+za
+EE
+md
+Lp
+CX
+Ux
+bf
+Pg
+tM
+ev
+Lp
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+KM
+SV
+eb
+wD
+wD
+RW
+wD
+wD
+bW
+tw
+Ox
+wD
+nz
+Ox
+Ul
+tw
+tw
+gX
+wD
+wD
+wD
+EL
+Ul
+tw
+Ul
+Ul
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+nZ
+NT
+SQ
+Ul
+wD
+wD
+Mf
+Mf
+Fq
+MG
+MG
+uK
+iU
+Qe
+SR
+Vk
+vA
+OA
+ad
+bb
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(44,1,1) = {"
+Mf
+za
+za
+oh
+PU
+SS
+Aw
+Ty
+QH
+za
+za
+za
+Lp
+iN
+RS
+Ee
+Ux
+Pg
+KX
+Dm
+Lp
+hP
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+wD
+wD
+wD
+wD
+wD
+kT
+yi
+Yg
+wD
+FD
+tw
+NT
+ez
+NT
+tw
+tw
+tw
+Ww
+eb
+wD
+Mf
+wD
+wD
+zO
+NT
+yt
+wD
+wD
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+wD
+nZ
+lD
+Ul
+wD
+wD
+Mf
+Mf
+Mf
+Fq
+pW
+Rs
+tk
+iU
+wD
+jE
+fF
+vA
+Wy
+ve
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(45,1,1) = {"
+Mf
+Mf
+za
+za
+gI
+po
+po
+EO
+za
+za
+za
+za
+za
+Lp
+RS
+FM
+CX
+lw
+Dm
+iN
+Lp
+za
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+wD
+Ul
+NT
+on
+wD
+mz
+KM
+KM
+wD
+Ax
+KM
+yD
+GB
+KN
+wD
+wD
+Mf
+Mf
+wD
+Pw
+RW
+Pw
+wD
+Mf
+Mf
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+Mf
+Mf
+Mf
+Mf
+Fq
+WY
+WY
+WY
+wD
+wD
+fF
+fF
+vA
+ad
+bb
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(46,1,1) = {"
+mK
+Mf
+Mf
+za
+za
+za
+za
+za
+za
+Mf
+Mf
+Mf
+za
+Lp
+oF
+RS
+Lp
+Lp
+RS
+Lp
+za
+za
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+Vr
+AO
+YM
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+Mf
+Mf
+Mf
+wD
+OV
+NT
+TA
+wD
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+cS
+cS
+wD
+wD
+wD
+wD
+wD
+aA
+aA
+aA
+wD
+ad
+pl
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(47,1,1) = {"
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+Mf
+za
+za
+Lp
+RS
+Bp
+za
+za
+za
+za
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+yF
+hc
+Vr
+yI
+wD
+Yv
+wD
+Yv
+wD
+GD
+wD
+Mf
+Mf
+wD
+wD
+wD
+wD
+wD
+bp
+tw
+xc
+wD
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+cS
+cS
+bb
+Fc
+LD
+Vs
+LD
+OA
+OA
+OA
+uc
+Wy
+ve
+Su
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(48,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+za
+za
+za
+za
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+yI
+NT
+Ul
+Ox
+wD
+Pu
+wD
+Pu
+wD
+Pu
+wD
+Mf
+Mf
+wD
+IC
+JZ
+gK
+cD
+cD
+tw
+TA
+wD
+sT
+aE
+mk
+wD
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+Mf
+cS
+bb
+VM
+IU
+LD
+ND
+LD
+OA
+nG
+Bu
+Bu
+hY
+uz
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(49,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+Ul
+yi
+NT
+NT
+QK
+Gl
+Gl
+mC
+Gl
+Gl
+wD
+wD
+wD
+wD
+IC
+uU
+cD
+Vp
+OV
+tw
+eg
+wD
+TH
+rk
+WZ
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+cS
+cS
+bb
+uO
+LD
+ND
+LD
+nG
+jo
+Fv
+OD
+xf
+RA
+ru
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(50,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+kT
+Ul
+Ox
+Vr
+wD
+qH
+MX
+Cm
+NY
+vn
+wD
+eT
+Bx
+wD
+IC
+gK
+cD
+ha
+OV
+tw
+TA
+yx
+RP
+sU
+IC
+wD
+PM
+rx
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+Mf
+cS
+bb
+bb
+LD
+ND
+LD
+XH
+Fv
+Nv
+Nv
+nL
+RA
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(51,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+sm
+WH
+YY
+gK
+BN
+gK
+ha
+OV
+tw
+TA
+yx
+gK
+aC
+IX
+YY
+WH
+Yt
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+Mf
+cS
+bb
+cb
+KY
+PN
+ND
+GV
+Nv
+HR
+Nv
+Nv
+RA
+bb
+ru
+bb
+Me
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(52,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+wD
+wD
+wD
+wD
+gK
+gK
+gK
+ox
+ZL
+tw
+TA
+wD
+gK
+gK
+VF
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+Mf
+TD
+bb
+bL
+oK
+BS
+pG
+UE
+Fv
+HR
+HR
+Nv
+RA
+bb
+ZK
+bb
+Me
+Me
+Me
+Me
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(53,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+wD
+ql
+pr
+gK
+ox
+OV
+tw
+TA
+wD
+ql
+Yh
+sT
+wD
+WR
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+Mf
+cS
+bb
+gT
+jX
+cb
+jX
+xu
+IM
+hm
+Nv
+Fv
+RA
+pl
+bb
+bb
+Me
+Me
+Me
+Me
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(54,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+wD
+gV
+tw
+xc
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+Mf
+Mf
+mK
+mK
+mK
+mK
+Mf
+cS
+bb
+BR
+Jd
+bb
+Ti
+GU
+nJ
+Fv
+Rq
+Jf
+RA
+bb
+bb
+bb
+Me
+Me
+Me
+Me
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(55,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+ps
+DU
+TH
+Ma
+Pw
+OV
+tw
+TA
+wD
+rm
+sR
+qK
+Sc
+TH
+Cl
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+cS
+bb
+jX
+cb
+Tq
+RZ
+rl
+zI
+Ip
+Ip
+Ip
+KK
+uz
+bb
+bb
+bb
+bb
+bb
+cS
+cS
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(56,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+WQ
+nM
+gK
+pn
+Pw
+OV
+tw
+TA
+wD
+rm
+gK
+xg
+Lb
+gK
+gK
+wx
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+cS
+UL
+UT
+HH
+zI
+Ip
+Ip
+Ip
+Ip
+Ip
+Ip
+Ip
+RA
+bb
+pl
+ru
+bb
+cS
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(57,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+gK
+TH
+gK
+gK
+At
+OV
+tw
+TA
+At
+gK
+su
+LB
+ZH
+gK
+WH
+fd
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+cS
+Ip
+Ip
+Ip
+Ip
+Ip
+cg
+Ip
+Ip
+Ip
+Ip
+Ip
+RA
+bb
+bb
+bb
+cS
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(58,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+XL
+gK
+gK
+zn
+Pw
+OV
+tw
+TA
+wD
+ks
+gK
+ae
+BN
+gK
+gK
+jA
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+cS
+cS
+cS
+cS
+cS
+JB
+cS
+Ip
+Ip
+Ip
+Ip
+Ip
+cS
+cS
+cS
+cS
+cS
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(59,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+DW
+mE
+ly
+jl
+Pw
+OV
+tw
+TA
+wD
+Ma
+of
+gK
+qe
+gK
+Mr
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+cS
+cS
+cS
+cS
+cS
+cS
+cS
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(60,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+wD
+Gb
+tw
+xc
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(61,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+wD
+IC
+JZ
+gK
+wD
+OV
+tw
+TA
+rr
+sk
+JZ
+IC
+wD
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(62,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+LO
+uU
+WH
+wD
+OV
+tw
+TA
+rr
+sk
+rk
+IC
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(63,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+eT
+PM
+wD
+IC
+gK
+gK
+pT
+OV
+tw
+mN
+xr
+sk
+Od
+IC
+wD
+PM
+nv
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(64,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+Cc
+gK
+YY
+gK
+gK
+ae
+pT
+OV
+tw
+TA
+xr
+sk
+sk
+sk
+YY
+gK
+Yt
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(65,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+gK
+WH
+gK
+wD
+kF
+tw
+eg
+rr
+sk
+sk
+Od
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(66,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+wD
+ql
+pr
+gK
+wD
+lU
+gK
+xc
+rr
+ql
+pr
+sk
+wD
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(67,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+wD
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}
+(68,1,1) = {"
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+mK
+"}

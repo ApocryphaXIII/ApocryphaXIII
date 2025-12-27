@@ -1,4 +1,4 @@
-/datum/job/vamp/lasombra
+/*/datum/job/vamp/lasombra
 	title = "Church Caretaker"
 	faction = "Vampire"
 	total_positions = 12
@@ -51,8 +51,8 @@
 		if(H.gender == MALE)
 			shoes = /obj/item/clothing/shoes/vampire
 		else
-			shoes = /obj/item/clothing/shoes/vampire/heels
+			shoes = /obj/item/clothing/shoes/vampire/heels*/
 
 /obj/effect/landmark/start/lasombra
-	name = "Monestary Monk"
+	name = "Church Caretaker"
 	icon_state = "Assistant"

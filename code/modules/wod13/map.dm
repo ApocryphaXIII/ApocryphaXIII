@@ -183,7 +183,7 @@
 	mob_species = /datum/species/human
 	short_desc = "You were sleeping. But you can't anymore."
 	flavour_text = "You woke up because of the stupid washing machines. Probably better that you go and check what the gang's up to..."
-	assignedrole = "Triad Soldier"
+	assignedrole = "Ocean 76er"
 
 /obj/effect/mob_spawn/human/triad_soldier/special(mob/living/new_spawn)
 	var/my_name = "Tyler"

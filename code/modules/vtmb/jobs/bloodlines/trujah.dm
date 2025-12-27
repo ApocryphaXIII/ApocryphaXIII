@@ -1,4 +1,4 @@
-/datum/job/vamp/trujah
+/*/datum/job/vamp/trujah
 	title = "Antique Worker"
 	faction = "Vampire"
 	total_positions = 3
@@ -51,8 +51,8 @@
 		if(H.gender == MALE)
 			shoes = /obj/item/clothing/shoes/vampire
 		else
-			shoes = /obj/item/clothing/shoes/vampire/heels
+			shoes = /obj/item/clothing/shoes/vampire/heels*/
 
 /obj/effect/landmark/start/trujah
-	name = "Antique Shop Worker"
+	name = "Antique Worker"
 	icon_state = "Assistant"

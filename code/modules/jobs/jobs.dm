@@ -31,19 +31,12 @@ GLOBAL_LIST_INIT(anarch_positions, list(
 	"Emissary",
 	"Sweeper",
 	"Bruiser",
-	"Barkeep"
+	"Hireling"
 	))
 
 GLOBAL_LIST_INIT(citizen_positions, list(
 	"Citizen",
-	"Barista",
-	"Mortuary Attendant",
-	"Counselor",
-	"Cabaret Worker",
-	"Church Curator",
-	"Church Caretaker",
-	"Veterinarian",
-	"Antique Worker"
+	"Club Worker",
 ))
 
 GLOBAL_LIST_INIT(police_positions, list(
@@ -59,15 +52,13 @@ GLOBAL_LIST_INIT(national_security_positions, list(
 ))
 
 GLOBAL_LIST_INIT(services_positions, list(
-	"Graveyard Keeper",
-	"Club Worker",
 	"Street Janitor",
 	"Taxi Driver"
 ))
 
 GLOBAL_LIST_INIT(clinic_positions, list(
 //Apoc Edit	"Clinic Director",
-	"Doctor"
+	"Doctor",
 ))
 
 GLOBAL_LIST_INIT(neutral_positions, list())
@@ -104,23 +95,15 @@ GLOBAL_LIST_INIT(church_positions, list(
 ))
 
 GLOBAL_LIST_INIT(gang_positions, list(
-	"Triad Soldier",
+	"Ocean 76er",
 ))
 
-GLOBAL_LIST_INIT(painted_positions, list(
-	"Painted City Councillor",
-	"Painted City Keeper",
-	"Painted City Truthcatcher",
-	"Painted City Warder",
-	"Painted City Guardian"
-))
-
-GLOBAL_LIST_INIT(amberglade_positions, list(
-	"Amberglade Councillor",
-	"Amberglade Keeper",
-	"Amberglade Truthcatcher",
-	"Amberglade Warder",
-	"Amberglade Guardian"
+GLOBAL_LIST_INIT(sept_positions, list(
+	"Councillor",
+	"Wyrmfoe",
+	"Truthcatcher",
+	"Warder",
+	"Guardian"
 ))
 
 GLOBAL_LIST_INIT(spiral_positions, list(
@@ -151,17 +134,16 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_SERVICES = list("jobs" = services_positions, "color" = "#e8e6e6"),
 	EXP_TYPE_CHURCH = list("jobs" = church_positions, "color" = " #fff700"),
 	EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#1d22cc"),
-	EXP_TYPE_NATIONAL_SECURITY = list("jobs" = national_security_positions, "color" = " #000491"), //APOC EDIT
+	EXP_TYPE_NATIONAL_SECURITY = list("jobs" = national_security_positions, "color" = "#000491"), //APOC EDIT
 	EXP_TYPE_GANG = list("jobs" = gang_positions, "color" = "#837524"),
 	EXP_TYPE_VOIVODATE = list("jobs" = voivodate_positions, "color" = "#fa0207"),
-	EXP_TYPE_PAINTED_CITY = list("jobs" = painted_positions, "color" = "#7195ad"),
-	EXP_TYPE_AMBERGLADE = list("jobs" = amberglade_positions, "color" = "#69e430"),
+	EXP_TYPE_SEPT = list("jobs" = sept_positions, "color" = "#69e430"),
 	EXP_TYPE_SPIRAL = list("jobs" = spiral_positions, "color" = "#015334")
 ))
 
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
-	EXP_TYPE_CREW = list("titles" = command_positions | church_positions | camarilla_council_positions | citizen_positions | police_positions | national_security_positions | anarch_positions | services_positions  | giovanni_positions | voivodate_positions | warehouse_positions | tremere_positions | gang_positions | clinic_positions | painted_positions | amberglade_positions | spiral_positions), // crew positions //APOC EDIT
+	EXP_TYPE_CREW = list("titles" = command_positions | church_positions | camarilla_council_positions | citizen_positions | police_positions | national_security_positions | anarch_positions | services_positions  | giovanni_positions | voivodate_positions | warehouse_positions | tremere_positions | gang_positions | clinic_positions | sept_positions | spiral_positions), // crew positions //APOC EDIT
 	EXP_TYPE_CAMARILLIA = list("titles" = command_positions),
 	EXP_TYPE_TREMERE = list("titles" = tremere_positions),
 	EXP_TYPE_ANARCH = list("titles" = anarch_positions),
@@ -176,8 +158,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_WAREHOUSE = list("titles" = warehouse_positions),
 	EXP_TYPE_CHURCH = list("titles" = church_positions),
 	EXP_TYPE_NATIONAL_SECURITY = list("titles" = national_security_positions),
-	EXP_TYPE_PAINTED_CITY = list("titles" = painted_positions),
-	EXP_TYPE_AMBERGLADE = list("titles" = amberglade_positions),
+	EXP_TYPE_SEPT = list("titles" = sept_positions),
 	EXP_TYPE_SPIRAL = list("titles" = spiral_positions)
 
 ))

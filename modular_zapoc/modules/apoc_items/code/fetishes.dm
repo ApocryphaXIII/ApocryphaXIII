@@ -216,8 +216,9 @@
 
 /obj/item/vtm_artifact/dagger_of_retribution/process()
 	var/turf/T = get_turf(src)
+	var/turf/bound_item_turf = get_turf(bound_item)
 
-	if(T.z == bound_item.z)
+	if(T.z == bound_item_turf.z)
 		point_to_target()
 		spinning = 0
 	else if(!spinning)

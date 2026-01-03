@@ -1,0 +1,2 @@
+/obj/effect/landmark/start/garou/painted : @DELETE
+/obj/effect/landmark/start/garou/painted/@SUBTYPES : @DELETE

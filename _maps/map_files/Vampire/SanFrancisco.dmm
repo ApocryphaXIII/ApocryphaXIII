@@ -1967,13 +1967,6 @@
 	},
 /turf/open/floor/plating/circled,
 /area/vtm/interior/wyrm_corrupted)
-"ava" = (
-/obj/effect/turf_decal/bordur{
-	dir = 4
-	},
-/obj/effect/landmark/npcwall,
-/turf/open/floor/plating/sidewalkalt,
-/area/vtm/chinatown)
 "ave" = (
 /obj/machinery/deepfryer,
 /obj/machinery/light{
@@ -8552,6 +8545,12 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest/sept)
+"bSG" = (
+/obj/effect/turf_decal/bordur/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/interior)
 "bSK" = (
 /obj/effect/decal/cleanable/cardboard,
 /obj/effect/decal/cleanable/litter,
@@ -15198,7 +15197,6 @@
 /obj/structure/chair/wood{
 	dir = 1
 	},
-/obj/effect/landmark/start/garou/painted/guardian,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/cog/caern)
 "dme" = (
@@ -16106,13 +16104,12 @@
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/giovanni)
 "dwC" = (
-/obj/structure/vampfence/rich{
-	density = 0;
-	dir = 4;
-	pixel_y = 8
-	},
 /obj/effect/turf_decal/bordur{
 	dir = 1
+	},
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 4
 	},
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/pacificheights/old)
@@ -16990,13 +16987,6 @@
 	},
 /turf/open/openspace,
 /area/vtm/interior/millennium_tower/f2)
-"dHr" = (
-/obj/structure/chair/wood{
-	dir = 4
-	},
-/obj/effect/landmark/start/garou/painted/council,
-/turf/open/floor/carpet/vamp,
-/area/vtm/interior/cog/caern)
 "dHv" = (
 /obj/effect/turf_decal/bordur{
 	dir = 9
@@ -19101,7 +19091,7 @@
 /obj/effect/turf_decal/bordur/corner,
 /obj/structure/vampfence/corner/rich{
 	dir = 8;
-	pixel_y = 9
+	pixel_y = 8
 	},
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/pacificheights/old)
@@ -19920,7 +19910,6 @@
 /area/vtm/interior/theatre)
 "eoT" = (
 /obj/structure/chair/wood,
-/obj/effect/landmark/start/garou/painted/council,
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/cog/caern)
 "epn" = (
@@ -20248,7 +20237,6 @@
 "esN" = (
 /obj/structure/bed,
 /obj/item/bedsheet/random,
-/obj/effect/landmark/start/garou/painted/guardian,
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/cog/caern)
 "esS" = (
@@ -41557,13 +41545,6 @@
 /obj/structure/ladder/manhole/up,
 /turf/open/floor/plating/concrete,
 /area/vtm/anarch/basement)
-"jfA" = (
-/obj/structure/chair/wood{
-	dir = 8
-	},
-/obj/effect/landmark/start/garou/painted/catcher,
-/turf/open/floor/carpet/vamp,
-/area/vtm/interior/cog/caern)
 "jfB" = (
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/strip/toreador)
@@ -42749,7 +42730,6 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/obj/effect/landmark/start/garou/painted/keeper,
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/cog/caern)
 "jtw" = (
@@ -64575,7 +64555,6 @@
 /obj/effect/turf_decal/bordur/corner{
 	dir = 4
 	},
-/obj/effect/landmark/npcwall,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/chinatown)
 "ohL" = (
@@ -67207,7 +67186,6 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/obj/effect/landmark/start/garou/painted/warder,
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/cog/caern)
 "oJK" = (
@@ -68821,7 +68799,6 @@
 /obj/structure/chair/sofa/corp/right{
 	dir = 1
 	},
-/obj/effect/landmark/start/garou/painted/guardian,
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/cog/pantry)
 "paE" = (
@@ -70823,7 +70800,7 @@
 "pyn" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 1;
-	pixel_y = 8
+	pixel_y = 4
 	},
 /obj/effect/turf_decal/bordur/corner{
 	dir = 1
@@ -76600,7 +76577,6 @@
 /obj/structure/chair/sofa/corp/left{
 	dir = 1
 	},
-/obj/effect/landmark/start/garou/painted/guardian,
 /turf/open/floor/carpet/vamp,
 /area/vtm/interior/cog/pantry)
 "qIU" = (
@@ -105669,7 +105645,6 @@
 /area/vtm/interior/cog/caern)
 "xcs" = (
 /obj/structure/chair/wood,
-/obj/effect/landmark/start/garou/painted/guardian,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/cog/caern)
 "xcu" = (
@@ -123760,7 +123735,7 @@ aSn
 xKh
 tCT
 tqk
-dHr
+jtk
 jtk
 tqk
 vgY
@@ -124531,7 +124506,7 @@ xQg
 qaF
 tCT
 tqk
-jfA
+oJG
 oJG
 tqk
 tCT
@@ -205006,7 +204981,7 @@ aoy
 tHv
 xtV
 xtV
-cey
+bSG
 aoy
 aoy
 pcT
@@ -230675,7 +230650,7 @@ aoy
 jTk
 rtY
 dhb
-vLv
+dhb
 vLv
 vLv
 vLv
@@ -230932,7 +230907,7 @@ aoy
 jTk
 rtY
 dhb
-vLv
+dhb
 vLv
 vLv
 kxZ
@@ -231189,7 +231164,7 @@ jTk
 jTk
 rtY
 dhb
-vLv
+dhb
 vLv
 vLv
 vLv
@@ -231443,10 +231418,10 @@ ksu
 ksu
 ksu
 ksu
-ava
+ksu
 ohI
 dhb
-vLv
+dhb
 vLv
 vLv
 vLv
@@ -231701,9 +231676,9 @@ dhb
 dhb
 dhb
 qeN
-vLv
-vLv
-vLv
+dhb
+dhb
+dhb
 vLv
 vLv
 vLv
@@ -231725,7 +231700,7 @@ vLv
 vLv
 vLv
 wxM
-vLv
+dhb
 dhb
 hun
 laU
@@ -231958,9 +231933,9 @@ dhb
 dhb
 dhb
 dhb
-vLv
-vLv
-vLv
+dhb
+dhb
+dhb
 vLv
 eZL
 vLv
@@ -231982,7 +231957,7 @@ vLv
 vLv
 vLv
 luE
-vLv
+dhb
 bBe
 hun
 laU
@@ -232239,7 +232214,7 @@ vLv
 vLv
 vLv
 vLv
-vLv
+dhb
 dhb
 hun
 laU
@@ -232496,7 +232471,7 @@ vLv
 vLv
 vLv
 vLv
-vLv
+dhb
 dhb
 hun
 laU
@@ -238150,7 +238125,7 @@ vLv
 vLv
 vLv
 vLv
-vLv
+dhb
 dhb
 tGO
 okA
@@ -238407,7 +238382,7 @@ kxZ
 kxZ
 vLv
 vLv
-vLv
+dhb
 dhb
 tGO
 okA
@@ -238664,7 +238639,7 @@ vLv
 kxZ
 kxZ
 vLv
-vLv
+dhb
 dhb
 hun
 laU
@@ -238921,7 +238896,7 @@ vLv
 vLv
 kxZ
 vLv
-vLv
+dhb
 dhb
 hun
 sNz
@@ -239178,7 +239153,7 @@ kxZ
 kxZ
 eKy
 vLv
-vLv
+dhb
 dhb
 hun
 laU
@@ -239435,7 +239410,7 @@ vLv
 vLv
 vLv
 vLv
-vLv
+dhb
 dhb
 xRY
 laU

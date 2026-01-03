@@ -4,7 +4,7 @@
 	faction = "Vampire"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "The Club Owner (Toreador Primogen)"
+	supervisors = "the Club Owner"
 	selection_color = "#e3e3e3"
 	access = list()
 	minimal_access = list()
@@ -41,5 +41,5 @@
 		uniform = /obj/item/clothing/under/vampire/burlesque
 
 /obj/effect/landmark/start/strip
-	name = "Strip"
+	name = "Club Worker"
 	icon_state = "Assistant"

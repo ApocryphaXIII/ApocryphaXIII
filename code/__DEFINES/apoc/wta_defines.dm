@@ -1,3 +1,5 @@
+#define SEPT_NAME "Sept of the Western Eye"
+
 #define TRIBE_NONE "Ronin"
 
 #define TRIBE_GALESTALKERS "Galestalkers"

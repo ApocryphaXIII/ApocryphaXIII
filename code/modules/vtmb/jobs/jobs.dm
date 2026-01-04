@@ -188,7 +188,7 @@
 
 //Apoc addition
 /obj/item/card/id/bruiser/barkeep
-	name = "barkeep's badge"
+	name = "hireling's badge"
 
 /obj/item/card/id/sweeper
 	name = "sweeper badge"

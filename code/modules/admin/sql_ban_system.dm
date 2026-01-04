@@ -245,8 +245,7 @@
 							"City Services" = GLOB.services_positions,
 							"Clinic" = GLOB.clinic_positions,
 							"Church" = GLOB.church_positions,
-							"Painted City" = GLOB.painted_positions,
-							"Amberglade" = GLOB.amberglade_positions,
+							"Garou Nation" = GLOB.sept_positions,
 							"Endron" = GLOB.spiral_positions)
 		for(var/department in job_lists)
 			output += "<div class='column'><label class='rolegroup [ckey(department)]'><input type='checkbox' name='[department]' class='hidden' [usr.client.prefs.tgui_fancy ? " onClick='toggle_checkboxes(this, \"_com\")'" : ""]>[department]</label><div class='content'>"

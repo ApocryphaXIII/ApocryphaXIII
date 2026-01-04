@@ -149,18 +149,22 @@
 		"Seer's Voivodate", //APOC EDIT
 		"Law Enforcement",
 		"Warehouse",
-		"Triad"
+		"Western Eye",
+		"Endron Intl.",
+		"Gangs"
 	)
 	var/list/departments = list(
 		"Camarilla" = GLOB.command_positions,
 		"Primogen Council" = GLOB.camarilla_council_positions,
-		"Tremere" = GLOB.tremere_positions,
+		"Chantry" = GLOB.tremere_positions,
 		"Anarch" = GLOB.anarch_positions,
 		"Giovanni" = GLOB.giovanni_positions,
 		"Seer's Voivodate" = GLOB.voivodate_positions, //APOC EDIT
 		"Law Enforcement" = GLOB.police_positions + GLOB.national_security_positions,
 		"Warehouse" = GLOB.warehouse_positions,
-		"Triad" = GLOB.gang_positions
+		"Western Eye" = GLOB.sept_positions,
+		"Endron Intl." = GLOB.spiral_positions,
+		"Gangs" = GLOB.gang_positions
 	)
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]

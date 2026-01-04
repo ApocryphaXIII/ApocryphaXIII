@@ -1,4 +1,4 @@
-/datum/job/vamp/baali
+/*/datum/job/vamp/baali
 	title = "Counselor"
 	faction = "Vampire"
 	total_positions = 3
@@ -51,7 +51,7 @@
 		if(H.gender == MALE)
 			shoes = /obj/item/clothing/shoes/vampire
 		else
-			shoes = /obj/item/clothing/shoes/vampire/heels
+			shoes = /obj/item/clothing/shoes/vampire/heels*/
 
 /obj/effect/landmark/start/baali
 	name = "Counselor"

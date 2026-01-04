@@ -50,6 +50,7 @@
 		/datum/action/gift/infest = 2,
 		/datum/action/gift/gift_of_the_termite = 3
 	)
+	tribe_keys = /obj/item/vamp/keys/children_of_gaia
 
 /datum/garou_tribe/childrenofgaia
 	name = "Children of Gaia"
@@ -59,6 +60,7 @@
 		/datum/action/gift/freezing_wind = 2,
 		/datum/action/gift/bloody_feast = 3
 	)
+	tribe_keys = /obj/item/vamp/keys/children_of_gaia
 
 /datum/garou_tribe/getoffenris
 	name = "Get of Fenris"

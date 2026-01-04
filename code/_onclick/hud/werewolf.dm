@@ -131,7 +131,6 @@
 				playsound(get_turf(C),'code/modules/wod13/sounds/cawcrinos.ogg', 100, FALSE)
 		else
 			C.emote("howl")
-			playsound(get_turf(C), pick('code/modules/wod13/sounds/awo1.ogg', 'code/modules/wod13/sounds/awo2.ogg'), 100, FALSE)
 		icon_state = "[GLOB.moon_state]"
 		adjust_rage(1, C, TRUE)
 

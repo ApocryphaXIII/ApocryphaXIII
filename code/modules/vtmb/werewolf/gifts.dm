@@ -173,14 +173,11 @@
 	if(allowed_to_proceed)
 		var/mob/living/carbon/C = owner
 		C.emote("howl")
-		playsound(get_turf(C), pick('code/modules/wod13/sounds/awo1.ogg', 'code/modules/wod13/sounds/awo2.ogg'), 100, FALSE)
 		for(var/mob/living/carbon/A in orange(6, owner))
-			if(A)
-				if(isgarou(A) || iswerewolf(A))
-					A.emote("howl")
-					playsound(get_turf(A), pick('code/modules/wod13/sounds/awo1.ogg', 'code/modules/wod13/sounds/awo2.ogg'), 100, FALSE)
-					spawn(10)
-						adjust_gnosis(1, A, TRUE)
+			if(isgarou(A) || iswerewolf(A))
+				A.emote("howl")
+				spawn(10)
+					adjust_gnosis(1, A, TRUE)
 
 /datum/action/gift/mindspeak
 	name = "Mindspeak"
@@ -595,7 +592,6 @@
 
 			C.emote("howl")
 			var/origin_turf = get_turf(C)
-			playsound(origin_turf, pick('code/modules/wod13/sounds/awo1.ogg', 'code/modules/wod13/sounds/awo2.ogg'), 50, FALSE)
 			var/list/sound_hearers = list()
 
 			for(var/mob/living/carbon/HearingGarou in range(17))

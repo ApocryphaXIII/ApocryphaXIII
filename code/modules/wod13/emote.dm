@@ -52,6 +52,10 @@
 	. = ..()
 	if(isgarou(user) || iswerewolf(user))
 		playsound(get_turf(user), pick('code/modules/wod13/sounds/awo1.ogg', 'code/modules/wod13/sounds/awo2.ogg'), 100, FALSE, extrarange = 30)
+	else if(iscarbon(user))
+		var/mob/living/carbon/human/vamp = user
+		if(vamp.clan.name == CLAN_GANGREL)
+			playsound(get_turf(user), pick('code/modules/wod13/sounds/awo1.ogg', 'code/modules/wod13/sounds/awo2.ogg'), 100, FALSE)
 
 /datum/emote/living/snarl // TFN EDIT START - Small Emote Expansion #808 - Does The Thing
 	key = "snarl"

@@ -29,7 +29,7 @@
 
 /obj/item/detective_scanner/attack_self(mob/user)
 	if(log.len && !scanning)
-		scanning = TRUE
+//		scanning = TRUE // APOC EDIT CHANGE - Why is this like this???
 		to_chat(user, "<span class='notice'>Analyzing report...</span>")
 		displayDetectiveScanResults(user)
 	else

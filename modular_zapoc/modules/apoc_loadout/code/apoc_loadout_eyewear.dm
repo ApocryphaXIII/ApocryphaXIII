@@ -54,41 +54,41 @@
 	path = /obj/item/clothing/glasses/vampire/retro
 
 
-	/datum/gear/eyewear/threedee
+/datum/gear/eyewear/threedee
 	display_name = "glasses, 3D"
 	path = /obj/item/clothing/glasses/vampire/threedee
 
 
-	/datum/gear/eyewear/safetygoggles
+/datum/gear/eyewear/safetygoggles
 	display_name = "goggles, safety"
 	path = /obj/item/clothing/glasses/vampire/safetygoggles
 
 
-	/datum/gear/eyewear/bigsunglasses
+/datum/gear/eyewear/bigsunglasses
 	display_name = "sunglasses, oversized"
 	path = /obj/item/clothing/glasses/vampire/bigsunglasses
 
 
-	/datum/gear/eyewear/thinsunglasses
+/datum/gear/eyewear/thinsunglasses
 	display_name = "sunglasses, thin"
 	path = /obj/item/clothing/glasses/vampire/thinsunglasses
 
 
-	/datum/gear/eyewear/normal_aviators
+/datum/gear/eyewear/normal_aviators
 	display_name = "aviator"
 	path = /obj/item/clothing/glasses/vampire/aviator
 
 
-	/datum/gear/eyewear/aviator_green
+/datum/gear/eyewear/aviator_green
 	display_name = "aviator, green"
 	path = /obj/item/clothing/glasses/vampire/aviator_green
 
 
-	/datum/gear/eyewear/aviator_blue
+/datum/gear/eyewear/aviator_blue
 	display_name = "aviator, blue"
 	path = /obj/item/clothing/glasses/vampire/aviator_blue
 
 
-	/datum/gear/eyewear/aviator_red
+/datum/gear/eyewear/aviator_red
 	display_name = "aviator, red (alt)"
 	path = /obj/item/clothing/glasses/vampire/aviator_red

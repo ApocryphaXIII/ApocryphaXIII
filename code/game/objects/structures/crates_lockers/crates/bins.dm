@@ -56,6 +56,7 @@
 	icon_state = "garbage"
 	anchored = TRUE
 	density = TRUE
+	max_mob_size = MOB_SIZE_LARGE
 	var/internal_trash_chance = 75
 	var/external_trash_chance = 10
 

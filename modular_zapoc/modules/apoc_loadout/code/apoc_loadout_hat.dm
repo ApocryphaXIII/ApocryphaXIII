@@ -19,7 +19,7 @@
 
 /datum/gear/hat/cowboy_black
 	display_name = "cowboy hat, black"
-	path = /obj/item/clothing/head/vampire/armorless/cowboy_black
+	path = /obj/item/clothing/head/vampire/cowboy/armorless/cowboy_black
 
 /datum/gear/hat/cowboy_wide
 	display_name = "cowboy hat, wide"
@@ -123,7 +123,7 @@
 
 /datum/gear/hat/pagecap
 	display_name = "page cap"
-	path = /obj/item/clothing/head/vampire/pagecap
+	path = /obj/item/clothing/head/pagecap
 
 /datum/gear/hat/frillyheadband
 	display_name = "frilly headband"

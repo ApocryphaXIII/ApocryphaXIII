@@ -1290,7 +1290,7 @@ LOW_WALL_HELPER(vampwall/wood)
 
 /turf/open/floor/plating/vampcanal/Enter(atom/movable/mover, atom/oldloc)
 	. = ..()
-	if(istype(mover, /mob/living/carbon/human))
+	if(istype(mover, /mob/living/carbon/human) && mover.client)
 		if(prob(0.5))
 			var/cap = CONFIG_GET(number/ratcap)
 			if(LAZYLEN(SSmobs.cheeserats) >= cap)

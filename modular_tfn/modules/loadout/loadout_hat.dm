@@ -48,7 +48,7 @@
 	path = /obj/item/clothing/head/vampire/beanie/black
 
 /datum/gear/hat/beanie/homeless
-	display_name = "beanie, rough"
+	display_name = "coif" // APOC EDIT CHANGE
 	path = /obj/item/clothing/head/vampire/beanie/homeless
 
 // Misc

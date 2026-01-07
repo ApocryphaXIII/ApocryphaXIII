@@ -51,6 +51,7 @@
 
 /datum/gear/hat/fedora
 	display_name = "fedora"
+	description = "A wide hat for journalists and wannabes."
 	path = /obj/item/clothing/head/vampire/fedora
 
 /datum/gear/hat/mariner
@@ -102,22 +103,23 @@
 	path = /obj/item/clothing/head/vampire/boater_hat
 
 /datum/gear/hat/beaver_hat
-	display_name = "raccoon hat"
+	display_name = "beaver hat"
 	path = /obj/item/clothing/head/vampire/beaver_hat
 
 /datum/gear/hat/woolhat
-	display_name = "wool hat, white"
+	display_name = "beanie, white"
 	path = /obj/item/clothing/head/vampire/woolhat
 
 /datum/gear/hat/woolhat_blue
-	display_name = "wool hat, blue"
+	display_name = "beanie, blue and white"
 	path = /obj/item/clothing/head/vampire/woolhat/woolhat_blue
 
 /datum/gear/hat/picture_hat
 	display_name = "picture hat"
+	description = "A wide floppy hat."
 	path = /obj/item/clothing/head/vampire/picture_hat
 
-/datum/gear/hat/picture_red
+/datum/gear/hat/picture_hat/red
 	display_name ="picture hat, red"
 	path = /obj/item/clothing/head/vampire/picture_hat/picture_red
 

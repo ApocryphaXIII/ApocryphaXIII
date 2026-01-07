@@ -111,6 +111,7 @@
 
 /datum/gear/suit/striped_sweater
 	display_name = "striped sweater"
+	description = "Reminds you of someone." // APOC EDIT CHANGE
 	path = /obj/item/clothing/suit/striped_sweater
 
 /datum/gear/suit/letterman_red

@@ -19,11 +19,11 @@
 	path = /obj/item/clothing/under/vampire/fancy_red
 
 /datum/gear/uniform/suit/fancy_black
-	display_name = "luxury suit, black"
+	display_name = "luxury suit, brown" // APOC EDIT CHANGE
 	path = /obj/item/clothing/under/vampire/ventrue
 
 /datum/gear/uniform/suit/fancy_black_skirt
-	display_name = "luxury suitskirt, black"
+	display_name = "luxury suitskirt, brown" // APOC EDIT CHANGE
 	path = /obj/item/clothing/under/vampire/ventrue/female
 
 /datum/gear/uniform/suit/formal_white

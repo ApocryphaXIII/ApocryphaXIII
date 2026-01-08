@@ -143,7 +143,7 @@
 	var/list/manifest_out = list(
 		"Camarilla",
 		"Primogen Council",
-		"Tremere",
+		"Chantry",
 		"Anarch",
 		"Giovanni",
 		"Seer's Voivodate", //APOC EDIT

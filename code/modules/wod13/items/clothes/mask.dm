@@ -3,6 +3,7 @@
 	desc = "A face-covering mask that can be connected to an air supply. While good for concealing your identity, it isn't good for blocking gas flow." //More accurate
 	icon_state = "respirator"
 	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
+	visor_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
@@ -16,21 +17,30 @@
 	body_worn = TRUE
 	custom_price = 15
 
+/obj/item/clothing/mask/vampire/verb/reveal_face()
+	set name = "Conceal/Reveal Face"
+	set category = null
+	set src in usr
+	if(flags_inv)
+		flags_inv = NONE
+	else
+		flags_inv = initial(flags_inv)
+
 /obj/item/clothing/mask/vampire/balaclava
 	name = "balaclava"
 	desc = "LOADSAMONEY"
 	icon_state = "balaclava"
 	inhand_icon_state = "balaclava"
-	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
-	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+//	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+//	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/clothing/mask/pentex/pentex_balaclava
 	name = "Thick balaclava"
 	desc = "A black balaclava. This one is particularly thick."
 	icon_state = "pentex_balaclava"
-	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
-	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+//	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+//	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/clothing/mask/vampire/tragedy
@@ -38,8 +48,8 @@
 	desc = "The Greek Tragedy mask."
 	icon_state = "tragedy"
 	inhand_icon_state = "tragedy"
-	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
-	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+//	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+//	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/clothing/mask/vampire/comedy
@@ -47,8 +57,8 @@
 	desc = "The Greek Comedy mask."
 	icon_state = "comedy"
 	inhand_icon_state = "comedy"
-	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
-	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+//	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+//	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/clothing/mask/vampire/shemagh
@@ -56,8 +66,8 @@
 	desc = "Covers your face pretty well."
 	icon_state = "shemagh"
 	inhand_icon_state = "shemagh"
-	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
-	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+//	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+//	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/clothing/mask/vampire/venetian_mask

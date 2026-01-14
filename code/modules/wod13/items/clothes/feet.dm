@@ -26,7 +26,35 @@
 	name = "jackboots"
 	desc = "Robust-looking boots."
 	icon_state = "jackboots"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	pocket_storage_component_path = /datum/component/storage/concrete/vampboots
+
+/datum/component/storage/concrete/vampboots
+	max_w_class = WEIGHT_CLASS_NORMAL
+	max_combined_w_class = 14
+	max_items = 2
+
+	silent = TRUE
+	rustle_sound = FALSE
+
+	attack_hand_interact = FALSE
+	quickdraw = TRUE
+
+	screen_max_columns = 2
+	screen_max_rows = 2
+
+/datum/component/storage/concrete/vampboots/Initialize() // APOC EDIT CHANGE - Added some vamp items
+	. = ..()
+	set_holdable(list(
+		/obj/item/kitchen/knife, /obj/item/switchblade, /obj/item/pen,
+		/obj/item/scalpel, /obj/item/reagent_containers/syringe, /obj/item/dnainjector,
+		/obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/dropper,
+		/obj/item/implanter, /obj/item/screwdriver, /obj/item/weldingtool/mini,
+		/obj/item/firing_pin, /obj/item/vamp/keys, /obj/item/melee/vampirearms/knife, /obj/item/vampire_stake, /obj/item/vtm_artifact/dagger_of_retribution,
+		/obj/item/ammo_box/magazine, /obj/item/ammo_casing, /obj/item/reagent_containers/pill, /obj/item/reagent_containers/hypospray/medipen, /obj/item/stack/medical,
+		/obj/item/clothing/gloves
+		),
+		list(/obj/item/screwdriver/power)
+		)
 
 /obj/item/clothing/shoes/vampire/jackboots/high
 	name = "high boots"

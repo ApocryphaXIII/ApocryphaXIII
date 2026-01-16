@@ -3853,6 +3853,7 @@
 #include "modular_zapoc\modules\apoc_weapons\code\woodspear.dm"
 #include "modular_zapoc\modules\carpets\code\carpets.dm"
 #include "modular_zapoc\modules\clothing\code\beret_white.dm"
+#include "modular_zapoc\modules\clothing\code\brass_key.dm"
 #include "modular_zapoc\modules\clothing\code\bulletproofcoat.dm"
 #include "modular_zapoc\modules\clothing\code\endron_gasmask.dm"
 #include "modular_zapoc\modules\clothing\code\eyepatches.dm"

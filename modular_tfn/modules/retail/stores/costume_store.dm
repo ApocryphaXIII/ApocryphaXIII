@@ -76,4 +76,5 @@
 		new /datum/data/vending_product("blue singer boots",	/obj/item/clothing/shoes/singerb,	50),
 		new /datum/data/vending_product("red singer outfit",	/obj/item/clothing/under/costume/singer/red,	50),
 		new /datum/data/vending_product("red singer boots",	/obj/item/clothing/shoes/singerr,	50),
+		new /datum/data/vending_product("doll's key",	/obj/item/brass_key,	50),
 	)

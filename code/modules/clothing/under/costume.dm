@@ -157,6 +157,12 @@
 	inhand_icon_state = "bsing"
 	fitted = FEMALE_UNIFORM_TOP
 
+/obj/item/clothing/under/costume/singer/red
+	name = "red performer's outfit"
+	icon_state = "rsing"
+	inhand_icon_state = "rsing"
+	fitted = FEMALE_UNIFORM_TOP
+
 /obj/item/clothing/under/costume/mummy
 	name = "mummy wrapping"
 	desc = "Return the slab or suffer my stale references."

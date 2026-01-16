@@ -46,7 +46,7 @@
 		new /datum/data/vending_product("white wizard hat",	/obj/item/clothing/head/vampire/wizard/white, 25),
 		new /datum/data/vending_product("black wizard hat",	/obj/item/clothing/head/vampire/wizard/black, 25),
 		new /datum/data/vending_product("purple wizard hat",	/obj/item/clothing/head/vampire/wizard/purple, 25),
-			// requiem port 
+			// requiem port
 		new /datum/data/vending_product("white veil",		/obj/item/clothing/glasses/vampire/white_veil, 25 ),
 		new /datum/data/vending_product("black veil", /obj/item/clothing/glasses/vampire/black_veil, 25 ),
 		new /datum/data/vending_product("brown cowboy hat", /obj/item/clothing/head/vampire/cowboy/armorless/cowboyhat, 20),
@@ -72,4 +72,8 @@
 		new /datum/data/vending_product("panama hat", /obj/item/clothing/head/vampire/panama, 15),
 		new /datum/data/vending_product("authentic maid dress", /obj/item/clothing/under/vampire/maid, 60),
 		new /datum/data/vending_product("dracula coat", /obj/item/clothing/suit/dracula, 60),
+		new /datum/data/vending_product("blue singer outfit",	/obj/item/clothing/under/costume/singer/blue,	50),
+		new /datum/data/vending_product("blue singer boots",	/obj/item/clothing/shoes/singerb,	50),
+		new /datum/data/vending_product("red singer outfit",	/obj/item/clothing/under/costume/singer/red,	50),
+		new /datum/data/vending_product("red singer boots",	/obj/item/clothing/shoes/singerr,	50),
 	)

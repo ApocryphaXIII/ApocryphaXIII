@@ -19,4 +19,8 @@
 		new /datum/data/vending_product("pentagram skirt",	/obj/item/clothing/under/vampire/baali/female,	20),
 		new /datum/data/vending_product("punk outfit",	/obj/item/clothing/under/vampire/emo,	20),
 		new /datum/data/vending_product("red hipster outfit",	/obj/item/clothing/under/vampire/red,	20),
+		new /datum/data/vending_product("blue singer outfit",	/obj/item/clothing/under/costume/singer/blue,	50),
+		new /datum/data/vending_product("blue singer boots",	/obj/item/clothing/shoes/singerb,	50),
+		new /datum/data/vending_product("red singer outfit",	/obj/item/clothing/under/costume/singer/red,	50),
+		new /datum/data/vending_product("red singer boots",	/obj/item/clothing/shoes/singerr,	50),
 	)

@@ -39,10 +39,9 @@
 #define PRELOAD_RSC	0		//	0 to allow using external resources or on-demand behaviour;						//	1 to use the default behaviour;
 								//	2 for preloading absolutely everything;
 
-#warn dont leave in
-//#ifdef LOWMEMORYMODE
-#define FORCE_MAP "_maps/special_francisco.json"
-//#endif
+#ifdef LOWMEMORYMODE
+#define FORCE_MAP "_maps/runtimetown.json"
+#endif
 
 #if (DM_VERSION < MIN_COMPILER_VERSION || DM_BUILD < MIN_COMPILER_BUILD) && !defined(SPACEMAN_DMM)
 //Don't forget to update this part

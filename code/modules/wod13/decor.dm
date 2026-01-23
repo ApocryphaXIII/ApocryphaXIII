@@ -141,6 +141,7 @@
 
 /obj/structure/lamppost/sidewalk
 	icon_state = "civ"
+	base_icon_state = "civ"
 	number_of_lamps = 5
 
 /obj/structure/lamppost/sidewalk/winter
@@ -148,7 +149,7 @@
 
 /obj/structure/lamppost/sidewalk/winter/Initialize()
 	. = ..()
-	icon_state = "[initial(icon_state)]-snow"
+	icon_state = "[base_icon_state]-snow"
 
 /obj/structure/lamppost/sidewalk/chinese
 	icon_state = "chinese"

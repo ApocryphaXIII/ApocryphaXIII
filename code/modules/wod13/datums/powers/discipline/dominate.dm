@@ -136,7 +136,7 @@
 		var/custom_command_raw = input(owner, "What is your command? One word only.") as text|null // APOC EDIT ADD
 		var/custom_command = truncate(custom_command_raw, findtext(custom_command_raw, " "))
 		to_chat(owner, span_warning("You've successfully dominated [target]'s mind!"))
-		to_chat(target, span_danger("Your mind crumbles, ambitions replaced with the authority of a command: [span_purple(custom_command)]")) // APOC EDIT ADD
+		to_chat(target, span_boldwarning("Your mind crumbles, ambitions replaced with the authority of a command: [span_purple(custom_command)]")) // APOC EDIT ADD
 		SEND_SOUND(target, sound('code/modules/wod13/sounds/dominate.ogg'))
 	else
 		to_chat(owner, span_warning("[target]'s mind has resisted your domination!"))

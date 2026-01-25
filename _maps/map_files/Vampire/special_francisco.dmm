@@ -12061,14 +12061,15 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
 "gBo" = (
+/obj/effect/turf_decal/bordur{
+	dir = 4
+	},
 /obj/structure/chair{
 	name = "sitting rock";
 	desc = "You sit on this. Either by will or force.";
 	icon = 'code/modules/wod13/props.dmi';
-	icon_state = "rock5"
-	},
-/obj/effect/turf_decal/bordur{
-	dir = 4
+	icon_state = "rock5";
+	dir = 8
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm)
@@ -42570,7 +42571,8 @@
 	name = "sitting rock";
 	desc = "You sit on this. Either by will or force.";
 	icon = 'code/modules/wod13/props.dmi';
-	icon_state = "rock5"
+	icon_state = "rock5";
+	dir = 4
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm)

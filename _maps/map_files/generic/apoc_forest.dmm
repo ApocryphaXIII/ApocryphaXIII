@@ -443,12 +443,6 @@
 /area/vtm/planetgeneration)
 "dh" = (
 /obj/effect/decal/wallpaper/rock/low,
-/obj/item/flashlight/lantern{
-	on = 14;
-	light_on = 1;
-	pixel_x = 8;
-	pixel_y = 7
-	},
 /obj/structure/stone_tile/slab/cracked,
 /obj/structure/railing{
 	dir = 4;
@@ -719,6 +713,22 @@
 	},
 /turf/open/genturf,
 /area/vtm/planetgeneration)
+"fy" = (
+/obj/effect/decal/wallpaper/rock/low{
+	pixel_y = 24
+	},
+/obj/structure/table/wood,
+/obj/effect/decal/pallet,
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/obj/item/reagent_containers/food/drinks/meth/cocaine{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
 "fA" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/brflowers,
@@ -2112,7 +2122,7 @@
 /turf/open/floor/plating/vampocean,
 /area/vtm/forest)
 "pY" = (
-/obj/machinery/hydroponics/soil,
+/obj/structure/closet/crate/bin,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/forest/interior/cave)
 "qh" = (
@@ -2560,6 +2570,10 @@
 /obj/effect/turf_decal/apoc/vampgrass/corner{
 	dir = 8
 	},
+/obj/item/binoculars{
+	pixel_x = -1;
+	pixel_y = 5
+	},
 /turf/open/floor/plating/rough/cave,
 /area/vtm/forest/interior/cave)
 "th" = (
@@ -2771,12 +2785,6 @@
 /area/vtm/planetgeneration)
 "uw" = (
 /obj/effect/decal/wallpaper/rock/low,
-/obj/item/flashlight/lantern{
-	on = 14;
-	light_on = 1;
-	pixel_x = -5;
-	pixel_y = 11
-	},
 /obj/structure/stone_tile/slab,
 /obj/structure/railing{
 	dir = 8;
@@ -2799,6 +2807,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/forest/interior)
+"uD" = (
+/obj/structure/closet/crate/grave/fancy,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest/interior/cave)
 "uG" = (
 /obj/effect/turf_decal/apoc/rough{
 	dir = 5
@@ -3548,6 +3560,11 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/forest/interior)
+"AA" = (
+/obj/structure/flora/grass/jungle,
+/obj/structure/closet/crate/large,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest/interior/cave)
 "AB" = (
 /mob/living/simple_animal/pet/dog/wolfkin,
 /turf/open/floor/plating/vampgrass/random/grass,
@@ -4516,6 +4533,20 @@
 	},
 /turf/open/floor/plating/vampgrass/random/grass,
 /area/vtm/forest/sept)
+"Il" = (
+/obj/effect/decal/wallpaper/rock/low{
+	pixel_y = 24
+	},
+/obj/structure/table/wood,
+/obj/effect/decal/pallet,
+/obj/item/flashlight/lantern{
+	on = 14;
+	light_on = 1;
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
 "Ip" = (
 /obj/item/candle/infinite,
 /obj/effect/turf_decal/apoc/rough/corner{
@@ -4624,6 +4655,10 @@
 	},
 /turf/open/genturf,
 /area/vtm/planetgeneration)
+"IX" = (
+/obj/structure/closet/crate/large,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/forest/interior/cave)
 "IZ" = (
 /turf/open/floor/plating/vampgrass/random/bushes,
 /area/vtm/forest)
@@ -5186,15 +5221,6 @@
 	},
 /turf/open/floor/plating/vampbeach,
 /area/vtm/forest)
-"Nu" = (
-/obj/effect/turf_decal/apoc/vampdirt{
-	dir = 9
-	},
-/obj/structure/geyser{
-	reagent_id = /datum/reagent/water
-	},
-/turf/open/floor/plating/rough/cave,
-/area/vtm/forest/interior/cave)
 "Nv" = (
 /obj/structure/curtain/bounty,
 /turf/open/floor/plating/rough/cave,
@@ -5430,6 +5456,19 @@
 	dir = 6
 	},
 /obj/structure/glowshroom,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/forest/interior/cave)
+"Ps" = (
+/obj/effect/decal/wallpaper/rock/low{
+	pixel_y = 24
+	},
+/obj/structure/table/wood,
+/obj/effect/decal/pallet,
+/obj/underplate,
+/obj/item/bailer{
+	pixel_x = -2;
+	pixel_y = 5
+	},
 /turf/open/floor/plating/rough/cave,
 /area/vtm/forest/interior/cave)
 "Pu" = (
@@ -6160,17 +6199,6 @@
 /obj/effect/realistic_fog,
 /turf/open/floor/plating/rough,
 /area/vtm/forest/sept)
-"UJ" = (
-/obj/effect/turf_decal/apoc/vampdirt{
-	dir = 8
-	},
-/obj/item/seeds/wheat,
-/obj/item/seeds/wheat{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/turf/open/floor/plating/rough/cave,
-/area/vtm/forest/interior/cave)
 "UP" = (
 /turf/open/floor/plating/vampgrass/random,
 /area/vtm/forest/sept)
@@ -19765,7 +19793,7 @@ sm
 sm
 Vj
 EH
-Iv
+uD
 Iv
 Md
 PH
@@ -20757,9 +20785,9 @@ sm
 Vj
 EH
 EH
+IX
 pY
-pY
-qO
+AA
 EH
 EH
 EH
@@ -21153,8 +21181,8 @@ Vj
 EH
 EH
 Iv
-Nu
-UJ
+Aa
+Ru
 Zn
 Iv
 Gb
@@ -21752,7 +21780,7 @@ Nr
 kM
 jK
 ps
-YU
+Ps
 Nr
 nt
 Lc
@@ -21950,7 +21978,7 @@ hl
 ON
 hR
 Km
-YU
+fy
 Oa
 bR
 WN
@@ -22346,7 +22374,7 @@ Nr
 kM
 bg
 dh
-YU
+Il
 Nr
 CE
 yb

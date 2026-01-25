@@ -1528,7 +1528,7 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer)
 "aRI" = (
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 9
 	},
 /turf/open/indestructible/necropolis/air,
@@ -1946,10 +1946,10 @@
 /turf/open/floor/plating/vampcarpet,
 /area/vtm/interior/police)
 "bcD" = (
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 9
 	},
-/obj/effect/turf_decal/apoc/rough/corner{
+/obj/effect/turf_decal/apoc/cave/corner{
 	dir = 4
 	},
 /turf/open/indestructible/necropolis/air,
@@ -5277,6 +5277,9 @@
 /area/vtm/unionsquare)
 "cRd" = (
 /obj/effect/decal/cleanable/trash,
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 4
+	},
 /turf/open/indestructible/necropolis/air,
 /area/vtm/interior/wyrm_corrupted)
 "cRe" = (
@@ -11771,7 +11774,7 @@
 /area/vtm/interior/strip)
 "gtQ" = (
 /obj/item/trash/candy,
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 6
 	},
 /turf/open/indestructible/necropolis/air,
@@ -15190,6 +15193,12 @@
 	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/park)
+"ijm" = (
+/obj/effect/turf_decal/apoc/cave/corner{
+	dir = 1
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/interior/wyrm_corrupted)
 "ijB" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -18135,7 +18144,7 @@
 /area/vtm/anarch/basement)
 "jRY" = (
 /obj/effect/decal/cleanable/trash,
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 8
 	},
 /turf/open/indestructible/necropolis/air,
@@ -19926,7 +19935,7 @@
 /area/vtm/interior/millennium_tower/f4)
 "kVE" = (
 /obj/item/reagent_containers/food/drinks/meth,
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 5
 	},
 /turf/open/indestructible/necropolis/air,
@@ -23890,6 +23899,12 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
+"ncW" = (
+/obj/effect/turf_decal/apoc/cave{
+	dir = 5
+	},
+/turf/open/indestructible/necropolis/air,
+/area/vtm/interior/wyrm_corrupted)
 "ndp" = (
 /obj/structure/filingcabinet{
 	pixel_x = 7
@@ -25852,7 +25867,7 @@
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/museum)
 "ohP" = (
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 6
 	},
 /turf/open/indestructible/necropolis/air,
@@ -26207,7 +26222,7 @@
 /area/vtm/anarch/basement)
 "opt" = (
 /obj/item/trash/cheesie,
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 6
 	},
 /turf/open/indestructible/necropolis/air,
@@ -29819,7 +29834,7 @@
 	dir = 8;
 	pixel_x = 16
 	},
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 4
 	},
 /turf/open/indestructible/necropolis/air,
@@ -31089,7 +31104,7 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm)
 "qRg" = (
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 4
 	},
 /turf/open/indestructible/necropolis/air,
@@ -32306,7 +32321,7 @@
 /turf/open/floor/plating/circled,
 /area/vtm/clinic)
 "rwk" = (
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 8
 	},
 /turf/open/indestructible/necropolis/air,
@@ -38646,9 +38661,6 @@
 	name = "charred angel statue"
 	},
 /obj/structure/stone_tile/slab/cracked,
-/obj/effect/light_emitter{
-	light_color = "#s"
-	},
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/voivodate/cave)
 "uNP" = (
@@ -41556,10 +41568,10 @@
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/coffee)
 "wwc" = (
-/obj/effect/turf_decal/apoc/rough{
+/obj/effect/turf_decal/apoc/cave{
 	dir = 5
 	},
-/obj/effect/turf_decal/apoc/rough,
+/obj/effect/turf_decal/apoc/cave,
 /turf/open/indestructible/necropolis/air,
 /area/vtm/interior/wyrm_corrupted)
 "wwe" = (
@@ -49166,8 +49178,8 @@ exW
 nLW
 exW
 exW
-mtJ
-mtJ
+ncW
+ijm
 etx
 exW
 eIq

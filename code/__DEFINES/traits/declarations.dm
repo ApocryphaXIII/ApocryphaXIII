@@ -176,6 +176,7 @@
 #define TRAIT_NON_INT			"non_intellectual"
 #define TRAIT_COFFIN_THERAPY	"coffin_therapy"
 #define TRAIT_RUBICON			"rubicon"
+#define TRAIT_RELSHAB		"relshab" // APOC EDIT
 #define TRAIT_HUNGRY			"hungry"
 #define TRAIT_STAKE_RESISTANT	"stake_resistant"
 #define TRAIT_COLD_AURA			"cold_aura"

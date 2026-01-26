@@ -269,6 +269,10 @@ Behavior that's still missing from this component that original food items had t
 
 	. = COMPONENT_CANCEL_ATTACK_CHAIN //Point of no return I suppose
 
+	if(HAS_TRAIT(eater, TRAIT_RELSHAB) && iscarbon(eater)) // APOC EDIT START
+		var/mob/living/carbon/C = eater
+		C.Immobilize(eat_time+10, TRUE) // APOC EDIT END
+
 	if(eater == feeder)//If you're eating it yourself.
 		if(eat_time && !do_mob(feeder, eater, eat_time, timed_action_flags = food_flags & FOOD_FINGER_FOOD ? IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE : NONE)) //Gotta pass the minimal eat time
 			return
@@ -280,7 +284,7 @@ Behavior that's still missing from this component that original food items had t
 			return
 		else if(fullness <= 50)
 			eater.visible_message("<span class='notice'>[eater] hungrily [eatverb]s \the [parent], gobbling it down!</span>", "<span class='notice'>You hungrily [eatverb] \the [parent], gobbling it down!</span>")
-		else if(fullness > 50 && fullness < 150)
+		else if((fullness > 50 && fullness < 150) || HAS_TRAIT(eater, TRAIT_RELSHAB))
 			eater.visible_message("<span class='notice'>[eater] hungrily [eatverb]s \the [parent].</span>", "<span class='notice'>You hungrily [eatverb] \the [parent].</span>")
 		else if(fullness > 150 && fullness < 500)
 			eater.visible_message("<span class='notice'>[eater] [eatverb]s \the [parent].</span>", "<span class='notice'>You [eatverb] \the [parent].</span>")
@@ -296,7 +300,7 @@ Behavior that's still missing from this component that original food items had t
 		if(fullness <= (600 * (1 + eater.overeatduration / 1000)))
 			eater.visible_message("<span class='danger'>[feeder] attempts to feed [eater] [parent].</span>", \
 									"<span class='userdanger'>[feeder] attempts to feed you [parent].</span>")
-		else
+		else if(!HAS_TRAIT(eater, TRAIT_RELSHAB))
 			eater.visible_message("<span class='warning'>[feeder] cannot force any more of [parent] down [eater]'s throat!</span>", \
 									"<span class='warning'>[feeder] cannot force any more of [parent] down your throat!</span>")
 			return
@@ -438,8 +442,7 @@ Behavior that's still missing from this component that original food items had t
 	SEND_SIGNAL(parent, COMSIG_FOOD_CONSUMED, eater, feeder)
 
 	on_consume?.Invoke(eater, feeder)
-
-	to_chat(feeder, "<span class='warning'>There is nothing left of [parent], oh no!</span>")
+	to_chat(feeder, "<span class='warning'>There is nothing left of [parent], [HAS_TRAIT(feeder, TRAIT_RELSHAB) ? "FIND MORE." : "oh no!"]</span>")
 	if(isturf(parent))
 		var/turf/T = parent
 		T.ScrapeAway(1, CHANGETURF_INHERIT_AIR)

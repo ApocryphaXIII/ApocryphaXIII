@@ -3842,6 +3842,7 @@
 #include "modular_zapoc\modules\apoc_quirks\code\mute_quirk.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\nonswimmer_quirk.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\portuguese.dm"
+#include "modular_zapoc\modules\apoc_quirks\code\relshab.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\sunday_driver_quirk.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\talldog.dm"
 #include "modular_zapoc\modules\apoc_quirks\code\vampirestomach.dm"

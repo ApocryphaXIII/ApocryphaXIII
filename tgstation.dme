@@ -3806,6 +3806,7 @@
 #include "modular_zapoc\modules\apoc_decor\code\corpse_spawners.dm"
 #include "modular_zapoc\modules\apoc_decor\code\glowshroom.dm"
 #include "modular_zapoc\modules\apoc_decor\code\man_crystal.dm"
+#include "modular_zapoc\modules\apoc_decor\code\stick.dm"
 #include "modular_zapoc\modules\apoc_decor\code\superhigh_railing.dm"
 #include "modular_zapoc\modules\apoc_decor\code\torch.dm"
 #include "modular_zapoc\modules\apoc_doors\code\pentex_doors.dm"

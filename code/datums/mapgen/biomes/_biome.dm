@@ -29,6 +29,7 @@
 		/obj/structure/small_vamprocks = 2,
 		/obj/structure/vamprocks = 1,
 		/obj/structure/big_vamprocks = 1,
+		/obj/effect/mine/stick = 1,
 	)
 	flora_density = 3
 
@@ -39,6 +40,7 @@
 		/obj/structure/vamptree/pine = 1,
 		/obj/structure/small_vamprocks = 1,
 		/obj/structure/vamprocks = 1,
+		/obj/effect/mine/stick = 1,
 	)
 	flora_density = 45
 	fauna_types = list(
@@ -58,6 +60,7 @@
 		/obj/structure/vamptree/pine = 2,
 		/obj/structure/small_vamprocks = 1,
 		/obj/structure/vamprocks = 1,
+		/obj/effect/mine/stick = 2,
 	)
 	flora_density = 35
 	fauna_types = list(
@@ -79,6 +82,7 @@
 		/obj/structure/small_vamprocks = 10,
 		/obj/structure/vamprocks = 2,
 		/obj/structure/big_vamprocks = 1,
+		/obj/effect/mine/stick = 2,
 	)
 	flora_density = 5
 

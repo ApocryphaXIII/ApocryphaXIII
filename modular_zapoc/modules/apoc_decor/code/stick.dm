@@ -45,14 +45,12 @@
 
 	SEND_SIGNAL(src, COMSIG_MINE_TRIGGERED, triggerer)
 
-	icon_state = "[base_icon_state][stick_type]-snapped"
-
 /obj/effect/mine/stick/mineEffect(mob/victim)
 	if(!HAS_TRAIT(victim, TRAIT_LIGHT_STEP))
 		for(var/mob/guy in hearers(7, src))
 			to_chat(guy, "<span class='danger'>*snap*</span>")
 			playsound(src, pick(soundlist), 75, TRUE, 4, frequency = rand(0.8, 1.2))
-
+			icon_state = "[base_icon_state][stick_type]-snapped"
 /obj/effect/mine/stick/attack_hand(mob/living/user)
 	. = ..()
 	to_chat(user, span_notice("You discard [src]."))

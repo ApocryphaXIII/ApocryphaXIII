@@ -63,8 +63,6 @@
 	experience_addition = 15
 	department_head = list("Baron")
 	faction = "Vampire"
-	total_positions = 7
-	spawn_positions = 7
 	supervisors = "the Baron"
 	selection_color = "#434343"
 

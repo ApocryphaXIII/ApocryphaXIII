@@ -5,7 +5,7 @@
 	charge_max = 250
 	cooldown_min = 50
 
-	clothes_req = TRUE
+	clothes_req = FALSE // APOC EDIT CHANGE - This isn't how magic works in WoD
 	invocation = "CAVERE INSIDIAS"
 	invocation_type = INVOCATION_SHOUT
 	range = 3

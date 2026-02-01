@@ -609,8 +609,8 @@
 	if(custom_examine_message)
 		. += span_purple(custom_examine_message)
 
-	if(ishuman(user))
-		. += "<a href='byond://?src=[REF(src)];masquerade=1'>Spot a Masquerade violation</a>"
+	if(ishuman(user) || iswerewolf(user))
+		. += "<a href='byond://?src=[REF(src)];masquerade=1'>Spot a [iswerewolf(user) || isgarou(user) ? "Veil" : "Masquerade"] violation</a>"
 	// TFN EDIT ADDITION START: view headshot & big flavortext via examine
 	var/flavor_text_link
 	var/preview_text = copytext_char(flavor_text, 1, 110)

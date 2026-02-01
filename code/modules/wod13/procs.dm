@@ -13,13 +13,19 @@
 		if(((last_masquerade_violation + 10 SECONDS) < world.time) || forced)
 			last_masquerade_violation = world.time
 			if(value < 0)
+				for(var/mob/living/H in GLOB.player_list)
+					if(dna.real_name in H.voted_for)
+						H.voted_for -= dna.real_name
+						to_chat(H, span_userdanger("What you have seen will not be forgotten..."))
 				if(masquerade > 0)
 					masquerade = max(0, masquerade+value)
 					SEND_SOUND(src, sound('code/modules/wod13/sounds/masquerade_violation.ogg', 0, 0, 75))
 					to_chat(src, "<span class='userdanger'><b>MASQUERADE VIOLATION!</b></span>")
 			if(value > 0)
-				for(var/mob/living/carbon/human/H in GLOB.player_list)
-					H.voted_for -= dna.real_name
+				for(var/mob/living/H in GLOB.player_list)
+					if(dna.real_name in H.voted_for)
+						H.voted_for -= dna.real_name
+						to_chat(H, span_nicegreen("It must've been nothing..."))
 				if(masquerade < 5)
 					masquerade = min(5, masquerade+value)
 					SEND_SOUND(src, sound('code/modules/wod13/sounds/general_good.ogg', 0, 0, 75))

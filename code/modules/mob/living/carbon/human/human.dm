@@ -275,12 +275,13 @@ GLOBAL_VAR_INIT(voice_tags_counter, 10)
 
 ///////KARMA//////
 	if(href_list["masquerade"])
-		if(!ishuman(usr))
+		if(!ishuman(usr) && !iswerewolf(usr))
 			return
 		var/mob/living/carbon/human/H = usr
 		if(H.stat > UNCONSCIOUS)
 			return
 		if(usr == src)
+			to_chat(span_warning("You can't report yourself for breaking the masquerade."))
 			return
 		if(dna)
 			if (H.voted_for.Find(dna.real_name))
@@ -292,13 +293,13 @@ GLOBAL_VAR_INIT(voice_tags_counter, 10)
 					to_chat(H, "<span class='warning'>You have already noted their masquerade breach! Wait some time until you do that again.</span>")
 					return
 				reason = trim(copytext_char(sanitize(reason), 1, MAX_MESSAGE_LEN))
-				masquerade_votes++
-				message_admins("[ADMIN_LOOKUPFLW(H)] spotted [ADMIN_LOOKUPFLW(src)]'s Masquerade violation. Description: [reason]")
+				message_admins(span_boldannounce("<b>Possible [iswerewolf(src) ? "Veil" : "Masquerade"] violation!</b><br>") + \
+					span_boldannounce("<b>Violator:</b> ") + "[ADMIN_LOOKUP(src)] [ADMIN_AM(src)]<br>\
+					[ADMIN_FULLMONTY_NONAME(src)]<br>" + \
+					span_boldannounce("<b>Reported by:</b> ") + "[ADMIN_LOOKUP(H)] [ADMIN_AM(H)]<br>\
+					[ADMIN_FULLMONTY_NONAME(H)]<br>" + \
+					span_boldannounce("<b>Reason:</b> ")  + "[reason]")
 				H.voted_for |= dna.real_name
-				if(masquerade_votes > 1)
-					masquerade_votes = 0
-					last_masquerade_violation = 0
-					AdjustMasquerade(-1)
 ///////HUDs///////
 	if(href_list["hud"])
 		if(!ishuman(usr))

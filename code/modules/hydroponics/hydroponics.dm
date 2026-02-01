@@ -899,7 +899,7 @@
 /obj/machinery/hydroponics/soil //Not actually hydroponics at all! Honk!
 	name = "soil"
 	desc = "A patch of dirt."
-	icon = 'icons/obj/hydroponics/equipment.dmi'
+	icon = 'modular_darkpack/modules/drugs/icons/tray.dmi' // APOC EDIT
 	icon_state = "soil"
 	gender = PLURAL
 	circuit = null

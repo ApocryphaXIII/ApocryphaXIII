@@ -280,7 +280,6 @@ Used by the AI doomsday and the self-destruct nuke.
 		LoadGroup(FailedZs, "Forest", "map_files/generic", "apoc_forest.dmm")
 		LoadGroup(FailedZs, "Neighborhood", "map_files/generic", "apoc_residential.dmm")
 		LoadGroup(FailedZs, "Facility", "map_files/generic", "apoc_endron_ruin.dmm")
-		LoadGroup(FailedZs, "Frozen Manor", "map_files/generic", "eternal_winter.dmm")
 	else if (!isnull(config.minetype) && config.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 #endif

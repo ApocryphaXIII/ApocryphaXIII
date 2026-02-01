@@ -5,7 +5,7 @@
 	action_background_icon_state = "bg_demon"
 
 /obj/effect/proc_holder/spell/aoe_turf/conjure/construct/lesser/cult
-	clothes_req = TRUE
+	clothes_req = FALSE // APOC EDIT CHANGE - This isn't how magic works in WoD
 	charge_max = 2500
 
 /obj/effect/proc_holder/spell/aoe_turf/area_conversion
@@ -91,7 +91,7 @@
 	summon_type = list(/obj/item/soulstone)
 
 /obj/effect/proc_holder/spell/aoe_turf/conjure/soulstone/cult
-	clothes_req = TRUE
+	clothes_req = FALSE // APOC EDIT CHANGE - This isn't how magic works in WoD
 	charge_max = 3600
 
 /obj/effect/proc_holder/spell/aoe_turf/conjure/soulstone/noncult

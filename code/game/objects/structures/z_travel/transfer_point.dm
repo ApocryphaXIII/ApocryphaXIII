@@ -25,6 +25,13 @@ GLOBAL_LIST_EMPTY(unallocted_transfer_points)
 				GLOB.unallocted_transfer_points -= src
 				break
 
+/obj/transfer_point_vamp/attack_ghost(mob/user)
+	. = ..()
+	if(.)
+		return
+	if(exit)
+		user.forceMove(get_turf(exit))
+
 /obj/transfer_point_vamp/backrooms
 	id = "backrooms"
 	alpha = 0

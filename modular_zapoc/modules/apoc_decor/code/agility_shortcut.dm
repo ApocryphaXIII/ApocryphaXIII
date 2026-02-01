@@ -38,21 +38,38 @@ GLOBAL_LIST_EMPTY(unallocated_agility_shortcuts)
 
 /obj/agility_shortcut/attack_hand(mob/living/user)
 	var/time
+	var/turf/T = get_turf(exit)
 	if(scale_with_distance)
-		var/distance_mod = round(get_dist(src, exit) * 2, 10)
+		var/distance_mod = round(get_dist(src.loc, exit.loc) * 2, 10)
 		time = base_timer + distance_mod
 		var/user_power = user.get_total_athletics()
 		time = base_timer - (user_power*10)
 
 	if(validate_allowance(user))
 		if(do_after(user, max(base_timer, time), src))
-			user.forceMove(get_turf(exit))
+			var/atom/movable/AM
+			if(user.pulling)
+				AM = user.pulling
+				AM.forceMove(T)
+			user.forceMove(T)
+			if(AM)
+				user.start_pulling(AM)
 		else
 			to_chat(user, span_warning("You stop trying to crawl through the tunnel."))
 	else
 		to_chat(user, span_warning("No way I'm crawling in there."))
 
+/obj/agility_shortcut/attack_ghost(mob/user)
+	. = ..()
+	if(.)
+		return
+	if(exit)
+		user.forceMove(get_turf(exit))
+
 /obj/agility_shortcut/proc/validate_allowance(mob/living/user)
+	if(!exit)
+		return FALSE
+
 	if(anyone_can_enter)
 		return TRUE
 
@@ -64,7 +81,7 @@ GLOBAL_LIST_EMPTY(unallocated_agility_shortcuts)
 		if(mover.dna.species in allowed_species)
 			return TRUE
 
-		if(mover.clan in allowed_bloodlines)
+		if(mover.clan.name in allowed_bloodlines)
 			return TRUE
 
 		if(mover.auspice.tribe.name in allowed_tribes)
@@ -79,23 +96,22 @@ GLOBAL_LIST_EMPTY(unallocated_agility_shortcuts)
 	return FALSE
 
 ////* And now, for the subtypes. *////
-
-/obj/agility_shortcut/cave
-	icon_state = "shortcut"
-
-/obj/agility_shortcut/cave/gaia
-	name = "tunnel"
-	desc = "A small hole in the cavern wall. You're not thinking about going in there, right?"
-	allowed_tribes = TRIBE_GAIA
-
-/obj/agility_shortcut/urban
-	icon_state = "shortcut_urban"
-
-/obj/agility_shortcut/urban/spiral
-	name = "hole"
-	desc = "There are a bunch of bricks missing. Not enough for you to crawl in. Unless you were insane."
-	allowed_tribes = TRIBE_WYRM
-
 /obj/agility_shortcut/anyone
 	desc = "You could probably fit in there. Want to find out?"
 	anyone_can_enter = TRUE
+
+/obj/agility_shortcut/cave
+	name = "tunnel"
+	desc = "A small hole in the cavern wall. You're not thinking about going in there, right?"
+	icon_state = "shortcut"
+
+/obj/agility_shortcut/cave/gaia
+	allowed_tribes = TRIBE_GAIA
+
+/obj/agility_shortcut/urban
+	name = "hole"
+	desc = "There are a bunch of bricks missing. Not enough for you to crawl in. Unless you were insane."
+	icon_state = "shortcut_urban"
+
+/obj/agility_shortcut/urban/spiral
+	allowed_tribes = TRIBE_WYRM

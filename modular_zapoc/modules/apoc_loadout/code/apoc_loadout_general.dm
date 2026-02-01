@@ -41,4 +41,4 @@
 	display_name = "charcoal stick"
 	description = "A handcrafted charcoal stylus for inscrubing runes."
 	path = /obj/item/charcoal_stick
-	species_whitelist = "Werewolf"
+	species_whitelist = list("garou")

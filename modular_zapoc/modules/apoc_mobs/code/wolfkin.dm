@@ -5,6 +5,7 @@
 	icon_state = "white"
 	butcher_results = list(/obj/item/food/meat/slab = 5)
 	limb_destroyer = 1
+	mob_size = MOB_SIZE_HUMAN // They're pretty big animals. Some are bigger than humans.
 	var/random = TRUE
 	var/spiral = FALSE
 

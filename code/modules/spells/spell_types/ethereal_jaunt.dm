@@ -4,7 +4,7 @@
 
 	school = "transmutation"
 	charge_max = 300
-	clothes_req = TRUE
+	clothes_req = FALSE // APOC EDIT CHANGE - This isn't how magic works in WoD
 	invocation = "none"
 	invocation_type = "none"
 	range = -1

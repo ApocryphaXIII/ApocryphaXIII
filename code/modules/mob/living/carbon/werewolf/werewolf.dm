@@ -86,7 +86,7 @@
 	verb_say = "caws"
 	verb_exclaim = "squawks"
 	verb_yell = "shrieks"
-
+	mob_size = MOB_SIZE_SMALL
 
 
 /mob/living/carbon/werewolf/update_resting()

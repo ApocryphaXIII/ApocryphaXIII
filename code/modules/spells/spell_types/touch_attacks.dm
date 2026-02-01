@@ -68,7 +68,7 @@
 
 	school = "evocation"
 	charge_max = 600
-	clothes_req = TRUE
+	clothes_req = FALSE // APOC EDIT CHANGE - This isn't how magic works in WoD
 	cooldown_min = 200 //100 deciseconds reduction per rank
 
 	action_icon_state = "gib"
@@ -80,7 +80,7 @@
 
 	school = "transmutation"
 	charge_max = 600
-	clothes_req = TRUE
+	clothes_req = FALSE // APOC EDIT CHANGE - This isn't how magic works in WoD
 	cooldown_min = 200 //100 deciseconds reduction per rank
 
 	action_icon_state = "statue"

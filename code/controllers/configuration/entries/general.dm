@@ -580,3 +580,6 @@
 
 /datum/config_entry/string/discord_overwatch_webhook
 	protection = CONFIG_ENTRY_LOCKED | CONFIG_ENTRY_HIDDEN
+
+/datum/config_entry/string/discord_staff_roles // APOC EDIT START
+	config_entry_value = "@here"

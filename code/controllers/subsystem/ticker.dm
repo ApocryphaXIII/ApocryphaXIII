@@ -324,7 +324,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/list/adm = get_admin_counts()
 	var/list/allmins = adm["present"]
-	send2adminchat("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]:" : "of"] [hide_mode ? "secret":"[mode.name]"] has started[length(allmins) ? ".":" with no active admins online!"]")
+	send2adminchat("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]:" : "of"] [hide_mode ? "secret":"[mode.name]"] has started[length(allmins) ? ".":" with no active admins online! [CONFIG_GET(string/discord/staff_roles)]"]")
 	setup_done = TRUE
 
 	for(var/i in GLOB.start_landmarks_list)

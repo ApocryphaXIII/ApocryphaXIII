@@ -6,12 +6,16 @@
 
 /datum/emote/living/growl/run_emote(mob/user, params , type_override, intentional)
 	. = ..()
-	if(isgarou(user))
+	if(ishuman(user))
 		var/mob/living/carbon/human/wolf = user
+
 		if(wolf.gender == FEMALE)
 			playsound(get_turf(wolf), 'code/modules/wod13/sounds/female_growl.ogg', 75, FALSE)
 		else
-			playsound(get_turf(wolf), 'code/modules/wod13/sounds/male_growl.ogg', 75, FALSE)
+			playsound(get_turf(wolf), pick('modular_zapoc/master_files/sound/male_growl1.ogg',
+				'modular_zapoc/master_files/sound/male_growl2.ogg',
+				'modular_zapoc/master_files/sound/male_growl3.ogg',
+				'modular_zapoc/master_files/sound/male_growl4.ogg'), 75, FALSE)
 		return
 
 	if(iswerewolf(user))

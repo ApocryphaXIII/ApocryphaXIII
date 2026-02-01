@@ -22,6 +22,7 @@
 
 /mob/living/carbon/werewolf
 	name = "werewolf"
+	desc = "That's one frightening doggy."
 	icon = 'code/modules/wod13/werewolf.dmi'
 	gender = MALE
 	dna = null
@@ -79,6 +80,12 @@
 	var/werewolf_armor = 0
 
 	var/assigned_quirks = FALSE
+
+/mob/living/carbon/werewolf/examine(mob/user)
+	. = ..()
+
+	if(ishuman(user) || iswerewolf(user))
+		. += "<a href='byond://?src=[REF(src)];masquerade=1'>Spot a [iswerewolf(user) || isgarou(user) ? "Veil" : "Masquerade"] violation</a>"
 
 /mob/living/carbon/werewolf/corax // the Corax variety of werewolves, also refers to the Crinos form in a roundabout way, not exactly clean.
 	name = "Corax"

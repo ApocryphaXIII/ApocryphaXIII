@@ -1,5 +1,6 @@
 /mob/living/carbon/werewolf/lupus
 	name = "wolf"
+	desc = "It's an actual wolf."
 	icon_state = "black"
 	icon = 'code/modules/wod13/tfn_lupus.dmi'
 	pass_flags = PASSTABLE

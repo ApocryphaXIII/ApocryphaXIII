@@ -3917,12 +3917,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			crinos.mentality = mentality
 			crinos.social = social
 			crinos.blood = blood
+			crinos.gender = gender
 
 			lupus.physique = physique
 			lupus.dexterity = dexterity
 			lupus.mentality = mentality
 			lupus.social = social
 			lupus.blood = blood
+			lupus.gender = gender
 
 			lupus.maxHealth = round((lupus::maxHealth + (character::maxHealth / 4) * (character.physique + character.additional_physique))) + (character.auspice.level - 1) * 50
 			lupus.health = lupus.maxHealth

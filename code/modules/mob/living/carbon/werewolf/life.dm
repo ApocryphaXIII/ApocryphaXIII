@@ -84,22 +84,22 @@
 
 	switch(auspice.tribe.name)
 		if("Galestalkers", "Ghost Council", "Hart Wardens", "Get of Fenris", "Black Furies", "Silent Striders", "Red Talons", "Silver Fangs", "Stargazers", "Corax")
-			if(istype(get_area(src), /area/vtm/forest))
+			if(istype(get_area(src), /area/vtm/forest/sept))
 				adjust_veil(1, random = -1)
 				last_veil_restore = world.time
 
 		if("Bone Gnawers", "Children of Gaia", "Shadow Lords", "Corax")
-			if((istype(get_area(src), /area/vtm/interior/cog/caern) || istype(get_area(src), /area/vtm/forest)) && masquerade < 5)
+			if((istype(get_area(src), /area/vtm/interior/cog/caern) || istype(get_area(src), /area/vtm/forest/sept)) && masquerade < 5)
 				adjust_veil(1, random = -1)
 				last_veil_restore = world.time
 
 		if("Glass Walkers", "Corax")
-			if((istype(get_area(src), /area/vtm/interior/glasswalker) || istype(get_area(src), /area/vtm/forest)) && masquerade < 5)
+			if((istype(get_area(src), /area/vtm/interior/glasswalker) || istype(get_area(src), /area/vtm/forest/sept)) && masquerade < 5)
 				adjust_veil(1, random = -1)
 				last_veil_restore = world.time
 
 		if("Black Spiral Dancers")
-			if(istype(get_area(src), /area/vtm/interior/endron_facility) && masquerade < 5)
+			if(istype(get_area(src), /area/vtm/interior/wyrm_corrupted) && masquerade < 5)
 				adjust_veil(1, random = -1)
 				last_veil_restore = world.time
 

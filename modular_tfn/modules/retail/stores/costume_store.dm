@@ -3,6 +3,7 @@
 	products_list = list(
 		new /datum/data/vending_product("balaclava",	 /obj/item/clothing/mask/vampire/balaclava,	10),
 		new /datum/data/vending_product("bear mask",	 /obj/item/clothing/mask/animal/rat/bear,	13),
+		new /datum/data/vending_product("rabbit ears", /obj/item/clothing/head/rabbitears, 13),
 		new /datum/data/vending_product("rat mask",	/obj/item/clothing/mask/animal/rat,	10),
 		new /datum/data/vending_product("bee mask",	/obj/item/clothing/mask/animal/rat/bee,	12),
 		new /datum/data/vending_product("fox mask",	/obj/item/clothing/mask/animal/rat/fox,	10),
@@ -76,5 +77,6 @@
 		new /datum/data/vending_product("blue singer boots",	/obj/item/clothing/shoes/singerb,	50),
 		new /datum/data/vending_product("red singer outfit",	/obj/item/clothing/under/costume/singer/red,	50),
 		new /datum/data/vending_product("red singer boots",	/obj/item/clothing/shoes/singerr,	50),
+			// requiem end
 		new /datum/data/vending_product("doll's key",	/obj/item/brass_key,	50),
 	)

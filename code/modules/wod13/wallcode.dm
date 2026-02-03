@@ -1072,6 +1072,12 @@ LOW_WALL_HELPER(vampwall/wood)
 /obj/effect/decal/wallpaper/lightpadded/low
 	icon_state = "wallpaper-lightpadded_low"
 
+/obj/effect/decal/wallpaper/rock
+	icon_state = "wallpaper-rock"
+
+/obj/effect/decal/wallpaper/rock/low
+	icon_state = "wallpaper-rock_low"
+
 /obj/effect/decal/wallpaper/papers
 	name = "papers"
 	layer = SIGN_LAYER

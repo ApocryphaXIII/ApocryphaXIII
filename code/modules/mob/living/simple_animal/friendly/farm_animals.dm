@@ -425,7 +425,7 @@
 
 /mob/living/simple_animal/deer
 	name = "doe"
-	desc = "A gentle, peaceful forest animal. How did this get into space?"
+	desc = "A gentle, peaceful forest animal." // APOC EDIT
 	icon_state = "deer-doe"
 	icon_living = "deer-doe"
 	icon_dead = "deer-doe-dead"

@@ -118,6 +118,9 @@
 /obj/transfer_point_vamp/eternal_winter/four
 	id = "eternal_winter_5"
 
-/mob/living/simple_animal/hostile/megafauna/demonic_frost_miner/eternal_winter/piss_man
-	health = 100
-	maxHealth = 100
+/obj/transfer_point_vamp/eternal_winter/exploding/New()
+	. = ..()
+	var/obj/newguy = new /obj/transfer_point_vamp/eternal_winter/one(get_step(loc, EAST))
+	var/obj/newguy2 = new /obj/transfer_point_vamp/eternal_winter/two(get_step(newguy.loc, EAST))
+	var/obj/newguy3 = new /obj/transfer_point_vamp/eternal_winter/three(get_step(newguy2.loc, EAST))
+	new /obj/transfer_point_vamp/eternal_winter/four(get_step(newguy3.loc, EAST))

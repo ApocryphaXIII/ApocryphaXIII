@@ -677,7 +677,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	quality = DRINK_NICE
 	taste_description = "dry and salty"
 	glass_icon = 'icons/obj/drinks/mixed_drinks.dmi'
-	glass_icon_state = "margarita"
+	glass_icon_state = "margaritaglass"
 	glass_name = "Margarita"
 	glass_desc = "On the rocks with salt on the rim. Arriba~!"
 	empty_glass_icon_state = "whiskey_shot"

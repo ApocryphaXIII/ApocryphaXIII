@@ -227,7 +227,7 @@
 
 //Advanced Legion is slightly tougher to kill and can raise corpses (revive other legions)
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion/advanced
-	stat_attack = DEAD
+// 	stat_attack = DEAD // APOC EDIT REMOVE - kinda makes this subtype worthless but whatever.
 	maxHealth = 120
 	health = 120
 	brood_type = /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced

@@ -81,7 +81,7 @@ GLOBAL_LIST_EMPTY(unallocated_agility_shortcuts)
 		if(mover.dna.species in allowed_species)
 			return TRUE
 
-		if(mover.clan.name in allowed_bloodlines)
+		if(iskindred(mover) && (mover.clan.name in allowed_bloodlines))
 			return TRUE
 
 		if(mover.auspice.tribe.name in allowed_tribes)
@@ -114,4 +114,4 @@ GLOBAL_LIST_EMPTY(unallocated_agility_shortcuts)
 	icon_state = "shortcut_urban"
 
 /obj/agility_shortcut/urban/spiral
-	allowed_tribes = TRIBE_BLACKSPIRALDANCERS
+	allowed_tribes = TRIBE_WYRM

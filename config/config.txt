@@ -513,3 +513,6 @@ TGUI_MAX_CHUNK_COUNT 32
 
 ## Which admin roles to ping on the discord.
 # DISCORD_STAFF_ROLES @here
+
+## Degenerate images for degenerate discord users, seperated by commas i.e. BITE_IMG_LIST http://url/image.gif, http://url/image.png
+# BITE_IMG_LIST

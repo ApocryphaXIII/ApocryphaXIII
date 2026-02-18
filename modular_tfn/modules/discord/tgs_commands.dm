@@ -51,7 +51,7 @@
 	return new /datum/tgs_message_content("You will now be notified when the server restarts")
 
 // APOC EDIT START - obviously // fangfuckies :3
-/datum/tgs_chat_command/fangfuckies // You degenerates.
+/datum/tgs_chat_command/fangfuckies // Friend
 	name = "fangfuckies"
 	help_text = "Posts a random biting gif (0.1% chance for an ultra-rare bonus gif.)"
 

@@ -380,7 +380,7 @@
 
 		if(do_after(H, max(2 SECONDS, zip_speed)))
 			if(component_ref.locked)
-				component_ref.locked= FALSE
+				component_ref.locked = FALSE
 				slowdown = initial(slowdown)
 				name = "[initial(name)]"
 			else

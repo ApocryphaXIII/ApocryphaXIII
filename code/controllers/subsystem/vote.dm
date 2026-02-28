@@ -209,7 +209,7 @@ SUBSYSTEM_DEF(vote)
 						continue
 					choices.Add(VM.map_name)
 			if("extend")
-				choices.Add("15 Minutes", "30 Minutes", "1 Hour", "I hate ApocryphaXIII")
+				choices.Add("15 Minutes", "30 Minutes", "1 Hour", "I hate Apocrypha XIII.")
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
 				if(!question)

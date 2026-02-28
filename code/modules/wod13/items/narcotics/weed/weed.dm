@@ -76,6 +76,7 @@
 	eat_time = 10
 	illegal = TRUE
 	cost = 50
+	w_class = WEIGHT_CLASS_TINY
 	var/strain_name = "og kush"
 
 /obj/item/food/vampire/weed/examine(mob/user)
@@ -143,7 +144,7 @@
 	desc = "A small package of dried tightly packed kush. Perfect for stuffing into a bong or rolling up in paper."
 	icon_state = "package_weed"
 	icon = 'code/modules/wod13/items.dmi'
-	w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_TINY
 	ONFLOOR_ICON_HELPER('code/modules/wod13/onfloor.dmi')
 	illegal = TRUE
 	cost = 150

@@ -42,3 +42,13 @@
 	description = "A handcrafted charcoal stylus for inscrubing runes."
 	path = /obj/item/charcoal_stick
 	species_whitelist = list("garou")
+
+/datum/gear/general/headphones
+	display_name = "headphones"
+	description = "A pair of headphones."
+	path = /obj/item/instrument/piano_synth/headphones
+
+/datum/gear/general/headphones/earbuds
+	display_name = "headphones, wireless"
+	description = "A pair of futuristic wireless earbuds."
+	path = /obj/item/instrument/piano_synth/headphones/spacepods

@@ -18,7 +18,6 @@
 
 /datum/tgs_chat_command/tgscheck/Run(datum/tgs_chat_user/sender, params)
 	var/server = CONFIG_GET(string/server)
-	var/message
 //	return "[GLOB.round_id ? "Round #[GLOB.round_id]: " : ""][length(GLOB.clients)] players on [SSmapping.config.map_name], Mode: [GLOB.master_mode]; Round [SSticker.HasRoundStarted() ? (SSticker.IsRoundInProgress() ? "Active" : "Finishing") : "Starting"] -- [server ? server : "[world.internet_address]:[world.port]"]"
 	return "[GLOB.round_id ? "Round #[GLOB.round_id] ([ROUND_TIME()])" : "([ROUND_TIME()])"]<br>Players: [length(GLOB.clients)] (Active: [get_active_player_count(0,1,0)])<br>Map: [SSmapping.config.map_name]<br>Round [SSticker.HasRoundStarted() ? (SSticker.IsRoundInProgress() ? "Active" : "Finishing") : "Starting/Delayed"]<br>Join now! byond://37.27.129.146:1337"
 

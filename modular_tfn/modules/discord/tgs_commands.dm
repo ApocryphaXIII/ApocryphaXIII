@@ -4,7 +4,7 @@
 
 /datum/tgs_chat_command/tgscheck/Run(datum/tgs_chat_user/sender, params)
 	var/server = "byond://37.27.129.146:1337" // APOC EDIT CHANGE - grrr tfn
-	return new /datum/tgs_message_content("[GLOB.round_id ? "Round #[GLOB.round_id] ([ROUND_TIME()])" : "([ROUND_TIME()])"]<br>Players: [length(GLOB.clients)] (Active: [get_active_player_count(0,1,0)])<br>Map: [SSmapping.config.map_name]<br>Round [SSticker.HasRoundStarted() ? (SSticker.IsRoundInProgress() ? "Active" : "Finishing") : "Starting/Delayed"]<br>Join now! [server]") // APOC EDIT CHANGE - grrr tfn
+	return new /datum/tgs_message_content("[GLOB.round_id ? "Round #[GLOB.round_id] ([ROUND_TIME()]): " : "([ROUND_TIME()]): "]Players: [length(GLOB.clients)] (Active: [get_active_player_count(0,1,0)]), Map: [SSmapping.config.map_name], Round [SSticker.HasRoundStarted() ? (SSticker.IsRoundInProgress() ? "Active" : "Finishing") : "Starting/Delayed"] -- Join now! [server]") // APOC EDIT CHANGE - grrr tfn
 
 /datum/tgs_chat_command/gameversion
 	name = "gameversion"
